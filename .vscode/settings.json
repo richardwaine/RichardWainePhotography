@@ -1,0 +1,20 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "typescript.suggest.autoImports": true,
+    "astro.typescript.allowArbitraryAttributes": true,
+    "files.associations": {
+        "*.astro": "astro"
+    },
+    "emmet.includeLanguages": {
+        "astro": "html"
+    },
+    "cSpell.words": [
+        "glassmorphism",
+        "gsap",
+        "Ilyse",
+        "neomorphic",
+        "neumorphic",
+        "scroller"
+    ]
+}

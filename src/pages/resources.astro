@@ -1,0 +1,975 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Image } from 'astro:assets';
+
+// Import vendor images
+import envyStudio from '../assets/images/vendors/Envy Studio (16 x 9) - compressed.jpg';
+import karloGesner from '../assets/images/vendors/Karlo Gesner (16 x 9) - compressed.jpg';
+import samInterrante from '../assets/images/vendors/Sam Interrante (16 x 9) - compressed.jpg';
+import dillonSnyder from '../assets/images/vendors/Dillon Snyder (16 x 9) - compressed.jpg';
+import garrityPowers from '../assets/images/vendors/Garrity Powers (16 x 9) - compressed.jpg';
+import gabeMcMullen from '../assets/images/vendors/Gabe McMullen (16 x 9) - compressed.jpg';
+import mikeMiville from '../assets/images/vendors/Mike Miville (16 x 9) - compressed.jpg';
+import revolveAtelier from '../assets/images/vendors/Revolve Atelier (16 x 9) - compressed.jpg';
+import markYang from '../assets/images/vendors/Mark Yang (16 x 9) - compressed.jpg';
+import donovanWitmer from '../assets/images/vendors/Donvan Witmer (16 x 9) - compressed.jpg';
+import jasonLangheine from '../assets/images/vendors/Jason Langheine (16 x 9) - compressed.jpg';
+import makeFilms from '../assets/images/vendors/Make Films (16 x 9) - compressed.jpg';
+import lampHouseFilms from '../assets/images/vendors/LampHouse Films (16 x 9) - compressed.jpg';
+import laurenFisher from '../assets/images/vendors/Lauren Fisher (16 x 9) - compressed.jpg';
+import djMast from '../assets/images/vendors/DJ Mast (16 x 9) - compressed.jpg';
+import beatsAndFocus from '../assets/images/vendors/Beats and Focus (16 x 9) - compressed.jpg';
+import centralMarketFlowers from '../assets/images/vendors/Central Market Flowers (16 x 9) - compressed.jpg';
+import bixlerBlooms from '../assets/images/vendors/Bixler Blooms (16 x 9) - compressed.jpg';
+import petalsWithStyle from '../assets/images/vendors/Petals With Style (16 x 9) - compressed.jpg';
+import lancasterFlowerCompany from '../assets/images/vendors/Lancaster Flower Company (16 x 9) - compressed.jpg';
+import rettewsCatering from '../assets/images/vendors/Rettew\'s Catering (16 x 9) - compressed.jpg';
+import gemsCatering from '../assets/images/vendors/GEM\'s Catering (16 x 9) - compressed.jpg';
+
+const title = 'Richard Waine Photography Resources';
+const h1 = "Resources"
+---
+
+
+<MainLayout title={title}>
+ 
+
+<h1>{h1}</h1>
+
+    
+
+
+<div id="app">
+        <div class="blog-container">
+            <div class="main-content">
+                <section class="filter-section">
+                    <div class="filter-header">
+                        <h2 class="filter-title">Browse Vendors</h2>
+                        <!-- NEW: Filter toggle button for mobile -->
+                        <button id="filter-toggle" class="filter-toggle-btn">
+                            Filter <span class="arrow">&#9660;</span>
+                        </button>
+                    </div>
+                    <!-- NEW: Wrapper for filter content -->
+                    <div class="filter-content" id="filter-content">
+                        <div class="filter-tabs" id="category-filters">
+                            <button class="filter-btn active" data-category="all">All</button>
+                            <button class="filter-btn" data-category="wedding-photographer">Wedding & Event Photographers</button>
+                            <button class="filter-btn" data-category="re-photographer">Real Estate Photographers</button>
+                            <button class="filter-btn" data-category="product-photographer">Product Photographers</button>
+                            <button class="filter-btn" data-category="food-bev-photographer">Food & Beverage Photographers</button>
+                            <button class="filter-btn" data-category="commercial-photographer">Commercial Photographers</button>
+                            <button class="filter-btn" data-category="hair-makeup">Hair & Makeup Artists</button>
+                            <button class="filter-btn" data-category="videographer">Videographers</button>
+                            <button class="filter-btn" data-category="florist">Florists</button>
+                            <button class="filter-btn" data-category="dj">DJ's</button>
+                            <!-- Original HTML had commented out 'venue' button -->
+                            <!-- <button class="filter-btn" data-category="venue">Venues</button> -->
+                            <button class="filter-btn" data-category="event-planner">Event Planners</button>
+                            <button class="filter-btn" data-category="caterer">Caterers</button>
+                        </div>
+
+                        <div class="search-container">
+                            <input type="text" id="search-input" placeholder="Search Vendors..." class="search-input">
+                        </div>
+                    </div>
+                </section>
+
+                <main class="blog-grid">
+                    <div class="category-heading">
+                        <h2 id="current-category">All Vendors</h2>
+                        <p id="post-count" class="post-count">Showing all Vendors</p>
+                    </div>
+                    <div class="blog-posts" id="blog-posts">
+                        <!-- Vendor Cards (your existing content) - UNCHANGED from original -->
+                        <div class="blog-card" data-category="hair-makeup">
+                            <Image src={envyStudio} alt="Envy Studio" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Envy Studio</h3>
+                                    <h4 class="vendor-card-category">Hair and Makeup</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">24 W King Street</p>
+                                        <p class="vendor-address">Lancaster, PA 17603</p>
+                                        <p class="vendor-phone">(717) 435 - 9343</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:info@bnvied.com" class="vendor-email"> info@bnvied.com</a> </br>
+                                        <a href="https://bnvied.net" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.bnvied.net</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="commercial-photographer food-bev-photographer">
+                            <Image src={karloGesner} alt="Karlo Gesner Photography" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Karlo Gesner</h3>
+                                    <h4 class="vendor-card-category">Commercial Photographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">Karlo Gesner Photography </p>
+                                        <p class="vendor-address">342 N. Queen Street</p>
+                                        <p class="vendor-address"> Lancaster, PA 17603</p>
+                                        <p class="vendor-phone">(951) 565 - 6686</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:karlo.gesner@gmail.com" class="vendor-email"> karlo.gesner@gmail.com</a></br>
+                                        <a href="https://karlophotography.pixieset.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.karlophotography.pixieset.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="re-photographer product-photographer">
+                            <Image src={samInterrante} alt="Sam Interrante Photography" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Sam Interrante</h3>
+                                    <h4 class="vendor-card-category">Real Estate and Product Photographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">Sam Interrante Photography </p>
+                                        <p class="vendor-address">355 E Liberty Street</p>
+                                        <p class="vendor-address">Lancaster, PA 17602</p>
+                                        <p class="vendor-phone">(717) 368 - 1205</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:hello@saminterrante.com" class="vendor-email"> hello@saminterrante.com</a></br>
+                                        <a href="https://www.saminterrante.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.saminterrante.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="videographer">
+                            <Image src={dillonSnyder} alt="Dillon Snyder - Little Ghost Media" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Dillon Snyder</h3>
+                                    <h4 class="vendor-card-category">Videographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">Little Ghost Media & Marketing </p>
+                                        <p class="vendor-address">355 E Liberty Street</p>
+                                        <p class="vendor-address">Lancaster, PA 17602</p>
+                                        <p class="vendor-phone">(610) 763 - 2295</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:littleghostmarketing@gmail.com" class="vendor-email"> littleghostmarketing@gmail.com</a></br>
+                                        <a href="#" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="videographer">
+                            <Image src={garrityPowers} alt="Garrity Powers - GP Film & Photography" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Garrity Powers</h3>
+                                    <h4 class="vendor-card-category">Videographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">GP Film & Photography </p>
+                                        <p class="vendor-address">355 E Liberty Street</p>
+                                        <p class="vendor-address">Lancaster, PA 17602</p>
+                                        <p class="vendor-phone">(717) 368 - 1205</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:r.garrity.powers@gmail.com" class="vendor-email"> r.garrity.powers@gmail.com</a></br>
+                                        <a href="https://garritypowers.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.garritypowers.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="wedding-photographer">
+                            <Image src={gabeMcMullen} alt="Gabe McMullen Wedding Photography" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Gabe McMullen</h3>
+                                    <h4 class="vendor-card-category">Wedding Photographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address"> 308 W Grant Street</p>
+                                        <p class="vendor-address"> Lancaster, PA 17603</p>
+                                        <p class="vendor-phone">(717) 875 - 5887</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:gabemcmullen@gmail.com" class="vendor-email"> gabemcmullen@gmail.com</a></br>
+                                        <a href="https://gabemcmullen.com/" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.gabemcmullen.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="food-bev-photographer videographer product-photographer commercial-photographer">
+                            <Image src={mikeMiville} alt="Michael Miville Visuals" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Michael Miville</h3>
+                                    <h4 class="vendor-card-category">Commercial Photographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">Michael Miville Visuals</p>
+                                        <p class="vendor-address">Based in:</p>
+                                        <p class="vendor-address"> South East Pennsylvania</p>
+                                        <p class="vendor-phone"> (717) 475 - 0144</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:michael@mmivillevisuals.com" class="vendor-email"> michael@mmivillevisuals.com</a></br>
+                                        <a href="https://www.mmivillevisuals.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.mmivillevisuals.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="hair-makeup">
+                            <Image src={revolveAtelier} alt="Revolve Atelier - Lionel Adriano" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Lionel Adriano</h3>
+                                    <h4 class="vendor-card-category">Makeup Artist</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">Revolve Atelier</p>
+                                        <p class="vendor-address">2470 Lititz Pike</p>
+                                        <p class="vendor-address"> Lancaster, PA 17601</p>
+                                        <p class="vendor-phone"> (717) 925 - 6654</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:Revolve.Atelier@gmail.com" class="vendor-email">Revolve.Atelier@gmail.com </a></br>
+                                        <a href="#" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="videographer">
+                            <Image src={markYang} alt="Mark Yang - Bamboo Shoots Media" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Mark Yang</h3>
+                                    <h4 class="vendor-card-category">Videographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">Bamboo Shoots Media</p>
+                                        <p class="vendor-address">355 E. Liberty Street</p>
+                                        <p class="vendor-address"> Lancaster, PA 17602</p>
+                                        <p class="vendor-phone"> (717) 715 - 5054</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:info@bambooshootsmedia.com" class="vendor-email"> info@bambooshootsmedia.com</a></br>
+                                        <a href="https://bambooshootsmedia.com/" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.bambooshootsmedia.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="commercial-photographer food-bev-photographer product-photographer">
+                            <Image src={donovanWitmer} alt="Donovan Witmer Photography" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Donovan Witmer</h3>
+                                    <h4 class="vendor-card-category">Commercial Photographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">308 W. Grant Street</p>
+                                        <p class="vendor-address"> Lancaster, PA 17603</p>
+                                        <p class="vendor-phone"> (717) 682 - 8727</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:donovan@donovanwitmer.com" class="vendor-email"> donovan@donovanwitmer.com</a></br>
+                                        <a href="https://www.donovanwitmer.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.donovanwitmer.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="food-bev-photographer product-photographer">
+                            <Image src={jasonLangheine} alt="Jason Langheine Photography" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Jason Langheine</h3>
+                                    <h4 class="vendor-card-category">Commercial Photographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">308 W. Grant Street</p>
+                                        <p class="vendor-address"> Lancaster, PA 17603</p>
+                                        <p class="vendor-phone"> (717) 332 - 5790 </p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:jason.langheine@gmail.com" class="vendor-email"> jason.langheine@gmail.com</a></br>
+                                        <a href="https://www.jasonlangheine.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.jasonlangheine.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="videographer">
+                            <Image src={makeFilms} alt="Make Films" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Make Films</h3>
+                                    <h4 class="vendor-card-category">Videographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">21 North Prince Street</p>
+                                        <p class="vendor-address"> Lancaster, PA 17603</p>
+                                        <p class="vendor-phone"> (717) 340 - 2241</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:hello@makefilms.cc" class="vendor-email"> hello@makefilms.cc</a></br>
+                                        <a href="https://makefilms.cc" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.makefilms.cc</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="videographer">
+                            <Image src={lampHouseFilms} alt="LampHouse Films" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">LampHouse Films</h3>
+                                    <h4 class="vendor-card-category">Videographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">33 North Market Street</p>
+                                        <p class="vendor-address">Suite 300</p>
+                                        <p class="vendor-address"> Lancaster, PA 17603</p>
+                                        <p class="vendor-phone"> (717) 621 – 2518</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:info@lamphousefilms.com" class="vendor-email"> info@lamphousefilms.com</a></br>
+                                        <a href="https://lamphousefilms.com/" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.lamphousefilms.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="wedding-photographer">
+                            <Image src={laurenFisher} alt="Lauren Fisher Photography" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Lauren Fisher</h3>
+                                    <h4 class="vendor-card-category">Wedding Photographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">Lauren Fisher Photography</p>
+                                        <p class="vendor-address">824 1st Street</p>
+                                        <p class="vendor-address"> Lancaster, PA 17603</p>
+                                        <p class="vendor-phone"> (717) 314 - 9556</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:studio@Laurenfisher.photography" class="vendor-email"> studio@Laurenfisher.photography</a></br>
+                                        <a href="https://www.laurenfisher.photography/" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.laurenfisher.photography</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="dj">
+                            <Image src={djMast} alt="DJ Mast Productions" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">DJ Mast</h3>
+                                    <h4 class="vendor-card-category">DJ</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">DJ Mast Productions</p>
+                                        <p class="vendor-address">Lancaster, PA </p>
+                                        <p class="vendor-phone"> (717) 951 - 5221</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:contact@DJMast.com" class="vendor-email"> contact@DJMast.com</a></br>
+                                        <a href="https://www.djmast.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.djmast.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="dj wedding-photographer">
+                            <Image src={beatsAndFocus} alt="Beats and Focus Entertainment" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Rachel Stauffer</h3>
+                                    <h4 class="vendor-card-category">Wedding Photographer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">Beats and Focus Entertainment</p>
+                                        <p class="vendor-address">Lancaster, PA </p>
+                                        <p class="vendor-phone"> (717) 615 - 3197</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:rachel@beatsandfocus.com" class="vendor-email"> rachel@beatsandfocus.com</a></br>
+                                        <a href="https://beatsandfocus.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.beatsandfocus.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="florist">
+                            <Image src={centralMarketFlowers} alt="Central Market Flowers" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Central Market Flowers</h3>
+                                    <h4 class="vendor-card-category">Florist</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">258 N Queen Street</p>
+                                        <p class="vendor-address">Lancaster, PA 17603 </p>
+                                        <p class="vendor-phone"> (717) 209 - 1176</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:flowers@perfectpots.com" class="vendor-email"> flowers@perfectpots.com</a></br>
+                                        <a href="https://centralmarketflowers.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.centralmarketflowers.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="florist">
+                            <Image src={bixlerBlooms} alt="Bixler Blooms" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Bixler Blooms</h3>
+                                    <h4 class="vendor-card-category">Florist</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">1230 Colebrook Rd</p>
+                                        <p class="vendor-address">Marietta, PA 17547 </p>
+                                        <p class="vendor-phone"> (717) 572 - 3763</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:hello@bixlerblooms.com" class="vendor-email"> hello@bixlerblooms.com</a></br>
+                                        <a href="https://bixlerblooms.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.bixlerblooms.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="florist">
+                            <Image src={petalsWithStyle} alt="Petals With Style" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Petals With Style</h3>
+                                    <h4 class="vendor-card-category">Florist</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">117a South West End Ave</p>
+                                        <p class="vendor-address">Lancaster, PA 17603</p>
+                                        <p class="vendor-phone"> (717) 392 - 4000</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:hello@petalswithstyle.com" class="vendor-email"> hello@petalswithstyle.com</a></br>
+                                        <a href="https://www.petalswithstyle.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.petalswithstyle.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="florist">
+                            <Image src={lancasterFlowerCompany} alt="Lancaster Flower Company" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Lancaster Flower Company</h3>
+                                    <h4 class="vendor-card-category">Florist</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">19 S Broad Street</p>
+                                        <p class="vendor-address">Lititz, PA 17543</p>
+                                        <p class="vendor-phone"> (717) 353 - 4353</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:nadine@lancasterflowerco.com" class="vendor-email"> nadine@lancasterflowerco.com</a></br>
+                                        <a href="https://www.lancasterflowerco.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.lancasterflowerco.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="caterer">
+                            <Image src={rettewsCatering} alt="Rettew's Catering" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">Rettew's Catering</h3>
+                                    <h4 class="vendor-card-category">Caterer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">1309 S. Main Street</p>
+                                        <p class="vendor-address">Manheim, PA 17545</p>
+                                        <p class="vendor-phone"> (717) 665 - 9200</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:info@rettewscatering.com" class="vendor-email"> info@rettewscatering.com</a></br>
+                                        <a href="https://rettewscatering.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.rettewscatering.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card" data-category="caterer">
+                            <Image src={gemsCatering} alt="GEM's Catering" width={400} height={225} />
+                            <div class="blog-card-content">
+                                <div class="vendor-card-header">
+                                    <h3 class="blog-card-title vendor-card-title">GEM's Catering</h3>
+                                    <h4 class="vendor-card-category">Caterer</h4>
+                                </div>
+                                <div class="blog-card-excerpt">
+                                    <div class="vendor-location">
+                                        <p class="vendor-address">601 N Queen Street</p>
+                                        <p class="vendor-address">Lancaster, PA 17602</p>
+                                        <p class="vendor-phone"> (717) 681 - 3309</p>
+                                    </div>
+                                    <div class="vendor-contact-info">
+                                        <a href="mailto:gemscateringinquiries@gmail.com" class="vendor-email"> gemscateringinquiries@gmail.com</a></br>
+                                        <a href="https://gemscatering.com" class="vendor-website" target="_blank" rel="noopener noreferrer nofollow">www.gemscatering.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded",()=>{const b=document.querySelectorAll(".blog-card"),f=document.getElementById("category-filters"),d=document.getElementById("current-category"),c=document.getElementById("post-count"),s=document.getElementById("search-input");if(!f||!d||!c||!s)return;let a="all";const t={"all":"All Vendors","wedding-photographer":"Wedding & Event Photographers","re-photographer":"Real Estate Photographers","product-photographer":"Product Photographers","food-bev-photographer":"Food & Beverage Photographers","commercial-photographer":"Commercial Photographers","hair-makeup":"Hair & Makeup Artists","videographer":"Videographers","florist":"Florists","dj":"DJ's","venues":"Venues","event-planner":"Event Planners","caterer":"Caterers"};const filter=()=>{const term=s.value.toLowerCase();let v=0;b.forEach(card=>{const cats=card.dataset.category.toLowerCase().split(" "),matchCat=a==="all"||cats.includes(a),title=card.querySelector(".blog-card-title, .vendor-card-title")?.textContent.toLowerCase()||"",category=card.querySelector(".vendor-card-category")?.textContent.toLowerCase()||"",excerpt=card.querySelector(".blog-card-excerpt")?.textContent.toLowerCase()||"",matchSearch=!term||title.includes(term)||excerpt.includes(term)||category.includes(term);if(matchCat&&matchSearch){card.style.display="";v++}else{card.style.display="none"}});d.textContent=t[a]||`${a.replace(/-/g,' ')} Vendors`;c.textContent=`Showing ${v} Vendors`};f.onclick=e=>{if(e.target.classList.contains("filter-btn")){document.querySelectorAll(".filter-btn").forEach(btn=>btn.classList.remove("active"));e.target.classList.add("active");a=e.target.dataset.category;filter()}};s.oninput=filter;const toggle=document.getElementById("filter-toggle"),content=document.getElementById("filter-content");if(toggle&&content)toggle.onclick=()=>{content.classList.toggle("open");toggle.classList.toggle("active")};filter()});
+</script>
+
+
+</MainLayout>
+
+<style>
+
+ /* Base styles (mobile-first defaults) */
+
+
+        /* Reset and base styles - UNCHANGED from your original */
+       
+
+        body {
+            /* font-family: "Montserrat", sans-serif; */
+            background-color: #ffffff;
+            color: #000000;
+            /* line-height: 1.5; */
+            /* font-weight: var(--fw-normal); */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            /* line-height: 1.2; */
+            font-weight: 600;
+            margin-block: var(--size-3);
+            text-wrap: balance;
+        }
+
+        #current-category {
+            text-transform: capitalize;
+        }
+
+        h1{
+            font-size:var(--fs-800);
+        }
+
+        h2 {
+           
+            font-size:var(--fs-500)
+        }
+
+        h3 {
+            font-size:  var(--fs-400);
+            font-weight:var(--fw-bold);
+            text-transform:uppercase;
+        }
+
+        p {
+            margin-bottom: var(--size-3);
+            text-wrap: pretty;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        button {
+            cursor: pointer;
+            font-family: inherit;
+            outline: none;
+        }
+
+        /* Blog Container - UNCHANGED from your original */
+        .blog-container {
+            width: min(calc(100% - 6em), 100%);
+            width:80%;
+            margin: 0 auto;
+            /* padding: 0 2em; was commented in original */
+        }
+
+        .category-heading{
+          margin-bottom: var(--size-3);
+}
+
+        /* Main Content - UNCHANGED from your original */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--size-7); /* Set as base, will inherit correctly */
+            padding:var(--size-7) 0;
+            justify-content: center;
+        }
+
+        /* Filter Section - MOBILE-FIRST defaults for collapsible behavior */
+        .filter-section {
+            position: relative; /* Not sticky by default for mobile */
+            top: auto; /* Reset top */
+            height: fit-content; /* Allow height to adjust */
+            padding: var(--size-3); /* Reduced padding for mobile */
+            background: var(--ltclr);
+            border: none; /* No border by default (when collapsed) */
+            box-shadow: none; /* No shadow by default (when collapsed) */
+            border-radius: 8px; /* Consistent rounded corners */
+            margin-bottom: var(--size-4); /* Space below filter on mobile */
+        }
+
+        /* Filter Header (contains title and toggle button) */
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: var(--size-3);
+            margin-bottom: var(--size-3);
+            border-bottom: 1px solid #e5e5e5; /* Separator for mobile header */
+        }
+
+        /* NEW: Filter Toggle Button - visible by default (mobile) */
+        .filter-toggle-btn {
+            display: flex; /* Show for mobile */
+            background: var(--blkclr);
+            color: var(--ltclr);
+            border: none;
+            padding: 10px 12px; /* Adjusted padding for better alignment */
+            font-size: var(--fs-350);
+            cursor: pointer;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s ease, transform 0.3s ease;
+        }
+
+        .filter-toggle-btn:hover {
+            background-color: #333;
+        }
+
+        .filter-toggle-btn .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .filter-toggle-btn.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* NEW: Filter Content Wrapper - hidden by default (mobile) */
+        .filter-content {
+            max-height: 0; /* Hidden by default */
+            overflow: hidden; /* Hide overflowing content */
+            padding-top: 0; /* No padding when collapsed */
+            padding-bottom: 0; /* No padding when collapsed */
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth collapse/expand */
+        }
+
+        .filter-content.open {
+            max-height: 1000px; /* Large enough to ensure search bar and all buttons are visible */
+        }
+
+        /* Filter Tabs - MOBILE-FIRST grid for buttons */
+        .filter-tabs {
+            display: grid; /* Grid for mobile 2-column layout */
+            grid-template-columns: 1fr 1fr; /* Two columns for mobile buttons */
+            gap: 8px; /* Gap between buttons */
+            margin: 0 0 var(--size-5) 0; /* Adjusted margin for mobile */
+            font-size:var(--fs-400);
+        }
+
+        /* Search Container - UNCHANGED from your original */
+        .search-container {
+            margin-top:  var(--size-5);
+        }
+
+        /* Search Input - UNCHANGED from your original */
+        .search-input {
+            width: 100%;
+            padding: var(--size-3);
+            font-size: var(--fs-400);
+            border: 1px solid #e5e5e5;
+            background:var(--ltclr);
+            color: var(--blkclr);
+            transition: border-color 0.2s ease;
+
+               
+        }
+
+        .search-input:hover {
+            border-color: var(--blkclr);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--blkclr);
+        }
+
+        /* Filter Button - UNCHANGED from your original */
+        .filter-btn {
+            padding:  var(--size-3);
+            text-align: left;
+            background: transparent;
+            color: var(--blkclr);
+            border: 1px solid #e5e5e5;
+            transition: border-color 0.2s ease;
+            /* border-radius: 4px; */
+        }
+
+
+        .filter-btn:hover {
+            border-color: var(--blkclr);
+        }
+
+        .filter-btn:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--blkclr);
+        }
+
+        .filter-btn.active {
+            background: var(--blkclr);
+            color: var(--ltclr);
+            border-color: var(--blkclr);
+        }
+
+        /* Blog Posts - UNCHANGED from your original */
+        .blog-posts {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--size-5);
+        }
+
+        /* Blog Card - UNCHANGED from your original */
+        .blog-card {
+            background: var(--ltclr);
+            border: 1px solid #e5e5e5;
+            color: var(--blkclr);
+            transition: box-shadow 0.2s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+        
+
+            box-shadow:var(--_shadow);
+            
+           
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            object-position: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .blog-card-content {
+            padding:var(--size-3);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .vendor-card-header {
+            margin: 0;
+            padding: 0;
+        }
+
+        .vendor-card-category {
+            padding-inline: var(--size-1);
+            background: transparent;
+            color: var(--blkclr);
+            font-size: var(--fs-350);
+            margin-bottom: var(--size-3);
+        }
+
+        .vendor-address,
+        .vendor-phone {
+            margin: var(--size-1) 0;
+            color: var(--blkclr);
+            font-size: var(--fs-350);
+        }
+
+        .vendor-website,
+        .vendor-email {
+            display: inline-block;
+            margin-top: var(--size-2);
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: var(--fw-semi-bold);
+        }
+
+        .vendor-website:hover {
+            text-decoration: underline;
+        }
+
+        .blog-card-excerpt {
+            font-size: 0.875rem;
+            margin-top: var(--size-3);
+            padding: var(--size-1);
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-card h3 {
+            margin-block: var(--size-2);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            word-wrap: break-word;
+            /* line-height: 1.2em; */
+            padding-inline: 0.15em;
+        }
+
+        .blog-card h4 {
+            font-weight: var(--fw-normal);
+            margin: 0;
+            padding-block: 0;
+        }
+
+       /* .read-more {
+            display: inline-block;
+            padding: 8px var(--size-3);
+            background: var(--ltclr);
+            color: var(--blkclr);
+            font-size: var(--fs-350);
+            border: 1px solid var(--blkclr);;
+            transition: all 0.2s ease;
+            margin-top: auto;
+            width: fit-content;
+            border-radius: 4px;
+        }
+*/
+        .read-more:hover {
+            background: var(--blkclr);
+            color: var(--ltclr);
+        }
+
+        .read-more:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--blkclr);
+        }
+
+        /* Media queries for larger screens (min-width approach) */
+
+        /* Original Media query for 641px and up */
+        @media (min-width: 641px) { /* Corrected from 640px to 641px */
+            .blog-container {
+                padding: 0 24px;
+            }
+            .blog-posts {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        /* Original Media query for 768px and up */
+        @media (min-width: 768px) {
+            /* Main content grid layout - UNCHANGED from original, allowing gap to inherit */
+            .main-content {
+                grid-template-columns: 280px 1fr;
+            }
+            /* Blog card image height - UNCHANGED from original */
+            .blog-card img {
+                height: 200px;
+            }
+            /* Filter section reverts to desktop sticky behavior and appearance */
+            .filter-section {
+
+            --_shadow: 0 8px 24px rgba(0, 0, 0, 0.12) ;
+
+                position: sticky;
+                top: 200px;
+                padding: 32px;
+                border: 1px solid #e5e5e5;
+                box-shadow: var(--_shadow);
+            }
+            /* Hide toggle button on desktop */
+            .filter-toggle-btn {
+                display: none;
+            }
+            /* Ensure filter header looks original on desktop */
+            .filter-header {
+                border-bottom: none; /* Remove mobile separator */
+                padding-bottom: 0; /* Reset mobile padding */
+                margin-bottom: 16px; /* Restore original desktop margin */
+            }
+            /* Ensure filter content is visible on desktop */
+            .filter-content {
+                max-height: none;
+                overflow: visible;
+            }
+            /* Filter tabs layout reverts to desktop column for menu */
+            .filter-tabs {
+                display: flex; /* Flex to align items in column */
+                flex-direction: column; /* Stack vertically */
+                gap: 8px; /* Gap between buttons */
+                margin: 24px 0; /* Restore original desktop margin */
+            }
+        }
+
+        /* Original Media query for 1024px and up */
+        @media (min-width: 1024px) {
+            .blog-container {
+                padding-inline: 0;
+            }
+            .blog-posts {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+    </style>
+
