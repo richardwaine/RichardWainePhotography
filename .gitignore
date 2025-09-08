@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Temporarily ignore large image files for GitHub upload
+src/assets/images/
+src/assets/*.jpg
+src/assets/*.jpeg
+src/assets/*.png
+src/assets/*.mp4

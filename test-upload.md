@@ -1,0 +1,1 @@
+# Richard Waine Photography Website
