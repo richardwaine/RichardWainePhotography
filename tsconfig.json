@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "types": ["astro/client"],
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
+  },
+  "include": [".astro/types.d.ts", "**/*", "env.d.ts"],
+  "exclude": ["dist"]
+}
