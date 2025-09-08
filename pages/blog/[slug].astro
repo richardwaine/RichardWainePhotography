@@ -1,0 +1,21 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+export async function getStaticPaths(): Promise<Array<{params: {slug: string}, props: {post: any}}>> {
+  const posts = await Astro.glob('../../posts/*.md');
+  return posts.map((post: any) => ({
+    params: { slug: post.frontmatter.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = post;
+---
+
+<BlogLayout
+  title={post.frontmatter.blogTitle}
+  post={post}
+>
+  <Fragment set:html={post.compiledContent()} />
+</BlogLayout>
