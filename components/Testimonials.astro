@@ -1,0 +1,150 @@
+---
+import type { TestimonialData } from '../types/components';
+import { ALL_TESTIMONIALS } from '../data/testimonials';
+import TestimonialCard from './TestimonialCard.astro';
+
+export interface Props {
+  title?: string;
+  limit?: number;
+  filterByNames?: string[];
+  testimonials?: TestimonialData[];
+}
+
+
+
+const { 
+  title = "Why choose Richard Waine?",
+  limit = Infinity, 
+  filterByNames //
+  // testimonials prop and hardcoded array removed here
+} = Astro.props;
+
+// We will use ALL_TESTIMONIALS directly
+
+const testimonialsToDisplay = filterByNames
+  ? ALL_TESTIMONIALS.filter(testimonial => filterByNames.includes(testimonial.name)).slice(0, limit)
+  : ALL_TESTIMONIALS.slice(0, limit);
+---
+
+<div class="wrapper">
+  <h3 class="section-title why-choose center white">
+    {title}
+  </h3>
+
+
+  <div class="testimonial-2">
+  {testimonialsToDisplay.map(testimonial => ( // Note: we're using testimonialsToDisplay now
+    <TestimonialCard
+      testimonialText={testimonial.review}
+      author={testimonial.name}
+      company={testimonial.company}
+      imageSrc={testimonial.imageUrl}
+      image={testimonial.image}
+      imageAlt={testimonial.imageAlt}
+      
+    />
+  ))}
+</div>
+
+
+
+
+</div>
+
+<style>
+/*testimonials-2*/
+.why-choose {
+  padding-block: var(--size-4);
+  text-transform:uppercase;
+}
+.stars {
+  color: var(--stars);
+  /* padding: var(--size-2) 0 0; */
+  padding-block: var(--size-2);
+}
+.testimonial-schedule-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--size-4);
+}
+:is(.testimonial-content p, .testimonial-details h5, .testimonial-details
+    author) {
+  font-size: var(--fs-400);
+}
+.testimonial-2 {
+  /* margin: 0 auto var(--size-6); */
+  margin: var(--size-6) auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--size-4);
+  padding-inline:var(--size-7);
+  text-align: center;
+
+}
+#block-yui_3_17_2_1_1577202910795_6966 {
+  padding: 0;
+}
+.testimonial-2 .card-testimonial {
+  position: relative;
+  margin: auto;
+  /* max-width: 100%; */
+  background: var(--drkbg);
+  padding: var(--size-4) var(--size-2) var(--size-4);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: var(--border) var(--accent);
+}
+
+.testimonial-content {
+  padding-inline: var(--size-2);
+}
+
+.testimonial-content p,
+.rates-card-testimonial p {
+}
+
+.testimonial-image {
+  --_img-size: 128px;
+
+  width: var(--_img-size);
+  height: var(--_img-size);
+  margin: var(--size-3) auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: var(--border) var(--ltclr);
+  box-shadow: var(--shadow);
+  box-sizing: content-box;
+}
+
+.testimonial-details {
+  margin-block: var(--size-3);
+}
+
+.testimonial-details h5,
+.testimonial-details author {
+  font-size: var(--fs-450);
+  padding-top: var(--size-3);
+}
+
+.testimonial-details span {
+  color: var(--accent);
+  font-size: var(--fs-400);
+}
+@media screen and (min-width: 1060px) {
+  .card-testimonial,
+  .testimonial-2,
+  .testimonial-content,
+  .testimonial-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    padding-inline:var(--size-12);
+  }
+  .testimonial-2 .card-testimonial {
+    width: min(360px, 100%);
+  }
+  .card-testimonial .testimonial-content p {
+    padding-inline: var(--size-4);
+  }
+}
+</style>

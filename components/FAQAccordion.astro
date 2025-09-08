@@ -1,0 +1,118 @@
+---
+export interface Props {
+  faqs: { question: string; answer: string }[];
+}
+
+const { faqs } = Astro.props;
+---
+
+
+<div class="faq-content" style="margin-top:2em;width:50%;">
+  {faqs.map((faq, index) => (
+    <div>
+      <input type="checkbox" id={`question${index}`} name="q" class="questions">
+      <label for={`question${index}`} class="question">
+        {faq.question}
+      </label>
+      <div class="answers">
+        <p>{faq.answer}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+  
+
+<style>
+/*FAQs - 2*/
+.faq-content {
+  font-family:var(--ff-primary);
+  width: 100%;
+  padding: var(--size-4);
+  margin: 0 auto;
+  padding: 0 
+}
+
+.question {
+  color: var(--ltclr);
+  position: relative;
+  width:100%;
+  margin:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--size-3);
+  background: var(--drkbg);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-400);
+  cursor: pointer;
+  text-transform: uppercase;
+
+}
+/* Icon */
+
+.question:hover {
+      background: var(--accent)}
+
+.question::after {
+  --time:0.4s;
+  content: "\276F";
+  width: var(--size-3);
+  height: var(--size-3);
+  text-align:center;
+  transition: all var(--time) ease;
+}
+
+.answers {
+  font-size:var(--fs-400);
+  background: var(--ltbg);
+  color:var(--blkclr);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height:0;
+  z-index: 1;
+  position: relative;
+  -webkit-transition: all var(--time) cubic-bezier(0.865, 0.140, 0.095, 0.870);
+  -moz-transition: all var(--time) cubic-bezier(0.865, 0.140, 0.095, 0.870);
+  -o-transition: all var(--time) cubic-bezier(0.865, 0.140, 0.095, 0.870);
+  transition: all var(--time) cubic-bezier(0.865, 0.140, 0.095, 0.870);
+transition-delay: 0s;
+}
+
+.questions:checked ~ .answers{
+  height:100%;
+  padding-block:1em;
+  }
+
+.answers > *{
+padding-inline:var(--size-7)
+}
+
+.questions{
+  display: none;
+ }
+
+.questions:checked ~ .question::after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.answers p {
+  margin: 0;
+  padding: var(--size-3);
+}
+
+</style>

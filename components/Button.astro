@@ -1,0 +1,19 @@
+---
+export interface Props {
+    text: string;
+    url: string;
+    style?: 'primary' | 'secondary';
+}
+
+const { text, url, style = 'secondary' } = Astro.props;
+---
+
+<div class="button-container">
+<a class={`btn btn-${style}`} href={url}>{text}</a>
+</div>
+
+<style>
+.button-container{
+    text-align:center;
+}
+</style>
