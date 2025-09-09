@@ -1,0 +1,32 @@
+---
+// @ts-nocheck
+import MainLayout from '../layouts/MainLayout.astro';
+import HeroFixed from '../components/HeroFixed.astro';
+
+const title = 'Hero Fixed Test';
+const h1 = 'Professional Headshots Lancaster';
+
+// Hero section content
+const heroContent = {
+  title: ["WORLD CLASS", "HEADSHOT", "EXPERIENCE"],  
+  subtitle: "Beyond photography. We craft your professional presence with cinematic precision, luxury service, and results that open doors.",
+  primaryButtonText: "GET PRICING",
+  secondaryButtonText: "SCHEDULE CONSULTATION",
+  heroImages: [
+    '/src/assets/images/hero-images/Headshot_20180414_Ken Giglio_Richard_Waine_Lancaster_PA_0060 (16 x 9) - compressed.jpg',
+    'src/assets/images/hero-images/Headshot_20230623_Cindy Nguyen_Richard Waine_Lancaster_PA_0175 (16 x 9) - compressed.jpg'
+  ],
+  mainHeading: h1
+};
+---
+
+<MainLayout title={title}>
+	<HeroFixed 
+		title={heroContent.title}
+		subtitle={heroContent.subtitle}
+		primaryButtonText={heroContent.primaryButtonText}
+		secondaryButtonText={heroContent.secondaryButtonText}
+		heroImages={heroContent.heroImages}
+		mainHeading={heroContent.mainHeading}
+	/>
+</MainLayout>

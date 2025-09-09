@@ -2,7 +2,7 @@
 // @ts-nocheck
 
 import MainLayout from '../layouts/MainLayout.astro';
-import Hero from '../components/Hero.astro';
+import HeroFixed from '../components/HeroFixed.astro';
 import ZoomPopOut from '../components/ZoomPopOut.astro';
 import Problem from '../components/Problem.astro';
 import Features from '../components/Features.astro';
@@ -41,7 +41,7 @@ const heroContent = {
 ---
 
 <MainLayout title = "Richard Waine Photography">
-	<Hero 
+	<HeroFixed 
 		title={heroContent.title}
 		subtitle={heroContent.subtitle}
 		primaryButtonText={heroContent.primaryButtonText}

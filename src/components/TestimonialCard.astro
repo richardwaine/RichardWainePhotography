@@ -19,10 +19,10 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
 
 
 
-<div class="testimonial-2" style="padding:0;">
+<div class="testimonial-2">
         <div class="card-testimonial">
                 <div class="testimonial-content">
-                        <p class="stars" style="color:#ffe000;">&#9733&nbsp&#9733&nbsp&#9733&nbsp&#9733&nbsp&#9733</p><p class="white">{testimonialText}
+                        <p class="stars">&#9733&nbsp&#9733&nbsp&#9733&nbsp&#9733&nbsp&#9733</p><p class="white">{testimonialText}
                         </p>
                         
                         <br>
@@ -63,6 +63,7 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: var(--size-4);
+  padding: 0;
   padding-inline:var(--size-7);
   text-align: center;
   justify-items:center;

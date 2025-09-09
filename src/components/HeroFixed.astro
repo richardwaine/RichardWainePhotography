@@ -22,7 +22,7 @@ const {
   backgroundImage = "/src/assets/bts-hero-background.jpg",
   heroImages = [
     '/src/assets/images/hero-images/Headshot_20180414_Ken Giglio_Richard_Waine_Lancaster_PA_0060 (16 x 9) - compressed.jpg',
-    '/src/assets/images/hero-images/Headshot_20230623_Cindy Nguyen_Richard_Waine_Lancaster_PA_0175 (16 x 9) - compressed.jpg'
+    '/src/assets/images/hero-images/Headshot_20230623_Cindy Nguyen_Richard Waine_Lancaster_PA_0175 (16 x 9) - compressed.jpg'
   ],
   tagline = "",
   taglineSubtext = "",
@@ -500,6 +500,7 @@ const {
 </style>
 
 <script>
+    // ViewTransition-compatible Hero Experience Class
     class HeroExperience {
         private elements: {
             titleLines: NodeListOf<Element>;
@@ -508,6 +509,9 @@ const {
             heroImages: NodeListOf<Element>;
         };
         private currentImageIndex: number = 0;
+        private imageInterval: any = null;
+        private animationTimeouts: any[] = [];
+        private observer: IntersectionObserver | null = null;
 
         constructor() {
             this.elements = {
@@ -527,7 +531,11 @@ const {
         }
         
         setupIntersectionObserver(): void {
-            const observer = new IntersectionObserver((entries) => {
+            if (this.observer) {
+                this.observer.disconnect();
+            }
+
+            this.observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('revealed');
@@ -540,42 +548,57 @@ const {
             
             // Observe all animated elements
             document.querySelectorAll('[data-delay], .experience-subtitle, .action-area').forEach(el => {
-                observer.observe(el);
+                if (this.observer) {
+                    this.observer.observe(el);
+                }
             });
         }
         
         startAnimationSequence(): void {
+            // Clear any existing timeouts
+            this.animationTimeouts.forEach(timeout => clearTimeout(timeout));
+            this.animationTimeouts = [];
+
             // Stagger text reveal animations
-            setTimeout(() => {
+            const mainTimeout = setTimeout(() => {
                 this.elements.titleLines.forEach((line: Element, index: number) => {
                     const htmlElement = line as HTMLElement;
                     const delay = parseInt(htmlElement.dataset.delay || '0') || index * 100;
-                    setTimeout(() => {
+                    const timeout = setTimeout(() => {
                         const word = line.querySelector('.word');
                         if (word) word.classList.add('revealed');
                     }, delay);
+                    this.animationTimeouts.push(timeout);
                 });
             }, 500);
+            this.animationTimeouts.push(mainTimeout);
             
             // Subtitle reveal
-            setTimeout(() => {
+            const subtitleTimeout = setTimeout(() => {
                 if (this.elements.subtitle) {
                     this.elements.subtitle.classList.add('revealed');
                 }
             }, 1200);
+            this.animationTimeouts.push(subtitleTimeout);
             
             // Action area reveal
-            setTimeout(() => {
+            const actionTimeout = setTimeout(() => {
                 if (this.elements.actionArea) {
                     this.elements.actionArea.classList.add('revealed');
                 }
             }, 2400);
+            this.animationTimeouts.push(actionTimeout);
         }
         
         startImageRotation(): void {
             if (this.elements.heroImages.length <= 1) return;
             
-            setInterval(() => {
+            // Clear existing interval
+            if (this.imageInterval) {
+                clearInterval(this.imageInterval);
+            }
+
+            this.imageInterval = setInterval(() => {
                 // Remove active class from current image
                 this.elements.heroImages[this.currentImageIndex].classList.remove('active');
                 
@@ -586,10 +609,76 @@ const {
                 this.elements.heroImages[this.currentImageIndex].classList.add('active');
             }, 6000); // Change image every 6 seconds
         }
+
+        destroy(): void {
+            // Clear all timeouts
+            this.animationTimeouts.forEach(timeout => clearTimeout(timeout));
+            this.animationTimeouts = [];
+
+            // Clear image rotation interval
+            if (this.imageInterval) {
+                clearInterval(this.imageInterval);
+                this.imageInterval = null;
+            }
+
+            // Disconnect observer
+            if (this.observer) {
+                this.observer.disconnect();
+                this.observer = null;
+            }
+        }
+
+        reinitialize(): void {
+            // Reset all elements to initial state
+            this.elements.titleLines.forEach(line => {
+                const word = line.querySelector('.word');
+                if (word) word.classList.remove('revealed');
+            });
+
+            if (this.elements.subtitle) {
+                this.elements.subtitle.classList.remove('revealed');
+            }
+
+            if (this.elements.actionArea) {
+                this.elements.actionArea.classList.remove('revealed');
+            }
+
+            // Reinitialize everything
+            this.init();
+        }
     }
     
-    // Initialize hero experience
-    document.addEventListener('DOMContentLoaded', () => {
-        new HeroExperience();
+    // Global hero instance management for ViewTransitions
+    function initializeHero() {
+        // Clean up existing instance if it exists
+        if (window.heroExperienceInstance) {
+            window.heroExperienceInstance.destroy();
+        }
+        
+        // Create new instance
+        window.heroExperienceInstance = new HeroExperience();
+    }
+
+    function reinitializeHero() {
+        if (window.heroExperienceInstance) {
+            window.heroExperienceInstance.reinitialize();
+        } else {
+            initializeHero();
+        }
+    }
+    
+    // Initialize on regular page load and ViewTransitions
+    document.addEventListener('DOMContentLoaded', initializeHero);
+    document.addEventListener('astro:page-load', initializeHero);
+    
+    // Clean up before any navigation
+    document.addEventListener('astro:before-preparation', () => {
+        if (window.heroExperienceInstance) {
+            window.heroExperienceInstance.destroy();
+            window.heroExperienceInstance = null;
+        }
     });
+
+    // Initialize after page swap (handles back button)
+    document.addEventListener('astro:after-swap', initializeHero);
 </script>

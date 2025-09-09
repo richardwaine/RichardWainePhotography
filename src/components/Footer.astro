@@ -48,7 +48,7 @@ const {
 ---
 
 <!-- Footer Access Trapezoid -->
-<div class="footer-trigger" id="footerTrigger">
+<div class="footer-trigger" id="footerTrigger" tabindex="0" role="button" aria-label="Open footer menu" aria-expanded="false">
     <div class="trapezoid-indicator">
         <span class="trapezoid-text">MENU</span>
     </div>
@@ -186,8 +186,17 @@ const {
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
     }
 
-    .footer-panel.active {
+    .footer-trigger:hover + .footer-panel,
+    .footer-trigger:focus + .footer-panel,
+    .footer-trigger:focus-visible + .footer-panel,
+    .footer-panel:hover,
+    .footer-panel:focus-within {
         bottom: 0;
+    }
+
+    .footer-trigger:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
     }
 
     .footer-content {
@@ -343,67 +352,3 @@ const {
     }
 </style>
 
-<script>
-    class FooterNavigation {
-        private footerTrigger: Element | null;
-        private footerPanel: Element | null;
-
-        constructor() {
-            this.footerTrigger = document.getElementById('footerTrigger');
-            this.footerPanel = document.getElementById('footerPanel');
-            this.init();
-        }
-        
-        init(): void {
-            if (!this.footerTrigger || !this.footerPanel) return;
-            
-            let isFooterOpen = false;
-            
-            // Footer trigger hover to show footer immediately
-            this.footerTrigger.addEventListener('mouseenter', () => {
-                if (this.footerPanel) {
-                    this.footerPanel.classList.add('active');
-                    isFooterOpen = true;
-                }
-            });
-            
-            // Footer trigger click to toggle footer
-            this.footerTrigger.addEventListener('click', () => {
-                if (this.footerPanel) {
-                    if (isFooterOpen) {
-                        this.footerPanel.classList.remove('active');
-                        isFooterOpen = false;
-                    } else {
-                        this.footerPanel.classList.add('active');
-                        isFooterOpen = true;
-                    }
-                }
-            });
-            
-            // Hide footer when mouse leaves footer area
-            this.footerPanel.addEventListener('mouseleave', () => {
-                if (this.footerPanel && isFooterOpen) {
-                    this.footerPanel.classList.remove('active');
-                    isFooterOpen = false;
-                }
-            });
-            
-            // Click anywhere outside to close
-            document.addEventListener('click', (e) => {
-                if (isFooterOpen && 
-                    !this.footerPanel?.contains(e.target as Node) &&
-                    !this.footerTrigger?.contains(e.target as Node)) {
-                    if (this.footerPanel) {
-                        this.footerPanel.classList.remove('active');
-                        isFooterOpen = false;
-                    }
-                }
-            });
-        }
-    }
-    
-    // Initialize footer navigation
-    document.addEventListener('DOMContentLoaded', () => {
-        new FooterNavigation();
-    });
-</script>
