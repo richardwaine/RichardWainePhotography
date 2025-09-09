@@ -115,6 +115,7 @@ const {
         width: 100%;
         height: 100%;
         z-index: -1;
+        overflow: hidden;
     }
 
     .depth-layer {
@@ -434,13 +435,13 @@ const {
 
     /* Animations */
     @keyframes depthFloat1 {
-        0%, 100% { transform: translateY(0px) scale(1); }
-        50% { transform: translateY(-20px) scale(1.02); }
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
     }
 
     @keyframes depthFloat2 {
-        0%, 100% { transform: translateX(0px) translateY(0px); }
-        50% { transform: translateX(10px) translateY(-15px); }
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
     }
 
     @keyframes showcaseFloat {
