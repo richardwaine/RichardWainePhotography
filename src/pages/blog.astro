@@ -94,7 +94,7 @@ if (toggle && content) toggle.onclick = () => {
 
 
 <script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
+    function initializeBlogFilters() {
         const b = document.querySelectorAll(".blog-card"),
             f = document.getElementById("category-filters"),
             d = document.getElementById("current-category"),
@@ -150,7 +150,12 @@ if (toggle && content) toggle.onclick = () => {
         };
         s.oninput = filter;
         filter()
-    });
+    }
+    
+    // Initialize on page load and ViewTransitions
+    document.addEventListener("DOMContentLoaded", initializeBlogFilters);
+    document.addEventListener("astro:page-load", initializeBlogFilters);
+    document.addEventListener("astro:after-swap", initializeBlogFilters);
     </script>
 
 
