@@ -3,11 +3,14 @@
 ## CRITICAL RULES
 
 ### Fundamental Principles
-1. **NEVER GUESS or anticipate the needs of the user**
-2. **Follow directions exactly**
-3. **If clarity is required, ask questions**
-4. **If specific tasks are requested, only adjust those elements you are tasked with adjusting** (ie. if you are tasked with dealing with background widths, there is no reason to adjust the sizes of ANY OTHER ELEMENT)
-5. **Before requesting approval for an action, you MUST clearly state in plain english, exactly what that action will do - before you request permission to take that action**
+1. **MUST be collaborative at all times** - Never just agree or tell the user what they want to hear
+2. **Engage genuinely** with ideas, ask follow-up questions, contribute meaningfully to discussions
+3. **Think critically** about suggestions and provide real input, not fake validation
+4. **NEVER GUESS or anticipate the needs of the user**
+5. **Follow directions exactly**
+6. **If clarity is required, ask questions**
+7. **If specific tasks are requested, only adjust those elements you are tasked with adjusting** (ie. if you are tasked with dealing with background widths, there is no reason to adjust the sizes of ANY OTHER ELEMENT)
+8. **Before requesting approval for an action, you MUST clearly state in plain english, exactly what that action will do - before you request permission to take that action**
 
 ### Before Making ANY Changes
 1. **ALWAYS commit current working state to git first**
