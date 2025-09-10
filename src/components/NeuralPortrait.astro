@@ -1,0 +1,743 @@
+---
+const portfolioData = [
+  {
+    image: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=800",
+    characteristics: [
+      { 
+        label: "MYSTERIOUS", 
+        facePoint: { top: '35%', left: '45%' },
+        labelPosition: { top: '15%', left: '75%' },
+        visible: true
+      },
+      { 
+        label: "COOL", 
+        facePoint: { top: '25%', left: '55%' },
+        labelPosition: { top: '5%', left: '85%' },
+        visible: true
+      },
+      { 
+        label: "EDGY", 
+        facePoint: { top: '50%', left: '40%' },
+        labelPosition: { top: '70%', left: '10%' },
+        visible: true
+      }
+    ]
+  },
+  {
+    image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800",
+    characteristics: [
+      { 
+        label: "CONFIDENT", 
+        facePoint: { top: '30%', left: '50%' },
+        labelPosition: { top: '10%', left: '80%' },
+        visible: true
+      },
+      { 
+        label: "APPROACHABLE", 
+        facePoint: { top: '55%', left: '60%' },
+        labelPosition: { top: '60%', left: '75%' },
+        visible: true
+      }
+    ]
+  },
+  {
+    image: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800",
+    characteristics: [
+      { 
+        label: "PROFESSIONAL", 
+        facePoint: { top: '25%', left: '50%' },
+        labelPosition: { top: '5%', left: '75%' },
+        visible: true
+      },
+      { 
+        label: "TRUSTWORTHY", 
+        facePoint: { top: '40%', left: '55%' },
+        labelPosition: { top: '60%', left: '85%' },
+        visible: true
+      },
+      { 
+        label: "RELIABLE", 
+        facePoint: { top: '60%', left: '45%' },
+        labelPosition: { top: '85%', left: '10%' },
+        visible: true
+      }
+    ]
+  },
+  {
+    image: "https://images.pexels.com/photos/1680174/pexels-photo-1680174.jpeg?auto=compress&cs=tinysrgb&w=800",
+    characteristics: [
+      { 
+        label: "CREATIVE", 
+        facePoint: { top: '30%', left: '45%' },
+        labelPosition: { top: '10%', left: '15%' },
+        visible: true
+      },
+      { 
+        label: "ARTISTIC", 
+        facePoint: { top: '50%', left: '60%' },
+        labelPosition: { top: '75%', left: '80%' },
+        visible: true
+      },
+      { 
+        label: "EXPRESSIVE", 
+        facePoint: { top: '40%', left: '35%' },
+        labelPosition: { top: '20%', left: '5%' },
+        visible: true
+      }
+    ]
+  }
+];
+
+const currentImageIndex = 0;
+const currentData = portfolioData[currentImageIndex];
+---
+
+<section class="neural-section">
+  <div class="neural-content">
+    <div class="text-section">
+      <div class="neural-title">
+        <span class="neural-title-word">NEURAL</span>
+        <span class="neural-title-word">PORTRAIT</span>
+        <span class="neural-title-word">SYNTHESIS</span>
+      </div>
+      
+      <div class="data-streams">
+        <div class="data-stream">
+          <span class="stream-label">CONFIDENCE LEVEL:</span>
+          <span class="stream-value">98.7%</span>
+        </div>
+        <div class="data-stream">
+          <span class="stream-label">AUTHENTICITY INDEX:</span>
+          <span class="stream-value">MAXIMUM</span>
+        </div>
+        <div class="data-stream">
+          <span class="stream-label">IMPACT PROJECTION:</span>
+          <span class="stream-value">EXPONENTIAL</span>
+        </div>
+      </div>
+
+      <div class="cta-matrix">
+        <button class="quantum-cta">
+          <span class="cta-text">INITIATE SESSION</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="holographic-section">
+      <div class="holographic-frame">
+        <div class="holo-border"></div>
+        <div class="image-container">
+          <img 
+            src={currentData.image}
+            alt="Neural Portrait Analysis"
+            class="portrait-scan"
+            id="main-portrait"
+          />
+          <div class="analysis-overlay">
+            <div class="data-points" id="data-points">
+              {currentData.characteristics.filter(characteristic => 
+                characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
+              ).map((characteristic) => (
+                <div>
+                  <div 
+                    class="face-point" 
+                    style={`top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left}`}
+                  >
+                    <div class="point-marker"></div>
+                  </div>
+                  <div 
+                    class="characteristic-label" 
+                    style={`top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}`}
+                  >
+                    <span class="point-label">{characteristic.label}</span>
+                  </div>
+                  <svg class="connection-line" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+                    <line
+                      x1={characteristic.facePoint.left}
+                      y1={characteristic.facePoint.top}
+                      x2={characteristic.labelPosition.left}
+                      y2={characteristic.labelPosition.top}
+                      stroke="#00a8ff"
+                      stroke-width="1"
+                      opacity="0.6"
+                    />
+                  </svg>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-matrix">
+        {portfolioData.map((data, index) => (
+          <div class="matrix-cell" data-index={index.toString()}>
+            <img src={data.image} alt={`Neural scan ${index + 1}`} />
+            <div class="cell-overlay">
+              <span class="cell-id">ID_{String(index + 1).padStart(3, '0')}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const portfolioData = [
+      {
+        image: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=800",
+        characteristics: [
+          { 
+            label: "MYSTERIOUS", 
+            facePoint: { top: '35%', left: '45%' },
+            labelPosition: { top: '15%', left: '75%' },
+            visible: true
+          },
+          { 
+            label: "COOL", 
+            facePoint: { top: '25%', left: '55%' },
+            labelPosition: { top: '5%', left: '85%' },
+            visible: true
+          },
+          { 
+            label: "EDGY", 
+            facePoint: { top: '50%', left: '40%' },
+            labelPosition: { top: '70%', left: '10%' },
+            visible: true
+          }
+        ]
+      },
+      {
+        image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800",
+        characteristics: [
+          { 
+            label: "CONFIDENT", 
+            facePoint: { top: '30%', left: '50%' },
+            labelPosition: { top: '10%', left: '80%' },
+            visible: true
+          },
+          { 
+            label: "APPROACHABLE", 
+            facePoint: { top: '55%', left: '60%' },
+            labelPosition: { top: '60%', left: '75%' },
+            visible: true
+          }
+        ]
+      },
+      {
+        image: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800",
+        characteristics: [
+          { 
+            label: "PROFESSIONAL", 
+            facePoint: { top: '25%', left: '50%' },
+            labelPosition: { top: '5%', left: '75%' },
+            visible: true
+          },
+          { 
+            label: "TRUSTWORTHY", 
+            facePoint: { top: '40%', left: '55%' },
+            labelPosition: { top: '60%', left: '85%' },
+            visible: true
+          },
+          { 
+            label: "RELIABLE", 
+            facePoint: { top: '60%', left: '45%' },
+            labelPosition: { top: '85%', left: '10%' },
+            visible: true
+          }
+        ]
+      },
+      {
+        image: "https://images.pexels.com/photos/1680174/pexels-photo-1680174.jpeg?auto=compress&cs=tinysrgb&w=800",
+        characteristics: [
+          { 
+            label: "CREATIVE", 
+            facePoint: { top: '30%', left: '45%' },
+            labelPosition: { top: '10%', left: '15%' },
+            visible: true
+          },
+          { 
+            label: "ARTISTIC", 
+            facePoint: { top: '50%', left: '60%' },
+            labelPosition: { top: '75%', left: '80%' },
+            visible: true
+          },
+          { 
+            label: "EXPRESSIVE", 
+            facePoint: { top: '40%', left: '35%' },
+            labelPosition: { top: '20%', left: '5%' },
+            visible: true
+          }
+        ]
+      }
+    ];
+
+    const matrixCells = document.querySelectorAll('.matrix-cell');
+    const portraitScan = document.querySelector('#main-portrait');
+    const dataPoints = document.querySelector('#data-points');
+    
+    matrixCells.forEach(cell => {
+      cell.addEventListener('click', (event) => {
+        const target = event.currentTarget as HTMLElement;
+        const index = parseInt(target.dataset.index || '0');
+        updatePortrait(index);
+      });
+    });
+    
+    function updatePortrait(index: any) {
+      const currentData = portfolioData[index];
+      
+      // Update image
+      if (portraitScan && portraitScan instanceof HTMLImageElement) {
+        portraitScan.src = currentData.image;
+      }
+      
+      // Update data points
+      if (dataPoints) {
+        dataPoints.innerHTML = '';
+        
+        currentData.characteristics.filter(characteristic => 
+          characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
+        ).forEach((characteristic) => {
+          const pointContainer = document.createElement('div');
+          pointContainer.innerHTML = `
+            <div class="face-point" style="top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left}">
+              <div class="point-marker"></div>
+            </div>
+            <div class="characteristic-label" style="top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}">
+              <span class="point-label">${characteristic.label}</span>
+            </div>
+            <svg class="connection-line" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+              <line
+                x1="${characteristic.facePoint.left}"
+                y1="${characteristic.facePoint.top}"
+                x2="${characteristic.labelPosition.left}"
+                y2="${characteristic.labelPosition.top}"
+                stroke="#00a8ff"
+                stroke-width="1"
+                opacity="0.6"
+              />
+            </svg>
+          `;
+          dataPoints.appendChild(pointContainer);
+        });
+      }
+    }
+  });
+</script>
+
+<style>
+.neural-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 8rem 2rem 4rem;
+  overflow: hidden;
+  background: var(--drkbg);
+  color: var(--ltclr);
+  font-family: var(--ff-primary);
+}
+
+.neural-content {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.text-section {
+  z-index: 3;
+  position: relative;
+}
+
+.neural-title {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+  perspective: 1000px;
+}
+
+.neural-title-word {
+  display: block;
+  background: linear-gradient(135deg, #ffffff 0%, #cccccc 50%, #ffffff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+}
+
+.data-streams {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  font-family: 'Space Grotesk', monospace;
+}
+
+.data-stream {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.data-stream:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(10px);
+}
+
+.stream-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.stream-value {
+  color: #00a8ff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-shadow: 0 0 10px rgba(0, 168, 255, 0.5);
+}
+
+.cta-matrix {
+  position: relative;
+}
+
+.quantum-cta {
+  position: relative;
+  padding: 1.25rem 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #00a8ff;
+  border-radius: 0;
+  color: #00a8ff;
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: uppercase;
+}
+
+.quantum-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 168, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.quantum-cta:hover::before {
+  left: 100%;
+}
+
+.quantum-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 168, 255, 0.3);
+  background: rgba(0, 168, 255, 0.1);
+}
+
+.cta-text {
+  position: relative;
+  z-index: 2;
+}
+
+.holographic-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.holographic-frame {
+  position: relative;
+  width: 700px;
+  height: 550px;
+  transform-style: preserve-3d;
+  max-width: 100%;
+}
+
+.holo-border {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.portrait-scan {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.1) brightness(1.0) saturate(0.9);
+}
+
+.analysis-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.data-points {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.face-point {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.characteristic-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.point-marker {
+  width: 8px;
+  height: 8px;
+  background: #00a8ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 168, 255, 0.8);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+.point-label {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.75rem;
+  color: #00a8ff;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.connection-line {
+  z-index: 1;
+}
+
+.connection-line line {
+  filter: drop-shadow(0 0 3px rgba(0, 168, 255, 0.5));
+}
+
+.portfolio-matrix {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.matrix-cell {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.matrix-cell:hover {
+  transform: scale(1.1);
+  border-color: rgba(0, 168, 255, 0.6);
+  box-shadow: 0 5px 20px rgba(0, 168, 255, 0.3);
+}
+
+.matrix-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.3) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+.matrix-cell:hover img {
+  filter: grayscale(0) contrast(1.2);
+}
+
+.cell-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  padding: 0.5rem 0.25rem 0.25rem;
+}
+
+.cell-id {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.6rem;
+  color: #00a8ff;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .neural-content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .holographic-frame {
+    width: min(400px, 90vw);
+    height: min(320px, 72vw);
+  }
+  
+  .data-streams {
+    align-items: center;
+  }
+  
+  .data-stream {
+    max-width: min(400px, 90vw);
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .neural-section {
+    padding: 6rem 1rem 2rem;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .neural-content {
+    gap: 3rem;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .neural-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .holographic-frame {
+    width: min(350px, 85vw);
+    height: min(280px, 68vw);
+  }
+  
+  .matrix-cell {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .quantum-cta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .data-stream {
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+  
+  .stream-label {
+    font-size: 0.8rem;
+  }
+  
+  .stream-value {
+    font-size: 0.9rem;
+  }
+  
+  .point-label {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .neural-section {
+    padding: 5rem 0.5rem 2rem;
+  }
+  
+  .neural-title {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+  }
+  
+  .holographic-frame {
+    width: min(300px, 90vw);
+    height: min(240px, 72vw);
+  }
+  
+  .matrix-cell {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .quantum-cta {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .data-stream {
+    padding: 0.5rem 0.75rem;
+  }
+}
+</style>

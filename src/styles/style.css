@@ -203,6 +203,7 @@ section{
   padding-block:var(--size-8);
 }
 
+
 strong{
   font-weight:var(--fw-bold);
 }

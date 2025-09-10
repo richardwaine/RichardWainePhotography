@@ -5,9 +5,10 @@
   /* --drkbg:#252521; */
   /* --drkbg:#0f1014; */
   /* --drkbg:#1a1a1a; */
-  --drkbg:#121212;
+  /* --drkbg:#121212; */
+  --drkbg:#0a0a0a;
   --ltbg:#ebedef;
-  --accent:#03a9f4;
+  --accent:rgb(3, 169, 244);
   --faded:#737373;
   --stars:#FFE000;
   --bg-primary: #0f0f0f;

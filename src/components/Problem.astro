@@ -11,6 +11,11 @@
 		    <p class="benefits paragraph one spacing">A<h2 class="benefits h2 spacing"> PROFESSIONAL HEADSHOT</h2>
 		    <p class="benefits paragraph two spacing"> EXPERIENCE CAN CHANGE EVERYTHING</p>
 		</div>
+
+<div class="sliding-images">
+<img class="image1" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683ddd9383fd532f9bb3614a/1748884884118/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%28horizontal%29+-+compressed.jpg" alt="">
+</div>
+
 </div>
 
 
@@ -64,6 +69,30 @@
 }
 .benefits > p{
     /* padding-block:var(--size-3); */
+}
+
+.wrapper{
+    display:grid;
+    margin-inline:auto;
+}
+
+.sliding-images img{
+    width:min(800px, 100%);
+    margin-inline:auto;
+    display:block;
+    height:auto;
+    padding:0;
+}
+
+@media (width > 767px){
+    .wrapper{
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items:center;
+        gap:2em;
+        max-width:80%;
+        margin-inline:auto;
+    }
 }
 
 

@@ -29,6 +29,23 @@
 - **NEVER** add wrapper divs that change document flow
 - **NEVER** remove working functionality
 
+### CARDINAL RULE: Custom Properties Protocol
+**BEFORE adding ANY CSS property or value, you MUST:**
+
+1. **Read the entire :root section in `/src/styles/style.css` first**
+2. **Search for the EXACT VALUE you want to use** (like `#ffffff` or `rgba(0,0,0,0.8)`)
+3. **If that value already exists, use the existing property name**
+4. **NEVER create a new custom property without explicit permission**
+5. **If you need a new property, ask permission first and explain why existing properties won't work**
+
+**BEFORE requesting approval for any action involving CSS:**
+- **MUST clearly state in plain english exactly what the action will do BEFORE requesting permission**
+- State exactly which existing custom properties you found that match your needs
+- Example: "I found your existing `--ltclr` property has the value `#fff` which is what I need, so I'll use `var(--ltclr)`"
+- If no existing property matches, explicitly ask permission to create a new one and explain why
+
+**USER MUST REJECT ANY EDIT** where Claude tries to add a custom property without first showing they checked existing ones.
+
 ### File Structure
 - Main page: `/src/pages/index.astro`
 - Components: `/src/components/`
