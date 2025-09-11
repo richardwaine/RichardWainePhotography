@@ -1,5 +1,7 @@
 ---
+import FloatingStats from '../components/FloatingStats.astro';
 
+import { Image } from 'astro:assets';
 ---
 
 <!-- Swiper -->
@@ -8,9 +10,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
         <div class="swiper-content-wrapper">
-          <img class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683ddd9383fd532f9bb3614a/1748884884118/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%28horizontal%29+-+compressed.jpg" alt="corporate headshots lancaster, lancaster corporate headshots, 
-        Richard Waine photography, Lancaster studio headshots, on-location headshots, business headshots, Lancaster business headshots, business headshots Lancaster, commercial photography, commercial headshots, marketing headshots, 
-        branding headshots, about us headshots, about us page, Lancaster conference headshots, Lancaster convention headshots, Lancaster expo headshots" loading="lazy" width="600" height="480">
+          <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683ddd9383fd532f9bb3614a/1748884884118/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%28horizontal%29+-+compressed.jpg" alt="corporate headshots lancaster, lancaster corporate headshots, Richard Waine photography, Lancaster studio headshots, on-location headshots, business headshots, Lancaster business headshots, business headshots Lancaster, commercial photography, commercial headshots, marketing headshots, branding headshots, about us headshots, about us page, Lancaster conference headshots, Lancaster convention headshots, Lancaster expo headshots" width={600} height={480} />
           <div class="slide-content slide-content1">
             <h2 class="heading">Business Headshots</h2>
             <div class="slide-text">
@@ -39,8 +39,7 @@
             </div>
             <div class="swiper-slide">
         <div class="swiper-content-wrapper">
-          <img class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/679e52e6fcf5d61b2ee6db4c/1738429158605/Headshot_20220829_Jack+Cottrell_Richard_Waine_Lancaster_PA_0318+%28horizontal%29+-+compressed.jpg" alt="acting headshots, acting headshots lancaster, lancaster actor headshots, 
-        professional acting headshots, professional headshots, actor headshots, headshots for actors, Lancaster studio headshots, performer headshots, theatrical headshots, commercial headshots, Lancaster theater headshots, Lancaster commercial headshots" loading="lazy" width="600" height="480">
+          <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/679e52e6fcf5d61b2ee6db4c/1738429158605/Headshot_20220829_Jack+Cottrell_Richard_Waine_Lancaster_PA_0318+%28horizontal%29+-+compressed.jpg" alt="acting headshots, acting headshots lancaster, lancaster actor headshots, professional acting headshots, professional headshots, actor headshots, headshots for actors, Lancaster studio headshots, performer headshots, theatrical headshots, commercial headshots, Lancaster theater headshots, Lancaster commercial headshots" width={600} height={480} />
           <div class="slide-content slide-content2">
             <h2 class="heading">Acting Headshots</h2>
             <div class="slide-text">
@@ -62,7 +61,7 @@
             </div>
             <div class="swiper-slide">
         <div class="swiper-content-wrapper">
-          <img class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67c5f5a68a5cab799090ec0c/1741026726428/Headshot_20180414_Ken+Giglio_Richard_Waine_Lancaster_PA_0060-2+-+compressed.jpg" alt="LinkedIn headshots, LinkedIn profile picture, LinkedIn profile photo, Lancaster social media headshots, professional headshots, professional headshot photographer, Richard Waine photography, studio headshots" loading="lazy" width="600" height="480">
+          <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67c5f5a68a5cab799090ec0c/1741026726428/Headshot_20180414_Ken+Giglio_Richard_Waine_Lancaster_PA_0060-2+-+compressed.jpg" alt="LinkedIn headshots, LinkedIn profile picture, LinkedIn profile photo, Lancaster social media headshots, professional headshots, professional headshot photographer, Richard Waine photography, studio headshots" width={600} height={480} />
           <div class="slide-content slide-content3">
             <h2 class="heading">LinkedIn Headshots</h2>
             <div class="slide-text">
@@ -85,7 +84,7 @@
             </div>
             <div class="swiper-slide">
         <div class="swiper-content-wrapper">
-          <img class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/675ef24237488f7c4db858aa/1734275651178/Chubb+-+Contact+Sheet+%28square%29-1.jpg" alt="Office Headshots, Professional Headshots on Location, Team Headshots" loading="lazy" width="600" height="600">
+          <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/675ef24237488f7c4db858aa/1734275651178/Chubb+-+Contact+Sheet+%28square%29-1.jpg" alt="Office Headshots, Professional Headshots on Location, Team Headshots" width={600} height={600} />
           <div class="slide-content slide-content4">
             <h2 class="heading">Office Headshots</h2>
             <div class="slide-text">
@@ -115,6 +114,8 @@
     <div class="swiper-pagination"></div>
 </div>
 </div>
+
+
 
 <!-- gsap and swiper -->
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -304,4 +305,6 @@ font-weight:900;
   
   }
 }
+
+
 </style>
