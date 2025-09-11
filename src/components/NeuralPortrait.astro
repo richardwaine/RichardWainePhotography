@@ -132,6 +132,9 @@ const currentData = portfolioData[currentImageIndex];
             alt="Neural Portrait Analysis"
             class="portrait-scan"
             id="main-portrait"
+            loading="eager"
+            width="500"
+            height="500"
           />
           <div class="analysis-overlay">
             <div class="data-points" id="data-points">
@@ -172,7 +175,7 @@ const currentData = portfolioData[currentImageIndex];
       <div class="portfolio-matrix">
         {portfolioData.map((data, index) => (
           <div class="matrix-cell" data-index={index.toString()}>
-            <img src={data.image} alt={`Neural scan ${index + 1}`} />
+            <img src={data.image} alt={`Neural scan ${index + 1}`} loading="lazy" width="300" height="300" />
             <div class="cell-overlay">
               <span class="cell-id">ID_{String(index + 1).padStart(3, '0')}</span>
             </div>
@@ -394,7 +397,6 @@ const currentData = portfolioData[currentImageIndex];
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
 }
 
 .data-stream:hover {
@@ -433,7 +435,6 @@ const currentData = portfolioData[currentImageIndex];
   letter-spacing: 0.1rem;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   text-transform: uppercase;
 }
 
@@ -593,7 +594,6 @@ const currentData = portfolioData[currentImageIndex];
   border-radius: 8px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 
