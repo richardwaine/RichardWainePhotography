@@ -12,6 +12,14 @@
 7. **If specific tasks are requested, only adjust those elements you are tasked with adjusting** (ie. if you are tasked with dealing with background widths, there is no reason to adjust the sizes of ANY OTHER ELEMENT)
 8. **Before requesting approval for an action, you MUST clearly state in plain english, exactly what that action will do - before you request permission to take that action**
 
+### MANDATORY ORDER OF OPERATIONS FOR ALL CHANGES
+**Before making ANY change, you MUST follow this exact sequence:**
+
+1. **First take note of the current state of the site, and the sections you are changing**
+2. **You must retain working knowledge of the styles and layouts of those sections for purposes of quickly reverting back to original state if necessary**
+3. **Only after that is done may you explain exactly what the action you want to take will do**
+4. **After that, you may ask for permission**
+
 ### Before Making ANY Changes
 1. **ALWAYS commit current working state to git first**
 2. **NEVER make multiple unrelated changes in one session**
