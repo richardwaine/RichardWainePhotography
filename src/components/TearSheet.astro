@@ -74,6 +74,11 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             min-height: var(--_tear-sheet-height);
             place-items: center;
             background: var(--ltclr);
+
+            background:transparent;
+            color:white;
+
+
             width:80%;
             margin:auto;
         }
@@ -129,14 +134,20 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             }
         }
         
+
+        
         .scroller img {
             height: auto;
             max-width: 175px;
             filter: grayscale(1);
+            
+            
             flex-shrink: 0;
             margin-inline: var(--size-9);
         }
-        
+
+       
+      
         /* Specific scaling for certain logos */
         .scroller img:nth-child(3),
         .scroller img:nth-child(7),

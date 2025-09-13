@@ -201,12 +201,9 @@ strong{
 
     .wrapper{
         
-       /* width:calc(100% - 4em); */
-       /* width:100%; */
-      /* width:min(2000px, calc(100% - 4em));*/
+      
        margin-inline:auto;
-       /* padding-inline:4em; */
-       /* padding-block:var(--size-10) */
+      
        width:80%;
       
         

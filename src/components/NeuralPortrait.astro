@@ -96,9 +96,15 @@ const currentData = portfolioData[currentImageIndex];
   <div class="neural-content">
     <div class="text-section">
       <div class="neural-title">
-        <span class="neural-title-word">NEURAL</span>
-        <span class="neural-title-word">PORTRAIT</span>
-        <span class="neural-title-word">SYNTHESIS</span>
+        <div class="title-line" data-delay="0">
+          <span class="neural-title-word word">NEURAL</span>
+        </div>
+        <div class="title-line" data-delay="100">
+          <span class="neural-title-word word">PORTRAIT</span>
+        </div>
+        <div class="title-line" data-delay="200">
+          <span class="neural-title-word word">SYNTHESIS</span>
+        </div>
       </div>
       
       <div class="data-streams">
@@ -187,6 +193,47 @@ const currentData = portfolioData[currentImageIndex];
 </section>
 
 <script>
+  function initNeuralAnimation() {
+    const neuralSection = document.querySelector('.neural-section');
+    const titleLines = document.querySelectorAll('.neural-section .title-line');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          titleLines.forEach((line, index) => {
+            const word = line.querySelector('.word');
+            const htmlLine = line as HTMLElement;
+            const delay = parseInt(htmlLine.dataset.delay || '0') || index * 100;
+            setTimeout(() => {
+              if (word) {
+                word.classList.add('revealed');
+              }
+            }, delay);
+          });
+        } else {
+          // Reset animation when out of view
+          titleLines.forEach((line) => {
+            const word = line.querySelector('.word');
+            if (word) {
+              word.classList.remove('revealed');
+            }
+          });
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '0px 0px -50px 0px'
+    });
+    
+    if (neuralSection) {
+      observer.observe(neuralSection);
+    }
+  }
+
+  // Initialize on page load and after view transitions
+  document.addEventListener('DOMContentLoaded', initNeuralAnimation);
+  document.addEventListener('astro:page-load', initNeuralAnimation);
+
   document.addEventListener('DOMContentLoaded', function() {
     const portfolioData = [
       {
@@ -304,27 +351,58 @@ const currentData = portfolioData[currentImageIndex];
         currentData.characteristics.filter(characteristic => 
           characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
         ).forEach((characteristic) => {
-          const pointContainer = document.createElement('div');
-          pointContainer.innerHTML = `
-            <div class="face-point" style="top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left}">
-              <div class="point-marker"></div>
-            </div>
-            <div class="characteristic-label" style="top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}">
-              <span class="point-label">${characteristic.label}</span>
-            </div>
-            <svg class="connection-line" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
-              <line
-                x1="${characteristic.facePoint.left}"
-                y1="${characteristic.facePoint.top}"
-                x2="${characteristic.labelPosition.left}"
-                y2="${characteristic.labelPosition.top}"
-                stroke="#00a8ff"
-                stroke-width="1"
-                opacity="0.6"
-              />
-            </svg>
-          `;
-          dataPoints.appendChild(pointContainer);
+          // Create wrapper div for each characteristic (matching initial HTML structure)
+          const characteristicWrapper = document.createElement('div');
+          
+          // Create face point
+          const facePoint = document.createElement('div');
+          facePoint.className = 'face-point';
+          facePoint.style.cssText = `position: absolute; top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left};`;
+          
+          const pointMarker = document.createElement('div');
+          pointMarker.className = 'point-marker';
+          facePoint.appendChild(pointMarker);
+          
+          // Create characteristic label
+          const characteristicLabel = document.createElement('div');
+          characteristicLabel.className = 'characteristic-label';
+          characteristicLabel.style.cssText = `position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left};`;
+          
+          const pointLabel = document.createElement('span');
+          pointLabel.className = 'point-label';
+          pointLabel.textContent = characteristic.label;
+          characteristicLabel.appendChild(pointLabel);
+          
+          // Create SVG line
+          const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          svg.setAttribute('class', 'connection-line');
+          svg.setAttribute('style', 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;');
+          
+          // Convert percentage to pixel values for SVG coordinates
+          const containerRect = dataPoints.getBoundingClientRect();
+          const x1 = parseFloat(characteristic.facePoint.left) * containerRect.width / 100;
+          const y1 = parseFloat(characteristic.facePoint.top) * containerRect.height / 100;
+          const x2 = parseFloat(characteristic.labelPosition.left) * containerRect.width / 100;
+          const y2 = parseFloat(characteristic.labelPosition.top) * containerRect.height / 100;
+          
+          const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          line.setAttribute('x1', x1.toString());
+          line.setAttribute('y1', y1.toString());
+          line.setAttribute('x2', x2.toString());
+          line.setAttribute('y2', y2.toString());
+          line.setAttribute('stroke', '#00a8ff');
+          line.setAttribute('stroke-width', '1');
+          line.setAttribute('opacity', '0.6');
+          
+          svg.appendChild(line);
+          
+          // Append all elements to wrapper
+          characteristicWrapper.appendChild(facePoint);
+          characteristicWrapper.appendChild(characteristicLabel);
+          characteristicWrapper.appendChild(svg);
+          
+          // Add wrapper to data points container
+          dataPoints.appendChild(characteristicWrapper);
         });
       }
     }
@@ -333,14 +411,13 @@ const currentData = portfolioData[currentImageIndex];
 
 <style>
 .neural-section {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 8rem 2rem 4rem;
+  padding: 2rem;
   overflow: hidden;
-  background: var(--drkbg);
+  /* background: var(--drkbg); */
   color: var(--ltclr);
   font-family: var(--ff-primary);
 }
@@ -362,22 +439,40 @@ const currentData = portfolioData[currentImageIndex];
 }
 
 .neural-title {
-  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--ff-primary);
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 900;
-  line-height: 0.9;
+  line-height: 0.85;
   margin-bottom: 2rem;
   perspective: 1000px;
+  text-align: left;
+  text-transform: none;
+  color: var(--ltclr);
+}
+
+.title-line {
+  overflow: hidden;
+  margin: 10px 0;
+  transform-style: preserve-3d;
 }
 
 .neural-title-word {
-  display: block;
-  background: linear-gradient(135deg, #ffffff 0%, #cccccc 50%, #ffffff 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  display: inline-block;
   transform-style: preserve-3d;
+}
+
+.word {
+  display: inline-block;
+  transform: translateY(100%) rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  font-weight: 900;
+  font-size: inherit;
+}
+
+.word.revealed {
+  transform: translateY(0) rotateX(0deg);
 }
 
 .data-streams {
@@ -436,6 +531,8 @@ const currentData = portfolioData[currentImageIndex];
   cursor: pointer;
   overflow: hidden;
   text-transform: uppercase;
+
+  
 }
 
 .quantum-cta::before {
@@ -473,31 +570,29 @@ const currentData = portfolioData[currentImageIndex];
 
 .holographic-frame {
   position: relative;
-  width: 700px;
-  height: 550px;
-  transform-style: preserve-3d;
+  width: 800px;
+  height: 500px;
   max-width: 100%;
+  background: url('/src/assets/macbook_PNG36.png') no-repeat center center;
+  background-size: contain;
 }
 
 .holo-border {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  display: none;
 }
 
 .image-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
+  position: absolute;
+  top: 12.25%;
+  left: 12.25%;
+  width: 75.25%;
+  height: 73.5%;
+  border-radius: 0;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
+  object-fit:contain;
+
+  
 }
 
 .portrait-scan {
@@ -556,7 +651,7 @@ const currentData = portfolioData[currentImageIndex];
   }
 }
 
-.point-label {
+:global(.point-label) {
   font-family: 'Space Grotesk', monospace;
   font-size: 0.75rem;
   color: #00a8ff;

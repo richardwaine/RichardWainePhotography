@@ -27,12 +27,21 @@
 <style>
     /* 3D Floating Statistics */
     .floating-stats {
-        position: absolute;
-        bottom: 40px;
-        left: 60px;
+        position: relative;
+        /* bottom: 40px; */
+        /* left: 50%; */
+        /* transform:translateX(-50%); */
+        
         z-index: 100;
-        display: flex;
-        gap: 30px;
+        
+
+
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items:end;
+        gap:var(--size-7);
 
         
     }
@@ -78,10 +87,65 @@
     .stat-label {
         font-size: 0.9rem;
         font-weight: 600;
-        color: var(--text-secondary);
+        color: var(--ltclr);
+
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-top: 8px;
     }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const statCards = document.querySelectorAll('.stat-card');
+    
+    function animateCounter(element: HTMLElement, target: number, duration = 2000) {
+        const start = 0;
+        const startTime = performance.now();
+        
+        function update() {
+            const currentTime = performance.now();
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            
+            const current = Math.floor(start + (target - start) * progress);
+            element.textContent = current.toString();
+            
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            }
+        }
+        
+        requestAnimationFrame(update);
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const card = entry.target as HTMLElement;
+                const delay = parseInt(card.dataset.delay || '0') || 0;
+                
+                setTimeout(() => {
+                    card.classList.add('revealed');
+                    
+                    const numberElement = card.querySelector('.stat-number') as HTMLElement;
+                    const targetCount = parseInt(numberElement?.dataset.count || '0');
+                    
+                    if (!isNaN(targetCount) && numberElement) {
+                        animateCounter(numberElement, targetCount);
+                    }
+                }, delay);
+                
+                observer.unobserve(card);
+            }
+        });
+    }, {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    statCards.forEach(card => {
+        observer.observe(card);
+    });
+});
+</script>

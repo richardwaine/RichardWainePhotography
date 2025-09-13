@@ -3,7 +3,7 @@
 ---
 
 <div class="wrapper">
-		<div class="benefits center">
+		<div class="benefits center" id="problemContent">
 		    <p class="section-title spacing">DO YOU HATE HAVING YOUR PICTURE TAKEN?</p>
 		    <p class="paragraph spacing">LACK OF CONFIDENCE, FEAR OF FAILURE, 
 		        AND FEELING THAT YOU AREN'T PHOTOGENIC,<br>
@@ -77,3 +77,38 @@
 
 
 </style>
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const problemContent = document.querySelector('#problemContent');
+    
+    if (problemContent) {
+        // Set initial state
+        gsap.set(problemContent, { y: 40, opacity: 0 });
+        
+        // Create intersection observer for animation trigger
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.to(problemContent, {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power3.out"
+                    });
+                } else {
+                    gsap.set(problemContent, { y: 40, opacity: 0 });
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        observer.observe(problemContent);
+    }
+});
+</script>

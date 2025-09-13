@@ -15,6 +15,8 @@ import HeadshotsNear from '../components/HeadshotsNear.astro';
 import Professions from '../components/Professions.astro';
 import DidYouKnow from '../components/DidYouKnow.astro';
 import FAQs from '../components/FAQs.astro';
+import NeuralPortrait from '../components/NeuralPortrait.astro';
+import FloatingStats from '../components/FloatingStats.astro';
 
 const title = 'Richard Waine Photography';
 const h1 = 'Professional Headshots Lancaster';
@@ -41,6 +43,8 @@ const heroContent = {
 ---
 
 <MainLayout title = "Richard Waine Photography">
+	
+	<section class="hero">
 	<Hero 
 		title={heroContent.title}
 		subtitle={heroContent.subtitle}
@@ -50,17 +54,18 @@ const heroContent = {
 		mainHeading={heroContent.mainHeading}
 	/>
 
+    </section>
 	
 	<section class="problem">
 
 		<Problem />
-	
+		
 	</section>
 
 	<section class="features">
 
 		<Features />
-
+		
 	</section>
 
 	<section id="promo-video">
@@ -71,14 +76,21 @@ const heroContent = {
 		
 	</section>
 	
-	<section class="office-headshots">
-		<OfficeHeadshots />
+
+	<section class="neural-portrait">
+		<NeuralPortrait />
+
 	</section>
-	
+
 	<section class="tear-sheet">
 		<TearSheet />
 
 	</section>
+
+	<section class="office-headshots">
+		<OfficeHeadshots />
+	</section>
+	
 
 	<section class="testimonials">
 		<Testimonials limit={3} filterByNames={["Wendy Booker", "Scott Kantner", "Ellen Taylor"]}/>
@@ -90,6 +102,7 @@ const heroContent = {
 
 	<section class="brief-bio">
 		<BriefBio />
+		<FloatingStats />
 	</section>
 	
 	<section class="hs-near">
@@ -117,29 +130,30 @@ const heroContent = {
 
 <style>
 
-
-
-
 #promo-video {
 		padding:var(--size-8) 0;
 }
 
 
-section{
+
+/* 100vh sections */
+.hero, .features, .neural-portrait, .office-headshots, .brief-bio {
 	height:100vh;
 	display:grid;
 	place-items:center;
 }
 
+/* Natural height sections */
+.problem, .promo-video, .tear-sheet, .testimonials, .process, .hs-near, .professions, .did-you-know, .FAQs {
+	height: auto;
+	display:grid;
+	place-items:center;
+}
 
-
-
-
-
-
-.features,.office-headshots,.testimonials,.brief-bio,.professions{
+/* Dark background sections */
+.features,.neural-portrait,.office-headshots,.testimonials,.brief-bio,.professions{
 	background:var(--drkbg);
-	height:100vh;
+	
 }
 
 .promo-video{
@@ -148,6 +162,26 @@ section{
 
 	
 }
+
+.hero{
+/* margin:0; */
+padding:0;
+}
+
+.brief-bio{
+	height:100vh;
+	margin:0;
+	
+	display:grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: 1fr;
+	place-items:center;
+	
+	
+}
+
+
+
 
 
 </style>

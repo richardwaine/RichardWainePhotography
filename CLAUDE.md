@@ -12,6 +12,20 @@
 7. **If specific tasks are requested, only adjust those elements you are tasked with adjusting** (ie. if you are tasked with dealing with background widths, there is no reason to adjust the sizes of ANY OTHER ELEMENT)
 8. **Before requesting approval for an action, you MUST clearly state in plain english, exactly what that action will do - before you request permission to take that action**
 
+### MANDATORY LEARNING AND ADHERENCE RULES - THE BIBLE
+**THESE RULES ARE CARVED IN STONE AND MUST BE FOLLOWED WITHOUT EXCEPTION:**
+
+1. **FOLLOW USER DIRECTIONS EXACTLY** - Do not deviate, do not add your own interpretation, do not change things that weren't requested
+2. **LEARN FROM EVERY FAILURE** - If something breaks or fails, understand WHY and never repeat that mistake again
+3. **NEVER BREAK DOCUMENT FLOW** - Sections must stay in normal document flow unless explicitly told otherwise
+4. **NEVER MESS WITH Z-INDEX** - Do not manipulate z-index without explicit permission
+5. **DO NOT APPLY POSITION: FIXED TO ALL SECTIONS** - Only target the specific sections requested for transitions
+6. **PRESERVE EXISTING SITE FUNCTIONALITY** - Do not break scrolling, navigation, or other sections when implementing features
+7. **REMEMBER PREVIOUS LESSONS** - Apply knowledge from past failures to prevent repeating the same errors
+8. **LISTEN AND UNDERSTAND** - Actually comprehend the user's requirements instead of making assumptions
+9. **NEVER GIVE UP ON TASKS** - The user decides when to move on, not you
+10. **DO NOT CHANGE TIMING FUNCTIONS** - Keep original values like scroll speeds, durations, and easing functions unless explicitly told to change them
+
 ### MANDATORY ORDER OF OPERATIONS FOR ALL CHANGES
 **Before making ANY change, you MUST follow this exact sequence:**
 

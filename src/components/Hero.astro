@@ -155,25 +155,27 @@ const {
 
     /* Hero Experience Layout */
     .hero-experience {
-        /*min-height: 100vh;*/
-       min-height:calc(100vh - 120px);
+        min-height: 100vh;
         background-image: url('/src/assets/bts-hero-background.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         filter: brightness(1);
         position: relative;
-        
+        width:100%;
+      
+       
     }
     
     .hero-content-wrapper {
-        height: calc(100vh - 120px);
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
+        
     }
     
     .hero-experience::before {
