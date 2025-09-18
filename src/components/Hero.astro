@@ -3,8 +3,6 @@
 // Hero Section Component - World Class Headshot Experience
 
 import { Image } from 'astro:assets';
-import kenGiglio from '../assets/images/hero-images/Ken Giglio (16 x 9) - compressed.jpg';
-import cindyNguyen from '../assets/images/hero-images/Cindy Nguyen (16 x 9) - compressed.jpg';
 
 export interface Props {
   title?: string[];
@@ -37,15 +35,9 @@ const {
   mainHeading = ""
 } = Astro.props;
 
-// Create image mapping for frontmatter maintainability
-const imageMap = {
-  '/src/assets/images/hero-images/Ken Giglio (16 x 9) - compressed.jpg': kenGiglio,
-  '/src/assets/images/hero-images/Cindy Nguyen (16 x 9) - compressed.jpg': cindyNguyen
-};
-
-// Get images from frontmatter paths
-const heroImage1 = imageMap[heroImages[0]];
-const heroImage2 = imageMap[heroImages[1]];
+// Dynamic imports for hero images - convert absolute paths to relative
+const heroImage1 = await import(heroImages[0].replace('/src/', '../'));
+const heroImage2 = await import(heroImages[1].replace('/src/', '../'));
 ---
 
 <!-- World-Class Hero Experience -->
@@ -105,11 +97,11 @@ const heroImage2 = imageMap[heroImages[1]];
                 <div class="featured-image-3d">
                     <div class="image-depth-layers">
                         <div class="image-layer foreground">
-                                <Image src={heroImage1} 
+                                <Image src={heroImage1.default} 
                                      alt="Professional Executive Headshot" 
                                      class="hero-image active"
                                      data-index={0} />
-                                <Image src={heroImage2} 
+                                <Image src={heroImage2.default} 
                                      alt="Professional Executive Headshot" 
                                      class="hero-image"
                                      data-index={1} />
@@ -171,7 +163,8 @@ const heroImage2 = imageMap[heroImages[1]];
 
     /* Hero Experience Layout */
     .hero-experience {
-        min-height: 100vh;
+        height:100vh;
+        /* min-height: 100vh; */
         background-image: url('/src/assets/bts-hero-background.jpg');
         background-size: cover;
         background-position: center;
