@@ -18,7 +18,7 @@ export interface Props {
   mainHeading?: string;
 }
 
-const { 
+const {
   title = ["WORLD CLASS", "HEADSHOT", "EXPERIENCE"],
   subtitle = "Beyond photography. We craft your professional presence with cinematic precision, luxury service, and results that open doors.",
   primaryButtonText = "GET PRICING",
@@ -35,9 +35,17 @@ const {
   mainHeading = ""
 } = Astro.props;
 
-// Dynamic imports for hero images - convert absolute paths to relative
-const heroImage1 = await import(heroImages[0].replace('/src/', '../'));
-const heroImage2 = await import(heroImages[1].replace('/src/', '../'));
+// Load all hero images from folder (Vite can analyze this)
+const allHeroImages = await Astro.glob('../assets/images/hero-images/*.{jpg,jpeg,png,webp}');
+
+// Find the specific images we want based on filenames
+const getImageByPath = (path: string) => {
+  const filename = path.split('/').pop();
+  return allHeroImages.find(img => img.default.src.includes(filename || ''));
+};
+
+const heroImage1 = getImageByPath(heroImages[0]);
+const heroImage2 = getImageByPath(heroImages[1]);
 ---
 
 <!-- World-Class Hero Experience -->

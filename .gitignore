@@ -31,3 +31,4 @@ src/assets/*.png
 src/assets/*.mp4
 src/assets/*.zip
 *.zip
+.playwright-mcp/
