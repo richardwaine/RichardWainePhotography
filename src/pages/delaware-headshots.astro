@@ -1,0 +1,188 @@
+---
+// @ts-nocheck
+
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import ZoomPopOut from '../components/ZoomPopOut.astro';
+import Problem from '../components/Problem.astro';
+import Features from '../components/Features.astro';
+import OfficeHeadshots from '../components/OfficeHeadshots.astro';
+import TearSheet from '../components/TearSheet.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Process from '../components/Process.astro';
+import BriefBio from '../components/BriefBio.astro';
+import HeadshotsNear from '../components/HeadshotsNear.astro';
+import Professions from '../components/Professions.astro';
+import DidYouKnow from '../components/DidYouKnow.astro';
+import FAQs from '../components/FAQs.astro';
+import NeuralPortrait from '../components/NeuralPortrait.astro';
+import FloatingStats from '../components/FloatingStats.astro';
+
+const title = 'Delaware Headshots | Richard Waine Photography';
+const h1 = 'Professional Headshots Delaware';
+
+// Hero section content
+const heroContent = {
+  title: ["DELAWARE", "HEADSHOT", "PHOTOGRAPHY"],
+  subtitle: "Serving Delaware and the surrounding region with world-class headshot photography. We craft your professional presence with cinematic precision, luxury service, and results that open doors.",
+  primaryButtonText: "GET PRICING",
+  secondaryButtonText: "SCHEDULE CONSULTATION",
+  heroImages: [
+    '/src/assets/images/hero-images/Ken Giglio (16 x 9) - compressed.jpg',
+    '/src/assets/images/hero-images/Cindy Nguyen (16 x 9) - compressed.jpg'
+  ],
+  mainHeading: h1
+};
+
+
+
+
+
+
+
+---
+
+<MainLayout title = "Delaware Headshots | Richard Waine Photography">
+
+	<section id="hero">
+	<Hero
+		title={heroContent.title}
+		subtitle={heroContent.subtitle}
+		primaryButtonText={heroContent.primaryButtonText}
+		secondaryButtonText={heroContent.secondaryButtonText}
+		heroImages={heroContent.heroImages}
+		mainHeading={heroContent.mainHeading}
+	/>
+
+    </section>
+
+	<section id="problem">
+
+		<Problem />
+
+	</section>
+
+	<section id="features">
+
+		<Features />
+
+	</section>
+
+	<section id="promo-video">
+
+				<video class="promo-video" controls controlslist="nodownload noplaybackrate nopictureinpicture" loop width="1000" height="563" poster="src/assets/RW_FINAL_V1_FOR REVIEW.00_00_48_06.Still004 (16 x 9) - compressed.jpg">
+  				<source src="src/assets/RW_V2_For Review-2.mp4" type="video/mp4">
+  				</video>
+
+	</section>
+
+
+	<section id="neural-portrait">
+		<NeuralPortrait />
+
+	</section>
+
+	<section id="tear-sheet">
+		<TearSheet />
+
+	</section>
+
+	<section id="office-headshots">
+		<OfficeHeadshots />
+	</section>
+
+
+	<section id="testimonials">
+		<Testimonials limit={3} filterByNames={["Wendy Booker", "Scott Kantner", "Ellen Taylor"]}/>
+	</section>
+
+	<section id="process">
+		<Process />
+	</section>
+
+	<section id="brief-bio">
+		<BriefBio />
+		<FloatingStats />
+	</section>
+
+	<section id="hs-near">
+		<HeadshotsNear />
+
+	</section>
+
+	<section id="professions">
+		<Professions />
+
+	</section>
+
+	<section id="did-you-know">
+			<DidYouKnow />
+
+		</section>
+
+	<section id="faqs">
+			<FAQs />
+
+		</section>
+
+</MainLayout>
+
+
+<style>
+
+#promo-video {
+		padding:var(--size-8) 0;
+}
+
+
+
+/* 100vh sections */
+#hero, #features, #neural-portrait, #office-headshots, #brief-bio {
+	height:calc(100vh - 120px);
+	display:grid;
+	place-items:center;
+}
+
+/* Natural height sections */
+#problem, #promo-video, #tear-sheet, #testimonials, #process, #hs-near, #professions, #did-you-know, #faqs {
+	height: auto;
+	display:grid;
+	place-items:center;
+	/* margin-top: 120px; */
+}
+
+/* Dark background sections */
+#features, #neural-portrait, #office-headshots, #testimonials, #brief-bio, #professions{
+	background:var(--drkbg);
+
+}
+
+#promo-video{
+	margin:auto;
+	padding-inline:var(--size-3);
+
+
+}
+
+#hero{
+/* margin:0; */
+padding:0;
+}
+
+#brief-bio{
+	height:100vh;
+	margin:0;
+
+	display:grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: 1fr;
+	place-items:center;
+
+
+}
+
+
+
+
+
+</style>
