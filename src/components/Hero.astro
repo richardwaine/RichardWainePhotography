@@ -164,6 +164,7 @@ const heroImage2 = await import(heroImages[1].replace('/src/', '../'));
     /* Hero Experience Layout */
     .hero-experience {
         height:100vh;
+        height:calc(100vh - 120px);
         /* min-height: 100vh; */
         background-image: url('/src/assets/bts-hero-background.jpg');
         background-size: cover;
@@ -177,14 +178,14 @@ const heroImage2 = await import(heroImages[1].replace('/src/', '../'));
     }
     
     .hero-content-wrapper {
-        height: 100vh;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
-        
+      
     }
     
     .hero-experience::before {
