@@ -10,11 +10,11 @@ export interface Props {
   ctaButton?: {text: string; url: string; style: string};
 }
 
-const { 
+const {
   logoSrc = logoSvg.src,
   logoAlt = 'Richard Waine Photography',
   businessName = 'Richard Waine Photography',
-  ctaButton = { text: 'SCHEDULE SESSION', url: '/contact', style: 'luxury' }
+  ctaButton = { text: 'SCHEDULE SESSION', url: '/rates', style: 'luxury' }
 } = Astro.props;
 ---
 
@@ -44,10 +44,12 @@ const {
             </a>
         </div>
         
-        <button class="luxury-cta" id="luxuryCTA">
-            <span class="cta-text">{ctaButton.text}</span>
-            <div class="cta-3d-effect"></div>
-        </button>
+        <a href={ctaButton.url}>
+            <button class="luxury-cta" id="luxuryCTA">
+                <span class="cta-text">{ctaButton.text}</span>
+                <div class="cta-3d-effect"></div>
+            </button>
+        </a>
     </div>
 </header>
 
