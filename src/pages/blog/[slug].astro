@@ -1,21 +1,22 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getCollection } from 'astro:content';
 
-export async function getStaticPaths(): Promise<Array<{params: {slug: string}, props: {post: any}}>> {
-  const posts = await Astro.glob('../../posts/*.md');
-  return posts.map((post: any) => ({
-    params: { slug: post.frontmatter.slug },
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
     props: { post },
   }));
 }
 
 const { post } = Astro.props;
-const { Content } = post;
+const { Content } = await post.render();
 ---
 
 <BlogLayout
-  title={post.frontmatter.blogTitle}
+  title={post.data.blogTitle}
   post={post}
 >
-  <Fragment set:html={post.compiledContent()} />
+  <Content />
 </BlogLayout>

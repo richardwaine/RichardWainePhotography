@@ -1,12 +1,12 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
-
+import { getCollection } from 'astro:content';
 
 const title = 'Richard Waine Photography Blog';
 const h1 = "Blog"
 
-const posts = await Astro.glob('../posts/*.md')
+const posts = await getCollection('blog')
 
 
 ---
@@ -65,13 +65,13 @@ const posts = await Astro.glob('../posts/*.md')
 
 {posts.map(post =>(
   <BlogCard
-    category={post.frontmatter.category}
-    imageSrc={post.frontmatter.imageSrc}
-    imageAlt={post.frontmatter.imageAlt}
-    cardCategory={post.frontmatter.cardCategory}
-    blogTitle={post.frontmatter.blogTitle}
-    blogExcerpt={post.frontmatter.blogExcerpt}
-    slug={post.frontmatter.slug}
+    category={post.data.category}
+    imageSrc={post.data.imageSrc}
+    imageAlt={post.data.imageAlt}
+    cardCategory={post.data.cardCategory}
+    blogTitle={post.data.blogTitle}
+    blogExcerpt={post.data.blogExcerpt}
+    slug={post.slug}
   />
 ))}
 

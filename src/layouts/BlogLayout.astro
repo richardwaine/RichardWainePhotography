@@ -13,7 +13,7 @@ const { title, post } = Astro.props;
 // --- NEW LINE HERE ---
 // Get the faqs from the blog post's front matter.
 // If there are no faqs, it will just be an empty list, which is fine.
-const faqs = post.frontmatter.faqs || [];
+const faqs = post.data.faqs || [];
 
 
 
