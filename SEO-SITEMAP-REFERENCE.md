@@ -28,9 +28,9 @@ This document tracks the current live site structure. The new Astro site MUST ma
 
 ### Resource/Service Pages (4)
 - [ ] `/gift-certificates` - Gift Certificates
-- [ ] `/request-proposal` - Request Proposal
+- [x] `/request-proposal` - Request Proposal
 - [ ] `/schedule` - Schedule
-- [ ] `/resources` - Resources
+- [x] `/resources` - Resources
 
 ### Blog-2 Pages (20 posts)
 Blog index: `/blog-2`

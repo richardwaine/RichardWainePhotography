@@ -2,6 +2,13 @@
 import Button from './Button.astro';
 import { Image } from 'astro:assets';
 
+interface Props {
+  limit?: number;
+  showButton?: boolean;
+}
+
+const { limit, showButton = true } = Astro.props;
+
 // Import gallery images
 import jayPoff400 from '../assets/images/gallery/400px/(400px) - Jay Poff_Richard_Waine_Lancaster_PA_0100 - compressed.jpg';
 import jayPoff600 from '../assets/images/gallery/600px/(600px) - Jay Poff_Richard_Waine_Lancaster_PA_0100. - compressed.jpg';
@@ -42,7 +49,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 <section id="gallery-section" class="">
   <div class="wrapper">
 
-<div class="gallery-container">
+<div class="gallery-container" data-limit={limit}>
   <div class="gallery">
     <!-- Always visible images (image1, image2) -->
     <div class="image1">
@@ -238,11 +245,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
   </div>
 </div>
 
-
-
-<Button text="GET PRICING" url="/rates" />
-
-
+{showButton && <Button text="GET PRICING" url="/rates" />}
 
 </div>
 </section>
@@ -388,7 +391,23 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 
 /* end gallery */
 
+/* Gallery limit styles */
+.gallery-container[data-limit="8"] .image9,
+.gallery-container[data-limit="8"] .image10,
+.gallery-container[data-limit="8"] .image11,
+.gallery-container[data-limit="8"] .image12,
+.gallery-container[data-limit="8"] .image13,
+.gallery-container[data-limit="8"] .image14,
+.gallery-container[data-limit="8"] .image15,
+.gallery-container[data-limit="8"] .image16 {
+  display: none !important;
+}
 
+@container header-gallery (min-width: 1025px) {
+  .gallery-container[data-limit="8"] .gallery {
+    grid-template-rows: 1fr;
+  }
+}
 
 
 </style>
