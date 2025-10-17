@@ -1,0 +1,29 @@
+---
+export interface Props {
+    text: string;
+    url: string;
+}
+
+const { text, url } = Astro.props;
+---
+
+<a href={url} class="btn header-btn">
+    <span class="btn-text">{text}</span>
+</a>
+
+<style>
+    .header-btn {
+        background: var(--accent);
+        padding: 18px 36px;
+        font-size: 0.9rem;
+        box-shadow:
+            0 15px 40px rgba(3, 169, 244, 0.4),
+            0 0 60px rgba(3, 169, 244, 0.2);
+    }
+
+    .header-btn:hover {
+        box-shadow:
+            0 25px 60px rgba(3, 169, 244, 0.6),
+            0 0 100px rgba(3, 169, 244, 0.4);
+    }
+</style>
