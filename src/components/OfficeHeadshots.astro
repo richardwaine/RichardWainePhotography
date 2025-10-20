@@ -1,6 +1,7 @@
 ---
-import Button from './Button.astro';
+import PrimaryButton from './PrimaryButton.astro';
 ---
+
 <div class="wrapper">
       <div class="office-headshots">
 
@@ -65,8 +66,9 @@ import Button from './Button.astro';
           <p>LET ME BRING THE STUDIO TO YOU!</p>
       </div>
 
-
-<Button text="REQUEST PROPOSAL" url="/request-proposal" />
+      <div class="button-center">
+          <PrimaryButton text="REQUEST PROPOSAL" url="/request-proposal" />
+      </div>
     </div>
 
 
@@ -88,6 +90,12 @@ import Button from './Button.astro';
 .office-headshots-two p:not(first-child){
 
   margin-top:var(--size-3);
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--size-5);
 }
 
 /*office headshots images*/
