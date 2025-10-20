@@ -1,15 +1,23 @@
 ---
 export interface Props {
     text: string;
-    url: string;
+    url?: string;
+    type?: 'button' | 'submit' | 'reset';
 }
 
-const { text, url } = Astro.props;
+const { text, url, type = 'button' } = Astro.props;
+const isButton = !url;
 ---
 
-<a href={url} class="btn primary-btn">
-    <span class="btn-text">{text}</span>
-</a>
+{isButton ? (
+    <button type={type} class="btn primary-btn">
+        <span class="btn-text">{text}</span>
+    </button>
+) : (
+    <a href={url} class="btn primary-btn">
+        <span class="btn-text">{text}</span>
+    </a>
+)}
 
 <style>
     .primary-btn {
