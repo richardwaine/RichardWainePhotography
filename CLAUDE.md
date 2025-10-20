@@ -12,6 +12,22 @@
 7. **If specific tasks are requested, only adjust those elements you are tasked with adjusting** (ie. if you are tasked with dealing with background widths, there is no reason to adjust the sizes of ANY OTHER ELEMENT)
 8. **Before requesting approval for an action, you MUST clearly state in plain english, exactly what that action will do - before you request permission to take that action**
 
+### CRITICAL: PAGE AND FILE LOCATION RULES
+**ASTRO PROJECT STRUCTURE - NEVER VIOLATE THESE RULES:**
+
+1. **PAGES ONLY GO IN `/src/pages/`** - There is ONE and ONLY ONE location for pages in this Astro project
+2. **NEVER CREATE `/pages/` at project root** - This is WRONG and creates duplicate routing
+3. **BEFORE creating ANY new page file:**
+   - ALWAYS verify you are writing to `/src/pages/` directory
+   - NEVER write to any other location
+   - If you see pages in multiple locations, STOP and alert the user immediately
+4. **Components ONLY in `/src/components/`** - Never create component directories elsewhere
+5. **Assets ONLY in `/src/assets/`** - Never create asset directories elsewhere
+6. **Styles ONLY in `/src/styles/` or scoped in components** - Never create style directories elsewhere
+7. **IF IN DOUBT about file location, ASK FIRST** - Do not assume, do not guess
+
+**FAILURE TO FOLLOW THESE RULES CREATED CRITICAL BUGS ON 2025-10-20 - NEVER REPEAT THIS ERROR**
+
 ### MANDATORY LEARNING AND ADHERENCE RULES - THE BIBLE
 **THESE RULES ARE CARVED IN STONE AND MUST BE FOLLOWED WITHOUT EXCEPTION:**
 
@@ -25,6 +41,7 @@
 8. **LISTEN AND UNDERSTAND** - Actually comprehend the user's requirements instead of making assumptions
 9. **NEVER GIVE UP ON TASKS** - The user decides when to move on, not you
 10. **DO NOT CHANGE TIMING FUNCTIONS** - Keep original values like scroll speeds, durations, and easing functions unless explicitly told to change them
+11. **NEVER CREATE DUPLICATE FILE LOCATIONS** - Pages, components, assets, and styles each have ONE correct location only
 
 ### MANDATORY ORDER OF OPERATIONS FOR ALL CHANGES
 **Before making ANY change, you MUST follow this exact sequence:**
