@@ -1,10 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 import Gallery from '../components/Gallery.astro';
-import PrimaryButton from '../components/Primary-Button.astro';
 ---
 
-<Layout title="Contact - Richard Waine Photography">
+<MainLayout title="Contact - Richard Waine Photography">
     <!-- Gallery Section -->
     <section id="gallery">
         <Gallery limit={8} showButton={false} />
@@ -87,7 +86,6 @@ import PrimaryButton from '../components/Primary-Button.astro';
             </div>
         </div>
     </section>
-</Layout>
 
 <style>
     #contact-title {
@@ -235,3 +233,4 @@ import PrimaryButton from '../components/Primary-Button.astro';
         }
     }
 </style>
+</MainLayout>

@@ -11,11 +11,11 @@ This document tracks the current live site structure. The new Astro site MUST ma
 ## Current Site Structure (54 Total URLs)
 
 ### Main Pages (6)
-- [ ] `/` - Home
-- [ ] `/about` - About
-- [ ] `/contact` - Contact
-- [ ] `/studio` - Studio
-- [ ] `/terms-and-conditions` - Terms and Conditions
+- [ ] `/home` - Home
+- [x] `/about-lancaster-headshot-photographer-richard-waine` - About
+- [x] `/contact-lancaster-headshot-photographer-richard-waine` - Contact
+- [ ] `/richard-waine-photography-studio` - Studio
+- [x] `/terms-and-conditions` - Terms and Conditions
 - [ ] `/videos` - Videos
 
 ### Location-Specific Headshot Pages (6)
@@ -29,7 +29,7 @@ This document tracks the current live site structure. The new Astro site MUST ma
 ### Resource/Service Pages (4)
 - [ ] `/gift-certificates` - Gift Certificates
 - [x] `/request-proposal` - Request Proposal
-- [ ] `/schedule` - Schedule
+- [x] `/schedule` - Schedule
 - [x] `/resources` - Resources
 
 ### Blog-2 Pages (20 posts)
