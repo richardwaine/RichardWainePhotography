@@ -1,0 +1,127 @@
+---
+// @ts-nocheck
+
+import MainLayout from '../layouts/MainLayout.astro';
+import Gallery from '../components/Gallery.astro';
+import PrimaryButton from '../components/PrimaryButton.astro';
+import { Image } from 'astro:assets';
+import giftCardImage from '../assets/images/gift-cards/Gift Card (16 x 9).jpg';
+
+const title = 'Gift Certificates - Richard Waine Photography';
+const h1 = 'Headshot Gift Certificates';
+const squareStoreUrl = 'https://square.link/u/GS6PmHTs';
+---
+
+<MainLayout title={title}>
+
+<main class="gift-certificates-page">
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="wrapper">
+      <h1>{h1}</h1>
+      <p class="description">
+        Give the gift of confidence, authenticity, and look-ability. A gift card towards a headshot session is ideal for your colleagues, friends, or for that special someone. They even make great stocking stuffers! Help someone update their headshot this holiday season!
+      </p>
+    </div>
+    <Gallery limit={8} showButton={false} />
+  </section>
+
+  <!-- Gift Card Section -->
+  <section id="gift-card-display">
+    <div class="wrapper">
+      <div class="gift-card-container">
+        <Image
+          src={giftCardImage}
+          alt="Richard Waine Photography Gift Certificate"
+          class="gift-card-image"
+          loading="eager"
+        />
+
+        <div class="gift-card-info">
+          <h2>Available in Multiple Denominations</h2>
+          <p class="amounts">$25 • $50 • $100 • $250 • $500</p>
+          <PrimaryButton text="PURCHASE GIFT CARD" url={squareStoreUrl} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</MainLayout>
+
+<style>
+  .gift-certificates-page {
+    background: var(--drkbg);
+  }
+
+  #gallery {
+    background: var(--drkbg);
+  }
+
+  #gallery h1 {
+    font-size: var(--fs-800);
+    font-weight: var(--fw-bold);
+    color: var(--ltclr);
+    text-align: center;
+    margin-bottom: var(--size-5);
+  }
+
+  #gallery .description {
+    font-size: var(--fs-400);
+    color: var(--ltclr);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto var(--size-7);
+    line-height: 1.7;
+  }
+
+  #gift-card-display {
+    padding: var(--size-8) 0;
+    background: var(--ltclr);
+  }
+
+  .gift-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--size-7);
+  }
+
+  .gift-card-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .gift-card-info {
+    text-align: center;
+  }
+
+  .gift-card-info h2 {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-semi-bold);
+    color: var(--blkclr);
+    margin-bottom: var(--size-3);
+  }
+
+  .amounts {
+    font-size: var(--fs-450);
+    color: var(--blkclr);
+    margin-bottom: var(--size-5);
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .gift-card-container {
+      grid-template-columns: 1fr;
+    }
+
+    .gift-card-image {
+      max-width: 100%;
+    }
+  }
+</style>

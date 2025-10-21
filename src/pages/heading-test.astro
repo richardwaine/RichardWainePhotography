@@ -1,0 +1,81 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+const title = 'Heading Size Test';
+---
+
+<MainLayout title={title}>
+
+<main style="background: var(--drkbg); padding: var(--size-8) 0; min-height: 100vh;">
+
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 var(--size-5);">
+
+    <h1 style="color: var(--accent); margin-bottom: var(--size-3); text-align: center;">THE MESS I CREATED</h1>
+    <p style="color: var(--ltclr); text-align: center; margin-bottom: var(--size-7); font-size: var(--fs-400);">Here are ALL the H1 headings from your pages showing the inconsistent sizes I used</p>
+
+    <!-- fs-800 + bold Pages -->
+    <section style="background: var(--ltclr); padding: var(--size-5); margin-bottom: var(--size-7); border-radius: 8px;">
+      <h3 style="color: var(--accent); margin-bottom: var(--size-3); font-weight: var(--fw-bold);">fs-800 + bold (2 pages use this)</h3>
+
+      <div style="margin-bottom: var(--size-4); padding: var(--size-5); background: var(--drkbg); border-radius: 8px;">
+        <p style="color: var(--faded); font-size: var(--fs-300); margin-bottom: var(--size-3);">Gift Certificates Page</p>
+        <h1 style="font-size: var(--fs-800); font-weight: var(--fw-bold); color: var(--ltclr); margin: 0;">Headshot Gift Certificates</h1>
+      </div>
+
+      <div style="padding: var(--size-5); background: var(--drkbg); border-radius: 8px;">
+        <p style="color: var(--faded); font-size: var(--fs-300); margin-bottom: var(--size-3);">Videos Page</p>
+        <h1 style="font-size: var(--fs-800); font-weight: var(--fw-bold); color: var(--ltclr); margin: 0;">VIDEOS</h1>
+      </div>
+    </section>
+
+    <!-- fs-800 (no weight specified) Pages -->
+    <section style="background: var(--ltclr); padding: var(--size-5); margin-bottom: var(--size-7); border-radius: 8px;">
+      <h3 style="color: var(--accent); margin-bottom: var(--size-3); font-weight: var(--fw-bold);">fs-800 (no weight, uses default) (4 pages use this)</h3>
+
+      <div style="margin-bottom: var(--size-4); padding: var(--size-5); background: #fff; border-radius: 8px;">
+        <p style="color: var(--faded); font-size: var(--fs-300); margin-bottom: var(--size-3);">About Page - NOW UPDATED TO fs-800</p>
+        <h1 style="font-size: var(--fs-800); color: var(--blkclr); margin: 0;">About Richard Waine</h1>
+      </div>
+
+      <div style="margin-bottom: var(--size-4); padding: var(--size-5); background: #fff; border-radius: 8px;">
+        <p style="color: var(--faded); font-size: var(--fs-300); margin-bottom: var(--size-3);">Rates Page</p>
+        <h1 style="font-size: var(--fs-800); color: var(--blkclr); margin: 0;">Headshot Rates</h1>
+      </div>
+
+      <div style="margin-bottom: var(--size-4); padding: var(--size-5); background: #fff; border-radius: 8px;">
+        <p style="color: var(--faded); font-size: var(--fs-300); margin-bottom: var(--size-3);">Resources Page</p>
+        <h1 style="font-size: var(--fs-800); color: var(--blkclr); margin: 0;">Resources</h1>
+      </div>
+
+      <div style="padding: var(--size-5); background: #fff; border-radius: 8px;">
+        <p style="color: var(--faded); font-size: var(--fs-300); margin-bottom: var(--size-3);">Blog Page</p>
+        <h1 style="font-size: var(--fs-800); color: var(--blkclr); margin: 0;">Blog</h1>
+      </div>
+    </section>
+
+    <!-- fs-500 + semi-bold Pages -->
+    <section style="background: var(--ltclr); padding: var(--size-5); border-radius: 8px;">
+      <h3 style="color: var(--accent); margin-bottom: var(--size-3); font-weight: var(--fw-bold);">fs-500 + semi-bold (2 pages use this)</h3>
+
+      <div style="margin-bottom: var(--size-4); padding: var(--size-5); background: var(--drkbg); border-radius: 8px;">
+        <p style="color: var(--faded); font-size: var(--fs-300); margin-bottom: var(--size-3);">Contact Page</p>
+        <h1 style="font-size: var(--fs-500); font-weight: var(--fw-semi-bold); color: var(--ltclr); margin: 0;">Contact Richard Waine Photography</h1>
+      </div>
+
+      <div style="padding: var(--size-5); background: var(--drkbg); border-radius: 8px;">
+        <p style="color: var(--faded); font-size: var(--fs-300); margin-bottom: var(--size-3);">Request Proposal Page</p>
+        <h1 style="font-size: var(--fs-500); font-weight: var(--fw-semi-bold); color: var(--ltclr); margin: 0;">Request your headshot proposal</h1>
+      </div>
+    </section>
+
+    <!-- Decision Section -->
+    <section style="background: var(--accent); padding: var(--size-7); margin-top: var(--size-8); border-radius: 8px;">
+      <h2 style="color: var(--ltclr); text-align: center; margin-bottom: var(--size-5);">PICK ONE</h2>
+      <p style="color: var(--ltclr); text-align: center; font-size: var(--fs-450);">Which of these three options should be THE STANDARD for all H1 headings across your entire site?</p>
+      <p style="color: var(--ltclr); text-align: center; font-size: var(--fs-400); margin-top: var(--size-3);">Option 1: fs-800 + bold<br>Option 2: fs-800 (default weight)<br>Option 3: fs-500 + semi-bold</p>
+    </section>
+
+  </div>
+
+</main>
+
+</MainLayout>
