@@ -36,7 +36,8 @@ const {
 } = Astro.props;
 
 // Load all hero images from folder (Vite can analyze this)
-const allHeroImages = await Astro.glob('../assets/images/hero-images/*.{jpg,jpeg,png,webp}');
+const allHeroImagesGlob = import.meta.glob('../assets/images/hero-images/*.{jpg,jpeg,png,webp}', { eager: true });
+const allHeroImages = Object.values(allHeroImagesGlob);
 
 // Find the specific images we want based on filenames
 const getImageByPath = (path: string) => {
