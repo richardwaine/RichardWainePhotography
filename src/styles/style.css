@@ -300,3 +300,8 @@ p{
   font-size:var(--fs-450);
   margin-bottom: var(--size-3);
 }
+
+h1{
+  font-size:var(--fs-800);
+  font-weight:var(--fw-bold);
+}
