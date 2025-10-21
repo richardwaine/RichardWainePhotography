@@ -3,6 +3,8 @@
 // Hero Section Component - World Class Headshot Experience
 
 import { Image } from 'astro:assets';
+import PrimaryButton from './PrimaryButton.astro';
+import SecondaryButton from './SecondaryButton.astro';
 
 export interface Props {
   title?: string[];
@@ -85,16 +87,8 @@ const heroImage2 = getImageByPath(heroImages[1]);
             <!-- Interactive Action Area -->
             <div class="action-area" data-delay="800">
                 <div class="action-buttons">
-                    <a href={primaryButtonUrl} class="primary-action" id="primaryAction">
-                        <span class="btn-text">{primaryButtonText}</span>
-                        <div class="btn-3d-base"></div>
-                        <div class="btn-shine"></div>
-                    </a>
-                    <a href={secondaryButtonUrl} class="secondary-action" id="secondaryAction">
-                        <span class="btn-text">{secondaryButtonText}</span>
-                        <div class="btn-3d-base"></div>
-                        <div class="btn-shine"></div>
-                    </a>
+                    <PrimaryButton text={primaryButtonText} url={primaryButtonUrl} />
+                    <SecondaryButton text={secondaryButtonText} url={secondaryButtonUrl} />
                 </div>
             </div>
         </div>
@@ -368,97 +362,6 @@ const heroImage2 = getImageByPath(heroImages[1]);
         gap: 30px;
     }
 
-    .primary-action,
-    .secondary-action {
-        display: inline-block;
-        text-decoration: none;
-        position: relative;
-        background: var(--accent);
-        border: none;
-        padding: 20px 40px;
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        font-size: 1rem;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        cursor: pointer;
-        overflow: hidden;
-        transform-style: preserve-3d;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
-        box-shadow: 
-            0 15px 30px rgba(0, 0, 0, 0.6),
-            0 25px 60px rgba(3, 169, 244, 0.5),
-            0 15px 35px rgba(3, 169, 244, 0.3),
-            0 0 100px rgba(3, 169, 244, 0.25),
-            inset 0 1px 2px rgba(255, 255, 255, 0.2),
-            inset 0 -1px 2px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-        transform: translateY(0px);
-        animation: buttonGlow 4s ease-in-out infinite;
-    }
-    
-    .btn-text {
-        position: relative;
-        z-index: 20;
-    }
-
-    .secondary-action {
-        background: linear-gradient(135deg, 
-            rgba(0, 0, 0, 0.1) 0%, 
-            rgba(255, 255, 255, 0.05) 100%);
-        backdrop-filter: blur(15px);
-        border-top: 1px solid rgba(3, 169, 244, 0.3);
-        border-bottom: 1px solid rgba(3, 169, 244, 0.3);
-        border-left: none;
-        border-right: none;
-        color: var(--accent);
-        box-shadow: 
-            0 25px 50px rgba(0, 0, 0, 0.8),
-            0 15px 35px rgba(3, 169, 244, 0.5),
-            0 0 80px rgba(3, 169, 244, 0.4),
-            inset 0 1px 1px rgba(255, 255, 255, 0.2);
-    }
-
-    .btn-3d-base {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: inherit;
-        transform: translateZ(-5px) scale(1.1);
-        border-radius: inherit;
-        z-index: -1;
-    }
-
-    .btn-shine {
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-        transform: skewX(-20deg);
-        transition: left 0.8s ease;
-    }
-
-    .primary-action:hover,
-    .secondary-action:hover {
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 
-            0 35px 80px rgba(3, 169, 244, 0.7),
-            0 20px 50px rgba(3, 169, 244, 0.5),
-            0 0 120px rgba(3, 169, 244, 0.4),
-            inset 0 2px 4px rgba(255, 255, 255, 0.3),
-            inset 0 -2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .primary-action:hover .btn-shine,
-    .secondary-action:hover .btn-shine {
-        left: 100%;
-    }
 
     /* Animations */
     @keyframes depthFloat1 {

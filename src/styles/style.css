@@ -63,7 +63,7 @@
 --size-1: .25em;
 --size-2: .5em;
 --size-250:.75em;
---size-3: 1em;/*16*/
+--size-3: 1em; /*16*/
 --size-4: 1.25em;
 --size-5: 1.5em;
 --size-6: 1.75em;
@@ -246,7 +246,7 @@ h2{
   overflow: hidden;
   transform-style: preserve-3d;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
   z-index: 10;
   animation: buttonGlow 4s ease-in-out infinite;
 }
