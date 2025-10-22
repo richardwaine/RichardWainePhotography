@@ -180,9 +180,6 @@ const currentData = portfolioData[currentImageIndex];
         {portfolioData.map((data, index) => (
           <div class="matrix-cell" data-index={index.toString()}>
             <img src={data.thumbnail} alt={`Neural scan ${index + 1}`} loading="lazy" width="300" height="300" />
-            <div class="cell-overlay">
-              <span class="cell-id">ID_{String(index + 1).padStart(3, '0')}</span>
-            </div>
           </div>
         ))}
       </div>
