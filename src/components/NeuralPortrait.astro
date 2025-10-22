@@ -5,6 +5,11 @@ const portfolioData = [
   {
     image: "/src/assets/images/neural/Ida Grandy - (800px) - Richard_Waine_Lancaster_PA_0154.jpg",
     thumbnail: "/src/assets/images/neural/Ida Grandy - (500px sq) - Richard_Waine_Lancaster_PA_0154.jpg",
+    dataStreams: {
+      confidenceLevel: "98.7%",
+      authenticityIndex: "MAXIMUM",
+      impactProjection: "EXPONENTIAL"
+    },
     characteristics: [
       {
         label: "APPROACHABLE",
@@ -23,6 +28,11 @@ const portfolioData = [
   {
     image: "/src/assets/images/neural/Shree Patel - (800px) - Richard_Waine_Lancaster_PA_0157.jpg",
     thumbnail: "/src/assets/images/neural/Shree Patel - (500px sq) - Richard_Waine_Lancaster_PA_0157.jpg",
+    dataStreams: {
+      confidenceLevel: "97.3%",
+      authenticityIndex: "ELEVATED",
+      impactProjection: "SUBSTANTIAL"
+    },
     characteristics: [
       {
         label: "COMPETENT",
@@ -41,6 +51,11 @@ const portfolioData = [
   {
     image: "/src/assets/images/neural/Sonya Lilienstein - (800px) - Richard Waine_Lancaster_PA_0079.jpg",
     thumbnail: "/src/assets/images/neural/Sonya Lilienstein -  (500px sq) - Richard Waine_Lancaster_PA_0079.jpg",
+    dataStreams: {
+      confidenceLevel: "96.4%",
+      authenticityIndex: "OPTIMAL",
+      impactProjection: "DYNAMIC"
+    },
     characteristics: [
       {
         label: "ENGAGING",
@@ -59,23 +74,22 @@ const portfolioData = [
   {
     image: "/src/assets/images/neural/Ethan Haymovitz - (800px) - Richard_Waine_Lancaster_PA_0135.jpg",
     thumbnail: "/src/assets/images/neural/Ethan Haymovitz - (500px sq) - Richard_Waine_Lancaster_PA_0135.jpg",
+    dataStreams: {
+      confidenceLevel: "95.8%",
+      authenticityIndex: "ENHANCED",
+      impactProjection: "PROGRESSIVE"
+    },
     characteristics: [
       {
-        label: "CREATIVE",
-        facePoint: { top: '30%', left: '45%' },
-        labelPosition: { top: '10%', left: '15%' },
+        label: "THOUGHTFUL",
+        facePoint: { top: '30%', left: '60%' },
+        labelPosition: { top: '20%', left: '25%' },
         visible: true
       },
       {
-        label: "ARTISTIC",
-        facePoint: { top: '50%', left: '60%' },
-        labelPosition: { top: '75%', left: '80%' },
-        visible: true
-      },
-      {
-        label: "EXPRESSIVE",
-        facePoint: { top: '40%', left: '35%' },
-        labelPosition: { top: '20%', left: '5%' },
+        label: "POISED",
+        facePoint: { top: '50%', left: '63%' },
+        labelPosition: { top: '55%', left: '10%' },
         visible: true
       }
     ]
@@ -107,15 +121,15 @@ const currentData = portfolioData[currentImageIndex];
       <div class="data-streams">
         <div class="data-stream">
           <span class="stream-label">CONFIDENCE LEVEL:</span>
-          <span class="stream-value">98.7%</span>
+          <span class="stream-value" id="confidence-level">{currentData.dataStreams.confidenceLevel}</span>
         </div>
         <div class="data-stream">
           <span class="stream-label">AUTHENTICITY INDEX:</span>
-          <span class="stream-value">MAXIMUM</span>
+          <span class="stream-value" id="authenticity-index">{currentData.dataStreams.authenticityIndex}</span>
         </div>
         <div class="data-stream">
           <span class="stream-label">IMPACT PROJECTION:</span>
-          <span class="stream-value">EXPONENTIAL</span>
+          <span class="stream-value" id="impact-projection">{currentData.dataStreams.impactProjection}</span>
         </div>
       </div>
 
@@ -243,6 +257,15 @@ const currentData = portfolioData[currentImageIndex];
       if (portraitScan && portraitScan instanceof HTMLImageElement) {
         portraitScan.src = currentData.image;
       }
+
+      // Update data streams
+      const confidenceLevel = document.getElementById('confidence-level');
+      const authenticityIndex = document.getElementById('authenticity-index');
+      const impactProjection = document.getElementById('impact-projection');
+
+      if (confidenceLevel) confidenceLevel.textContent = currentData.dataStreams.confidenceLevel;
+      if (authenticityIndex) authenticityIndex.textContent = currentData.dataStreams.authenticityIndex;
+      if (impactProjection) impactProjection.textContent = currentData.dataStreams.impactProjection;
 
       // Update data points
       if (dataPoints) {
