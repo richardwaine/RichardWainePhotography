@@ -3,62 +3,59 @@ import SecondaryButton from './SecondaryButton.astro';
 
 const portfolioData = [
   {
-    image: "/src/assets/images/neural/da Grandy - (800px) - Richard_Waine_Lancaster_PA_0154.jpg",
+    image: "/src/assets/images/neural/Ida Grandy - (800px) - Richard_Waine_Lancaster_PA_0154.jpg",
+    thumbnail: "/src/assets/images/neural/Ida Grandy - (500px sq) - Richard_Waine_Lancaster_PA_0154.jpg",
     characteristics: [
-      { 
-        label: "MYSTERIOUS", 
-        facePoint: { top: '35%', left: '45%' },
-        labelPosition: { top: '15%', left: '75%' },
+      {
+        label: "APPROACHABLE",
+        facePoint: { top: '41%', left: '36%' },
+        labelPosition: { top: '60%', left: '65%' },
         visible: true
       },
-      { 
-        label: "COOL", 
-        facePoint: { top: '25%', left: '55%' },
-        labelPosition: { top: '5%', left: '85%' },
-        visible: true
-      },
-      { 
-        label: "EDGY", 
-        facePoint: { top: '50%', left: '40%' },
-        labelPosition: { top: '70%', left: '10%' },
+      {
+        label: "CONFIDENT",
+        facePoint: { top: '30%', left: '39%' },
+        labelPosition: { top: '15%', left: '65%' },
         visible: true
       }
     ]
   },
   {
-    image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/src/assets/images/neural/Shree Patel - (800px) - Richard_Waine_Lancaster_PA_0157.jpg",
+    thumbnail: "/src/assets/images/neural/Shree Patel - (500px sq) - Richard_Waine_Lancaster_PA_0157.jpg",
     characteristics: [
-      { 
-        label: "CONFIDENT", 
-        facePoint: { top: '30%', left: '50%' },
-        labelPosition: { top: '10%', left: '80%' },
+      {
+        label: "COMPETENT",
+        facePoint: { top: '30%', left: '60%' },
+        labelPosition: { top: '15%', left: '25%' },
         visible: true
       },
-      { 
-        label: "APPROACHABLE", 
-        facePoint: { top: '55%', left: '60%' },
-        labelPosition: { top: '60%', left: '75%' },
+      {
+        label: "TRUSTWORTHY",
+        facePoint: { top: '52%', left: '63%' },
+        labelPosition: { top: '60%', left: '25%' },
         visible: true
       }
     ]
   },
   {
-    image: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/src/assets/images/neural/Sonya Lilienstein - (800px) - Richard Waine_Lancaster_PA_0079.jpg",
+    thumbnail: "/src/assets/images/neural/Sonya Lilienstein -  (500px sq) - Richard Waine_Lancaster_PA_0079.jpg",
     characteristics: [
-      { 
-        label: "PROFESSIONAL", 
+      {
+        label: "PROFESSIONAL",
         facePoint: { top: '25%', left: '50%' },
         labelPosition: { top: '5%', left: '75%' },
         visible: true
       },
-      { 
-        label: "TRUSTWORTHY", 
+      {
+        label: "TRUSTWORTHY",
         facePoint: { top: '40%', left: '55%' },
         labelPosition: { top: '60%', left: '85%' },
         visible: true
       },
-      { 
-        label: "RELIABLE", 
+      {
+        label: "RELIABLE",
         facePoint: { top: '60%', left: '45%' },
         labelPosition: { top: '85%', left: '10%' },
         visible: true
@@ -66,22 +63,23 @@ const portfolioData = [
     ]
   },
   {
-    image: "https://images.pexels.com/photos/1680174/pexels-photo-1680174.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/src/assets/images/neural/Ethan Haymovitz - (800px) - Richard_Waine_Lancaster_PA_0135.jpg",
+    thumbnail: "/src/assets/images/neural/Ethan Haymovitz - (500px sq) - Richard_Waine_Lancaster_PA_0135.jpg",
     characteristics: [
-      { 
-        label: "CREATIVE", 
+      {
+        label: "CREATIVE",
         facePoint: { top: '30%', left: '45%' },
         labelPosition: { top: '10%', left: '15%' },
         visible: true
       },
-      { 
-        label: "ARTISTIC", 
+      {
+        label: "ARTISTIC",
         facePoint: { top: '50%', left: '60%' },
         labelPosition: { top: '75%', left: '80%' },
         visible: true
       },
-      { 
-        label: "EXPRESSIVE", 
+      {
+        label: "EXPRESSIVE",
         facePoint: { top: '40%', left: '35%' },
         labelPosition: { top: '20%', left: '5%' },
         visible: true
@@ -93,6 +91,9 @@ const portfolioData = [
 const currentImageIndex = 0;
 const currentData = portfolioData[currentImageIndex];
 ---
+
+<!-- Hidden data for JavaScript to access -->
+<script id="portfolio-data" type="application/json" set:html={JSON.stringify(portfolioData)} />
 
 <section class="neural-section">
   <div class="neural-content">
@@ -144,33 +145,22 @@ const currentData = portfolioData[currentImageIndex];
           />
           <div class="analysis-overlay">
             <div class="data-points" id="data-points">
-              {currentData.characteristics.filter(characteristic => 
+              {currentData.characteristics.filter(characteristic =>
                 characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
               ).map((characteristic) => (
                 <div>
-                  <div 
-                    class="face-point" 
-                    style={`top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left}`}
+                  <div
+                    class="face-point"
+                    style={`position: absolute; top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left}`}
                   >
                     <div class="point-marker"></div>
                   </div>
-                  <div 
-                    class="characteristic-label" 
-                    style={`top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}`}
+                  <div
+                    class="characteristic-label"
+                    style={`position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}`}
                   >
                     <span class="point-label">{characteristic.label}</span>
                   </div>
-                  <svg class="connection-line" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
-                    <line
-                      x1={characteristic.facePoint.left}
-                      y1={characteristic.facePoint.top}
-                      x2={characteristic.labelPosition.left}
-                      y2={characteristic.labelPosition.top}
-                      stroke="var(--accent)"
-                      stroke-width="1"
-                      opacity="0.6"
-                    />
-                  </svg>
                 </div>
               ))}
             </div>
@@ -181,7 +171,7 @@ const currentData = portfolioData[currentImageIndex];
       <div class="portfolio-matrix">
         {portfolioData.map((data, index) => (
           <div class="matrix-cell" data-index={index.toString()}>
-            <img src={data.image} alt={`Neural scan ${index + 1}`} loading="lazy" width="300" height="300" />
+            <img src={data.thumbnail} alt={`Neural scan ${index + 1}`} loading="lazy" width="300" height="300" />
             <div class="cell-overlay">
               <span class="cell-id">ID_{String(index + 1).padStart(3, '0')}</span>
             </div>
@@ -235,94 +225,10 @@ const currentData = portfolioData[currentImageIndex];
   document.addEventListener('astro:page-load', initNeuralAnimation);
 
   document.addEventListener('DOMContentLoaded', function() {
-    const portfolioData = [
-      {
-        image: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=800",
-        characteristics: [
-          { 
-            label: "MYSTERIOUS", 
-            facePoint: { top: '35%', left: '45%' },
-            labelPosition: { top: '15%', left: '75%' },
-            visible: true
-          },
-          { 
-            label: "COOL", 
-            facePoint: { top: '25%', left: '55%' },
-            labelPosition: { top: '5%', left: '85%' },
-            visible: true
-          },
-          { 
-            label: "EDGY", 
-            facePoint: { top: '50%', left: '40%' },
-            labelPosition: { top: '70%', left: '10%' },
-            visible: true
-          }
-        ]
-      },
-      {
-        image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800",
-        characteristics: [
-          { 
-            label: "CONFIDENT", 
-            facePoint: { top: '30%', left: '50%' },
-            labelPosition: { top: '10%', left: '80%' },
-            visible: true
-          },
-          { 
-            label: "APPROACHABLE", 
-            facePoint: { top: '55%', left: '60%' },
-            labelPosition: { top: '60%', left: '75%' },
-            visible: true
-          }
-        ]
-      },
-      {
-        image: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800",
-        characteristics: [
-          { 
-            label: "PROFESSIONAL", 
-            facePoint: { top: '25%', left: '50%' },
-            labelPosition: { top: '5%', left: '75%' },
-            visible: true
-          },
-          { 
-            label: "TRUSTWORTHY", 
-            facePoint: { top: '40%', left: '55%' },
-            labelPosition: { top: '60%', left: '85%' },
-            visible: true
-          },
-          { 
-            label: "RELIABLE", 
-            facePoint: { top: '60%', left: '45%' },
-            labelPosition: { top: '85%', left: '10%' },
-            visible: true
-          }
-        ]
-      },
-      {
-        image: "https://images.pexels.com/photos/1680174/pexels-photo-1680174.jpeg?auto=compress&cs=tinysrgb&w=800",
-        characteristics: [
-          { 
-            label: "CREATIVE", 
-            facePoint: { top: '30%', left: '45%' },
-            labelPosition: { top: '10%', left: '15%' },
-            visible: true
-          },
-          { 
-            label: "ARTISTIC", 
-            facePoint: { top: '50%', left: '60%' },
-            labelPosition: { top: '75%', left: '80%' },
-            visible: true
-          },
-          { 
-            label: "EXPRESSIVE", 
-            facePoint: { top: '40%', left: '35%' },
-            labelPosition: { top: '20%', left: '5%' },
-            visible: true
-          }
-        ]
-      }
-    ];
+    // Use the portfolioData from Astro instead of duplicating it
+    const dataElement = document.getElementById('portfolio-data');
+    if (!dataElement || !dataElement.textContent) return;
+    const portfolioData = JSON.parse(dataElement.textContent);
 
     const matrixCells = document.querySelectorAll('.matrix-cell');
     const portraitScan = document.querySelector('#main-portrait');
@@ -335,56 +241,148 @@ const currentData = portfolioData[currentImageIndex];
         updatePortrait(index);
       });
     });
-    
+
     function updatePortrait(index: any) {
       const currentData = portfolioData[index];
-      
+
       // Update image
       if (portraitScan && portraitScan instanceof HTMLImageElement) {
         portraitScan.src = currentData.image;
       }
-      
+
       // Update data points
       if (dataPoints) {
+        // Get the Astro scoped CSS attribute from the dataPoints element
+        const astroScopeAttr = Array.from(dataPoints.attributes).find(attr =>
+          attr.name.startsWith('data-astro-cid-')
+        );
+        const scopeAttrName = astroScopeAttr ? astroScopeAttr.name : null;
+
         dataPoints.innerHTML = '';
-        
-        currentData.characteristics.filter(characteristic => 
+
+        currentData.characteristics.filter((characteristic: any) =>
           characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
-        ).forEach((characteristic) => {
+        ).forEach((characteristic: any) => {
           // Create wrapper div for each characteristic (matching initial HTML structure)
           const characteristicWrapper = document.createElement('div');
-          
-          // Create face point
+
+          // Create face point with dot
           const facePoint = document.createElement('div');
           facePoint.className = 'face-point';
-          facePoint.style.cssText = `position: absolute; top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left};`;
-          
+          facePoint.setAttribute('style', `position: absolute; top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left};`);
+          if (scopeAttrName) facePoint.setAttribute(scopeAttrName, '');
+
           const pointMarker = document.createElement('div');
           pointMarker.className = 'point-marker';
+          if (scopeAttrName) pointMarker.setAttribute(scopeAttrName, '');
           facePoint.appendChild(pointMarker);
-          
+
           // Create characteristic label
           const characteristicLabel = document.createElement('div');
           characteristicLabel.className = 'characteristic-label';
-          characteristicLabel.style.cssText = `position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left};`;
-          
+          characteristicLabel.setAttribute('style', `position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left};`);
+          if (scopeAttrName) characteristicLabel.setAttribute(scopeAttrName, '');
+
           const pointLabel = document.createElement('span');
           pointLabel.className = 'point-label';
           pointLabel.textContent = characteristic.label;
+          if (scopeAttrName) pointLabel.setAttribute(scopeAttrName, '');
           characteristicLabel.appendChild(pointLabel);
-          
+
+          // Append elements to DOM
+          characteristicWrapper.appendChild(facePoint);
+          characteristicWrapper.appendChild(characteristicLabel);
+          dataPoints.appendChild(characteristicWrapper);
+        });
+
+        // Add lines after a brief delay to ensure elements are rendered
+        setTimeout(() => {
+          const allWrappers = dataPoints.querySelectorAll(':scope > div');
+          allWrappers.forEach((wrapper) => {
+            const facePoint = wrapper.querySelector('.face-point') as HTMLElement;
+            const label = wrapper.querySelector('.characteristic-label') as HTMLElement;
+
+            if (!facePoint || !label) return;
+
+            const containerRect = dataPoints.getBoundingClientRect();
+            const labelRect = label.getBoundingClientRect();
+            const facePointStyle = facePoint.style;
+
+            // Calculate line start point (center of dot)
+            const faceLeftStr = facePointStyle.left || '';
+            const faceTopStr = facePointStyle.top || '';
+            const faceLeft = parseFloat(faceLeftStr.replace('%', ''));
+            const faceTop = parseFloat(faceTopStr.replace('%', ''));
+
+            if (isNaN(faceLeft) || isNaN(faceTop)) return;
+
+            const x1 = (faceLeft * containerRect.width / 100) + 4;
+            const y1 = (faceTop * containerRect.height / 100) + 4;
+
+            // Calculate line end point (bottom-center of label)
+            const labelLeft = labelRect.left - containerRect.left;
+            const labelTop = labelRect.top - containerRect.top;
+            const x2 = labelLeft + (labelRect.width / 2);
+            const y2 = labelTop + labelRect.height;
+
+            // Create SVG line
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('class', 'connection-line');
+            svg.setAttribute('style', 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;');
+
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', x1.toString());
+            line.setAttribute('y1', y1.toString());
+            line.setAttribute('x2', x2.toString());
+            line.setAttribute('y2', y2.toString());
+            line.setAttribute('stroke', 'var(--accent)');
+            line.setAttribute('stroke-width', '1');
+            line.setAttribute('opacity', '0.6');
+
+            svg.appendChild(line);
+            wrapper.appendChild(svg);
+          });
+        }, 50);
+      }
+    }
+
+    // Draw initial lines for the first portrait without clearing existing HTML
+    if (dataPoints) {
+      setTimeout(() => {
+        const existingLabels = dataPoints.querySelectorAll('.characteristic-label');
+        const containerRect = dataPoints.getBoundingClientRect();
+
+        existingLabels.forEach((label) => {
+          const labelRect = label.getBoundingClientRect();
+          const wrapper = label.parentElement;
+          const facePoint = wrapper?.querySelector('.face-point') as HTMLElement;
+
+          if (!facePoint) return;
+
+          const facePointStyle = facePoint.style;
+
+          // Calculate line endpoints
+          const faceLeftStr = facePointStyle.left || '';
+          const faceTopStr = facePointStyle.top || '';
+          const faceLeft = parseFloat(faceLeftStr.replace('%', ''));
+          const faceTop = parseFloat(faceTopStr.replace('%', ''));
+
+          if (isNaN(faceLeft) || isNaN(faceTop)) return;
+
+          const x1 = (faceLeft * containerRect.width / 100) + 4;
+          const y1 = (faceTop * containerRect.height / 100) + 4;
+
+          // Calculate bottom-center of label
+          const labelLeft = labelRect.left - containerRect.left;
+          const labelTop = labelRect.top - containerRect.top;
+          const x2 = labelLeft + (labelRect.width / 2);
+          const y2 = labelTop + labelRect.height;
+
           // Create SVG line
           const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
           svg.setAttribute('class', 'connection-line');
           svg.setAttribute('style', 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;');
-          
-          // Convert percentage to pixel values for SVG coordinates
-          const containerRect = dataPoints.getBoundingClientRect();
-          const x1 = parseFloat(characteristic.facePoint.left) * containerRect.width / 100;
-          const y1 = parseFloat(characteristic.facePoint.top) * containerRect.height / 100;
-          const x2 = parseFloat(characteristic.labelPosition.left) * containerRect.width / 100;
-          const y2 = parseFloat(characteristic.labelPosition.top) * containerRect.height / 100;
-          
+
           const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line.setAttribute('x1', x1.toString());
           line.setAttribute('y1', y1.toString());
@@ -393,18 +391,11 @@ const currentData = portfolioData[currentImageIndex];
           line.setAttribute('stroke', 'var(--accent)');
           line.setAttribute('stroke-width', '1');
           line.setAttribute('opacity', '0.6');
-          
+
           svg.appendChild(line);
-          
-          // Append all elements to wrapper
-          characteristicWrapper.appendChild(facePoint);
-          characteristicWrapper.appendChild(characteristicLabel);
-          characteristicWrapper.appendChild(svg);
-          
-          // Add wrapper to data points container
-          dataPoints.appendChild(characteristicWrapper);
+          wrapper?.appendChild(svg);
         });
-      }
+      }, 100);
     }
   });
 </script>
@@ -588,6 +579,7 @@ const currentData = portfolioData[currentImageIndex];
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .characteristic-label {
@@ -595,6 +587,7 @@ const currentData = portfolioData[currentImageIndex];
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .point-marker {
@@ -613,7 +606,7 @@ const currentData = portfolioData[currentImageIndex];
   }
   50% { 
     transform: scale(1.2);
-    opacity: 0.7;
+    /* opacity: 0.7; */
   }
 }
 
@@ -633,6 +626,12 @@ const currentData = portfolioData[currentImageIndex];
 }
 
 .connection-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   z-index: 1;
 }
 
@@ -669,7 +668,6 @@ const currentData = portfolioData[currentImageIndex];
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 10%;
   /* filter: grayscale(0.3) contrast(1.0); */
   transition: filter 0.3s ease;
 }
