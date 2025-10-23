@@ -26,11 +26,12 @@ This document tracks the current live site structure. The new Astro site MUST ma
 - [x] `/york-headshots` - York Headshots
 - [x] `/conference-headshots` - Conference Headshots
 
-### Resource/Service Pages (4)
+### Resource/Service Pages (5)
 - [ ] `/gift-certificates` - Gift Certificates
 - [x] `/request-proposal` - Request Proposal
 - [x] `/schedule` - Schedule
 - [x] `/resources` - Resources
+- [x] `/rates` - Rates (excluded from old sitemap, now included)
 
 ### Blog-2 Pages (20 posts)
 Blog index: `/blog-2`
