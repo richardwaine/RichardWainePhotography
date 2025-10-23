@@ -7,7 +7,7 @@ const { faqs } = Astro.props;
 ---
 
 
-<div class="faq-content" style="margin-top:2em;width:50%;">
+<div class="faq-content" style="margin-top:var(--size-7);width:50%;">
   {faqs.map((faq, index) => (
     <div>
       <input type="checkbox" id={`question${index}`} name="q" class="questions">
@@ -92,7 +92,7 @@ transition-delay: 0s;
 
 .questions:checked ~ .answers{
   height:100%;
-  padding-block:1em;
+  padding-block:var(--size-3);
   }
 
 .answers > *{

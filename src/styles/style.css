@@ -156,7 +156,7 @@ img,picture,svg,video {
 
 /*section-titles*/
 .section-title{
-  margin-bottom:1em;
+  margin-bottom:var(--size-3);
   font-size:var(--fs-600);
   text-transform:uppercase
 }

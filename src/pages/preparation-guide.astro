@@ -1,0 +1,272 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+import Gallery from '../components/Gallery.astro';
+
+const h1 = 'Preparation Guide';
+---
+
+<MainLayout title="Preparation Guide">
+
+<main>
+<section id="gallery">
+  <div class="wrapper">
+    <h1>{h1}</h1>
+  </div>
+  <!-- Gallery Section -->
+  <Gallery limit={8} showButton={false} />
+</section>
+
+<div class="wrapper">
+<div class="tabs">
+  <input type="radio" name="tabs" id="tabone" checked="checked">
+  <label for="tabone">WELCOME</label>
+  <div class="tab">
+    <p>Thank you for trusting me with your personal and /or corporate branding images. You don't have the luxury of missing an opportunity to make a good impression. Having an amazing headshot will ensure that your audience receives your virtual handshake warmly and generates a positive impression of you.</p>
+
+    <p>While my photo sessions are very relaxed and dynamic, there are a few things that you can do to set everyone up for success. I hope this guide helps you (and your colleagues) prepare for an amazing photo session!</p><br>
+    <img src="https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1597432938095-10Q6CBXCQ4XNUT9BVXQV/Signature+%28300px%29.png?content-type=image%2Fpng" height="150">
+  </div>
+
+  <input type="radio" name="tabs" id="tabtwo">
+  <label for="tabtwo">GENERAL</label>
+  <div class="tab">
+    <p style="text-transform:uppercase;font-weight:600;">TRUST</p>
+
+    <p>Have a little faith in me!</p>
+    <p>We're going to hang out, get to know each other a bit, and I'll probably make you laugh.</p>
+    <p>I'm going to ask you to contort your face and you'll probably feel silly in some of the positions we twist your body into. It's all for a good reason.</p>
+    <p>I'm not just a headshot photographer. I'm also an expression coach. If you allow yourself to be coached, you can achieve greatness in a headshot.</p>
+    <p>I promise that if you come to my studio prepared and ready to take direction, you'll leave with a great headshot.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">REST</p>
+
+    <p>Please get ample rest.</p>
+    <p>I can't stress this point enough.  It is incredibly important that you arrive at your session looking refreshed and energized.</p>
+    <p>Schedule your session for when you can get a good night of sleep the night before.</p>
+    <p>Sleep deprivation is never a smart idea, but it's an even worse idea when we are creating your public image.</p>
+    <p>There are lot of things I can control, but your fatigue isn't one of them. Please don't put yourself at a disadvantage before we even begin.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Miscellaneous</p>
+
+    <p style="text-transform:uppercase;font-weight:600;">Eyes</p>
+
+    <p>If you are prone to allergies, have sensitive eyes, or have decided to spend the prior evening out with friends, Visine is your friend.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">TEETH</p>
+
+    <p>If your teeth could use a little brightening / whitening, please start treatments a few weeks before your session.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Acne Breakouts</p>
+
+    <p>This is completely normal. Go through normal treatments to reduce the effects.</p>
+
+    <p><b>PLEASE DO NOT TRY TO COVER THEM WITH A TON OF MAKEUP.</b></p>
+    <p>It's far easier for a retoucher to remove blemishes than to clean up caked on makeup.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">exfoliate and Moisturize</p>
+
+    <p>Dry, flaky skin can detract from a solid image, and can make retouching an image twice as difficult.  I recommend exfoliating once, and then beginning a facial moisturizing regimen every night for a week prior to your session.  Even if you have opted to work with my makeup artist, I ask that you arrive with a clean, moisturized face.</p>
+
+    <p>Trevor Walker of <a style="color:black;" href="https://www.trevorwalkerphotography.com/">Trevor Walker Photography</a>, based in Kelowna, British Columbia, says "hydrate, hydrate, hydrate. Drink plenty of water the day before and use moisturizer the day of the shoot"</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Tanning</p>
+
+    <p>This is not recommended, for a great multitude of reasons.</p>
+    <p>Please consider that tanning is not permanent, and your audience won't always see you with a darker shade of skin. This will distort their view of you.</p>
+    <p>In addition, tanning will cause skin irritation, dryness, flaking skin, and whole host of other obstacles in making your headshot incredible.</p>
+    <p>If tanning is your thing, please do it many weeks ahead of your session, or some time after we photograph your headshot.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Lips</p>
+
+    <p>Apply lip balm a few days in advance, and even the day of your session. Ladies, please ensure that you have lip gloss handy.  Not only do I prefer to stay away from a matte lip, but lip gloss will give your lips a really nice sheen.</p>
+
+    <p>Botox and lip fillers have become quite popular. However, these items artificially distort your actual appearance.</p>
+    <p>While this may be something familiar to you, it is not recommended.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Colored Contact Lenses</p>
+
+    <p>Please avoid these. We want to present you as authentically as possible. Your natural eye color is preferred, and the synthetic textures of the contact lenses will be easily visible in the images.</p>
+  </div>
+
+  <input type="radio" name="tabs" id="tabthree">
+  <label for="tabthree">FOR THE LADIES</label>
+  <div class="tab">
+    <p style="text-transform:uppercase;font-weight:600;">Hair</p>
+
+    <p>Please do your hair yourself.</p> <p>A stylist cannot replicate your look. You want to have a measure of consistency when being compared to your headshots. You are in charge here, since hair is a very personal thing.  We want you to look and feel like yourself. We can always primp, polish things up, and even control a few flyaways, but your style is up to you.When it comes to hair, simplicity is best as well. I have found that wearing your hair either down or in a simple pony tail works extremely well.  Please bring a hair band, should we decide to put your hair up for a few images.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Jewelry</p>
+
+    <p>In an effort to make the images about you, and minimize distractions, please avoid dangling earrings and necklaces. small studs are perfect. I know there is a desire to wear jewelry in order to bring attention to certain areas, to finish an outfit, or simply because it looks nice. In personal branding and headshot photography, less is more.  There is no need to go overboard here. Your audience won't be able to focus on your visual cues. Believe it or not, a great expression will create more of an impact than the jewelry.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Makeup</p>
+
+    <p>I choose to work with top notch people, and they are an integral part of my work flow. My makeup artist has a keen eye and can achieve my aesthetic with ease.</p>
+
+    <p>My makeup artist, Lionel Adriano, is a certified M.A.C. makeup artist, and was voted the best makeup artist in Lancaster County, Pennsylvania by the readers of Lancaster County Magazine, Susquehanna Style Magazine and Lancaster Newspaper. His attention to detail, positive attitude, and perfectionism gels very well with my operation. Let him work his magic on you.  Not only will you get pampered, but you will feel more beautiful than you already are!</p>
+
+    <p>The fee for Makeup is $145, payable in cash, directly to the Makeup Artist.  At this time, credit and debit cards are not accepted.</p>
+
+    <p>If you choose to forego using my makeup artist, please follow these instructions:</p>
+
+    <ul style="list-style-type:none;">
+      <li>Highlight what needs to be highlighted, but avoid caking any of it on. A very LIGHT hand is required here, as the difference in makeup textures and skin textures will be apparent.</li><br>
+
+      <li>Please blend everything very well so as to avoid transition lines; particularly between the cheek and eye socket.</li><br>
+
+      <li>Please also avoid clumped mascara or heavy / thick eye liner. The resolution and quality of the images will show the detail and texture of the makeup.</li><br>
+
+      <li>No hard lines, wings or other oddities. I realize that some ladies like to get creative with their eye liner. Please keep it soft and simple.</li><br>
+
+      <li>Please avoid eye lash extensions. We are aiming for authenticity.</li>
+    </ul>
+  </div>
+
+  <input type="radio" name="tabs" id="tabfour">
+  <label for="tabfour">FOR THE GENTS</label>
+  <div class="tab">
+    <p style="text-transform:uppercase;font-weight:600;">Shaving</p>
+
+    <p>Please shave the night before. I suggest this to avoid razor burn showing up in the images.</p>
+
+    <p>If you should feel the urge, please feel free to bring your shaving kit. We can take a few minutes for you to shave off the scruff and move forward with additional images.</p>
+
+    <p>Please note:  If you prefer a clean shaven look, please either arrive that way, or bring your shaving kit.  While retouching can assist in taking care of stray or misshapen hairs, the time, effort and monetary layout necessary to remove all of the scruff is prohibitive.</p>
+
+    <p>Due to the time required to perform this task at the high standards I have built my reputation on, an additional retouching fee will be charged in order to perform this extensive work.</p>
+
+    <p>In other words, it's just easier to shave as per my recommendations.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Makeup for guys</p>
+
+    <p>Fellas, makeup is not a good look for guys.</p>
+
+    <p>Typically, news anchors, actors, or models wear makeup while on live or recorded broadcasts. The reason they wear the makeup is to reduce the effects of the glare from lights, giving a very matte appearance.  They do not have the benefit of retouching.  We, on the other hand, have the ability to alter things in post processing.  Those blemishes are far easier to remove if you aren't wearing makeup.</p>
+
+    <p>Also, makeup won't hide your scruff. Please shave instead.</p>
+
+    <p>Makeup is not a shortcut.  In fact, if you don't wear it every day, it just makes things look odd instead.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Hair</p>
+    <p>If you like gel, or other hair products, please feel free to bring some along with you.</p>
+    <p>No one can replicate your hair style quite like you can. So, let's be sure that you are looking awesome before we begin!</p>
+  </div>
+
+  <input type="radio" name="tabs" id="tabfive">
+  <label for="tabfive">CLOTHING</label>
+  <div class="tab">
+    <p>Please avoid anything overly busy, and only bring clothes that you love.  I prefer solid colors. Blacks and grays always work well, but don't be afraid to bring a color palette that you prefer.  Simplicity is always best.</p>
+
+    <p>For images that reflect a highly polished executive look, I suggest bringing a suit and appropriate accessories.</p>
+
+    <p>Please ensure that the tie you choose is not overly busy, and matches relatively well with your suit. Please leave the paisley patterned tie at home!</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Bring Options</p>
+
+    <p>I ask that you bring a variety of clothing options (at least 3-5 options would be great). I usually prefer to have options beyond only one outfit in case we feel a different aesthetic is warranted. If it isn't in the studio, we can't take photos of you wearing it, so if you find yourself questioning whether or not something will work just bring it along.I also suggest having some fun with this.  If you feel your wardrobe is missing something, then go shopping! We'll leave the tags on and you can return the items you don't want to keep after the shoot.</p>
+
+    <p>Also, don't hesitate to bring some non-seasonal clothing with you.  A t-shirt or top in the winter and a sweater in the summer for example, to give you the range of shots which will work in different times of the year.</p>
+
+    <p>With headshots, pants and shoes aren't important. Just wear something comfortable.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">No wrinkles, please</p>
+
+    <p>Please ensure that the clothing has been cleaned and pressed.</p>
+
+    <p>Ladies, a blouse and blazer is a great option for a more professional look. Sometimes, a simple V-neck or scooped neck blouse works just as well.  Since I will not have had the opportunity to peruse your wardrobe, I ask that you bring a bunch of options for us to make choices from.</p>
+
+    <p>If you should need some help in advance of your session, don't hesitate to send me a few pictures, and we can do a style consult ahead of your arrival.</p>
+
+    <p>Fellas, button-down shirts without a blazer provides an unfinished, unpolished aesthetic.  Since layers are always a great way to go, please ensure that you bring the appropriate clothing for your headshot session.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Love it or Leave it</p>
+
+    <p>Please ensure that you absolutely love the clothing!  If you don't love it, I don't want you to bring it to the studio. You won't photograph well in something you are uncomfortable wearing.</p><br>
+
+    <p style="text-transform:uppercase;font-weight:600;">Fit</p>
+
+    <p>Lastly, your clothing should fit well. Believe it or not, fit is a big deal.  It looks strange when you are wearing a jacket that is a size too small or two sizes too large. Why make yourself disproportionate or larger than you actually are? The camera won't add 10 pounds, but clothing that doesn't fit definitely will!</p>
+
+    <p>Fellas, please ensure that your jacket and shirt collars aren't pulled away from your neck. This is an indication that your clothing is too large for you. Of course, we don't want the collars too tight either.</p>
+
+    <p>Gents, I work with a men's stylist who takes your game to the next level with custom designed and fitted clothes. There are so many fellas that need help in this arena, and I am one of them. That's why I'm such an advocate for Lisa Torba. She's helping me look more polished and pro, and I know she can do the same for you!</p>
+
+    <p>While Lisa requires a little bit of lead time to get you all set up, her sense of style is impeccable, and you will walk away looking and feeling like a million bucks. Tack on an amazing headshot in those snazzy new threads, and now you're ready to make a million bucks too!</p>
+  </div>
+</div>
+
+</div>
+</main>
+
+<style is:global>
+/**
+ * Tabs
+ */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabs label {
+  order: 1;
+  padding: 1rem 3rem;
+  margin-right: .2rem;
+  cursor: pointer;
+  background: var(--drkbg);
+  color: var(--ltclr);
+  font-weight: var(--fw-bold);
+  transition: background ease .2s;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.tabs .tab {
+  order: 99;
+  width: 100%;
+  padding: 3rem 1rem 1rem;
+  background: var(--ltclr);
+}
+
+.tabs .tab,
+.tabs input[type=radio] {
+  display: none
+}
+
+.tabs input[type=radio]:checked+label {
+  background: var(--ltclr);
+  color: var(--blkclr)
+}
+
+.tabs input[type=radio]:checked+label+.tab {
+  display: block
+}
+
+@media (max-width:45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial
+  }
+
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: .2rem
+  }
+}
+
+main {
+  background: var(--ltclr);
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0 auto;
+  font-size: var(--fs-500);
+  padding-top: 2rem;
+}
+
+h1 {
+  margin-bottom: var(--size-3);
+}
+</style>
+
+</MainLayout>
