@@ -78,17 +78,16 @@
 
 </style>
 
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
 <script>
+import gsap from 'gsap';
+
 document.addEventListener('DOMContentLoaded', () => {
     const problemContent = document.querySelector('#problemContent');
-    
+
     if (problemContent) {
         // Set initial state
         gsap.set(problemContent, { y: 40, opacity: 0 });
-        
+
         // Create intersection observer for animation trigger
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -107,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             threshold: 0.3,
             rootMargin: '0px 0px -50px 0px'
         });
-        
+
         observer.observe(problemContent);
     }
 });

@@ -1,5 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
+import PrimaryButton from '../components/PrimaryButton.astro';
+import SecondaryButton from '../components/SecondaryButton.astro';
 
 const h1 = 'My Team';
 
@@ -47,14 +49,16 @@ const lisa = {
     <div class="member-container">
       <div class="member-image">
         <img src={lionel.image} alt={`${lionel.name} - ${lionel.role}`} />
-        <div class="image-accent"></div>
       </div>
       <div class="member-content">
-        <span class="role-label">{lionel.role}</span>
-        <h2>{lionel.name}</h2>
-        {lionel.bio.map(paragraph => (
-          <p>{paragraph}</p>
-        ))}
+        <div class="content-box">
+
+          <h2>{lionel.name}</h2>
+          <span class="role-label">{lionel.role}</span>
+          {lionel.bio.map(paragraph => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -64,17 +68,17 @@ const lisa = {
     <div class="member-container reverse">
       <div class="member-image">
         <img src={lisa.image} alt={`${lisa.name} - ${lisa.role}`} />
-        <div class="image-accent"></div>
       </div>
       <div class="member-content">
-        <span class="role-label">{lisa.role}</span>
-        <h2>{lisa.name}</h2>
-        {lisa.bio.map(paragraph => (
-          <p>{paragraph}</p>
-        ))}
-        <a href={lisa.ctaUrl} target="_blank" rel="noopener noreferrer" class="cta-button">
-          <span class="btn-text">{lisa.ctaText}</span>
-        </a>
+        <div class="content-box">
+
+          <h2>{lisa.name}</h2>
+          <span class="role-label">{lisa.role}</span>
+          {lisa.bio.map(paragraph => (
+            <p>{paragraph}</p>
+          ))}
+          <PrimaryButton url={lisa.ctaUrl} text={lisa.ctaText} />
+        </div>
       </div>
     </div>
   </section>
@@ -98,11 +102,10 @@ const lisa = {
 }
 
 .page-header h1 {
-  font-size: clamp(var(--fs-800), 5vw, 4rem);
+  font-size: var(--fs-800);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   margin-bottom: var(--size-3);
-  letter-spacing: 0.05em;
 }
 
 .page-header .subtitle {
@@ -129,17 +132,20 @@ const lisa = {
 }
 
 .member-container {
-  max-width: 1400px;
+  /* max-width: 1400px; */
+  max-inline-size:80%;
   margin: 0 auto;
   padding: 0 var(--size-5);
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--size-9);
   align-items: center;
+
+
 }
 
 .member-container.reverse {
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .member-container.reverse .member-image {
@@ -153,39 +159,41 @@ const lisa = {
 /* Image Styling */
 .member-image {
   position: relative;
-  aspect-ratio: 3/4;
+  aspect-ratio: 5 / 4;
 }
 
 .member-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
   box-shadow:
     0 25px 60px rgba(0, 0, 0, 0.3),
     0 15px 35px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.member-image:hover img {
-  transform: scale(1.02);
-}
-
-.image-accent {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(135deg, var(--accent) 0%, transparent 100%);
-  opacity: 0.15;
-  z-index: -1;
-  clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
 }
 
 /* Content Styling */
 .member-content {
   padding: var(--size-5);
+
+}
+
+.content-box {
+  position: relative;
+  z-index: 2;
+}
+
+.lionel .content-box {
+  background: var(--ltbg);
+  padding: var(--size-7);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.lisa .content-box {
+  background: var(--ltclr);
+  padding: var(--size-7);
+  clip-path: polygon(30px 0, 100% 0, 100% 100%, 0 100%, 0 30px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .role-label {
@@ -195,27 +203,15 @@ const lisa = {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: var(--size-2);
-  position: relative;
-  padding-left: var(--size-5);
-}
-
-.role-label::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 2px;
-  background: var(--accent);
+  /* margin-bottom: var(--size-2); */
+   margin-bottom: var(--size-8);
 }
 
 .member-content h2 {
   font-size: clamp(var(--fs-700), 4vw, var(--fs-800));
   font-weight: var(--fw-bold);
   text-transform: uppercase;
-  margin-bottom: var(--size-5);
+  /* margin-bottom: var(--size-5); */
   color: var(--blkclr);
   letter-spacing: 0.02em;
 }
@@ -225,55 +221,6 @@ const lisa = {
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--size-4);
   color: var(--blkclr);
-}
-
-/* CTA Button */
-.cta-button {
-  display: inline-block;
-  margin-top: var(--size-5);
-  padding: var(--size-3) var(--size-7);
-  background: linear-gradient(135deg, var(--accent) 0%, #0288d1 100%);
-  color: var(--ltclr);
-  text-decoration: none;
-  font-weight: var(--fw-bold);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-size: var(--fs-400);
-  clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow:
-    0 10px 30px rgba(3, 169, 244, 0.3),
-    0 5px 15px rgba(3, 169, 244, 0.2);
-}
-
-.cta-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transform: skewX(-20deg);
-  transition: left 0.6s ease;
-}
-
-.cta-button:hover::before {
-  left: 100%;
-}
-
-.cta-button:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 15px 40px rgba(3, 169, 244, 0.4),
-    0 8px 20px rgba(3, 169, 244, 0.3);
-}
-
-.btn-text {
-  position: relative;
-  z-index: 2;
 }
 
 /* Responsive */
