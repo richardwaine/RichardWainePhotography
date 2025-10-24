@@ -1,0 +1,63 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  subtitleFirst?: boolean;
+  titleColor?: string;
+  subtitleColor?: string;
+  titleSize?: string;
+  subtitleSize?: string;
+}
+
+const {
+  title,
+  subtitle,
+  subtitleFirst = false,
+  titleColor = 'var(--blkclr)',
+  subtitleColor = 'var(--accent)',
+  titleSize = 'var(--fs-800)',
+  subtitleSize = 'var(--fs-500)'
+} = Astro.props;
+---
+
+<section class="wrapper">
+  {subtitleFirst && subtitle && <p class="subtitle" style={`color: ${subtitleColor}; font-size: ${subtitleSize}`}>{subtitle}</p>}
+  <h1 style={`color: ${titleColor}; font-size: ${titleSize}`}>{title}</h1>
+  {!subtitleFirst && subtitle && <p class="subtitle" style={`color: ${subtitleColor}; font-size: ${subtitleSize}`}>{subtitle}</p>}
+</section>
+
+<style>
+  .wrapper {
+    /* Wrapper styling comes from global style.css: width 80%, margin-inline auto */
+    /* Global section padding-block: var(--size-8) handles top/bottom spacing */
+    text-align: center;
+  }
+
+  .wrapper h1 {
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .wrapper .subtitle {
+    font-weight: var(--fw-semi-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* When subtitle comes first (before h1) */
+  .wrapper .subtitle:first-child {
+    margin-bottom: var(--size-3);
+  }
+
+  /* When h1 comes first (before subtitle) */
+  .wrapper h1:first-child {
+    margin-bottom: var(--size-3);
+  }
+
+  /* Last element always gets size-7 margin-bottom */
+  .wrapper .subtitle:last-child,
+  .wrapper h1:last-child {
+    /* margin-bottom: var(--size-7); */
+  }
+</style>

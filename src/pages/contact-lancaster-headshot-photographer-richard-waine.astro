@@ -4,6 +4,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Gallery from '../components/Gallery.astro';
 import PrimaryButton from '../components/PrimaryButton.astro';
+import PageTitle from '../components/PageTitle.astro';
 
 const title = 'Contact - Richard Waine Photography';
 const h1 = 'Contact Richard Waine Photography';
@@ -13,12 +14,19 @@ const h1 = 'Contact Richard Waine Photography';
 
 <main class="contact-page">
 
+  <!-- Title Section -->
+  <PageTitle
+    title={h1}
+    subtitle="HOW MAY I ASSIST?"
+    subtitleFirst={true}
+    titleColor="var(--accent)"
+    subtitleColor="var(--ltclr)"
+    titleSize="var(--fs-500)"
+    subtitleSize="var(--fs-800)"
+  />
+
   <!-- Gallery Section -->
   <section id="gallery">
-    <div class="wrapper">
-      <p class="page-title">HOW MAY I ASSIST?</p>
-      <h1>{h1}</h1>
-    </div>
     <Gallery limit={8} showButton={false} />
   </section>
 
@@ -102,6 +110,7 @@ const h1 = 'Contact Richard Waine Photography';
 
   #gallery {
     background: var(--drkbg);
+    padding-block: 0;
   }
 
   #gallery .page-title {
