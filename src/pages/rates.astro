@@ -2,15 +2,16 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import ZoomPopOut from '../components/ZoomPopOut.astro'
 import RatesCard from '../components/RatesCard.astro'
+import PageTitle from '../components/PageTitle.astro';
 let h1 = 'Headshot Rates';
 ---
 
 <MainLayout title= "Headshot Rates">
 
+<PageTitle title={h1} />
+
 <main>
 
-    
-<h1>{h1}</h1> 
 <ZoomPopOut />
 
 <RatesCard >/

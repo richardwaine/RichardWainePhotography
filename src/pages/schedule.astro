@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout.astro'
 import ZoomPopOut from '../components/ZoomPopOut.astro'
 import RatesCard from '../components/RatesCard.astro'
 import Testimonials from '../components/Testimonials.astro';
+import PageTitle from '../components/PageTitle.astro';
 const h1 = 'Schedule Your Headshot Session';
 
 
@@ -17,10 +18,15 @@ const h1 = 'Schedule Your Headshot Session';
 
             <ZoomPopOut />
 
-
-
-                <p class="page-title center">SCHEDULE</p>
-                <h1 class="center">{h1}</h1>
+            <PageTitle
+              subtitle="SCHEDULE"
+              title={h1}
+              subtitleFirst={true}
+              subtitleSize="var(--fs-800)"
+              titleSize="var(--fs-500)"
+              subtitleColor="var(--blkclr)"
+              titleColor="var(--accent)"
+            />
 
                 <div class="two-cols">
 
@@ -45,6 +51,10 @@ const h1 = 'Schedule Your Headshot Session';
 
 <style>
 
+:root {
+  --pagetitle-title-weight: var(--fw-semi-bold);
+  --pagetitle-subtitle-weight: var(--fw-bold);
+}
 
 h1{
     margin-block:var(--size-3);

@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import PageTitle from '../components/PageTitle.astro';
 import { Image } from 'astro:assets';
 
 // Import vendor images
@@ -32,9 +33,8 @@ const h1 = "Resources"
 
 
 <MainLayout title={title}>
- 
 
-<h1>{h1}</h1>
+<PageTitle title={h1} />
 
     
 
@@ -573,6 +573,10 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 </MainLayout>
 
 <style>
+
+:root {
+  --pagetitle-h1-margin: 0;
+}
 
  /* Base styles (mobile-first defaults) */
 

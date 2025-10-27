@@ -34,25 +34,25 @@ const {
   }
 
   .wrapper h1 {
-    font-weight: var(--fw-bold);
-    letter-spacing: 0.1em;
+    font-weight: var(--pagetitle-title-weight, var(--fw-bold));
+    /* letter-spacing: 0.1em; */
     text-transform: uppercase;
   }
 
   .wrapper .subtitle {
-    font-weight: var(--fw-semi-bold);
-    letter-spacing: 0.1em;
+    font-weight: var(--pagetitle-subtitle-weight, var(--fw-semi-bold));
+    /* letter-spacing: 0.1em; */
     text-transform: uppercase;
   }
 
   /* When subtitle comes first (before h1) */
   .wrapper .subtitle:first-child {
-    margin-bottom: var(--size-3);
+    /* margin-bottom: var(--size-3); */
   }
 
   /* When h1 comes first (before subtitle) */
   .wrapper h1:first-child {
-    margin-bottom: var(--size-3);
+    margin-bottom: var(--pagetitle-h1-margin, var(--size-3));
   }
 
   /* Last element always gets size-7 margin-bottom */

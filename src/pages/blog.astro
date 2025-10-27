@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
+import PageTitle from '../components/PageTitle.astro';
 import { getCollection } from 'astro:content';
 
 const title = 'Richard Waine Photography Blog';
@@ -13,12 +14,8 @@ const posts = await getCollection('blog')
 
 
 <MainLayout title={title}>
- 
 
-
-
-
-<h1>{h1}</h1>
+<PageTitle title={h1} />
 
 
 
@@ -167,9 +164,8 @@ if (toggle && content) toggle.onclick = () => {
 
 <style>
 
-
-
 :root {
+  --pagetitle-h1-margin: 0;
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 

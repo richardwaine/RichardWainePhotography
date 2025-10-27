@@ -1,17 +1,17 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
 import Gallery from '../components/Gallery.astro';
+import PageTitle from '../components/PageTitle.astro';
 
 const h1 = 'Preparation Guide';
 ---
 
 <MainLayout title="Preparation Guide">
 
+<PageTitle title={h1} />
+
 <main>
 <section id="gallery">
-  <div class="wrapper">
-    <h1>{h1}</h1>
-  </div>
   <!-- Gallery Section -->
   <Gallery limit={8} showButton={false} />
 </section>
@@ -264,8 +264,8 @@ main {
   padding-top: 2rem;
 }
 
-h1 {
-  margin-bottom: var(--size-3);
+#gallery {
+  padding-block: 0;
 }
 </style>
 

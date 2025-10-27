@@ -1,5 +1,23 @@
 # Claude Development Guidelines for Richard Waine Photography Website
 
+## ABSOLUTE TOP PRIORITY - READ FIRST, READ ALWAYS
+
+### THE USER'S WAY - NO EXCEPTIONS, NO DEVIATIONS, EVER
+
+1. **READ AND RE-READ UNTIL 100% CONFIDENT** - Read instructions, code, requirements over and over and over again until you are absolutely 100% confident you understand them completely
+
+2. **EXECUTE WITH ZERO DEVIATION** - Read instructions over and over and over again until you can execute PRECISELY with ABSOLUTELY ZERO DEVIATION WHATSOEVER
+
+3. **WHEN IN DOUBT, ASK - COLLABORATION IS WELCOMED** - When you feel ANY urge to deviate from instructions, STOP and ask questions. The user welcomes collaboration and conversation. NEVER EVER EVER deviate without asking first.
+
+4. **STANDARD OPERATING PROCEDURE - READ RULES CONSTANTLY:**
+   - When user says "good morning" → READ THE RULES FIRST
+   - Right after compacting conversation when beginning again → READ THE RULES FIRST
+   - There should NEVER EVER be a moment that you do NOT adhere to these rules
+   - If you are uncertain about ANY instruction, read it again until certain
+
+5. **THE USER'S WAY OR NOT AT ALL** - This is not negotiable. Follow the user's way always, precisely, with zero deviation.
+
 ## CRITICAL RULES
 
 ### Fundamental Principles

@@ -23,9 +23,9 @@ const lisa = {
   role: "Stylist",
   image: "https://images.squarespace-cdn.com/content/v1/50f79c6fe4b00d3480c9bbf0/1577896434536-DDGV5412OJ1KEFT3IOU5/Lisa-Torba+-+%28500px%29+-+Richard+Waine+-+Lancaster-PA-0158.jpg",
   bio: [
-    "Lisa is an incredible Personal Stylist for men. She helps to custom fit and style you with high-quality clothing that looks and feels great. She'll make your life easier and have you looking better than ever.",
-    "Lisa caters to the needs and schedules of her clients by providing a collaborative, frustration-free shopping experience. After meticulously measuring you to ensure a proper fit, Lisa will guide you through the customization process, and style you to perfection.",
-    "Working with Lisa will save you time and money while ensuring that you are among the best dressed in the room, regardless of the occasion.",
+    "Lisa is an incredible Personal Stylist for men. She styles you in high-quality clothing that fits perfectly and looks and feels amazing, making your life easier and your wardrobe sharper than ever.",
+    "She provides a collaborative, frustration-free shopping experience, meticulously measuring you and guiding every step of the customization process.",
+    "Working with Lisa saves you time and money while ensuring you are among the best dressed in the room, no matter the occasion.",
     "Contact Lisa ahead of your headshot or branding photo session to ensure you look and feel like a million bucks!"
   ],
   ctaText: "SCHEDULE WITH LISA",
@@ -53,7 +53,9 @@ const lisa = {
               <p>{paragraph}</p>
             ))}
           </div>
-          <PrimaryButton url={lisa.ctaUrl} text={lisa.ctaText} />
+          
+          <PrimaryButton  url={lisa.ctaUrl} text={lisa.ctaText}/>
+          
         </div>
       </div>
     </div>
@@ -310,7 +312,7 @@ html:has(.team-page-animated) {
 }
 
 .lionel-content .content-box {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
 }
 
 .lisa-content .content-box {
@@ -342,6 +344,7 @@ html:has(.team-page-animated) {
   margin-bottom: var(--size-4);
   color: var(--blkclr);
 }
+
 
 /* Responsive */
 @media (max-width: 1024px) {

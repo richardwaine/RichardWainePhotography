@@ -4,6 +4,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Gallery from '../components/Gallery.astro';
 import PrimaryButton from '../components/PrimaryButton.astro';
+import PageTitle from '../components/PageTitle.astro';
 import { Image } from 'astro:assets';
 import giftCardImage from '../assets/images/gift-cards/Gift Card (16 x 9).jpg';
 
@@ -16,10 +17,11 @@ const squareStoreUrl = 'https://square.link/u/GS6PmHTs';
 
 <main class="gift-certificates-page">
 
+  <PageTitle title={h1} titleColor="var(--ltclr)" />
+
   <!-- Gallery Section -->
   <section id="gallery">
     <div class="wrapper">
-      <h1>{h1}</h1>
       <p class="description">
         Give the gift of confidence, authenticity, and look-ability. A gift card towards a headshot session is ideal for your colleagues, friends, or for that special someone. They even make great stocking stuffers! Help someone update their headshot this holiday season!
       </p>
@@ -58,12 +60,7 @@ const squareStoreUrl = 'https://square.link/u/GS6PmHTs';
 
   #gallery {
     background: var(--drkbg);
-  }
-
-  #gallery h1 {
-    color: var(--ltclr);
-    text-align: center;
-    margin-bottom: var(--size-5);
+    padding-top: 0;
   }
 
   #gallery .description {
