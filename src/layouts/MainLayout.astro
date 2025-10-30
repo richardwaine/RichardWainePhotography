@@ -48,6 +48,55 @@ const {title} = Astro.props as Props;
 
 	<Footer  />
 
+	<script>
+	import Lenis from 'lenis';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+	// Extend Window interface for TypeScript
+	declare global {
+		interface Window {
+			lenis?: any;
+		}
+	}
+
+	// Register ScrollTrigger plugin
+	gsap.registerPlugin(ScrollTrigger);
+
+	// Wait for DOM to be ready before initializing Lenis
+	function initLenis() {
+		// Initialize Lenis only once (persists across View Transitions)
+		if (!window.lenis) {
+			window.lenis = new Lenis({
+				duration: 1.2,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+				prevent: (node) => node.hasAttribute('data-lenis-prevent'),
+			});
+
+			// Connect Lenis to GSAP ScrollTrigger
+			window.lenis.on('scroll', ScrollTrigger.update);
+
+			// Animate Lenis on every frame
+			gsap.ticker.add((time) => {
+				window.lenis?.raf(time * 1000);
+			});
+
+			gsap.ticker.lagSmoothing(0);
+		}
+	}
+
+	// Initialize on load
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initLenis);
+	} else {
+		initLenis();
+	}
+
+	// Refresh ScrollTrigger after View Transitions
+	document.addEventListener('astro:after-swap', () => {
+		ScrollTrigger.refresh();
+	});
+	</script>
 
 </body>
 </html>

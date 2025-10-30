@@ -229,7 +229,7 @@ const currentData = portfolioData[currentImageIndex];
   document.addEventListener('DOMContentLoaded', initNeuralAnimation);
   document.addEventListener('astro:page-load', initNeuralAnimation);
 
-  document.addEventListener('DOMContentLoaded', function() {
+  function initNeuralPortrait() {
     // Use the portfolioData from Astro instead of duplicating it
     const dataElement = document.getElementById('portfolio-data');
     if (!dataElement || !dataElement.textContent) return;
@@ -363,8 +363,14 @@ const currentData = portfolioData[currentImageIndex];
     // Draw initial lines for the first portrait without clearing existing HTML
     if (dataPoints) {
       setTimeout(() => {
-        const existingLabels = dataPoints.querySelectorAll('.characteristic-label');
         const containerRect = dataPoints.getBoundingClientRect();
+
+        // Ensure container has dimensions before drawing lines
+        if (containerRect.width === 0 || containerRect.height === 0) {
+          return;
+        }
+
+        const existingLabels = dataPoints.querySelectorAll('.characteristic-label');
 
         existingLabels.forEach((label) => {
           const labelRect = label.getBoundingClientRect();
@@ -409,9 +415,17 @@ const currentData = portfolioData[currentImageIndex];
           svg.appendChild(line);
           wrapper?.appendChild(svg);
         });
-      }, 100);
+      }, 250);
     }
-  });
+  }
+
+  // Initialize on page load and after view transitions
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNeuralPortrait);
+  } else {
+    initNeuralPortrait();
+  }
+  document.addEventListener('astro:page-load', initNeuralPortrait);
 </script>
 
 <style>

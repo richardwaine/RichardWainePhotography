@@ -1,5 +1,5 @@
 ---
-
+import PrimaryButton from './PrimaryButton.astro';
 ---
 
 
@@ -13,7 +13,7 @@
   <article class="gameplan-card center">
     <div class="face gameplan1">
       <div class=content-gameplan>
-        <img  alt="schedule a professional headshot, lancaster photographer, lancaster headshots,business headshots near me" height=75 
+        <img  alt="schedule a professional headshot, lancaster photographer, lancaster headshots,business headshots near me" height=75
           src=https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1577471673312-256TTZOWDOXBV99W5BFK/Calendar-1+%28optimized%29.png?content-type=image%2Fpng loading="lazy" width=75>
           <br>
           <br>
@@ -24,15 +24,15 @@
       <div class=content-gameplan>
         <p>Give the <b>SCHEDULE</b> button a tap!
         <p>Select an appointment that works best for you.</p>
-        <a class="spacing" href="/rates">SCHEDULE</a>
+        <PrimaryButton text="SCHEDULE" url="/rates" size="small" />
       </div>
     </div>
   </article>
-  
+
   <article class="gameplan-card center">
     <div class="face gameplan1">
       <div class=content-gameplan>
-        <img alt="professional headshot pictures, professional photography, lancaster pa headshots" height=75 
+        <img alt="professional headshot pictures, professional photography, lancaster pa headshots" height=75
          src=https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1593027627807-UEKQXEIKT61WFJQI48EP/Camera+%28optimized%29.png?content-type=image%2Fpng loading="lazy" width=75>
           <br>
           <br>
@@ -42,15 +42,15 @@
     <div class="face gameplan2">
       <div class=content-gameplan>
         <p>It's fun and easy!<p>I will guide you into pictures that will propel your career.</p>
-        <a class="spacing" href="/rates">SCHEDULE</a>
+        <PrimaryButton text="SCHEDULE" url="/rates" size="small" />
       </div>
     </div>
   </article>
-  
+
   <article class="gameplan-card center">
     <div class="face gameplan1">
       <div class=content-gameplan>
-        <img  alt="company headshots, linkedin headshots, social media headshots, headshot photographers, professional headshots near me" height=75 
+        <img  alt="company headshots, linkedin headshots, social media headshots, headshot photographers, professional headshots near me" height=75
           src=https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1593027096649-E21ID0886HMI4H62JU77/share_PNG19%28optimized%29.png?content-type=image%2Fpng loading="lazy" width=75>
           <br>
           <br>
@@ -60,7 +60,7 @@
     <div class="face gameplan2">
       <div class=content-gameplan>
         <p>Share your images with everyone! Stand out and be recognized as an expert in your field.</p>
-        <a class="spacing" href="/rates">SCHEDULE</a>
+        <PrimaryButton text="SCHEDULE" url="/rates" size="small" />
       </div>
     </div>
   </article>
@@ -147,7 +147,6 @@
 }
 .content-benefits a,
 .content-benefits p,
-.content-gameplan a,
 .content-gameplan p {
   font-family: var(--ff-secondary);
   color: var(--blkclr);
@@ -156,10 +155,9 @@
 .content-benefits p,
 .content-gameplan p {
   margin: 0;
-  line-height: 2;
+  /* line-height: 2; */
 }
-.content-benefits a,
-.content-gameplan a {
+.content-benefits a {
   margin: var(--size-1) 0;
   display: inline-block;
   position: relative;
@@ -170,13 +168,15 @@
   border: 2px solid var(--blkclr);
   cursor: pointer;
 }
-.content-gameplan a {
-  margin-top: var(--size-5);
-}
-.content-benefits a:hover,
-.content-gameplan a:hover {
+.content-benefits a:hover {
   background-color: var(--drkbg);
   color: var(--ltclr);
+}
+.content-gameplan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-3);
 }
 @media screen and (min-width: 641px) {
   .container-benefits,

@@ -53,14 +53,12 @@ const {
 
     /* Sophisticated Header */
     .luxury-header {
-        --_header-height:120px;     
-
         /* position: fixed; */
         position:sticky;
         top: 0;
         left: 0;
         right: 0;
-        height: var(--_header-height);
+        height: var(--header-height);
         
         z-index: 1000;
         background: var(--drkbg);
@@ -89,10 +87,10 @@ const {
     }
 
     .logo {
-        
+
         /* height: 120px; */
-        /* height:calc(var(--_header-height) - 10px); */
-        height:var(--_header-height);
+        /* height:calc(var(--header-height) - 10px); */
+        height:var(--header-height);
         filter: drop-shadow(0 0 30px rgba(3, 169, 244, 0.15));
         transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         color: white;

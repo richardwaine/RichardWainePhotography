@@ -109,8 +109,8 @@ import { Image } from 'astro:assets';
         </div>
             </div>
         </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next" data-lenis-prevent></div>
+    <div class="swiper-button-prev" data-lenis-prevent></div>
     <div class="swiper-pagination"></div>
 </div>
 </div>
@@ -125,11 +125,12 @@ import { Image } from 'astro:assets';
 
 <script>
 import gsap from 'gsap';
-    var swiper = new Swiper(".mySwiper", {
+
+var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
-  loopAdditionalSlides: 1, // Add this line
+  loopAdditionalSlides: 1,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -142,30 +143,29 @@ import gsap from 'gsap';
 
     // Animation script AFTER Swiper initialization
 
-    
     const currentSlideIndicator = document.querySelector('#currentSlide');
-    
+
     swiper.slides.forEach((slide) => {
       let content = slide.querySelector(".slide-content");
       let heading = slide.querySelector(".heading");
       let text = slide.querySelector(".slide-text");
       let image = slide.querySelector(".slide-image");
-      
+
       if (content) {
         let tl = gsap.timeline({ paused: true });
         if (heading) tl.from(heading, { opacity: 0, y: 400, ease: "power1.inOut", duration: 1});
         if (text) tl.from(text, { opacity: 0, y: 400, ease: "power2.Out", duration: 1});
         if (image) tl.from(image, { opacity: 0, x:1000, y:1000, scale:0, ease:"slow", duration:1}, "-=2");
-        
+
         slide.animation = tl;
       }
     });
-    
+
     swiper.on('slideChangeTransitionEnd', function () {
       if (currentSlideIndicator) {
         currentSlideIndicator.textContent = swiper.activeIndex + 1;
       }
-      
+
       swiper.slides.forEach((slide, index) => {
         if (slide.animation) {
           if (index === swiper.activeIndex) {
@@ -176,7 +176,7 @@ import gsap from 'gsap';
         }
       });
     });
-    
+
     if (swiper.slides[0] && swiper.slides[0].animation) {
       swiper.slides[0].animation.play();
     }
@@ -298,12 +298,16 @@ color:var(--accent);
 font-weight:900;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 100;
+  pointer-events: auto;
+}
 
 @media (width > 1079px){
 .swiper-button-next,
 .swiper-button-prev {
   /* padding-inline:2em; */
-  
   }
 }
 

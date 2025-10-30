@@ -1,15 +1,27 @@
 ---
+export interface Props {
+    title?: string;
+    description?: string;
+    prefixText?: string;
+    highlightText?: string;
+    suffixText?: string;
+}
 
+const {
+    title = "DO YOU HATE HAVING YOUR PICTURE TAKEN?",
+    description = "LACK OF CONFIDENCE, FEAR OF FAILURE, AND FEELING THAT YOU AREN'T PHOTOGENIC,<br>PREVENT YOU FROM SHOWING YOUR TRUE SELF",
+    prefixText = "A",
+    highlightText = "PROFESSIONAL HEADSHOT",
+    suffixText = "EXPERIENCE CAN CHANGE EVERYTHING"
+} = Astro.props;
 ---
 
 <div class="wrapper">
 		<div class="benefits center" id="problemContent">
-		    <p class="section-title spacing">DO YOU HATE HAVING YOUR PICTURE TAKEN?</p>
-		    <p class="paragraph spacing">LACK OF CONFIDENCE, FEAR OF FAILURE, 
-		        AND FEELING THAT YOU AREN'T PHOTOGENIC,<br>
-		        PREVENT YOU FROM SHOWING YOUR TRUE SELF</p>
-		    <p class="benefits paragraph one spacing">A<h2 class="benefits h2 spacing"> PROFESSIONAL HEADSHOT</h2>
-		    <p class="benefits paragraph two spacing"> EXPERIENCE CAN CHANGE EVERYTHING</p>
+		    <p class="section-title spacing">{title}</p>
+		    <p class="paragraph spacing" set:html={description}></p>
+		    <p class="benefits paragraph one spacing">{prefixText}<h2 class="benefits h2 spacing"> {highlightText}</h2>
+		    <p class="benefits paragraph two spacing"> {suffixText}</p>
 		</div>
 
 

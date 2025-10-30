@@ -41,20 +41,66 @@
 
 
 <script is:inline>
-const scrollers = document.querySelectorAll(".scroller");
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    scrollers.forEach((scroller) => {
-        scroller.setAttribute("data-animated", true);
-        const scrollerInner = scroller.querySelector(".scroller__inner");
-        if (!scrollerInner) return;
-        
-        Array.from(scrollerInner.children).forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
+// Flag to track if scroller has been initialized
+let scrollerInitialized = false;
+
+function initTearSheetScroller() {
+    // Prevent duplicate initialization
+    if (scrollerInitialized) return;
+
+    const scrollers = document.querySelectorAll(".scroller");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        scrollers.forEach((scroller) => {
+            scroller.setAttribute("data-animated", true);
+            const scrollerInner = scroller.querySelector(".scroller__inner");
+            if (!scrollerInner) return;
+
+            // Clone logos for seamless loop
+            Array.from(scrollerInner.children).forEach((item) => {
+                const duplicatedItem = item.cloneNode(true);
+                duplicatedItem.setAttribute("aria-hidden", true);
+                scrollerInner.appendChild(duplicatedItem);
+            });
         });
-    });
+
+        // Set up Intersection Observer to pause animation when not visible
+        scrollers.forEach((scroller) => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    const scrollerInner = entry.target.querySelector(".scroller__inner");
+                    if (scrollerInner) {
+                        if (entry.isIntersecting) {
+                            // Resume animation
+                            scrollerInner.style.animationPlayState = 'running';
+                        } else {
+                            // Pause animation when out of view
+                            scrollerInner.style.animationPlayState = 'paused';
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of element is visible
+            });
+
+            observer.observe(scroller);
+        });
+
+        scrollerInitialized = true;
+    }
 }
+
+// Initialize on first load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTearSheetScroller);
+} else {
+    initTearSheetScroller();
+}
+
+// Reinitialize after View Transitions
+document.addEventListener('astro:page-load', () => {
+    scrollerInitialized = false; // Reset flag for new page
+    initTearSheetScroller();
+});
 </script>
 
 
