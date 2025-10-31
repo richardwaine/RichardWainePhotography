@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // PIN the section using ScrollTrigger
     ScrollTrigger.create({
         trigger: problemSection,
-        start: 'top top',
+        start: () => 'top top+=' + (document.querySelector('header')?.offsetHeight || 120) + 'px',
         end: '+=400%',
         pin: true,
         pinSpacing: true,
@@ -217,17 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
         onLeaveBack: () => {
             isPinned = false;
         }
-    });
-
-    // PIN the container using ScrollTrigger
-    ScrollTrigger.create({
-        trigger: container,
-        start: 'top top',
-        end: '-=400%',
-        pin: true,
-        pinSpacing: false,
-        scrub: false,
-        markers:true
     });
 
     function transitionToStage(targetStage: number) {
