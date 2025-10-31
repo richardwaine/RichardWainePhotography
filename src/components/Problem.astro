@@ -179,6 +179,7 @@ let isPinned = false;
 
 document.addEventListener('DOMContentLoaded', () => {
     const problemSection = document.querySelector('#problem');
+    const container = document.querySelector('#scroll-container-1');
     const textPanel = document.querySelector('#text-panel-1');
     const imagePanel = document.querySelector('#image-panel-1');
     const p1 = document.querySelector('#paragraph-1');
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const img2 = document.querySelector('#image-2');
     const img3 = document.querySelector('#image-3');
 
-    if (!p1 || !p2 || !p3 || !img1 || !img2 || !img3 || !textPanel || !imagePanel || !problemSection) return;
+    if (!p1 || !p2 || !p3 || !img1 || !img2 || !img3 || !textPanel || !imagePanel || !problemSection || !container) return;
 
     // Set initial states
     gsap.set(p1, { scale: 2, yPercent: -50 });
@@ -216,6 +217,17 @@ document.addEventListener('DOMContentLoaded', () => {
         onLeaveBack: () => {
             isPinned = false;
         }
+    });
+
+    // PIN the container using ScrollTrigger
+    ScrollTrigger.create({
+        trigger: container,
+        start: 'top top',
+        end: '-=400%',
+        pin: true,
+        pinSpacing: false,
+        scrub: false,
+        markers:true
     });
 
     function transitionToStage(targetStage: number) {
