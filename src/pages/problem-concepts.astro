@@ -1,0 +1,508 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Image } from 'astro:assets';
+import image0090 from '../assets/images/problem/Headshot_20250917_Sonya Lilienstein_Richard Waine_Lancaster_PA_0090 (horizontal) - compressed.jpg';
+import image0056 from '../assets/images/problem/Headshot_20250917_Sonya Lilienstein_Richard Waine_Lancaster_PA_0056 (horizontal) - compressed.jpg';
+import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienstein_Richard Waine_Lancaster_PA_0079 (horizontal) - compressed.jpg';
+
+const title = "DO YOU HATE HAVING YOUR PICTURE TAKEN?";
+const description = "LACK OF CONFIDENCE, FEAR OF FAILURE, AND FEELING THAT YOU AREN'T PHOTOGENIC, PREVENT YOU FROM SHOWING YOUR TRUE SELF";
+const prefixText = "A";
+const highlightText = "PROFESSIONAL HEADSHOT";
+const suffixText = "EXPERIENCE CAN CHANGE EVERYTHING";
+---
+
+<MainLayout title="Problem Section Concepts">
+
+    <!-- Concept 2: Editorial Split -->
+    <section class="concept-section editorial-split" id="concept-2">
+        <div class="label">Concept 2: Editorial Split</div>
+        <div class="split-layout">
+            <div class="text-side">
+                <h2 class="para" id="c2-p1">{title}</h2>
+                <p class="para" id="c2-p2">{description}</p>
+                <p class="para accent" id="c2-p3">{prefixText} <span class="highlight">{highlightText}</span> {suffixText}</p>
+            </div>
+            <div class="image-side">
+                <Image src={image0090} alt="" class="side-img" id="c2-bg1" />
+                <Image src={image0056} alt="" class="side-img" id="c2-bg2" />
+                <Image src={image0079} alt="" class="side-img" id="c2-bg3" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept 4: Framed Gallery -->
+    <section class="concept-section framed-gallery" id="concept-4">
+        <div class="label">Concept 4: Framed Gallery</div>
+        <div class="gallery-layout">
+            <div class="text-column">
+                <h2 class="para" id="c4-p1">{title}</h2>
+                <p class="para" id="c4-p2">{description}</p>
+                <p class="para accent" id="c4-p3">{prefixText} <span class="highlight">{highlightText}</span> {suffixText}</p>
+            </div>
+            <div class="frames-column">
+                <div class="frame" id="c4-frame1">
+                    <Image src={image0090} alt="" class="framed-img" />
+                </div>
+                <div class="frame" id="c4-frame2">
+                    <Image src={image0056} alt="" class="framed-img" />
+                </div>
+                <div class="frame" id="c4-frame3">
+                    <Image src={image0079} alt="" class="framed-img" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept 5: Diagonal Triptych -->
+    <section class="concept-section diagonal-triptych" id="concept-5">
+        <div class="label">Concept 5: Diagonal Triptych</div>
+        <div class="triptych-container">
+            <div class="triptych-panel">
+                <Image src={image0090} alt="" class="diagonal-img" />
+                <div class="panel-overlay"></div>
+                <div class="panel-text">
+                    <h2>{title}</h2>
+                </div>
+            </div>
+            <div class="triptych-panel">
+                <Image src={image0056} alt="" class="diagonal-img" />
+                <div class="panel-overlay"></div>
+                <div class="panel-text">
+                    <p>{description}</p>
+                </div>
+            </div>
+            <div class="triptych-panel">
+                <Image src={image0079} alt="" class="diagonal-img" />
+                <div class="panel-overlay"></div>
+                <div class="panel-text">
+                    <p class="accent">{prefixText} <span class="highlight">{highlightText}</span> {suffixText}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</MainLayout>
+
+<style is:global>
+    .concept-section {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .label {
+        position: fixed;
+        top: 7rem;
+        left: 2rem;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        z-index: 100;
+    }
+
+    .highlight {
+        color: #03a9f4;
+    }
+
+    /* Concept 2: Editorial Split */
+    .editorial-split {
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .editorial-split .split-layout {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .editorial-split .text-side {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem;
+        gap: 2.5rem;
+        background: #f8f8f8;
+    }
+
+    .editorial-split .image-side {
+        flex: 1;
+        position: relative;
+        background: #000;
+    }
+
+    .editorial-split .side-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+    }
+
+    .editorial-split .para {
+        color: #000;
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    .editorial-split h2.para {
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    .editorial-split p.para {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+    .editorial-split p.accent {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    /* Concept 4: Framed Gallery */
+    .framed-gallery {
+        background: #1a1a1a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .framed-gallery .gallery-layout {
+        display: flex;
+        width: 100%;
+        max-width: 1600px;
+        gap: 4rem;
+        padding: 4rem;
+    }
+
+    .framed-gallery .text-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .framed-gallery .frames-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .framed-gallery .frame {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: #000;
+        border: 2px solid #333;
+        overflow: hidden;
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    .framed-gallery .framed-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .framed-gallery .para {
+        color: white;
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    .framed-gallery h2.para {
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    .framed-gallery p.para {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+    .framed-gallery p.accent {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    /* Concept 5: Diagonal Triptych */
+    .diagonal-triptych {
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .diagonal-triptych .triptych-container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .diagonal-triptych .triptych-panel {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .diagonal-triptych .diagonal-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    }
+
+    .diagonal-triptych .triptych-panel:nth-child(2) .diagonal-img {
+        clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+    }
+
+    .diagonal-triptych .triptych-panel:nth-child(3) .diagonal-img {
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .diagonal-triptych .panel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .diagonal-triptych .panel-text {
+        position: absolute;
+        bottom: 4rem;
+        left: 2rem;
+        right: 2rem;
+        z-index: 2;
+        color: white;
+    }
+
+    .diagonal-triptych h2 {
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .diagonal-triptych p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .diagonal-triptych p.accent {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    @media (max-width: 1024px) {
+        .editorial-split .split-layout,
+        .framed-gallery .gallery-layout {
+            flex-direction: column;
+        }
+
+        .diagonal-triptych .triptych-container {
+            flex-direction: column;
+        }
+
+        .diagonal-triptych .diagonal-img,
+        .diagonal-triptych .triptych-panel:nth-child(2) .diagonal-img,
+        .diagonal-triptych .triptych-panel:nth-child(3) .diagonal-img {
+            clip-path: none;
+        }
+    }
+</style>
+
+<script>
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupConcept2();
+    setupConcept4();
+    // Concept 5 doesn't need animations - it's static chapters
+});
+
+function setupConcept2() {
+    const section = document.querySelector('#concept-2');
+    if (!section) return;
+
+    const bg1 = section.querySelector('#c2-bg1');
+    const bg2 = section.querySelector('#c2-bg2');
+    const bg3 = section.querySelector('#c2-bg3');
+    const p1 = section.querySelector('#c2-p1');
+    const p2 = section.querySelector('#c2-p2');
+    const p3 = section.querySelector('#c2-p3');
+
+    if (!bg1 || !bg2 || !bg3 || !p1 || !p2 || !p3) return;
+
+    ScrollTrigger.create({
+        trigger: section,
+        start: 'top top',
+        end: '+=300%',
+        pin: true,
+        pinSpacing: true
+    });
+
+    // p1 and bg1
+    gsap.to([p1, bg1], {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top center',
+            end: 'top top',
+            scrub: 1
+        }
+    });
+
+    // p2 and bg2
+    gsap.to(p2, {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top-=0%',
+            end: 'top top-=50%',
+            scrub: 1
+        }
+    });
+
+    gsap.to(bg1, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top-=25%',
+            end: 'top top-=75%',
+            scrub: 1
+        }
+    });
+
+    gsap.to(bg2, {
+        opacity: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top-=25%',
+            end: 'top top-=75%',
+            scrub: 1
+        }
+    });
+
+    // p3 and bg3
+    gsap.to(p3, {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top-=100%',
+            end: 'top top-=150%',
+            scrub: 1
+        }
+    });
+
+    gsap.to(bg2, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top-=125%',
+            end: 'top top-=175%',
+            scrub: 1
+        }
+    });
+
+    gsap.to(bg3, {
+        opacity: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top-=125%',
+            end: 'top top-=175%',
+            scrub: 1
+        }
+    });
+}
+
+function setupConcept4() {
+    const section = document.querySelector('#concept-4');
+    if (!section) return;
+
+    const frame1 = section.querySelector('#c4-frame1');
+    const frame2 = section.querySelector('#c4-frame2');
+    const frame3 = section.querySelector('#c4-frame3');
+    const p1 = section.querySelector('#c4-p1');
+    const p2 = section.querySelector('#c4-p2');
+    const p3 = section.querySelector('#c4-p3');
+
+    if (!frame1 || !frame2 || !frame3 || !p1 || !p2 || !p3) return;
+
+    ScrollTrigger.create({
+        trigger: section,
+        start: 'top top',
+        end: '+=300%',
+        pin: true,
+        pinSpacing: true
+    });
+
+    // p1 and frame1
+    gsap.to([p1, frame1], {
+        opacity: 1,
+        x: 0,
+        scale: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top center',
+            end: 'top top',
+            scrub: 1
+        }
+    });
+
+    // p2 and frame2
+    gsap.to([p2, frame2], {
+        opacity: 1,
+        x: 0,
+        scale: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top-=0%',
+            end: 'top top-=50%',
+            scrub: 1
+        }
+    });
+
+    // p3 and frame3
+    gsap.to([p3, frame3], {
+        opacity: 1,
+        x: 0,
+        scale: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top-=100%',
+            end: 'top top-=150%',
+            scrub: 1
+        }
+    });
+}
+</script>
