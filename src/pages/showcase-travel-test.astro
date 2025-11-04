@@ -38,13 +38,13 @@ const heroContent = {
 	<svg width="0" height="0" style="position: absolute;">
 		<defs>
 			<clipPath id="clip-left" clipPathUnits="objectBoundingBox">
-				<polygon points="0,0 1,0 0.85,1 0,1"/>
+				<polygon points="0,0 0.98,0 0.83,1 0,1"/>
 			</clipPath>
 			<clipPath id="clip-center" clipPathUnits="objectBoundingBox">
-				<polygon points="0.15,0 1,0 0.85,1 0,1"/>
+				<polygon points="0.17,0 0.98,0 0.83,1 0.02,1"/>
 			</clipPath>
 			<clipPath id="clip-right" clipPathUnits="objectBoundingBox">
-				<polygon points="0.15,0 1,0 1,1 0,1"/>
+				<polygon points="0.17,0 1,0 1,1 0.02,1"/>
 			</clipPath>
 		</defs>
 	</svg>
@@ -93,12 +93,15 @@ const heroContent = {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		gap: 4rem;
+		width: 100%;
 	}
 
 	.showcase-target {
-		width: 1200px;
+		width: 80%;
 		height: 600px;
+		margin: 0 auto;
 	}
 
 	.problem-text {
@@ -151,8 +154,6 @@ const heroContent = {
 
 	.triptych-panel.panel-center {
 		clip-path: url(#clip-center);
-		margin-left: -4%;
-		margin-right: -4%;
 		z-index: 1;
 	}
 
@@ -184,6 +185,10 @@ const heroContent = {
 	.showcase-container {
 		will-change: transform;
 		transform: translate3d(0, 0, 0);
+	}
+
+	.image-depth-layers {
+		transform-origin: center center;
 	}
 
 	.triptych-panel {
@@ -268,13 +273,13 @@ const heroContent = {
 		const deltaX = targetCenterX - containerCenterX;
 		const deltaY = targetCenterY - containerCenterY;
 
-		// Calculate width change offset to keep centered
-		const initialWidth = initialContainerRect.width;
-		const targetWidth = 1200;
-		const widthDifference = (targetWidth - initialWidth) / 2;
+		// Calculate target width as 80% of problem section
+		const problemSectionRect = problemSection.getBoundingClientRect();
+		const targetWidth = problemSectionRect.width * 0.8;
+		const widthIncrease = targetWidth - initialContainerRect.width;
 
 		tl.to(showcaseContainer, {
-			x: deltaX - widthDifference,
+			x: deltaX,
 			y: deltaY,
 			z: 0,
 			rotationX: 0,
@@ -284,42 +289,25 @@ const heroContent = {
 			ease: 'power2.inOut'
 		}, 0);
 
-		// Animate container width by animating the image-depth-layers
+		// Animate container width
 		tl.to(imageDepthLayers, {
 			width: targetWidth,
 			duration: 1,
 			ease: 'power2.inOut'
 		}, 0);
 
-		// Fade out hero images at 90% of movement (position: 0.9)
+		// Hide hero images immediately at start
 		tl.to(heroImagesElements, {
-			opacity: 0,
-			force3D: true,
-			duration: 0.1,
-			ease: 'none'
-		}, 0.9);
+			visibility: 'hidden',
+			duration: 0
+		}, 0.3);
 
-		// Staggered panel reveals at 90% of movement (position: 0.9)
-		const triptychPanels = triptychClone.querySelectorAll('.triptych-panel');
+		// Show triptych at 80% of movement
 		tl.to(triptychClone, {
 			opacity: 1,
-			force3D: true,
-			duration: 0.01,
+			duration: 0.2,
 			ease: 'none'
-		}, 0.9);
-
-		tl.fromTo(triptychPanels,
-			{
-				clipPath: 'inset(0 100% 0 0)'
-			},
-			{
-				clipPath: 'inset(0 0% 0 0)',
-				force3D: true,
-				duration: 0.08,
-				stagger: 0.01,
-				ease: 'power2.out'
-			},
-		0.9);
+		}, 0.8);
 
 		// Slide up problem text at 95% of movement (position: 0.95)
 		tl.to(problemText, {
