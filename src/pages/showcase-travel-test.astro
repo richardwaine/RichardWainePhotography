@@ -97,7 +97,7 @@ const heroContent = {
 	}
 
 	.showcase-target {
-		width: 900px;
+		width: 1200px;
 		height: 600px;
 	}
 
@@ -212,10 +212,11 @@ const heroContent = {
 		const showcaseTarget = document.querySelector('.showcase-target');
 		const heroImagesElements = document.querySelectorAll('.hero-image') as NodeListOf<HTMLElement>;
 		const imageLayerForeground = document.querySelector('.image-layer.foreground') as HTMLElement;
+		const imageDepthLayers = document.querySelector('.image-depth-layers') as HTMLElement;
 		const triptychContent = document.getElementById('triptych-content');
 		const problemText = document.querySelector('.problem-text') as HTMLElement;
 
-		if (!showcaseContainer || !heroSection || !problemSection || !showcaseTarget || !heroImagesElements.length || !imageLayerForeground || !triptychContent || !problemText) {
+		if (!showcaseContainer || !heroSection || !problemSection || !showcaseTarget || !heroImagesElements.length || !imageLayerForeground || !imageDepthLayers || !triptychContent || !problemText) {
 			console.warn('Showcase travel elements not found');
 			return;
 		}
@@ -250,13 +251,6 @@ const heroContent = {
 					} else {
 						showcaseContainer.style.animation = 'showcaseFloat 12s ease-in-out infinite';
 					}
-
-					// Lock visibility when at end
-					if (self.progress >= 1) {
-						triptychClone.style.opacity = '1';
-						showcaseContainer.style.opacity = '1';
-						problemText.style.opacity = '1';
-					}
 				}
 			}
 		});
@@ -274,9 +268,25 @@ const heroContent = {
 		const deltaX = targetCenterX - containerCenterX;
 		const deltaY = targetCenterY - containerCenterY;
 
+		// Calculate width change offset to keep centered
+		const initialWidth = initialContainerRect.width;
+		const targetWidth = 1200;
+		const widthDifference = (targetWidth - initialWidth) / 2;
+
 		tl.to(showcaseContainer, {
-			x: deltaX,
+			x: deltaX - widthDifference,
 			y: deltaY,
+			z: 0,
+			rotationX: 0,
+			rotationY: 0,
+			force3D: true,
+			duration: 1,
+			ease: 'power2.inOut'
+		}, 0);
+
+		// Animate container width by animating the image-depth-layers
+		tl.to(imageDepthLayers, {
+			width: targetWidth,
 			duration: 1,
 			ease: 'power2.inOut'
 		}, 0);
@@ -284,6 +294,7 @@ const heroContent = {
 		// Fade out hero images at 90% of movement (position: 0.9)
 		tl.to(heroImagesElements, {
 			opacity: 0,
+			force3D: true,
 			duration: 0.1,
 			ease: 'none'
 		}, 0.9);
@@ -292,6 +303,7 @@ const heroContent = {
 		const triptychPanels = triptychClone.querySelectorAll('.triptych-panel');
 		tl.to(triptychClone, {
 			opacity: 1,
+			force3D: true,
 			duration: 0.01,
 			ease: 'none'
 		}, 0.9);
@@ -302,6 +314,7 @@ const heroContent = {
 			},
 			{
 				clipPath: 'inset(0 0% 0 0)',
+				force3D: true,
 				duration: 0.08,
 				stagger: 0.01,
 				ease: 'power2.out'
@@ -312,6 +325,7 @@ const heroContent = {
 		tl.to(problemText, {
 			opacity: 1,
 			y: 0,
+			force3D: true,
 			duration: 0.05,
 			ease: 'power2.out'
 		}, 0.95);
