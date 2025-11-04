@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:docs.anthropic.com)",
-      "WebFetch(domain:developer.mozilla.org)"
+      "WebFetch(domain:developer.mozilla.org)",
+      "WebSearch",
+      "WebFetch(domain:beginswithai.com)",
+      "WebFetch(domain:codepen.io)",
+      "WebFetch(domain:stackoverflow.com)",
+      "WebFetch(domain:9elements.com)",
+      "WebFetch(domain:www.insidenewcity.com)",
+      "WebFetch(domain:codyhouse.co)",
+      "WebFetch(domain:tympanus.net)"
     ],
     "deny": []
   }

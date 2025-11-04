@@ -34,22 +34,41 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
 
 <!-- CONCEPT 5: Diagonal Triptych -->
 <div class="diagonal-triptych">
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <!-- Left panel clip - diagonal leans left like buttons (skewX -20deg) -->
+            <clipPath id="clip-left" clipPathUnits="objectBoundingBox">
+                <polygon points="0,0 1,0 0.85,1 0,1"/>
+            </clipPath>
+
+            <!-- Center panel clip - both edges lean left -->
+            <clipPath id="clip-center" clipPathUnits="objectBoundingBox">
+                <polygon points="0.15,0 1,0 0.85,1 0,1"/>
+            </clipPath>
+
+            <!-- Right panel clip - left edge leans left -->
+            <clipPath id="clip-right" clipPathUnits="objectBoundingBox">
+                <polygon points="0.15,0 1,0 1,1 0,1"/>
+            </clipPath>
+        </defs>
+    </svg>
+
     <div class="triptych-container">
-        <div class="triptych-panel">
+        <div class="triptych-panel panel-left">
             <Image src={image0090} alt="" class="diagonal-img" />
             <div class="panel-overlay"></div>
             <div class="panel-text">
                 <h2>{title}</h2>
             </div>
         </div>
-        <div class="triptych-panel">
+        <div class="triptych-panel panel-center">
             <Image src={image0056} alt="" class="diagonal-img" />
             <div class="panel-overlay"></div>
             <div class="panel-text">
                 <p>{description.replace('<br>', ' ')}</p>
             </div>
         </div>
-        <div class="triptych-panel">
+        <div class="triptych-panel panel-right">
             <Image src={image0079} alt="" class="diagonal-img" />
             <div class="panel-overlay"></div>
             <div class="panel-text">
@@ -176,7 +195,7 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
     }
     END OLD CODE */
 
-    /* CONCEPT 5: Diagonal Triptych */
+    /* CONCEPT 5: Diagonal Triptych - SVG clipPath Method */
     .diagonal-triptych {
         background: #000;
         display: flex;
@@ -190,6 +209,7 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
         display: flex;
         width: 100%;
         height: 100%;
+        gap: 0;
     }
 
     .diagonal-triptych .triptych-panel {
@@ -198,19 +218,30 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
         overflow: hidden;
     }
 
+    /* Apply SVG clipPaths */
+    .diagonal-triptych .panel-left {
+        clip-path: url(#clip-left);
+    }
+
+    .diagonal-triptych .panel-center {
+        clip-path: url(#clip-center);
+        margin-left: -4%;
+        margin-right: -4%;
+        z-index: 1;
+    }
+
+    .diagonal-triptych .panel-right {
+        clip-path: url(#clip-right);
+    }
+
     .diagonal-triptych .diagonal-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
     }
 
-    .diagonal-triptych .triptych-panel:nth-child(2) .diagonal-img {
-        clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%);
-    }
-
-    .diagonal-triptych .triptych-panel:nth-child(3) .diagonal-img {
-        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    .diagonal-triptych .panel-right .diagonal-img {
+        object-position: 20%;
     }
 
     .diagonal-triptych .panel-overlay {

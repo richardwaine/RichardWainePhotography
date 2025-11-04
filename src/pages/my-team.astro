@@ -78,6 +78,20 @@ const lisa = {
       </div>
     </div>
   </div>
+
+  <!-- Navigation Controls -->
+  <div class="team-navigation">
+    <button class="nav-arrow nav-prev" aria-label="Previous team member" id="nav-prev">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="nav-arrow nav-next" aria-label="Next team member" id="nav-next">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
 </main>
 
 <script>
@@ -93,6 +107,19 @@ const lisa = {
 
   const gridLeft = document.querySelector<HTMLElement>('.grid-left');
   const gridRight = document.querySelector<HTMLElement>('.grid-right');
+
+  // Navigation elements
+  const navPrev = document.querySelector<HTMLButtonElement>('#nav-prev');
+  const navNext = document.querySelector<HTMLButtonElement>('#nav-next');
+
+  // Update navigation UI state
+  function updateNavigation() {
+    // Update arrow buttons
+    if (navPrev && navNext) {
+      navPrev.disabled = currentIndex === 0;
+      navNext.disabled = currentIndex === 1;
+    }
+  }
 
   // Sync grid heights to tallest item
   function syncGridHeights() {
@@ -129,6 +156,7 @@ const lisa = {
       onComplete: () => {
         isAnimating = false;
         currentIndex = newIndex;
+        updateNavigation();
       }
     });
 
@@ -214,8 +242,20 @@ const lisa = {
     }
   });
 
+  // Navigation button clicks
+  navPrev?.addEventListener('click', () => {
+    animateToIndex(0);
+  });
+
+  navNext?.addEventListener('click', () => {
+    animateToIndex(1);
+  });
+
   // Re-sync heights on window resize
   window.addEventListener('resize', syncGridHeights);
+
+  // Initialize navigation state
+  updateNavigation();
 </script>
 
 <style is:global>
@@ -344,6 +384,50 @@ html:has(.team-page-animated) {
   color: var(--blkclr);
 }
 
+/* Navigation Controls */
+.team-navigation {
+  position: fixed;
+  bottom: 6em;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-7);
+  padding: var(--size-5);
+  pointer-events: auto;
+}
+
+.nav-arrow {
+  background: var(--drkbg);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--accent);
+}
+
+.nav-arrow:hover {
+  background: var(--drkbg);
+  transform: scale(1.1);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+.nav-arrow:disabled:hover {
+  background: var(--drkbg);
+  transform: scale(1);
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
