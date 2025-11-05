@@ -34,6 +34,13 @@ const heroContent = {
 		heroImages={heroContent.heroImages}
 	/>
 
+	<!-- Triptych images (hidden, will be inserted into container) -->
+	<div class="triptych-wrapper" id="triptych-source" style="display: none;">
+		<Image src={image0090} alt="" class="triptych-image" />
+		<Image src={image0056} alt="" class="triptych-image" />
+		<Image src={image0079} alt="" class="triptych-image" />
+	</div>
+
 	<!-- Problem section - NO images visible, only text -->
 	<section id="problem">
 		<div class="problem-content">
@@ -94,6 +101,47 @@ const heroContent = {
 	.problem-text .highlight {
 		color: #03a9f4;
 	}
+
+	/* Triptych wrapper and images */
+	.triptych-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		gap: 0;
+		opacity: 0;
+		z-index: 2;
+	}
+
+	.triptych-wrapper img {
+		flex: 1;
+		width: 33.33%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	.triptych-wrapper > :nth-child(1) img {
+		clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+	}
+
+	.triptych-wrapper > :nth-child(2) {
+		margin-left: -15%;
+	}
+
+	.triptych-wrapper > :nth-child(2) img {
+		clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+	}
+
+	.triptych-wrapper > :nth-child(3) {
+		margin-left: -15%;
+	}
+
+	.triptych-wrapper > :nth-child(3) img {
+		clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+	}
 </style>
 
 <script>
@@ -110,8 +158,23 @@ const heroContent = {
 		const showcaseContainer = document.querySelector('.showcase-container') as HTMLElement;
 		const problemSection = document.querySelector('#problem') as HTMLElement;
 		const problemText = document.querySelector('.problem-text') as HTMLElement;
+		const imageLayerForeground = document.querySelector('.image-layer.foreground') as HTMLElement;
+		const heroImages = document.querySelectorAll('.hero-image') as NodeListOf<HTMLElement>;
 
-		if (!showcaseContainer || !problemSection || !problemText) {
+		if (!showcaseContainer || !problemSection || !problemText || !imageLayerForeground) {
+			return;
+		}
+
+		// Move triptych into container
+		const triptychSource = document.getElementById('triptych-source');
+		if (triptychSource) {
+			triptychSource.style.display = 'flex';
+			imageLayerForeground.appendChild(triptychSource);
+		}
+		const triptychWrapper = document.querySelector('.triptych-wrapper');
+
+		if (!triptychWrapper) {
+			console.warn('Triptych wrapper not found');
 			return;
 		}
 
@@ -125,6 +188,8 @@ const heroContent = {
 				onUpdate: (self) => {
 					if (self.progress > 0) {
 						showcaseContainer.style.animation = 'none';
+					} else {
+						showcaseContainer.style.animation = 'showcaseFloat 12s ease-in-out infinite';
 					}
 				}
 			}
@@ -132,10 +197,21 @@ const heroContent = {
 		.to(showcaseContainer, {
 			xPercent:-50,
 			yPercent: 210,
-			scale: 1.5,
-			
+			scale: 1.75,
+			rotationX: 0,
+			rotationY: 0,
 			ease: 'none'
 		})
+		.to(heroImages, {
+			opacity: 0,
+			duration: 0.1,
+			ease: 'none'
+		}, 0.7)
+		.to(triptychWrapper, {
+			opacity: 1,
+			duration: 0.2,
+			ease: 'none'
+		}, 0.8)
 		.to(problemText, {
 			opacity: 1,
 			y: 0,
