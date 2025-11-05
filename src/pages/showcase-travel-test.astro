@@ -34,39 +34,6 @@ const heroContent = {
 		heroImages={heroContent.heroImages}
 	/>
 
-	<!-- SVG clipPaths for triptych -->
-	<svg width="0" height="0" style="position: absolute;">
-		<defs>
-			<clipPath id="clip-left" clipPathUnits="objectBoundingBox">
-				<polygon points="0,0 0.98,0 0.83,1 0,1"/>
-			</clipPath>
-			<clipPath id="clip-center" clipPathUnits="objectBoundingBox">
-				<polygon points="0.17,0 0.98,0 0.83,1 0.02,1"/>
-			</clipPath>
-			<clipPath id="clip-right" clipPathUnits="objectBoundingBox">
-				<polygon points="0.17,0 1,0 1,1 0.02,1"/>
-			</clipPath>
-		</defs>
-	</svg>
-
-	<!-- Pre-create triptych content (hidden initially, will be inserted into showcase-container) -->
-	<div id="triptych-content" style="display: none;">
-		<div class="triptych-container">
-			<div class="triptych-panel panel-left">
-				<Image src={image0090} alt="" class="diagonal-img" />
-				<div class="panel-overlay"></div>
-			</div>
-			<div class="triptych-panel panel-center">
-				<Image src={image0056} alt="" class="diagonal-img" />
-				<div class="panel-overlay"></div>
-			</div>
-			<div class="triptych-panel panel-right">
-				<Image src={image0079} alt="" class="diagonal-img" />
-				<div class="panel-overlay"></div>
-			</div>
-		</div>
-	</div>
-
 	<!-- Problem section - NO images visible, only text -->
 	<section id="problem">
 		<div class="problem-content">
@@ -98,12 +65,6 @@ const heroContent = {
 		width: 100%;
 	}
 
-	.showcase-target {
-		width: 80%;
-		height: 600px;
-		margin: 0 auto;
-	}
-
 	.problem-text {
 		text-align: center;
 		max-width: 800px;
@@ -133,71 +94,6 @@ const heroContent = {
 	.problem-text .highlight {
 		color: #03a9f4;
 	}
-
-	/* Triptych styles */
-	.triptych-container {
-		display: flex;
-		width: 100%;
-		height: 100%;
-		gap: 0;
-	}
-
-	.triptych-panel {
-		flex: 1;
-		position: relative;
-		overflow: hidden;
-	}
-
-	.triptych-panel.panel-left {
-		clip-path: url(#clip-left);
-	}
-
-	.triptych-panel.panel-center {
-		clip-path: url(#clip-center);
-		z-index: 1;
-	}
-
-	.triptych-panel.panel-right {
-		clip-path: url(#clip-right);
-	}
-
-	.diagonal-img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
-	.triptych-panel.panel-right .diagonal-img {
-		object-position: 20%;
-	}
-
-	.panel-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.5);
-		z-index: 1;
-	}
-
-	/* GPU Acceleration */
-	.showcase-container {
-		will-change: transform;
-		transform: translate3d(0, 0, 0);
-	}
-
-	.image-depth-layers {
-		transform-origin: center center;
-	}
-
-	.triptych-panel {
-		will-change: clip-path, opacity;
-	}
-
-	.problem-text {
-		will-change: transform, opacity;
-	}
 </style>
 
 <script>
@@ -212,116 +108,40 @@ const heroContent = {
 
 	function setupShowcaseTravel() {
 		const showcaseContainer = document.querySelector('.showcase-container') as HTMLElement;
-		const heroSection = document.querySelector('#heroExperience');
-		const problemSection = document.querySelector('#problem');
-		const showcaseTarget = document.querySelector('.showcase-target');
-		const heroImagesElements = document.querySelectorAll('.hero-image') as NodeListOf<HTMLElement>;
-		const imageLayerForeground = document.querySelector('.image-layer.foreground') as HTMLElement;
-		const imageDepthLayers = document.querySelector('.image-depth-layers') as HTMLElement;
-		const triptychContent = document.getElementById('triptych-content');
+		const problemSection = document.querySelector('#problem') as HTMLElement;
 		const problemText = document.querySelector('.problem-text') as HTMLElement;
 
-		if (!showcaseContainer || !heroSection || !problemSection || !showcaseTarget || !heroImagesElements.length || !imageLayerForeground || !imageDepthLayers || !triptychContent || !problemText) {
-			console.warn('Showcase travel elements not found');
+		if (!showcaseContainer || !problemSection || !problemText) {
 			return;
 		}
 
-		// PRE-INSERT triptych into the image foreground layer (same level as hero images)
-		const triptychClone = triptychContent.cloneNode(true) as HTMLElement;
-		triptychClone.removeAttribute('id');
-		triptychClone.style.display = 'block';
-		triptychClone.style.position = 'absolute';
-		triptychClone.style.top = '0';
-		triptychClone.style.left = '0';
-		triptychClone.style.width = '100%';
-		triptychClone.style.height = '100%';
-		triptychClone.style.opacity = '0';
-		triptychClone.style.pointerEvents = 'none';
-		triptychClone.classList.add('triptych-layer');
-		imageLayerForeground.appendChild(triptychClone);
-
-		// Main timeline for container movement
-		const tl = gsap.timeline({
+		// Animate showcase container with scroll
+		gsap.timeline({
 			scrollTrigger: {
-				trigger: heroSection,
-				start: 'top top',
-				endTrigger: problemSection,
-				end: 'center center',
-				scrub: 1,
-				immediateRender: false,
-				onUpdate: (self: any) => {
-					// Disable showcaseFloat when scrolling
+				trigger: problemSection,
+				start: 'top bottom',
+				end: '0% 0%',
+				scrub: true,
+				onUpdate: (self) => {
 					if (self.progress > 0) {
 						showcaseContainer.style.animation = 'none';
-					} else {
-						showcaseContainer.style.animation = 'showcaseFloat 12s ease-in-out infinite';
 					}
 				}
 			}
-		});
-
-		// Container movement (duration: 1)
-		// Calculate initial positions once to avoid recalculating during animation
-		const initialContainerRect = showcaseContainer.getBoundingClientRect();
-		const initialTargetRect = showcaseTarget.getBoundingClientRect();
-
-		const targetCenterX = initialTargetRect.left + (initialTargetRect.width / 2);
-		const targetCenterY = initialTargetRect.top + (initialTargetRect.height / 2);
-		const containerCenterX = initialContainerRect.left + (initialContainerRect.width / 2);
-		const containerCenterY = initialContainerRect.top + (initialContainerRect.height / 2);
-
-		const deltaX = targetCenterX - containerCenterX;
-		const deltaY = targetCenterY - containerCenterY;
-
-		// Calculate target width as 80% of problem section
-		const problemSectionRect = problemSection.getBoundingClientRect();
-		const targetWidth = problemSectionRect.width * 0.8;
-		const widthIncrease = targetWidth - initialContainerRect.width;
-
-		tl.to(showcaseContainer, {
-			x: deltaX,
-			y: deltaY,
-			z: 0,
-			rotationX: 0,
-			rotationY: 0,
-			force3D: true,
-			duration: 1,
-			ease: 'power2.inOut'
-		}, 0);
-
-		// Animate container width
-		tl.to(imageDepthLayers, {
-			width: targetWidth,
-			duration: 1,
-			ease: 'power2.inOut'
-		}, 0);
-
-		// Hide hero images immediately at start
-		tl.to(heroImagesElements, {
-			visibility: 'hidden',
-			duration: 0
-		}, 0.3);
-
-		// Show triptych at 80% of movement
-		tl.to(triptychClone, {
-			opacity: 1,
-			duration: 0.2,
+		})
+		.to(showcaseContainer, {
+			xPercent:-50,
+			yPercent: 210,
+			scale: 1.5,
+			
 			ease: 'none'
-		}, 0.8);
-
-		// Slide up problem text at 95% of movement (position: 0.95)
-		tl.to(problemText, {
+		})
+		.to(problemText, {
 			opacity: 1,
 			y: 0,
-			force3D: true,
-			duration: 0.05,
 			ease: 'power2.out'
-		}, 0.95);
+		}, '>-0.2');
 
-
-		// Refresh ScrollTrigger to handle initial scroll position
-		ScrollTrigger.refresh();
-
-		console.log('Showcase travel animation initialized');
+		console.log('Animation initialized');
 	}
 </script>
