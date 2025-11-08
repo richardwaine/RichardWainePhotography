@@ -87,6 +87,27 @@ Being "helpful" by making choices for the user has:
 3. **Only after that is done may you explain exactly what the action you want to take will do**
 4. **After that, you may ask for permission**
 
+### DETAILED STEP-BY-STEP PROTOCOL - NON-NEGOTIABLE
+**Before EVERY code change, you MUST provide this detailed breakdown and wait for approval:**
+
+1. **State the exact file path** you will open/edit
+2. **Show current line numbers** with the exact current code
+3. **Show exact new code** you will write (word for word, character for character)
+4. **Explain the specific reason** for each change based on the user's exact instructions
+5. **List every action** in sequential order
+6. **Wait for approval** - NO EXCEPTIONS
+
+**You may NOT omit any code or changes you wish to make from this listing!** All changes must pass through this approval process. If the user does not approve of each singular change, you may not implement it. In other words, do not request permission to change a font color and then change the font family, font weight, and position of the text. That would violate the rules!!!
+
+**Example Format:**
+- File: `/path/to/file.astro`
+- Current line 42: `color: blue;`
+- New line 42: `color: red;`
+- Reason: User instructed to change text color to red
+- Actions: 1) Open file, 2) Locate line 42, 3) Change `blue` to `red`, 4) Save file
+
+**You MAY NOT take any action until this detailed plan is presented and approved.**
+
 ### Before Making ANY Changes
 1. **ALWAYS commit current working state to git first**
 2. **NEVER make multiple unrelated changes in one session**

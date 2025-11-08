@@ -34,47 +34,28 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
 
 <!-- CONCEPT 5: Diagonal Triptych -->
 <div class="diagonal-triptych">
-    <svg width="0" height="0" style="position: absolute;">
-        <defs>
-            <!-- Left panel clip - diagonal leans left like buttons (skewX -20deg) -->
-            <clipPath id="clip-left" clipPathUnits="objectBoundingBox">
-                <polygon points="0,0 1,0 0.85,1 0,1"/>
-            </clipPath>
-
-            <!-- Center panel clip - both edges lean left -->
-            <clipPath id="clip-center" clipPathUnits="objectBoundingBox">
-                <polygon points="0.15,0 1,0 0.85,1 0,1"/>
-            </clipPath>
-
-            <!-- Right panel clip - left edge leans left -->
-            <clipPath id="clip-right" clipPathUnits="objectBoundingBox">
-                <polygon points="0.15,0 1,0 1,1 0,1"/>
-            </clipPath>
-        </defs>
-    </svg>
+    <div class="problem-text-top">
+        <h2 class="problem-title">{title}</h2>
+        <p class="problem-description" set:html={description}></p>
+    </div>
 
     <div class="triptych-container">
         <div class="triptych-panel panel-left">
             <Image src={image0090} alt="" class="diagonal-img" />
             <div class="panel-overlay"></div>
-            <div class="panel-text">
-                <h2>{title}</h2>
-            </div>
         </div>
         <div class="triptych-panel panel-center">
             <Image src={image0056} alt="" class="diagonal-img" />
             <div class="panel-overlay"></div>
-            <div class="panel-text">
-                <p>{description.replace('<br>', ' ')}</p>
-            </div>
         </div>
         <div class="triptych-panel panel-right">
             <Image src={image0079} alt="" class="diagonal-img" />
             <div class="panel-overlay"></div>
-            <div class="panel-text">
-                <p class="accent">{prefixText} <span class="highlight">{highlightText}</span> {suffixText}</p>
-            </div>
         </div>
+    </div>
+
+    <div class="problem-text-bottom">
+        <p class="problem-accent">{prefixText} <span class="highlight">{highlightText}</span> {suffixText}</p>
     </div>
 </div>
 
@@ -197,59 +178,139 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
 
     /* CONCEPT 5: Diagonal Triptych - SVG clipPath Method */
     .diagonal-triptych {
-        background: #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: auto auto auto;
+
+        gap:0;
+        place-items: center;
         width: 100%;
         height: 100%;
-        
-        
+        padding-block:var(--size-8);
+
+        /* Border thickness controls */
+        --_triptych-border:2.25%;
+        --_triptych-border-top: calc( var(--_triptych-border) + .5%);
+        --_triptych-border-right: var(--_triptych-border);
+        --_triptych-border-bottom: calc( var(--_triptych-border) + .5%);
+        --_triptych-border-left: var(--_triptych-border);
     }
 
     .diagonal-triptych .triptych-container {
         display: flex;
         width: 100%;
-        height: 100%;
+        height:auto;
+        /* height: 50%; */
+        max-inline-size:80%;
         gap: 0;
+        
+       
     }
 
     .diagonal-triptych .triptych-panel {
         flex: 1;
         position: relative;
-        overflow: hidden;
+        overflow: visible;
+        background: #000;
+        background:linear-gradient(270deg,#000, var(--accent))
+        
+        
     }
 
-    /* Apply SVG clipPaths */
+    .diagonal-triptych .triptych-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+
+    }
+
+    /* Apply CSS clipPaths */
     .diagonal-triptych .panel-left {
-        clip-path: url(#clip-left);
+        clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+    }
+
+    .diagonal-triptych .panel-left::before {
+     
+
+        clip-path: polygon(
+            var(--_triptych-border-left) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(85% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+      
     }
 
     .diagonal-triptych .panel-center {
-        clip-path: url(#clip-center);
-        margin-left: -4%;
-        margin-right: -4%;
+        clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
         z-index: 1;
+        margin-inline:-4%;
+    }
+
+    .diagonal-triptych .panel-center::before {
+        clip-path: polygon(
+            calc(15% + var(--_triptych-border-left)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(85% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
     }
 
     .diagonal-triptych .panel-right {
-        clip-path: url(#clip-right);
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .diagonal-triptych .panel-right::before {
+        clip-path: polygon(
+            calc(15% + var(--_triptych-border-left)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
     }
 
     .diagonal-triptych .diagonal-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        position:relative;
-        filter:grayscale(1);
-       
-        
+        position: relative;
+        z-index: 1;
+   
     }
 
-   
+    .diagonal-triptych .panel-left .diagonal-img {
+        clip-path: polygon(
+            var(--_triptych-border-left) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(85% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+    
+    }
+
+    .diagonal-triptych .panel-center .diagonal-img {
+        clip-path: polygon(
+            calc(15% + var(--_triptych-border-left)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(85% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+    }
 
     .diagonal-triptych .panel-right .diagonal-img {
         object-position: 20%;
+        clip-path: polygon(
+            calc(15% + var(--_triptych-border-left)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+    
     }
 
     .diagonal-triptych .panel-overlay {
@@ -258,40 +319,49 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
         z-index: 1;
     }
 
-    .diagonal-triptych .panel-text {
-        position: absolute;
-        bottom: 4rem;
-        left: 2rem;
-        right: 2rem;
-        z-index: 2;
-        color: white;
+    .diagonal-triptych .problem-text-top {
+        text-align: center;
+        /* margin-bottom: 3rem; */
+        max-width: 80%;
+        margin-inline: auto;
     }
 
-    .diagonal-triptych h2 {
+    .diagonal-triptych .problem-title {
         font-size: 32px;
         font-weight: 700;
         text-transform: uppercase;
-        line-height: 1.2;
-        margin: 0;
+        line-height: 1.3;
+        margin: 0 0 2rem 0;
+        color: var(--blkclr);
     }
 
-    .diagonal-triptych p {
-        font-size: 18px;
-        line-height: 1.6;
-        margin: 0;
-    }
-
-    .diagonal-triptych p.accent {
+    .diagonal-triptych .problem-description {
         font-size: 20px;
+        line-height: 1.7;
+        margin: 0;
+        color: var(--blkclr);
+    }
+
+    .diagonal-triptych .problem-text-bottom {
+        text-align: center;
+        /* margin-top: 3rem; */
+        max-width: 80%;
+        margin-inline: auto;
+    }
+
+    .diagonal-triptych .problem-accent {
+        font-size: 22px;
         font-weight: 700;
+        line-height: 1.7;
+        margin: 0;
+        color: var(--blkclr);
     }
 
     .diagonal-triptych .highlight {
-        color: #03a9f4;
+        /* color: #03a9f4; */
     }
 
     @media (max-width: 1024px) {
@@ -306,3 +376,45 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
         }
     }
 </style>
+
+<script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate problem text elements
+    gsap.from('.problem-title', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.problem-title',
+            start: 'top 80%'
+        }
+    });
+
+    gsap.from('.problem-description', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.problem-description',
+            start: 'top 80%'
+        }
+    });
+
+    gsap.from('.problem-accent', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.diagonal-triptych',
+            start: 'bottom 90%'
+        }
+    });
+</script>

@@ -34,7 +34,20 @@
       "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/TemporaryItems/NSIRD_screencaptureui_zQztM2/**)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/TemporaryItems/NSIRD_screencaptureui_WUeQBE/**)"
+      "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/TemporaryItems/NSIRD_screencaptureui_WUeQBE/**)",
+      "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/chrome-devtools-mcp-gHRKgI/**)",
+      "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/chrome-devtools-mcp-XHE5cS/**)",
+      "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/TemporaryItems/NSIRD_screencaptureui_cS8IpQ/**)",
+      "mcp__chrome-devtools__take_snapshot",
+      "WebFetch(domain:carlosneisa.hashnode.dev)",
+      "WebFetch(domain:www.freecodecamp.org)",
+      "Read(//Users/richardwaine/Desktop/**)",
+      "WebFetch(domain:margogarrigues.com)",
+      "WebFetch(domain:studioandor.com)",
+      "WebFetch(domain:www.awwwards.com)",
+      "WebFetch(domain:www.federicopian.com)",
+      "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/TemporaryItems/NSIRD_screencaptureui_P1i28U/**)",
+      "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/TemporaryItems/NSIRD_screencaptureui_MZScFn/**)"
     ],
     "deny": []
   }
