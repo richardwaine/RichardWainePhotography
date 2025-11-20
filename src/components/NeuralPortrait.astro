@@ -434,7 +434,7 @@ const currentData = portfolioData[currentImageIndex];
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 2rem;
+  padding: var(--size-7);
   overflow: hidden;
   /* background: var(--drkbg); */
   color: var(--ltclr);
@@ -461,10 +461,11 @@ const currentData = portfolioData[currentImageIndex];
 
 .neural-title {
   font-family: var(--ff-primary);
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 900;
-  line-height: 0.85;
-  margin-bottom: 2rem;
+  /* font-size: clamp(2.5rem, 6vw, 5rem); */
+  font-size:var(--fs-clamp-display);
+  font-weight: var(--fw-x-bold);
+  line-height:  var(--line-height-dramatic);
+  margin-bottom: var(--size-7);
   perspective: 1000px;
   text-align: left;
   text-transform: none;
@@ -473,7 +474,7 @@ const currentData = portfolioData[currentImageIndex];
 
 .title-line {
   overflow: hidden;
-  margin: 10px 0;
+  margin: var(--size-225) 0;
   transform-style: preserve-3d;
 }
 
@@ -488,7 +489,7 @@ const currentData = portfolioData[currentImageIndex];
   transform-origin: bottom;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  font-weight: 900;
+  font-weight: var(--fw-x-bold);
   font-size: inherit;
 }
 
@@ -499,16 +500,16 @@ const currentData = portfolioData[currentImageIndex];
 .data-streams {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  font-family: 'Montserrat', sans-serif;
+  gap: var(--size-3);
+  margin-bottom: var(--size-8); 
+  font-family: var(--ff-primary);
 }
 
 .data-stream {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1.5rem;
+  gap: var(--size-3);
+  padding: var(--size-250) var(--size-5);
   background: rgba(255, 255, 255, 0.025);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -526,14 +527,14 @@ const currentData = portfolioData[currentImageIndex];
 
 .stream-label {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: var(--fs-350);
+  font-weight: var(--fw-normal);
 }
 
 .stream-value {
   color: var(--accent);
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-400);
   /* text-shadow: 0 0 8px rgba(0, 168, 255, 0.25); */
 }
 
@@ -545,7 +546,7 @@ const currentData = portfolioData[currentImageIndex];
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: var(--size-7);
 
   
 }
@@ -589,11 +590,14 @@ const currentData = portfolioData[currentImageIndex];
 
 .analysis-overlay {
   position: absolute;
-  top: 0;
+  /* top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
+  inset:0;
   pointer-events: none;
+
+  
 }
 
 .data-points {
@@ -619,8 +623,9 @@ const currentData = portfolioData[currentImageIndex];
 }
 
 .point-marker {
-  width: 8px;
-  height: 8px;
+
+  width: var(--size-2);
+  height: var(--size-2);
   background: var(--accent);
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(3, 169, 244, 0.8);
@@ -640,14 +645,14 @@ const currentData = portfolioData[currentImageIndex];
 
 :global(.point-label) {
   font-family: 'Space Grotesk', monospace;
-  font-size: 0.75rem;
+  font-size: var(--fs-300);
   color: var(--accent);
   background: rgba(0, 0, 0, 0.9);
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
+  padding:var(--size-2) var(--size-3);
+  border-radius: var(--size-1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   white-space: nowrap;
-  font-weight: 600;
+  font-weight: var(--fw-semi-bold);
   letter-spacing: 0.05rem;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -669,7 +674,7 @@ const currentData = portfolioData[currentImageIndex];
 
 .portfolio-matrix {
   display: flex;
-  gap: 1rem;
+  gap: var(--size-3);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -679,11 +684,12 @@ const currentData = portfolioData[currentImageIndex];
   width: 80px;
   height: 80px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
+  border-radius:var(--size-2);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
   transition: .3s ease-in-out all;
+  
 }
 
 .matrix-cell:hover {
@@ -704,29 +710,13 @@ const currentData = portfolioData[currentImageIndex];
   filter: grayscale(0) contrast(1.0);
 }
 
-.cell-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-  padding: 0.5rem 0.25rem 0.25rem;
-}
-
-.cell-id {
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.6rem;
-  color: var(--accent);
-  font-weight: 600;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .neural-content {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: var(--size-9);
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 var(--size-3);
   }
   
   .holographic-frame {
@@ -746,21 +736,21 @@ const currentData = portfolioData[currentImageIndex];
 
 @media (max-width: 768px) {
   .neural-section {
-    padding: 6rem 1rem 2rem;
+    padding:6rem var(--size-3) var(--size-7);
     min-height: 100vh;
     overflow-x: hidden;
   }
   
   .neural-content {
-    gap: 3rem;
+    gap: var(--size-8);
     max-width: 100%;
     padding: 0;
   }
   
   .neural-title {
-    font-size: clamp(2rem, 8vw, 3.5rem);
+    /* font-size: clamp(2rem, 8vw, 3.5rem); */
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--size-5);
   }
   
   .holographic-frame {
@@ -772,42 +762,36 @@ const currentData = portfolioData[currentImageIndex];
     width: 60px;
     height: 60px;
   }
-  
-  .quantum-cta {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 300px;
-  }
-  
+
   .data-stream {
-    padding: 0.5rem 1rem;
+    padding: var(--size-2) var(--size-3);
     flex-direction: column;
-    gap: 0.25rem;
+    gap: var(--size-1);
     text-align: center;
   }
   
   .stream-label {
-    font-size: 0.8rem;
+    font-size: var(--fs-325);
   }
-  
+
   .stream-value {
-    font-size: 0.9rem;
+    font-size: var(--fs-350);
   }
-  
+
   .point-label {
-    font-size: 0.6rem;
+    font-size: var(--fs-275);
     padding: 0.3rem 0.6rem;
   }
 }
 
 @media (max-width: 480px) {
   .neural-section {
-    padding: 5rem 0.5rem 2rem;
+    padding:var(--size-10) var(--size-2) var(--size-7);
+    
   }
   
   .neural-title {
-    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    /* font-size: clamp(1.8rem, 10vw, 2.5rem); */
   }
   
   .holographic-frame {
@@ -819,14 +803,9 @@ const currentData = portfolioData[currentImageIndex];
     width: 50px;
     height: 50px;
   }
-  
-  .quantum-cta {
-    padding: 0.875rem 1.5rem;
-    font-size: 0.9rem;
-  }
-  
+
   .data-stream {
-    padding: 0.5rem 0.75rem;
+    padding: var(--size-2) var(--size-250);
   }
 }
 </style>

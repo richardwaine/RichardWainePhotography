@@ -25,7 +25,7 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
                         <p class="stars">&#9733&nbsp&#9733&nbsp&#9733&nbsp&#9733&nbsp&#9733</p><p class="white">{testimonialText}
                         </p>
                         
-                        <br>
+                        
                         
                         <div class="testimonial-image"><Image src={image} height={128} width={128} alt={imageAlt} /> 
                         </div>
@@ -93,7 +93,7 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
 
 .testimonial-content p,
 .rates-card-testimonial p {
-  /* line-height: 1.9; */
+  line-height: var(--line-height-loose);
    padding-inline: var(--size-4);
   
   

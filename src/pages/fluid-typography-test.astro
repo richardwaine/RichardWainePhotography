@@ -1,0 +1,259 @@
+---
+import CinematicHero from '../components/CinematicHero.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Fluid Typography Test">
+
+<section id="fluid-typography-test">
+    <div class="wrapper">
+        <h1 class="test-title">Fluid Typography Scale Test</h1>
+        <p class="instructions">Resize your browser window to see how the text scales smoothly from 375px (mobile) to 1440px (desktop)</p>
+
+        <div class="viewport-indicator">
+            <span>Current Viewport Width: <strong id="viewportWidth">0px</strong></span>
+        </div>
+
+        <div class="type-samples">
+
+            <div class="sample-block">
+                <div class="label">--fs-clamp-display (Hero/Display Text)</div>
+                <div class="sample display-text">World Class Headshot Experience</div>
+                <div class="size-info">48px → 80px (3rem → 5rem)</div>
+            </div>
+
+            <div class="sample-block">
+                <div class="label">--fs-clamp-xxl (H1 Headings)</div>
+                <div class="sample xxl-text">Professional Photography Services</div>
+                <div class="size-info">36px → 48px (2.25rem → 3rem)</div>
+            </div>
+
+            <div class="sample-block">
+                <div class="label">--fs-clamp-xl (H2 Headings)</div>
+                <div class="sample xl-text">About Our Studio and Process</div>
+                <div class="size-info">28px → 36px (1.75rem → 2.25rem)</div>
+            </div>
+
+            <div class="sample-block">
+                <div class="label">--fs-clamp-lg (H3 Headings)</div>
+                <div class="sample lg-text">Featured Portfolio Section</div>
+                <div class="size-info">22px → 28px (1.375rem → 1.75rem)</div>
+            </div>
+
+            <div class="sample-block">
+                <div class="label">--fs-clamp-md (Large Body / Small Headings)</div>
+                <div class="sample md-text">This is large body text or small heading text that needs emphasis</div>
+                <div class="size-info">18px → 22px (1.125rem → 1.375rem)</div>
+            </div>
+
+            <div class="sample-block">
+                <div class="label">--fs-clamp-base (Body Text)</div>
+                <div class="sample base-text">This is standard body text that you would read in paragraphs. It provides comfortable readability across all devices and never goes below 16px for accessibility.</div>
+                <div class="size-info">16px → 18px (1rem → 1.125rem)</div>
+            </div>
+
+            <div class="sample-block">
+                <div class="label">--fs-clamp-sm (Small Text)</div>
+                <div class="sample sm-text">This is small text used for secondary information, metadata, or UI elements that don't need to be as prominent as body text.</div>
+                <div class="size-info">14px → 16px (0.875rem → 1rem)</div>
+            </div>
+
+            <div class="sample-block">
+                <div class="label">--fs-clamp-xs (Captions / Fine Print)</div>
+                <div class="sample xs-text">This is extra small text for captions, copyright notices, or fine print information.</div>
+                <div class="size-info">12px → 14px (0.75rem → 0.875rem)</div>
+            </div>
+
+        </div>
+
+        <div class="test-instructions">
+            <h2>Testing Instructions:</h2>
+            <ol>
+                <li>Resize your browser window from narrow (mobile) to wide (desktop)</li>
+                <li>Watch how each font size scales smoothly</li>
+                <li>Test at 200% browser zoom (Cmd/Ctrl + Plus) to verify accessibility</li>
+                <li>Check readability at all sizes</li>
+                <li>Verify no text is too small or too large at any viewport</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+
+
+</MainLayout>
+
+<style>
+/* Fluid Typography Scale - Accessible with REM + VW */
+
+:root {
+    /* Extra Small - Captions, labels, fine print */
+    --fs-clamp-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);  /* 12px → 14px */
+
+    /* Small - Small body text, UI elements */
+    --fs-clamp-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);  /* 14px → 16px */
+
+    /* Base - Body text (NEVER below 16px for readability) */
+    --fs-clamp-base: clamp(1rem, 0.925rem + 0.375vw, 1.125rem);  /* 16px → 18px */
+
+    /* Medium - Large body, small headings */
+    --fs-clamp-md: clamp(1.125rem, 1rem + 0.625vw, 1.375rem);  /* 18px → 22px */
+
+    /* Large - H3 level headings */
+    --fs-clamp-lg: clamp(1.375rem, 1.2rem + 0.875vw, 1.75rem);  /* 22px → 28px */
+
+    /* Extra Large - H2 level headings */
+    --fs-clamp-xl: clamp(1.75rem, 1.5rem + 1.25vw, 2.25rem);  /* 28px → 36px */
+
+    /* 2X Large - H1 level headings */
+    --fs-clamp-xxl: clamp(2.25rem, 1.875rem + 1.875vw, 3rem);  /* 36px → 48px */
+
+    /* Display/Hero - Marketing, hero sections */
+    --fs-clamp-display: clamp(3rem, 2.25rem + 3.75vw, 5rem);  /* 48px → 80px */
+}
+
+#fluid-typography-test {
+    min-height: 100vh;
+    background: var(--ltbg);
+    color: var(--blkclr);
+    padding-block: var(--size-8);
+}
+
+.test-title {
+    text-align: center;
+    font-size: var(--fs-800);
+    margin-bottom: var(--size-5);
+    color: var(--accent);
+}
+
+.instructions {
+    text-align: center;
+    font-size: var(--fs-500);
+    margin-bottom: var(--size-7);
+    color: var(--faded);
+}
+
+.viewport-indicator {
+    text-align: center;
+    padding: var(--size-4);
+    background: var(--drkbg);
+    color: var(--ltclr);
+    border-radius: 8px;
+    margin-bottom: var(--size-7);
+    font-size: var(--fs-500);
+}
+
+.viewport-indicator strong {
+    color: var(--accent);
+    font-size: var(--fs-600);
+}
+
+.type-samples {
+    display: grid;
+    gap: var(--size-7);
+    margin-bottom: var(--size-8);
+}
+
+.sample-block {
+    padding: var(--size-5);
+    background: white;
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.label {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+    color: var(--accent);
+    margin-bottom: var(--size-3);
+    font-family: monospace;
+}
+
+.sample {
+    margin-bottom: var(--size-3);
+    line-height: var(--line-height-relaxed);
+}
+
+.size-info {
+    font-size: var(--fs-350);
+    color: var(--faded);
+    font-style: italic;
+}
+
+/* Apply fluid font sizes */
+.display-text {
+    font-size: var(--fs-clamp-display);
+    font-weight: var(--fw-bold);
+    line-height: var(--line-height-tight);
+}
+
+.xxl-text {
+    font-size: var(--fs-clamp-xxl);
+    font-weight: var(--fw-bold);
+    line-height: var(--line-height-tight);
+}
+
+.xl-text {
+    font-size: var(--fs-clamp-xl);
+    font-weight: var(--fw-semi-bold);
+    line-height: var(--line-height-tight);
+}
+
+.lg-text {
+    font-size: var(--fs-clamp-lg);
+    font-weight: var(--fw-semi-bold);
+}
+
+.md-text {
+    font-size: var(--fs-clamp-md);
+}
+
+.base-text {
+    font-size: var(--fs-clamp-base);
+}
+
+.sm-text {
+    font-size: var(--fs-clamp-sm);
+}
+
+.xs-text {
+    font-size: var(--fs-clamp-xs);
+}
+
+.test-instructions {
+    background: var(--drkbg);
+    color: var(--ltclr);
+    padding: var(--size-7);
+    border-radius: 8px;
+}
+
+.test-instructions h2 {
+    color: var(--accent);
+    margin-bottom: var(--size-4);
+}
+
+.test-instructions ol {
+    margin-left: var(--size-5);
+    line-height: var(--line-height-loose);
+}
+
+.test-instructions li {
+    margin-bottom: var(--size-3);
+}
+</style>
+
+<script>
+    // Update viewport width indicator in real-time
+    function updateViewportWidth() {
+        const width = window.innerWidth;
+        const indicator = document.getElementById('viewportWidth');
+        if (indicator) {
+            indicator.textContent = `${width}px`;
+        }
+    }
+
+    // Update on load and resize
+    updateViewportWidth();
+    window.addEventListener('resize', updateViewportWidth);
+</script>

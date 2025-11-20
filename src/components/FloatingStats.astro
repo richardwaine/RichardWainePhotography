@@ -12,7 +12,7 @@
     </div>
     <div class="stat-card" data-delay="200">
         <div class="stat-3d-container">
-            <div class="stat-number" data-count="625">0</div>
+            <div class="stat-number" data-count="627">0</div>
             <div class="stat-label">5-Star Google Reviews</div>
         </div>
     </div>
@@ -51,7 +51,7 @@
         backdrop-filter: blur(20px);
         border: 1px solid rgba(3, 169, 244, 0.2);
         border-radius: 12px;
-        padding: 15px 20px;
+        padding: var(--size-3) var(--size-4); 
         transform-style: preserve-3d;
         transform: translateY(50px);
         opacity: 0;
@@ -77,22 +77,22 @@
     }
 
     .stat-number {
-        font-size: 2rem;
-        font-weight: 900;
+        font-size: var(--fs-800);
+        font-weight: var(--fw-x-bold);
         color: var(--accent);
         text-align: center;
         text-shadow: 0 10px 30px rgba(3, 169, 244, 0.3);
     }
 
     .stat-label {
-        font-size: 0.9rem;
-        font-weight: 600;
+        font-size: var(--fs-350);
+        font-weight: var(--fw-semi-bold);
         color: var(--ltclr);
 
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 1px;
-        margin-top: 8px;
+        margin-top: var(--size-2);
     }
 </style>
 

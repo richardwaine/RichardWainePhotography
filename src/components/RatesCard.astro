@@ -207,7 +207,7 @@ toggleBtns.forEach((btn) => {
   
 }
 
-.included p:not(first-child){
+.included p:not(:first-child){
   margin-bottom:var(--size-3);
 }
 
@@ -216,7 +216,7 @@ toggleBtns.forEach((btn) => {
 }
 
 .rates-card a{
-  padding:21px 34px;
+  padding:var(--size-4) var(--size-725);
   font-size:var(--fs-400);
   font-weight:var(--fw-normal);
   background:var(--blkclr);
@@ -267,7 +267,7 @@ toggleBtns.forEach((btn) => {
   display: inline-flex;
   background: var(--secondary-color);
   clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
-  padding: 6px;
+  padding: calc( var(--size-250) / 2 );
   margin: 0 auto;
   height: fit-content;
   overflow: visible;
@@ -280,10 +280,10 @@ toggleBtns.forEach((btn) => {
   background: transparent;
   
   border: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--ff-primary);
   font-size: var(--fs-400);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 1.5px;
   cursor: pointer;
   transition: color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -301,8 +301,8 @@ toggleBtns.forEach((btn) => {
 .toggle-slider{
   position: absolute;
   z-index: 1;
-  top: 5px;
-  left: 10px;
+  top: calc(var(--size-225) / 2);
+  left: var(--size-225);
   width: calc(50% -  10px);
   /* height: 100%; */
   height:calc(100% - 10px);
@@ -368,11 +368,12 @@ toggleBtns.forEach((btn) => {
  font-weight: medium;
  color: var(--primary-color);
 
+ 
 }
 
 .tabs-detail-container p{
   font-size:var(--fs-400);
-  /* line-height: 1.5; */
+  line-height: var(--line-height-normal);
   font-weight:var(--fw-semi-bold);
 }
  

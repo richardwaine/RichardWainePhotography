@@ -18,7 +18,7 @@
         <div class="hero-content">
             <div class="content-left">
                 <h1 class="hero-title">
-                    PREMIUM PROFESSIONAL<br>
+                    PREMIUM PROFESSIONAL
                     <span class="highlight">HEADSHOT PHOTOGRAPHY</span>
                 </h1>
                 <p class="hero-subtitle">
@@ -75,7 +75,7 @@
         left: 0;
         right: 0;
         z-index: 9999;
-        padding: 25px 60px;
+        padding: var(--size-5) var(--size-875);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -91,14 +91,14 @@
 
     .nav-menu {
         display: flex;
-        gap: 40px;
+        gap: var(--size-775);
     }
 
     .nav-menu a {
         color: var(--text-secondary);
         text-decoration: none;
         font-weight: 500;
-        font-size: 0.95rem;
+       font-size: var(--fs-450);
         letter-spacing: 0.5px;
         text-transform: uppercase;
         transition: all 0.3s ease;
@@ -127,10 +127,10 @@
     .nav-cta {
         background: var(--accent);
         border: none;
-        padding: 14px 28px;
-        color: white;
-        font-weight: 700;
-        font-size: 0.85rem;
+        padding: var(--size-3) var(--size-6);
+        color: var(--ltclr);
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-350);
         letter-spacing: 1px;
         text-transform: uppercase;
         cursor: pointer;
@@ -164,14 +164,14 @@
         height: calc(100vh - 300px);
         align-items: center;
         margin: 140px auto 0;
-        padding: 60px 80px;
-        
-        gap: 80px;
+        padding: var(--size-875) var(--size-10);
+    
+        gap: var(--size-10);
         position: relative;
         z-index: 10;
         background: rgba(10, 10, 10, 0.2);
         backdrop-filter: blur(20px);
-        border-radius: 30px;
+        border-radius: var(--size-650);
         border: 1px solid rgba(3, 169, 244, 0.1);
         box-shadow: 
             0 0 60px rgba(3, 169, 244, 0.1),
@@ -185,13 +185,14 @@
         flex: 1;
         max-width: 600px;
         z-index: 20;
+
     }
 
     .hero-title {
-        font-size: 4.5rem;
-        font-weight: 900;
-        line-height: 0.85;
-        margin-bottom: 30px;
+        font-size: var(--fs-clamp-display);
+        font-weight: var(--fw-x-bold);
+        line-height: var(--line-height-dramatic);
+        margin-bottom: var(--size-650);
         letter-spacing: -3px;
         text-transform: uppercase;
     }
@@ -205,27 +206,27 @@
     }
 
     .hero-subtitle {
-        font-size: 1.3rem;
+        font-size: var(--fs-clamp-md);
         color: var(--text-secondary);
-        line-height: 1.6;
-        margin-bottom: 50px;
-        font-weight: 400;
+        line-height: var(--line-height-relaxed);
+        margin-bottom: var(--size-825);
+        font-weight: var(--fw-normal);
         max-width: 520px;
     }
 
     .hero-actions {
         display: flex;
-        gap: 30px;
+        gap: var(--size-650);
         align-items: center;
     }
 
     .btn-primary {
         background: var(--accent);
         border: none;
-        padding: 18px 36px;
-        color: white;
-        font-weight: 700;
-        font-size: 0.95rem;
+        padding: var(--size-350) var(--size-750);
+        color: var(--ltclr);
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-450);
         letter-spacing: 1px;
         text-transform: uppercase;
         cursor: pointer;
@@ -243,10 +244,10 @@
     .btn-secondary {
         background: var(--glass-bg);
         border: 2px solid var(--glass-border);
-        padding: 16px 34px;
+        padding: var(--size-3) var(--size-725);
         color: var(--text-primary);
-        font-weight: 700;
-        font-size: 0.95rem;
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-450);
         letter-spacing: 1px;
         text-transform: uppercase;
         cursor: pointer;
@@ -254,7 +255,7 @@
         backdrop-filter: blur(10px);
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: calc(var(--size-650) / 2);
         clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
     }
 
@@ -296,7 +297,7 @@
         width: 800px;
         height: 500px;
         position: relative;
-        border-radius: 20px;
+        border-radius:  var(--size-4);
         overflow: hidden;
         box-shadow: 
             30px 30px 80px var(--shadow-dark),
@@ -337,38 +338,30 @@
     @media (max-width: 1400px) {
         .hero-content {
             max-width: 1200px;
-            padding: 60px 60px;
-            gap: 60px;
+            padding: var(--size-875);
+            gap: var(--size-875);
         }
         
         .main-image {
             width: 700px;
             height: 440px;
         }
-        
-        .hero-title {
-            font-size: 4rem;
-        }
     }
 
     @media (max-width: 1200px) {
         .hero-nav {
-            padding: 25px 40px;
+            padding: var(--size-5) var(--size-775);
         }
         
         .hero-content {
             max-width: 1000px;
-            padding: 50px 40px;
-            gap: 50px;
+            padding: var(--size-825) var(--size-775);
+            gap: var(--size-825);
         }
         
         .main-image {
             width: 600px;
             height: 375px;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
         }
     }
 
@@ -377,8 +370,8 @@
             flex-direction: column;
             height: auto;
             min-height: 100vh;
-            padding: 40px 30px;
-            gap: 40px;
+            padding:var(--size-775) var(--size-650);
+            gap: var(--size-775);
             text-align: center;
         }
         
@@ -394,11 +387,7 @@
             width: 500px;
             height: 312px;
         }
-        
-        .hero-title {
-            font-size: 3rem;
-        }
-        
+
         .hero-actions {
             justify-content: center;
         }
@@ -406,7 +395,7 @@
 
     @media (max-width: 768px) {
         .hero-nav {
-            padding: 20px 25px;
+            padding: var(--size-4) var(--size-5);
         }
         
         .nav-menu {
@@ -418,10 +407,10 @@
         }
         
         .hero-content {
-            padding: 30px 20px;
-            gap: 30px;
-            border-radius: 20px;
-            margin: 20px;
+            padding: var(--size-650) var(--size-4);
+            gap: var(--size-650);
+            border-radius: var(--size-4);
+            margin: var(--size-4);
             width: calc(100% - 40px);
         }
         
@@ -429,20 +418,10 @@
             width: 400px;
             height: 250px;
         }
-        
-        .hero-title {
-            font-size: 2.5rem;
-            line-height: 0.9;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-        
+
         .hero-actions {
             flex-direction: column;
-            gap: 20px;
+            gap: var(--size-4);
             width: 100%;
         }
         
@@ -459,37 +438,28 @@
         }
         
         .hero-content {
-            margin: 10px;
+            margin: var(--size-225);
             width: calc(100% - 20px);
-            padding: 25px 15px;
-            border-radius: 15px;
+            padding: var(--size-5) calc(var(--size-650) / 2);
+            border-radius: calc(var(--size-650) / 2);
         }
         
         .main-image {
             width: 320px;
             height: 200px;
-            border-radius: 15px;
+            border-radius: calc(var(--size-650) / 2);
         }
-        
-        .hero-title {
-            font-size: 2rem;
-            letter-spacing: -2px;
-        }
-        
-        .hero-subtitle {
-            font-size: 1rem;
-            margin-bottom: 30px;
-        }
-        
+
         .btn-primary,
         .btn-secondary {
-            padding: 16px 24px;
-            font-size: 0.85rem;
+            padding: var(--size-3) var(--size-5);
+
+            font-size: var(--fs-350);
         }
         
         .nav-cta {
-            padding: 12px 20px;
-            font-size: 0.75rem;
+            padding:  var(--size-250) var(--size-4); 
+            font-size: var(--fs-300);
         }
     }
 </style>

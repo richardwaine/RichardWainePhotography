@@ -32,7 +32,7 @@ const { category, imageSrc, imageAlt, cardCategory, blogTitle, blogExcerpt, slug
 h3 {
 
   font-size: var(--fs-400);
-  font-weight:bold;
+  font-weight:var(--fw-bold);
   text-transform:uppercase;
   
 }
@@ -75,7 +75,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* line-height: 1.5; */
+  line-height: var(--line-height-normal);
 }
 
 .blog-card-category {
@@ -104,8 +104,7 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
   word-wrap: break-word; /* Add this */
-  line-height: 1.2em; /* Add this */
-  /* height: 2.4em; Add this */
+  line-height: var(--line-height-tight);
   margin-block:var(--size-3);
 }
 

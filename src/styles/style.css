@@ -30,6 +30,7 @@
   --fw-normal:400;
   --fw-semi-bold:600;
   --fw-bold:700;
+  --fw-x-bold:900;
   
   --ltr-space:0.1em;
 
@@ -40,6 +41,7 @@
   /* Additional variables for consistency */
   --border-thin: 1.5px solid;
   --border-light: #bbb;
+  --line-height-dramatic: 0.85;
   --line-height-tight: 1.2;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.7;
@@ -48,8 +50,20 @@
   --transition-slow: 0.4s;
   --drkclr: var(--blkclr);
 
+  /* Fluid Typography Scale - Accessible with REM + VW */
+  --fs-clamp-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);  /* 12px → 14px */
+  --fs-clamp-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);  /* 14px → 16px */
+  --fs-clamp-base: clamp(1rem, 0.925rem + 0.375vw, 1.125rem);  /* 16px → 18px */
+  --fs-clamp-md: clamp(1.125rem, 1rem + 0.625vw, 1.375rem);  /* 18px → 22px */
+  --fs-clamp-lg: clamp(1.375rem, 1.2rem + 0.875vw, 1.75rem);  /* 22px → 28px */
+  --fs-clamp-xl: clamp(1.75rem, 1.5rem + 1.25vw, 2.25rem);  /* 28px → 36px */
+  --fs-clamp-xxl: clamp(2.25rem, 1.875rem + 1.875vw, 3rem);  /* 36px → 48px */
+  --fs-clamp-display: clamp(3rem, 2.25rem + 3.75vw, 5rem);  /* 48px → 80px */
+
   /*font sizes*/
---fs-300:0.75rem; /*12px*/ 
+--fs-275: 0.625rem; /*10px*/
+--fs-300:0.75rem; /*12px*/
+--fs-325:0.8125rem; /*13px*/ 
 --fs-350:0.875rem; /*14px*/
 --fs-400:1rem; /*16px*/
 --fs-450:1.125rem; /*18px*/
@@ -63,19 +77,24 @@
 
 --size-1: .25em;/*4px*/
 --size-2: .5em;/*8px*/
+--size-225:.625rem;/*10px*/
 --size-250:.75em;/*12px*/
 --size-3: 1em; /*16px*/
 --size-350: 1.125em; /*18px*/
 --size-4: 1.25em;/*20px*/
 --size-5: 1.5em;/*24px*/
 --size-6: 1.75em;/*28px*/
---size-7: 2em;/*32px*/
+--size-650:1.875em; /* 30px */
+--size-7: 2rem;/*32px*/
 --size-725: 2.125em;/*34px*/
 --size-750: 2.25em;/*36px*/
---size-750:2.5em;/*40px*/
+--size-775:2.5rem;/*40px*/
 --size-8: 3em;/*48px*/
+--size-825:3.125em; /* 50px */
+--size-850:3.375em; /* 54px */
+--size-875:3.75em; /* 60px */
 --size-9: 4em;/*64px*/
---size-10: 5em;
+--size-10: 5em; /*80px*/
 --size-11: 7.5em;
 --size-12: 10em;
 --size-13: 15em;
@@ -158,7 +177,8 @@ img,picture,svg,video {
 .section-title{
   margin-bottom:var(--size-3);
   font-size:var(--fs-600);
-  text-transform:uppercase
+  text-transform:uppercase;
+  line-height:var(--line-height-tight);
 }
 
 /*center text*/

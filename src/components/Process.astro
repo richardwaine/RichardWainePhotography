@@ -15,14 +15,13 @@ import PrimaryButton from './PrimaryButton.astro';
       <div class=content-gameplan>
         <img  alt="schedule a professional headshot, lancaster photographer, lancaster headshots,business headshots near me" height=75
           src=https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1577471673312-256TTZOWDOXBV99W5BFK/Calendar-1+%28optimized%29.png?content-type=image%2Fpng loading="lazy" width=75>
-          <br>
-          <br>
+         
           <span class="spacing">SCHEDULE</span>
       </div>
     </div>
     <div class="face gameplan2">
       <div class=content-gameplan>
-        <p>Give the <b>SCHEDULE</b> button a tap!
+        <p>Give the <b>SCHEDULE</b> button a tap!</p>
         <p>Select an appointment that works best for you.</p>
         <PrimaryButton text="SCHEDULE" url="/rates" size="small" />
       </div>
@@ -34,14 +33,13 @@ import PrimaryButton from './PrimaryButton.astro';
       <div class=content-gameplan>
         <img alt="professional headshot pictures, professional photography, lancaster pa headshots" height=75
          src=https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1593027627807-UEKQXEIKT61WFJQI48EP/Camera+%28optimized%29.png?content-type=image%2Fpng loading="lazy" width=75>
-          <br>
-          <br>
+          
           <span class="spacing">SHOOT</span>
       </div>
     </div>
     <div class="face gameplan2">
       <div class=content-gameplan>
-        <p>It's fun and easy!<p>I will guide you into pictures that will propel your career.</p>
+        <p>It's fun and easy!<br>I will guide you into pictures that will propel your career.</p>
         <PrimaryButton text="SCHEDULE" url="/rates" size="small" />
       </div>
     </div>
@@ -52,14 +50,13 @@ import PrimaryButton from './PrimaryButton.astro';
       <div class=content-gameplan>
         <img  alt="company headshots, linkedin headshots, social media headshots, headshot photographers, professional headshots near me" height=75
           src=https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1593027096649-E21ID0886HMI4H62JU77/share_PNG19%28optimized%29.png?content-type=image%2Fpng loading="lazy" width=75>
-          <br>
-          <br>
+          
           <span class="spacing">SHARE</span>
       </div>
     </div>
     <div class="face gameplan2">
       <div class=content-gameplan>
-        <p>Share your images with everyone! Stand out and be recognized as an expert in your field.</p>
+        <p>Share your images with everyone!<br> Stand out and be recognized as an expert in your field.</p>
         <PrimaryButton text="SCHEDULE" url="/rates" size="small" />
       </div>
     </div>
@@ -128,6 +125,16 @@ import PrimaryButton from './PrimaryButton.astro';
   color: var(--ltclr);
   margin: 0;
 }
+
+.gameplan-card span {
+    font-weight: var(--fw-bold);
+    color: var(--ltclr);
+    margin: 0;
+    margin-top: var(--size-5);
+  }
+
+
+
 .container-benefits .card .face.face2,
 .container-gameplan .gameplan-card .face.gameplan2 {
   display: flex;
@@ -155,7 +162,7 @@ import PrimaryButton from './PrimaryButton.astro';
 .content-benefits p,
 .content-gameplan p {
   margin: 0;
-  /* line-height: 2; */
+  line-height: var(--line-height-relaxed);
 }
 .content-benefits a {
   margin: var(--size-1) 0;
