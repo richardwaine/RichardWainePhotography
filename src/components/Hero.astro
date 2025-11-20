@@ -248,7 +248,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
         transform: translateY(100%) rotateX(-90deg);
         transform-origin: bottom;
         transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        text-shadow: 0 10px 30px var(--shadow-clr-deep);
         font-weight: 900;
         font-size: inherit;
        
@@ -324,7 +324,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
     }
 
     .image-layer.shadow {
-        background: rgba(0, 0, 0, 0.3);
+        background: var(--shadow-clr-soft);
         filter: blur(20px);
         transform: translateZ(-10px) translateY(20px) translateX(20px) scale(0.95);
         z-index: 1;
@@ -389,10 +389,10 @@ const heroImage2 = getImageByPath(heroImages[1]);
     @keyframes buttonGlow {
         0%, 100% { 
             box-shadow: 
-                0 25px 60px rgba(3, 169, 244, 0.5),
-                0 15px 35px rgba(3, 169, 244, 0.3),
+                0 25px 60px var(--glow-clr-strong),
+                0 15px 35px var(--glow-clr-medium),
                 0 0 100px rgba(3, 169, 244, 0.25),
-                inset 0 1px 2px rgba(255, 255, 255, 0.2),
+                inset 0 1px 2px var(--highlight-clr-soft),
                 inset 0 -1px 2px rgba(0, 0, 0, 0.1);
         }
         50% { 

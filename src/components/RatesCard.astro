@@ -255,7 +255,7 @@ toggleBtns.forEach((btn) => {
   margin:0 auto;
   overflow: hidden;
   padding:var(--size-2) 0;
-  background-color:var(--ltclr);
+  background:var(--ltclr);
   display: flex;
   flex-direction:column;
   justify-content: center;
@@ -295,7 +295,7 @@ toggleBtns.forEach((btn) => {
 }
 
 .toggle-btn.active{
-  color: white;
+  color: var(--ltclr);
 }
 
 .toggle-slider{
@@ -312,10 +312,10 @@ toggleBtns.forEach((btn) => {
   transform-style: preserve-3d;
   animation: buttonGlow 4s ease-in-out infinite;
   box-shadow:
-    0 25px 60px rgba(3, 169, 244, 0.5),
-    0 15px 35px rgba(3, 169, 244, 0.3),
+    0 25px 60px var(--glow-clr-strong),
+    0 15px 35px var(--glow-clr-medium),
     0 0 100px rgba(3, 169, 244, 0.25),
-    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 1px 2px var(--highlight-clr-soft),
     inset 0 -1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -326,7 +326,7 @@ toggleBtns.forEach((btn) => {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, var(--highlight-clr-bright), transparent);
   transform: skewX(-20deg);
   transition: left 0.8s ease;
 }
@@ -334,10 +334,10 @@ toggleBtns.forEach((btn) => {
 @keyframes buttonGlow {
   0%, 100% {
     box-shadow:
-      0 25px 60px rgba(3, 169, 244, 0.5),
-      0 15px 35px rgba(3, 169, 244, 0.3),
+      0 25px 60px var(--glow-clr-strong),
+      0 15px 35px var(--glow-clr-medium),
       0 0 100px rgba(3, 169, 244, 0.25),
-      inset 0 1px 2px rgba(255, 255, 255, 0.2),
+      inset 0 1px 2px var(--highlight-clr-soft),
       inset 0 -1px 2px rgba(0, 0, 0, 0.1);
   }
   50% {

@@ -122,7 +122,7 @@ const {
         z-index: 1000;
         cursor: pointer;
         background: transparent;
-        filter: drop-shadow(0 0 6px rgba(3, 169, 244, 0.5));
+        filter: drop-shadow(0 0 6px var(--glow-clr-strong));
     }
 
     .trapezoid-indicator {
@@ -135,7 +135,7 @@ const {
             rgba(0, 0, 0, 1) 0%, 
             rgba(26, 26, 26, 1) 100%);
         backdrop-filter: blur(15px);
-        border-top: 1px solid rgba(3, 169, 244, 0.3);
+        border-top: 1px solid var(--glow-clr-medium);
         clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
         opacity: 1;
         transition: all 0.3s ease;
@@ -163,9 +163,9 @@ const {
             rgba(15, 15, 15, 0.95) 0%, 
             rgba(26, 26, 26, 0.95) 100%);
         box-shadow: 
-            0 12px 35px rgba(0, 0, 0, 0.8),
+            0 12px 35px var(--shadow-clr-deep),
             0 6px 20px rgba(3, 169, 244, 0.6),
-            0 0 40px rgba(3, 169, 244, 0.5);
+            0 0 40px var(--glow-clr-strong);
     }
 
     .footer-panel {
@@ -183,7 +183,7 @@ const {
         z-index: 999;
         transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
         /* box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.8); */
-        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0px 10px var(--shadow-clr-deep);
     }
 
     .footer-trigger:hover + .footer-panel,

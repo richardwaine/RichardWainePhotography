@@ -24,6 +24,18 @@
  /*font family*/
   --ff-primary:'montserrat',sans-serif;
   --ff-secondary:'lato',sans-serif;
+
+
+
+  /* shadow & effect colors */
+  --shadow-clr-medium: rgba(0,0,0,0.5);
+  --shadow-clr-deep: rgba(0,0,0,0.8);
+  --shadow-clr-soft: rgba(0,0,0,0.3);
+  --shadow-clr-subtle: rgba(0,0,0,0.12);
+  --highlight-clr-soft: rgba(255,255,255,0.2);
+  --highlight-clr-bright: rgba(255,255,255,0.4);
+  --glow-clr-medium: rgba(3,169,244,0.3);
+  --glow-clr-strong: rgba(3,169,244,0.5);
   
 /*font weight*/
   
@@ -283,7 +295,7 @@ h2{
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, var(--highlight-clr-bright), transparent);
   transform: skewX(-20deg);
   transition: left 0.8s ease;
 }
@@ -299,10 +311,10 @@ h2{
 @keyframes buttonGlow {
   0%, 100% {
     box-shadow:
-      0 25px 60px rgba(3, 169, 244, 0.5),
-      0 15px 35px rgba(3, 169, 244, 0.3),
+      0 25px 60px var(--glow-clr-strong),
+      0 15px 35px var(--glow-clr-medium),
       0 0 100px rgba(3, 169, 244, 0.25),
-      inset 0 1px 2px rgba(255, 255, 255, 0.2),
+      inset 0 1px 2px var(--highlight-clr-soft),
       inset 0 -1px 2px rgba(0, 0, 0, 0.1);
   }
   50% {
