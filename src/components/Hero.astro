@@ -131,12 +131,14 @@ const heroImage2 = getImageByPath(heroImages[1]);
         height: 100%;
         z-index: -1;
         overflow: hidden;
+        
     }
 
     .depth-layer {
         position: absolute;
         width: 100%;
         height: 100%;
+        
         
     }
 
@@ -162,6 +164,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
                 rgba(15, 15, 15, 0.8) 0%, 
                 rgba(26, 26, 26, 0.6) 50%,
                 rgba(37, 37, 37, 0.4) 100%);
+                
     }
 
     /* Hero Experience Layout */
@@ -176,7 +179,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
         filter: brightness(1);
         position: relative;
         width:100%;
-      
+        
        
     }
     
@@ -201,6 +204,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
         inset:0;
         background: rgba(15, 15, 15, 0.65);
         z-index: 1;
+        
     }
 
     .experience-content {
@@ -303,8 +307,10 @@ const heroImage2 = getImageByPath(heroImages[1]);
 
     .image-depth-layers {
         position: relative;
-        width: 900px;
-        height: 600px;
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        aspect-ratio: 3 / 2;
         transform-style: preserve-3d;
         background: transparent;
     }
@@ -363,8 +369,8 @@ const heroImage2 = getImageByPath(heroImages[1]);
 
     .action-buttons {
         display: flex;
-        gap: var(--size-6); 
-  
+        flex-wrap: wrap;
+        gap: var(--size-6);
     }
 
 
@@ -424,12 +430,20 @@ const heroImage2 = getImageByPath(heroImages[1]);
 
     @media (max-width: 768px) {
         .experience-content {
-            padding: 0 30px;
+            padding: 0 20px;
+            grid-template-columns: 1fr;
+            grid-gap: 40px;
         }
 
         .action-buttons {
             flex-direction: column;
             gap: 20px;
+        }
+
+        .image-depth-layers {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
         }
     }
 </style>

@@ -37,7 +37,7 @@
 
 
         display:grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         justify-content: center;
         align-items:end;
@@ -94,6 +94,15 @@
         letter-spacing: 1px;
         margin-top: var(--size-2);
     }
+
+@media (width > 768px){
+    .floating-stats {
+        grid-template-columns: repeat(3, 1fr);
+      
+}}
+
+
+
 </style>
 
 <script>
