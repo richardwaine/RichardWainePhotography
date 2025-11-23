@@ -129,28 +129,45 @@ const heroContent = {
 
 
 <style>
+#hero{
+/* margin:0; */
+padding:0;
+min-height:calc(100vh + 120px);
+display:grid;
+place-items:center;
+
+}
+	
 
 #promo-video {
+		height:100vh;
 		padding:var(--size-8) 0;
+
+		> * {
+			height:100%;
+		}
 }
 
 
 
 /* 100vh sections */
-#hero, #features, #neural-portrait, #office-headshots, #process, #brief-bio, #problem
+#features, #neural-portrait, #office-headshots, #process, #brief-bio, #problem
 
 {
-	height:calc(100vh - var(--header-height));
-	/* height:100vh; */
+	/* height:calc(100vh - var(--header-height)); */
+	min-height:100vh;
+	
 	display:grid;
 	place-items:center;
 }
 
 
 
+
 /* Natural height sections */
 #promo-video, #tear-sheet, #testimonials, #hs-near, #professions, #did-you-know, #faqs {
 	height: auto;
+	
 	display:grid;
 	place-items:center;
 	/* margin-top: 120px; */
@@ -169,13 +186,11 @@ const heroContent = {
 
 }
 
-#hero{
-/* margin:0; */
-padding:0;
-}
+
+
 
 #brief-bio{
-	height:100vh;
+	min-height:100vh;
 	margin:0;
 
 	display:grid;
@@ -185,6 +200,7 @@ padding:0;
 
 
 }
+
 
 
 

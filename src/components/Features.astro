@@ -207,8 +207,8 @@ var swiper = new Swiper(".mySwiper", {
 
         @media screen and (min-width:1079px){
           max-inline-size:80%;
-         max-inline-size:calc(80% + 4em);
-         margin-inline:auto;
+          max-inline-size:calc(80% + 4em);
+          margin-inline:auto;
   }
     
 }
@@ -221,7 +221,7 @@ var swiper = new Swiper(".mySwiper", {
       align-items: center;
       background:var(--drkbg);
       color:var(--ltclr);
-      padding: 0 var(--size-9);
+      /* padding: 0 var(--size-9); */
       height:auto;
       margin:auto;
       
@@ -231,7 +231,7 @@ var swiper = new Swiper(".mySwiper", {
   display:grid;
   grid-template-columns: 1fr;
   gap:var(--size-10);
-  /* max-inline-size:80%; */
+  
   margin-inline:auto;
   justify-content:center;
   align-items:center;
@@ -251,8 +251,7 @@ p{
 
     .swiper-slide img {
       display: block;
-     /* width:100%; */
-     /* max-width: 100%; */
+     
       margin:auto;
       height:auto;
       box-shadow:var(--shadow);
@@ -296,6 +295,8 @@ p{
 .swiper-button-next:after, .swiper-button-prev:after{
 color:var(--accent);
 font-weight:900;
+/* font-size: var(--fs-450); */
+
 }
 
 .swiper-button-next,
@@ -311,5 +312,22 @@ font-weight:900;
   }
 }
 
+@media (max-width:1024px){
 
+.swiper-button-next:after, .swiper-button-prev:after{
+   font-size:var(--fs-800)
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 0px);
+    left: auto;
+    
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 0px);
+    right: auto;
+
+}
+}
 </style>

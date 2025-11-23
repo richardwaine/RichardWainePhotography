@@ -100,12 +100,14 @@ const heroImage2 = getImageByPath(heroImages[1]);
                 <div class="featured-image-3d">
                     <div class="image-depth-layers">
                         <div class="image-layer foreground">
-                                <Image src={heroImage1.default} 
-                                     alt="Professional Executive Headshot" 
+                                <Image src={heroImage1.default}
+                                     alt="Professional Executive Headshot"
                                      class="hero-image active"
-                                     data-index={0} />
-                                <Image src={heroImage2.default} 
-                                     alt="Professional Executive Headshot" 
+                                     data-index={0}
+                                     loading="eager"
+                                     fetchpriority="high" />
+                                <Image src={heroImage2.default}
+                                     alt="Professional Executive Headshot"
                                      class="hero-image"
                                      data-index={1} />
                         </div>
@@ -179,7 +181,15 @@ const heroImage2 = getImageByPath(heroImages[1]);
         filter: brightness(1);
         position: relative;
         width:100%;
+        overflow-x: hidden;  
+   
+   
+        @media (width <= 768px){
+            justify-content:center;
+            
         
+        }
+
        
     }
     
@@ -191,16 +201,21 @@ const heroImage2 = getImageByPath(heroImages[1]);
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
+
+        @media (width <= 768px){
+            padding:2em;
+            
+        
+        }
+         
+        
+        /*  add this on mobile - remove on desktop */
       
     }
     
     .hero-experience::before {
         content: '';
         position: absolute;
-       /* top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0; */
         inset:0;
         background: rgba(15, 15, 15, 0.65);
         z-index: 1;
@@ -210,19 +225,14 @@ const heroImage2 = getImageByPath(heroImages[1]);
     .experience-content {
         /* max-width: 1400px; */
         margin: 0 auto;
-       
         padding: 0 60px;
-        
         display: grid;
         grid-template-columns: 1fr 1fr;
-      
         grid-gap: 80px;
         align-items: center;
-      
-        
-        /*min-height: calc(100vh - 200px);*/
         position: relative;
         z-index: 2;
+        
         
       
     }
@@ -231,8 +241,8 @@ const heroImage2 = getImageByPath(heroImages[1]);
     .experience-title {
         font-size: clamp(3rem, 8vw, 6rem);
         font-weight: 900;
-        line-height: var(--line-height-dramatic); /*0.85 */
-        margin-bottom: var(--size-775); /*40px */
+        line-height: var(--line-height-dramatic); 
+        margin-bottom: var(--size-775); 
         perspective: 1000px;
         text-shadow: 0 0 60px rgba(3, 169, 244, 0.1);
         font-family: 'Montserrat', sans-serif;
@@ -243,7 +253,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
 
     .title-line {
         overflow: hidden;
-        margin: var(--size-225) 0; /*10px 0 */
+        margin: var(--size-225) 0; 
         transform-style: preserve-3d;
     }
 
@@ -277,6 +287,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
         opacity: 0;
         transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
 
+        margin-inline: auto;
         
     }
 
@@ -335,6 +346,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
         transform: translateZ(-10px) translateY(20px) translateX(20px) scale(0.95);
         z-index: 1;
         border-radius: 15px;
+        
     }
 
     .hero-image {
@@ -429,10 +441,27 @@ const heroImage2 = getImageByPath(heroImages[1]);
 
 
     @media (max-width: 768px) {
+        .hero-experience {
+            margin-top:120px;
+
+            height: auto;
+            display:grid;
+           
+            min-height: 100vh;
+
+         
+    
+        }
+
         .experience-content {
-            padding: 0 20px;
             grid-template-columns: 1fr;
             grid-gap: 40px;
+           padding:0;
+
+        }
+
+        .experience-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
         }
 
         .action-buttons {
@@ -444,6 +473,16 @@ const heroImage2 = getImageByPath(heroImages[1]);
             width: 100%;
             max-width: 100%;
             height: auto;
+            margin:0;
+            padding:0;
+        }
+
+        .text-reveal-container {
+            order: 2;
+        }
+
+        .showcase-3d {
+            order: 1;
         }
     }
 </style>

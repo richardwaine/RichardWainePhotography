@@ -47,7 +47,8 @@
       "WebFetch(domain:www.awwwards.com)",
       "WebFetch(domain:www.federicopian.com)",
       "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/TemporaryItems/NSIRD_screencaptureui_P1i28U/**)",
-      "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/TemporaryItems/NSIRD_screencaptureui_MZScFn/**)"
+      "Read(//var/folders/10/3x5vsgx531lgcr53jt9cc6480000gn/T/TemporaryItems/NSIRD_screencaptureui_MZScFn/**)",
+      "mcp__astro-docs__search_astro_docs"
     ],
     "deny": []
   }

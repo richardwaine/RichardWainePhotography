@@ -168,6 +168,7 @@ const {
             0 0 40px var(--glow-clr-strong);
     }
 
+    
     .footer-panel {
         position: fixed;
         bottom: -500px;
@@ -186,6 +187,8 @@ const {
         box-shadow: 0 0px 10px var(--shadow-clr-deep);
     }
 
+
+
     .footer-trigger:hover + .footer-panel,
     .footer-trigger:focus + .footer-panel,
     .footer-trigger:focus-visible + .footer-panel,
@@ -193,6 +196,8 @@ const {
     .footer-panel:focus-within {
         bottom: 0;
     }
+
+
 
     .footer-trigger:focus-visible {
         outline: 2px solid var(--accent);
@@ -278,7 +283,8 @@ const {
     }
 
     .footer-contact .telephone {
-        color: var(--ltclr);
+        /* color: var(--ltclr); */
+        color:var(--faded);
         text-decoration: none;
         font-weight: var(--fw-semi-bold);
         display: block;
@@ -296,7 +302,7 @@ const {
     }
 
     .footer-contact .copyright-text a {
-        color: var(--ltclr);
+        color: var(--faded);
         text-decoration: none;
     }
 
@@ -321,10 +327,13 @@ const {
         color: var(--ltclr);
         font-size:var(--fs-500);
         transition: color 0.3s ease;
+
+    
     }
 
     .social-icons a:hover {
         color: var(--accent);
+        
     }
 
     @media (max-width: 768px) {

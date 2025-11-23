@@ -69,7 +69,8 @@ import PrimaryButton from './PrimaryButton.astro';
 /*benefits-3 & Gameplan*/
 .card .face,
 .gameplan-card .face {
-  width: 370px;
+  width: min(370px, 100%);
+  margin-inline:auto;
   height: 200px;
   transition: 0.5s;
   text-align: center;
