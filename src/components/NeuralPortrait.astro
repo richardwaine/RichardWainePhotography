@@ -1,10 +1,21 @@
 ---
 import SecondaryButton from './SecondaryButton.astro';
+import { Image } from 'astro:assets';
+
+// Import neural portrait images
+import idaGrandyMain from '../assets/images/neural/Ida Grandy - (800px) - Richard_Waine_Lancaster_PA_0154.jpg';
+import idaGrandyThumb from '../assets/images/neural/Ida Grandy - (500px sq) - Richard_Waine_Lancaster_PA_0154.jpg';
+import shreePatelMain from '../assets/images/neural/Shree Patel - (800px) - Richard_Waine_Lancaster_PA_0157.jpg';
+import shreePatelThumb from '../assets/images/neural/Shree Patel - (500px sq) - Richard_Waine_Lancaster_PA_0157.jpg';
+import sonyaLiliensteinMain from '../assets/images/neural/Sonya Lilienstein - (800px) - Richard Waine_Lancaster_PA_0079.jpg';
+import sonyaLiliensteinThumb from '../assets/images/neural/Sonya Lilienstein -  (500px sq) - Richard Waine_Lancaster_PA_0079.jpg';
+import ethanHaymovitzMain from '../assets/images/neural/Ethan Haymovitz - (800px) - Richard_Waine_Lancaster_PA_0135.jpg';
+import ethanHaymovitzThumb from '../assets/images/neural/Ethan Haymovitz - (500px sq) - Richard_Waine_Lancaster_PA_0135.jpg';
 
 const portfolioData = [
   {
-    image: "/src/assets/images/neural/Ida Grandy - (800px) - Richard_Waine_Lancaster_PA_0154.jpg",
-    thumbnail: "/src/assets/images/neural/Ida Grandy - (500px sq) - Richard_Waine_Lancaster_PA_0154.jpg",
+    image: idaGrandyMain,
+    thumbnail: idaGrandyThumb,
     dataStreams: {
       confidenceLevel: "98.7%",
       authenticityIndex: "MAXIMUM",
@@ -26,8 +37,8 @@ const portfolioData = [
     ]
   },
   {
-    image: "/src/assets/images/neural/Shree Patel - (800px) - Richard_Waine_Lancaster_PA_0157.jpg",
-    thumbnail: "/src/assets/images/neural/Shree Patel - (500px sq) - Richard_Waine_Lancaster_PA_0157.jpg",
+    image: shreePatelMain,
+    thumbnail: shreePatelThumb,
     dataStreams: {
       confidenceLevel: "97.3%",
       authenticityIndex: "ELEVATED",
@@ -49,8 +60,8 @@ const portfolioData = [
     ]
   },
   {
-    image: "/src/assets/images/neural/Sonya Lilienstein - (800px) - Richard Waine_Lancaster_PA_0079.jpg",
-    thumbnail: "/src/assets/images/neural/Sonya Lilienstein -  (500px sq) - Richard Waine_Lancaster_PA_0079.jpg",
+    image: sonyaLiliensteinMain,
+    thumbnail: sonyaLiliensteinThumb,
     dataStreams: {
       confidenceLevel: "96.4%",
       authenticityIndex: "OPTIMAL",
@@ -72,8 +83,8 @@ const portfolioData = [
     ]
   },
   {
-    image: "/src/assets/images/neural/Ethan Haymovitz - (800px) - Richard_Waine_Lancaster_PA_0135.jpg",
-    thumbnail: "/src/assets/images/neural/Ethan Haymovitz - (500px sq) - Richard_Waine_Lancaster_PA_0135.jpg",
+    image: ethanHaymovitzMain,
+    thumbnail: ethanHaymovitzThumb,
     dataStreams: {
       confidenceLevel: "95.8%",
       authenticityIndex: "ENHANCED",
@@ -142,14 +153,14 @@ const currentData = portfolioData[currentImageIndex];
       <div class="holographic-frame">
         <div class="holo-border"></div>
         <div class="image-container">
-          <img 
+          <Image
             src={currentData.image}
             alt="Neural Portrait Analysis"
             class="portrait-scan"
             id="main-portrait"
             loading="eager"
-            width="500"
-            height="500"
+            width={800}
+            height={800}
           />
           <div class="analysis-overlay">
             <div class="data-points" id="data-points">
@@ -179,7 +190,7 @@ const currentData = portfolioData[currentImageIndex];
       <div class="portfolio-matrix">
         {portfolioData.map((data, index) => (
           <div class="matrix-cell" data-index={index.toString()}>
-            <img src={data.thumbnail} alt={`Neural scan ${index + 1}`} loading="lazy" width="300" height="300" />
+            <Image src={data.thumbnail} alt={`Neural scan ${index + 1}`} loading="lazy" width={500} height={500} />
           </div>
         ))}
       </div>
