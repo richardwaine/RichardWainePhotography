@@ -3,19 +3,18 @@ export interface Props {
     text: string;
     url?: string;
     type?: 'button' | 'submit' | 'reset';
-    size?: 'small' | 'medium' | 'large';
 }
 
-const { text, url, type = 'button', size = 'medium' } = Astro.props;
+const { text, url, type = 'button' } = Astro.props;
 const isButton = !url;
 ---
 
 {isButton ? (
-    <button type={type} class={`btn secondary-btn btn-${size}`}>
+    <button type={type} class="btn secondary-btn">
         <span class="btn-text">{text}</span>
     </button>
 ) : (
-    <a href={url} class={`btn secondary-btn btn-${size}`}>
+    <a href={url} class="btn secondary-btn">
         <span class="btn-text">{text}</span>
     </a>
 )}
@@ -42,21 +41,5 @@ const isButton = !url;
             0 0 120px rgba(3, 169, 244, 0.4),
             inset 0 2px 4px rgba(255, 255, 255, 0.3),
             inset 0 -2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-small {
-        
-        padding: var(--size-250) var(--size-5);
-        font-size: var(--fs-350);
-    }
-
-    .btn-medium {
-        padding:var(--size-350) var(--size-750);
-        font-size: var(--fs-400);
-    }
-
-    .btn-large {
-        padding:var(--size-5) var(--size-8);
-        font-size: var(--fs-450);
     }
 </style>

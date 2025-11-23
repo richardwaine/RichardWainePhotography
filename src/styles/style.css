@@ -281,12 +281,22 @@ h2{
   clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
   z-index: 10;
   animation: buttonGlow 4s ease-in-out infinite;
+  padding:var(--size-350) var(--size-750);
+  font-size: var(--fs-400);
+
+
+  @media (max-width:320px){
+      padding: var(--size-3) var(--size-4);
+      font-size: var(--fs-350);
+  }
 }
 
 .btn-text {
   position: relative;
   z-index: 20;
+  
 }
+
 
 .btn::before {
   content: '';
