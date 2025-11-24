@@ -118,15 +118,12 @@ import { Image } from 'astro:assets';
 
 
 
-<!-- swiper -->
-<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper FIRST -->
+<!-- Initialize Swiper -->
 
 <script>
 import gsap from 'gsap';
+import Swiper from 'swiper';
 
-// @ts-ignore - Swiper is loaded from CDN
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
