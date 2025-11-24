@@ -204,6 +204,7 @@ var swiper = new Swiper(".mySwiper", {
       height: 100%;
       /* max-inline-size:80%; */
       margin:auto;
+      padding:0 var(--size-9);
 
         @media screen and (min-width:1079px){
           max-inline-size:80%;
@@ -231,12 +232,13 @@ var swiper = new Swiper(".mySwiper", {
   display:grid;
   grid-template-columns: 1fr;
   gap:var(--size-10);
-  
   margin-inline:auto;
-  justify-content:center;
-  align-items:center;
   place-items:center;
+
+  padding-inline:var(--size-9);
   
+
+
   
   @media (width > 1079px){
      grid-template-columns: 1fr 1fr;
