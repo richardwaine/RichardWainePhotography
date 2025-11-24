@@ -22,8 +22,9 @@
   --head-color:var(--primary-color);
 
  /*font family*/
-  --ff-primary:'montserrat',sans-serif;
-  --ff-secondary:'lato',sans-serif;
+  --ff-primary:'Montserrat',sans-serif;
+  --ff-secondary:'Lato',sans-serif;
+  --ff-mono:'Space Grotesk',monospace;
 
 
 
