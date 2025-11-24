@@ -125,8 +125,8 @@ import { Image } from 'astro:assets';
 
 <script>
 import gsap from 'gsap';
-import Swiper from 'swiper';
 
+// @ts-ignore - Swiper is loaded from CDN
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
