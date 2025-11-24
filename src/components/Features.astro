@@ -4,53 +4,49 @@ import FloatingStats from '../components/FloatingStats.astro';
 import { Image } from 'astro:assets';
 ---
 
-<!-- Horizontal Scroll Features Section -->
-<div class="wrapper">
-  <ul class="features-scroller"
-      tabindex="0"
-      aria-label="Features carousel - use arrow keys or swipe to navigate"
-      aria-orientation="horizontal"
-      data-lenis-prevent>
+<!-- GSAP Horizontal Scroll Features Section -->
+<section class="features-section">
+  <div class="features-container">
+    <div class="features-scroller">
 
-    <li class="feature-slide">
-      <div class="slide-content-wrapper">
-        <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683ddd9383fd532f9bb3614a/1748884884118/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%28horizontal%29+-+compressed.jpg" alt="corporate headshots lancaster, lancaster corporate headshots, Richard Waine photography, Lancaster studio headshots, on-location headshots, business headshots, Lancaster business headshots, business headshots Lancaster, commercial photography, commercial headshots, marketing headshots, branding headshots, about us headshots, about us page, Lancaster conference headshots, Lancaster convention headshots, Lancaster expo headshots" width={600} height={480} />
-        <div class="slide-content slide-content1">
-          <h2 class="heading">Business Headshots</h2>
-          <div class="slide-text">
+      <div class="feature-slide">
+        <div class="slide-content-wrapper">
+          <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683ddd9383fd532f9bb3614a/1748884884118/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%28horizontal%29+-+compressed.jpg" alt="corporate headshots lancaster, lancaster corporate headshots, Richard Waine photography, Lancaster studio headshots, on-location headshots, business headshots, Lancaster business headshots, business headshots Lancaster, commercial photography, commercial headshots, marketing headshots, branding headshots, about us headshots, about us page, Lancaster conference headshots, Lancaster convention headshots, Lancaster expo headshots" width={600} height={480} />
+          <div class="slide-content slide-content1">
+            <h2 class="heading">Business Headshots</h2>
+            <div class="slide-text">
 
-            <p>
-              Corporate Headshots don't have to be boring. They can and should be fun! Contemporary business headshots or business portraits will promote your credibility and earn client trust.
-            </p>
+              <p>
+                Corporate Headshots don't have to be boring. They can and should be fun! Contemporary business headshots or business portraits will promote your credibility and earn client trust.
+              </p>
 
-            <p>Developing trust is essential. Business headshots ensure that your team images are aligned with brand messaging.
+              <p>Developing trust is essential. Business headshots ensure that your team images are aligned with brand messaging.
 
-            </p>
+              </p>
 
-            <p>My easy-to-follow system of coaching and direction accentuates and punctuates your perceived level of expertise.
+              <p>My easy-to-follow system of coaching and direction accentuates and punctuates your perceived level of expertise.
 
-            </p>
+              </p>
 
-            <p>Whether you are looking to motivate and inspire, or project an aura of diplomacy and approachability, a high-quality corporate headshot will set you up for success!
+              <p>Whether you are looking to motivate and inspire, or project an aura of diplomacy and approachability, a high-quality corporate headshot will set you up for success!
 
-            </p>
+              </p>
 
-
+            </div>
           </div>
+
         </div>
-
       </div>
-    </li>
 
-    <li class="feature-slide">
-      <div class="slide-content-wrapper">
-        <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/679e52e6fcf5d61b2ee6db4c/1738429158605/Headshot_20220829_Jack+Cottrell_Richard_Waine_Lancaster_PA_0318+%28horizontal%29+-+compressed.jpg" alt="acting headshots, acting headshots lancaster, lancaster actor headshots, professional acting headshots, professional headshots, actor headshots, headshots for actors, Lancaster studio headshots, performer headshots, theatrical headshots, commercial headshots, Lancaster theater headshots, Lancaster commercial headshots" width={600} height={480} />
-        <div class="slide-content slide-content2">
-          <h2 class="heading">Acting Headshots</h2>
-          <div class="slide-text">
+      <div class="feature-slide">
+        <div class="slide-content-wrapper">
+          <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/679e52e6fcf5d61b2ee6db4c/1738429158605/Headshot_20220829_Jack+Cottrell_Richard_Waine_Lancaster_PA_0318+%28horizontal%29+-+compressed.jpg" alt="acting headshots, acting headshots lancaster, lancaster actor headshots, professional acting headshots, professional headshots, actor headshots, headshots for actors, Lancaster studio headshots, performer headshots, theatrical headshots, commercial headshots, Lancaster theater headshots, Lancaster commercial headshots" width={600} height={480} />
+          <div class="slide-content slide-content2">
+            <h2 class="heading">Acting Headshots</h2>
+            <div class="slide-text">
 
 
-           <p> Casting directors and agents see tons of actor headshots daily. Powerful and professional headshots help you stand out from other performers.</p>
+             <p> Casting directors and agents see tons of actor headshots daily. Powerful and professional headshots help you stand out from other performers.</p>
 
 <p>Acting headshots are used to determine if you have the right attributes and personality for a production.</p>
 
@@ -59,47 +55,47 @@ import { Image } from 'astro:assets';
 <p>I understand the nuances of the performing arts industry and will work with you to create headshots that capture your essence and align with the specific demands of your craft.</p>
 
 
+            </div>
           </div>
+
         </div>
-
       </div>
-    </li>
 
-    <li class="feature-slide">
-      <div class="slide-content-wrapper">
-        <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67c5f5a68a5cab799090ec0c/1741026726428/Headshot_20180414_Ken+Giglio_Richard_Waine_Lancaster_PA_0060-2+-+compressed.jpg" alt="LinkedIn headshots, LinkedIn profile picture, LinkedIn profile photo, Lancaster social media headshots, professional headshots, professional headshot photographer, Richard Waine photography, studio headshots" width={600} height={480} />
-        <div class="slide-content slide-content3">
-          <h2 class="heading">LinkedIn Headshots</h2>
-          <div class="slide-text">
+      <div class="feature-slide">
+        <div class="slide-content-wrapper">
+          <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67c5f5a68a5cab799090ec0c/1741026726428/Headshot_20180414_Ken+Giglio_Richard_Waine_Lancaster_PA_0060-2+-+compressed.jpg" alt="LinkedIn headshots, LinkedIn profile picture, LinkedIn profile photo, Lancaster social media headshots, professional headshots, professional headshot photographer, Richard Waine photography, studio headshots" width={600} height={480} />
+          <div class="slide-content slide-content3">
+            <h2 class="heading">LinkedIn Headshots</h2>
+            <div class="slide-text">
 
 
-           <p>
-            LinkedIn is where professionals find value, business relationships, and clients. Using a subpar headshot on your LinkedIn profile is like having no headshot at all.</p>
+             <p>
+              LinkedIn is where professionals find value, business relationships, and clients. Using a subpar headshot on your LinkedIn profile is like having no headshot at all.</p>
 
 <p>An incredible LinkedIn headshot demonstrates to your audience that you invest in yourself, that details matter, and that excellence is the guiding principle of how you do business.</p>
 
 <p>Social selling requires a complete and well-rounded social presence. Your audience should receive your business and your team as an authority. Present yourself as the best solution to their problem.
 
-            </p>
+              </p>
 
 
+            </div>
           </div>
+
         </div>
-
       </div>
-    </li>
 
-    <li class="feature-slide">
-      <div class="slide-content-wrapper">
-        <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/675ef24237488f7c4db858aa/1734275651178/Chubb+-+Contact+Sheet+%28square%29-1.jpg" alt="Office Headshots, Professional Headshots on Location, Team Headshots" width={600} height={600} />
-        <div class="slide-content slide-content4">
-          <h2 class="heading">Office Headshots</h2>
-          <div class="slide-text">
+      <div class="feature-slide">
+        <div class="slide-content-wrapper">
+          <Image class="slide-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/675ef24237488f7c4db858aa/1734275651178/Chubb+-+Contact+Sheet+%28square%29-1.jpg" alt="Office Headshots, Professional Headshots on Location, Team Headshots" width={600} height={600} />
+          <div class="slide-content slide-content4">
+            <h2 class="heading">Office Headshots</h2>
+            <div class="slide-text">
 
 
-           <p>
+             <p>
 
-             Your business is to develop products, serve your clients, improve company performance, and/or care for revenue and expenses.</p>
+               Your business is to develop products, serve your clients, improve company performance, and/or care for revenue and expenses.</p>
 
 <p>My business is to care for the marketing needs and the people of your business.</p>
 
@@ -107,17 +103,18 @@ import { Image } from 'astro:assets';
 
 <p>Presenting your staff as a unified team of professionals goes a long way towards furthering your brand, improving your marketing material, and showing your clients that you care.
 
-            </p>
+              </p>
 
 
+            </div>
           </div>
+
         </div>
-
       </div>
-    </li>
 
-  </ul>
-</div>
+    </div>
+  </div>
+</section>
 
 <script>
 import gsap from 'gsap';
@@ -129,96 +126,77 @@ gsap.registerPlugin(ScrollTrigger);
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (!prefersReducedMotion) {
-  // Animate each slide as it enters viewport
   const slides = gsap.utils.toArray('.feature-slide');
+  const scroller = document.querySelector('.features-scroller');
 
+  // Main horizontal scroll animation controlled by vertical scroll
+  const horizontalScroll = gsap.to(slides, {
+    xPercent: -100 * (slides.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".features-section",
+      pin: true,
+      scrub: 1,
+      snap: 1 / (slides.length - 1),
+      end: () => "+=" + scroller.offsetWidth,
+      invalidateOnRefresh: true
+    }
+  });
+
+  // Animate content within each slide
   slides.forEach((slide: any) => {
-    const content = slide.querySelector(".slide-content");
     const heading = slide.querySelector(".heading");
     const text = slide.querySelector(".slide-text");
     const image = slide.querySelector(".slide-image");
 
-    if (content) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: slide,
-          start: "left 80%",
-          end: "left 20%",
-          containerAnimation: false,
-          toggleActions: "play none none reverse",
-        }
-      });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: slide,
+        containerAnimation: horizontalScroll,
+        start: "left center",
+        end: "center center",
+        scrub: true,
+      }
+    });
 
-      if (heading) tl.from(heading, { opacity: 0, y: 400, ease: "power1.inOut", duration: 1});
-      if (text) tl.from(text, { opacity: 0, y: 400, ease: "power2.Out", duration: 1}, "-=0.5");
-      if (image) tl.from(image, { opacity: 0, x: 1000, y: 1000, scale: 0, ease: "slow", duration: 1}, "-=1.5");
-    }
+    if (heading) tl.from(heading, { opacity: 0, y: 400, ease: "power1.inOut" }, 0);
+    if (text) tl.from(text, { opacity: 0, y: 400, ease: "power2.Out" }, 0.2);
+    if (image) tl.from(image, { opacity: 0, x: 1000, y: 1000, scale: 0, ease: "slow" }, 0);
   });
+
 } else {
-  // For users who prefer reduced motion, just fade in
+  // For users who prefer reduced motion, just show content
   gsap.set('.feature-slide', { opacity: 1 });
+  gsap.set('.feature-slide *', { opacity: 1, x: 0, y: 0, scale: 1 });
 }
 </script>
 
 <style>
-.wrapper {
-  display: grid;
+.features-section {
   width: 100%;
   overflow: hidden;
 }
 
+.features-container {
+  position: relative;
+  width: 100%;
+}
+
 .features-scroller {
   display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x proximity;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  gap: var(--size-5);
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  width: 100%;
-
-  /* Show scrollbar for better accessibility */
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent) var(--drkbg);
-}
-
-.features-scroller::-webkit-scrollbar {
-  height: 12px;
-}
-
-.features-scroller::-webkit-scrollbar-track {
-  background: var(--drkbg);
-}
-
-.features-scroller::-webkit-scrollbar-thumb {
-  background-color: var(--accent);
-  border-radius: 6px;
-}
-
-.features-scroller:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  flex-wrap: nowrap;
+  width: fit-content;
 }
 
 .feature-slide {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
-  scroll-snap-stop: normal;
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--drkbg);
   color: var(--ltclr);
-  min-height: 500px;
-}
-
-/* Show "peeking" on mobile for affordance */
-@media (max-width: 768px) {
-  .feature-slide {
-    flex: 0 0 95%;
-  }
 }
 
 .slide-content-wrapper {
@@ -271,10 +249,6 @@ p {
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .features-scroller {
-    scroll-behavior: auto;
-  }
-
   .feature-slide * {
     animation: none !important;
     transition: none !important;
