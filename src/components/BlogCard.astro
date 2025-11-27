@@ -13,7 +13,7 @@ const { category, imageSrc, imageAlt, cardCategory, blogTitle, blogExcerpt, slug
 ---
 
 <div class="blog-card" data-category={category}>
-        <img src={imageSrc} alt={imageAlt}>
+        <img src={imageSrc} alt={imageAlt} loading="lazy">
         <div class="blog-card-content">
               <span class="blog-card-category">{cardCategory}</span>
               <h3 class="blog-card-title">{blogTitle}</h3>

@@ -1,4 +1,5 @@
 ---
+
 // @ts-nocheck
 // Hero Section Component - World Class Headshot Experience
 
@@ -45,12 +46,22 @@ const allHeroImages = Object.values(allHeroImagesGlob);
 // Find the specific images we want based on filenames
 const getImageByPath = (path: string) => {
   const filename = path.split('/').pop();
-  return allHeroImages.find(img => img.default.src.includes(filename || ''));
+  const found = allHeroImages.find(img => img.default.src.includes(filename || ''));
+  
+  // Return first image as fallback if not found
+  if (!found) {
+    console.error(`Image not found: ${filename}`);
+    return allHeroImages[0];
+  }
+  
+  return found;
 };
 
 const heroImage1 = getImageByPath(heroImages[0]);
 const heroImage2 = getImageByPath(heroImages[1]);
+
 ---
+
 
 <!-- World-Class Hero Experience -->
 <main class="hero-experience" id="heroExperience">
@@ -113,7 +124,8 @@ const heroImage2 = getImageByPath(heroImages[1]);
                                 <Image src={heroImage2.default}
                                      alt="Professional Executive Headshot"
                                      class="hero-image"
-                                     data-index={1} />
+                                     data-index={1}
+                                     loading="lazy" />
                         </div>
                         <div class="image-layer shadow"></div>
                     </div>
@@ -215,7 +227,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
         max-width: 100%;
 
         @media (width <= 768px){
-            padding:2em;
+            padding-inline:var(--size-7);
             
         
         }
@@ -314,6 +326,9 @@ const heroImage2 = getImageByPath(heroImages[1]);
         transform-style: preserve-3d;
         margin-top: var(--size-825); /* 50px */
        
+        @media (width <=768px){
+            margin-top:0;
+        }
     }
 
     .showcase-container {
@@ -467,18 +482,20 @@ const heroImage2 = getImageByPath(heroImages[1]);
 
         .experience-content {
             grid-template-columns: 1fr;
-            grid-gap: 40px;
-           padding:0;
+            gap: var(--size-775);
+            padding:0;
 
         }
 
         .experience-title {
             font-size: clamp(2.5rem, 8vw, 6rem);
+            text-align:center;
         }
 
         .action-buttons {
             flex-direction: column;
-            gap: 20px;
+            gap: var(--size-4);
+            
         }
 
         .image-depth-layers {

@@ -17,6 +17,9 @@ import DidYouKnow from '../components/DidYouKnow.astro';
 import FAQs from '../components/FAQs.astro';
 import NeuralPortrait from '../components/NeuralPortrait.astro';
 import FloatingStats from '../components/FloatingStats.astro';
+import videoPoster from '../assets/RW_FINAL_V1_FOR REVIEW.00_00_48_06.Still004 (16 x 9) - compressed.jpg';
+import promoVideo from '../assets/RW_V2_For Review-2.mp4';
+import captions from '../assets/captions.vtt';
 
 const title = 'Richard Waine Photography';
 const h1 = 'Professional Headshots Lancaster';
@@ -70,10 +73,10 @@ const heroContent = {
 
 	<section id="promo-video">
 
-				<video class="promo-video" controls controlslist="nodownload noplaybackrate nopictureinpicture" loop width="1000" height="563" poster="src/assets/RW_FINAL_V1_FOR REVIEW.00_00_48_06.Still004 (16 x 9) - compressed.jpg" preload="metadata" aria-label="Professional headshot photography promotional video">
-  				<source src="src/assets/RW_V2_For Review-2.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-  				</video>
+				<video class="promo-video" controls controlslist="nodownload noplaybackrate nopictureinpicture" loop width="1000" height="563" poster={videoPoster.src}>
+  <source src={promoVideo} type="video/mp4">
+  <track kind="captions" src={captions} srclang="en" label="English" default>
+</video>
 
 	</section>
 

@@ -22,16 +22,6 @@ import image0056 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
 import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienstein_Richard Waine_Lancaster_PA_0079 (horizontal) - compressed.jpg';
 ---
 
-<!-- OLD CODE - COMMENTED OUT
-<div class="problem-wrapper">
-    <div class="text-content">
-        <h2 class="text-1" id="paragraph-1">{title}</h2>
-        <p class="text-2" id="paragraph-2" set:html={description}></p>
-        <p class="text-3 accent" id="paragraph-3">{prefixText} <span class="highlight">{highlightText}</span> {suffixText}</p>
-    </div>
-</div>
--->
-
 <!-- CONCEPT 5: Diagonal Triptych -->
 <div class="diagonal-triptych">
     <div class="problem-text-top">
@@ -41,15 +31,15 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
 
     <div class="triptych-container">
         <div class="triptych-panel panel-left">
-            <Image src={image0090} alt="Professional headshot example showing confident expression" class="diagonal-img" />
+            <Image src={image0090} alt="Professional headshot example showing confident expression" class="diagonal-img" loading="lazy" layout='constrained' width={1475} height={1180} />
             <div class="panel-overlay"></div>
         </div>
         <div class="triptych-panel panel-center">
-            <Image src={image0056} alt="Professional headshot demonstrating quality photography" class="diagonal-img" />
+            <Image src={image0056} alt="Professional headshot demonstrating quality photography" class="diagonal-img" loading="lazy" layout='constrained' width={1475} height={1180} />
             <div class="panel-overlay"></div>
         </div>
         <div class="triptych-panel panel-right">
-            <Image src={image0079} alt="Executive headshot showcasing professional presence" class="diagonal-img" />
+            <Image src={image0079} alt="Executive headshot showcasing professional presence" class="diagonal-img" loading="lazy" layout='constrained' width={1475} height={1180} />
             <div class="panel-overlay"></div>
         </div>
     </div>
@@ -60,122 +50,6 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
 </div>
 
 <style is:global>
-    /* OLD CODE - COMMENTED OUT
-    .problem-wrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .scroll-container {
-        width: 100%;
-        max-width: 1600px;
-        height: 60vh;
-        display: flex;
-        gap: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .scroll-panel {
-        height: 60vh;
-        overflow: hidden;
-    }
-
-    .text-panel {
-        background: #121212;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex: 1;
-    }
-
-    .text-content {
-        padding: 3rem;
-        text-align: center;
-        color: black;
-        position: relative;
-        height: auto;
-        width: 100%;
-        max-width: 80%;
-        margin: 0 auto;
-        display:grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        place-items:center;
-    }
-
-    #paragraph-1,
-    #paragraph-2,
-    #paragraph-3 {
-        margin: 0 0 2em 0;
-    }
-
-    #paragraph-1 {
-        font-size: 32px;
-        font-weight: 700;
-        text-transform: uppercase;
-        line-height: 1.3;
-    }
-
-    #paragraph-2,
-    #paragraph-3 {
-        font-size: 20px;
-        line-height: 1.7;
-    }
-
-    #paragraph-3 {
-        font-weight: 700;
-        font-size: 22px;
-    }
-
-    #paragraph-3 .highlight {
-        color: #03a9f4;
-    }
-
-    .image-panel {
-        flex: 0;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .image-wrapper {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    .panel-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    @media (max-width: 1024px) {
-        .scroll-container {
-            flex-direction: column;
-        }
-
-        .text-content {
-            padding: 2rem;
-        }
-
-        .text-content h2 {
-            font-size: 24px;
-        }
-
-        .text-content p {
-            font-size: 18px;
-        }
-    }
-    END OLD CODE */
-
     /* CONCEPT 5: Diagonal Triptych - SVG clipPath Method */
     .diagonal-triptych {
         
@@ -368,13 +242,11 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
 
     @media (max-width: 1024px) {
         .diagonal-triptych .triptych-container {
-            flex-direction: column;
-        }
-
-        .diagonal-triptych .diagonal-img,
-        .diagonal-triptych .triptych-panel:nth-child(2) .diagonal-img,
-        .diagonal-triptych .triptych-panel:nth-child(3) .diagonal-img {
-            clip-path: none;
+            margin-block:var(--size-7);
+            display:grid;
+            grid-template-columns: 1fr;
+            gap:var(--size-7);
+            /* flex-direction: column; */
         }
     }
 </style>

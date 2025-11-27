@@ -1,17 +1,18 @@
 ---
 export interface Props {
   faqs: { question: string; answer: string }[];
+  idPrefix?: string;
 }
 
-const { faqs } = Astro.props;
+const { faqs, idPrefix = 'faq' } = Astro.props;
 ---
 
 
 <div class="faq-content" style="margin-top:var(--size-7)">
   {faqs.map((faq, index) => (
     <div>
-      <input type="checkbox" id={`question${index}`} name="q" class="questions">
-      <label for={`question${index}`} class="question">
+      <input type="checkbox" id={`${idPrefix}-question${index}`} name="q" class="questions">
+<label for={`${idPrefix}-question${index}`} class="question">
         {faq.question}
       </label>
       <div class="answers">
