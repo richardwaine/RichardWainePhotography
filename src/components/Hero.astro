@@ -7,6 +7,7 @@ import { Image } from 'astro:assets';
 import PrimaryButton from './PrimaryButton.astro';
 import SecondaryButton from './SecondaryButton.astro';
 import heroBackground from '../assets/bts-hero-background.jpg';
+import heroBackgroundMobile from '../assets/bts-hero-background-mobile.jpg';
 
 export interface Props {
   title?: string[];
@@ -66,8 +67,11 @@ const heroImage2 = getImageByPath(heroImages[1]);
 <!-- World-Class Hero Experience -->
 <main class="hero-experience" id="heroExperience">
 
-    <!-- Optimized Background Image -->
+   <!-- Optimized Background Images - Responsive -->
+<picture class="hero-background-picture">
+    <source media="(max-width: 768px)" srcset={heroBackgroundMobile.src} />
     <Image src={heroBackground} alt="" class="hero-background-image" priority />
+</picture>
 
     <!-- Background with Sophisticated Depth -->
     <div class="background-depth">
@@ -185,18 +189,25 @@ const heroImage2 = getImageByPath(heroImages[1]);
 
     }
 
-    /* Hero Background Image */
-    .hero-background-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        filter: brightness(1);
-        z-index: -2;
-    }
+    
+/* Hero Background Picture Container */
+.hero-background-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+/* Hero Background Image */
+.hero-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(1);
+}
 
     /* Hero Experience Layout */
     .hero-experience {
@@ -430,7 +441,7 @@ const heroImage2 = getImageByPath(heroImages[1]);
         50% { transform: rotateY(0deg) rotateX(5deg); }
         75% { transform: rotateY(-5deg) rotateX(2deg); }
     }
-
+/*
     @keyframes buttonGlow {
         0%, 100% { 
             box-shadow: 
@@ -447,9 +458,11 @@ const heroImage2 = getImageByPath(heroImages[1]);
                 0 0 120px rgba(3, 169, 244, 0.35),
                 inset 0 1px 2px rgba(255, 255, 255, 0.25),
                 inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+              
         }
     }
-
+*/
+    
     /* Responsive Design */
     @media (max-width: 1200px) {
         .experience-content {

@@ -201,17 +201,6 @@
 }
 
 
-
-
-.tabs input[type=radio]:checked+label{
-  background:var(--ltclr);
-  color:var(--blkclr)
-}
-
-.tabs input[type=radio]:checked+label+.tab{
-  display:block
-}
-
 @media (max-width:45em){
   .tabs .tab,.tabs label{
     order:initial
@@ -224,13 +213,7 @@
   }
 }
 
-#tabs section{
-  background:var(--ltclr);
-  min-height:100vh;
-  line-height: var(--line-height-normal);
-  margin:0 auto;
-  font-size:var(--fs-500)
-}
+
 
 
 @media screen and (min-width:768px){
@@ -316,12 +299,14 @@
 
 
 
-/*professions styles*/
+/* professions styles*/
 
+/*
 .professions-list{
   margin-top:var(--size-9);
   display:grid;
-  grid-template-columns:1fr
+  grid-template-columns:1fr;
+  outline:2px solid red;
 }
 
 @media screen and (min-width:768px){
@@ -330,7 +315,9 @@
     grid-template-columns:repeat(4, 1fr);
     justify-content:space-between
   } 
-}
+} 
+  
+*/
 
 
 

@@ -23,7 +23,7 @@ import PrimaryButton from './PrimaryButton.astro';
       <div class=content-gameplan>
         <p>Give the <b>SCHEDULE</b> button a tap!</p>
         <p>Select an appointment that works best for you.</p>
-        <PrimaryButton text="SCHEDULE" url="/rates" size="small" />
+        <PrimaryButton text="SCHEDULE" url="/rates"  />
       </div>
     </div>
   </article>
@@ -40,7 +40,7 @@ import PrimaryButton from './PrimaryButton.astro';
     <div class="face gameplan2">
       <div class=content-gameplan>
         <p>It's fun and easy!<br>I will guide you into pictures that will propel your career.</p>
-        <PrimaryButton text="SCHEDULE" url="/rates" size="small" />
+        <PrimaryButton text="SCHEDULE" url="/rates"  />
       </div>
     </div>
   </article>
@@ -57,7 +57,7 @@ import PrimaryButton from './PrimaryButton.astro';
     <div class="face gameplan2">
       <div class=content-gameplan>
         <p>Share your images with everyone!<br> Stand out and be recognized as an expert in your field.</p>
-        <PrimaryButton text="SCHEDULE" url="/rates" size="small" />
+        <PrimaryButton text="SCHEDULE" url="/rates"  />
       </div>
     </div>
   </article>
@@ -67,19 +67,19 @@ import PrimaryButton from './PrimaryButton.astro';
 <style>
 
 /*benefits-3 & Gameplan*/
-.card .face,
 .gameplan-card .face {
   width: min(370px, 100%);
   margin-inline:auto;
   height: 200px;
   transition: 0.5s;
   text-align: center;
+ 
 }
-.card .face.face1,
 .container-gameplan,
 .gameplan-card .face.gameplan1 {
   display: flex;
   align-items: center;
+   
 }
 
 
@@ -87,24 +87,15 @@ import PrimaryButton from './PrimaryButton.astro';
 .container-gameplan {
   flex-direction: column;
   justify-items: center;
-  
-  
-
-
 
 
 }
 
-
-
-
-
-
-.card,
 .gameplan-card {
   position: relative;
 }
-.card .face.face1,
+
+
 .gameplan-card .face.gameplan1 {
   position: relative;
   background-color: var(--drkbg);
@@ -112,7 +103,8 @@ import PrimaryButton from './PrimaryButton.astro';
   z-index: 1;
   transform: translateY(100px);
 }
-.card:hover .face.face1,
+
+
 .gameplan-card:hover .face.gameplan1 {
   background: var(--drkbg);
   transform: translateY(0);
@@ -130,18 +122,14 @@ import PrimaryButton from './PrimaryButton.astro';
   filter: invert(100%);
   margin-inline: auto;
 }
-.card span,
-.gameplan-card span {
-  font-weight: var(--fw-bold);
-  color: var(--ltclr);
-  margin: 0;
-}
+
 
 .gameplan-card span {
     font-weight: var(--fw-bold);
     color: var(--ltclr);
     margin: 0;
     margin-top: var(--size-5);
+  
   }
 
 
@@ -151,14 +139,14 @@ import PrimaryButton from './PrimaryButton.astro';
   justify-content: center;
   align-items: center;
 }
-.card .face.face2,
+
 .gameplan-card .face.gameplan2 {
   position: relative;
   padding: var(--size-4);
   box-shadow: var(--shadow);
   transform: translateY(-100px);
 }
-.card:hover .face.face2,
+
 .gameplan-card:hover .face.gameplan2 {
   transform: translateY(0);
 }
@@ -194,6 +182,19 @@ import PrimaryButton from './PrimaryButton.astro';
   letter-spacing: var(--ltr-space);
   padding-bottom:var(--size-7);
 }
+
+.content-gameplan :global(.primary-btn) {
+    font-size: var(--fs-350);
+    padding: var(--size-3) var(--size-8);
+    margin-top:var(--size-3);
+  }
+
+  @media screen and (max-width: 640px) {
+    .content-gameplan :global(.primary-btn) {
+      font-size: var(--fs-300);
+    }
+  }
+
 
 
 
