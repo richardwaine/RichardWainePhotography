@@ -156,19 +156,7 @@ const {
         z-index: 10;
     }
 
-    .footer-trigger:hover .trapezoid-indicator {
-        opacity: 1;
-        transform: scale(1.05);
-        background: linear-gradient(135deg, 
-            rgba(15, 15, 15, 0.95) 0%, 
-            rgba(26, 26, 26, 0.95) 100%);
-        box-shadow: 
-            0 12px 35px var(--shadow-clr-deep),
-            0 6px 20px rgba(3, 169, 244, 0.6),
-            0 0 40px var(--glow-clr-strong);
-    }
 
-    
     .footer-panel {
         position: fixed;
         bottom: -500px;
@@ -189,11 +177,7 @@ const {
 
 
 
-    .footer-trigger:hover + .footer-panel,
-    .footer-trigger:focus + .footer-panel,
-    .footer-trigger:focus-visible + .footer-panel,
-    .footer-panel:hover,
-    .footer-panel:focus-within {
+    .footer-panel.open {
         bottom: 0;
     }
 
@@ -337,7 +321,10 @@ const {
     }
 
     @media (max-width: 768px) {
+
+
         .footer-content {
+            
             padding: var(--size-650);
         }
 
@@ -358,9 +345,39 @@ const {
         }
         
         .footer-panel {
-            height: 500px;
-            bottom: -500px;
+            /* height: 500px; */
+            /* bottom: -500px; */
+
+
+            height: calc(100vh - var(--header-height));
+            overflow-y: auto;
+            bottom: -100%;
+        }
+
+        .footer-panel.open{
+            bottom:0;
         }
     }
 </style>
 
+<script>
+document.addEventListener('astro:page-load', () => {
+    const trigger = document.getElementById('footerTrigger');
+    const panel = document.getElementById('footerPanel');
+
+    if (trigger && panel) {
+        trigger.addEventListener('click', () => {
+            panel.classList.toggle('open');
+            const isOpen = panel.classList.contains('open');
+            trigger.setAttribute('aria-expanded', isOpen.toString());
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!trigger.contains(e.target as Node) && !panel.contains(e.target as Node)) {
+                panel.classList.remove('open');
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+});
+</script>

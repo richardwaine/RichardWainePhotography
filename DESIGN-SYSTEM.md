@@ -337,12 +337,60 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
 ## Responsive Design
 
-### Breakpoints
+### Breakpoint Definitions
+
+These breakpoints are used consistently across the entire site. DO NOT deviate from these values.
+
+| Name | Min Width | Max Width | Usage |
+|------|-----------|-----------|-------|
+| Mobile | 320px | 767px | Phones in portrait and landscape |
+| Tablet | 768px | 1023px | Tablets in portrait, small laptops |
+| Desktop Small | 1024px | 1439px | Laptops, small desktop monitors |
+| Desktop Large | 1440px | ∞ | Large desktop monitors |
+
+### CSS Media Query Syntax
+
+Use these EXACT media queries throughout the project:
+
 ```css
-@media (max-width: 768px)   /* Mobile */
-@media (max-width: 1024px)  /* Tablet */
-@media (max-width: 1200px)  /* Small desktop */
+/* Mobile: 320px - 767px */
+@media (max-width: 767px) {
+  /* Mobile styles */
+}
+
+/* Tablet: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet styles */
+}
+
+/* Desktop Small: 1024px - 1439px */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /* Small desktop styles */
+}
+
+/* Desktop Large: 1440px+ */
+@media (min-width: 1440px) {
+  /* Large desktop styles */
+}
 ```
+
+### Testing Devices
+
+Test all pages at these specific widths:
+- 320px (iPhone SE)
+- 375px (iPhone 12 mini)
+- 390px (iPhone 12/13/14)
+- 768px (iPad portrait)
+- 1024px (iPad landscape / small laptop)
+- 1440px (Desktop)
+- 1920px (Large desktop)
+
+### Rules
+
+1. **NEVER** use breakpoint values other than those defined above
+2. **NEVER** create component-specific breakpoints
+3. **ALWAYS** test at all breakpoint boundaries
+4. **ALWAYS** use min-width/max-width pattern shown above
 
 ### Mobile-First Approach
 - Start with mobile layout

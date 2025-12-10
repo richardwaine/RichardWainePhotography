@@ -44,8 +44,9 @@ const {
             </svg>
             </a>
         </div>
-        
+        <div class="header-cta-wrapper">
         <HeaderButton text={ctaButton.text} url={ctaButton.url} />
+        </div>
     </div>
 </header>
 
@@ -112,7 +113,17 @@ const {
         }
 
         .logo {
-            height: 60px;
+            width:100%;
+            
+        }
+
+        .logo-container{
+            
+            margin:0 auto;
+        }
+
+       .header-cta-wrapper{
+            display:none;
         }
 
     }

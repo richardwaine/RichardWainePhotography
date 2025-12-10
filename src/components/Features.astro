@@ -1,5 +1,6 @@
 ---
 import FloatingStats from '../components/FloatingStats.astro';
+import PrimaryButton from './PrimaryButton.astro';
 
 import { Image } from 'astro:assets';
 
@@ -8,6 +9,17 @@ import cottrellImg from '../assets/images/features/Headshot_20220829_Jack Cottre
 import giglioImg from '../assets/images/features/Headshot_20180414_Ken Giglio_Richard_Waine_Lancaster_PA_0060-2 - compressed.jpg';
 import chubbImg from '../assets/images/features/Chubb - Contact Sheet (square)-1 - compressed.jpg';
 
+
+const {
+
+  primaryButtonText = "Learn More",
+  secondaryButtonText = "SCHEDULE CONSULTATION",
+  businessHeadshotsUrl = "/rates", // Business Headshots
+  actingHeadshotsUrl = "/rates", // Acting Headshots
+  linkedinHeadshotsUrl = "/rates", // LinkedIn Headshots
+  officeHeadshotsUrl = "/rates", // Office Headshots
+  secondaryButtonUrl = "https://app.acuityscheduling.com/schedule.php?owner=13511326&appointmentType=11959793",
+} = Astro.props;
 ---
 
 
@@ -18,7 +30,7 @@ import chubbImg from '../assets/images/features/Chubb - Contact Sheet (square)-1
 
       <div class="feature-slide">
         <div class="slide-content-wrapper">
-          <Image class="slide-image" src={adoteImg} alt="corporate headshots lancaster, lancaster corporate headshots, Richard Waine photography, Lancaster studio headshots, on-location headshots, business headshots, Lancaster business headshots, business headshots Lancaster, commercial photography, commercial headshots, marketing headshots, branding headshots, about us headshots, about us page, Lancaster conference headshots, Lancaster convention headshots, Lancaster expo headshots" width={600} height={480} loading="lazy" />
+          <Image class="slide-image" src={adoteImg} alt="corporate headshots lancaster, lancaster corporate headshots, Richard Waine photography, Lancaster studio headshots, on-location headshots, business headshots, Lancaster business headshots, business headshots Lancaster, commercial photography, commercial headshots, marketing headshots, branding headshots, about us headshots, about us page, Lancaster conference headshots, Lancaster convention headshots, Lancaster expo headshots" width={700} height={560} loading="lazy" />
           <div class="slide-content slide-content1">
             <h2 class="heading">Business Headshots</h2>
             <div class="slide-text">
@@ -40,6 +52,8 @@ import chubbImg from '../assets/images/features/Chubb - Contact Sheet (square)-1
               </p>
 
             </div>
+
+            <PrimaryButton text={primaryButtonText} url={businessHeadshotsUrl}  />
           </div>
 
         </div>
@@ -63,6 +77,7 @@ import chubbImg from '../assets/images/features/Chubb - Contact Sheet (square)-1
 
 
             </div>
+            <PrimaryButton text={primaryButtonText} url={actingHeadshotsUrl}  />
           </div>
 
         </div>
@@ -87,6 +102,7 @@ import chubbImg from '../assets/images/features/Chubb - Contact Sheet (square)-1
 
 
             </div>
+            <PrimaryButton text={primaryButtonText} url={linkedinHeadshotsUrl}  />
           </div>
 
         </div>
@@ -114,6 +130,7 @@ import chubbImg from '../assets/images/features/Chubb - Contact Sheet (square)-1
 
 
             </div>
+            <PrimaryButton text={primaryButtonText} url={officeHeadshotsUrl}  />
           </div>
 
         </div>
@@ -151,7 +168,8 @@ mm.add(DESKTOP_BREAKPOINT, () => {
                 trigger: ".features-section",
                 pin: true,
                 scrub: 1,
-                snap: 1 / (slides.length - 1),
+                // snap: 1 / (slides.length - 1),
+               // snap: { snapTo: 1 / (slides.length - 1), directional: true, delay: 0.2 },
                 end: () => `+=${(slides.length - 1) * window.innerWidth}`,
                 invalidateOnRefresh: true,
             }
@@ -173,9 +191,12 @@ mm.add(DESKTOP_BREAKPOINT, () => {
                 }
             });
 
-            if (heading) tl.from(heading, { opacity: 0, y: 400, ease: "power1.inOut" }, 0);
-            if (text) tl.from(text, { opacity: 0, y: 400, ease: "power2.out" }, 0.2);
-            if (image) tl.from(image, { opacity: 0, x: 1000, y: 1000, scale: 0, ease: "slow" }, 0);
+
+  
+           if (heading) tl.from(heading, { opacity: 0, y: 0, ease: "power1.inOut" }, 0);
+           if (text) tl.from(text, { opacity: 0, y: 0, ease: "power2.out" }, 0.2);
+           if (image) tl.from(image, { opacity: 0, x: 0, y: 0, scale: 0, ease: "slow" }, 0);
+           
         });
     }
 
@@ -248,7 +269,7 @@ p {
   margin: auto;
   height: auto;
   box-shadow: var(--shadow);
-  width: min(600px, 100%);
+  width: min(700px, 100%);
 }
 
 .slide-content {
@@ -282,6 +303,12 @@ p {
         display: flex; /* Restore centered content layout */
         padding-block: 0;
     }
+}
+
+ .features-section :global(.primary-btn){
+  margin-top:var(--size-5);
+  padding: var(--size-3) var(--size-8);
+  font-size: var(--fs-350);
 }
 </style>
 

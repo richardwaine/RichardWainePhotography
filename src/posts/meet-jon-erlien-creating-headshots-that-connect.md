@@ -160,13 +160,11 @@ And for everyone: Be human first. That's where the magic lives.
 
 Ready to create headshots that make people stop scrolling? You can find Jon Erlien at:
 
-*   **Website:** [www.jonerlienphoto.com](http://www.jonerlienphoto.com)
-*   **Instagram:** [@jonerlienphoto](https://instagram.com/jonerlienphoto)
+* **Website:** [www.jonerlienphoto.com](http://www.jonerlienphoto.com)
+* **Instagram:** [@jonerlienphoto](https://instagram.com/jonerlienphoto)
 
 Based in Sheboygan but working with clients throughout the Midwest and beyond, Jon is ready to help you tell your story and build your brand with images that stick.
 
 * * *
 
 _Looking for professional headshots in Lancaster, Pennsylvania? Learn more about our [headshot photography services](/) and discover how the right image can transform your professional presence._
-
-
