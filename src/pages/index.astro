@@ -72,11 +72,12 @@ const heroContent = {
 	</section>
 
 	<section id="promo-video">
-
-				<video class="promo-video" controls controlslist="nodownload noplaybackrate nopictureinpicture" loop width="1000" height="563" poster={videoPoster.src}>
-  <source src={promoVideo} type="video/mp4">
-  <track kind="captions" src={captions} srclang="en" label="English" default>
-</video>
+		<div class="video-container">
+			<video class="promo-video" controls controlslist="nodownload noplaybackrate nopictureinpicture" loop width="1000" height="563" poster={videoPoster.src}>
+			<source src={promoVideo} type="video/mp4">
+			<track kind="captions" src={captions} srclang="en" label="English" default>
+			</video>
+		</div>
 
 	</section>
 
@@ -143,15 +144,37 @@ place-items:center;
 
 }
 	
+/*video section */
 
 #promo-video {
-		height:100vh;
-		padding:var(--size-8) 0;
 
-		> * {
-			height:100%;
-		}
+padding-block:var(--size-8);
+
 }
+
+.video-container{
+height:auto;
+padding-block:var(--size-7);
+}
+
+.promo-video{
+
+	width:min(1000px , 100%);
+}
+
+.promo-video.fixed {
+	width: 400px;
+	height: auto;
+	position: fixed;
+	bottom: 25px;
+	left: 25px;
+	z-index: 1000;
+	display: block;
+	object-fit: contain;
+}
+
+
+
 
 
 
@@ -184,15 +207,6 @@ place-items:center;
 
 }
 
-#promo-video{
-	margin:auto;
-	padding-inline:var(--size-3);
-
-
-}
-
-
-
 
 #brief-bio{
 	min-height:100vh;
@@ -212,3 +226,38 @@ place-items:center;
 
 
 </style>
+
+<script>
+import gsap from 'gsap';
+import { Flip } from 'gsap/Flip';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(Flip, ScrollTrigger);
+
+let video = document.querySelector(".promo-video");
+
+ScrollTrigger.create({
+  trigger: ".video-container",
+  start: "90% top",
+  onEnter: () => toggleVideo("add"),
+  onLeaveBack: () => toggleVideo("remove")
+});
+
+function toggleVideo(action: 'add' | 'remove') {
+  if (!video) return;
+
+  let state = Flip.getState(video);
+  if (action === 'add') {
+    video.classList.add("fixed");
+  } else {
+    video.classList.remove("fixed");
+  }
+  Flip.from(state, {
+    scale: true,
+    ease: "power3.out",
+    duration: 1
+  });
+}
+</script>
+
+

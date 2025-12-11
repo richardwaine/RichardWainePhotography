@@ -60,6 +60,7 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 	<script>
 	import Lenis from 'lenis';
 	import gsap from 'gsap';
+	import { Flip } from 'gsap/Flip';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	// Extend Window interface for TypeScript
@@ -69,8 +70,10 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 		}
 	}
 
-	// Register ScrollTrigger plugin
-	gsap.registerPlugin(ScrollTrigger);
+	// Register ScrollTrigger and Flip plugins
+	gsap.registerPlugin(ScrollTrigger, Flip);
+
+
 
 	// Wait for DOM to be ready before initializing Lenis
 	function initLenis() {
