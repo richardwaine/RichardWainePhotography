@@ -212,6 +212,11 @@ mm.add("(max-width: 767px)", () => {
     // Clear any pinned/transformed styles left by ScrollTrigger
     gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
 });
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
 </script>
 
 <style>
@@ -253,10 +258,9 @@ mm.add("(max-width: 767px)", () => {
   max-inline-size: 80%;
 }
 
-@media (min-width: 1079px) {
+@media (min-width: 67.5em) {
   .slide-content-wrapper {
     grid-template-columns: 1fr 1fr;
-    
   }
 }
 
@@ -285,18 +289,17 @@ p {
   text-align: center;
 }
 
-@media (min-width: 767px) {
-  .slide-content h2 {
-    text-align: start;
-  }
-}
-
 /* DESKTOP OVERRIDE: Restore Horizontal Scroll Behavior (768px+) */
-@media (min-width: 768px) {
+@media (min-width: 48em) {
+    .slide-content h2 {
+        text-align: start;
+    }
+
     .features-scroller {
         flex-wrap: nowrap; /* Forces slides back into a horizontal row */
         width: fit-content;
     }
+
     .feature-slide {
         width: 100vw; /* Re-enables 100vw width for horizontal scroll calculation */
         height: 100vh; /* Re-enables full viewport height for pinning */

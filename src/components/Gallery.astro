@@ -301,7 +301,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 
 /* 641px to 767px breakpoint */
 
-@container header-gallery (min-width: 641px) and (max-width: 767px) {
+@container header-gallery (min-width: 40.0625em) and (max-width: 47.9375em) {
   .gallery {
     --grid-row-gap: 1vw;
 
@@ -315,6 +315,8 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
   .gallery .image2,
   .gallery .image5,
   .gallery .image6,
+  .gallery .image7,
+  .gallery .image8,
   .gallery .image9,
   .gallery .image10 {
     display: block;
@@ -322,8 +324,6 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
   /* Explicitly hide all other images for this specific range */
   .gallery .image3,
   .gallery .image4,
-  .gallery .image7,
-  .gallery .image8,
   .gallery .image11,
   .gallery .image12,
   .gallery .image13,
@@ -335,16 +335,14 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 }
 
 /* 768px to 1024px breakpoint */
-@container header-gallery (min-width: 768px) and (max-width: 1024px) {
+@container header-gallery (min-width: calc(47.9375em + 1px)) and (max-width: 64em) {
   .gallery {
     --grid-row-gap: 1vw;
     --grid-column-gap: 1vw;
 
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(
-      3,
-      1fr
-    ); /* Explicitly set row behavior as per original */
+    grid-template-rows: repeat(3,1fr); 
+    /* Explicitly set row behavior as per original */
     column-gap: var(--grid-column-gap);
     row-gap: var(--grid-row-gap);
   }
@@ -373,7 +371,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 }
 
 /* 1025px and up breakpoint */
-@container header-gallery (min-width: 1025px) {
+@container header-gallery (min-width: calc(64em + 1px)) {
   .gallery {
     --grid-row-gap: 0.5vw;
     --grid-column-gap: 0.5vw;
@@ -403,7 +401,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
   display: none !important;
 }
 
-@container header-gallery (min-width: 1025px) {
+@container header-gallery (min-width: 64.0625em) {
   .gallery-container[data-limit="8"] .gallery {
     grid-template-rows: 1fr;
   }

@@ -73,7 +73,11 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 	// Register ScrollTrigger and Flip plugins
 	gsap.registerPlugin(ScrollTrigger, Flip);
 
-
+	// Disable browser scroll restoration and scroll to top
+	if ('scrollRestoration' in history) {
+		history.scrollRestoration = 'manual';
+	}
+	window.scrollTo(0, 0);
 
 	// Wait for DOM to be ready before initializing Lenis
 	function initLenis() {
