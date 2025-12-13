@@ -140,6 +140,117 @@ const {
   </div>
 </section>
 
+
+
+
+<script>
+
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Ensure the code runs after all elements are present and styles are calculated
+document.addEventListener("astro:page-load", () => {
+
+    let mm = gsap.matchMedia();
+    const DESKTOP_BREAKPOINT = "(min-width: 768px)";
+    const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+
+    // DESKTOP LOGIC (Horizontal Scroll)
+    mm.add(DESKTOP_BREAKPOINT, () => {
+        
+        // Disable animation for reduced motion users
+        if (window.matchMedia(REDUCED_MOTION_QUERY).matches) return; 
+
+        const slides = gsap.utils.toArray('.feature-slide');
+        const scroller = document.querySelector('.features-scroller');
+
+        // Check for necessary elements
+        if (!scroller || slides.length < 2) return;
+
+        // Force a ScrollTrigger refresh before setting up the animation
+        ScrollTrigger.refresh();
+
+
+        // Main horizontal scroll animation controlled by vertical scroll
+        const horizontalScroll = gsap.to(slides, {
+            xPercent: -100 * (slides.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".features-section",
+                pin: true,
+                scrub: 1,
+                refreshPriority: 1, //added 12/13/25
+                // Calculate end dynamically based on the number of slides
+                end: () => `+=${slides.length * window.innerWidth}`, 
+                invalidateOnRefresh: true,
+            }
+        });
+
+        // Animate content within each slide
+        slides.forEach((slide: any) => {
+            const heading = slide.querySelector(".heading");
+            const text = slide.querySelector(".slide-text");
+            const image = slide.querySelector(".slide-image");
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: slide,
+                    containerAnimation: horizontalScroll,
+                    start: "left center",
+                    end: "center center",
+                    scrub: true,
+                }
+            });
+
+
+    
+           if (heading) tl.from(heading, { opacity: 0, ease: "power1.inOut" }, 0);
+           if (text) tl.from(text, { opacity: 0, ease: "power2.out" }, 0.2);
+           if (image) tl.from(image, { opacity: 0, scale: 0.8, ease: "slow" }, 0);
+           
+        });
+
+
+// Cleanup function: Kills ScrollTriggers when screen size shrinks below 768px
+        return () => {
+            if (horizontalScroll && horizontalScroll.scrollTrigger) {
+                horizontalScroll.scrollTrigger.kill(true); // Kill main trigger
+            }
+            // Instead of killing ALL triggers, we clear props on the elements
+            // and trust the mobile logic below to handle the rest.
+            // We explicitly AVOID ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
+        };
+    });
+
+
+
+        // Cleanup function: Kills ScrollTriggers when screen size shrinks below 768px
+//        return () => {
+ //           horizontalScroll.kill(); 
+   //         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+     //       gsap.set('.features-section', { clearProps: 'all' });
+       // };
+    //});
+
+
+    // MOBILE FALLBACK LOGIC (Runs ONLY on screens smaller than 768px)
+    mm.add("(max-width: 767px)", () => {
+        // Clear any pinned/transformed styles left by ScrollTrigger
+        gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
+    });
+});
+
+</script>
+
+
+
+
+
+<!-- 
+
 <script>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -218,6 +329,8 @@ window.addEventListener("load", () => {
 });
 
 </script>
+
+-->
 
 <style>
 .features-section {

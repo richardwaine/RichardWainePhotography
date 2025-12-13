@@ -913,7 +913,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         /* Media queries for larger screens (min-width approach) */
 
         /* Original Media query for 641px and up */
-        @media (min-width: 641px) { /* Corrected from 640px to 641px */
+        @media (min-width: 40.0625em) { /* Corrected from 640px to 641px */
             .blog-container {
                 padding: 0 24px;
             }
@@ -923,7 +923,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         }
 
         /* Original Media query for 768px and up */
-        @media (min-width: 768px) {
+        @media (min-width: 48em) {
             /* Main content grid layout - UNCHANGED from original, allowing gap to inherit */
             .main-content {
                 grid-template-columns: 280px 1fr;
@@ -968,7 +968,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         }
 
         /* Original Media query for 1024px and up */
-        @media (min-width: 1024px) {
+        @media (min-width: 64em) {
             .blog-container {
                 padding-inline: 0;
             }
