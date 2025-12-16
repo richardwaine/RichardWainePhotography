@@ -126,6 +126,159 @@
 </div>
 
 
+
+<style>
+
+/* --- BASE STYLES (LARGE SCREEN LOGIC) --- */
+/* These styles define the multi-column desktop layout using order: 1/99. */
+
+.tabs, .professions-tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.professions-tabs {
+  justify-content: space-around;
+  position: relative;
+}
+
+.professions-tab {
+  margin-top: var(--size-3);
+}
+
+.tabs label, .professions-tabs label {
+  order: 1;
+  padding: var(--size-3) var(--size-8);
+  cursor: pointer;
+  background: var(--drkbg);
+  color: var(--ltclr);
+  font-weight: var(--fw-bold);
+  transition: background ease .2s;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.professions-tabs label {
+  display: block;
+  padding: var(--size-3) var(--size-8);
+  margin: var(--size-3);
+  font-size: var(--fs-400);
+  background: transparent;
+  text-transform: uppercase;
+}
+
+.tabs .tab, .professions-tabs .professions-tab {
+  order: 99;
+  width: 100%;
+  padding: var(--size-8) var(--size-3) var(--size-3);
+}
+
+.professions-tabs .professions-tab {
+  --_shadow: 2px 2px 10px rgba(0,0,0,.4);
+  flex-grow: 1;
+  display: none;
+  padding: var(--size-8);
+  background: var(--drkbg);
+  box-shadow: var(--_shadow);
+}
+
+.tabs .tab, .tabs input[type=radio], .professions-tabs input[type="radio"] {
+  display: none
+}
+
+/* Tab Content Layout (Mobile default) */
+.tab-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: var(--size-9);
+  color: var(--ltclr);
+  line-height: var(--line-height-loose);
+}
+
+.tab-content img {
+  width: 400px;
+  height: auto;
+}
+
+.tab-content p {
+  margin-block: var(--size-3);
+}
+
+.professions-tabs label, .professions-tabs h2 {
+  text-transform: uppercase;
+  margin-block: var(--size-3);
+}
+
+/* Checkbox/Radio Behavior */
+.professions-tabs input[type="radio"]:unchecked + label + .professions-tab {
+  display: block;
+  transform: translateX(-100%);
+  transition: transform 250ms ease-in
+}
+
+.professions-tabs input[type="radio"]:checked + label + .professions-tab {
+  display: block;
+  transform: translateX(0)
+}
+
+
+/* --- MOBILE STACKING (MAX-WIDTH OVERRIDES - REQUIRED FOR MOBILE VIEW) --- */
+/* These original queries must be preserved to force stacking on small screens using only the existing properties. */
+
+@media (max-width: 48em) {
+  .tabs .tab, .tabs label {
+    order: initial;
+  }
+
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: .2rem
+  }
+}
+
+@media (max-width: 45em) {
+  .professions-tabs .professions-tab,
+  .professions-tabs label {
+    order: initial;
+  }
+  .professions-tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+
+/* --- DESKTOP ENHANCEMENTS (MIN-WIDTH QUERIES) --- */
+
+@media screen and (min-width: 48em) {
+  /* Desktop Grid Layout */
+  .tab-content {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  /* Active Tab Indicator */
+  .professions-tabs input:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    margin: auto auto;
+    background: var(--accent);
+    margin-inline: var(--size-750);
+  }
+}
+</style>
+
+
+<!--
 <style>
 
 
@@ -135,14 +288,14 @@
 /**
  * Tabs
  */
-.tabs, .features-tabs,.professions-tabs,.team-tabs{
+.tabs,.professions-tabs{
   display:flex;
   flex-wrap:wrap;
 
   
   }
 
-.features-tabs,.professions-tabs,.team-tabs {
+.professions-tabs{
   justify-content:space-around;
   position:relative;
 
@@ -153,7 +306,7 @@
 }
 
 
-.tabs label, .features-tabs label,.professions-tabs label,.team-tabs label{
+.tabs label, .professions-tabs label{
   order:1;
   padding:var(--size-3) var(--size-8);
   cursor:pointer;
@@ -166,26 +319,26 @@
   position:relative;
 }
 
-.features-tabs label,.professions-tabs label,.team-tabs label {
+.professions-tabs label {
 	display: block;
 	padding:var(--size-3) var(--size-8);
 	margin:var(--size-3);
   font-size:var(--fs-400);
   background:transparent;
   text-transform:uppercase;
-  
-  
+
+
 
 }
 
-.tabs .tab, .features-tabs .features-tab, .professions-tabs .professions-tab,.team-tabs .team-tab {
+.tabs .tab, .professions-tabs .professions-tab {
   order:99;
   width:100%;
   padding:var(--size-8) var(--size-3) var(--size-3);
 
 }
 
-.features-tabs .features-tab,.professions-tabs .professions-tab,.team-tabs .team-tab {
+.professions-tabs .professions-tab{
 --_shadow:2px 2px 10px rgba(0,0,0,.4);
 
   flex-grow: 1;
@@ -195,17 +348,16 @@
   box-shadow:var(--_shadow);
 }
 
-.tabs .tab,.tabs input[type=radio], .features-tabs input[type="radio"],.professions-tabs input[type="radio"],.team-tabs input[type="radio"]
-{
+.tabs .tab,.tabs input[type=radio], .professions-tabs input[type="radio"]{
   display:none
 }
 
 
-@media (max-width:45em){
+@media (max-width:48em){
   .tabs .tab,.tabs label{
     order:initial
   }
-  
+
   .tabs label{
     width:100%;
     margin-right:0;
@@ -216,8 +368,8 @@
 
 
 
-@media screen and (min-width:768px){
-.features-tabs input:checked + label::after, .professions-tabs input:checked + label::after, .team-tabs input:checked + label::after {
+@media screen and (min-width:48em){
+.professions-tabs input:checked + label::after{
   content:'';
   position:absolute;
   top:50px;
@@ -228,10 +380,10 @@
   background:var(--accent);
   margin-inline:var(--size-750);
 
-  
+
   }}
 
-.features-tabs label,.features-tabs h2,.professions-tabs label, .professions-tabs h2,.team-tabs label,.team-tabs h2{
+.professions-tabs label, .professions-tabs h2{
   text-transform:uppercase;
   margin-block: var(--size-3);
 }
@@ -258,39 +410,37 @@
     margin-block: var(--size-3);
   }
 
-@media screen and (min-width:768px){
-  .tab-content{ 
+@media screen and (min-width:48em){
+  .tab-content{
     display:grid;
     grid-template-columns: 1fr 2fr;
-    
-    
+
+
+
   }
 
 
 }
 
 
-.features-tabs input[type="radio"]:unchecked + label + .features-tab, .professions-tabs input[type="radio"]:unchecked + label + .professions-tab, .team-tabs input[type="radio"]:unchecked + label + .team-tab{
+ .professions-tabs input[type="radio"]:unchecked + label + .professions-tab{
   display: block;
   transform:translateX (-100%);
   transition:transform 250ms ease-in
 }
 
-.features-tabs input[type="radio"]:checked + label + .features-tab,
-.professions-tabs input[type="radio"]:checked + label + .professions-tab, .team-tabs input[type="radio"]:checked + label + .team-tab{
+.professions-tabs input[type="radio"]:checked + label + .professions-tab{
 	display: block;
   transform:translateX (0)
 }
 
 @media (max-width: 45em) {
-  .features-tabs .features-tab,
-  .features-tabs label,
   .professions-tabs .professions-tab,
-  .professions-tabs label, .team-tabs .team-tab,
-  .team-tabs label{
+  .professions-tabs label,
+ {
     order: initial;
   }
-  .features-tabs label, .professions-tabs label, .team-tabs label {
+  .professions-tabs label{
     width: 100%;
     margin-right: 0;
     margin-top: 0.2rem;
@@ -324,3 +474,5 @@
 
 
 </style>
+
+-->

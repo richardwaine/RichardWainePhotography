@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
 import { Image } from 'astro:assets';
+import PageTitle from '../components/PageTitle.astro';
 import richardHeadshot from '../assets/images/about/Richard Waine 20230315 (500px).jpg';
 import bermudaCruisePhoto from '../assets/images/about/Richard and Ilyse - HeadshotCrewz - Bermuda.jpg';
 import lintRollerPhoto from '../assets/images/about/Richard Waine Using Lint Roller.jpg';
@@ -15,7 +16,7 @@ const h1 ='About Richard Waine';
 <MainLayout title= "About Richard Waine">
 
 <main>
-<h1>{h1}</h1> 
+<PageTitle title={h1} />
 
 <div class="wrapper">
     <div>

@@ -1,4 +1,33 @@
 ---
+import { Image } from 'astro:assets';
+
+import AccelerateMortgage from '../assets/images/tearsheet/AccelerateMortgage.png';
+import AidemMedia from '../assets/images/tearsheet/AidemMedia.png';
+import AlliedFirstBank from '../assets/images/tearsheet/Allied First Bank - white.png';
+import Aperture from '../assets/images/tearsheet/Aperture.png';
+import Avail from '../assets/images/tearsheet/Avail.png';
+import CapitalOne from '../assets/images/tearsheet/Capital One.png';
+import Carel from '../assets/images/tearsheet/Carel.png';
+import Chubb from '../assets/images/tearsheet/Chubb.png';
+import ColumbiaCottage from '../assets/images/tearsheet/Columbia Cottage - (white).png';
+import EPNB from '../assets/images/tearsheet/EPNB.png';
+import Havtech from '../assets/images/tearsheet/Havtech.png';
+import Inframark from '../assets/images/tearsheet/Inframark.png';
+import Isaca from '../assets/images/tearsheet/ISACA.png';
+import Janney from '../assets/images/tearsheet/Janney.png';
+import KaufmanDolowich from '../assets/images/tearsheet/Kaufman Dolowich.png';
+import LCNBlack from '../assets/images/tearsheet/LCN Logo (black).png';
+import LCNWhite from '../assets/images/tearsheet/LCN Logo (white).png';
+import Metso from '../assets/images/tearsheet/Metso Outotec.png';
+import NorthWestBlack from '../assets/images/tearsheet/Northwest Bank (black).png';
+import NorthWestWhite from '../assets/images/tearsheet/Northwest Bank (white).png';
+import RBC from '../assets/images/tearsheet/RBC.png';
+import RGInjuryLaw from '../assets/images/tearsheet/RG-injury-law.png';
+import SallieMae from '../assets/images/tearsheet/Sallie-Mae.png';
+import SallieMae2 from '../assets/images/tearsheet/Sallie-Mae-2.png';
+import TRC from '../assets/images/tearsheet/TRC.png';
+import ZentisBlack from '../assets/images/tearsheet/Zentis - (black).png';
+import ZentisWhite from '../assets/images/tearsheet/Zentis - (white).png';
 
 
 interface Logo {
@@ -32,10 +61,19 @@ const logos: Logo[] = [
   { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65678745dd0efe48b22147aa/1701283653167/Metso+Outotec+Logo.png", alt: "Metso", scale: 1.35 },
   { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65d8ec4144e86d1f3b859454/1708715073374/Kaufman-Dolowich+-+logo+%282%29.png", alt: "Kaufman Dolowich", scale: 1.5 },
 ];
+
+
+
+
 ---
 
 <div class="tear-sheet-container">
     <h2 class="section-title">TRUSTED BY FORWARD-THINKING COMPANIES AROUND THE WORLD</h2>
+
+
+<!-- <Image src={ColumbiaCottage} alt="Logo" width={200} height={100} style="filter:invert(0);object-fit:contain;"/> -->
+<!-- <Image src={AccelerateMortgage} alt="Logo" width={200} height={100} style="filter:grayscale(1);object-fit:contain;"/> -->
+
     
     <div class="scroller" data-direction="left" data-speed="slow">
         <div class="scroller__inner">
@@ -103,7 +141,7 @@ const logos: Logo[] = [
     .scroller img {
         height: auto;
         max-width: 175px;
-        filter: grayscale(1);
+        /* filter: grayscale(1); */
         /* Prevent layout shifts on load */
         aspect-ratio: 3/2; 
         object-fit: contain; 

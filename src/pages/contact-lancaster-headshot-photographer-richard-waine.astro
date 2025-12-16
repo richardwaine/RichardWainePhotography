@@ -141,7 +141,7 @@ const h1 = 'Contact Richard Waine Photography';
 
   #map-form .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--size-7);
   }
 
@@ -188,7 +188,7 @@ const h1 = 'Contact Richard Waine Photography';
 
   .form-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--size-3);
   }
 
@@ -235,13 +235,13 @@ const h1 = 'Contact Richard Waine Photography';
     align-self: flex-start;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 48em) {
     #map-form .wrapper {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     .form-row {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

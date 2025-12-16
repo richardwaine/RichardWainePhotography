@@ -240,10 +240,11 @@ toggleBtns.forEach((btn) => {
   padding-inline:var(--size-8)
 }
 
-@media screen and (min-width:1080px){
-  .rates-container{
-    flex-direction:row
-  }}
+@media screen and (min-width: 67.5em) {
+  .rates-container {
+    flex-direction: row;
+  }
+}
 
 
 
@@ -379,7 +380,7 @@ toggleBtns.forEach((btn) => {
  
   .sm-image-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows:1fr;
     align-items:center;
     margin: 0 auto;
@@ -395,25 +396,36 @@ toggleBtns.forEach((btn) => {
     box-shadow:var(--shadow)
   }
 
-@media screen and (max-width:767px){
-  .rates-image2,.rates-image3,.rates-image4{display:none}
-  .sm-image-grid{
-    grid-template-columns:1fr;
+/* Mobile-first base styles */
+.rates-image2, .rates-image3, .rates-image4 {
+  display: none;
+}
+
+.testimonial-content {
+  padding-inline: var(--size-7);
+}
+
+.testimonial-content img {
+  box-shadow: var(--shadow);
+}
+
+@media screen and (min-width: 48em) {
+  .rates-image2, .rates-image3, .rates-image4 {
+    display: block;
   }
 
-
-  .testimonial-content{
-   padding-inline:var(--size-7)
+  .sm-image-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .testimonial-content img{
-    box-shadow:var(--shadow);
-    
-    
+  .testimonial-content {
+    padding-inline: var(--size-8);
   }
 
-   
+  .testimonial-content img {
+    box-shadow: none;
   }
+}
 
 
 </style>

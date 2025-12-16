@@ -117,25 +117,40 @@ import PrimaryButton from './PrimaryButton.astro';
     max-height:auto;
     box-shadow:var(--_shadow);
     margin-block: var(--size-3);
-  }  
+  }
 
+.contact-sheet1,.contact-sheet3,.image-grid1{
+  display:none;
+}
+
+/* ===========================================
+   DEPRECATED: Desktop-first code
+   Replaced with mobile-first approach
+   Date: December 2025
+   =========================================== */
+/*
 @media screen and (max-width:767px){
   .contact-sheet1,.contact-sheet3,.image-grid1{
     display:none;
   }
 }
+*/
  
-  @media screen and (min-width:768px){
+  @media screen and (min-width: 48em){
     .image-container{
     display:grid;
       width:100%;
       grid-template-columns: repeat(5, 1fr);
       justify-content:space-between;
       gap:var(--size-7);
-    
+
       padding-block:var(--size-7);
-     
+
       margin-inline:0;
+   }
+
+   .contact-sheet1,.contact-sheet3,.image-grid1{
+     display:block;
    }
   }  
 

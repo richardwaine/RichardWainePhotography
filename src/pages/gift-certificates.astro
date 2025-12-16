@@ -79,14 +79,14 @@ const squareStoreUrl = 'https://square.link/u/GS6PmHTs';
 
   .gift-card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     gap: var(--size-7);
   }
 
   .gift-card-image {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -110,13 +110,13 @@ const squareStoreUrl = 'https://square.link/u/GS6PmHTs';
     letter-spacing: 2px;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 48em) {
     .gift-card-container {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     .gift-card-image {
-      max-width: 100%;
+      max-width: 800px;
     }
   }
 </style>
