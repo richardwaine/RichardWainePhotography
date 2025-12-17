@@ -69,6 +69,11 @@ const faqs = post.data.faqs || [];
 
 
 <style is:global>
+
+.wrapper{
+  margin-top:calc(var(--header-height) + var(--size-7));
+}
+
 /*blog posts*/
 
 
@@ -114,12 +119,18 @@ const faqs = post.data.faqs || [];
 
 
 
+/* ===========================================
+   DEPRECATED: Desktop-first code
+   Replaced with mobile-first approach
+   Date: December 2025
+   =========================================== */
+/*
 @media screen and (max-width:768px){
   .wrapper{
     max-inline-size:100%;
- 	
   }
 }
+*/
 
 article ul{
   padding-inline:0;
@@ -143,13 +154,33 @@ margin-block:var(--size-8);
 text-align:center
 }
 }
+/* ===========================================
+   DEPRECATED: Desktop-first code
+   Replaced with mobile-first approach
+   Date: December 2025
+   =========================================== */
+/*
 .references-list {
-columns:2;
-gap:2em;
+  columns:2;
+  gap:2em;
 
-@media screen and (max-width:768px){
-columns:1;
-  }}
+  @media screen and (max-width:768px){
+    columns:1;
+  }
+}
+*/
+
+/* Mobile-First Replacement */
+.references-list {
+  columns: 1;
+  gap: 2em;
+}
+
+@media (min-width: 48em) {
+  .references-list {
+    columns: 2;
+  }
+}
 
 .table-of-contents li, .references li{
   margin-block:var(--size-1);

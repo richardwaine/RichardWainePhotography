@@ -208,9 +208,11 @@ const h1 = 'Preparation Guide';
 }
 
 .tabs label {
-  order: 1;
+  order: initial;
   padding: 1rem 3rem;
-  margin-right: .2rem;
+  margin-right: 0;
+  margin-top: .2rem;
+  width: 100%;
   cursor: pointer;
   background: var(--drkbg);
   color: var(--ltclr);
@@ -222,7 +224,7 @@ const h1 = 'Preparation Guide';
 }
 
 .tabs .tab {
-  order: 99;
+  order: initial;
   width: 100%;
   padding: 3rem 1rem 1rem;
   background: var(--ltclr);
@@ -242,6 +244,12 @@ const h1 = 'Preparation Guide';
   display: block
 }
 
+/* ===========================================
+   DEPRECATED: Desktop-first code
+   Replaced with mobile-first approach
+   Date: December 2025
+   =========================================== */
+/*
 @media (max-width:45em) {
   .tabs .tab,
   .tabs label {
@@ -252,6 +260,21 @@ const h1 = 'Preparation Guide';
     width: 100%;
     margin-right: 0;
     margin-top: .2rem
+  }
+}
+*/
+
+/* Mobile-First: Desktop enhancements */
+@media (min-width: 48em) {
+  .tabs label {
+    order: 1;
+    width: auto;
+    margin-right: .2rem;
+    margin-top: 0;
+  }
+
+  .tabs .tab {
+    order: 99;
   }
 }
 

@@ -64,6 +64,33 @@ const logos: Logo[] = [
 
 
 
+// import type { ImageMetadata } from 'astro';
+
+// interface Logo {
+//   src: ImageMetadata;
+//   alt: string;
+//   scale?: number;
+// }
+
+// const logos: Logo[] = [
+//   { src: AccelerateMortgage, alt: "Accelerate Mortgage" },
+//   { src: AidemMedia, alt: "Aidem Media" },
+//   { src: AlliedFirstBank, alt: "Allied First Bank", scale: 1.35 },
+//   { src: Aperture, alt: "Aperture LLC" },
+//   { src: Chubb, alt: "Chubb Insurance" },
+//   { src: ColumbiaCottage, alt: "Columbia Cottage" },
+//   { src: EPNB, alt: "Ephrata National Bank", scale: 1.35 },
+//   { src: Havtech, alt: "Havtech", scale: 1.35 },
+//   { src: Isaca, alt: "ISACA Harrisburg" },
+//   { src: Avail, alt: "Avail Technology Solutions", scale: 0.8 },
+//   { src: TRC, alt: "TRC Companies" },
+//   { src: CapitalOne, alt: "Capital One" },
+//   { src: Inframark, alt: "Inframark", scale: 1.35 },
+//   { src: Metso, alt: "Metso", scale: 1.35 },
+//   { src: KaufmanDolowich, alt: "Kaufman Dolowich", scale: 1.5 },
+// ];
+
+
 
 ---
 
@@ -71,9 +98,28 @@ const logos: Logo[] = [
     <h2 class="section-title">TRUSTED BY FORWARD-THINKING COMPANIES AROUND THE WORLD</h2>
 
 
-<!-- <Image src={ColumbiaCottage} alt="Logo" width={200} height={100} style="filter:invert(0);object-fit:contain;"/> -->
-<!-- <Image src={AccelerateMortgage} alt="Logo" width={200} height={100} style="filter:grayscale(1);object-fit:contain;"/> -->
 
+<!-- <Image src={AccelerateMortgage} alt="Logo" width={200} height={100} style="filter:grayscale(1);object-fit:contain;"/> -->
+<!-- <Image src={AidemMedia} alt="Logo" width={200} height={100} style="filter:grayscale(1);object-fit:contain;"/> -->
+
+
+<!--
+<div class="scroller" data-direction="left" data-speed="slow">
+  <div class="scroller__inner">
+    {logos.map((logo) => (
+      <Image
+        src={logo.src}
+        alt={logo.alt}
+        loading="lazy"
+        width={200}
+        height={100}
+        style={logo.scale ? `transform: scale(${logo.scale});` : undefined}
+      />
+    ))}
+  </div>
+</div>
+
+-->
     
     <div class="scroller" data-direction="left" data-speed="slow">
         <div class="scroller__inner">
@@ -89,6 +135,8 @@ const logos: Logo[] = [
             ))}
         </div>
     </div>
+
+
 </div>
 
 <style>
@@ -123,10 +171,13 @@ const logos: Logo[] = [
         display: flex;
         flex-wrap: nowrap;
         gap: var(--_gap);
+        align-items:center;
         /* Hardware acceleration hacks */
         will-change: transform; 
         transform: translateZ(0); 
     }
+
+
     
     .scroller[data-animated="true"] .scroller__inner {
         animation: scroll var(--_duration) linear infinite;

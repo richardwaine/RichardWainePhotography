@@ -30,7 +30,7 @@ const {
   .wrapper {
     /* Wrapper styling comes from global style.css: width 80%, margin-inline auto */
     /* Global section padding-block: var(--size-8) handles top/bottom spacing */
-    padding-top: var(--header-height);
+    padding-top: calc(var(--header-height) + 2em);
     text-align: center;
   }
 
@@ -38,6 +38,8 @@ const {
     font-weight: var(--pagetitle-title-weight, var(--fw-bold));
     /* letter-spacing: 0.1em; */
     text-transform: uppercase;
+
+   
   }
 
   .wrapper .subtitle {

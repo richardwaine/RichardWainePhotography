@@ -364,11 +364,11 @@ window.addEventListener("load", () => {
 .slide-content-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--size-10);
+  gap: 0;
   margin-inline: auto;
   place-items: center;
   width: 100%;
-  max-inline-size: 80%;
+  max-inline-size: 100%;
 }
 
 @media (min-width: 67.5em) {
@@ -391,6 +391,7 @@ p {
 
 .slide-content {
   margin-inline: auto;
+  max-inline-size:75%;
 }
 
 .slide-content h2 {

@@ -802,18 +802,47 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
    LARGE DESKTOP - min-width: 75em (1200px)
    ========================================== */
 @media (min-width: 75em) {
+
+  
     .experience-content {
-        width:85%; 
+        
+        width:100%;
+
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
+        
         text-align: left;
         grid-gap: 80px;
     }
+      .text-reveal-container{
+        min-width: 0;
+        max-inline-size: 100%;
+        
+      }  
 
+      .experience-title {
+        font-size: clamp(3rem, 6vw, 5rem);
+    }
+       
         .showcase-container {
+        
        margin-top:var(--size-10);
         animation: showcaseFloat 20s ease-in-out infinite;
     }
+}
+
+
+@media (min-width: 125em) {
+
+.experience-content {
+        
+        width:85%;
+
+
+}
+ .experience-title {
+font-size: clamp(3rem, 8vw, 6rem);
+ }
 }
 
 </style>
