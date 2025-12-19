@@ -285,12 +285,22 @@ h2{
   padding: var(--size-3) var(--size-4);
   font-size: var(--fs-350);
 
-
+/*
   @media (min-width:20em){
       padding:var(--size-3) var(--size-8);
       font-size: var(--fs-400);
-  }
+
+      */
+
+
+@media (min-width: 48em) {
+    padding: var(--size-3) var(--size-8);
+    font-size: var(--fs-400);
 }
+
+
+ }
+
 
 .btn-text {
   position: relative;

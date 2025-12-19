@@ -452,32 +452,41 @@ const currentData = portfolioData[currentImageIndex];
 
 <style>
 .neural-section {
-  display: flex;
+  /* display: flex; */
+
+  display:grid;
+
+  grid-template-columns: 1fr;
+
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: var(--size-7);
-  overflow: hidden;
+  padding: var(--size-10) var(--size-2) var(--size-7);
+  overflow-x: hidden;
+  min-height: 100vh;
   /* background: var(--drkbg); */
   color: var(--ltclr);
   font-family: var(--ff-primary);
   width:100%;
 
- 
+
 }
 
 
 
 
 .neural-content {
-  max-width: 1400px;
+  max-width: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8rem;
+  grid-template-columns: 1fr;
+  gap: var(--size-8);
   align-items: center;
+  place-self: center;
   z-index: 2;
   position: relative;
+  text-align: center;
+  padding: 0;
 }
 
 .text-section {
@@ -491,9 +500,9 @@ const currentData = portfolioData[currentImageIndex];
   font-size:var(--fs-clamp-display);
   font-weight: var(--fw-x-bold);
   line-height:  var(--line-height-dramatic);
-  margin-bottom: var(--size-7);
+  margin-bottom: var(--size-5);
   perspective: 1000px;
-  text-align: left;
+  text-align: center;
   text-transform: none;
   color: var(--ltclr);
 }
@@ -527,15 +536,20 @@ const currentData = portfolioData[currentImageIndex];
   display: flex;
   flex-direction: column;
   gap: var(--size-3);
-  margin-bottom: var(--size-8); 
+  align-items: center;
+  margin-bottom: var(--size-8);
   font-family: var(--ff-primary);
 }
 
 .data-stream {
   display: flex;
   align-items: center;
-  gap: var(--size-3);
-  padding: var(--size-250) var(--size-5);
+  gap: var(--size-1);
+  padding: var(--size-2) var(--size-250);
+  flex-direction: column;
+  max-width: min(400px, 90vw);
+  width: 100%;
+  text-align: center;
   background: rgba(255, 255, 255, 0.025);
   border: 1px solid var(--highlight-clr-soft);
   backdrop-filter: blur(10px);
@@ -553,19 +567,22 @@ const currentData = portfolioData[currentImageIndex];
 
 .stream-label {
   color: rgba(255, 255, 255, 0.75);
-  font-size: var(--fs-350);
+  font-size: var(--fs-325);
   font-weight: var(--fw-normal);
 }
 
 .stream-value {
   color: var(--accent);
   font-weight: var(--fw-bold);
-  font-size: var(--fs-400);
+  font-size: var(--fs-350);
   /* text-shadow: 0 0 8px rgba(0, 168, 255, 0.25); */
 }
 
 .cta-matrix {
   position: relative;
+
+
+
 }
 
 .holographic-section {
@@ -579,9 +596,18 @@ const currentData = portfolioData[currentImageIndex];
 
 .holographic-frame {
   position: relative;
-  width: 800px;
-  height: 500px;
-  max-width: 100%;
+
+  /* DEPRECATED: Fixed dimensions approach - December 2025 */
+  /* height: min(240px, 72vw); */
+  /* width: clamp(300px, 100%, 90vw); */
+  /* height: auto; */
+  /* max-width: 100%; */
+
+  /* Aspect ratio approach - maintains MacBook PNG proportions (1600x919) */
+  width: 95%;
+  max-width: 800px;
+  aspect-ratio: 1600 / 919;
+
   filter: drop-shadow(10px 20px 30px rgba(0,0,0,.75));
 }
 
@@ -602,10 +628,16 @@ const currentData = portfolioData[currentImageIndex];
 
 .image-container {
   position: absolute;
-  top: 12.25%;
-  left: 12.32%;
+  top: 9%;
+  left: 12.3%;
+
+
+
+
   width: 75.25%;
-  height: 73.5%;
+  height: 80.5%;
+
+
   
   border-radius: 0;
   overflow: hidden;
@@ -678,10 +710,10 @@ const currentData = portfolioData[currentImageIndex];
 
 :global(.point-label) {
   font-family: var(--ff-mono);
-  font-size: var(--fs-300);
+  font-size: var(--fs-275);
   color: var(--accent);
   background: rgba(0, 0, 0, 0.9);
-  padding:var(--size-2) var(--size-3);
+  padding: 0.3rem 0.6rem;
   border-radius: var(--size-1);
   border: 1px solid var(--highlight-clr-soft);
   white-space: nowrap;
@@ -713,16 +745,18 @@ const currentData = portfolioData[currentImageIndex];
 }
 
 .matrix-cell {
+--_matrix-size:60px;
+
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: var(--_matrix-size);
+  height: var(--_matrix-size);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius:var(--size-2);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
   transition: .3s ease-in-out all;
-  
+
 }
 
 .matrix-cell:hover {
@@ -743,7 +777,13 @@ const currentData = portfolioData[currentImageIndex];
   filter: grayscale(0) contrast(1.0);
 }
 
-/* Responsive Design */
+/* ===========================================
+   DEPRECATED: Desktop-first code
+   Replaced with mobile-first approach
+   Date: December 2025
+   =========================================== */
+/*
+/* Responsive Design *\/
 @media (max-width: 1024px) {
   .neural-content {
     grid-template-columns: 1fr;
@@ -751,16 +791,16 @@ const currentData = portfolioData[currentImageIndex];
     text-align: center;
     padding: 0 var(--size-3);
   }
-  
+
   .holographic-frame {
     width: min(400px, 90vw);
     height: min(320px, 72vw);
   }
-  
+
   .data-streams {
     align-items: center;
   }
-  
+
   .data-stream {
     max-width: min(400px, 90vw);
     width: 100%;
@@ -773,24 +813,23 @@ const currentData = portfolioData[currentImageIndex];
     min-height: 100vh;
     overflow-x: hidden;
   }
-  
+
   .neural-content {
     gap: var(--size-8);
     max-width: 100%;
     padding: 0;
   }
-  
+
   .neural-title {
-    /* font-size: clamp(2rem, 8vw, 3.5rem); */
     text-align: center;
     margin-bottom: var(--size-5);
   }
-  
+
   .holographic-frame {
     width: min(350px, 85vw);
     height: min(280px, 68vw);
   }
-  
+
   .matrix-cell {
     width: 60px;
     height: 60px;
@@ -802,7 +841,7 @@ const currentData = portfolioData[currentImageIndex];
     gap: var(--size-1);
     text-align: center;
   }
-  
+
   .stream-label {
     font-size: var(--fs-325);
   }
@@ -820,18 +859,17 @@ const currentData = portfolioData[currentImageIndex];
 @media (max-width: 480px) {
   .neural-section {
     padding:var(--size-10) var(--size-2) var(--size-7);
-    
+
   }
-  
+
   .neural-title {
-    /* font-size: clamp(1.8rem, 10vw, 2.5rem); */
   }
-  
+
   .holographic-frame {
     width: min(300px, 90vw);
     height: min(240px, 72vw);
   }
-  
+
   .matrix-cell {
     width: 50px;
     height: 50px;
@@ -839,6 +877,126 @@ const currentData = portfolioData[currentImageIndex];
 
   .data-stream {
     padding: var(--size-2) var(--size-250);
+  }
+}
+*/
+
+/* Mobile-First Responsive Design */
+
+/* ==========================================
+   TABLET - min-width: 30em (480px)
+   ========================================== */
+@media (min-width: 30em) {
+  .neural-section {
+    padding: 6rem var(--size-3) var(--size-7);
+  }
+
+  .holographic-frame {
+    /* DEPRECATED: Fixed dimensions - December 2025 */
+    /* width: min(350px, 85vw); */
+    /* height: min(280px, 68vw); */
+
+    /* Aspect ratio inherited from base - no override needed */
+  }
+
+  .matrix-cell {
+    width: 60px;
+    height: 60px;
+  }
+
+  .data-stream {
+    padding: var(--size-2) var(--size-3);
+  }
+
+  :global(.point-label) {
+    font-size: var(--fs-300);
+    padding: var(--size-2) var(--size-3);
+  }
+}
+
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+
+@media (min-width: 48em) {
+  .holographic-frame {
+    width:100%;
+    /* DEPRECATED: Fixed dimensions - December 2025 */
+    /* width: min(400px, 90vw); */
+    /* height: min(320px, 72vw); */
+
+    /* Aspect ratio inherited from base - no override needed */
+  }
+
+  .matrix-cell {
+    width: 80px;
+    height: 80px;
+  }
+
+  .data-stream {
+    flex-direction: row;
+    gap: var(--size-3);
+    padding: var(--size-250) var(--size-5);
+    text-align: left;
+  }
+
+  .stream-label {
+    font-size: var(--fs-350);
+  }
+
+  .stream-value {
+    font-size: var(--fs-400);
+  }
+}
+
+@media (min-width: 64em) {
+  .neural-section {
+    padding: var(--size-7);
+    min-height: auto;
+    overflow-x: visible;
+ 
+  }
+
+  .neural-section .text-section{
+   display:grid;
+   /* justify-content: center; */
+  }
+
+  .neural-content {
+    /* max-width: 1500px; */
+    max-width:80%;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 8rem; */
+    text-align: left;
+    padding: 0;
+  }
+
+  .neural-title {
+    text-align: left;
+    margin-bottom: var(--size-7);
+  }
+
+  .holographic-frame {
+    /* DEPRECATED: Fixed dimensions - December 2025 */
+    /* width: 800px; */
+    /* height: 500px; */
+
+    /* At desktop, max-width of 800px from base styles takes effect */
+    /* Aspect ratio maintains correct proportions automatically */
+  }
+
+  .image-container img{
+    
+  }
+
+  .data-streams {
+    align-items: flex-start;
+  }
+
+  .data-stream {
+    max-width: none;
+    width: auto;
+    text-align: left;
   }
 }
 </style>

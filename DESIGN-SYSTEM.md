@@ -326,53 +326,86 @@ align-items: center;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 ```
 
-**Responsive collapse**:
-```css
-@media (max-width: 1024px) {
-  grid-template-columns: 1fr; /* Stack on mobile */
-}
-```
-
 ---
 
 ## Responsive Design
 
 ### Breakpoint Definitions
 
-These breakpoints are used consistently across the entire site. DO NOT deviate from these values.
+This site uses **mobile-first responsive design** with `min-width` media queries in `em` units for accessibility.
 
-| Name | Min Width | Max Width | Usage |
-|------|-----------|-----------|-------|
-| Mobile | 320px | 767px | Phones in portrait and landscape |
-| Tablet | 768px | 1023px | Tablets in portrait, small laptops |
-| Desktop Small | 1024px | 1439px | Laptops, small desktop monitors |
-| Desktop Large | 1440px | ∞ | Large desktop monitors |
+| Name | Em Value | Px Equivalent | Usage |
+|------|----------|---------------|-------|
+| Base (Mobile) | — | 0 - 479px | Default styles, phones |
+| sm | 30em | 480px+ | Large phones, small adjustments |
+| md | 48em | 768px+ | Tablets, significant layout changes |
+| lg | 64em | 1024px+ | Laptops, desktop layouts |
+| xl | 75em | 1200px+ | Large desktops |
+| 2xl | 90em | 1440px+ | Extra large screens |
+
+### Why Em Units?
+
+- **Accessibility**: Em-based breakpoints respect user font-size preferences
+- **Browser support**: All modern browsers handle em breakpoints correctly
+- **Industry standard**: Major frameworks (Tailwind v4, etc.) are moving to rem/em units
 
 ### CSS Media Query Syntax
 
-Use these EXACT media queries throughout the project:
-
+Use **mobile-first** `min-width` queries with em units:
 ```css
-/* Mobile: 320px - 767px */
-@media (max-width: 767px) {
-  /* Mobile styles */
+/* Base styles (mobile) - no media query needed */
+.element {
+  /* Mobile styles are the default */
 }
 
-/* Tablet: 768px - 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Tablet styles */
+/* 480px+ enhancements */
+@media (min-width: 30em) {
+  .element {
+    /* Small adjustments */
+  }
 }
 
-/* Desktop Small: 1024px - 1439px */
-@media (min-width: 1024px) and (max-width: 1439px) {
-  /* Small desktop styles */
+/* 768px+ enhancements */
+@media (min-width: 48em) {
+  .element {
+    /* Tablet/larger phone landscape */
+  }
 }
 
-/* Desktop Large: 1440px+ */
-@media (min-width: 1440px) {
-  /* Large desktop styles */
+/* 1024px+ enhancements */
+@media (min-width: 64em) {
+  .element {
+    /* Desktop layouts */
+  }
+}
+
+/* 1200px+ enhancements */
+@media (min-width: 75em) {
+  .element {
+    /* Large desktop */
+  }
+}
+
+/* 1440px+ enhancements */
+@media (min-width: 90em) {
+  .element {
+    /* Extra large screens */
+  }
 }
 ```
+
+### Conversion Reference
+
+| px Value | em Value | Calculation |
+|----------|----------|-------------|
+| 480px | 30em | 480 ÷ 16 |
+| 600px | 37.5em | 600 ÷ 16 |
+| 640px | 40em | 640 ÷ 16 |
+| 768px | 48em | 768 ÷ 16 |
+| 1024px | 64em | 1024 ÷ 16 |
+| 1080px | 67.5em | 1080 ÷ 16 |
+| 1200px | 75em | 1200 ÷ 16 |
+| 1440px | 90em | 1440 ÷ 16 |
 
 ### Testing Devices
 
@@ -380,24 +413,30 @@ Test all pages at these specific widths:
 - 320px (iPhone SE)
 - 375px (iPhone 12 mini)
 - 390px (iPhone 12/13/14)
+- 480px (large phones)
 - 768px (iPad portrait)
 - 1024px (iPad landscape / small laptop)
-- 1440px (Desktop)
-- 1920px (Large desktop)
+- 1200px (Desktop)
+- 1440px (Large desktop)
+- 1920px (Extra large desktop)
 
 ### Rules
 
-1. **NEVER** use breakpoint values other than those defined above
-2. **NEVER** create component-specific breakpoints
-3. **ALWAYS** test at all breakpoint boundaries
-4. **ALWAYS** use min-width/max-width pattern shown above
+1. **ALWAYS** use mobile-first `min-width` queries
+2. **ALWAYS** use em units for breakpoints
+3. **NEVER** use `max-width` queries (desktop-first)
+4. **NEVER** use px values in media queries
+5. **NEVER** create component-specific breakpoints
+6. **ALWAYS** test at all breakpoint boundaries
+7. Base styles (no media query) = mobile styles
 
 ### Mobile-First Approach
-- Start with mobile layout
-- Enhance for larger screens with media queries
-- Use `clamp()` for fluid typography
-- Reduce padding on mobile: `padding: 0 30px;` instead of `padding: 0 60px;`
-- Stack grid columns: `grid-template-columns: 1fr;`
+
+1. Write base styles for mobile first (no media query)
+2. Add `min-width` queries to enhance for larger screens
+3. Use `clamp()` for fluid typography
+4. Stack grid columns by default: `grid-template-columns: 1fr;`
+5. Expand to multi-column at appropriate breakpoints
 
 ### Typography Scaling
 Use `clamp()` for fluid scaling:

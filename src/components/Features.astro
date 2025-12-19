@@ -336,11 +336,13 @@ window.addEventListener("load", () => {
 .features-section {
   width: 100%;
   overflow: hidden;
+  
 }
 
 .features-container {
   position: relative;
   width: 100%;
+  
 }
 
 .features-scroller {
@@ -354,11 +356,15 @@ window.addEventListener("load", () => {
   height: auto; /* Allows slides to occupy vertical space on mobile */
   flex-shrink: 0;
   display: block;
-  padding-block: 4rem; /* Add vertical padding for mobile stacking */
+  padding-block: 4rem; /* Add vertical padding for mobile stacking*/
   background: var(--drkbg);
   color: var(--ltclr);
 
   
+}
+
+.feature-slide:first-child{
+  padding-block:0  4rem;
 }
 
 .slide-content-wrapper {
@@ -369,8 +375,36 @@ window.addEventListener("load", () => {
   place-items: center;
   width: 100%;
   max-inline-size: 100%;
+  
 }
 
+.slide-image{
+padding-inline:var(--size-7);
+
+}
+.slide-content{
+  margin-top:var(--size-3);
+}
+
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+@media (min-width: 48em) {
+.slide-image{
+padding:0; 
+
+}
+
+.slide-content{
+  margin-top:var(--size-3);
+}
+
+}
+
+
+/* ==========================================
+   TABLET - min-width: 67.5em (1080px)
+   ========================================== */
 @media (min-width: 67.5em) {
   .slide-content-wrapper {
     grid-template-columns: 1fr 1fr;
@@ -405,6 +439,11 @@ p {
 
 /* DESKTOP OVERRIDE: Restore Horizontal Scroll Behavior (768px+) */
 @media (min-width: 48em) {
+.slide-content-wrapper{
+  
+  /* margin-top:var(--header-height); */
+}
+
     .slide-content h2 {
         text-align: start;
     }

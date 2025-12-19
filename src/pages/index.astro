@@ -160,6 +160,7 @@ display:grid;
 place-items:center;
 
 
+
 }
 	
 /*video section */
@@ -177,6 +178,7 @@ place-items:center;
 .video-wrapper {
     width: min(1000px, 100%);
     position: relative;
+	padding-inline: var(--size-3);
 	margin-inline: auto; /* Centers the video in the section */
 }
 
@@ -272,7 +274,7 @@ place-items:center;
 </style>
 
 
-
+<!--
 <script>
 
 import gsap from 'gsap';
@@ -319,43 +321,6 @@ function toggleVideo(action: 'add' | 'remove') {
 </script>
 
 
-
-
-
-<!--
-<script>
-	
-import gsap from 'gsap';
-import { Flip } from 'gsap/Flip';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(Flip, ScrollTrigger);
-
-let video = document.querySelector(".promo-video");
-
-ScrollTrigger.create({
-  trigger: ".video-container",
-  start: "90% top",
-  onEnter: () => toggleVideo("add"),
-  onLeaveBack: () => toggleVideo("remove")
-});
-
-function toggleVideo(action: 'add' | 'remove') {
-  if (!video) return;
-
-  let state = Flip.getState(video);
-  if (action === 'add') {
-    video.classList.add("fixed");
-  } else {
-    video.classList.remove("fixed");
-  }
-  Flip.from(state, {
-    scale: true,
-    ease: "power3.out",
-    duration: 1
-  });
-}
-</script>
-
-
 -->
+
+
