@@ -14,7 +14,6 @@ headerImage:
   alt: Richard Waine Photography, Business Headshot for Financial Advisor, headshot of male wearing glasses a suit and a tie
 keywords: ["headshots", "websites", "planning", "professional photography", "business headshots"]
 articleSection: Photography Insights
-wordCount: 1200
 permalink: https://www.richardwaine.com/blog/what-photographers-dont-tell-you-about-headshots
 category: "photography-insights headshot-tips business" # Ensure this matches your filter categories
 cardCategory: "Photography Insights"

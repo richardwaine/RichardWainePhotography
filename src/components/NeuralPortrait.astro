@@ -29,12 +29,16 @@ const portfolioData = [
         label: "APPROACHABLE",
         facePoint: { top: '41%', left: '36%' },
         labelPosition: { top: '60%', left: '70%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '60%', left: '60%' },
         visible: true
       },
       {
         label: "CONFIDENT",
         facePoint: { top: '30%', left: '39%' },
         labelPosition: { top: '15%', left: '65%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '15%', left: '60%' },
         visible: true
       }
     ]
@@ -52,12 +56,16 @@ const portfolioData = [
         label: "COMPETENT",
         facePoint: { top: '30%', left: '60%' },
         labelPosition: { top: '15%', left: '25%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '15%', left: '10%' },
         visible: true
       },
       {
         label: "TRUSTWORTHY",
         facePoint: { top: '52%', left: '63%' },
         labelPosition: { top: '60%', left: '10%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '60%', left: '10%' },
         visible: true
       }
     ]
@@ -75,12 +83,16 @@ const portfolioData = [
         label: "ENGAGING",
         facePoint: { top: '30%', left: '35%' },
         labelPosition: { top: '15%', left: '60%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '15%', left: '60%' },
         visible: true
       },
       {
         label: "WARM",
         facePoint: { top: '45.5%', left: '33%' },
         labelPosition: { top: '55%', left: '75%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '55%', left: '75%' },
         visible: true
       }
     ]
@@ -98,12 +110,16 @@ const portfolioData = [
         label: "THOUGHTFUL",
         facePoint: { top: '30%', left: '60%' },
         labelPosition: { top: '20%', left: '25%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '20%', left: '10%' },
         visible: true
       },
       {
         label: "POISED",
         facePoint: { top: '50%', left: '63%' },
         labelPosition: { top: '55%', left: '10%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '55%', left: '10%' },
         visible: true
       }
     ]
@@ -175,6 +191,7 @@ const currentData = portfolioData[currentImageIndex];
           />
           <div class="analysis-overlay">
             <div class="data-points" id="data-points">
+              {/* Labels positioned via JS to support responsive labelPositionMobile */}
               {currentData.characteristics.filter(characteristic =>
                 characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
               ).map((characteristic) => (
@@ -187,6 +204,10 @@ const currentData = portfolioData[currentImageIndex];
                   </div>
                   <div
                     class="characteristic-label"
+                    data-desktop-top={characteristic.labelPosition.top}
+                    data-desktop-left={characteristic.labelPosition.left}
+                    data-mobile-top={characteristic.labelPositionMobile?.top || characteristic.labelPosition.top}
+                    data-mobile-left={characteristic.labelPositionMobile?.left || characteristic.labelPosition.left}
                     style={`position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}`}
                   >
                     <span class="point-label">{characteristic.label}</span>
@@ -313,10 +334,28 @@ const currentData = portfolioData[currentImageIndex];
           if (scopeAttrName) pointMarker.setAttribute(scopeAttrName, '');
           facePoint.appendChild(pointMarker);
 
-          // Create characteristic label
+          // Create characteristic label with responsive positioning
           const characteristicLabel = document.createElement('div');
           characteristicLabel.className = 'characteristic-label';
-          characteristicLabel.setAttribute('style', `position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left};`);
+
+          // Determine if mobile viewport (below 768px)
+          const isMobile = window.innerWidth < 768;
+          const mobileTop = characteristic.labelPositionMobile?.top || characteristic.labelPosition.top;
+          const mobileLeft = characteristic.labelPositionMobile?.left || characteristic.labelPosition.left;
+          const useTop = isMobile ? mobileTop : characteristic.labelPosition.top;
+          const useLeft = isMobile ? mobileLeft : characteristic.labelPosition.left;
+
+          /* DEPRECATED: Original non-responsive positioning - December 2025 */
+          /* characteristicLabel.setAttribute('style', `position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left};`); */
+
+          characteristicLabel.setAttribute('style', `position: absolute; top: ${useTop}; left: ${useLeft};`);
+
+          // Add data attributes for resize handling
+          characteristicLabel.dataset.desktopTop = characteristic.labelPosition.top;
+          characteristicLabel.dataset.desktopLeft = characteristic.labelPosition.left;
+          characteristicLabel.dataset.mobileTop = mobileTop;
+          characteristicLabel.dataset.mobileLeft = mobileLeft;
+
           if (scopeAttrName) characteristicLabel.setAttribute(scopeAttrName, '');
 
           const pointLabel = document.createElement('span');
@@ -440,6 +479,113 @@ const currentData = portfolioData[currentImageIndex];
       }, 250);
     }
   }
+
+  // Function to reposition labels based on viewport width
+  function repositionLabels() {
+    const isMobile = window.innerWidth < 768;
+    const labels = document.querySelectorAll('.characteristic-label');
+
+    labels.forEach((label) => {
+      const el = label as HTMLElement;
+      const desktopTop = el.dataset.desktopTop;
+      const desktopLeft = el.dataset.desktopLeft;
+      const mobileTop = el.dataset.mobileTop;
+      const mobileLeft = el.dataset.mobileLeft;
+
+      if (isMobile && mobileTop && mobileLeft) {
+        el.style.top = mobileTop;
+        el.style.left = mobileLeft;
+      } else if (desktopTop && desktopLeft) {
+        el.style.top = desktopTop;
+        el.style.left = desktopLeft;
+      }
+    });
+
+    // Redraw lines after repositioning
+    redrawLines();
+  }
+
+  // Function to redraw SVG connection lines
+  function redrawLines() {
+    const dataPoints = document.querySelector('#data-points');
+    if (!dataPoints) return;
+
+    const containerRect = dataPoints.getBoundingClientRect();
+    if (containerRect.width === 0 || containerRect.height === 0) return;
+
+    // Remove existing SVG lines
+    const existingLines = dataPoints.querySelectorAll('.connection-line');
+    existingLines.forEach(line => line.remove());
+
+    // Redraw lines for each label
+    const wrappers = dataPoints.querySelectorAll(':scope > div');
+    wrappers.forEach((wrapper) => {
+      const facePoint = wrapper.querySelector('.face-point') as HTMLElement;
+      const label = wrapper.querySelector('.characteristic-label') as HTMLElement;
+
+      if (!facePoint || !label) return;
+
+      const labelRect = label.getBoundingClientRect();
+      const facePointStyle = facePoint.style;
+
+      const faceLeftStr = facePointStyle.left || '';
+      const faceTopStr = facePointStyle.top || '';
+      const faceLeft = parseFloat(faceLeftStr.replace('%', ''));
+      const faceTop = parseFloat(faceTopStr.replace('%', ''));
+
+      if (isNaN(faceLeft) || isNaN(faceTop)) return;
+
+      const x1 = (faceLeft * containerRect.width / 100) + 4;
+      const y1 = (faceTop * containerRect.height / 100) + 4;
+
+      const labelLeft = labelRect.left - containerRect.left;
+      const labelTop = labelRect.top - containerRect.top;
+      const x2 = labelLeft + (labelRect.width / 2);
+      const y2 = labelTop + labelRect.height;
+
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('class', 'connection-line');
+      svg.setAttribute('style', 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;');
+
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x1.toString());
+      line.setAttribute('y1', y1.toString());
+      line.setAttribute('x2', x2.toString());
+      line.setAttribute('y2', y2.toString());
+      line.setAttribute('stroke', 'var(--accent)');
+      line.setAttribute('stroke-width', '1');
+      line.setAttribute('opacity', '0.6');
+
+      svg.appendChild(line);
+      wrapper.appendChild(svg);
+    });
+  }
+
+  // Debounce function to prevent excessive recalculations
+  function debounce(func: Function, wait: number) {
+    let timeout: number;
+    return function executedFunction(...args: any[]) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = window.setTimeout(later, wait);
+    };
+  }
+
+  // Debounced resize handler
+  const handleResize = debounce(() => {
+    repositionLabels();
+  }, 150);
+
+  // Initialize resize listener
+  window.addEventListener('resize', handleResize);
+
+  // Initial positioning on load
+  setTimeout(() => {
+    repositionLabels();
+  }, 300);
 
   // Initialize on page load and after view transitions
   if (document.readyState === 'loading') {
@@ -581,8 +727,6 @@ const currentData = portfolioData[currentImageIndex];
 .cta-matrix {
   position: relative;
 
-
-
 }
 
 .holographic-section {
@@ -631,14 +775,9 @@ const currentData = portfolioData[currentImageIndex];
   top: 9%;
   left: 12.3%;
 
-
-
-
   width: 75.25%;
   height: 80.5%;
 
-
-  
   border-radius: 0;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.9);
@@ -646,7 +785,6 @@ const currentData = portfolioData[currentImageIndex];
   
 }
 
-  
 
 
 .portrait-scan {
@@ -900,8 +1038,10 @@ const currentData = portfolioData[currentImageIndex];
   }
 
   .matrix-cell {
-    width: 60px;
-    height: 60px;
+  --_matrix-size:60px;
+
+    width: var(--_matrix-size);
+    height: var(--_matrix-size);
   }
 
   .data-stream {
@@ -929,8 +1069,10 @@ const currentData = portfolioData[currentImageIndex];
   }
 
   .matrix-cell {
-    width: 80px;
-    height: 80px;
+  --_matrix-size:80px;
+
+    width: var(--_matrix-size);
+    height: var(--_matrix-size);
   }
 
   .data-stream {
@@ -959,14 +1101,13 @@ const currentData = portfolioData[currentImageIndex];
 
   .neural-section .text-section{
    display:grid;
-   /* justify-content: center; */
+   justify-content: center;
   }
 
   .neural-content {
     /* max-width: 1500px; */
     max-width:80%;
     grid-template-columns: 1fr 1fr;
-    /* gap: 8rem; */
     text-align: left;
     padding: 0;
   }
@@ -983,11 +1124,9 @@ const currentData = portfolioData[currentImageIndex];
 
     /* At desktop, max-width of 800px from base styles takes effect */
     /* Aspect ratio maintains correct proportions automatically */
-  }
-
-  .image-container img{
     
   }
+
 
   .data-streams {
     align-items: flex-start;

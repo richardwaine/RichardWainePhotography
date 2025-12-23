@@ -1,0 +1,164 @@
+---
+blogTitle: 'Common Myths About Professional Headshots'
+slug: common-myths-about-professional-headshots
+blogExcerpt: There are a lot of myths and misconceptions that prevent people from investing in professional headshot photography. This post debunks the most common myths.
+publishDate: 2024-10-18T10:00:00Z
+modifiedDate: 2024-10-18T10:00:00Z
+author: Richard Waine
+authorUrl: https://www.richardwaine.com
+headerImage:
+  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683ddd9383fd532f9bb3614a/1748884884118/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%28horizontal%29+-+compressed.jpg
+  alt: Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
+keywords: ["professional headshot myths", "headshot photography misconceptions", "AI headshots", "DIY headshots", "professional photography investment"]
+articleSection: Photography Insights
+permalink: https://www.richardwaine.com/blog/common-myths-about-professional-headshots
+category: "photography-insights headshot-tips business"
+cardCategory: "Photography Insights"
+imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b983d0e6a74aab760120/1747499395371/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%2816+x+9%29+-+compressed.jpg
+imageAlt: Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
+---
+
+![Professional headshot by Richard Waine Photography](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683ddd9383fd532f9bb3614a/1748884884118/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%28horizontal%29+-+compressed.jpg)
+
+There are a lot of myths and misconceptions that prevent people from investing in professional headshot photography. While this list is not exhaustive, this post will debunk some of the most common myths about professional headshots to help you understand their true value and benefits.
+
+<!-- * * * -->
+
+## Myth: "I Don't Need an Updated Professional Headshot if I'm Not Job Hunting"
+
+**Fact:**
+
+Most professionals tend to seek out updated headshots when they have taken a new position or accepted a job offer. However, even if you're not actively job hunting, a professional headshot is essential for building your personal or professional brand and enhancing your online presence.
+
+Having a great profile image that represents you well, and presents you as confident, capable, trustworthy, and approachable is not only tied to upward mobility or taking a new position. Leveraging your headshot effectively means more than displaying it when you land a new job. It's also about creating a strong, consistent image that supports your career goals, whether you're networking, engaging with clients, or representing your company. A great headshot can help you make a strong impression, build your network, and inspire your audience.
+
+<!-- * * * -->
+
+## Myth: "A Smartphone Photo Is Good Enough"
+
+**Fact:**
+
+Lately, many people have adopted a "good enough is good enough" attitude toward their headshot photos. For a while, I couldn't understand where this thought process came from. In truth, we live in an instant gratification type of environment. When taken in concert with the strange notion that the global and domestic economies are somehow depressed, inflationary, or otherwise more expensive than they'd like, you have a recipe for "everything is too expensive" and "good enough is good enough."
+
+You don't necessarily need to be an economist or have an MBA in finance to recognize that there is always inflation in the economy. It ebbs and flows. Sure, things do get more expensive when there is more inflation than usual. However, that also means that small businesses and corporations alike raise their rates to accommodate. The cost of goods and services goes up.
+
+Essentially, if your company doesn't ebb and flow with the greater economy, you will likely have to adjust course. This isn't necessarily a bad thing, but you will clearly be more sensitive to higher prices. This does not mean that we omit or negate the need for service providers, however. All economies require service providers. And, all businesses require great headshots to avoid looking disjointed, unprepared, incapable, and less than professional.
+
+The need (or desire) for significantly lower prices from vendors (and maintaining higher than normal profit margins) pushes some companies to seek assistance from vendors who are less than qualified, provide lower quality, lower levels of service, or are just cheap.
+
+Some other consumers opt for the DIY method of using their smartphones. While smartphones have impressive cameras, and they are getting better all the time, they can't match the quality and expertise of a professional photographer. I have participated in many industry-specific discussions on this very point and as it relates to AI-generated headshots, which I will discuss in more depth below. The gist of the discussion is that no matter the technology you employ, whether a smartphone or Artificial intelligence, there is no one to offer you expert guidance, coaching, direction, nuanced lighting, or customer service. One of the greatest assets a professional has is their alliance with a headshot photographer. Not only are headshot specialists determined to create business portraits that align with your marketing, branding, and messaging goals, but we actively listen to our clients' concerns and have a vested interest in helping you with pictures that serve you well. When you attempt to do this on your own, you will end up spending valuable time, energy, money, and other resources to achieve what might have been a much smoother and enjoyable experience.
+
+A professional headshot involves more than just pressing the shutter button. It requires careful consideration and placement of lighting, intentional composition, and judicious retouching to achieve a polished, flattering result. Professional headshot photographers have the skills, ability, knowledge, and equipment needed to capture your personality, professionalism, and message, and create headshot pictures that truly represent you.
+
+When you choose to do this sort of thing yourself, you sacrifice all of this in exchange for a few pennies saved. Since this is not merely an expense but rather an investment in the creation of an asset, pinching pennies here isn't wise. Especially when the return on investment can be quite impressive.
+
+<!-- * * * -->
+
+## Myth: "Headshots Are Only for Actors"
+
+**Fact:**
+
+More than 20-30 years ago, headshots were for high-powered corporate executives and those in the performing arts, like actors, actresses, models, etc. Times have changed! Today, everyone needs a great headshot.
+
+Professional headshots are valuable for people in all industries, not just executives and actors. Whether you're an entrepreneur, actor, lawyer, doctor, or creative professional, a high-quality headshot is a crucial part of your personal and professional brand. While it is cliché to say that a great headshot helps you make a great first impression, build trust, and convey professionalism, it still holds true.
+
+Business is conducted when two parties know, like, and trust each other. Since we live in an increasingly visual society, the likelihood that your target audience will be attentively looking through your biography and impressive list of accolades before viewing your photo is slim. Your customers want to know what you look like. They are actively seeking to find a connection with someone they can rely on, someone they can trust, someone who cares, and someone who can get the job done.
+
+Your headshot is so much more than a corporate headshot or a business headshot. It is a sales and marketing tool as well. No matter what industry you are in or serve, everyone needs a great headshot to build a strong connection with their audience.
+
+<!-- * * * -->
+
+## Myth: "A Headshot Is Too Expensive"
+
+**Fact:**
+
+Warren Buffet said:
+
+> "Price is what you pay. Value is what you get"
+
+In conversation with some potential clients who inquire about my rates, I have heard these infamous words:
+
+> "That's too expensive"
+
+My brain begins to dissect why they feel my rates are unreasonable. There are a few potential reasons for this:
+
+- They are comparing my services to other photographers
+- They genuinely have no idea how much these services should cost
+- They didn't budget properly
+- They aren't calculating the ROI. Just the expense
+
+Are headshots really too expensive? No. And here's why:
+
+Let's assume that the cost of a professional headshot session is approximately $500, which includes the session fee and one retouched digital image (cropped and delivered in multiple formats).
+
+Assuming you are leveraging your profile photo well, $500 divided by 365 in a year = $1.37 per day. Do you think you can make $1.37 per day? If you leveraged the megaphone that social media platforms afford, your website, your marketing, and branding material, could you make more than $1.37 per day? For many, the answer is a resounding yes. If so, the cost isn't an issue because you have transformed your mindset from headshots being an expense to a revenue-generating asset.
+
+The cost of a professional headshot is often seen as an obstacle, but it's important to think of it as an investment in the creation of further revenue as opposed to an expense. The benefits of a high-quality headshot far outweigh the cost. Some photographers offer flexible payment plans or packages that can make a professional headshot more affordable, others have straightforward rate schedules that put you entirely in control over the final cost. No matter the rate schedule, or final cost, investing in yourself and your ability to reach more customers is never wrong.
+
+> "The bitterness of poor quality remains long after the sweetness of a low price is forgotten"
+> 
+> ~Benjamin Franklin
+
+<!-- * * * -->
+
+## Myth: "I Can Use My Old Headshot for Years"
+
+**Fact:**
+
+Having your headshot made is not a once-and-done kind of thing. You might be surprised to learn that throughout your life and career, you'll need to update that headshot.
+
+Let's first understand why folks believe that using their old headshot is beneficial.
+
+When we go into business or a corporate environment, we understand that we put our egos aside, and position ourselves as a solution to an existing problem. At no point is our vanity a part of that conversation, nor should it be. We tend to think having our headshots made to be personally distasteful, uncomfortable, or taking too much time, effort, or any other excuse to avoid getting it done. Yet, we are not gearing our content, our words, our pictures, branding, or marketing towards ourselves. These things are designed and created specifically to represent us, and to resonate with our desired audience. Basically, it's not about you.
+
+When we use those stale, outdated images, we send a terrible message to would-be clients. It is incredibly easy to tell how contemporary and effective a headshot is simply by looking at it. When you walk into a room, do you want your colleagues, clients, partners, and counterparts to do a double take? Do you want them to wonder why you look so different from how you represent yourself in your profile photo? Their thought process will shift. They might think that if you are attempting to deceive them regarding your photo, what else are you deceiving them about?
+
+Using an outdated headshot can hurt your professional image and do irreparable harm to your credibility, especially if it no longer reflects your current appearance, role, or brand.
+
+Updating your headshot ensures that it accurately represents who you are today and aligns with your current status, position, personality, and personal style. A fresh, updated headshot keeps your online presence current and relevant.
+
+<!-- * * * -->
+
+## Myth: "AI-Generated Headshots Are A Good Investment"
+
+**Fact:**
+
+You may be apprehensive about having your professional picture made. This is completely normal and more common than you think. Since the introduction of Artificial Intelligence, the technology has gained great popularity and attention. The majority of the population actively uses some form of AI in their daily lives. Some use it for grammar and spelling checks, others generate web content and infographics, and some leverage AI technology to help them with an updated headshot.
+
+Seems like the right use case for AI, right? Perhaps not as much as you might think. Let's explore why that is.
+
+To understand why using AI Headshots is a bad idea, we need to understand that AI will either fabricate data out of thin air or pull data from previously indexed content and regurgitate it. Simply put, AI is not creating anything authentic or original. As it relates to headshot photography, or frankly, any form of photography, the images generated are not real, not authentic, and are completely contrived.
+
+So what's the big deal? Well, first and foremost we should address why you are seeking assistance from AI.
+
+Is it because you think it's a cheaper solution? If so, then you might be shocked to learn that you'll actually end up spending more than if you had your headshots taken by a professional photographer. AI takes the selfie photos that you upload, slaps some horrendous filters on them, fabricates backgrounds, clothing, makeup, maybe some freckles, and a dash of terrible lighting, and spits out multiple versions of the new and artificial you. Most of the time, you'll end up spending around $40-$50 for a variety of options. Yes, this is cheap. However, should you choose to leverage these images, most platforms will cite them as AI-generated. They don't look real, they don't represent people well, and they will leave your audience feeling like you have intentionally attempted to deceive them. Of course, this may not have been your intention, but that's what happens when you seek out such a solution. So, if you spend $50 for the AI headshots, you risk losing credibility and trust and then realize that you still need to visit with a professional photographer to get the job done properly. One doesn't require an advanced degree to recognize that this sounds more expensive than just working with a professional from the beginning.
+
+Another reason some folks look to AI-generated headshots is that they simply feel less than photogenic, perhaps they are nervous, or anxious, or they just fear the process. This is completely normal! To anyone with these thoughts, I offer this bit of insight:
+
+It is not your job to be photogenic. It is the photographer's job to coach and direct you appropriately. Photogenic is a made-up word that makes people feel like they are born with specific genes that automatically make them look good in pictures. That's just bullshit! You might be surprised to know that every single human has a unique and individual beauty that simply requires a little direction to bring out in pictures. We, as a society, are way too busy attempting to live up to unrealistic standards of beauty made popular by big brands, fashion and beauty magazines, commercials, advertisements, and more.
+
+Over the years, I have watched wonderful people get emotionally destroyed because they were living in the court of public opinion on social media. Their posts didn't get the responses they were hoping for and now they avoid pictures altogether. I have never seen (or heard of) a situation where a client would not work with a service provider because of any sort of perceived flaw. What people care about transcends the physical stuff. But, we are human and we are sensitive to it. This is why working with a professional photographer is so important. Sitting in your bedroom, alone, with a smartphone and a piece of software won't get you over this hump. But, working with a pro will open doors to coaching, direction, encouragement, customer service, image selection, and so much more.
+
+The experience of the photographer matters, but the photographic experience matters too!
+
+![infographic showing that Ai generated headshots are not a good investment](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67869099759b3e38dcbc8efa/1736872089127/Myth_+%E2%80%9CAI-Generated+Headshots+Are+A+Good+Investment%E2%80%9D+-+visual+selection.png)
+
+<!-- * * * -->
+
+## Myth: "I Can Take a Good Headshot Myself"
+
+**Fact:**
+
+As you might have gleaned from the information above, it's not easy to make a great headshot. It requires time, effort, knowledge, and lots of repetitive training to acquire the skill and eye to create high-quality headshot images.
+
+I had read a post on Social Media where someone stated that professional headshot photography is expensive and they were going to attempt to make their pictures on their own. They reached out to the masses for assistance in doing so. As you might have suspected, I wasn't so keen on this notion. Not just because this is what I do for a living. Rather, because I know what's involved in the process. DIY headshots rarely end well for the person trying to make their own. It gets more expensive than originally thought. It takes more time, more work, more knowledge, more attempts, etc. In the end, they hardly get results worth using.
+
+Similarly, those same folks might seek assistance from a friend or relative. So now they have enlisted the help of Uncle Bob who has an entry-level camera they received for Christmas. And yet, the results are the same. While quality equipment is important, the truth is that equipment is a small piece of a much larger puzzle. Uncle Bob doesn't know what he's doing either, and the results will be a far cry from what was desired.
+
+Making a great headshot requires more than just a good camera and a steady hand. It involves understanding how to use light, angles, composition, proper body position and posing, and captivating facial expressions to create flattering and professional images.
+
+A professional photographer brings expertise in these areas, ensuring that your headshot is of the highest quality. Headshot specialists use a wide range of techniques to ensure that your images represent you well and resonate with your audience based on the message you choose to express. So, while there might be a lot of reasons folks avoid working with us, it's a much better use of your time, effort, and money. And you'll have a much better time getting those images made!
+
+<!-- * * * -->
+
+Debunking these common myths about professional headshots can help you make informed decisions about investing in your personal and professional brand. A professional headshot is more than just a pretty picture. And, it's more than fodder for social media to ooh and ahh, give you "likes," "hearts," affirmations, or in some cases, criticism. A professional headshot picture is a powerful tool for enhancing your career, building your network, conveying your professionalism, and communicating your poise and approachability. By understanding the true value of a great headshot, you can make a choice that supports your goals and helps you make a positive impression in the professional world.

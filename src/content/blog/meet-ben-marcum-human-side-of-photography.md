@@ -1,0 +1,210 @@
+---
+blogTitle: 'Meet Ben Marcum: The Human Side of Professional Photography'
+slug: meet-ben-marcum-the-human-side-of-professional-photography
+blogExcerpt: Louisville photographer Ben Marcum discusses the human side of professional photography, sharing insights on client connection and authentic approaches.
+publishDate: 2025-08-05T10:00:00Z
+modifiedDate: 2025-08-05T10:00:00Z
+author: Richard Waine
+authorUrl: https://www.richardwaine.com
+headerImage:
+  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68925ee538df0a10a4d3b214/1754423013536/Ben+Marcum+Photography-Louisville-Professional+Headshots-Ben+Marcum-Apr+15+2025-052_%282%29+-+Ben+Marcum.jpg
+  alt: Louisville Photographer Ben Marcum, Ben Marcum, Headshots and Portraits by Ben Marcum
+keywords: ["professional photography", "headshots", "client experience", "photographer interview", "Louisville photographer"]
+articleSection: Photography Insights
+permalink: https://www.richardwaine.com/blog/meet-ben-marcum-the-human-side-of-professional-photography
+category: "photography-insights"
+cardCategory: "Photography Insights"
+imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/689264cc542d2402b731c088/1754424524329/Ben+Marcum+Photography-Louisville-Allegories-Kate+English-Jan-8-2019-Sharpen+and+Final.jpg
+imageAlt: Louisville Photographer Ben Marcum, Ben Marcum, Headshots and Portraits by Ben Marcum
+---
+
+_How this former sound engineer turned photographer creates genuine connections that result in professional images clients actually love._
+
+![Louisville Photographer Ben Marcum, Ben Marcum, Headshots and Portraits by Ben Marcum](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68925ee538df0a10a4d3b214/1754423013536/Ben+Marcum+Photography-Louisville-Professional+Headshots-Ben+Marcum-Apr+15+2025-052_%282%29+-+Ben+Marcum.jpg)
+
+<!-- * * * -->
+
+## Introduction
+
+Professional photography success depends on more than technical skills and expensive equipment. It requires understanding people, building genuine connections, and creating comfortable environments where authentic expressions emerge naturally. Louisville photographer Ben Marcum has built his career around this human-centered approach, transitioning from sound engineering to become a specialist in professional headshots, portraits, and artistic boudoir photography. In this interview, Ben shares his insights on client interaction, professional preparation, and the realities of building a photography business that prioritizes authentic human connection over formulaic poses and artificial smiles.
+
+<!-- * * * -->
+
+![](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68925f931ae2490962c7097d/1754423187308/lace+-+Ben+Marcum.jpg)
+
+<!-- * * * -->
+
+## About Ben Marcum: From Sound Engineer to Professional Photographer
+
+### Can you briefly introduce yourself, where you are located, and the type of work you specialize in?
+
+I am Ben Marcum. I am in Louisville, Kentucky and I specialize in professional headshots, portraits and artistic boudoir.
+
+### What led you into this creative field, and what keeps you passionate about it?
+
+I have always been a creative person. When I was a kid, my mother signed me up for tee ball. Other than hitting the ball, I could not have cared less about the game. When it was our turn in the outfield, I would throw handfuls of dirt in the air to watch what shapes they made.
+
+I started getting paid to do sound for theatre when I was 15 and continued as a sound designer/engineer for many years. Many of those years at Actors Theatre of Louisville (while also freelancing around the country).
+
+When I left the theatre world, I picked up a camera, and here we are. So what led me to it is that I have to be creating. Photography was a thing that I could do myself and have something to show at the end of the day. I could never just work in an office.
+
+What keeps me passionate about it is that it's something where we always keep learning and growing. While I have my niches, every time I shoot I learn something new. How to better coach the person in front of the camera, looking at something a little differently, whatever. It's always new.
+
+...and I love when I get to show people images of themselves that they actually like. That's powerful. You can literally feel their whole demeanor change.
+
+<!-- * * * -->
+
+![](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68925fad04d23d60ea1796c7/1754423213167/Ben+Marcum+Photography-Louisville-Professional+Headshots-Greg+Braun-Apr+11+2025-006_%282%29+-+Ben+Marcum.jpg)
+
+<!-- * * * -->
+
+## Ben's Approach to Working With Photography Clients
+
+### From your perspective, what makes a great headshot truly effective?
+
+Connection. We've all seen the smiling head headshots where you can tell the person either has a default photo face, or the photographer asked them to smile. They're blank. Lifeless. Very simple to pass by.
+
+An effective headshot makes you want to know more about that person.
+
+### As a photographer, how do you help clients feel more comfortable in front of the camera?
+
+By treating them like they're an actual human, not just something to point my camera at and click away.
+
+If I'm asking them questions, it's never small talk. I genuinely am interested.
+
+I also have to be a bit of an emotional chameleon. I have to meet people where they are on an emotional level, and I have to be able to figure out what that is as soon as they walk in the door. If someone walks in and they are nervous and reserved, I can't come at them with big energy, or on the flip side, if someone is a big personality, I can't be small.
+
+...and that can shift during the course of a session. I have to be able to ride that wave.
+
+### How does your approach to capturing people differ between photography and videography, or between genres?
+
+The approach is no different; it's more about knowing what story we are trying to tell, but at the end of the day, the approach is still treating people like they are people.
+
+<!-- * * * -->
+
+![](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68925fb362827e0a2b6ad591/1754423219906/Ben+Marcum+Photography-Louisville-Boudoir-Hope+Hawkins-Mar+05+2025-032_%282%29+-+Ben+Marcum.jpg)
+
+<!-- * * * -->
+
+## Professional Photography in Today's Market
+
+### What's your opinion on the importance of professional visuals in today's digital-first world?
+
+It's very important. People are making buying decisions or relationship decisions based on what they are seeing online. If your images are slapdash and your competition looks put together, there's a great chance you are going to lose out.
+
+From personal experience, when I was looking for a therapist, I passed over MANY who had no images, dated images, or straight-up bad images. I felt like, if I was going to be opening up a lot of personal information to a person, I needed to know that I could connect with them on some level and that they were going to do more than the bare minimum.
+
+### Have you noticed any trends in how professionals want to be portrayed today?
+
+I think the biggest thing I've noticed, at least from my clients, is that they want to be seen in a way that is truly them. Not just a photo, but "that looks like me".
+
+### In your experience, how do different professions approach headshots differently?
+
+I don't think I can comment on that broad of a brush stroke, at least not with my clients. It's always very individual what face people want to show the world, and on what platform.
+
+<!-- * * * -->
+
+![](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68925f9966c57c76218619ea/1754423193215/Girl+Drying+Hair+with+Kesley8700-7-25-2019+-+Ben+Marcum.jpg)
+
+<!-- * * * -->
+
+## Client Preparation and Session Experience
+
+### For clients who don't feel "photogenic," what advice do you typically give?
+
+You don't feel photogenic because you're not. No one is. It's not your job to step in front of the camera and know what to do. It's my job to get you there. That doesn't happen by your trying to act a certain way or "getting it right," it happens by you just being present in the moment. We're just two people hanging out; there just happens to be a camera between us.
+
+### What kind of preparation and considerations do you recommend for someone getting ready for a professional shoot?
+
+Oh lord. I've written countless blogs about this. Sunscreen and drinking lots of water are huge. Don't wait for someone to ask you for your headshot to schedule a session. That adds stress to your life, and you don't need all of that. Don't try to be someone that you aren't. If your workplace doesn't require you to wear a suit, your clients will never see you in a suit, and you never wear a suit....don't bring a suit.
+
+### What's a common misconception people have about what a headshot session is really like?
+
+That it's going to be like grade school picture day or like when the office brings in that style of photographer for "headshot day". Then we will hit the button once, and they won't know if they got a decent shot or not until it shows up on the company website.
+
+<!-- * * * -->
+
+![](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68925fa81f59a77ab3536967/1754423208188/Ben+Marcum+Photography-Louisville-Professional+Headshots-Sylvia+Cole-Jan+08+2025-051_%282%29+-+Ben+Marcum.jpg)
+
+<!-- * * * -->
+
+## Professional Photography Process and Techniques
+
+### What kind of lighting, composition, or direction tricks do you think most clients would be surprised to learn about?
+
+They are almost always surprised that I'm not just asking them to smile. That I take the time to talk with them, make them laugh.
+
+I don't think they really care about lighting, as long as I make them look good (though I do often give them tips to take into their selfies).
+
+### What do you wish more clients understood about the process behind professional photography?
+
+It's not on them to "get it right". Their only job during a session is to be willing to take instruction and have a good time. I will handle everything else.
+
+<!-- * * * -->
+
+![](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68925f9deae8840d87cdb8e1/1754423197280/Ben+Marcum+Photography-Professional+Headshots-Hart+Sanders-Aug+04+2025-136_%282%29+-+Ben+Marcum.jpg)
+
+<!-- * * * -->
+
+## Industry Advice and Professional Insights
+
+### How do you think photographers can differentiate themselves in such a competitive industry?
+
+You have to let your personality come through. People book/buy from people they know, like, and trust. If you're not giving your potential clients the opportunity to get to know you, you're just another meat bag with a camera.
+
+Your personality comes through everywhere. If you're doing it right, it's in your work. It's in your captions on social media (and chatGPT does a shit job of writing captions and will never get your personality right), and if you're not making short-form for video, you are leaving money on the table. (chatGPT also does a shit job at writing scripts. we can smell them a mile away) Shameless plug, I'm going to put together a course on how to do short-form video the right way.
+
+The moral of the story is you have to be you.
+
+### If someone is rebranding themselves professionally, what role does a headshot play in that journey?
+
+It's huge. It tells the world about you, the brand that you're going for, how you view the world, and want to be seen in it.
+
+For example, when I first started, I was a jeans and t-shirt kind of guy. That is what my branding looked like.
+
+As I've grown, and the brand has grown, especially with the portrait and boudoir side of things, 95% of the time if you see me on social media I'm in a collared shirt and a suit coat (...and yes, the kilt) Both sides are still very much me. I'll always be that old school punk rock kid, but with what the brand is, the service, experience, and product I am selling, my look has to match.
+
+### What's one piece of advice you'd give someone nervous about investing in professional visuals?
+
+Find the right photographer and you have nothing to worry about, but the longer you wait, the opportunity slips away. That could be a client, a job, a relationship...whatever.
+
+<!-- * * * -->
+
+![](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68925fa1bfb64c45d61b4e25/1754423202039/Ben+Marcum+Photography-Portraits-Kate+Tew-Mar+06+2025-039_%282%29+-+Ben+Marcum.jpg)
+
+<!-- * * * -->
+
+## Client Success Stories
+
+### Do you have any stories of when a professional headshot made a real difference for a client?
+
+Tons. Literally tons of times that clients have told me that their confidence has been boosted. Many tears of joy have been shed in my studio with lots of hugs.
+
+<!-- * * * -->
+
+## Final Advice for Clients and Photographers
+
+### Any final thoughts you'd like to share—whether it's advice for potential clients, tips for emerging creatives, or something you wish more people knew?
+
+Be fuckin' fearless, or if you can't be fearless, do it scared. Once you step in front of the camera, you'll see it's not that bad. You built it up in your head.
+
+If you're an emerging creative, the same thing applies. Great work and big achievements never come from being comfortable.
+
+<!-- * * * -->
+
+## Connect with Ben Marcum
+
+Ready to work with a photographer who values authenticity and collaboration? You can find Ben Marcum at:
+
+* **Website:** [www.benmarcum.com](http://www.benmarcum.com)
+* **Website:** [www.boudoirbybenmarucm.com](http://www.boudoirbybenmarucm.com)
+* **Instagram:** [@benmarcumphoto](https://www.instagram.com/benmarcumphoto/)
+* **Instagram:** [@boudoirbybenmarcum](https://www.instagram.com/boudoirbybenmarcum/)
+* **TikTok:** [@benmarcum](https://www.tiktok.com/@benmarcum)
+* **Patreon:** [Ben Marcum Patreon](https://www.patreon.com/benmarcum)
+
+Based in Louisville and specializing in professional headshots, portraits, and artistic boudoir photography.
+
+* * *
+
+_Ready to elevate your professional image? Contact us about our [professional headshot services](/) and see how the right portrait can transform your career opportunities._
