@@ -14,7 +14,7 @@ articleSection: Photography Insights
 permalink: https://www.richardwaine.com/blog/linkedin-headshots
 category: "business social-media marketing"
 cardCategory: "Business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/673f89eda9f6be29cd5e150e/1732217325911/Headshot_20170703_Ellen+Taylor_Richard_Waine_Lancaster_PA_0093-1+%2816x9%29.jpg
+imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828c2b3abc910491bd06c9c/1747501747334/Headshot_20230623_Cindy+Nguyen_Richard+Waine_Lancaster_PA_0175+%2816+x+9%29-2+-+compressed.jpg
 imageAlt: Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 ---
 

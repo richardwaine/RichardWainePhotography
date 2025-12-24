@@ -1,0 +1,80 @@
+---
+blogTitle: 'The Psychology of a Great Headshot'
+slug: psychology-of-headshots
+blogExcerpt: 'Explore the psychology of professional headshots: how expressions, eye contact, and style shape first impressions and define your personal brand.'
+publishDate: 2024-09-17T10:00:00Z
+modifiedDate: 2024-09-17T10:00:00Z
+author: Richard Waine
+authorUrl: https://www.richardwaine.com
+headerImage:
+  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67895a2a31cba553cb1d626c/1737054763113/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0048+%28horizontal%29+-+compressed.jpg
+  alt: Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
+keywords: ["professional headshots", "LinkedIn Profile Pictures", "Headshots by Richard Waine"]
+articleSection: business marketing photography-insights
+permalink: https://www.richardwaine.com/blog-2/psychology-of-headshots
+category: "marketing photography-insights client-experience business"
+cardCategory: "business"
+imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/682792a91b809e62dd500ccb/1747423913369/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0048+%2816+x+9%29+-+compressed.jpg
+imageAlt: ""
+---
+
+![Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67895a2a31cba553cb1d626c/1737054763113/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0048+%28horizontal%29+-+compressed.jpg)
+
+When it comes to professional headshots, there’s a lot more going on than just a click of the camera. A great headshot is not only about technical aspects like lighting, composition, and focus; it’s also deeply rooted in marketing and psychology. The way you present yourself in your headshot can convey a range of emotions and traits that others pick up on, often subconsciously.
+
+In the brief time it takes to glance at a profile photo or meet someone in person, individuals make a multitude of subconscious judgments and form opinions. This occurs in 7 seconds or less, allowing initial impressions to significantly influence their interactions.
+
+But what exactly does your headshot say about you?
+
+Let’s dive into the psychology behind a great headshot and how different elements can influence the way you’re perceived.
+
+* **Facial Expressions: The Window to Your Personality**
+  Your facial expression is one of the most powerful non-verbal cues in a headshot. A smile can communicate warmth, approachability, and friendliness, making others feel comfortable and open to connecting with you. On the other hand, a more neutral or serious expression might convey professionalism, authority, and confidence. The key is to choose an expression that aligns with the message you want to send. For example, if you’re in a creative industry, a relaxed, slightly playful smile might be more effective than a stern look. Of course, this isn’t as easy as it might sound, given that most people are entirely unaware of what their face is doing at any given point. This means that working collaboratively with a headshot photographer and relying on their expertise is important for achieving expressions and aesthetics that effectively communicate your desired message.
+
+  ![infographic showing how to achieve effective facial expressions in headshots](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67895f9d9a851226a991b040/1737056157275/Body+Language+-+The+Unspoken+Communication.png)
+
+* **Eye Contact: The Connection Factor**
+  In a professional headshot, establishing direct eye contact is essential for creating a compelling connection. Every headshot is a portrait, but not every portrait is a headshot. The primary difference (among others) is that a headshot maintains eye contact with the viewer. This conveys a strong sense of confidence and trustworthiness, making it easier for people to feel and build genuine rapport with you. By looking directly into your eyes in a photo, viewers are more likely to experience a personal connection, even if they have never met you. This is particularly crucial in professions where trust and building relationships are paramount, such as in sales, law, financial services, or healthcare.
+
+* **Body Language: The Unspoken Communication**
+  Your body language communicates just as much as your facial expression. For example, sitting down or propping yourself up on a stool will allow your shoulders to roll forward. This presents you with less authority and more carefree, which negatively affects your perceived level of expertise.
+
+  Positioning your head and body is one of the techniques headshot photographers use to offer variety, change the mood, create dynamics, convey your desired message, and affect the viewer’s perception of you. The impact created by a few millimeters of movement cannot be overstated. This is tempered, in part, by the need to flatter facial features. For instance, if the subject has a little more of a double chin, rotating their head might not be so flattering as it might push some extra skin over their collar. In this case, a headshot without any rotation may be more flattering.
+
+  These are not necessarily considerations you need to lay awake at night contemplating. However, your headshot photographer should understand the difference that each movement will make and be capable of making the necessary adjustments to ensure that your headshots are effective for your purposes.
+
+* **Clothing and Style: The Reflection of Your Brand**
+  Style and clothing are deeply personal. We know what we like, and we know what makes us feel confident. The clothes you wear in your headshot complement your expression and shape the overall impression you make. Your outfit should reflect the professional image you want to project. A polished, well-tailored suit might be ideal for a corporate executive, while a more casual, yet refined look could work well for someone in a creative field. Colors matter as well.
+
+  Conventional wisdom might suggest that you should incorporate colors that bring out your eyes. However, this is not necessarily in my calculus when assisting my clients with clothing decisions. Rather, my first bit of advice is to only bring what you love. If you don’t love the clothing, you’ll never photograph well in it. After this, I look for cuts and styles that bring interesting elements to the pictures. Regarding color, I try to keep things as simple as possible. Giving the human eye a lot of busy colors and patterns will distract from the most important element of the image, your expression.
+
+* **Background and Setting: The Context of Your Identity**
+  Headshot photography is the only form of photography where you are the product. This is the very reason I prefer and advise clients to aim for simplicity in the background. In other words, there is no reason to show a bunch of trees or bushes in your headshot image. No one wants to have a rogue tree branch sticking out from behind their head. Similarly, the old brick wall technique isn’t helpful either. Again, who wants to see grout lines sticking out all over the place?! You may like the idea of being photographed outside, but the drawbacks to doing so may very well reduce the overall impact your headshot should be making.
+
+  Since the background of your headshot can either enhance or detract from your overall image, I prefer to keep the backgrounds clean and simple. Solid-colored backgrounds, such as white, grey, or black, keep the focus on you. Of course, incorporating some interesting texture with a canvas background can add a bit of interest, while keeping the viewer’s attention on you.
+
+  Most headshot photographers can achieve a variety of backgrounds, colors, and textures. However, whatever you choose should align with your brand, your messaging, and your particular use case(s).
+
+* **The Power of Nuance**
+  They say that the devil is in the details. I couldn’t agree more!
+
+  What makes a good product or service better? Nuance, finesse, and subtlety.
+
+  I have long held the opinion that not all headshot photographers are created equal. In other words, it is impossible to compare different photographers, especially if the quality of the work you are likely to receive is significantly different. Of course, average folks may not necessarily see those differences, but they are glaringly apparent to those who know what to look for. As a result, the only point of comparison most will use is price. For some, price is the great equalizer, even though this is like comparing apples to oranges.
+
+  Photographers have different styles, aesthetics, visions, and abilities. Within the photography vocation, headshots are a specialization. This means that headshot specialists have spent considerable time educating themselves and training on various techniques to help you look incredible in your headshot images.
+
+  Most photographers can make a reasonably good picture. But that doesn’t necessarily mean that they have the knowledge or skill to leverage advanced techniques that ultimately separate a good headshot from a great headshot.
+
+  So, what is it that a headshot specialist knows that all other photographers don’t? I’m glad you asked! Professional headshot photographers understand finesse and nuance. We use subtlety as an exclamation point on an otherwise good image to make it stand out. Whether using light to shape and flatter your face, adjust body positions (also known as posing), or coaching and directing your facial expressions, headshot photographers purposely use nuance as an added layer of interest, as opposed to hoping for a happy accident.
+
+  Beyond what your headshot photographer can do for you, nuance can easily be seen and implemented when it comes to your facial expression. When human beings have an incredibly sensitive BS meter, contrived and forced expressions often miss the mark. Inauthentic expressions can happen, but headshot specialists are professionals at eliciting authenticity, personality, and uniqueness. This isn’t limited to what happens with your facial muscles. We actively move body positions and tilt heads to accompany those expressions, making your headshot more impactful. This doesn’t mean that we are making huge movements either. As mentioned above, millimeters of movement can change the entire dynamic of your headshot pictures.
+
+* **The Impact of First Impressions: The Halo Effect**
+  Your profile picture isn't just a photo. It gives you a chance to leave a lasting mark on your professional life. The "halo effect" means people often size you up based on their first impression, which can shape how they view your skills and personality overall. A headshot that shows you as confident, capable, friendly, and reliable sets the stage for others to link these traits to all parts of your work and character. So, putting time and money into getting a top-notch professional headshot isn't just about taking a picture; it's about molding how others see you at first glance and, in the end affecting how you're seen in your career pursuits.
+
+The underlying goal of a great headshot is to use visual cues to create the right impression. Using elements of human psychology, marketing, and branding, we leverage these visual cues to lengthen the amount of time people look at your pictures, thereby building a connection and eventually rapport.
+
+From your expression and eye contact to your body language and clothing, each element plays a role in shaping how others perceive you and how you can help them. By understanding and applying these principles, you can ensure that your headshot sends the message you want—and helps you make the best possible impression on potential clients, employers, or collaborators.
+
+Now you are armed with some insider information regarding high-quality headshots. However, if you choose to work with a headshot specialist, you might find that you won’t need to lend a great deal of thought or time to these elements since your photographer is already thinking about them and figuring out how best to achieve your desired goals using these visual cues and advanced techniques. Essentially, choose the right service provider and you’ll not only have a great experience, but your headshot pictures and profile photos will position you as an expert in your field and a master of your craft.

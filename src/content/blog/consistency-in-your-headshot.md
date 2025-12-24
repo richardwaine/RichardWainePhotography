@@ -1,0 +1,115 @@
+---
+blogTitle: 'Why Consistency in Your Headshot Matters'
+slug: consistency-in-your-headshot
+blogExcerpt: Your online presence spans multiple platforms. Maintaining consistency in your headshots across these platforms is crucial for building trust and credibility.
+publishDate: 2024-10-10T10:00:00Z
+modifiedDate: 2024-10-10T10:00:00Z
+author: Richard Waine
+authorUrl: https://www.richardwaine.com
+headerImage:
+  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6786a0a670f7f7229604d5b1/1736876198331/Headshot_20220524_Sallie+Mae_Richard_Waine_Lancaster_PA_0343+%28horizontal%29.jpg
+  alt: Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
+keywords: ["headshot consistency", "personal branding", "professional image", "LinkedIn headshots", "brand recognition"]
+articleSection: Photography Insights
+permalink: https://www.richardwaine.com/blog/consistency-in-your-headshot
+category: "personal-branding marketing business"
+cardCategory: "Personal Branding"
+imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b6114e576a2ca957b753/1747498513596/Headshot_20220524_Sallie+Mae_Richard_Waine_Lancaster_PA_0343+%2816+x+9%29+-+2+-+compressed.jpg
+imageAlt: professional headshot consistency across platforms
+---
+
+![Professional headshot by Richard Waine Photography](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6786a0a670f7f7229604d5b1/1736876198331/Headshot_20220524_Sallie+Mae_Richard_Waine_Lancaster_PA_0343+%28horizontal%29.jpg)
+
+Your online presence spans multiple platforms. Whether you know or not, using LinkedIn, Facebook, Twitter / X, TikTok, Instagram, company websites, social media profiles, email signatures, and others all serve as a megaphone to reach your desired audience. Each has a different role in your outreach strategy, so maintaining consistency in your headshots or profile photos across these platforms is crucial. But why does consistency matter, and how can it impact your professional image?
+
+Consistent headshots can either strengthen your personal and professional brand or cause significant harm by way of loss of credibility and trust.
+
+According to LinkedIn, profiles with professional headshots receive 14 times more views than those without. And, having a professional headshot makes you 36 times more likely to receive a message on the LinkedIn platform.
+
+<!-- * * * -->
+
+## Building a Recognizable Brand
+
+As cliché as it sounds, your headshot is a key element of your personal and professional brand. One of the main goals is for you to be instantly recognizable across all platforms. When people see the same image of you on LinkedIn, your company's website, and your email signature, they associate your picture with you and your professional identity. This recognition is important for building trust and credibility, especially in a competitive market where standing out is key.
+
+A great headshot is not the only element that goes into a brand. Most folks tend to think that their brand is tied to the colors they choose to use on their websites and marketing materials as well as their logo. Unfortunately, this just isn't the case. Each of the aforementioned elements are simply components of a brand. But they, in no way, represent the entirety of a brand.
+
+So what is a brand then? The simplest explanation of a brand comes down to how your audience feels about you / your company after interacting with one or more of these elements. In other words, what do people say about you when you're not in the room? How does an interaction with your company make people feel and what do they say about your company when you aren't around? These interactions could take place via email, telephone, voicemail, face-to-face conversations, or even a visit to your website.
+
+Since your professional headshot image or business profile photo, is one element of your brand, being recognizable and relatable becomes an essential element of that brand. In doing so, you create a connection, build trust, and earn credibility. As it relates to consistency, you are simply hoping to remove the guesswork from your audience's already active brain waves. You are presenting a unified team of professionals and/or demonstrating your ability to care for details. As professionals, we all hope that we are reassuring our clients and putting our best foot forward. We aim to ensure that clients always know what they are going to get when they work with us.
+
+<!-- * * * -->
+
+## Creating a Cohesive Professional Image
+
+A consistent headshot across all platforms ensures that you present a cohesive professional team. It reinforces the idea that you are reliable, organized, and attentive to detail. I believe these are qualities that are highly valued in any profession. However, using different headshots on different platforms can create a disjointed image, making it harder for people to form a clear impression of who you are.
+
+For clarity, this does not mean that you should or shouldn't have the same image on all profiles. It does make it easier to recognize and form a connection with you. However, when I talk about different headshots, I am referring to images that vary wildly from one another. For instance, using a picture from your beach vacation on one platform, a professional image on another, and an outdated image that was poorly executed on another platform could be disorienting and send a confusing message to your audience.
+
+This is why many of my clients are teams and companies that require their headshots to present a high level of consistency and professionalism. In truth, the appropriate level of consistency comes down to whether or not the pictures look like they were taken by the same photographer, at the same time, under the same circumstances, and with expressions that best represent the confidence and approachability of each team member. While this may sound like a relatively simple thing to accomplish, I urge you to take a look at your website or the websites of your competitors.
+
+If you Googled "headshot photographers," are the images you see consistent? Is the color grading in the same ballpark? Does John, from accounting, look deprived of oxygen? Does Barbara, from business development, look jaundiced?
+
+Another common idiom says, "You get what you pay for." I hate to be the bearer of bad news, but do you really want to cut corners on such an essential component of your brand? This is what your audience, existing clients, and potential clients see and interact with. [This is a revenue-generating asset.](/blog/common-myths-about-professional-headshots) One that I take a lot of pride in creating for my clients. However, when you expect to spend very little money on this kind of thing, you may very well get images that vary wildly, which is not a great representation of a unified team of professionals.
+
+<!-- * * * -->
+
+## Enhancing Trust and Credibility
+
+Consistency in your headshot images creates a sense of familiarity. When business is conducted between those who know, like, and trust each other, this becomes an indispensable and invaluable element of branding, marketing, and sales. When your audience sees the same headshot of you on multiple platforms, they're more likely to feel that they know you, even if they've never met you in person. The same could be said if you were to use an alternate headshot taken at the same time as your primary image. Familiarity can enhance your credibility, making it easier for others to trust you and feel confident in your abilities. Trust is a very big word for many people. It's not handed over so easily, and earning it is the only way to reassure your clients that you have their best interests at heart. Consistent headshots are a simple yet effective way to open the conversation and build that trust.
+
+Of course, there are other methods of earning trust. However, when you require a service provider, your first move is likely to do a Google search. In that search, you may find a biography, a list of accolades, education, and yes, a headshot as well.
+
+When you see this kind of biography, what do you look at first? Most of us look at the profile photo first. Have you ever wondered why we do this? First, we are visual. We look and connect with graphics and visuals before we ever get around to reading data. Secondly, we want to know who we are reading about. Putting a face to the name is important to us as consumers. Lastly, while we understand that the accolades are impressive, experience matters, and the education pedigree is equally important, we simply seek out a way to level the playing field. Viewing a profile photo humanizes us, and allows us to see each other as people not just service providers.
+
+![infographic showing that trust is built through visual branding](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6786a2443c0ef15390c06910/1736876613183/Building+Trust+through+visual+branding.png)
+
+<!-- * * * -->
+
+## Streamlining Your Professional Story
+
+Your profile picture is part of the visual story you tell about yourself, your firm, and your career. A high-quality headshot or series of headshots helps to streamline that story, making it clear and easy to follow.
+
+Whether someone is viewing your LinkedIn profile, reading your biography on your company's website, or receiving an email from you, they're getting the same visual message: this is who you are, and this is what you stand for. Your clients want to know that you are confident in your knowledge, competent at what you do, approachable enough to have a conversation with, and trustworthy enough to care for your clients' needs.
+
+Since we are visual beings, we glean a lot of information and form opinions about people based on what we see. Notice that this is not a question of the words you use in your biography or on your profile. The reason for this is that humans naturally shy away from reading. We live in an instant gratification type of world. We want answers, information, graphics, videos, pictures, etc. as quickly as possible so that we can get what we need and move on. If the purpose is to inform, educate, create a connection, and steer your audience toward reaching out to you or working with you then no amount of text on a page will do that as well as a picture can.
+
+What does your headshot say about you?!
+
+<!-- * * * -->
+
+## Supporting Your Career Goals
+
+I don't know too many people looking to avoid upward mobility in their firms. Most of us have a little ambition and larger goals. If you're looking to advance your career, having consistent headshots can help to support your goals. It shows that you're serious about your professional image, and how you are presented. It demonstrates that you've put thought into how you are perceived and received. Whether you're networking, seeking new opportunities, or building your online presence, a consistent headshot can make a positive impression and help you achieve your objectives.
+
+No one wants to be presented as careless, sloppy, frumpy, disheveled, or otherwise ho-hum. This is just one of the many reasons people invest in great-quality images. Taking the time and spending the money to get it right is actually an investment in future revenue and corporate advancement.
+
+We live in a world where we can find out an awful lot about people with the press of a few buttons. When you apply for a new position or are a candidate for advancement, it takes no time for management to learn a bit more about you beyond your resume. What will they see? What will they learn? Cultivating your social media profiles is not just wise, it becomes mandatory. In that effort, which images will be seen? Hopefully, you aren't displaying images of yourself or others in compromising positions or situations. Sure, you may not necessarily be viewed as the life of the party, but is that really so important anyway? Stick a great professional headshot on your profiles, and let your photos do the talking!
+
+<!-- * * * -->
+
+## Simplifying the Process
+
+For those of you who prefer to keep things simple, maintaining a consistent headshot across platforms also streamlines the process of managing your online presence. You don't have to worry about updating multiple images or remembering which headshot you used where. Instead, you can focus on more important aspects of your career, knowing that your headshot is working for you across all platforms.
+
+Again, consistency is not necessarily about using only one image on every profile. There is nothing wrong with leveraging multiple images with varying expressions and body positions. But, were they taken at the same time? By the same photographer? Is the color, tonality, shadow density, crop, exposure, contrast, and saturation levels all the same? You can certainly leverage a library of great headshot images. But, I would advise against using images that vary so wildly that viewers have a tough time seeing and learning more about you.
+
+**Pro Tip:** Create a folder on your computer. Make sure that the folder is easily accessible and in an easy-to-remember location. Place your headshots inside this folder. I recommend labeling this folder "My Headshots." Now you'll know where your headshots live, and can easily find them as you cultivate your online profiles.
+
+<!-- * * * -->
+
+## When Should I Update My Headshot?
+
+Consistency doesn't mean using the same headshot for years on end. It's important to update your headshot periodically. I have had some clients tell me that they have used the same headshot or profile photo for the last 10-15 years. Other clients ask me my opinion on this.
+
+The reality is that you should update your headshots every 1-2 years or when you change your style, your look, your hair, or as you age.
+
+Aging is a completely normal human condition. Unfortunately, we are not going to find the fountain of youth any time soon. This means that learning [self-acceptance](/blog/perceived-flaws-and-self-acceptance) becomes important because using a stale headshot that isn't representative of the person you are today or what you currently look like is a recipe for destroying trust and losing credibility.
+
+We all know that one person who takes issue with the fact that they're getting older. And, when those people finally come in for an updated headshot, they often request a level of alteration that essentially obliterates any authenticity. Please don't be this person! Can you imagine walking into an important meeting and no one knows who you are because you used a headshot from 15 years ago? Clearly, doing so would be detrimental, but personal vanity usually weighs heavily on people. I encourage you to think first about how OTHERS view your headshots and what message those headshots send.
+
+By keeping your headshot current and consistent, you ensure that your online presence accurately represents who you are today.
+
+<!-- * * * -->
+
+Consistency in your headshot across platforms is essential for building a strong personal brand, enhancing trust and credibility, and creating a cohesive professional image. Great headshot images can have a big impact on how you're perceived in the professional world. So take a moment to review your online profiles, bios, and those of your colleagues. Are your headshots consistent? Are they being leveraged appropriately? If not, it might be time to update them and ensure that you're presenting your best self and your incredible team across all platforms.

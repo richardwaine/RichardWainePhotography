@@ -1,7 +1,7 @@
 ---
-blogTitle: 'Meet Ben Marcum: The Human Side of Professional Photography'
+blogTitle: 'Meet Ben Marcum: The Human Side of Photography'
 slug: meet-ben-marcum-the-human-side-of-professional-photography
-blogExcerpt: Louisville photographer Ben Marcum discusses the human side of professional photography, sharing insights on client connection and authentic approaches.
+blogExcerpt: Louisville photographer Ben Marcum discusses the human side of professional photography, sharing insights on client connection.
 publishDate: 2025-08-05T10:00:00Z
 modifiedDate: 2025-08-05T10:00:00Z
 author: Richard Waine
