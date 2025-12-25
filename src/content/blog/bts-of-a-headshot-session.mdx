@@ -16,31 +16,58 @@ category: "client-experience photography-insights business marketing"
 cardCategory: "client experience"
 imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bc61e5b7bb7ec71a56a1/1747500129974/RW_FINAL_V1_FOR+REVIEW.00_00_29_08.Still003+%2816+x+9%29+-+compressed.jpg
 imageAlt: ""
----
 
-<div class="image-row">
-    <img src="../assets/images/blog/Liz Riden_Richard Waine_Lancaster_PA_0001 - compressed.jpg" alt="">
-    <img src="image2.jpg" alt="">
-    <img src="image3.jpg" alt="">
-    <img src="image4.jpg" alt="">
-    <img src="image5.jpg" alt="">
-    <img src="image6.jpg" alt="">
+
+
+
+
+
+---
+import { Image } from 'astro:assets';
+import LizImage from '../../assets/images/blog/LizRiden-0001.jpg';
+import RW001 from '../../assets/images/blog/RW_FINAL_V1_Still001.jpg';
+import RW003 from '../../assets/images/blog/RW_FINAL_V1_Still003.jpg';
+import RW004 from '../../assets/images/blog/RW_FINAL_V1_Still004.jpg';
+import RW005 from '../../assets/images/blog/RW_FINAL_V1_Still005.jpg';
+import RW008 from '../../assets/images/blog/RW_FINAL_V1_Still008.jpg';
+
+<div className="image-row">
+  <Image src={RW001} alt="" />
+  <Image src={RW004} alt="" />
+  <Image src={RW005} alt="" />
+  <Image src={RW003} alt="" />
+  <Image src={RW008} alt="" />
+  <Image src={LizImage} alt="" />
+
 </div>
 
 <style>
-.image-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  gap: var(--size-5);
+{`
+  .image-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--size-4);
+  }
+  .image-row img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-block:var(--size-4);
+  }
+
+@media (min-width:48em){
+  .image-row{
+     grid-template-columns: repeat(6, 1fr);
+     gap: var(--size-4);
+     margin-block:var(--size-4);
+  }
 }
-.image-row img {
-  width: 100%;
-  height: auto;
-  object-fit:cover;
-}
+
+
+`}
 </style>
 
-![Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bc61e5b7bb7ec71a56a1/1747500129974/RW_FINAL_V1_FOR+REVIEW.00_00_29_08.Still003+%2816+x+9%29+-+compressed.jpg)
+
 
 Sometimes lack of clarity around expectations and workflow gives way to the question: What really goes into a professional headshot session?
 
