@@ -20,15 +20,80 @@ const faqs = post.data.faqs || [];
 
 // --- END NEW LINE ---
 
-
+// Determine if this is an interview post
+const isInterview = post.data.type === 'interview';
 
 ---
 
 <MainLayout title={title}>
 
+	{isInterview ? (
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Interview",
+			"headline": post.data.blogTitle,
+			"description": post.data.blogExcerpt,
+			"datePublished": post.data.publishDate,
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": post.data.permalink
+			},
+			"interviewer": {
+				"@type": "Person",
+				"name": "Richard Waine",
+				"url": "https://www.richardwainephotography.com"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Richard Waine Photography",
+				"url": "https://www.richardwainephotography.com"
+			},
+			"image": post.data.headerImage?.src
+		})} />
+	) : (
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Article",
+			"headline": post.data.blogTitle,
+			"author": {
+				"@type": "Person",
+				"name": post.data.author,
+				"url": post.data.authorUrl,
+				"sameAs": [
+					"https://www.linkedin.com/in/richardwaine/",
+					"https://www.instagram.com/richardwaine"
+				]
+			},
+			"datePublished": post.data.publishDate,
+			"dateModified": post.data.modifiedDate,
+			"publisher": {
+				"@type": "Organization",
+				"name": "Richard Waine Photography",
+				"url": "https://www.richardwainephotography.com",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://www.richardwainephotography.com/src/assets/Logo - Richard Waine Photography (transparent) white.png"
+				},
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "20 North Queen Street",
+					"addressLocality": "Lancaster",
+					"addressRegion": "PA",
+					"postalCode": "17603",
+					"addressCountry": "US"
+				}
+			},
+			"mainEntityOfPage": post.data.permalink,
+			"description": post.data.blogExcerpt,
+			"articleSection": post.data.articleSection,
+			"keywords": post.data.keywords,
+			"image": post.data.headerImage?.src
+		})} />
+	)}
+
   <article>
     <div class="wrapper">
-    
+
       <h1 class="article-title">{title}</h1>
 
 
@@ -72,6 +137,7 @@ const faqs = post.data.faqs || [];
 
 .wrapper{
   margin-top:calc(var(--header-height) + var(--size-7));
+  margin-bottom:var(--size-7);
 }
 
 /*blog posts*/
@@ -91,6 +157,7 @@ const faqs = post.data.faqs || [];
 
 .article-content{
   padding-block:var(--size-7);
+  
   
 }
 
@@ -144,7 +211,7 @@ article ul{
 
 article li{
     list-style:none;
-    margin-block:var(--size-7);
+    margin-block:var(--size-2);
  }
 
 .table-of-contents{
@@ -284,6 +351,23 @@ p{
 .blog-faq-title {
   text-align: center;
 }
+
+/* FAQ accordion in blog articles */
+article .article-content .faq-content {
+  width: 100%;
+  margin-inline: auto;
+  margin-block: var(--size-10);
+}
+
+  @media (min-width:64em){
+    article .article-content .faq-content {
+    width: 50%;
+  }
+}
+
+
+    
+
 
 /* END NEW CSS */
 
