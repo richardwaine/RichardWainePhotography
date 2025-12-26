@@ -47,6 +47,27 @@ const heroContent = {
 
 <MainLayout title = "Philadelphia Headshots | Richard Waine Photography">
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "ProfessionalService",
+		"name": "Richard Waine Photography - Philadelphia Headshots",
+		"description": "Professional headshot photography services in Philadelphia, Pennsylvania",
+		"url": "https://www.richardwainephotography.com/philadelphia-headshots",
+		"telephone": "(717) 925-0061",
+		"areaServed": {
+			"@type": "City",
+			"name": "Philadelphia",
+			"addressRegion": "PA",
+			"addressCountry": "US"
+		},
+		"provider": {
+			"@type": "ProfessionalService",
+			"@id": "https://www.richardwainephotography.com"
+		}
+	}
+	</script>
+
 	<section id="hero">
 	<Hero
 		title={heroContent.title}

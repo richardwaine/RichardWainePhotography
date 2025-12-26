@@ -47,6 +47,27 @@ const heroContent = {
 
 <MainLayout title = "Harrisburg Headshots | Richard Waine Photography">
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "ProfessionalService",
+		"name": "Richard Waine Photography - Harrisburg Headshots",
+		"description": "Professional headshot photography services in Harrisburg, Pennsylvania",
+		"url": "https://www.richardwainephotography.com/harrisburg-headshots",
+		"telephone": "(717) 925-0061",
+		"areaServed": {
+			"@type": "City",
+			"name": "Harrisburg",
+			"addressRegion": "PA",
+			"addressCountry": "US"
+		},
+		"provider": {
+			"@type": "ProfessionalService",
+			"@id": "https://www.richardwainephotography.com"
+		}
+	}
+	</script>
+
 	<section id="hero">
 	<Hero
 		title={heroContent.title}

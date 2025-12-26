@@ -47,6 +47,27 @@ const heroContent = {
 
 <MainLayout title = "York Headshots | Richard Waine Photography">
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "ProfessionalService",
+		"name": "Richard Waine Photography - York Headshots",
+		"description": "Professional headshot photography services in York, Pennsylvania",
+		"url": "https://www.richardwainephotography.com/york-headshots",
+		"telephone": "(717) 925-0061",
+		"areaServed": {
+			"@type": "City",
+			"name": "York",
+			"addressRegion": "PA",
+			"addressCountry": "US"
+		},
+		"provider": {
+			"@type": "ProfessionalService",
+			"@id": "https://www.richardwainephotography.com"
+		}
+	}
+	</script>
+
 	<section id="hero">
 	<Hero
 		title={heroContent.title}

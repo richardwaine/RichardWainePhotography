@@ -47,6 +47,29 @@ const heroContent = {
 
 <MainLayout title = "Conference Headshots | Richard Waine Photography">
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Conference Headshot Photography",
+		"description": "Professional headshot photography services for conferences and events",
+		"url": "https://www.richardwainephotography.com/conference-headshots",
+		"provider": {
+			"@type": "ProfessionalService",
+			"@id": "https://www.richardwainephotography.com"
+		},
+		"serviceType": "Conference Photography",
+		"areaServed": [
+			{"@type": "State", "name": "Pennsylvania"},
+			{"@type": "State", "name": "Maryland"},
+			{"@type": "State", "name": "Delaware"},
+			{"@type": "State", "name": "New Jersey"},
+			{"@type": "State", "name": "New York"},
+			{"@type": "State", "name": "Virginia"}
+		]
+	}
+	</script>
+
 	<section id="hero">
 	<Hero
 		title={heroContent.title}
