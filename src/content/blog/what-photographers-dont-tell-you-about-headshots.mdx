@@ -11,15 +11,15 @@ author: Richard Waine
 
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6850380391d038294cfef4fb/1750087683561/Headshot_20250521_Jacqueline+Johansen_Richard+Waine_Lancaster_PA_0014+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/JacquelineJohansen - 0014 (horizontal).jpg
   alt: Richard Waine Photography, Business Headshot for Financial Advisor, headshot of male wearing glasses a suit and a tie
 keywords: ["headshots", "websites", "planning", "professional photography", "business headshots"]
 articleSection: Photography Insights
 permalink: https://www.richardwaine.com/blog/what-photographers-dont-tell-you-about-headshots
 category: "photography-insights headshot-tips business" # Ensure this matches your filter categories
 cardCategory: "Photography Insights"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6850380391d038294cfef4fb/1750087683561/Headshot_20250521_Jacqueline+Johansen_Richard+Waine_Lancaster_PA_0014+%2816+x+9%29+-+compressed.jpg
-imageAlt: Richard Waine Photography, Business Headshot for Financial Advisor, headshot of male wearing glasses a suit and a tie
+imageSrc: src/assets/images/blog/JacquelineJohansen - 0014 (16 x 9).jpg
+imageAlt: Richard Waine Photography, Business Headshot for lawyer, headshot of female wearing glasses
 
 
 # --- START NEW FAQ FORMAT ---
@@ -37,8 +37,16 @@ faqs:
 # --- END NEW FAQ FORMAT ---
 
 ---
+import FAQAccordion from '../../components/FAQAccordion.astro';
+import { Image } from 'astro:assets';
+import JacquelineJohansen from '../../assets/images/blog/JacquelineJohansen - 0014 (horizontal).jpg';
+import HeadshotInvestment from '../../assets/images/blog/HeadshotInvestment.png';
 
-![Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6850323bf8f56200f6edde57/1750086204285/Headshot_20250521_Jacqueline+Johansen_Richard+Waine_Lancaster_PA_0014+%28horizontal%29+-+compressed.jpg)
+
+
+<Image src={JacquelineJohansen} alt="Professional Headshots, Richard Waine Photography, Business Headshot for lawyer, headshot of female wearing glasses, LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 Getting a professional headshot should feel like a smart, simple step forward. But many people walk into their session with the wrong expectations, limited information, or a sense that something's being left out. Most photographers do not tell you what really matters. That creates problems.
 
@@ -104,7 +112,7 @@ A retouched photo should still feel like you. Only better rested.
 
 ## How Much Do Professional Headshots Cost?
 
-Many people ask [why headshots cost what they do](/blog-2/why-professional-headshots-are-more-affordable-than-you-think). It is a fair question. The answer is not about how many minutes you spend in the studio.
+Many people ask [why headshots cost what they do](/blog/why-professional-headshots-are-more-affordable-than-you-think). It is a fair question. The answer is not about how many minutes you spend in the studio.
 
 When you hire a professional, you pay for more than camera clicks. You pay for coaching, for the environment, for the gear, and for the ability to deliver results. You pay for trust.
 
@@ -120,13 +128,15 @@ The business impact speaks for itself. Clients frequently report better response
 
 A higher rate often reflects a better experience. It means someone took the time to do it right. They planned, listened, adjusted, and worked with care. If the image feels honest and confident, it is worth it.
 
-[The Return on Investment in professional headshots](/blog-2/return-on-investment) might not seem so obvious, but the impact can be quite significant.
+[The Return on Investment in professional headshots](/blog/return-on-investment) might not seem so obvious, but the impact can be quite significant.
 
-![weighing value of professional headshots, professional headshot investment breakdown](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68503164ad75fd6aa0f8bb78/1750085988760/Professional+Headshot+Investment+Breakdown+-+compressed.png)
+
+<Image src={HeadshotInvestment} alt="weighing value of professional headshots, professional headshot investment breakdown" class="hs-infographic" />
+
 
 ## Choosing the Right Professional Headshot Photographer
 
-[Finding the right headshot photographer](/blog-content/finding-the-right-headshot-photographer) can be daunting when there are so many options and the space is flooded with information that may or may not be helpful.
+[Finding the right headshot photographer](/blog/finding-the-right-headshot-photographer) can be daunting when there are so many options and the space is flooded with information that may or may not be helpful.
 
 Most photographers avoid saying many, if not all of these things. That does not make them untrue. If you have never liked your photos, this information matters.
 
@@ -145,3 +155,5 @@ Your headshot is often your first impression. Make sure it shows the real you, i
 ## Ready to invest in professional headshots that build trust and credibility?
 
 Ready to invest in professional headshots that build trust and credibility? As a professional headshot photographer serving Pennsylvania, New York, New Jersey, Delaware, Maryland, and Virginia, I help professionals create authentic images that support their business goals. Contact me to discuss your corporate headshot needs, whether for individual LinkedIn photos or complete team photography.
+
+<FAQAccordion class="blogFAQs" faqs={frontmatter.faqs} />

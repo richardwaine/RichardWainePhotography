@@ -8,19 +8,25 @@ modifiedDate: 2018-02-08T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f737ab2a93074ee9484f1/1746891642856/Cardozo+Lacrosse+Seniors+1996+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/CardozoLacrosseSeniors1996 (16 x 9).jpg
   alt: Cardozo Lacrosse team seniors 1996
 keywords: ["life lessons", "business strategy", "teamwork", "persistence", "passion", "lacrosse", "sports philosophy", "entrepreneurship", "resilience"]
 articleSection: Business
 permalink: https://www.richardwaine.com/blog/for-the-love-of-the-game
 category: "business"
 cardCategory: "Business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f737ab2a93074ee9484f1/1746891642856/Cardozo+Lacrosse+Seniors+1996+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/CardozoLacrosseSeniors1996 (16 x 9).jpg
 imageAlt: Cardozo Lacrosse team seniors 1996
 
 ---
+import { Image } from 'astro:assets';
+import CardozoLax from '../../assets/images/blog/CardozoLacrosseSeniors1996 (16 x 9).jpg';
 
-![Cardozo Lacrosse team seniors 1996](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f737ab2a93074ee9484f1/1746891642856/Cardozo+Lacrosse+Seniors+1996+%2816+x+9%29+-+compressed.jpg)
+
+
+
+<Image src={CardozoLax} alt="Professional Headshots, best backgrounds for headshots, LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
 
 ## For The Love of the Game
 

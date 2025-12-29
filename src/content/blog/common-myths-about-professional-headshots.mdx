@@ -8,18 +8,27 @@ modifiedDate: 2024-10-18T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683ddd9383fd532f9bb3614a/1748884884118/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%28horizontal%29+-+compressed.jpg
+  src: src/assets/images/blog/WilliamAdote - 0023 (horizontal).jpg
   alt: Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 keywords: ["professional headshot myths", "headshot photography misconceptions", "AI headshots", "DIY headshots", "professional photography investment"]
 articleSection: Photography Insights
 permalink: https://www.richardwaine.com/blog/common-myths-about-professional-headshots
 category: "photography-insights headshot-tips business"
 cardCategory: "Photography Insights"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b983d0e6a74aab760120/1747499395371/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/WilliamAdote - 0023 (16 x 9).jpg
 imageAlt: Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 ---
 
-![Professional headshot by Richard Waine Photography](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683ddd9383fd532f9bb3614a/1748884884118/Headshot_20240919_William+Adote_Richard+Waine_Lancaster_PA_0023+%28horizontal%29+-+compressed.jpg)
+
+import { Image } from 'astro:assets';
+import WilliamAdote from '../../assets/images/blog/WilliamAdote - 0023 (horizontal).jpg';
+import aiHeadshots from '../../assets/images/blog/AI-Headshots.png';
+
+
+
+<Image src={WilliamAdote} alt="Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 There are a lot of myths and misconceptions that prevent people from investing in professional headshot photography. While this list is not exhaustive, this post will debunk some of the most common myths about professional headshots to help you understand their true value and benefits.
 
@@ -142,7 +151,9 @@ Over the years, I have watched wonderful people get emotionally destroyed becaus
 
 The experience of the photographer matters, but the photographic experience matters too!
 
-![infographic showing that Ai generated headshots are not a good investment](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67869099759b3e38dcbc8efa/1736872089127/Myth_+%E2%80%9CAI-Generated+Headshots+Are+A+Good+Investment%E2%80%9D+-+visual+selection.png)
+<Image src={aiHeadshots} alt="infographic showing that Ai generated headshots are not a good investment" class="hs-infographic" />
+
+
 
 {/* * * * */}
 

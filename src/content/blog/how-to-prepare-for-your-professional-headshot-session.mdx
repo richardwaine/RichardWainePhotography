@@ -8,18 +8,27 @@ modifiedDate: 2024-10-07T11:09:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6786a7a5f589f56f7af4f710/1736877989875/Headshot_20200312_Accelerate+Mortgage+8_Richard_Waine_Lancaster_PA_0185+%28horizontal%29+-+compressed.jpg
+  src: src/assets/images/blog/AccelerateMortgage - 0185 (horizontal).jpg
   alt: Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 keywords: ["professional headshots", "LinkedIn Profile Pictures", "Headshots by Richard Waine"]
 articleSection: headshot tips
-permalink: https://www.richardwaine.com/blog-2/how-to-prepare-for-your-professional-headshot-session
+permalink: https://www.richardwaine.com/blog/how-to-prepare-for-your-professional-headshot-session
 category: "headshot-tips marketing client-experience"
 cardCategory: "headshot tips"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/674b31e91da31754749bb904/1732981226812/RW_FINAL_V1_FOR+REVIEW.00_00_00_22.Still001+copy+3.jpg
+imageSrc: src/assets/images/blog/RW5 - (16 x 9).jpg
 imageAlt: ""
 ---
 
-![Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6786a7a5f589f56f7af4f710/1736877989875/Headshot_20200312_Accelerate+Mortgage+8_Richard_Waine_Lancaster_PA_0185+%28horizontal%29+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import AccelerateMortgage from '../../assets/images/blog/AccelerateMortgage - 0185 (horizontal).jpg';
+import ImpactOfClothing from '../../assets/images/blog/ImpactOfClothing.png';
+
+
+
+
+<Image src={AccelerateMortgage} alt="Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 Preparing for a professional headshot session can be both exciting and nerve-wracking. Some folks experience anxiety and nervousness, and others feel excitement. Given that a professional headshot experience isn’t cheap, achieving great results is not only a function of selecting the right headshot photographer. Preparation is key. You want to look your best, but you might not be sure where to start. The good news is that with a little advanced preparation, you can ensure that your headshot session goes smoothly and results in pictures you’ll be proud to use, display, and share.
 
@@ -49,7 +58,8 @@ Here’s a step-by-step guide on how to prepare for your professional headshot s
 
     Make sure your clothes fit well and are free of wrinkles. A tailored look is always more flattering.
 
-  ![infographic showing the impact of clothing fit on professional image](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6786a8931b15466bd9bf50b7/1736878227706/impact+of+clothing+fit+on+professional+image.png)
+<Image src={ImpactOfClothing} alt="infographic showing the impact of clothing fit on professional image" class="hs-infographic" />
+
 
 * **Grooming and Hygiene**
   Good grooming is essential for a polished headshot. Here’s what to keep in mind:

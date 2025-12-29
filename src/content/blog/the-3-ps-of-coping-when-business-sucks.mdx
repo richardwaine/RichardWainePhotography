@@ -8,19 +8,26 @@ modifiedDate: 2018-02-06T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68278c302373e03f29bf1b64/1747422256425/Headshot_20190603_Eric+Richardson_Richard_Waine_Lancaster_PA_0236+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/EricRichardson - 0236 (16 x 9).jpg
   alt: Professional business headshot
 keywords: ["business success", "entrepreneurship", "personal branding", "business persistence", "photography business", "market corrections", "business strategy", "passion in business"]
 articleSection: Business
 permalink: https://www.richardwaine.com/blog/the-3-ps-of-coping-when-business-sucks
 category: "business"
 cardCategory: "Business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68278c302373e03f29bf1b64/1747422256425/Headshot_20190603_Eric+Richardson_Richard_Waine_Lancaster_PA_0236+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/EricRichardson - 0236 (16 x 9).jpg
 imageAlt: Professional business headshot
 
 ---
+import { Image } from 'astro:assets';
+import EricRichardson from '../../assets/images/blog/EricRichardson - 0236 (16 x 9).jpg';
+import KenHenry from '../../assets/images/blog/KenHenry - 0077 (horizontal).jpg';
 
-![Professional business headshot](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68278c302373e03f29bf1b64/1747422256425/Headshot_20190603_Eric+Richardson_Richard_Waine_Lancaster_PA_0236+%2816+x+9%29+-+compressed.jpg)
+
+
+<Image src={EricRichardson} alt="Professional actor Headshots, business headshots, business portraits, LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 ## The 3 P's of Coping When Business Sucks
 
@@ -38,7 +45,7 @@ I was working on Wall Street during the 2007 housing crisis. I watched markets t
 
 Yesterday, the Market sold off…big time. Investors, unless they were betting on a massive correction, lost some money, albeit on paper.
 
-{/* ![corporate headshots, business headshots](href) */}
+<Image src={KenHenry} alt="corporate headshots, business headshots" class="hs-infographic" />
 
 I'm sure you know what it's like to win. It's an incredible feeling when you are doing what you love, business is flowing well, and you are making money hand over fist.
 

@@ -8,20 +8,26 @@ modifiedDate: 2017-04-03T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683b1cd98a9d5a62dcefc979/1748704473420/DSC04679-2+%2816+x+9%29+-+compressed.jpg
-  alt: UX Design Principles
+  src: src/assets/images/blog/RW1 - (16 x 9).jpg
+  alt: Professional Headshots, best backgrounds for headshots, LinkedIn Profile Pictures, Headshots by Richard Waine
 keywords: ["headshot photography", "actor headshots", "professional headshots", "squinch technique", "headshot expressions"]
 articleSection: photography insights
 permalink: https://www.richardwaine.com/blog/crafting-a-headshot
 category: "headshot-tips"
 cardCategory: "photography insights"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683b1cd98a9d5a62dcefc979/1748704473420/DSC04679-2+%2816+x+9%29+-+compressed.jpg
-imageAlt: UX Design Principles
+imageSrc: src/assets/images/blog/RW1 - (16 x 9).jpg
+imageAlt: Professional Headshots, best backgrounds for headshots, LinkedIn Profile Pictures, Headshots by Richard Waine
 
 ---
 
-![UX Design Principles](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683b1cd98a9d5a62dcefc979/1748704473420/DSC04679-2+%2816+x+9%29+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import RW1 from '../../assets/images/blog/RW1 - (16 x 9).jpg';
+import JayPoff1 from '../../assets/images/blog/JayPoff - 0100 (horizontal).jpg';
 
+
+
+
+<Image src={RW1} alt="Professional Headshots, best backgrounds for headshots, LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
 
 
 ## Headshots for Actors
@@ -34,7 +40,10 @@ We talked a bit, and decided it would be great to meet up for a cup of coffee. I
 
 After having Jay in the studio for a professional headshot update, I decided that his new headshot would be great to use as an example for teaching purposes.
 
-Lancaster Pennsylvania headshot photographer
+
+<Image src={JayPoff1} alt="Lancaster Pennsylvania headshot photographer, Jay Poff, Actor Headshots" class="hs-infographic" />
+
+
 
 Most people tend to view a headshot and wonder why the subject looks a certain way. Why they appear "sneaky" or, why they aren't offering up a big toothy smile.
 

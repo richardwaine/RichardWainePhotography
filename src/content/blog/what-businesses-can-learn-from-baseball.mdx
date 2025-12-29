@@ -8,19 +8,25 @@ modifiedDate: 2018-05-23T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f67847e3de06c776c7042/1746888580881/Mountville+Tigers+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/MountvilleTigers - (16 x 9).jpg
   alt: 12U Mountville Tigers Baseball Team
 keywords: ["business lessons", "baseball analogies", "team building", "business fundamentals", "sportsmanship"]
 articleSection: Business
 permalink: https://www.richardwaine.com/blog/what-businesses-can-learn-from-baseball
 category: "business"
 cardCategory: "Business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f67847e3de06c776c7042/1746888580881/Mountville+Tigers+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/MountvilleTigers - (16 x 9).jpg
 imageAlt: 12U Mountville Tigers Baseball Team
 
 ---
 
-![12U Mountville Tigers Baseball Team](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f67847e3de06c776c7042/1746888580881/Mountville+Tigers+%2816+x+9%29+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import MountvilleTigers from '../../assets/images/blog/MountvilleTigers - (16 x 9).jpg';
+
+
+
+<Image src={MountvilleTigers} alt="12U Mountville Tigers Baseball Team" class="article-header-image" />
+
 
 
 

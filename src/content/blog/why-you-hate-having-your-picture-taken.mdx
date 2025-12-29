@@ -8,19 +8,24 @@ modifiedDate: 2018-01-05T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828c09435ff3c6736871b8b/1747501204227/FedEx_logo_orange-purple+%2816x9%29+-+compressed.png
+  src: src/assets/images/blog/FedEx-Logo - (16 x 9).png
   alt: FedEx logo showing hidden arrow
 keywords: ["camera anxiety", "photo anxiety", "body image", "self-acceptance", "headshot experience", "professional headshots", "photography coaching", "picture avoidance syndrome"]
 articleSection: Client Experience
 permalink: https://www.richardwaine.com/blog/why-you-hate-having-your-picture-taken
 category: "client-experience"
 cardCategory: "client experience"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828c09435ff3c6736871b8b/1747501204227/FedEx_logo_orange-purple+%2816x9%29+-+compressed.png
+imageSrc: src/assets/images/blog/FedEx-Logo - (16 x 9).png
 imageAlt: FedEx logo showing hidden arrow
 
 ---
+import { Image } from 'astro:assets';
+import FedEx from '../../assets/images/blog/FedEx-Logo - (16 x 9).png';
+import EllenTaylor from '../../assets/images/blog/EllenTaylor - 0093 (horizontal).jpg';
+import DavidBraught from '../../assets/images/blog/DavidBraught - 0090 (horizontal).jpg';
 
-![FedEx logo showing hidden arrow](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828c09435ff3c6736871b8b/1747501204227/FedEx_logo_orange-purple+%2816x9%29+-+compressed.png)
+
+<Image src={FedEx} alt="FedEx logo showing hidden arrow" class="article-header-image" />
 
 
 
@@ -54,6 +59,10 @@ Magazines and other media show models with flawless skin, perfect hair, outrageo
 
 If you truly hate having your headshot taken, the first thing to do is make sure that you aren't trying to compare yourself or measure up to these unrealistic benchmarks.
 
+<Image src={EllenTaylor} alt="Professional Headshot of caucasian female executive on White Background" class="hs-infographic" />
+
+
+
 One of the most beautiful individuals came to me for updated headshots, due to need not desire. They were petrified over the notion of having their picture taken. They just couldn't come to terms with the aging process. After a few shed tears, some settling, and a little coaching, the experience and results changed how they felt about themselves. That was the most awe-inspiring experience of my life. I can't believe I was able to change how someone felt about themselves by delivering pictures and an incredible experience.
 
 Luckily, these experiences have become more frequent for me. And, the bright spot for me is positively affecting someone else's life and self-perception.
@@ -79,6 +88,9 @@ You want a relaxed, comfortable, and dynamic atmosphere, where the laughter is a
 When I discuss prior photography experiences with my clients, I am often told that I am the first photographer that has ever directed them, coached them, taught them, and made the experience so much fun that the images show them for who they really are.
 
 While this is quite flattering, especially for my ego, the reality is that I make extraordinary headshots for extraordinary people. I have a vested interest in their success, and will do whatever is in my power to ensure that the images we create are the best they have ever seen.
+
+<Image src={DavidBraught} alt="Professional headshots, actor headshots, headshots for men, facial expression coaching" class="hs-infographic" />
+
 
 Lastly, the results have to speak for themselves.
 

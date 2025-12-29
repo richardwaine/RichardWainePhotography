@@ -8,19 +8,23 @@ modifiedDate: 2018-05-25T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b0cba65ba17c8999131e/1747497163826/Headshot_20180414_Ken+Giglio_Richard_Waine_Lancaster_PA_0060+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/KenGiglio - (16 x 9).jpg
   alt: Professional branding headshot
 keywords: ["personal branding", "professional headshots", "branding photography", "first impressions", "visual identity"]
 articleSection: Personal Branding
 permalink: https://www.richardwaine.com/blog/the-basics-of-branding
 category: "personal-branding"
 cardCategory: "Personal Branding"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b0cba65ba17c8999131e/1747497163826/Headshot_20180414_Ken+Giglio_Richard_Waine_Lancaster_PA_0060+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/KenGiglio - (16 x 9).jpg
 imageAlt: Professional branding headshot
 
 ---
+import { Image } from 'astro:assets';
+import KenGiglio from '../../assets/images/blog/KenGiglio - (16 x 9).jpg';
 
-![Professional branding headshot](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b0cba65ba17c8999131e/1747497163826/Headshot_20180414_Ken+Giglio_Richard_Waine_Lancaster_PA_0060+%2816+x+9%29+-+compressed.jpg)
+
+<Image src={KenGiglio} alt="Professional Headshots, Professional branding headshot, LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
 
 ## Branding Headshots
 

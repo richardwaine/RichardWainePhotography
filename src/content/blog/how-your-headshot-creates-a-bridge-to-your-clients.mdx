@@ -8,19 +8,28 @@ modifiedDate: 2024-08-13T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/678bf7c795f66b7445d51de1/1737226183700/Headshot_20191001_Chuck+Sierk_Richard_Waine_Lancaster_PA_0116+%28horizontal%29+-+compressed.jpg
+  src: src/assets/images/blog/ChuckSierk - 0116 (horizontal).jpg
   alt: Professional headshots, Website Profile Pictures, Headshots by Richard Waine
 keywords: ["professional headshots", "personal branding", "business photography", "team headshots", "visual identity"]
 articleSection: Marketing
 permalink: https://www.richardwaine.com/blog/how-your-headshot-creates-a-bridge-to-your-clients
 category: "marketing"
 cardCategory: "Marketing"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b43f40613f27490d98cb/1747498047676/Headshot_20191001_Chuck+Sierk_Richard_Waine_Lancaster_PA_0116+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/ChuckSierk - 0116 (16 x 9).jpg
 imageAlt: Professional headshots, Website Profile Pictures, Headshots by Richard Waine
 
 ---
 
-![Professional headshots, Website Profile Pictures, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/678bf7c795f66b7445d51de1/1737226183700/Headshot_20191001_Chuck+Sierk_Richard_Waine_Lancaster_PA_0116+%28horizontal%29+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import ChuckSierk from '../../assets/images/blog/ChuckSierk - 0116 (horizontal).jpg';
+import HeadshotBrandingHierarchy from '../../assets/images/blog/HeadshotBrandingHierarchy.png';
+
+
+
+
+<Image src={ChuckSierk} alt="Professional headshots, Website Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 ## Why your professional headshot matters more than you think
 
@@ -56,9 +65,9 @@ While I certainly don't believe that teams don't value professionalism, and I do
 
 Not all headshots are created equal. A quick, poorly lit selfie is like trying to make a first impression with a wink. It might come off as casual or even careless. By that same token, while Ai generated headshots are popular due to the extremely low cost, authenticity, accuracy, experience, and customer service are lost and ultimately damage your credibility and brand.
 
-<div class="blog-button-container">
+{/* <div class="blog-button-container">
   <a href="/blog-2/the-basics-of-branding"><button class="blog-button">The Basics of Branding</button></a>
-</div>
+</div> */}
 
 ## Professional headshots are a key part of personal branding
 
@@ -76,11 +85,12 @@ Your headshot is more than just a picture. It's your personal brand's calling ca
 
 Whether you're a lawyer, a doctor, a business owner, a marketing officer, a communications director, or an actor, your professional headshot or business profile photo should reflect your unique brand and personality. It's more than just a picture; it's a tool to help you connect and resonate with your audience. That's why working with a professional photographer who understands your needs and can help you capture your essence is so important.
 
-![infographic showing Headshot Branding Hierarchy](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/678bf97c86b2d5600d491510/1737226620572/Headshot+Branding+Hierarchy+infographic.png)
+<Image src={HeadshotBrandingHierarchy} alt="infographic showing Headshot Branding Hierarchy" class="hs-infographic" />
 
+{/* 
 <div class="blog-button-container">
   <a href="/blog-content/2016/11/7/who-needs-a-solid-headshot"><button class="blog-button">Who Needs A Solid Headshot</button></a>
-</div>
+</div> */}
 
 ## Elevate Your Brand With a Professional Headshot
 

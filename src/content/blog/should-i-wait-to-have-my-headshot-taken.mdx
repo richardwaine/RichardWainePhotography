@@ -8,14 +8,14 @@ modifiedDate: 2019-03-08T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67c5f5b07494565aa40e7d70/1741026736107/IMG_0882+-2+-+compressed.jpg
+  src: src/assets/images/blog/AdrienneMiller - 0149 (16 x 9).jpg
   alt: Richard Waine, Professional headshots by Richard Waine Photography, Headshots by Richard Waine
 keywords: ["professional headshots", "headshot timing", "career photography", "personal branding", "headshot preparation"]
 articleSection: Client Experience
 permalink: https://www.richardwaine.com/blog/should-i-wait-to-have-my-headshot-taken
 category: "client-experience"
 cardCategory: "Client Experience"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b358dbb1d239759888e3/1747497816546/Headshot_20210202_Adrienne+Miller_Richard_Waine_Lancaster_PA_0149+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/AdrienneMiller - 0149 (16 x 9).jpg
 imageAlt: Professional headshot photography
 
 faqs:
@@ -52,7 +52,14 @@ faqs:
 ---
 import FAQAccordion from '../../components/FAQAccordion.astro';
 
-![Richard Waine, Professional headshots by Richard Waine Photography, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67c5f5b07494565aa40e7d70/1741026736107/IMG_0882+-2+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import AdrienneMiller from '../../assets/images/blog/AdrienneMiller - 0149 (16 x 9).jpg';
+import KenGiglio from '../../assets/images/blog/KenGiglio - 0060 (horizontal).jpg';
+import TsedeyAragie from '../../assets/images/blog/TsedeyAragie - 0018 (horizontal).jpg';
+
+<Image src={AdrienneMiller} alt="Richard Waine, Professional headshots by Richard Waine Photography, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 A professional headshot is perhaps the most valuable asset you can own for your career, business, or personal brand. Yet many put it off or refuse to have their headshots taken for a variety of reasons. Some worry about cost, while others don't like being in front of the camera. Busy schedules, procrastination, and even fear of judgment all contribute to the hesitation.
 
@@ -82,7 +89,7 @@ A study by PhotoFeeler found that using a professional photo on LinkedIn can mak
 
 There are also affordable choices. Some photographers offer several price points, mini-sessions, or group discounts. Rather than viewing a headshot as an expense, you should consider it an investment with a long-term return—connecting you, opening doors, and introducing you in the best light.
 
-Let's assume that a professional headshot session costs approximately $500, and that the session includes a high-quality experience with a headshot specialist, including one professionally retouched digital image. Dividing $500 by 365 days in the year and your headshot costs you $1.37 per day. For $1.37 per day, you are investing in the creation of a revenue generating asset; one that will yield you more than $1.37 per day, if leveraged correctly. [The Return on Investment (ROI) of a professional headshot](/blog-2/return-on-investment) goes far beyond the initial investment. It's an investment in your career, your personal brand, and your future. It's a small step that can lead to significant returns, from increased credibility, authority, and engagement to new opportunities and long-lasting professional relationships. A great headshot isn't just a photo; it's a powerful tool for success.
+Let's assume that a professional headshot session costs approximately $500, and that the session includes a high-quality experience with a headshot specialist, including one professionally retouched digital image. Dividing $500 by 365 days in the year and your headshot costs you $1.37 per day. For $1.37 per day, you are investing in the creation of a revenue generating asset; one that will yield you more than $1.37 per day, if leveraged correctly. [The Return on Investment (ROI) of a professional headshot](/blog/return-on-investment) goes far beyond the initial investment. It's an investment in your career, your personal brand, and your future. It's a small step that can lead to significant returns, from increased credibility, authority, and engagement to new opportunities and long-lasting professional relationships. A great headshot isn't just a photo; it's a powerful tool for success.
 
 ## How to Overcome Self-Consciousness in Headshot Photography
 
@@ -90,7 +97,7 @@ The majority of people avoid headshots due to embarrassment over their appearanc
 
 This is understandable, but headshot photographers are trained to bring out the best in you. A good photographer knows how to leverage proper lighting techniques, angles, and poses that are most flattering for various face shapes and body types. They also create a relaxing atmosphere where clients feel comfortable and at ease.
 
-A New York University study found that people always give more positive descriptions of professional pictures of themselves than selfies or casual photographs [3]. [Professional photographers use techniques which minimize perceived flaws](/blog-content/2017/6/18/perceived-flaws-and-self-acceptance) and bring your natural strengths into focus.
+A New York University study found that people always give more positive descriptions of professional pictures of themselves than selfies or casual photographs [3]. [Professional photographers use techniques which minimize perceived flaws](/blog/perceived-flaws-and-self-acceptance) and bring your natural strengths into focus.
 
 Also, a headshot session is a confidence builder. Seeing yourself in a well-lit, professionally photographed image can shift your attitude and enable you to see the good things you have to offer. A good photographer will guide you through the process so that you feel and look your best, which also builds self-acceptance and perceived level of expertise.
 
@@ -120,7 +127,9 @@ I usually tell my clients that the average useful life of your current headshot 
 
 Imagine walking into a meeting with a colleague, business partner, or client who has never met you. All they know of your appearance is your headshot photo. If you are still using the same picture from 10 years ago, you are essentially lying to those people. Their expectations and reality are not in alignment. This creates trust issues in that they will wonder what else you are lying about. Obviously this is not a great position to be in. It's important to understand that having your headshot made is not only about you. It's also about the very people who view your pictures.
 
-![example of professional headshot of a white male on a white background](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67c5f5a68a5cab799090ec0c/1741026726428/Headshot_20180414_Ken+Giglio_Richard_Waine_Lancaster_PA_0060-2+-+compressed.jpg)
+<Image src={KenGiglio} alt="Richard Waine, Professional headshots by Richard Waine Photography, Headshots by Richard Waine, example of professional headshot of a white male on a white background" class="hs-infographic" />
+
+
 
 ## How Much Time Does a Headshot Session Take?
 
@@ -204,7 +213,9 @@ A professional photographer will walk you through it, however, and make the proc
 
 If you suffer from camera shyness, consider scheduling a consultation with your photographer in advance. Rehearsals in a mirror or the snapping of several calm selfies also work to set you at ease. A professional photographer not only coaches and directs you, they will also reassure you and offer gentle pointers to help you be your best self.
 
-![example of professional headshot of a black female on a white background](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67c5f5abcdc159018889647d/1741026731904/Headshot_20180517_Tsedey+Aragie_Richard_Waine_Lancaster_PA_0018+-+compressed.jpg)
+
+<Image src={TsedeyAragie} alt="Richard Waine, Professional headshots by Richard Waine Photography, Headshots by Richard Waine, example of professional headshot of a black female on a white background" class="hs-infographic" />
+
 
 ## How Professional Headshots Influence Perception
 
@@ -254,7 +265,7 @@ To delay a headshot is harmless but can be the cause of lost opportunities. Empl
 
 According to a 2023 career development survey, those professionals who maintain modern, high-quality headshots are 71% more likely to be considered for leadership positions and receive 38% more engagement on their professional material [17].
 
-A professional headshot is an investment in you, and [headshots are more affordable than you think](/blog-2/why-professional-headshots-are-more-affordable-than-you-think). They are an affordable investment with big returns for your career, business, and personal brand. Don't wait any longer, do it now. Find a reputable headshot photographer, schedule a session, and invest in the authority of a confident, polished image that works for you.
+A professional headshot is an investment in you, and [headshots are more affordable than you think](/blog/why-professional-headshots-are-more-affordable-than-you-think). They are an affordable investment with big returns for your career, business, and personal brand. Don't wait any longer, do it now. Find a reputable headshot photographer, schedule a session, and invest in the authority of a confident, polished image that works for you.
 
 
 

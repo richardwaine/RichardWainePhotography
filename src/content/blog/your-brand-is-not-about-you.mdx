@@ -8,19 +8,25 @@ modifiedDate: 2018-04-12T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f6fc2e3ced752723687b3/1746890690571/Headshot_20180406_Kelly+Krause_Richard_Waine_Lancaster_PA_0056-3+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/KellyKrause - 0056 (16 x 9).jpg
   alt: Professional branding headshot
 keywords: ["personal branding", "audience perception", "professional headshots", "brand strategy", "emotional intelligence"]
 articleSection: Personal Branding
 permalink: https://www.richardwaine.com/blog/your-brand-is-not-about-you
 category: "personal-branding"
 cardCategory: "Personal Branding"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f6fc2e3ced752723687b3/1746890690571/Headshot_20180406_Kelly+Krause_Richard_Waine_Lancaster_PA_0056-3+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/KellyKrause - 0056 (16 x 9).jpg
 imageAlt: Professional branding headshot
 
 ---
+import { Image } from 'astro:assets';
+import KellyKrause from '../../assets/images/blog/KellyKrause - 0056 (16 x 9).jpg';
 
-![Professional branding headshot](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f6fc2e3ced752723687b3/1746890690571/Headshot_20180406_Kelly+Krause_Richard_Waine_Lancaster_PA_0056-3+%2816+x+9%29+-+compressed.jpg)
+
+
+
+<Image src={KellyKrause} alt="Professional Headshots, Professional branding headshot, LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
 
 ## Your Brand is Not About You
 

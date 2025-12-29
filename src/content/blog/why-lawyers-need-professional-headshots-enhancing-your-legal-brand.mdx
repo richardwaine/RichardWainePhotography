@@ -8,17 +8,53 @@ modifiedDate: 2023-06-12T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b713cc7e9060681b7146/1747498771149/Headshot_20221116_LCN+Capital+Partners_Richard_Waine_Lancaster_PA_0073+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/LCNCapitalPartners - 0073 (16 x 9).jpg
   alt: Professional headshots for lawyers
 keywords: ["lawyer headshots", "legal branding", "professional photography", "attorney marketing", "legal headshots"]
 articleSection: Marketing
 permalink: https://www.richardwaine.com/blog/why-lawyers-need-professional-headshots-enhancing-your-legal-brand
 category: "marketing"
 cardCategory: "marketing"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b713cc7e9060681b7136/1747498771149/Headshot_20221116_LCN+Capital+Partners_Richard_Waine_Lancaster_PA_0073+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/LCNCapitalPartners - 0073 (16 x 9).jpg
 imageAlt: Professional headshots for lawyers
 
+
+
+# --- START NEW FAQ FORMAT ---
+faqs:
+  - question: "WHY CAN'T I JUST USE A CASUAL PHOTO OR A SELFIE FOR MY PROFESSIONAL IMAGE?"
+    answer: "Casual photos or selfies may not convey the level of professionalism and trustworthiness expected from a lawyer. A professional headshot, taken in a controlled environment with appropriate lighting and posing, ensures a polished and credible representation."
+  - question: "HOW OFTEN SHOULD I UPDATE MY PROFESSIONAL HEADSHOT?"
+    answer: "It's recommended to update your headshot every one to two years or whenever there are significant changes in your appearance, such as a drastic haircut or change in style. You want your headshot to reflect your current image accurately."
+  - question: "CAN I USE A HEADSHOT TAKEN BY A NON-PROFESSIONAL PHOTOGRAPHER?"
+    answer:   | 
+      "Picture this scenario: you're scrolling through LinkedIn, looking for a lawyer to handle your case. Suddenly, you come across two profiles—one with a professionally taken headshot and another with a selfie taken in a dimly lit room. Which one would you be more likely to trust with your legal matters?
+
+      It's clear that a headshot taken by a non-professional photographer may not give off the same level of professionalism and credibility as one taken by a seasoned pro. A professional photographer understands the importance of lighting, composition, and posing to capture your best angles and convey the right message. They know how to create a polished image that reflects your expertise.
+
+      Think of it this way: if you needed surgery, would you want a skilled surgeon who has years of experience or someone who's merely watched a few YouTube videos? The same principle applies to headshots. Investing in a professional photographer is an investment in your personal brand and reputation as a lawyer.
+
+      Remember, your headshot is often the first impression potential clients and colleagues will have of you. It's an opportunity to convey your professionalism, competence, and trustworthiness. So, when it comes to your headshot, it's best to leave it in the hands of a pro who knows the ins and outs of capturing a head-turning image.
+
+      In a nutshell, while it might be tempting to opt for a non-professional photographer to save a few bucks, it's crucial to consider the long-term impact on your personal brand. Don't underestimate the power of a high-quality, professionally taken headshot—it can be the key that opens doors and sets you apart from the competition."
+
+  - question: "CAN YOU RETOUCH SPECIFIC ASPECTS OF MY HEADSHOTS?"
+    answer: "After your session, we will review your images together and select your favorites. Each image chosen will be fully retouched and delivered in high-resolution format unless otherwise agreed upon. In the event that you have specific retouching requests, I encourage you to communicate them to me so that the adjustments can be made as per your specifications."
+  
+# --- END NEW FAQ FORMAT ---
+
 ---
+import FAQAccordion from '../../components/FAQAccordion.astro';
+import { Image } from 'astro:assets';
+import LCNCapitalPartners from '../../assets/images/blog/LCNCapitalPartners - 0073 (16 x 9).jpg';
+
+
+
+<Image src={LCNCapitalPartners} alt="Professional Headshots, Professional headshots for lawyers, LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
+
+
 
 ## Introduction
 
@@ -123,3 +159,5 @@ Once you have updated your professional headshots, it's time to put them to good
   When contributing articles to legal publications or guest blogging on relevant platforms, provide your headshot alongside your author bio. This adds credibility and helps readers connect with you as an author and legal professional.
 
 By strategically incorporating your professional headshots into various marketing channels and materials, you maximize your opportunities to create a lasting impression and attract potential clients.
+
+<FAQAccordion class="blogFAQs" faqs={frontmatter.faqs} />

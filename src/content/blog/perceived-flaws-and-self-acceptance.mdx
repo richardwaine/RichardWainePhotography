@@ -8,19 +8,27 @@ modifiedDate: 2025-07-29T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68890a4363715940747256d7/1753811523939/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0458+-+compressed.jpg
+  src: src/assets/images/blog/QuarryViewConstruction - 0458 (horizontal).jpg
   alt: Professional Headshot of adult white male in gray suit and blue button down shirt, Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 keywords: ["professional headshots", "self-acceptance", "headshot photography", "confidence building", "perceived flaws", "Lancaster photographer", "transformative photography", "therapeutic photography"]
 articleSection: Client Experience
 permalink: https://www.richardwaine.com/blog/perceived-flaws-and-self-acceptance
 category: "client-experience"
 cardCategory: "Client Experience"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/673f89eda9f6be29cd5e150e/1732217325911/Headshot_20170703_Ellen+Taylor_Richard_Waine_Lancaster_PA_0093-1+%2816x9%29.jpg
+imageSrc: src/assets/images/blog/EllenTaylor - 0093 (16 x 9).jpg
 imageAlt: Professional headshot session
 
 ---
+import { Image } from 'astro:assets';
+import QuarryView1 from '../../assets/images/blog/QuarryViewConstruction - 0458 (horizontal).jpg';
+import QuarryView2 from '../../assets/images/blog/QuarryViewConstruction - 0125 (horizontal).jpg';
+import QuarryView3  from '../../assets/images/blog/QuarryViewConstruction - 0048 (horizontal).jpg';
 
-![Professional Headshot of adult white male in gray suit and blue button down shirt, Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68890a4363715940747256d7/1753811523939/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0458+-+compressed.jpg)
+
+<Image src={QuarryView1} alt="Professional Headshot of adult white male in gray suit and blue button down shirt, Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
+
 
 My headshot photography studio is in Lancaster, PA, home of the Amish. I know it sounds like a terrible business model, or some sort of joke: A portrait photographer in an area where they don't have their pictures taken. Regardless of how incongruous it sounds, I do a fair amount of business.
 
@@ -40,7 +48,10 @@ This experience highlighted something powerful about professional headshot photo
 
 ## Headshot Photography Changes Self Perception
 
-![professional headshot photo of caucasian male with brown hair wearing dark jacket and plaid button down shirt, headshot photography by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/688909eb135fe846dac3abf4/1753811435294/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0125+%28horizontal%29-2+-+compressed.jpg)
+
+<Image src={QuarryView2} alt="professional headshot photo of caucasian male with brown hair wearing dark jacket and plaid button down shirt, headshot photography by Richard Waine" class="hs-infographic" />
+
+
 
 Recently, an Instagram "troll" made a comment on a headshot, saying that the image reminded him of being hungover every day. I looked at the image, and inwardly questioned whether they were referring to the eye difference.
 
@@ -60,7 +71,8 @@ Here is the reality: Everyone is beautiful, everyone is interesting and unique, 
 
 ## Overcoming Appearance Concerns Through Photography
 
-![professional headshot of white male with dark hair wearing a tan jacket and plaid shirt, headshots by Richard Waine Photography](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68890780b995e74d383a9168/1753810817274/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0048+%28horizontal%29-2+-+compressed.jpg)
+<Image src={QuarryView3} alt="professional headshot of white male with dark hair wearing a tan jacket and plaid shirt, headshots by Richard Waine Photography" class="hs-infographic" />
+
 
 Had my client expressed concern about his lazy eye and heavy lids, I would have taken him through my approach on owning his looks, because he doesn't have much of a choice. Our parents blessed us with certain physical characteristics, and we have to wake up each day and own them.
 
@@ -77,5 +89,7 @@ If that is the effect I have on my clients, then I have done something right!
 This experience reminded me of a TedX talk that Peter Hurley and Anna Rowley gave about bridging the self-acceptance gap. The first time I had seen this video, I was with Peter in the back of a New York City Taxi, watching it on Peter's cell phone before its official release. I was deeply moved then. I'm deeply moved today.
 
 ---
+
+{/* ADD VIDEO HERE - TEDX */}
 
 Ready to discover how professional headshot photography can transform how you see yourself? Every person has unique qualities that make them compelling and confident. A professional headshot session reveals those qualities while helping you feel comfortable and authentic in front of the camera. [Schedule a consultation](https://app.acuityscheduling.com/schedule.php?owner=13511326&appointmentType=11959793) to discuss how we can create headshots that show you at your absolute best.

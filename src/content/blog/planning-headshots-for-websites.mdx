@@ -9,22 +9,29 @@ modifiedDate: 2023-10-26T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6863cbf9bd7fce1b72f41790/1751370745072/Headshot_20191120_Shree+Patel_Richard_Waine_Lancaster_PA_0105+-+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/ShreePatel - 0105 (horizontal).jpg
   alt: Richard Waine Photography, Business Headshot for Financial Advisor, headshot of male wearing glasses a suit and a tie
 keywords: ["headshots", "websites", "planning", "professional photography", "business headshots"]
 articleSection: Photography Insights
 permalink: https://www.richardwaine.com/blog/planning-headshots-for-websites
 category: "headshot-tips photography-insights marketing client-experience" # Ensure this matches your filter categories
 cardCategory: "Photography Insights"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6863cbf9bd7fce1b72f41790/1751370745072/Headshot_20191120_Shree+Patel_Richard_Waine_Lancaster_PA_0105+-+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/ShreePatel - 0105 (16 x 9).jpg
 imageAlt: Richard Waine Photography, Business Headshot for Financial Advisor, headshot of male wearing glasses a suit and a tie
 
 
 
 ---
+import { Image } from 'astro:assets';
+import ShreePatel from '../../assets/images/blog/ShreePatel - 0105 (horizontal).jpg';
+import PlanningHeadshots from '../../assets/images/blog/PlanningHeadshots.png';
+import Chubb1 from '../../assets/images/blog/Chubb - 0100 (horizontal).jpg';
 
 
-<img className="article-header-image" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6862d21d8e2a1a314872909d/1751306781345/Headshot_20191120_Shree+Patel_Richard_Waine_Lancaster_PA_0105+-+%28horizontal%29+-+compressed.jpg" alt="Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine" />
+
+<Image src={ShreePatel} alt="Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 Planning professional headshots for website redesigns requires understanding timeline requirements, realistic budget development, team coordination logistics, technical specifications, and photographer selection criteria. Most companies approach this planning process with outdated budget figures and misconceptions about what constitutes value in professional photography.
 
@@ -42,7 +49,9 @@ Here's the reality: Schedule your headshot sessions 4-6 weeks before your planne
 
 Consider your team's travel schedules, vacation periods, and major business deadlines when planning sessions. Nothing derails a headshot timeline quite like discovering your CEO will be globe-trotting for three weeks during your planned photography window. Ask me how I know.
 
-<img className="hs-infographic" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6862d0398d82a15b970d0db1/1751306297928/How+Far+in+Advance+Should+You+Schedule+Professional+Headshots_+-+compressed.png" alt="how far in advance to schedule headshots infographic" />
+<Image src={PlanningHeadshots} alt="how far in advance to schedule headshots infographic" class="hs-infographic" />
+
+
 
 ## How Should Companies Coordinate Professional Headshots?
 
@@ -56,7 +65,7 @@ Experienced headshot photographers handle all scheduling logistics. This removes
 
 ## What Should Companies Budget for Professional Headshots?
 
-[Professional headshot costs](/blog-2/cost-of-professional-headshots) vary based on photographer experience, session scope, location, and additional services. Most companies approach budgeting with outdated figures and arbitrary percentage increases from previous years.
+[Professional headshot costs](/blog/cost-of-professional-headshots) vary based on photographer experience, session scope, location, and additional services. Most companies approach budgeting with outdated figures and arbitrary percentage increases from previous years.
 
 Here's what you're actually paying for: skill, experience, coaching, direction, professional lighting expertise, and years of technical mastery. This isn't point-and-shoot photography. Professional headshot photographers transform nervous executives into confident professionals through specialized expertise that requires extensive training and expensive equipment.
 
@@ -76,7 +85,7 @@ Your new website likely includes updated branding, color schemes, and visual sty
 
 Contemporary professional headshots reflect modern aesthetic standards. This means clean, well-lit images without old-fashioned mottled backgrounds that scream "taken in 1987." Expert lighting techniques are designed to enhance each individual subject, avoiding those awkward halos behind people's heads that amateur photographers somehow think look impressive. Each team member requires individual attention to lighting and positioning because what works for one person's facial structure may not work for another's.
 
-Discuss [background options](/blog-2/best-backgrounds-for-professional-headshots) with your photographer before sessions begin. Neutral backgrounds like white, gray, or subtle textures typically integrate well with most website designs. Avoid busy backgrounds or bold colors that might compete with your website's visual hierarchy for attention.
+Discuss [background options](/blog/best-backgrounds-for-professional-headshots) with your photographer before sessions begin. Neutral backgrounds like white, gray, or subtle textures typically integrate well with most website designs. Avoid busy backgrounds or bold colors that might compete with your website's visual hierarchy for attention.
 
 Lighting approach affects how headshots integrate with your overall website aesthetic. Professional headshot photographers develop specific, proven lighting techniques that create consistent, high-quality results while enhancing each individual's professional presence.
 
@@ -92,7 +101,8 @@ Request images in JPEG format rather than PNG files for photographs. PNG files c
 
 Consider future needs when planning image specifications. Your team will likely grow, requiring additional headshots that maintain visual consistency with your existing photography. Working with the same photographer ensures consistent results when adding new team members over time.
 
-<img class="hs-infographic" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/679e52d1fcf5d61b2ee6dae1/1738429138198/Headshot_20221201_Chubb+Insurance_Richard_Waine_Lancaster_PA_0100+%28horizontal%29+-+compressed.jpg" alt="professional headshot of african-american female at place of business" />
+<Image src={Chubb1} alt="professional headshot of african-american female at place of business" class="hs-infographic" />
+
 
 ## Managing Team Member Expectations
 

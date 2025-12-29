@@ -8,18 +8,26 @@ modifiedDate: 2024-10-10T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6786a0a670f7f7229604d5b1/1736876198331/Headshot_20220524_Sallie+Mae_Richard_Waine_Lancaster_PA_0343+%28horizontal%29.jpg
+  src: src/assets/images/blog/SallieMae - 0343 (horizontal).jpg
   alt: Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 keywords: ["headshot consistency", "personal branding", "professional image", "LinkedIn headshots", "brand recognition"]
 articleSection: Photography Insights
 permalink: https://www.richardwaine.com/blog/consistency-in-your-headshot
 category: "personal-branding marketing business"
 cardCategory: "Personal Branding"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b6114e576a2ca957b753/1747498513596/Headshot_20220524_Sallie+Mae_Richard_Waine_Lancaster_PA_0343+%2816+x+9%29+-+2+-+compressed.jpg
+imageSrc: src/assets/images/blog/SallieMae - 0343 (16 x 9).jpg
 imageAlt: professional headshot consistency across platforms
 ---
 
-![Professional headshot by Richard Waine Photography](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6786a0a670f7f7229604d5b1/1736876198331/Headshot_20220524_Sallie+Mae_Richard_Waine_Lancaster_PA_0343+%28horizontal%29.jpg)
+
+import { Image } from 'astro:assets';
+import SallieMae1 from '../../assets/images/blog/SallieMae - 0343 (horizontal).jpg';
+import BuildingTrust from '../../assets/images/blog/BuildingTrust.png';
+
+
+
+<Image src={SallieMae1} alt="Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
 
 Your online presence spans multiple platforms. Whether you know or not, using LinkedIn, Facebook, Twitter / X, TikTok, Instagram, company websites, social media profiles, email signatures, and others all serve as a megaphone to reach your desired audience. Each has a different role in your outreach strategy, so maintaining consistency in your headshots or profile photos across these platforms is crucial. But why does consistency matter, and how can it impact your professional image?
 
@@ -63,7 +71,9 @@ Of course, there are other methods of earning trust. However, when you require a
 
 When you see this kind of biography, what do you look at first? Most of us look at the profile photo first. Have you ever wondered why we do this? First, we are visual. We look and connect with graphics and visuals before we ever get around to reading data. Secondly, we want to know who we are reading about. Putting a face to the name is important to us as consumers. Lastly, while we understand that the accolades are impressive, experience matters, and the education pedigree is equally important, we simply seek out a way to level the playing field. Viewing a profile photo humanizes us, and allows us to see each other as people not just service providers.
 
-![infographic showing that trust is built through visual branding](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6786a2443c0ef15390c06910/1736876613183/Building+Trust+through+visual+branding.png)
+
+<Image src={BuildingTrust} alt="infographic showing that trust is built through visual branding" class="hs-infographic" />
+
 
 {/* * * * */}
 

@@ -8,19 +8,25 @@ modifiedDate: 2016-12-07T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/682796610ab21f2ec0b50660/1747424865938/Headshot_20160813_Bryan+Cicuto_Richard_Waine_Lancaster_PA_0076+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/BryanCicuto - 0076 (16 x 9).jpg
   alt: Dr. Bryan Cicuto professional headshot
 keywords: ["personal branding", "medical headshots", "professional photography", "plastic surgeon headshots", "doctor branding"]
 articleSection: Client Experience
 permalink: https://www.richardwaine.com/blog/personal-branding-for-a-humble-doctor
 category: "personal-branding"
 cardCategory: "Client Experience"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/682796610ab21f2ec0b50660/1747424865938/Headshot_20160813_Bryan+Cicuto_Richard_Waine_Lancaster_PA_0076+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/BryanCicuto - 0076 (16 x 9).jpg
 imageAlt: Dr. Bryan Cicuto professional headshot
 
 ---
 
-![Dr. Bryan Cicuto professional headshot](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/682796610ab21f2ec0b50660/1747424865938/Headshot_20160813_Bryan+Cicuto_Richard_Waine_Lancaster_PA_0076+%2816+x+9%29+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import BryanCicuto from '../../assets/images/blog/BryanCicuto - 0076 (16 x 9).jpg';
+
+
+
+
+<Image src={BryanCicuto} alt="Dr. Bryan Cicuto professional headshot" class="article-header-image" />
 
 
 
@@ -29,8 +35,6 @@ imageAlt: Dr. Bryan Cicuto professional headshot
 A few months back, I had the distinct pleasure of meeting one of the most genuine, modest, caring individuals I have ever come across. And...he was a doctor! I know its hard to believe, but compassionate and level-headed doctors do exist. Doctor Bryan Cicuto has certainly set the bar a little higher for his peers.
 
 Unfortunately, He was working with a headshot that was plaguing him and his brand.
-
-Dr. Bryan Cicuto - BEFORE his headshot session with me.
 
 I don't look at what I do as simply making pictures. I am here to help people represent themselves in a better, more impactful way. That's what personal branding and your digital identity is all about, right?
 

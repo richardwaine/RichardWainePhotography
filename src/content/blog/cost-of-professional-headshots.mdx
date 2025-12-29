@@ -8,17 +8,22 @@ modifiedDate: 2020-12-04T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683b2400ab4710427fb69560/1748706304211/cost+of+professional+headshots+%2816+x+9%29+-+compressed.jpg
-  alt: UX Design Principles
+  src: src/assets/images/blog/CostofHeadshots (16 x 9).jpg
+  alt: cost of professional headshots, cost of photography
 keywords: ["headshot cost", "professional photography pricing", "business headshots", "photography investment", "headshot photographer fees"]
 articleSection: Business
 permalink: https://www.richardwaine.com/blog/cost-of-professional-headshots
 category: "business"
 cardCategory: "Business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683b2400ab4710427fb69560/1748706304211/cost+of+professional+headshots+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/CostofHeadshots (16 x 9).jpg
 imageAlt: cost of professional headshots, how much do headshots cost
 
 ---
+import { Image } from 'astro:assets';
+import CostofHeadshots from '../../assets/images/blog/CostofHeadshots (16 x 9).jpg';
+
+<Image src={CostofHeadshots} alt="cost of professional headshots, how much do headshots cost" class="article-header-image" />
+
 
 If you are like 99.99% of the human population, you don't want to spend more than absolutely necessary on, well, anything.
 

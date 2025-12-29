@@ -8,18 +8,22 @@ modifiedDate: 2024-12-03T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bcd21dfd852556164f4d/1747500243019/RW_FINAL_V1_FOR+REVIEW.00_00_48_06.Still004+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/RamiCastillo - 0158 (horizontal).jpg
   alt: Professional Headshots, Corporate headshots, headshot of male in a suit
 keywords: ["professional headshots", "what is a headshot", "corporate headshots", "business photography", "LinkedIn headshots"]
 articleSection: Photography Insights
 permalink: https://www.richardwaine.com/blog/what-is-a-professional-headshot
 category: "photography-insights headshot-tips"
 cardCategory: "Photography Insights"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bcd21dfd852556164f4d/1747500243019/RW_FINAL_V1_FOR+REVIEW.00_00_48_06.Still004+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/RW7 - (16 x 9).jpg
 imageAlt: Professional Headshots, Corporate headshots, headshot of male in a suit
 ---
+import { Image } from 'astro:assets';
+import RamiCastillo from '../../assets/images/blog/RamiCastillo - 0158 (horizontal).jpg';
+import StandOut from '../../assets/images/blog/StandOut.png';
 
-![Professional headshots, Corporate headshots, headshot of argentinian male in a suit on a pink canvas background](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67a7753024af7020aebdb3f7/1739027760892/Headshot_20230428_Rami+Castillo_Richard+Waine_Lancaster_PA_0158+%28horizontal%29+-+compressed.jpg)
+<Image src={RamiCastillo} alt="Professional headshots, Corporate headshots, headshot of argentinian male in a suit on a pink canvas background" class="article-header-image" />
+
 
 ## What Is a Professional Headshot?
 
@@ -71,7 +75,9 @@ The job market, client acquisition, and networking are all increasingly competit
 
 In fact, research shows that people are more likely to remember an individual who has a polished, well-composed headshot over someone who uses an unprofessional or outdated photo. It's your first opportunity to leave a lasting impression, and making it count can have significant long-term benefits.
 
-![headshots that stand out infographic](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/674de9d51048b90cf7428fcb/1733159382227/Headshot+that+stand+out+%28resized%29.png)
+
+<Image src={StandOut} alt="headshots that stand out infographic" class="hs-infographic" />
+
 
 {/* * * * */}
 

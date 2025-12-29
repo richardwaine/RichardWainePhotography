@@ -8,19 +8,26 @@ modifiedDate: 2018-01-25T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bff7a9da51111289d926/1747501047285/Amish-buggy-crossing+%2816x9%29+-+compressed.jpg
+  src: src/assets/images/blog/AmishBuggyCrossing - (16 x 9).jpg
   alt: Amish horse-drawn buggy crossing
 keywords: ["professional profile picture", "LinkedIn headshot", "business identity", "professional recognition", "digital presence", "Lancaster Pennsylvania", "Amish culture", "professional branding"]
 articleSection: Client Experience
 permalink: https://www.richardwaine.com/blog/what-the-amish-can-teach-you-about-your-profile-picture
 category: "client-experience"
 cardCategory: "client experience"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bff7a9da51111289d926/1747501047285/Amish-buggy-crossing+%2816x9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/AmishBuggyCrossing - (16 x 9).jpg
 imageAlt: Amish horse-drawn buggy crossing
 
 ---
 
-![Amish horse-drawn buggy crossing](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bff7a9da51111289d926/1747501047285/Amish-buggy-crossing+%2816x9%29+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import AmishBuggy from '../../assets/images/blog/AmishBuggyCrossing - (16 x 9).jpg';
+
+
+
+<Image src={AmishBuggy} alt="Amish horse-drawn buggy crossing" class="article-header-image" />
+
+
 
 ## What the Amish can teach you about your profile picture
 

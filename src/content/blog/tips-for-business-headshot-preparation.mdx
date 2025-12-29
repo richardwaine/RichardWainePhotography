@@ -8,14 +8,14 @@ modifiedDate: 2023-05-22T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b5bdd0e6a74aab7590c1/1747498429561/Headshot_20221201_Chubb+Insurance_Richard_Waine_Lancaster_PA_0100+%2816+x+9%29+-+2+-+compressed.jpg
+  src: src/assets/images/blog/Chubb - 0100 (16 x 9).jpg
   alt: Professional business headshots
 keywords: ["business headshots", "headshot preparation", "corporate photography", "professional headshots", "headshot tips"]
 articleSection: Headshot Tips
 permalink: https://www.richardwaine.com/blog/tips-for-business-headshot-preparation
 category: "headshot-tips"
 cardCategory: "Headshot Tips"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b5bdd0e6a74aab7590c1/1747498429561/Headshot_20221201_Chubb+Insurance_Richard_Waine_Lancaster_PA_0100+%2816+x+9%29+-+2+-+compressed.jpg
+imageSrc: src/assets/images/blog/Chubb - 0100 (16 x 9).jpg
 imageAlt: Professional business headshots
 faqs:
   - question: "HOW LONG DOES A TYPICAL HEADSHOT SESSION LAST?"
@@ -29,6 +29,12 @@ faqs:
 
 ---
 import FAQAccordion from '../../components/FAQAccordion.astro';
+
+import { Image } from 'astro:assets';
+import Chubb1 from '../../assets/images/blog/Chubb - 0100 (16 x 9).jpg';
+
+
+<Image src={Chubb1} alt="Professional Headshots,  LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
 
 INTRODUCTION
 

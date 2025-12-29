@@ -177,10 +177,22 @@ const isInterview = post.data.type === 'interview';
 .article-content img{
   display: block;
   width: min(600px, 100%);
+  height:auto;
   margin-inline: auto;
   margin-block: var(--size-9);
   
 }
+
+.article-header-image{
+  display:block;
+  width:min(600px, 100%);
+  height:auto;
+  margin-inline:auto;
+  margin-block:var(--size-9);
+  box-shadow:var(--shadow);
+  }
+
+
 
 .article-content > :is(p, div, figure):has(img):not(:has(img) ~ *) img, .article-header-image{
   box-shadow: var(--shadow);
@@ -265,8 +277,6 @@ text-align:center
 .blog-button-container{
   padding-block:var(--size-7);
   text-align:center;
-
-
 }
 
 .blog-button {
@@ -281,8 +291,7 @@ text-align:center
   background-color: #000;
   color: #fff;
   cursor:pointer;
-
-  
+ 
 }
 
 */
@@ -334,9 +343,8 @@ height:auto;
 display:block;
 margin:var(--size-7) auto;
 
-
-
 }
+
 
 
 

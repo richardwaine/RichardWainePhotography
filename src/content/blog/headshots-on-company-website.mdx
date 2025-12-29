@@ -8,18 +8,26 @@ modifiedDate: 2024-09-13T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/678961b6cce92d010231d0df/1737056694736/Headshot_20180628_Jacqueline+Eby_Richard_Waine_Lancaster_PA_0091+%28horizontal%29+-+compressed.jpg
+  src: src/assets/images/blog/Jacqueline Eby - 0091 (horizontal).jpg
   alt: Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 keywords: ["professional headshots", "LinkedIn Profile Pictures", "Headshots by Richard Waine"]
 articleSection: business marketing personal-branding social-media
-permalink: https://www.richardwaine.com/blog-2/headshots-on-company-website
+permalink: https://www.richardwaine.com/blog/headshots-on-company-website
 category: "business marketing personal-branding social-media"
 cardCategory: "business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828b1c6abc910491bcec279/1747497414083/Headshot_20180628_Jacqueline+Eby_Richard_Waine_Lancaster_PA_0091+%2816+x+9%29+-+compressed.jpg
-imageAlt: ""
+imageSrc: src/assets/images/blog/Jacqueline Eby - 0091 (16 x 9).jpg
+imageAlt: Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 ---
 
-![Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/678961b6cce92d010231d0df/1737056694736/Headshot_20180628_Jacqueline+Eby_Richard_Waine_Lancaster_PA_0091+%28horizontal%29+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import JacquelineEby from '../../assets/images/blog/Jacqueline Eby - 0091 (horizontal).jpg';
+import EnhanceRelationships from '../../assets/images/blog/EnhanceRelationships.png';
+
+
+
+<Image src={JacquelineEby} alt="Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 Your company’s website is often the first point of contact between you and potential clients, partners, or employees. It’s your digital storefront, the place where people come to learn more about who you are and what you do. And, just as a well-designed website can enhance your brand, a well-placed headshot can add a personal touch that helps to build trust and connection.
 
@@ -40,7 +48,8 @@ So why should your professional headshot have a prominent place on your company�
 * **Facilitating Connections:**
   In the business world, building connections hinges on the likeability and trustworthiness of those involved. Incorporating a headshot image into your company website and on social platforms can create a warm and approachable impression, fostering relationship building. It provides visitors with a sense of familiarity with you even before an in-person encounter. This is particularly valuable in industries where building rapport is crucial, such as consulting, real estate, financial services, medicine, legal services, and other professional services.
 
-  ![infographic showing how to enhance business relationships with headshots](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/678962b92600113e4a3fdbb5/1737056953373/Enhance+Business+Relationships+with+Headshots.png)
+<Image src={EnhanceRelationships} alt="infographic showing how to enhance business relationships with headshots" class="hs-infographic" />
+
 
 * **Supporting Your Company’s Story:**
   Your profile picture is instrumental in shaping your company's visual story. It serves to enhance the narrative you present about your identity and principles. Whether you're showcasing your team's expertise, demonstrating your unwavering commitment to customer service, or embodying your company's values, your profile picture adds a personal touch that breathes life into that narrative.

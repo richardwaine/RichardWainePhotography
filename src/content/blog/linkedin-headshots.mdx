@@ -8,18 +8,27 @@ modifiedDate: 2024-11-21T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/673f89eda9f6be29cd5e150e/1732217325911/Headshot_20170703_Ellen+Taylor_Richard_Waine_Lancaster_PA_0093-1+%2816x9%29.jpg
+  src: src/assets/images/blog/CindyNguyen - 0175 (horizontal).jpg
   alt: Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 keywords: ["LinkedIn headshots", "professional LinkedIn photo", "LinkedIn profile picture", "business headshots", "corporate photography"]
 articleSection: Photography Insights
 permalink: https://www.richardwaine.com/blog/linkedin-headshots
 category: "business social-media marketing"
 cardCategory: "Business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828c2b3abc910491bd06c9c/1747501747334/Headshot_20230623_Cindy+Nguyen_Richard+Waine_Lancaster_PA_0175+%2816+x+9%29-2+-+compressed.jpg
+imageSrc: src/assets/images/blog/CindyNguyen - 0175 (16 x 9).jpg
 imageAlt: Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 ---
 
-![Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/673f89eda9f6be29cd5e150e/1732217325911/Headshot_20170703_Ellen+Taylor_Richard_Waine_Lancaster_PA_0093-1+%2816x9%29.jpg)
+import { Image } from 'astro:assets';
+import CindyNguyen from '../../assets/images/blog/CindyNguyen - 0175 (horizontal).jpg';
+import ImpactOfHeadshot from '../../assets/images/blog/ImpactOfHeadshot.png';
+
+
+
+
+<Image src={CindyNguyen} alt="Professional Headshots,Linkedin headshots,LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 ## Why Do I Need A Professional LinkedIn Photo?
 
@@ -41,7 +50,10 @@ But the benefits don't stop at connections. Increased visibility can also lead t
 
 With so much riding on first impressions, why leave it to chance? A polished, professional headshot signals that you're serious about your career and ready to make meaningful connections. It's a small investment with a big payoff, ensuring that when opportunity knocks, your profile is ready to answer.
 
-![impact of a professional headshot infographic](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/673f88183f0ef3454ae4f36e/1732216856416/Impact+of+Headshot+%28resized%29.png)
+
+<Image src={ImpactOfHeadshot} alt="impact of a professional headshot infographic" class="hs-infographic" />
+
+
 
 {/* * * * */}
 

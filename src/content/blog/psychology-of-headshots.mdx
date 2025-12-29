@@ -8,18 +8,25 @@ modifiedDate: 2024-09-17T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67895a2a31cba553cb1d626c/1737054763113/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0048+%28horizontal%29+-+compressed.jpg
+  src: src/assets/images/blog/QuarryViewConstruction - 0048 (horizontal).jpg
   alt: Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine
 keywords: ["professional headshots", "LinkedIn Profile Pictures", "Headshots by Richard Waine"]
 articleSection: business marketing photography-insights
 permalink: https://www.richardwaine.com/blog-2/psychology-of-headshots
 category: "marketing photography-insights client-experience business"
 cardCategory: "business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/682792a91b809e62dd500ccb/1747423913369/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0048+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/QuarryViewConstruction - 0048 (16 x 9).jpg
 imageAlt: ""
 ---
 
-![Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67895a2a31cba553cb1d626c/1737054763113/Headshot_20170520_Quarry+View+Construction_Richard_Waine_Lancaster_PA_0048+%28horizontal%29+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import QuarryViewConstruction from '../../assets/images/blog/QuarryViewConstruction - 0048 (horizontal).jpg';
+import FacialExpressions from '../../assets/images/blog/FacialExpressions.png';
+
+
+<Image src={QuarryViewConstruction} alt="Professional headshots,LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
 
 When it comes to professional headshots, there’s a lot more going on than just a click of the camera. A great headshot is not only about technical aspects like lighting, composition, and focus; it’s also deeply rooted in marketing and psychology. The way you present yourself in your headshot can convey a range of emotions and traits that others pick up on, often subconsciously.
 
@@ -32,7 +39,9 @@ Let’s dive into the psychology behind a great headshot and how different eleme
 * **Facial Expressions: The Window to Your Personality**
   Your facial expression is one of the most powerful non-verbal cues in a headshot. A smile can communicate warmth, approachability, and friendliness, making others feel comfortable and open to connecting with you. On the other hand, a more neutral or serious expression might convey professionalism, authority, and confidence. The key is to choose an expression that aligns with the message you want to send. For example, if you’re in a creative industry, a relaxed, slightly playful smile might be more effective than a stern look. Of course, this isn’t as easy as it might sound, given that most people are entirely unaware of what their face is doing at any given point. This means that working collaboratively with a headshot photographer and relying on their expertise is important for achieving expressions and aesthetics that effectively communicate your desired message.
 
-  ![infographic showing how to achieve effective facial expressions in headshots](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/67895f9d9a851226a991b040/1737056157275/Body+Language+-+The+Unspoken+Communication.png)
+<Image src={FacialExpressions} alt="infographic showing how to achieve effective facial expressions in headshots" class="hs-infographic" />
+
+
 
 * **Eye Contact: The Connection Factor**
   In a professional headshot, establishing direct eye contact is essential for creating a compelling connection. Every headshot is a portrait, but not every portrait is a headshot. The primary difference (among others) is that a headshot maintains eye contact with the viewer. This conveys a strong sense of confidence and trustworthiness, making it easier for people to feel and build genuine rapport with you. By looking directly into your eyes in a photo, viewers are more likely to experience a personal connection, even if they have never met you. This is particularly crucial in professions where trust and building relationships are paramount, such as in sales, law, financial services, or healthcare.

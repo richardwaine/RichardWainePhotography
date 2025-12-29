@@ -8,19 +8,26 @@ modifiedDate: 2018-03-15T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f729c2b1f345961286b6d/1746891420892/Headshot_20180310_Piper+Hepler_Richard_Waine_Lancaster_PA_0104+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/PiperHepler - 0104 (16 x 9).jpg
   alt: Piper Hepler headshot session
 keywords: ["client experience", "headshot session", "customer service", "professional photography", "Lancaster photographer", "personal branding", "photography experience", "American Music Theater"]
 articleSection: Client Experience
 permalink: https://www.richardwaine.com/blog/arrive-as-a-client-leave-as-a-friend
 category: "client-experience"
 cardCategory: "Client Experience"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f729c2b1f345961286b6d/1746891420892/Headshot_20180310_Piper+Hepler_Richard_Waine_Lancaster_PA_0104+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/PiperHepler - 0104 (16 x 9).jpg
 imageAlt: Piper Hepler headshot session
 
 ---
 
-![Piper Hepler headshot session](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/681f729c2b1f345961286b6d/1746891420892/Headshot_20180310_Piper+Hepler_Richard_Waine_Lancaster_PA_0104+%2816+x+9%29+-+compressed.jpg)
+import { Image } from 'astro:assets';
+import PiperHepler from '../../assets/images/blog/PiperHepler - 0104 (16 x 9).jpg';
+
+
+<Image src={PiperHepler} alt="Acting Headshots, Actor Headshots, Professional Headshots for Actors" class="article-header-image" />
+
+
+
 
 ## Arrive as a Client, Leave as a Friend
 

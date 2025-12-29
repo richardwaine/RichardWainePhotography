@@ -8,29 +8,41 @@ modifiedDate: 2018-02-07T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683b1fb544493c1ea5ef136b/1748705205980/Sequence+01.00_01_49_24.Still001+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/RW6 - (16 x 9).jpg
   alt: Grandfather Abraham Krutick portrait
 keywords: ["life lessons", "business wisdom", "family legacy", "entrepreneurship", "compassion in business", "hard work", "immigrant success story", "Great Depression"]
 articleSection: Business
 permalink: https://www.richardwaine.com/blog/stuff-my-grandfather-taught-me
 category: "business"
 cardCategory: "Business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683b1fb544493c1ea5ef136b/1748705205980/Sequence+01.00_01_49_24.Still001+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/RW6 - (16 x 9).jpg
 imageAlt: Grandfather Abraham Krutick portrait
 
 ---
+import { Image } from 'astro:assets';
+import RW6 from '../../assets/images/blog/RW6 - (16 x 9).jpg';
+import AbrahamKrutick from '../../assets/images/blog/AbrahamKrutick - (full).jpg';
 
-![Grandfather Abraham Krutick portrait](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/683b1fb544493c1ea5ef136b/1748705205980/Sequence+01.00_01_49_24.Still001+%2816+x+9%29+-+compressed.jpg)
+
+
+
+<Image src={RW6} alt="Professional Headshots, Customer Service, LinkedIn Profile Pictures, Headshots by Richard Waine" class="article-header-image" />
+
+
+
+
 
 ## Stuff My Grandfather Taught Me
 
 My Grandfather was the smartest man I have ever known. I'm relatively sure that you feel the same about someone special in your life. To me, there was no one better.
 
-{/* ![Abraham Krutick: The Most interesting Man in the World](href) */}
+
 
 My Grandfather, Abraham, was born in Russia in 1903. As a child, he had thrown a rock at a Czar's solider, while playing. The soldier chased him into a hay stack, and used a pitchfork to try to find him. When my Great-grandparents had learned of this, they sent my grandfather to America to live with cousins.
 
 (Ok, that wasn't so smart… but I'm getting there).
+
+<Image src={AbrahamKrutick} alt="Professional Headshots, Customer Service, LinkedIn Profile Pictures, Headshots by Richard Waine" class="hs-infographic" />
 
 When Abraham was a teenager, he took a job in a local pharmacy, as a stock boy. Though our family didn't have the money to send him to college, the Pharmacist he worked for loaned him enough to pay tuition. He worked his rear end off, making the grade. He graduated from Brooklyn College of Pharmacy, Suma Cum Laude. There's a certain pride that one should have in being top of their graduating class. He may have been proud of himself, but he never talked about it. In fact, no one in the family knew that he was as accomplished as he was until much later in life. Talk about modesty.
 

@@ -8,19 +8,24 @@ modifiedDate: 2018-01-17T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bef3a9da51111289c4ab/1747500787507/Screen+Shot+2017-07-31+at+12.00.01+PM+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/RW3 - (16 x 9).jpg
   alt: Professional appearance and presentation
 keywords: ["professional appearance", "personal presentation", "business image", "confidence building", "personal branding", "professional style", "first impressions"]
 articleSection: Client Experience
 permalink: https://www.richardwaine.com/blog/how-to-improve-your-appearance-in-6-easy-ways
 category: "client-experience"
 cardCategory: "client experience"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bef3a9da51111289c4ab/1747500787507/Screen+Shot+2017-07-31+at+12.00.01+PM+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/RW3 - (16 x 9).jpg
 imageAlt: Professional appearance and presentation
 
 ---
+import { Image } from 'astro:assets';
+import RW3 from '../../assets/images/blog/RW3 - (16 x 9).jpg';
+import RW4 from '../../assets/images/blog/RW4 - (square).jpg';
 
-![Professional appearance and presentation](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bef3a9da51111289c4ab/1747500787507/Screen+Shot+2017-07-31+at+12.00.01+PM+%2816+x+9%29+-+compressed.jpg)
+
+
+<Image src={RW3} alt="Professional Headshots, Professional appearance and presentation, Headshots by Richard Waine" class="article-header-image" />
 
 ## 6 Easy Ways To Improve Your Appearance
 
@@ -30,14 +35,20 @@ At that time there were a few people I looked up to in the industry. Each had th
 
 Clothing was only part of the equation. The rest is in your presentation; how people receive you, perceive you and interact with you. While clothing, by itself, is important, it isn't AS important as the combination of the various factors mentioned above.
 
+
+
+<Image src={RW4} alt="Professional Headshots, Professional appearance and presentation, Headshots by Richard Waine" class="hs-infographic" />
+
 Over time, I had distilled these factors, and decided that the approach maintains 6 principles:
 
-Confidence
-Approachability
-Authenticity
-Style
-Refinement
-Detail
+<ul>
+  <li>Confidence</li>
+  <li>Approachability</li>
+  <li>Authenticity</li>
+  <li>Style</li>
+  <li>Refinement</li>
+  <li>Detail</li>
+</ul>
 
 ### Confidence
 
@@ -53,7 +64,7 @@ Brooklyn, NY based headshot photographer, Joe Loper says "The quality of your lo
 
 Authenticity is an important piece of the puzzle. Your clients can easily tell when you are being real or inauthentic. When you present yourself as someone of genuine character, your clients will receive that message clearly. More than that, they will believe your company takes a similar position. When you care about your clients, they will care about you. This will be reflected in their desire to transact business with you.
 
-{/* ![Business Headshots, Improve Your Appearance](href) */}
+
 
 ### Style
 

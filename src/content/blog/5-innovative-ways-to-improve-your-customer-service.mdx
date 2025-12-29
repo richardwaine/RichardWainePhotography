@@ -8,19 +8,23 @@ modifiedDate: 2018-01-29T10:00:00Z
 author: Richard Waine
 authorUrl: https://www.richardwaine.com
 headerImage:
-  src: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bf644251e93f91d0eba2/1747500900967/Screen+Shot+2017-07-31+at+11.59.29+AM+%2816+x+9%29+-+compressed.jpg
+  src: src/assets/images/blog/ChoosingClothes (16 x 9).jpg
   alt: Customer service excellence concept
 keywords: ["customer service", "client communication", "business success", "customer satisfaction", "effective communication", "client relationships", "business strategy"]
 articleSection: Business
 permalink: https://www.richardwaine.com/blog/5-innovative-ways-to-improve-your-customer-service
 category: "business"
 cardCategory: "Business"
-imageSrc: https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bf644251e93f91d0eba2/1747500900967/Screen+Shot+2017-07-31+at+11.59.29+AM+%2816+x+9%29+-+compressed.jpg
+imageSrc: src/assets/images/blog/ChoosingClothes (16 x 9).jpg
 imageAlt: Customer service excellence concept
 
 ---
+import { Image } from 'astro:assets';
+import ChoosingClothes from '../../assets/images/blog/ChoosingClothes (16 x 9).jpg';
 
-![Customer service excellence concept](https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6828bf644251e93f91d0eba2/1747500900967/Screen+Shot+2017-07-31+at+11.59.29+AM+%2816+x+9%29+-+compressed.jpg)
+
+<Image src={ChoosingClothes} alt="infographic showing the process of making professional headshots" class="article-header-image" />
+
 
 
 
