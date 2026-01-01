@@ -1,5 +1,6 @@
 ---
-
+import { Image } from 'astro:assets';
+import RWHeadshot from '../assets/images/blog/RichardWaine - (16 x 9).jpg';
 ---
 
 <div class="wrapper">
@@ -60,7 +61,10 @@
 <!-- Mobile/Tablet Bio Layout (displays below 1440px) -->
 <div class="bio-mobile">
   <div class="bio-mobile-image">
-    <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/5f74ea828faed21fb0d31187/1601497731670/Richard+Waine+-+%281000+x+500px%29+-+Lancaster_PA_0006.jpg" alt="Richard Waine - Lancaster Headshot Photographer" loading="lazy">
+
+<Image src={RWHeadshot} alt="Richard Waine - Lancaster Headshot Photographer" loading="lazy" />
+
+
   </div>
 
   <div class="bio-mobile-content">
@@ -145,31 +149,31 @@ h2{
 }
 .bio-container .clip.clip1,
 .bio-container:hover {
-  background: url(https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/5f74e86f21713101d3a39c47/1601497200926/DSC04679-2.jpg);
+  background: url('src/assets/images/blog/RW1 - (16 x 9).jpg');
   background-size: cover;
   background-position: 0 -50px;
   background-repeat: no-repeat;
 }
 .clip.clip1 {
-  background: url(https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/5f74e86f21713101d3a39c47/1601497200926/DSC04679-2.jpg);
+  background: url('src/assets/images/blog/RW1 - (16 x 9).jpg');
   background-size: cover;
   background-position: 0 -50px;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 40% 0, 25% 100%, 0% 100%);
 }
 .clip.clip2 {
-  background: url(https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/5f74e7edb37ba374ee94153c/1601497072838/IMG_0882+-2.jpg);
+  background: url('src/assets/images/blog/RW2 - (16 x 9).jpg');
   background-size: cover;
   background-position: 0 -110px;
   background-repeat: no-repeat;
   clip-path: polygon(40% 0, 100% 0, 75% 100%, 25% 100%);
 }
 .clip.clip3 {
-  background: url(https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/5f74ea828faed21fb0d31187/1601497731670/Richard+Waine+-+%281000+x+500px%29+-+Lancaster_PA_0006.jpg);
+  background: url('src/assets/images/blog/RichardWaine - (16 x 9).jpg');
   background-repeat: no-repeat;
   background-size: 70% ;
   background-size:contain;
-  background-position: 400px 0;
+  background-position: 510px 0;
   clip-path: polygon(75% 0, 100% 0, 102% 100%, 60% 102%);
 
  

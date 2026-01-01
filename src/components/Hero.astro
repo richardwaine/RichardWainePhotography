@@ -11,7 +11,7 @@ import heroBackgroundMobile from '../assets/bts-hero-background-mobile.jpg';
 
 export interface Props {
   title?: string[];
-  subtitle?: string;
+  h1?: string;
   primaryButtonText?: string;
   secondaryButtonText?: string;
   primaryButtonUrl?: string;
@@ -25,7 +25,7 @@ export interface Props {
 
 const {
   title = ["WORLD CLASS", "HEADSHOT", "EXPERIENCE"],
-  subtitle = "Beyond photography. We craft your professional presence with cinematic precision, luxury service, and results that open doors.",
+  h1 = "Professional Headshots Lancaster",
   primaryButtonText = "GET PRICING",
   secondaryButtonText = "SCHEDULE CONSULTATION",
   primaryButtonUrl = "/rates",
@@ -81,7 +81,7 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
    <!-- Optimized Background Images - Responsive -->
 <picture class="hero-background-picture">
     <source media="(max-width: 768px)" srcset={heroBackgroundMobile.src} />
-    <Image src={heroBackground} alt="" class="hero-background-image" priority />
+    <Image src={heroBackground} alt="behind the scenes of Richard Waine setting up headshot lighting for a professional headshot session at Richard Waine Photography Studio" class="hero-background-image" priority />
 </picture>
 
     <!-- Background with Sophisticated Depth -->
@@ -98,7 +98,7 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
         
         <!-- Animated Text Reveal -->
         <div class="text-reveal-container">
-            <h1 class="experience-title">
+            <div class="experience-title">
                 <div class="title-line" data-delay="0">
                     <span class="word">{title[0]}</span>
                 </div>
@@ -108,11 +108,11 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
                 <div class="title-line" data-delay="200">
                     <span class="word">{title[2]}</span>
                 </div>
+            </div>
+
+            <h1 class="experience-h1" data-delay="600">
+                {h1}
             </h1>
-            
-            <p class="experience-subtitle" data-delay="600">
-                {subtitle}
-            </p>
             
             <!-- Interactive Action Area -->
             <div class="action-area" data-delay="800">
@@ -487,7 +487,7 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
     transform: translateY(0) rotateX(0deg);
 }
 
-.experience-subtitle {
+.experience-h1 {
     font-size: var(--fs-550);
     font-weight: 400;
     color: var(--faded);
@@ -496,9 +496,10 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
     transform: translateY(var(--size-6));
     opacity: 0;
     transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    padding-left:.25rem;
 }
 
-.experience-subtitle.revealed {
+.experience-h1.revealed {
     transform: translateY(0);
     opacity: 1;
 }
@@ -973,7 +974,7 @@ font-size: clamp(3rem, 8vw + 1rem, 6rem);
     class HeroExperience {
         private elements: {
             titleLines: NodeListOf<Element>;
-            subtitle: Element | null;
+            h1: Element | null;
             actionArea: Element | null;
             heroImages: NodeListOf<Element>;
         };
@@ -985,11 +986,11 @@ font-size: clamp(3rem, 8vw + 1rem, 6rem);
         constructor() {
             this.elements = {
                 titleLines: document.querySelectorAll('.title-line'),
-                subtitle: document.querySelector('.experience-subtitle'),
+                h1: document.querySelector('.experience-h1'),
                 actionArea: document.querySelector('.action-area'),
                 heroImages: document.querySelectorAll('.hero-image')
             };
-            
+
             this.init();
         }
         
@@ -1015,9 +1016,9 @@ font-size: clamp(3rem, 8vw + 1rem, 6rem);
                 threshold: 0.1,
                 rootMargin: '0px 0px -10% 0px'
             });
-            
+
             // Observe all animated elements
-            document.querySelectorAll('[data-delay], .experience-subtitle, .action-area').forEach(el => {
+            document.querySelectorAll('[data-delay], .experience-h1, .action-area').forEach(el => {
                 if (this.observer) {
                     this.observer.observe(el);
                 }
@@ -1042,11 +1043,11 @@ font-size: clamp(3rem, 8vw + 1rem, 6rem);
                 });
             }, 500);
             this.animationTimeouts.push(mainTimeout);
-            
+
             // Subtitle reveal
             const subtitleTimeout = setTimeout(() => {
-                if (this.elements.subtitle) {
-                    this.elements.subtitle.classList.add('revealed');
+                if (this.elements.h1) {
+                    this.elements.h1.classList.add('revealed');
                 }
             }, 1200);
             this.animationTimeouts.push(subtitleTimeout);
@@ -1112,8 +1113,8 @@ font-size: clamp(3rem, 8vw + 1rem, 6rem);
                 if (word) word.classList.remove('revealed');
             });
 
-            if (this.elements.subtitle) {
-                this.elements.subtitle.classList.remove('revealed');
+            if (this.elements.h1) {
+                this.elements.h1.classList.remove('revealed');
             }
 
             if (this.elements.actionArea) {

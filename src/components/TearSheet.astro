@@ -36,59 +36,35 @@ interface Logo {
   scale?: number;
 }
 
+
+
 const logos: Logo[] = [
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f9096acfb084922b9500e/1685033110641/accelerate+mortgage.png", alt: "Accelerate Mortgage" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f90de975fb76d11ad2e80/1685033182586/aidem-logo.png", alt: "Aidem Media" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f90e5cb38b13ad5a69e9e/1685033189524/Allied+First+Bank+-+logo.png", alt: "Allied First Bank", scale: 1.35 },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f936b63d93b50f0f009ab/1685033835491/aperture-dark%402.v3.png", alt: "Aperture LLC" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f937230682179bd758f5a/1685033842692/CHUBB_Logo.png", alt: "Chubb Insurance" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f93e2bdb97d2ee92c25f2/1685033954507/columbia-cottage-logo.png", alt: "Columbia Cottage" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f93ef26bafb6dd6a9fb1f/1685033967416/EPNB+-+logo.png", alt: "Ephrata National Bank", scale: 1.35 },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f946bc859da5d8216b2e7/1685034091841/Havtech+Logo.png", alt: "Havtech", scale: 1.35 },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f946f63f73a098f2b4511/1685034095484/ISACA_logo_Harrisburg.png", alt: "ISACA Harrisburg" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f96b5ac1b170c134a3fbb/1685034677257/Avail+logo+%28black%29.png", alt: "Avail Technology Solutions", scale: 0.8 },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95e852babf7d54dd7ba9/1685034472109/TRC+logo.png", alt: "TRC Companies" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f947c12f1cf115ee0020c/1685034108346/loginext_red_black.png", alt: "Loginext" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f948226bafb6dd6aa124e/1685034114800/northwest-bank-logo.png", alt: "Northwest Bank", scale: 1.35 },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f96b9eea70f4b6bf4ddd8/1685034681866/CAREL+logo.png", alt: "Carel USA", scale: 0.8 },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f947463f73a098f2b4590/1685034100383/Janney+logo.png", alt: "Janney" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95d952babf7d54dd7b32/1685034457174/rbc-wealth-management+logo.png", alt: "RBC Wealth Management" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95de66c6cf64645794ca/1685034462556/rg-injury-law-logo.png", alt: "RG Injury Law", scale: 1.35 },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95e2f2190f4ee61496e7/1685034466867/Sallie-Mae-logo.png", alt: "Sallie Mae" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f9478ff012044ac3cdb8d/1685034104432/LCN+Logo+%28black%29.png", alt: "LCN Capital" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6567855e1816650d4c5675bc/1701283166718/Capital+One+Logo.png", alt: "Capital One" },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65678662f38b92723c3d9c99/1701283426120/Inframark_logo.png", alt: "Inframark", scale: 1.35 },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65678745dd0efe48b22147aa/1701283653167/Metso+Outotec+Logo.png", alt: "Metso", scale: 1.35 },
-  { src: "https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65d8ec4144e86d1f3b859454/1708715073374/Kaufman-Dolowich+-+logo+%282%29.png", alt: "Kaufman Dolowich", scale: 1.5 },
+  { src: "src/assets/images/tearsheet/AccelerateMortgage.png", alt: "Accelerate Mortgage" },
+  { src: "src/assets/images/tearsheet/AidemMedia.png", alt: "Aidem Media" },
+  { src: "src/assets/images/tearsheet/Allied First Bank - black.png", alt: "Allied First Bank", scale: 1.35 },
+  { src: "src/assets/images/tearsheet/Aperture - black.png", alt: "Aperture LLC" },
+  { src: "src/assets/images/tearsheet/Chubb.png", alt: "Chubb Insurance" },
+  { src: "src/assets/images/tearsheet/Columbia Cottage - (black).png", alt: "Columbia Cottage" },
+  { src: "src/assets/images/tearsheet/EPNB.png", alt: "Ephrata National Bank", scale: 1.35 },
+  { src: "src/assets/images/tearsheet/Havtech.png", alt: "Havtech", scale: 1.35 },
+  { src: "src/assets/images/tearsheet/ISACA.png", alt: "ISACA Harrisburg" },
+  { src: "src/assets/images/tearsheet/Avail - black.png", alt: "Avail Technology Solutions", scale: 0.8 },
+  { src: "src/assets/images/tearsheet/TRC.png", alt: "TRC Companies" },
+  { src: "src/assets/images/tearsheet/Loginext.png", alt: "Loginext", scale: 1.25},
+  { src: "src/assets/images/tearsheet/Northwest Bank (black).png", alt: "Northwest Bank", scale: 1.35 },
+  { src: "src/assets/images/tearsheet/Carel.png", alt: "Carel USA", scale: 0.8 },
+  { src: "src/assets/images/tearsheet/Janney.png", alt: "Janney", scale:1.35 },
+  { src: "src/assets/images/tearsheet/RBC.png", alt: "RBC Wealth Management" },
+  { src: "src/assets/images/tearsheet/RG-injury-law.png", alt: "RG Injury Law", scale: 1.35 },
+  { src: "src/assets/images/tearsheet/Sallie-Mae-2.png", alt: "Sallie Mae" },
+  { src: "src/assets/images/tearsheet/LCN Logo (black).png", alt: "LCN Capital" },
+  { src: "src/assets/images/tearsheet/Capital One.png", alt: "Capital One" },
+  { src: "src/assets/images/tearsheet/Inframark.png", alt: "Inframark", scale: 1.35 },
+  { src: "src/assets/images/tearsheet/Metso Outotec.png", alt: "Metso", scale: 1.35 },
+  { src: "src/assets/images/tearsheet/Kaufman Dolowich.png", alt: "Kaufman Dolowich", scale: 1.5 },
+  { src: "src/assets/images/tearsheet/Zentis - (black).png", alt: "Zentis North America", scale: 0.8 },
+  
 ];
-
-
-
-// import type { ImageMetadata } from 'astro';
-
-// interface Logo {
-//   src: ImageMetadata;
-//   alt: string;
-//   scale?: number;
-// }
-
-// const logos: Logo[] = [
-//   { src: AccelerateMortgage, alt: "Accelerate Mortgage" },
-//   { src: AidemMedia, alt: "Aidem Media" },
-//   { src: AlliedFirstBank, alt: "Allied First Bank", scale: 1.35 },
-//   { src: Aperture, alt: "Aperture LLC" },
-//   { src: Chubb, alt: "Chubb Insurance" },
-//   { src: ColumbiaCottage, alt: "Columbia Cottage" },
-//   { src: EPNB, alt: "Ephrata National Bank", scale: 1.35 },
-//   { src: Havtech, alt: "Havtech", scale: 1.35 },
-//   { src: Isaca, alt: "ISACA Harrisburg" },
-//   { src: Avail, alt: "Avail Technology Solutions", scale: 0.8 },
-//   { src: TRC, alt: "TRC Companies" },
-//   { src: CapitalOne, alt: "Capital One" },
-//   { src: Inframark, alt: "Inframark", scale: 1.35 },
-//   { src: Metso, alt: "Metso", scale: 1.35 },
-//   { src: KaufmanDolowich, alt: "Kaufman Dolowich", scale: 1.5 },
-// ];
 
 
 
@@ -99,27 +75,6 @@ const logos: Logo[] = [
 
 
 
-<!-- <Image src={AccelerateMortgage} alt="Logo" width={200} height={100} style="filter:grayscale(1);object-fit:contain;"/> -->
-<!-- <Image src={AidemMedia} alt="Logo" width={200} height={100} style="filter:grayscale(1);object-fit:contain;"/> -->
-
-
-<!--
-<div class="scroller" data-direction="left" data-speed="slow">
-  <div class="scroller__inner">
-    {logos.map((logo) => (
-      <Image
-        src={logo.src}
-        alt={logo.alt}
-        loading="lazy"
-        width={200}
-        height={100}
-        style={logo.scale ? `transform: scale(${logo.scale});` : undefined}
-      />
-    ))}
-  </div>
-</div>
-
--->
     
     <div class="scroller" data-direction="left" data-speed="slow">
         <div class="scroller__inner">
@@ -238,218 +193,3 @@ function initScroller() {
 document.addEventListener('astro:page-load', initScroller);
 </script>
 
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-<div class="wrapper">
-    <div class="tear-sheet-container">
-        <h2 class="section-title">TRUSTED BY FORWARD-THINKING COMPANIES AROUND THE WORLD</h2>
-        
-        <div class="scroller" data-direction="left" data-speed="slow">
-            <div class="scroller__inner" id="logoContainer">
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f9096acfb084922b9500e/1685033110641/accelerate+mortgage.png" alt="Accelerate Mortgage Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f90de975fb76d11ad2e80/1685033182586/aidem-logo.png" alt="Aidem Media Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f90e5cb38b13ad5a69e9e/1685033189524/Allied+First+Bank+-+logo.png" alt="Allied First Bank logo" style="transform: scale(1.35);" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f936b63d93b50f0f009ab/1685033835491/aperture-dark%402.v3.png" alt="Aperture LLC logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f937230682179bd758f5a/1685033842692/CHUBB_Logo.png" alt="Chubb Insurance logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f93e2bdb97d2ee92c25f2/1685033954507/columbia-cottage-logo.png" alt="Columbia Cottage Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f93ef26bafb6dd6a9fb1f/1685033967416/EPNB+-+logo.png" alt="Ephrata National Bank Logo" style="transform: scale(1.35);" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f946bc859da5d8216b2e7/1685034091841/Havtech+Logo.png" alt="Havtech Logo" style="transform: scale(1.35);" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f946f63f73a098f2b4511/1685034095484/ISACA_logo_Harrisburg.png" alt="ISACA Harrisburg Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f96b5ac1b170c134a3fbb/1685034677257/Avail+logo+%28black%29.png" alt="Avail Technology Solutions Logo" style="transform: scale(0.8);" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95e852babf7d54dd7ba9/1685034472109/TRC+logo.png" alt="TRC Companies Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f947c12f1cf115ee0020c/1685034108346/loginext_red_black.png" alt="Loginext Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f948226bafb6dd6aa124e/1685034114800/northwest-bank-logo.png" alt="Northwest Bank Logo" style="transform: scale(1.35);" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f96b9eea70f4b6bf4ddd8/1685034681866/CAREL+logo.png" alt="Carel USA Logo" style="transform: scale(0.8);" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f947463f73a098f2b4590/1685034100383/Janney+logo.png" alt="Janney Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95d952babf7d54dd7b32/1685034457174/rbc-wealth-management+logo.png" alt="RBC Wealth Management Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95de66c6cf64645794ca/1685034462556/rg-injury-law-logo.png" alt="RG Injury Law Logo, Rankin and Gregory, Law firm" style="transform: scale(1.35);" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95e2f2190f4ee61496e7/1685034466867/Sallie-Mae-logo.png" alt="Sallie Mae Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f9478ff012044ac3cdb8d/1685034104432/LCN+Logo+%28black%29.png" alt="LCN Capital Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6567855e1816650d4c5675bc/1701283166718/Capital+One+Logo.png" alt="Capital One Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65678662f38b92723c3d9c99/1701283426120/Inframark_logo.png" alt="Inframark Logo" style="transform: scale(1.35);" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65678745dd0efe48b22147aa/1701283653167/Metso+Outotec+Logo.png" alt="Metso Logo" style="transform: scale(1.35);" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65d8ec4144e86d1f3b859454/1708715073374/Kaufman-Dolowich+-+logo+%282%29.png" alt="Kaufman Dolowich Logo" style="transform: scale(1.5);" loading="lazy"/>
-            </div>
-        </div>
-    </div>
-</div>
-
--->
-
-<!--NEW scroller tear sheet  -->
-
-<!-- 
-<script is:inline>
-// Flag to track if scroller has been initialized
-let scrollerInitialized = false;
-
-function initTearSheetScroller() {
-    const scrollers = document.querySelectorAll(".scroller");
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        scrollers.forEach((scroller) => {
-            const scrollerInner = scroller.querySelector(".scroller__inner");
-            if (!scrollerInner) return;
-
-            // Check if already initialized
-            if (scroller.hasAttribute("data-animated")) return;
-
-            scroller.setAttribute("data-animated", true);
-
-            // Clone logos for seamless loop (only once)
-            const originalChildren = Array.from(scrollerInner.children);
-            originalChildren.forEach((item) => {
-                const duplicatedItem = item.cloneNode(true);
-                duplicatedItem.setAttribute("aria-hidden", true);
-                scrollerInner.appendChild(duplicatedItem);
-            });
-        });
-
-        // Set up Intersection Observer to pause animation when not visible
-        scrollers.forEach((scroller) => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    const scrollerInner = entry.target.querySelector(".scroller__inner");
-                    if (scrollerInner) {
-                        if (entry.isIntersecting) {
-                            // Resume animation
-                            scrollerInner.style.animationPlayState = 'running';
-                        } else {
-                            // Pause animation when out of view
-                            scrollerInner.style.animationPlayState = 'paused';
-                        }
-                    }
-                });
-            }, {
-                threshold: 0.1 // Trigger when 10% of element is visible
-            });
-
-            observer.observe(scroller);
-        });
-
-        scrollerInitialized = true;
-    }
-}
-
-// Initialize on first load
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTearSheetScroller);
-} else {
-    initTearSheetScroller();
-}
-
-// Reinitialize after View Transitions
-document.addEventListener('astro:page-load', () => {
-    scrollerInitialized = false; // Reset flag for new page
-    initTearSheetScroller();
-});
-</script>
-
--->
-<!-- end NEW scroller tear sheet -->
-
-<!-- 
-
-    <style>
-
-        /*new tear sheet */
-       
-
-        .tear-sheet-container {
-            --_tear-sheet-height:200px;
-
-            display: grid;
-            min-height: var(--_tear-sheet-height);
-            place-items: center;
-            background: var(--ltclr);
-
-            background:transparent;
-            color:white;
-
-
-            width:80%;
-            margin:auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom:var(--size-7);
-            font-size:var(--fs-600);
-            color:var(--drkclr);
-            
-            /* font-weight: bold; */
-        }
-        
-        .scroller {
-            max-width: calc(100% - 2em);
-            overflow: hidden;
-            -webkit-mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
-            mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
-        }
-        
-        .scroller__inner {
-            padding-block:  var(--size-3);
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--size-4);
-        }
-        
-        .scroller[data-animated="true"] .scroller__inner {
-            width: max-content;
-            flex-wrap: nowrap;
-            animation: scroll var(--_animation-duration, 60s) linear infinite var(--_animation-direction, normal);
-            align-items: center;
-            height: var(--_tear-sheet-height);
-        }
-
-        .scroller[data-direction="right"] {
-            --_animation-direction: reverse;
-        }
-
-        .scroller[data-direction="left"] {
-            --_animation-direction: normal;
-        }
-        
-        .scroller[data-speed="fast"] {
-            --_animation-duration: 40s;
-        }
-        
-        .scroller[data-speed="slow"] {
-            --_animation-duration: 60s;
-        }
-        
-        @keyframes scroll {
-            to {
-                transform: translateX(-50%);
-            }
-        }
-        
-
-        
-        .scroller img {
-            height: auto;
-            max-width: 175px;
-            filter: grayscale(1);
-            flex-shrink: 0;
-            margin-inline: var(--size-9);
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            .scroller__inner {
-                animation: none;
-            }
-        }
-
-/*end new tear sheet */
-    </style>
-
--->

@@ -26,8 +26,8 @@ const h1 = 'Professional Headshots Lancaster';
 
 // Hero section content
 const heroContent = {
-  title: ["WORLD CLASS", "HEADSHOT", "EXPERIENCE"],  
-  subtitle: "Beyond photography. We craft your professional presence with cinematic precision, luxury service, and results that open doors.",
+  title: ["WORLD CLASS", "HEADSHOT", "EXPERIENCE"],
+  h1: h1,
   primaryButtonText: "GET PRICING",
   secondaryButtonText: "SCHEDULE CONSULTATION",
   heroImages: [
@@ -39,18 +39,14 @@ const heroContent = {
 
 
 
-
-
-
-
 ---
 
-<MainLayout title = "Richard Waine Photography">
+<MainLayout title = "Professional Headshot Photographer | Lancaster, PA" description="Lancaster Pennsylvania's Best Headshot Photographer for professional headshots, office headshots, business headshots, corporate headshots, acting headshots">
 
 	<section id="hero">
 	<Hero
 		title={heroContent.title}
-		subtitle={heroContent.subtitle}
+		h1={heroContent.h1}
 		primaryButtonText={heroContent.primaryButtonText}
 		secondaryButtonText={heroContent.secondaryButtonText}
 		heroImages={heroContent.heroImages}

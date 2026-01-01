@@ -26,8 +26,8 @@ const h1 = 'Professional Headshots Delaware';
 
 // Hero section content
 const heroContent = {
-  title: ["DELAWARE", "HEADSHOT", "PHOTOGRAPHY"],
-  subtitle: "Serving Delaware and the surrounding region with world-class headshot photography. We craft your professional presence with cinematic precision, luxury service, and results that open doors.",
+  title: ["WORLD CLASS", "HEADSHOT", "EXPERIENCE"],
+  h1: h1,
   primaryButtonText: "GET PRICING",
   secondaryButtonText: "SCHEDULE CONSULTATION",
   heroImages: [
@@ -38,14 +38,9 @@ const heroContent = {
 };
 
 
-
-
-
-
-
 ---
 
-<MainLayout title = "Delaware Headshots | Richard Waine Photography">
+<MainLayout title = "Richard Waine | Delaware Headshot Photographer" description="Richard Waine is Delaware’s premier headshot photographer, specializing in Professional headshots for companies, professionals, offices, and conferences">
 
 	<script type="application/ld+json">
 	{
@@ -70,7 +65,7 @@ const heroContent = {
 	<section id="hero">
 	<Hero
 		title={heroContent.title}
-		subtitle={heroContent.subtitle}
+		h1={heroContent.h1}
 		primaryButtonText={heroContent.primaryButtonText}
 		secondaryButtonText={heroContent.secondaryButtonText}
 		heroImages={heroContent.heroImages}

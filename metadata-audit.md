@@ -21,14 +21,14 @@
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: About Richard Waine
-**New Astro:** /about [TBD]
+**New Astro:** /about-lancaster-headshot-photographer-richard-waine
 
 ### 3. Contact
 **Current:** https://richardwainephotography.com/contact-lancaster-headshot-photographer-richard-waine
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: Contact Richard Waine Photography
-**New Astro:** /contact [TBD]
+**New Astro:** /contact-lancaster-headshot-photographer-richard-waine
 
 ### 4. Schedule
 **Current:** https://richardwainephotography.com/schedule
@@ -49,42 +49,42 @@
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: Lancaster Pennsylvania's Premier Headshot Photographer
-**New Astro:** /studio [TBD]
+**New Astro:** /richard-waine-photography-studio
 
 ### 7. My Team
 **Current:** https://richardwainephotography.com/my-team
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: Meet the Richard Waine Team
-**New Astro:** /my-team [TBD]
+**New Astro:** /my-team
 
 ### 8. Videos
 **Current:** https://richardwainephotography.com/videos
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: Lancaster Pennsylvania's Premier Headshot Photographer
-**New Astro:** /videos [TBD]
+**New Astro:** /videos 
 
 ### 9. Resources
 **Current:** https://richardwainephotography.com/resources
 - Title: Lancaster PA Creative Services Directory - Local Professional Vendors
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: Lancaster Pennsylvania's Premier Headshot Photographer
-**New Astro:** /resources [TBD]
+**New Astro:** /resources
 
 ### 10. Gift Certificates
 **Current:** https://richardwainephotography.com/gift-certificates
 - Title: Gift Certificates
 - Description: Give the gift of confidence, authenticity, and look-ability. A gift card towards a headshot session is ideal for colleagues, friends, or special someone.
 - H1: Headshot Gift Certificates
-**New Astro:** /gift-certificates [TBD]
+**New Astro:** /gift-certificates
 
 ### 11. Terms and Conditions
 **Current:** https://richardwainephotography.com/terms-and-conditions
 - Title: The Legal Stuff That No One Understands
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: Terms and Conditions
-**New Astro:** /terms-and-conditions [TBD]
+**New Astro:** /terms-and-conditions
 
 ---
 
@@ -95,56 +95,56 @@
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: PROFESSIONAL HEADSHOTS HARRISBURG
-**New Astro:** /harrisburg-headshots [TBD]
+**New Astro:** /harrisburg-headshots
 
 ### 13. Philadelphia
 **Current:** https://richardwainephotography.com/philadelphia-headshots
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: HEADSHOTS THAT WORK HARDER THAN YOU DO
-**New Astro:** /philadelphia-headshots [TBD]
+**New Astro:** /philadelphia-headshots
 
 ### 14. Delaware
 **Current:** https://richardwainephotography.com/delaware-headshots
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: HEADSHOTS - FOR THOSE WHO CRAVE SUCCESS
-**New Astro:** /delaware-headshots [TBD]
+**New Astro:** /delaware-headshots
 
 ### 15. Baltimore
 **Current:** https://richardwainephotography.com/baltimore-headshots
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: PROFESSIONAL HEADSHOTS BALTIMORE
-**New Astro:** /baltimore-headshots [TBD]
+**New Astro:** /baltimore-headshots
 
 ### 16. York
 **Current:** https://richardwainephotography.com/york-headshots
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: HEADSHOTS — THAT WORK HARDER THAN YOU DO
-**New Astro:** /york-headshots [TBD]
+**New Astro:** /york-headshots
 
 ### 17. Conference
 **Current:** https://richardwainephotography.com/conference-headshots
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: PROFESSIONAL CONFERENCE HEADSHOTS
-**New Astro:** /conference-headshots [TBD]
+**New Astro:** /conference-headshots
 
 ### 18. Client Experiences [REDIRECT TO HOMEPAGE]
 **Current:** https://richardwainephotography.com/philadelphia-lancaster-headshot-client-experiences
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: Testimonials
-**New Astro:** 301 redirect to /
+**New Astro:** 301 redirect to / 
 
 ### 19. Headshots For A Cure [404]
 **Current:** https://richardwainephotography.com/headshots-for-a-cure
 - Title: Professional Headshot Photographer | Lancaster, PA
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: Headshots For a Cure
-**New Astro:** Return 404
+**New Astro:** Return 404 [need to create a 404 page]
 
 ---
 
@@ -155,7 +155,7 @@
 - Title: Headshot Photography Information and Thoughts
 - Description: Lancaster, Pennsylvania's best headshot and portrait photographer, specializing in Professional headshots, actor headshots, corporate headshots and business portraits.
 - H1: Lancaster Pennsylvania's Premier Headshot Photographer
-**New Astro:** /blog [TBD]
+**New Astro:** /blog
 
 ### 21. Blog Content [REDIRECT]
 **Current:** https://richardwainephotography.com/blog-content

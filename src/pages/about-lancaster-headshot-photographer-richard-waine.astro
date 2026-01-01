@@ -1,7 +1,8 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro'
-import { Image } from 'astro:assets';
+import MainLayout from '../layouts/MainLayout.astro';
 import PageTitle from '../components/PageTitle.astro';
+
+import { Image } from 'astro:assets';
 import richardHeadshot from '../assets/images/about/Richard Waine 20230315 (500px).jpg';
 import bermudaCruisePhoto from '../assets/images/about/Richard and Ilyse - HeadshotCrewz - Bermuda.jpg';
 import lintRollerPhoto from '../assets/images/about/Richard Waine Using Lint Roller.jpg';
@@ -9,11 +10,18 @@ import rwFinalV1Still from '../assets/images/about/RW_FINAL_V1_FOR REVIEW.00_00_
 import img1912 from '../assets/images/about/IMG_1912.jpeg';
 import harley1 from '../assets/images/about/Harley-1.jpeg';
 import rwInSession from '../assets/images/about/RW - in session.jpg';
+import HSCMentor from '../assets/images/logos/HSC - Mentor.jpg';
+import HSCLogo from '../assets/images/logos/HSC - White.jpg';
+import JPEGmini from '../assets/images/logos/JPEGmini.jpg';
+import SavageLogo from '../assets/images/logos/SavageLogo.jpg';
+import TetherTools from '../assets/images/logos/TetherTools.png';
+import ThinkTank from '../assets/images/logos/ThinkTank.jpg';
+
 
 const h1 ='About Richard Waine';
 ---
 
-<MainLayout title= "About Richard Waine">
+<MainLayout title= "About Headshot Photographer Richard Waine" description="Lancaster Headshot photographer Richard Waine discusses his story and explains why he loves helping you with high quality headshots.">
 
 	<script type="application/ld+json">
 	{
@@ -193,13 +201,19 @@ const h1 ='About Richard Waine';
 
 
 
-
+ 
     <div class="companies">
-        <img src="https://images.squarespace-cdn.com/content/v1/50f79c6fe4b00d3480c9bbf0/1529506075921-FQ4TPKE9TNE1W3ZA5313/tether-tools-logo?format=1000w" alt="Tether Tools logo" loading="lazy">
-        <img src="https://images.squarespace-cdn.com/content/v1/50f79c6fe4b00d3480c9bbf0/1529505583829-8WYGTFVGO10O5A3EDZUL/HSC+Mentor+%28200px%29.jpg?format=1000w" alt="Headshot Crew Mentor logo" loading="lazy">
-        <img src="https://images.squarespace-cdn.com/content/v1/50f79c6fe4b00d3480c9bbf0/1529505381527-5KTOZGSO4700C7XDHMXF/hsc-white-bg.jpg?format=1000w" alt="Headshot Crew logo" loading="lazy">
-        <img src="https://images.squarespace-cdn.com/content/v1/50f79c6fe4b00d3480c9bbf0/1529505749878-0BJT025AYL15M9ZE8T8Z/Savage-Logo.jpg?format=1000w" alt="Savage Universal logo" loading="lazy">
-        <img src="https://images.squarespace-cdn.com/content/v1/50f79c6fe4b00d3480c9bbf0/1529506026024-TUUMYD3EH73ARWMOQ1CF/jpegmini.jpg?format=1000w" alt="JPEGmini logo" loading="lazy">
+        <Image class="" src={TetherTools} alt="Tether Tools logo" loading="lazy" />
+
+        <Image class="" src={HSCMentor} alt="Headshot Crew Mentor logo" loading="lazy" />
+
+        <Image class="" src={HSCLogo} alt="Headshot Crew logo" loading="lazy" />
+
+        <Image class="" src={SavageLogo} alt="Savage Universal logo" loading="lazy" />
+
+        <Image class="" src={JPEGmini} alt="JPEGmini logo" loading="lazy" />
+
+        <Image class="" src={ThinkTank} alt="ThinkTank logo" loading="lazy" />
     </div>
 
 </div>
@@ -273,14 +287,14 @@ img{
 }
   
 .companies{
-    margin-block:var(--size-8);
+    margin-block:var(--size-10);
     display:grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     align-items:center;
 
     img{
-        width:200px;
+        width:175px;
         height:auto;
         margin-inline:auto;
     }
