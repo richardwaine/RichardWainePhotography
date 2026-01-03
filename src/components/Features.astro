@@ -7,7 +7,7 @@ import { Image } from 'astro:assets';
 import adoteImg from '../assets/images/features/Headshot_20240919_William Adote_Richard Waine_Lancaster_PA_0023 (horizontal) - compressed.jpg';
 import cottrellImg from '../assets/images/features/Headshot_20220829_Jack Cottrell_Richard_Waine_Lancaster_PA_0318 (horizontal) - compressed.jpg';
 import giglioImg from '../assets/images/features/Headshot_20180414_Ken Giglio_Richard_Waine_Lancaster_PA_0060-2 - compressed.jpg';
-import chubbImg from '../assets/images/features/Chubb - ContactSheet (square).jpg';
+import chubbImg from '../assets/images/office-headshots/Chubb - ContactSheet (square).jpg';
 
 
 const {
@@ -116,7 +116,7 @@ const {
 
       <div class="feature-slide">
         <div class="slide-content-wrapper">
-          <Image class="slide-image" src={chubbImg} alt="Office Headshots, Professional Headshots on Location, Team Headshots" width={600} height={600} loading="lazy" />
+          <Image class="slide-image" src={chubbImg} alt="Office Headshots, Professional Headshots on Location, Team Headshots" loading="lazy" />
           <div class="slide-content slide-content4">
             <h2 class="heading">Office Headshots</h2>
             <div class="slide-text">
@@ -255,91 +255,6 @@ document.addEventListener("astro:page-load", () => {
 
 
 
-
-
-<!-- 
-
-<script>
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
-let mm = gsap.matchMedia();
-const DESKTOP_BREAKPOINT = "(min-width: 768px)";
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-
-// DESKTOP LOGIC (Horizontal Scroll)
-mm.add(DESKTOP_BREAKPOINT, () => {
-    
-    // Disable animation for reduced motion users
-    if (window.matchMedia(REDUCED_MOTION_QUERY).matches) return; 
-
-    const slides = gsap.utils.toArray('.feature-slide');
-    const scroller = document.querySelector('.features-scroller');
-
-    if (scroller && slides.length > 1) {
-        // Main horizontal scroll animation controlled by vertical scroll
-        const horizontalScroll = gsap.to(slides, {
-            xPercent: -100 * (slides.length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".features-section",
-                pin: true,
-                scrub: 1,
-                // snap: 1 / (slides.length - 1),
-               // snap: { snapTo: 1 / (slides.length - 1), directional: true, delay: 0.2 },
-                end: () => `+=${(slides.length - 1) * window.innerWidth}`,
-                invalidateOnRefresh: true,
-            }
-        });
-
-        // Animate content within each slide
-        slides.forEach((slide: any) => {
-            const heading = slide.querySelector(".heading");
-            const text = slide.querySelector(".slide-text");
-            const image = slide.querySelector(".slide-image");
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: slide,
-                    containerAnimation: horizontalScroll,
-                    start: "left center",
-                    end: "center center",
-                    scrub: true,
-                }
-            });
-
-
-  
-           if (heading) tl.from(heading, { opacity: 0, y: 0, ease: "power1.inOut" }, 0);
-           if (text) tl.from(text, { opacity: 0, y: 0, ease: "power2.out" }, 0.2);
-           if (image) tl.from(image, { opacity: 0, x: 0, y: 0, scale: 0, ease: "slow" }, 0);
-           
-        });
-    }
-
-    // Cleanup function: Kills ScrollTriggers when screen size shrinks below 768px
-    return () => {
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-});
-
-
-// MOBILE FALLBACK LOGIC (Runs ONLY on screens smaller than 768px)
-mm.add("(max-width: 767px)", () => {
-    // Clear any pinned/transformed styles left by ScrollTrigger
-    gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
-});
-
-window.addEventListener("load", () => {
-  ScrollTrigger.refresh();
-});
-
-</script>
-
--->
-
 <style>
 .features-section {
   width: 100%;
@@ -428,7 +343,7 @@ p {
   margin: auto;
   height: auto;
   box-shadow: var(--shadow);
-  width: min(700px, 100%);
+  width: min(600px, 100%);
 }
 
 .slide-content {

@@ -1,95 +1,68 @@
 ---
 import { Image } from 'astro:assets';
 import RWHeadshot from '../assets/images/blog/RichardWaine - (16 x 9).jpg';
+
+
+interface BioSection {
+  clipHeading: string;
+  clipParagraphs: string[];
+}
+
+interface Props {
+  bioSectionHeading: string;
+  bioSections: BioSection[];
+}
+
+const { bioSectionHeading, bioSections } = Astro.props;
+
+
+
 ---
 
 <div class="wrapper">
 
 <h2 class="section-title hs-photographer white spacing center">
-  Lancaster Headshot Photographer
+  {bioSectionHeading}
 </h2>
 
 
 <div class="bio-wrapper">
-<div class=bio-container>
-  <div class="clip clip1 lazy"  title="Lancaster Headshot Photographer">
-    <div class=bio-content>
-      <h2 class="bio-content-h2">LANCASTER HEADSHOT PHOTOGRAPHY</h2>
 
-      <p>By now you probably realize that professional headshot photography is about more
-        than just nice pictures, and I am much more than a portrait photographer.</p>
-
-      <p>I am the best headshot photographer in Lancaster PA, Central Pennsylvania,
-        and surrounding areas such as Philadelphia, Delaware, Harrisburg, Baltimore,
-        Hershey, and Reading.</p>
+    <div class="bio-container">
+      {bioSections.map((section, index) => (
+        <div class={`clip clip${index + 1} lazy`} title={section.clipHeading}>
+          <div class="bio-content">
+            <h2 class="bio-content-h2">{section.clipHeading}</h2>
+            {section.clipParagraphs.map((para) => (
+              <p>{para}</p>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
-  </div>
-
-  <div class="clip clip2 lazy"  title="Professional Headshots">
-    <div class=bio-content>
-      <h2 class="bio-content-h2">PROFESSIONAL HEADSHOTS NEAR LANCASTER</h2>
-
-      <p>As your professional headshot photographer and trusted advisor, I provide a
-        premium experience, while removing any anxiety or feelings of discomfort over
-        having your photo taken.</p>
-
-      <p>Having your headshot taken should be an enjoyable, and dynamic experience.</p>
-    </div>
-  </div>
-  <div class="clip clip3 lazy"  title="Richard Waine Headshot Photographer">
-    <div class=bio-content>
-      <h2 class="bio-content-h2">PROFESSIONAL HEADSHOT PHOTOGRAPHER</h2>
-
-      <p>I have built my career helping individuals, like yourself, make more money,
-        reduce expenses, and expand market share by capturing the best headshots around.</p>
-
-      <p>Your professional headshot needs to showcase you at your best. A modern headshot demonstrates that you have a contemporary mindset, and visionary perspective.</p>
-
-      <p>I am committed to providing you with an easy, first-class experience, while
-        creating high quality headshots that you are proud to use everywhere!</p>
-
-      <p>I love what I do, and I have a blast doing it! Come and see what all the fuss
-        is about!</p>
-    </div>
-  </div>
-</div>
-
 
 
 </div>
 
 <!-- Mobile/Tablet Bio Layout (displays below 1440px) -->
 <div class="bio-mobile">
-  <div class="bio-mobile-image">
+      <div class="bio-mobile-image">
+          <Image src={RWHeadshot} alt="Richard Waine - Lancaster Headshot Photographer" loading="lazy" />
+      </div>
 
-<Image src={RWHeadshot} alt="Richard Waine - Lancaster Headshot Photographer" loading="lazy" />
 
+      <div class="bio-mobile-content">
+        {bioSections.map((section) => (
+          <div class="bio-mobile-section">
+            <h2 class="bio-content-h2">{section.clipHeading}</h2>
+            {section.clipParagraphs.map((para) => (
+              <p>{para}</p>
+            ))}
+          </div>
+        ))}
+      </div>
 
-  </div>
-
-  <div class="bio-mobile-content">
-    <div class="bio-mobile-section">
-      <h2 class="bio-content-h2">LANCASTER HEADSHOT PHOTOGRAPHY</h2>
-      <p>By now you probably realize that professional headshot photography is about more than just nice pictures, and I am much more than a portrait photographer.</p>
-      <p>I am the best headshot photographer in Lancaster PA, Central Pennsylvania, and surrounding areas such as Philadelphia, Delaware, Harrisburg, Baltimore, Hershey, and Reading.</p>
-    </div>
-
-    <div class="bio-mobile-section">
-      <h2 class="bio-content-h2">PROFESSIONAL HEADSHOTS NEAR LANCASTER</h2>
-      <p>As your professional headshot photographer and trusted advisor, I provide a premium experience, while removing any anxiety or feelings of discomfort over having your photo taken.</p>
-      <p>Having your headshot taken should be an enjoyable, and dynamic experience.</p>
-    </div>
-
-    <div class="bio-mobile-section">
-      <h2 class="bio-content-h2">PROFESSIONAL HEADSHOT PHOTOGRAPHER</h2>
-      <p>I have built my career helping individuals, like yourself, make more money, reduce expenses, and expand market share by capturing the best headshots around.</p>
-      <p>Your professional headshot needs to showcase you at your best. A modern headshot demonstrates that you have a contemporary mindset, and visionary perspective.</p>
-      <p>I am committed to providing you with an easy, first-class experience, while creating high quality headshots that you are proud to use everywhere!</p>
-      <p>I love what I do, and I have a blast doing it! Come and see what all the fuss is about!</p>
-    </div>
-  </div>
-</div>
-
+      
 </div>
 
 <style>
@@ -133,11 +106,13 @@ h2{
   width: var(--_wrapper-width);
   max-width: 100%;
   height: var(--_wrapper-height);
+ 
 
 
 
 
 }
+
 .bio-container .clip {
   position: absolute;
   top: 0;
@@ -146,13 +121,17 @@ h2{
   height: 100%;
   transition: 0.5s;
 
+
 }
+
+
 .bio-container .clip.clip1,
 .bio-container:hover {
   background: url('src/assets/images/blog/RW1 - (16 x 9).jpg');
   background-size: cover;
   background-position: 0 -50px;
   background-repeat: no-repeat;
+  
 }
 .clip.clip1 {
   background: url('src/assets/images/blog/RW1 - (16 x 9).jpg');
@@ -171,11 +150,13 @@ h2{
 .clip.clip3 {
   background: url('src/assets/images/blog/RichardWaine - (16 x 9).jpg');
   background-repeat: no-repeat;
-  background-size: 70% ;
-  background-size:contain;
-  background-position: 510px 0;
-  clip-path: polygon(75% 0, 100% 0, 102% 100%, 60% 102%);
+  background-size: 60% ;
 
+  /* background-size:101%; */
+
+  /* background-size:contain; */
+  background-position: 510px -1px;
+  clip-path: polygon(75% 0, 100% 0, 102% 100%, 60% 102%);
  
 }
 .bio-container:hover .clip {
@@ -184,9 +165,9 @@ h2{
  
 }
 .bio-container .clip:hover {
-  clip-path: polygon(0 0, 100% 0, 100% 102%, 0 102%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 102%, 0 102%); */
 
- 
+ clip-path: polygon(-2% -2%, 102% -2%, 102% 102%, -2% 102%);
 
 }
 
@@ -241,6 +222,7 @@ h2{
   background: var(--ltclr);
   opacity: 0;
   transition: 0.5s;
+ 
 
   
 }

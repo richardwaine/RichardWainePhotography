@@ -134,14 +134,60 @@ aliqua. incididunt incididunt sit aliqua. . ipsum amet ut Lorem sed magna amet .
 	</section>
 
 	<section id="brief-bio">
-		<BriefBio />
+		<BriefBio 
+  bioSectionHeading="Lancaster Headshot Photographer"
+  bioSections={[
+    {
+      clipHeading: "LANCASTER HEADSHOT PHOTOGRAPHY",
+      clipParagraphs: [
+        "By now you probably realize that professional headshot photography is about more than just nice pictures, and I am much more than a portrait photographer.",
+        "I am the best headshot photographer in Lancaster PA, Central Pennsylvania, and surrounding areas such as Philadelphia, Delaware, Harrisburg, Baltimore, Hershey, and Reading."
+      ]
+    },
+    {
+      clipHeading: "PROFESSIONAL HEADSHOTS NEAR LANCASTER",
+      clipParagraphs: [
+        "As your professional headshot photographer and trusted advisor, I provide a premium experience, while removing any anxiety or feelings of discomfort over having your photo taken.",
+        "Having your headshot taken should be an enjoyable, and dynamic experience."
+      ]
+    },
+    {
+      clipHeading: "PROFESSIONAL HEADSHOT PHOTOGRAPHER",
+      clipParagraphs: [
+        "I have built my career helping individuals, like yourself, make more money, reduce expenses, and expand market share by capturing the best headshots around.",
+        "Your professional headshot needs to showcase you at your best. A modern headshot demonstrates that you have a contemporary mindset, and visionary perspective.",
+        "I am committed to providing you with an easy, first-class experience, while creating high quality headshots that you are proud to use everywhere!",
+        "I love what I do, and I have a blast doing it! Come and see what all the fuss is about!"
+      ]
+    }
+  ]}
+/>
 		<FloatingStats />
 	</section>
 
 	<section id="hs-near">
-		<HeadshotsNear />
-
-	</section>
+    <HeadshotsNear 
+      mainHeading="Headshots Near Lancaster"
+      paragraphs={[
+         "<p>Richard Waine Photography is conveniently located in the heart of the downtown investment district in Lancaster, Pennsylvania.</p>",
+    "<p>The studio sits next to Lancaster Central Market, directly across from Fulton Bank and the Lancaster County Convention Center. It is a stone's throw from the major highways as well as the Lancaster Train Station.</p>",
+    "<p>Whether you are in Harrisburg, Hershey, York, Reading, Philadelphia, or Baltimore, Lancaster is a hop, skip and a jump away.</p>",
+    `<p style="display:inline">When you think about "<h2
+  class="hs-near-inline-h2">headshots near me</h2>", or "<h2
+  class="hs-near-inline-h2">professional headshots near me</h2>" think Richard
+  Waine Photography, Lancaster's headshot photographer.</p>`,
+    `<p style="display:inline">For large groups,<h2 class="hs-near-inline-h2">
+  commercial headshots</h2>,<h2 class="hs-near-inline-h2"> company headshots</h2>,
+  and<h2 class="hs-near-inline-h2"> on location headshots</h2>, I offer my services
+   in the comfort of your office, or at your event.</p>`
+  ]}
+      locationColumns={[
+        ["Philadelphia Headshots", "Delaware Headshots", "Harrisburg Headshots"],
+        ["Baltimore Headshots", "Hershey Headshots", "Reading Headshots"],
+        ["Lancaster Headshots", "York Headshots", "Allentown Headshots"]
+      ]}
+    />
+  </section>
 
 	<section id="professions">
 		<Professions />
@@ -186,7 +232,7 @@ place-items:center;
 }
 
 .video-wrapper {
-    width: min(1000px, 100%);
+    width: min(850px, 100%);
     position: relative;
 	padding-inline: var(--size-3);
 	margin-inline: auto; /* Centers the video in the section */

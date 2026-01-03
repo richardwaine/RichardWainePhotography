@@ -1,61 +1,108 @@
 ---
 
+ interface Props {
+    mainHeading: string;
+    paragraphs: string[];
+    locationColumns: string[][];  // Array of 3 column arrays
+  }
+
+
+const { mainHeading, paragraphs, locationColumns } = Astro.props;
+
+
+
 ---
 
 
+<div class="wrapper">
+      <div class="hs-near">
+          <h2 class="section-title hs-near-h2 center">{mainHeading}</h2>
+          <div class="hs-near-paragraph paragraph">
+          {paragraphs.map((para) => (
+          <Fragment set:html={para} />
+          ))}
+          </div>
+
+      </div>
+
+      <div class="location-columns center">
+    {locationColumns.map((column) => (
+      <div class="">
+        {column.map((location) => (
+          <h2 class="hs-near-locations">{location}</h2>
+        ))}
+      </div>
+    ))}
+      </div>
+
+</div>
+
+
+ 
+
+
+
+
+  <!--
 
 <div class="wrapper">
     <div class="hs-near">
         <h2 class="section-title hs-near-h2 center">Headshots Near Lancaster</h2>
-    <div class="hs-near-paragraph paragraph">
-    <p>Richard Waine Photography is conveniently located 
-    in the heart of the downtown investment district in Lancaster, Pennsylvania.</p>
+        <div class="hs-near-paragraph paragraph">
+            <p>Richard Waine Photography is conveniently located 
+            in the heart of the downtown investment district in Lancaster, Pennsylvania.</p>
+
+            <p>The studio sits next to Lancaster Central Market, directly across from 
+            Fulton Bank and the Lancaster County Convention Center. 
+            It is a stone's throw from the major highways as well as the 
+            Lancaster Train Station.</p>
   
-  <p>The studio sits next to Lancaster Central Market, directly across from 
-    Fulton Bank and the Lancaster County Convention Center. 
-    It is a stone's throw from the major highways as well as the 
-    Lancaster Train Station.</p>
+            <p>Whether you are in Harrisburg, Hershey, York, Reading, Philadelphia, 
+            or Baltimore, Lancaster is a hop, skip and a jump away.</p>
+            <p style=display:inline>When you think about "<h2 class="hs-near-inline-h2">headshots 
+            near me</h2>", or "<h2 class="hs-near-inline-h2">professional headshots 
+            near me</h2>" think Richard Waine Photography, Lancaster's headshot photographer.</p>
   
-  <p>Whether you are in Harrisburg, Hershey, York, Reading, Philadelphia, 
-    or Baltimore, Lancaster is a hop, skip and a jump away.</p>
-  <p style=display:inline>When you think about "<h2 class="hs-near-inline-h2">headshots 
-    near me</h2>", or "<h2 class="hs-near-inline-h2">professional headshots 
-      near me</h2>" think Richard Waine Photography, Lancaster's headshot photographer.</p>
-  
-  <p style=display:inline>For large groups,<h2 class="hs-near-inline-h2"> commercial 
-    headshots</h2>,<h2 class="hs-near-inline-h2"> company headshots</h2>, and
-    <h2 class="hs-near-inline-h2"> on location headshots</h2>, I offer 
-    my services in the comfort of your office, or at your event.</p>
-</div>
+            <p style=display:inline>For large groups,<h2 class="hs-near-inline-h2"> commercial 
+            headshots</h2>,<h2 class="hs-near-inline-h2"> company headshots</h2>, and
+            <h2 class="hs-near-inline-h2"> on location headshots</h2>, I offer 
+            my services in the comfort of your office, or at your event.</p>
+        </div>
+
+
 
  <div class="location-columns center">
-<div class="">
-    <h2 class="hs-near-locations"> Philadelphia Headshots</h2>
-    <h2 class="hs-near-locations">Delaware Headshots</h2>
-    <h2 class="hs-near-locations"> Harrisburg Headshots</h2>
-  </div>
+      <div class="">
+          <h2 class="hs-near-locations"> Philadelphia Headshots</h2>
+          <h2 class="hs-near-locations">Delaware Headshots</h2>
+          <h2 class="hs-near-locations"> Harrisburg Headshots</h2>
+      </div>
 
-  <div class="">
-  <h2 class="hs-near-locations">Baltimore Headshots</h2>
-  <h2 class="hs-near-locations">Hershey Headshots</h2>
-   <h2 class="hs-near-locations">Reading Headshots</h2>
-  </div>
+      <div class="">
+        <h2 class="hs-near-locations">Baltimore Headshots</h2>
+        <h2 class="hs-near-locations">Hershey Headshots</h2>
+        <h2 class="hs-near-locations">Reading Headshots</h2>
+      </div>
 
- <div class="">
-  <h2 class="hs-near-locations">Lancaster Headshots</h2>
-  <h2 class="hs-near-locations">York Headshots</h2>
-  <h2 class="hs-near-locations">Allentown Headshots</h2>
-  </div>
+      <div class="">
+        <h2 class="hs-near-locations">Lancaster Headshots</h2>
+        <h2 class="hs-near-locations">York Headshots</h2>
+        <h2 class="hs-near-locations">Allentown Headshots</h2>
+      </div>
 
 </div> 
-</div>
+
+
+-->
+
+
   
 
 <style>
 
 /*headshots near styles*/
 
-h2, .hs-near-inline-h2{
+h2, :global(.hs-near-inline-h2){
   font-weight:var(--fw-normal);
 }
 
@@ -68,7 +115,7 @@ h2, .hs-near-inline-h2{
     padding-block: 0 var(--size-3);
 }
 
-.hs-near-inline-h2{
+:global(.hs-near-inline-h2){
     text-transform:lowercase;
     display:inline;
     font-size:var(--fs-450);
