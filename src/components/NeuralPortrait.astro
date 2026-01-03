@@ -134,100 +134,100 @@ const currentData = portfolioData[currentImageIndex];
 <script id="portfolio-data" type="application/json" set:html={JSON.stringify(portfolioData)} />
 
 <section class="neural-section">
-  <div class="neural-content">
-    <div class="text-section">
-      <div class="neural-title">
-        <div class="title-line" data-delay="0">
-          <span class="neural-title-word word">NEURAL</span>
-        </div>
-        <div class="title-line" data-delay="100">
-          <span class="neural-title-word word">PORTRAIT</span>
-        </div>
-        <div class="title-line" data-delay="200">
-          <span class="neural-title-word word">ANALYSIS</span>
-        </div>
-      </div>
-      
-      <div class="data-streams">
-        <div class="data-stream">
-          <span class="stream-label">CONFIDENCE LEVEL:</span>
-          <span class="stream-value" id="confidence-level">{currentData.dataStreams.confidenceLevel}</span>
-        </div>
-        <div class="data-stream">
-          <span class="stream-label">AUTHENTICITY INDEX:</span>
-          <span class="stream-value" id="authenticity-index">{currentData.dataStreams.authenticityIndex}</span>
-        </div>
-        <div class="data-stream">
-          <span class="stream-label">IMPACT PROJECTION:</span>
-          <span class="stream-value" id="impact-projection">{currentData.dataStreams.impactProjection}</span>
-        </div>
-      </div>
-
-      <div class="cta-matrix">
-        <SecondaryButton text="INITIATE SESSION" url="/schedule" />
-      </div>
-    </div>
-
-    <div class="holographic-section">
-      <div class="holographic-frame">
-      <Image 
-    src={macbookFrame} 
-    alt="Apple Macbook laptop computer" 
-    class="macbook-frame-image"
-    loading="eager"
-    width={1600}
-    height={919}
-  />
-  <div class="holo-border"></div>
-  <div class="image-container">
-          <Image
-            src={currentData.image}
-            alt="Neural Portrait Analysis"
-            class="portrait-scan"
-            id="main-portrait"
-            loading="eager"
-            width={800}
-            height={800}
-          />
-          <div class="analysis-overlay">
-            <div class="data-points" id="data-points">
-              {/* Labels positioned via JS to support responsive labelPositionMobile */}
-              {currentData.characteristics.filter(characteristic =>
-                characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
-              ).map((characteristic) => (
-                <div>
-                  <div
-                    class="face-point"
-                    style={`position: absolute; top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left}`}
-                  >
-                    <div class="point-marker"></div>
-                  </div>
-                  <div
-                    class="characteristic-label"
-                    data-desktop-top={characteristic.labelPosition.top}
-                    data-desktop-left={characteristic.labelPosition.left}
-                    data-mobile-top={characteristic.labelPositionMobile?.top || characteristic.labelPosition.top}
-                    data-mobile-left={characteristic.labelPositionMobile?.left || characteristic.labelPosition.left}
-                    style={`position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}`}
-                  >
-                    <span class="point-label">{characteristic.label}</span>
-                  </div>
-                </div>
-              ))}
+    <div class="neural-content">
+        <div class="text-section">
+          <div class="neural-title">
+            <div class="title-line" data-delay="0">
+              <span class="neural-title-word word">NEURAL</span>
+            </div>
+            <div class="title-line" data-delay="100">
+              <span class="neural-title-word word">PORTRAIT</span>
+            </div>
+            <div class="title-line" data-delay="200">
+              <span class="neural-title-word word">ANALYSIS</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="portfolio-matrix">
-        {portfolioData.map((data, index) => (
-          <div class="matrix-cell" data-index={index.toString()}>
-            <Image src={data.thumbnail} alt={`Neural scan ${index + 1}`} loading="lazy" width={500} height={500} />
+          
+          <div class="data-streams">
+            <div class="data-stream">
+              <span class="stream-label">CONFIDENCE LEVEL:</span>
+              <span class="stream-value" id="confidence-level">{currentData.dataStreams.confidenceLevel}</span>
+            </div>
+            <div class="data-stream">
+              <span class="stream-label">AUTHENTICITY INDEX:</span>
+              <span class="stream-value" id="authenticity-index">{currentData.dataStreams.authenticityIndex}</span>
+            </div>
+            <div class="data-stream">
+              <span class="stream-label">IMPACT PROJECTION:</span>
+              <span class="stream-value" id="impact-projection">{currentData.dataStreams.impactProjection}</span>
+            </div>
           </div>
-        ))}
-      </div>
+
+          <div class="cta-matrix">
+            <SecondaryButton text="INITIATE SESSION" url="/schedule" />
+          </div>
+        </div>
+
+        <div class="holographic-section">
+          <div class="holographic-frame">
+          <Image 
+        src={macbookFrame} 
+        alt="Apple Macbook laptop computer" 
+        class="macbook-frame-image"
+        loading="eager"
+        width={1600}
+        height={919}
+      />
+      <div class="holo-border"></div>
+      <div class="image-container">
+              <Image
+                src={currentData.image}
+                alt="Neural Portrait Analysis"
+                class="portrait-scan"
+                id="main-portrait"
+                loading="eager"
+                width={800}
+                height={800}
+              />
+              <div class="analysis-overlay">
+                <div class="data-points" id="data-points">
+                  {/* Labels positioned via JS to support responsive labelPositionMobile */}
+                  {currentData.characteristics.filter(characteristic =>
+                    characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
+                  ).map((characteristic) => (
+                    <div>
+                      <div
+                        class="face-point"
+                        style={`position: absolute; top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left}`}
+                      >
+                        <div class="point-marker"></div>
+                      </div>
+                      <div
+                        class="characteristic-label"
+                        data-desktop-top={characteristic.labelPosition.top}
+                        data-desktop-left={characteristic.labelPosition.left}
+                        data-mobile-top={characteristic.labelPositionMobile?.top || characteristic.labelPosition.top}
+                        data-mobile-left={characteristic.labelPositionMobile?.left || characteristic.labelPosition.left}
+                        style={`position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}`}
+                      >
+                        <span class="point-label">{characteristic.label}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-matrix">
+            {portfolioData.map((data, index) => (
+              <div class="matrix-cell" data-index={index.toString()}>
+                <Image src={data.thumbnail} alt={`Neural scan ${index + 1}`} loading="lazy" width={500} height={500} />
+              </div>
+            ))}
+          </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <script>
@@ -598,7 +598,6 @@ const currentData = portfolioData[currentImageIndex];
 
 <style>
 .neural-section {
-  /* display: flex; */
 
   display:grid;
 
@@ -638,6 +637,7 @@ const currentData = portfolioData[currentImageIndex];
 .text-section {
   z-index: 3;
   position: relative;
+  order:2;
 }
 
 .neural-title {
@@ -915,109 +915,7 @@ const currentData = portfolioData[currentImageIndex];
   filter: grayscale(0) contrast(1.0);
 }
 
-/* ===========================================
-   DEPRECATED: Desktop-first code
-   Replaced with mobile-first approach
-   Date: December 2025
-   =========================================== */
-/*
-/* Responsive Design *\/
-@media (max-width: 1024px) {
-  .neural-content {
-    grid-template-columns: 1fr;
-    gap: var(--size-9);
-    text-align: center;
-    padding: 0 var(--size-3);
-  }
 
-  .holographic-frame {
-    width: min(400px, 90vw);
-    height: min(320px, 72vw);
-  }
-
-  .data-streams {
-    align-items: center;
-  }
-
-  .data-stream {
-    max-width: min(400px, 90vw);
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .neural-section {
-    padding:6rem var(--size-3) var(--size-7);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  .neural-content {
-    gap: var(--size-8);
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .neural-title {
-    text-align: center;
-    margin-bottom: var(--size-5);
-  }
-
-  .holographic-frame {
-    width: min(350px, 85vw);
-    height: min(280px, 68vw);
-  }
-
-  .matrix-cell {
-    width: 60px;
-    height: 60px;
-  }
-
-  .data-stream {
-    padding: var(--size-2) var(--size-3);
-    flex-direction: column;
-    gap: var(--size-1);
-    text-align: center;
-  }
-
-  .stream-label {
-    font-size: var(--fs-325);
-  }
-
-  .stream-value {
-    font-size: var(--fs-350);
-  }
-
-  .point-label {
-    font-size: var(--fs-275);
-    padding: 0.3rem 0.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .neural-section {
-    padding:var(--size-10) var(--size-2) var(--size-7);
-
-  }
-
-  .neural-title {
-  }
-
-  .holographic-frame {
-    width: min(300px, 90vw);
-    height: min(240px, 72vw);
-  }
-
-  .matrix-cell {
-    width: 50px;
-    height: 50px;
-  }
-
-  .data-stream {
-    padding: var(--size-2) var(--size-250);
-  }
-}
-*/
 
 /* Mobile-First Responsive Design */
 

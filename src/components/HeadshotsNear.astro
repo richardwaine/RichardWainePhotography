@@ -55,6 +55,10 @@
 
 /*headshots near styles*/
 
+h2, .hs-near-inline-h2{
+  font-weight:var(--fw-normal);
+}
+
 .hs-near{
     padding-bottom:var(--size-3);
     line-height: var(--line-height-relaxed);
@@ -68,7 +72,7 @@
     text-transform:lowercase;
     display:inline;
     font-size:var(--fs-450);
-    font-weight:var(--fw-normal);
+    
 }
 
 .hs-near-paragraph{
@@ -82,18 +86,18 @@
   grid-template-columns:1fr;
   margin-top:var(--size-10);
   gap:var(--size-7);
+  
 
 }
 
 @media screen and (min-width: 48em) {
   .location-columns {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .hs-near-locations{
     line-height:2.25;
-    
     font-size:var(--fs-400)
 }
 
