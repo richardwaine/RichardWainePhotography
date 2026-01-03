@@ -40,10 +40,14 @@ const {
     
     <div class="actions">
 
-      <PrimaryButton text={primaryButtonText} url={primaryButtonUrl} />
-      <SecondaryButton text={secondaryButtonText} url={secondaryButtonUrl} />
+      <div class="button-wrapper">
+        <PrimaryButton text={primaryButtonText} url={primaryButtonUrl} />
+      </div>
+      <div class="button-wrapper">
+        <SecondaryButton text={secondaryButtonText} url={secondaryButtonUrl} />
+      </div>
 
-      
+
     </div>
   </div>
 </div>
@@ -103,5 +107,4 @@ const {
 }
 
 
-  
 </style>

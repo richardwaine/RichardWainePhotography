@@ -353,26 +353,15 @@ h2{
 
 
 
-/* .btn:focus::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 2px solid transparent;
-  clip-path: inherit;
-  pointer-events: none;
+
+.button-wrapper:has(.btn:focus-visible) {
+  outline: 2px solid orange;
+  outline-offset: 2px;
 }
 
-.btn:focus-visible::after {
-  border-color: orange;
-  outline:2px solid;
-} */
-
-
-.btn:focus, .btn:focus-visible {
-outline:2px solid orange;
-animation:none;
-box-shadow:none;
-clip-path:none;     
+.button-wrapper .btn:focus,
+.button-wrapper .btn:focus-visible {
+  outline: none;
 }
 
 

@@ -117,8 +117,12 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
             <!-- Interactive Action Area -->
             <div class="action-area" data-delay="800">
                 <div class="action-buttons">
-                    <PrimaryButton text={primaryButtonText} url={primaryButtonUrl} />
-                    <SecondaryButton text={secondaryButtonText} url={secondaryButtonUrl} />
+                    <div class="button-wrapper">
+                        <PrimaryButton text={primaryButtonText} url={primaryButtonUrl} />
+                    </div>
+                    <div class="button-wrapper">
+                        <SecondaryButton text={secondaryButtonText} url={secondaryButtonUrl} />
+                    </div>
                 </div>
             </div>
         </div>
