@@ -42,7 +42,15 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 		<link rel="apple-touch-icon" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="canonical" href={Astro.url.href} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="https://www.richardwainephotography.com/Logo-RichardWainePhotography-black.png" />
 		<ClientRouter />
+
+
 
 		<!-- Schema.org Structured Data -->
 		<script type="application/ld+json">
@@ -51,7 +59,7 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 			"@type": "ProfessionalService",
 			"name": "Richard Waine Photography",
 			"description": "Professional Headshot Photographer based in Lancaster, Pennsylvania, offering corporate headshots, acting headshots, conference headshots, and commercial photography",
-			"image": "/src/assets/Logo - Richard Waine Photography (transparent) white.png",
+			"image": "https://www.richardwainephotography.com/Logo-RichardWainePhotography-black.png",
 			"@id": "https://www.richardwainephotography.com",
 			"url": "https://www.richardwainephotography.com",
 			"sameAs": [

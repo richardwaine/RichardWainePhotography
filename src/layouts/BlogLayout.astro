@@ -48,7 +48,10 @@ const isInterview = post.data.type === 'interview';
 				"name": "Richard Waine Photography",
 				"url": "https://www.richardwainephotography.com"
 			},
-			"image": post.data.headerImage?.src
+			...(post.data.interviewee && {
+				"interviewee": post.data.interviewee
+			}),
+			"image": post.data.headerImage?.src ? `https://www.richardwainephotography.com${post.data.headerImage.src}` : undefined
 		})} />
 	) : (
 		<script type="application/ld+json" set:html={JSON.stringify({
@@ -72,7 +75,7 @@ const isInterview = post.data.type === 'interview';
 				"url": "https://www.richardwainephotography.com",
 				"logo": {
 					"@type": "ImageObject",
-					"url": "https://www.richardwainephotography.com/src/assets/Logo - Richard Waine Photography (transparent) white.png"
+					"url": "https://www.richardwainephotography.com/Logo-RichardWainePhotography-black.png"
 				},
 				"address": {
 					"@type": "PostalAddress",
@@ -87,7 +90,10 @@ const isInterview = post.data.type === 'interview';
 			"description": post.data.blogExcerpt,
 			"articleSection": post.data.articleSection,
 			"keywords": post.data.keywords,
-			"image": post.data.headerImage?.src
+			...(post.data.about && {
+				"about": post.data.about
+			}),
+			"image": post.data.headerImage?.src ? `https://www.richardwainephotography.com${post.data.headerImage.src}` : undefined
 		})} />
 	)}
 

@@ -1176,22 +1176,22 @@ This master plan is accompanied by individual execution files for Claude Code:
 ```
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Create `/public/_redirects` file
-- [ ] Add blog redirect rules
-- [ ] Add special page redirects
-- [ ] Carry over existing Squarespace redirects
+- [x] Create `/public/_redirects` file
+- [x] Add blog redirect rules
+- [x] Add special page redirects
+- [x] Carry over existing Squarespace redirects
 - [ ] Test redirects on staging domain
 - [ ] Verify 301 status (not 302)
 - [ ] Check for redirect chains (should be direct A→B)
 
 **Success Criteria:** All redirects return 301, no chains
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [x] IN PROGRESS  [ ] COMPLETE
 
 ---
 
@@ -1234,12 +1234,12 @@ This master plan is accompanied by individual execution files for Claude Code:
 - [ ] Extract current metadata from all Squarespace pages
 - [ ] Document in spreadsheet
 - [ ] Audit for optimization opportunities
-- [ ] Implement metadata in Astro (via frontmatter or Layout)
-- [ ] Verify Open Graph tags working (test with social sharing debuggers)
+- [x] Implement metadata in Astro (via frontmatter or Layout)
+- [x] Verify Open Graph tags working (test with social sharing debuggers)
 
 **Success Criteria:** All metadata preserved or improved
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [x] IN PROGRESS  [ ] COMPLETE
 
 ---
 
@@ -1247,20 +1247,20 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Purpose:** Generate valid sitemap for search engines
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Configure Astro sitemap integration
-- [ ] Verify all pages included
-- [ ] Verify blog posts included
-- [ ] Verify sitemap.xml accessible at /sitemap.xml
-- [ ] Validate sitemap format
+- [x] Configure Astro sitemap integration
+- [x] Verify all pages included
+- [x] Verify blog posts included
+- [x] Verify sitemap.xml accessible at /sitemap.xml
+- [x] Validate sitemap format
 
 **Success Criteria:** Valid sitemap generated
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1302,13 +1302,13 @@ Sitemap: https://richardwainephotography.com/sitemap.xml
 - FAQPage (for FAQ page)
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Implement LocalBusiness schema
-- [ ] Implement Organization schema
+- [x] Implement LocalBusiness schema
+- [x] Implement Organization schema
 - [ ] Add breadcrumb schema
 - [ ] Add FAQ schema to FAQ page
 - [ ] Test with Google Rich Results Test
@@ -1316,7 +1316,7 @@ Sitemap: https://richardwainephotography.com/sitemap.xml
 
 **Success Criteria:** Schema valid, no errors in testing tool
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [x] IN PROGRESS  [ ] COMPLETE
 
 ---
 
@@ -1324,19 +1324,19 @@ Sitemap: https://richardwainephotography.com/sitemap.xml
 **Purpose:** Prevent duplicate content issues
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Add canonical tags to all pages
-- [ ] Verify canonical points to correct URL
-- [ ] Ensure www vs non-www consistency
-- [ ] Ensure https consistency
+- [x] Add canonical tags to all pages
+- [x] Verify canonical points to correct URL
+- [x] Ensure www vs non-www consistency
+- [x] Ensure https consistency
 
 **Success Criteria:** All pages have correct canonical tags
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
