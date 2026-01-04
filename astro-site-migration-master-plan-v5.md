@@ -1235,7 +1235,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 - [ ] Document in spreadsheet
 - [ ] Audit for optimization opportunities
 - [x] Implement metadata in Astro (via frontmatter or Layout)
-- [x] Verify Open Graph tags working (test with social sharing debuggers)
+- [ ] Verify Open Graph tags working (test with social sharing debuggers - POST-LAUNCH)
 
 **Success Criteria:** All metadata preserved or improved
 
