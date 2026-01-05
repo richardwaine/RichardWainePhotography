@@ -377,9 +377,17 @@ top:auto;
 
 
 
-/* Desktop styles - hide toggle and ensure content is visible */
+.blog-posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-5);
+}
+
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
 @media (min-width: 48em) {
-.filter-section {
+  .filter-section {
     position: sticky;
     top: 200px;
     padding: var(--size-7);
@@ -387,61 +395,51 @@ top:auto;
     box-shadow: var(--shadow);
     border-radius: 0;
     margin-bottom: 0;
+  }
+
+  .filter-toggle-btn {
+    display: none;
+  }
+
+  .filter-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: var(--size-3);
+  }
+
+  .filter-content {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .filter-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin:var(--size-5) 0;
+  }
+
+  .blog-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  .main-content {
+    grid-template-columns: 280px 1fr;
+  }
 }
 
-    .filter-toggle-btn {
-        display: none;
-    }
-    
-    .filter-header {
-        border-bottom: none;
-        padding-bottom: 0;
-        margin-bottom: var(--size-3);
-
-        
-    }
-    
-    .filter-content {
-        max-height: none;
-        overflow: visible;
-    }
-    
-    .filter-tabs {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-       margin:var(--size-5) 0;
-
-      
-    }
-
-    .blog-container {
-        width: 80%;
-        margin: auto;
-    }
-
-    .main-content {
-    grid-template-columns: 280px 1fr;
-    }
-  }
-
-.blog-posts {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--size-5);
-  }
-
-
-
+/* ==========================================
+   DESKTOP - min-width: 64em (1024px)
+   ========================================== */
 @media (min-width: 64em) {
   .blog-container {
-    margin-bottom: var(--size-8); 
+    margin-bottom: var(--size-8);
     padding-bottom:var(--size-7);
   }
 
   .blog-posts {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    
   }
 }
 

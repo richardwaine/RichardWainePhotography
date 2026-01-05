@@ -152,7 +152,6 @@ import JillLazar from '../assets/images/professions/JillLazar - 0018 (horizontal
 }
 
 .tabs label, .professions-tabs label {
-  order: 1;
   padding: var(--size-3) var(--size-8);
   cursor: pointer;
   background: var(--drkbg);
@@ -160,7 +159,6 @@ import JillLazar from '../assets/images/professions/JillLazar - 0018 (horizontal
   font-weight: var(--fw-bold);
   transition: background ease .2s;
   text-align: center;
-  cursor: pointer;
   position: relative;
 }
 
@@ -174,7 +172,6 @@ import JillLazar from '../assets/images/professions/JillLazar - 0018 (horizontal
 }
 
 .tabs .tab, .professions-tabs .professions-tab {
-  order: 99;
   width: 100%;
   padding: var(--size-8) var(--size-3) var(--size-3);
 }
@@ -231,37 +228,18 @@ import JillLazar from '../assets/images/professions/JillLazar - 0018 (horizontal
 }
 
 
-/* --- MOBILE STACKING (MAX-WIDTH OVERRIDES - REQUIRED FOR MOBILE VIEW) --- */
-/* These original queries must be preserved to force stacking on small screens using only the existing properties. */
-
-@media (max-width: 48em) {
-  .tabs .tab, .tabs label {
-    order: initial;
-  }
-
-  .tabs label {
-    width: 100%;
-    margin-right: 0;
-    margin-top: .2rem
-  }
-}
-
-@media (max-width: 45em) {
-  .professions-tabs .professions-tab,
-  .professions-tabs label {
-    order: initial;
-  }
-  .professions-tabs label {
-    width: 100%;
-    margin-right: 0;
-    margin-top: 0.2rem;
-  }
-}
-
-
 /* --- DESKTOP ENHANCEMENTS (MIN-WIDTH QUERIES) --- */
 
 @media screen and (min-width: 48em) {
+  /* Desktop Multi-Column Layout */
+  .tabs label, .professions-tabs label {
+    order: 1;
+  }
+
+  .tabs .tab, .professions-tabs .professions-tab {
+    order: 99;
+  }
+
   /* Desktop Grid Layout */
   .tab-content {
     grid-template-columns: 1fr 2fr;

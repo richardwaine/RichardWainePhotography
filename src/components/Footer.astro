@@ -211,10 +211,11 @@ const {
     .footer-logo-section {
         display: flex;
         justify-content: center;
+        align-self:center;
     }
 
     .footer-logo {
-        width: 120px;
+        width: 150px;
         height: auto;
     }
 
@@ -321,13 +322,17 @@ const {
 
     @media (min-width: 48em) {
         .footer-content {
-            padding: var(--size-775) var(--size-875);
+            padding: var(--size-7) var(--size-875);
+            
         }
 
         .footer-main-row {
             grid-template-columns: 1fr 1fr 1fr;
             gap: calc(var(--size-650) / 2);
             text-align: left;
+            align-items: start;
+      
+            
         }
 
         .footer-contact {

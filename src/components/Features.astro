@@ -162,7 +162,9 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("astro:page-load", () => {
 
     let mm = gsap.matchMedia();
-    const DESKTOP_BREAKPOINT = "(min-width: 768px)";
+    // const DESKTOP_BREAKPOINT = "(min-width: 768px)";
+    // const DESKTOP_BREAKPOINT = "(min-width: 48em)";
+    const DESKTOP_BREAKPOINT = "(min-width: 64em)";
     const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
     // DESKTOP LOGIC (Horizontal Scroll)
@@ -222,14 +224,19 @@ document.addEventListener("astro:page-load", () => {
 
 
 // Cleanup function: Kills ScrollTriggers when screen size shrinks below 768px
+        // return () => {
+        //     if (horizontalScroll && horizontalScroll.scrollTrigger) {
+        //         horizontalScroll.scrollTrigger.kill(true); // Kill main trigger
+        //     }
+        //     // Instead of killing ALL triggers, we clear props on the elements
+        //     // and trust the mobile logic below to handle the rest.
+        //     // We explicitly AVOID ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        //     gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
+        // };
+
         return () => {
-            if (horizontalScroll && horizontalScroll.scrollTrigger) {
-                horizontalScroll.scrollTrigger.kill(true); // Kill main trigger
-            }
-            // Instead of killing ALL triggers, we clear props on the elements
-            // and trust the mobile logic below to handle the rest.
-            // We explicitly AVOID ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-            gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            gsap.set('.features-section, .features-scroller, .feature-slide, .heading, .slide-text, .slide-image', { clearProps: 'all' });
         };
     });
 
@@ -245,7 +252,9 @@ document.addEventListener("astro:page-load", () => {
 
 
     // MOBILE FALLBACK LOGIC (Runs ONLY on screens smaller than 768px)
-    mm.add("(max-width: 767px)", () => {
+    // mm.add("(max-width: 767px)", () => {
+    // mm.add("(width < 48em)", () => {
+    mm.add("(width < 64em)", () => {
         // Clear any pinned/transformed styles left by ScrollTrigger
         gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
     });
@@ -256,22 +265,23 @@ document.addEventListener("astro:page-load", () => {
 
 
 <style>
+/* ==========================================
+   MOBILE BASE STYLES
+   ========================================== */
 .features-section {
   width: 100%;
   overflow: hidden;
-  
 }
 
 .features-container {
   position: relative;
   width: 100%;
-  
 }
 
 .features-scroller {
   display: flex;
   flex-wrap: wrap; /* MOBILE FIX: Allows slides to stack vertically */
-  width: 100%; 
+  width: 100%;
 }
 
 .feature-slide {
@@ -282,8 +292,6 @@ document.addEventListener("astro:page-load", () => {
   padding-block: 4rem; /* Add vertical padding for mobile stacking*/
   background: var(--drkbg);
   color: var(--ltclr);
-
-  
 }
 
 .feature-slide:first-child{
@@ -298,40 +306,14 @@ document.addEventListener("astro:page-load", () => {
   place-items: center;
   width: 100%;
   max-inline-size: 100%;
-  
 }
 
-.slide-image{
-padding-inline:var(--size-7);
-
+.slide-image, .slide-image > img{
+  padding-inline:var(--size-7);
 }
+
 .slide-content{
   margin-top:var(--size-7);
-}
-
-/* ==========================================
-   TABLET - min-width: 48em (768px)
-   ========================================== */
-@media (min-width: 48em) {
-.slide-image{
-padding:0; 
-
-}
-
-.slide-content{
-  margin-top:var(--size-3);
-}
-
-}
-
-
-/* ==========================================
-   TABLET - min-width: 67.5em (1080px)
-   ========================================== */
-@media (min-width: 67.5em) {
-  .slide-content-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 p {
@@ -360,34 +342,59 @@ p {
   text-align: center;
 }
 
-/* DESKTOP OVERRIDE: Restore Horizontal Scroll Behavior (768px+) */
-@media (min-width: 48em) {
-.slide-content-wrapper{
-  
-  /* margin-top:var(--header-height); */
-}
-
-    .slide-content h2 {
-        text-align: start;
-    }
-
-    .features-scroller {
-        flex-wrap: nowrap; /* Forces slides back into a horizontal row */
-        width: fit-content;
-    }
-
-    .feature-slide {
-        width: 100vw; /* Re-enables 100vw width for horizontal scroll calculation */
-        height: 100vh; /* Re-enables full viewport height for pinning */
-        display: flex; /* Restore centered content layout */
-        padding-block: 0;
-    }
-}
-
- .features-section :global(.primary-btn){
+.features-section :global(.primary-btn){
   margin-top:var(--size-5);
   padding: var(--size-3) var(--size-8);
   font-size: var(--fs-350);
+}
+
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+@media (min-width: 48em) {
+.slide-image, .slide-image > img{
+padding-inline:0;
+}
+}
+
+/* ==========================================
+   DESKTOP - min-width: 64em (1024px)
+   ========================================== */
+
+@media (min-width: 64em) {
+  
+  .slide-content{
+    margin-top:var(--size-3);
+  }
+
+  .slide-content-wrapper{
+    /* margin-top:var(--header-height); */
+  }
+
+  .slide-content h2 {
+    text-align: start;
+  }
+
+  .features-scroller {
+    flex-wrap: nowrap; /* Forces slides back into a horizontal row */
+    width: fit-content;
+  }
+
+  .feature-slide {
+    width: 100vw; /* Re-enables 100vw width for horizontal scroll calculation */
+    height: 100vh; /* Re-enables full viewport height for pinning */
+    display: flex; /* Restore centered content layout */
+    padding-block: 0;
+  }
+}
+
+/* ==========================================
+   LARGE DESKTOP - min-width: 67.5em (1080px)
+   ========================================== */
+@media (min-width: 67.5em) {
+  .slide-content-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>
 

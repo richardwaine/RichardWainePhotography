@@ -171,33 +171,28 @@ toggleBtns.forEach((btn) => {
 
 
 <style>
+/* ==========================================
+   MOBILE BASE STYLES
+   ========================================== */
 
 .wrapper{
-        /* padding-inline:var(--size-3); */
-    }
+  /* padding-inline:var(--size-3); */
+}
 
 .rates-container{
   display:grid;
   grid-template-columns: 1fr;
-
   box-shadow:0 5px 10px -5px #222;
   overflow:hidden;
   text-align:center;
   max-width:1200px;
   max-width:1500px;
   /* max-width: calc(850px * 2); */
-
-  
   margin:var(--size-7) auto;
-  
-  
- 
 }
 
 .fees,.included{
   margin-block:var(--size-3);
-  
- 
 }
 
 .included{
@@ -213,8 +208,6 @@ toggleBtns.forEach((btn) => {
   font-family:var(--ff-primary);
   position:relative;
   min-height:850px;
-
-   
 }
 
 .rates-card.left-card{
@@ -224,11 +217,9 @@ toggleBtns.forEach((btn) => {
   padding-top:var(--size-8);
 
   > div{
-       margin-block: auto;
+    margin-block: auto;
   }
 }
-
-
 
 .rates-card.right-card{
   background:var(--ltclr);
@@ -236,26 +227,21 @@ toggleBtns.forEach((btn) => {
 }
 
 .image-fee, .session-fee{
-    text-transform:uppercase;
-    margin-bottom: var(--size-3);
+  text-transform:uppercase;
+  margin-bottom: var(--size-3);
 }
 
 .image-fee{
   font-size:var(--fs-750);
   font-weight:var(--fw-bold);
- 
- 
 }
 
 .session-fee{
   font-size:var(--fs-600);
-  
 }
 
 .included{
   font-weight:var(--fw-semi-bold);
-
-  
 }
 
 .included p:not(:first-child){
@@ -283,8 +269,6 @@ toggleBtns.forEach((btn) => {
   background:var(--drkbg);
   border:var(--border) var(--accent);
   overflow:hidden;
-   
-
 }
 
 .testimonial-content img{
@@ -293,21 +277,11 @@ toggleBtns.forEach((btn) => {
   /* padding-inline:var(--size-8) */
 }
 
-@media screen and (min-width: 67.5em) {
-  .rates-container {
-     grid-template-columns: 1fr 1fr;
-  }
-}
-
-
-
 /*rates properties*/
 /*rates page*/
 .tabs-container{
   width: 100%;
   height:min-content;
-
-
   margin:0 auto;
   overflow: hidden;
   /* padding:var(--size-1) 0; */
@@ -316,9 +290,6 @@ toggleBtns.forEach((btn) => {
   flex-direction:column;
   justify-content: center;
   align-items: center;
-
-
-
 }
 
 .toggle-wrapper{
@@ -337,7 +308,6 @@ toggleBtns.forEach((btn) => {
   z-index: 2;
   padding: var(--size-3) var(--size-8);
   background: transparent;
-  
   border: none;
   font-family: var(--ff-primary);
   font-size: var(--fs-350);
@@ -414,8 +384,6 @@ toggleBtns.forEach((btn) => {
   /* padding: var(--size-7) 0; */
   background-color: var(--ltclr);
   margin-bottom:var(--size-7);
-
-  
 }
 
 .tabs-detail-container.active{
@@ -423,16 +391,14 @@ toggleBtns.forEach((btn) => {
 }
 
 .tabs-detail-container h2{
- font-size: var(--fs-550);
- line-height: 1;
- margin-top: 0;
- margin-bottom:0;
- /* margin-bottom: var(--size-3); */
- font-weight: medium;
- /* color: var(--primary-color); */
- color:var(--ltclr); 
-
- 
+  font-size: var(--fs-550);
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom:0;
+  /* margin-bottom: var(--size-3); */
+  font-weight: medium;
+  /* color: var(--primary-color); */
+  color:var(--ltclr);
 }
 
 .tabs-detail-container p{
@@ -440,28 +406,26 @@ toggleBtns.forEach((btn) => {
   line-height: var(--line-height-normal);
   font-weight:var(--fw-semi-bold);
 }
- 
-  .sm-image-grid{
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:1fr;
-    align-items:center;
-    margin: 0 auto;
-    gap:var(--size-3);
-    padding-inline:var(--size-8);
-    padding:var(--size-10);
-  }
 
-  .sm-image-grid img{
-    width:100%;
-    height:auto;
-    padding:0;
-    margin:0;
-    box-shadow:var(--shadow);
+.sm-image-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:1fr;
+  align-items:center;
+  margin: 0 auto;
+  gap:var(--size-3);
+  padding-inline:var(--size-8);
+  padding:var(--size-10);
+}
 
-  }
+.sm-image-grid img{
+  width:100%;
+  height:auto;
+  padding:0;
+  margin:0;
+  box-shadow:var(--shadow);
+}
 
-/* Mobile-first base styles */
 .rates-image2, .rates-image3, .rates-image4 {
   display: none;
 }
@@ -473,9 +437,11 @@ toggleBtns.forEach((btn) => {
 .testimonial-content img {
   box-shadow: var(--shadow);
   padding:var(--size-7);
-  
 }
 
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
 @media screen and (min-width: 48em) {
   .rates-image2, .rates-image3, .rates-image4 {
     display: block;
@@ -494,5 +460,12 @@ toggleBtns.forEach((btn) => {
   }
 }
 
-
+/* ==========================================
+   LARGE DESKTOP - min-width: 67.5em (1080px)
+   ========================================== */
+@media screen and (min-width: 67.5em) {
+  .rates-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 </style>
