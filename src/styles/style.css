@@ -224,7 +224,7 @@ img,picture,svg,video {
   color:var(--ltclr)
 }
 
-section{
+section:not(#features){
   padding-block:var(--size-8);
   
 }
@@ -271,7 +271,7 @@ h2{
   display: inline-block;
   text-decoration: none;
   position: relative;
-  border: none;
+  border: 2px solid transparent;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: var(--fw-bold); 
@@ -296,7 +296,8 @@ h2{
 
 
 @media (min-width: 48em) {
-    padding: var(--size-3) var(--size-8);
+    padding: calc(var(--size-3) - 4px) var(--size-8);
+    /* padding: var(--size-3) var(--size-8); */
     font-size: var(--fs-400);
 }
 

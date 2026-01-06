@@ -80,7 +80,7 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
         width: 100%;
         height:auto;
         /* height: 50%; */
-        max-inline-size:80%;
+        max-inline-size:75%;
         justify-self:center;
 
         
@@ -249,20 +249,26 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
 
 /* Mobile-First: Desktop enhancements */
 @media (min-width: 64em) {
+    .diagonal-triptych {
+        display:grid;
+        grid-template-rows: auto auto auto;
+    }
+    
     .diagonal-triptych .triptych-container {
         display: flex;
         gap: 0;
-        margin-block: 0;
-        max-inline-size:75%;
+        margin-block: var(--size-7);
+        max-inline-size:80%;
+        
         
     }
-
+    
 
     .diagonal-triptych .problem-text-bottom {
         display:grid;
         align-self: start;
         text-align: center;
-        margin-top:var(--size-7);
+        /* margin-top:var(--size-7); */
       
        
 
@@ -282,7 +288,7 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
     .diagonal-triptych .problem-text-top{
         display:grid;
         align-self:end;
-        margin-bottom:var(--size-7);
+        /* margin-bottom:var(--size-7); */
     }
 }
 </style>

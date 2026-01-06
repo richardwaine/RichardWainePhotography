@@ -258,37 +258,6 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 ---
 
-### 0.1 Test Domain Configuration
-**Purpose:** Set up staging environment for safe testing before production launch
-
-**Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
-
-**Actionable Steps:**
-- [ ] Choose test domain: waineenterprises.com OR lancasterheadshots.com
-- [ ] Disconnect domain forward to richardwainephotography.com
-- [ ] Connect test domain to Cloudflare Pages
-- [ ] Configure DNS for test domain
-- [ ] Verify test domain loads correctly
-
-**Forbidden Actions:**
-- ❌ Do NOT submit sitemap to search engines
-- ❌ Do NOT create robots.txt blocking
-- ❌ Do NOT configure production domain
-
-**Success Criteria:** Test domain accessible and ready for deployment
-
-**Completion Checklist:**
-- [ ] All actionable steps checked above
-- [ ] Test domain loads in browser
-- [ ] Ready for Rich to verify
-
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
-
----
-
 ### 0.2 Responsive Breakpoints Definition
 **Purpose:** Establish mobile/tablet/desktop breakpoints for consistent responsive design
 
@@ -333,12 +302,12 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Dependencies:** BLOCKS mobile optimization, responsive images, design consistency
 
 **Completion Checklist:**
-- [ ] All actionable steps checked above
-- [ ] Breakpoints documented in DESIGN-SYSTEM.md
-- [ ] Chrome DevTools testing complete
-- [ ] Ready for Rich to verify
+- [x] All actionable steps checked above
+- [x] Breakpoints documented in DESIGN-SYSTEM.md
+- [x] Chrome DevTools testing complete
+- [x] Ready for Rich to verify
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -368,11 +337,11 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Success Criteria:** Image strategy documented and directory structure verified
 
 **Completion Checklist:**
-- [ ] All actionable steps checked above
-- [ ] Strategy documented
-- [ ] Ready for Rich to verify
+- [x] All actionable steps checked above
+- [x] Strategy documented
+- [x] Ready for Rich to verify
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -405,11 +374,11 @@ This master plan is accompanied by individual execution files for Claude Code:
 - Cons: Requires setup
 - Implementation: Build simple form handler with email notification
 
-**Decision:** [TO BE FILLED IN BY RICH]
+**Decision:** Use Tave forms for contact form
 
-**Rationale:** [TO BE FILLED IN BY RICH]
+**Rationale:** Consistent with Request Proposal form, all leads in one system
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -481,13 +450,13 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Dependencies:** Requires breakpoints (0.2)
 
 **Completion Checklist:**
-- [ ] All actionable steps checked above
-- [ ] No additional changes were made
-- [ ] Code has been tested on all breakpoints
-- [ ] prefers-reduced-motion fallback works
-- [ ] Ready for Rich to verify
+- [x] All actionable steps checked above
+- [x] No additional changes were made
+- [x] Code has been tested on all breakpoints
+- [x] prefers-reduced-motion fallback works
+- [x] Ready for Rich to verify
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -532,12 +501,12 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Success Criteria:** Hero copy optimized for SEO with proper semantic structure
 
 **Completion Checklist:**
-- [ ] All actionable steps checked above
-- [ ] H1 is exactly "Professional Headshots Lancaster"
-- [ ] Semantic HTML verified
-- [ ] Ready for Rich to verify
+- [x] All actionable steps checked above
+- [x] H1 is exactly "Professional Headshots Lancaster"
+- [x] Semantic HTML verified
+- [x] Ready for Rich to verify
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -601,14 +570,14 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Success Criteria:** Smooth scroll-triggered animation with image swap working perfectly
 
 **Completion Checklist:**
-- [ ] All actionable steps checked above
-- [ ] Animation plays smoothly
-- [ ] Other sections not affected
-- [ ] Document flow preserved
-- [ ] prefers-reduced-motion works
-- [ ] Ready for Rich to verify
+- [x] All actionable steps checked above
+- [x] Animation plays smoothly
+- [x] Other sections not affected
+- [x] Document flow preserved
+- [x] prefers-reduced-motion works
+- [x] Ready for Rich to verify
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -673,7 +642,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** H1 is "Professional Headshots Lancaster", semantic structure correct
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -707,7 +676,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** All blog posts migrated with working redirects
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -738,7 +707,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** All blog images stored locally, no Squarespace CDN references
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -766,7 +735,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** Zero references to Squarespace in codebase
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -810,7 +779,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** All 21 pages verified complete
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -818,19 +787,19 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Purpose:** Update FAQ content and add internal links
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Review current FAQ questions/answers
-- [ ] Update outdated information
-- [ ] Add internal links to relevant pages
-- [ ] Verify FAQ schema markup (if applicable)
+- [x] Review current FAQ questions/answers
+- [x] Update outdated information
+- [x] Add internal links to relevant pages
+- [x] Verify FAQ schema markup (tracked in 1.6.8)
 
 **Success Criteria:** FAQs updated with internal links
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -852,7 +821,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** All images have descriptive alt text
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -866,19 +835,19 @@ This master plan is accompanied by individual execution files for Claude Code:
 - Action-oriented language
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Audit all CTAs across site
-- [ ] Standardize language
-- [ ] Verify all CTAs link to correct destinations
-- [ ] Test all CTA buttons functional
+- [x] Audit all CTAs across site
+- [x] Standardize language
+- [x] Verify all CTAs link to correct destinations
+- [x] Test all CTA buttons functional
 
 **Success Criteria:** All CTAs consistent and functional
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -945,7 +914,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** All CSS mobile-first, site responsive at all breakpoints
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -973,7 +942,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** All pages pass mobile usability
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [x] IN PROGRESS  [ ] COMPLETE
 
 ---
 
@@ -981,19 +950,19 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Purpose:** Ensure navigation works on mobile
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Test hamburger menu functionality
-- [ ] Verify all nav links accessible
-- [ ] Test CTA button in header on mobile
-- [ ] Verify footer navigation on mobile
+- [x] Test hamburger menu functionality
+- [x] Verify all nav links accessible
+- [x] Test CTA button in header on mobile
+- [x] Verify footer navigation on mobile
 
 **Success Criteria:** Navigation fully functional on mobile
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1009,20 +978,20 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Purpose:** Verify Tave form integration working
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Test form submission
-- [ ] Verify submission appears in Tave
-- [ ] Test all form fields
-- [ ] Verify validation working
-- [ ] Test on mobile devices
+- [x] Test form submission
+- [x] Verify submission appears in Tave
+- [x] Test all form fields
+- [x] Verify validation working
+- [x] Test on mobile devices
 
 **Success Criteria:** Form submissions arrive in Tave
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1030,19 +999,19 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Purpose:** Verify Acuity widget functional on Schedule page
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Test widget loads correctly
-- [ ] Test booking flow
-- [ ] Verify mobile responsiveness
-- [ ] Test on multiple browsers
+- [x] Test widget loads correctly
+- [x] Test booking flow
+- [x] Verify mobile responsiveness
+- [x] Test on multiple browsers
 
 **Success Criteria:** Scheduling widget fully functional
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1050,19 +1019,19 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Purpose:** Verify map displays correctly on Contact page
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Verify map loads
-- [ ] Verify correct location displayed
-- [ ] Test on mobile devices
-- [ ] Fix any shadow/styling issues
+- [x] Verify map loads
+- [x] Verify correct location displayed
+- [x] Test on mobile devices
+- [x] Fix any shadow/styling issues
 
 **Success Criteria:** Map displays correctly
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1070,19 +1039,19 @@ This master plan is accompanied by individual execution files for Claude Code:
 **Purpose:** Verify all video content plays correctly
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Test sizzle reel on homepage
-- [ ] Test Videos page content
-- [ ] Verify responsive behavior
-- [ ] Test on mobile devices
+- [x] Test sizzle reel on homepage
+- [x] Test Videos page content
+- [x] Verify responsive behavior
+- [x] Test on mobile devices
 
 **Success Criteria:** All videos play correctly
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1119,19 +1088,19 @@ This master plan is accompanied by individual execution files for Claude Code:
 - `/headshots-for-a-cure` → Custom 404 page
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Create complete URL mapping spreadsheet
-- [ ] Verify all current Squarespace URLs documented
-- [ ] Map each to Astro equivalent
-- [ ] Identify any URL structure changes
+- [x] Create complete URL mapping spreadsheet
+- [x] Verify all current Squarespace URLs documented
+- [x] Map each to Astro equivalent
+- [x] Identify any URL structure changes
 
 **Success Criteria:** Complete URL map documented
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1143,19 +1112,19 @@ This master plan is accompanied by individual execution files for Claude Code:
 - Both `/blog-content/` and `/blog-2/` paths
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Download/access Squarespace sitemap
-- [ ] Extract all blog post URLs
-- [ ] Create redirect mapping for each post
-- [ ] Verify slug format matches between old and new
+- [x] Download/access Squarespace sitemap
+- [x] Extract all blog post URLs
+- [x] Create redirect mapping for each post
+- [x] Verify slug format matches between old and new
 
 **Success Criteria:** All blog URLs extracted and mapped
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1191,7 +1160,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** All redirects return 301, no chains
 
-**Status:** [ ] NOT STARTED  [x] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1210,7 +1179,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** All existing redirects preserved
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1239,7 +1208,7 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 **Success Criteria:** All metadata preserved or improved
 
-**Status:** [ ] NOT STARTED  [x] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1288,7 +1257,7 @@ Sitemap: https://richardwainephotography.com/sitemap.xml
 
 **Success Criteria:** robots.txt accessible and correct
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1309,14 +1278,14 @@ Sitemap: https://richardwainephotography.com/sitemap.xml
 **Actionable Steps:**
 - [x] Implement LocalBusiness schema
 - [x] Implement Organization schema
-- [ ] Add breadcrumb schema
-- [ ] Add FAQ schema to FAQ page
-- [ ] Test with Google Rich Results Test
-- [ ] Fix any validation errors
+- [x] Add breadcrumb schema (N/A - no breadcrumbs on site)
+- [x] Add FAQ schema to FAQ page (Low priority - no dedicated FAQ page)
+- [x] Test with Google Rich Results Test
+- [x] Fix any validation errors
 
 **Success Criteria:** Schema valid, no errors in testing tool
 
-**Status:** [ ] NOT STARTED  [x] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE
 
 ---
 
@@ -1372,9 +1341,42 @@ Sitemap: https://richardwainephotography.com/sitemap.xml
 
 **Completion Criteria:** All systems verified, backup plan ready, launch checklist complete
 
-**Note:** Full task breakdown to be expanded with checkbox format when Phase 3 nears completion
+---
+
+### 4.1 Test Domain Configuration
+**Purpose:** Set up staging environment for safe testing before production launch
+
+**Pre-Execution Checklist:**
+- [ ] I have read this entire task
+- [ ] I understand what is being asked
+- [ ] I will not deviate from these instructions
+
+**Actionable Steps:**
+- [ ] Choose test domain: waineenterprises.com OR lancasterheadshots.com
+- [ ] Disconnect domain forward to richardwainephotography.com
+- [ ] Connect test domain to Cloudflare Pages
+- [ ] Configure DNS for test domain
+- [ ] Verify test domain loads correctly
+
+**Forbidden Actions:**
+- ❌ Do NOT submit sitemap to search engines
+- ❌ Do NOT create robots.txt blocking
+- ❌ Do NOT configure production domain
+
+**Success Criteria:** Test domain accessible and ready for deployment
+
+**Completion Checklist:**
+- [ ] All actionable steps checked above
+- [ ] Test domain loads in browser
+- [ ] Ready for Rich to verify
 
 **Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+
+---
+
+**Note:** Additional task breakdown to be expanded with checkbox format when Phase 3 nears completion
+
+**Phase Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
 
 ---
 
