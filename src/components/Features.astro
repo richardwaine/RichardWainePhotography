@@ -164,7 +164,7 @@ document.addEventListener("astro:page-load", () => {
     let mm = gsap.matchMedia();
     // const DESKTOP_BREAKPOINT = "(min-width: 768px)";
     // const DESKTOP_BREAKPOINT = "(min-width: 48em)";
-    const DESKTOP_BREAKPOINT = "(min-width: 64em)";
+    const DESKTOP_BREAKPOINT = "(min-width: 67.5em)";
     const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
     // DESKTOP LOGIC (Horizontal Scroll)
@@ -254,7 +254,7 @@ document.addEventListener("astro:page-load", () => {
     // MOBILE FALLBACK LOGIC (Runs ONLY on screens smaller than 768px)
     // mm.add("(max-width: 767px)", () => {
     // mm.add("(width < 48em)", () => {
-    mm.add("(width < 64em)", () => {
+    mm.add("(width < 67.5em)", () => {
         // Clear any pinned/transformed styles left by ScrollTrigger
         gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
     });
@@ -358,16 +358,18 @@ padding-inline:0;
 }
 
 /* ==========================================
-   DESKTOP - min-width: 64em (1024px)
+   DESKTOP - min-width: 67.5em (1080px)
    ========================================== */
 
-@media (min-width: 64em) {
+@media (min-width: 67.5em) {
   
   .slide-content{
     margin-top:var(--size-3);
   }
 
   .slide-content-wrapper{
+    padding-inline:var(--size-7);
+     grid-template-columns: 1fr 1.25fr;
     /* margin-top:var(--header-height); */
   }
 
@@ -388,14 +390,7 @@ padding-inline:0;
   }
 }
 
-/* ==========================================
-   LARGE DESKTOP - min-width: 67.5em (1080px)
-   ========================================== */
-@media (min-width: 67.5em) {
-  .slide-content-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+
 </style>
 
 

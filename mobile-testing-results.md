@@ -147,6 +147,70 @@ Spacing issues at 1024px+ - User adjusted for now
 
 ---
 
+### COMPONENT 3: Features Section
+
+#### 320px, 375px, 390px, 414px, 600px, 767px (Mobile Range)
+- [x] Layout intact - Vertical stacking works
+- [x] Text readable - All text clear
+- [x] Images display properly - All images visible
+- [x] Touch targets adequate - Buttons good size
+- [x] Spacing appropriate - Good vertical rhythm
+
+**Issues Found:**
+```
+NONE - Mobile range looks good
+```
+
+#### 768px, 1023px (Tablet Range)
+- [x] Layout intact - Vertical stacking maintained
+- [x] Text readable - All text clear
+- [x] Images display properly - All images visible
+- [x] Touch targets adequate - Buttons working
+- [x] Spacing appropriate - Good spacing
+
+**Issues Found:**
+```
+NONE - Tablet range looks good
+```
+
+#### 1024px (iPad Pro)
+- [x] Layout intact - Fixed after breakpoint adjustment
+- [x] Text readable - All text clear
+- [x] Images display properly - All images visible
+- [x] Touch targets adequate - Buttons working
+- [x] Spacing appropriate - Content fits in viewport
+
+**Issues Found & Fixed:**
+```
+1. Content cut off at 100vh - FIXED: Moved horizontal scroll breakpoint from 64em (1024px) to 67.5em (1080px)
+   - Changed line 167: "(min-width: 64em)" to "(min-width: 67.5em)"
+   - Changed line 257: "(width < 64em)" to "(width < 67.5em)"
+   - Changed line 364: @media (min-width: 64em) to @media (min-width: 67.5em)
+   - Ensures horizontal scroll only activates when 2-column layout is active
+```
+
+#### 1080px+ (Desktop)
+- [x] Layout intact - 2-column layout with horizontal scroll
+- [x] Text readable - All text clear in wider column
+- [x] Images display properly - All images visible
+- [x] Horizontal scroll animation - Working correctly
+
+**Issues Found & Fixed:**
+```
+1. Text column too narrow at 1080px - FIXED: Changed grid-template-columns from "1fr 1fr" to "1fr 1.5fr" in line 396
+```
+
+**ACTION ITEM:**
+```
+CREATE SERVICE PAGES: Need to create dedicated service pages for the 4 headshot types featured in this section:
+- Business Headshots
+- Acting Headshots
+- LinkedIn Headshots
+- Office Headshots
+```
+
+---
+
 ## Page 2: Studio Headshots (richard-waine-photography-studio.astro)
 
 ### 375px (iPhone SE)

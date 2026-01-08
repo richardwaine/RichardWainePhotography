@@ -66,6 +66,13 @@ const { bioSectionHeading, bioSections } = Astro.props;
 </div>
 
 <style>
+
+  
+
+/* ===========================================
+   DESKTOP BIO LAYOUT 
+   =========================================== */
+
 /* Lazy loading override for background images */
 .lazy {
   background-image: none !important;
@@ -92,6 +99,8 @@ h2{
 
 
   display:none;
+
+  
 }
 
 .bio-container {
@@ -110,8 +119,12 @@ h2{
 
 
 
+	
 
 }
+
+
+
 
 .bio-container .clip {
   position: absolute;
@@ -244,8 +257,10 @@ h2{
 }
 
 
+/* ===========================================
+   MOBILE BIO LAYOUT 
+   =========================================== */
 
-/* Mobile Bio Layout */
 .bio-mobile {
   /* display: none;  */
 
@@ -259,7 +274,7 @@ h2{
   
   width: 100%;
   max-width: 500px;
-  margin: 0 auto var(--size-6);
+  margin: 0 auto var(--size-7);
 }
 
 .bio-mobile-image img {
@@ -270,7 +285,6 @@ h2{
 }
 
 .bio-mobile-content {
-  max-width: 800px;
   margin: 0 auto;
   color: var(--ltclr);
 }
@@ -296,13 +310,19 @@ h2{
 
 /* Mobile-First: Desktop enhancements */
 @media (min-width: 90em) {
+
+ 
   .bio-wrapper {
-    display: block;
+    display: grid;
+    
+
   }
 
   .bio-mobile {
     display: none;
   }
+
+  
 }
 
 </style>

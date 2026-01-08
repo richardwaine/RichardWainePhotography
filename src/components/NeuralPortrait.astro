@@ -133,7 +133,7 @@ const currentData = portfolioData[currentImageIndex];
 <!-- Hidden data for JavaScript to access -->
 <script id="portfolio-data" type="application/json" set:html={JSON.stringify(portfolioData)} />
 
-<section class="neural-section">
+<div class="neural-section">
     <div class="neural-content">
         <div class="text-section">
           <div class="neural-title">
@@ -230,7 +230,7 @@ const currentData = portfolioData[currentImageIndex];
           </div>
         </div>
     </div>
-</section>
+</div>
 
 <script>
   function initNeuralAnimation() {
@@ -608,7 +608,8 @@ const currentData = portfolioData[currentImageIndex];
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: var(--size-10) var(--size-2) var(--size-7);
+  padding-inline:var(--size-3);
+  /* padding: var(--size-10) var(--size-2) var(--size-7); */
   overflow-x: hidden;
   min-height: 100vh;
   /* background: var(--drkbg); */
@@ -616,7 +617,7 @@ const currentData = portfolioData[currentImageIndex];
   font-family: var(--ff-primary);
   width:100%;
 
-
+  padding-block:0;
 }
 
 
@@ -633,7 +634,7 @@ const currentData = portfolioData[currentImageIndex];
   z-index: 2;
   position: relative;
   text-align: center;
-  padding: 0;
+  padding:0;
 }
 
 .text-section {
@@ -991,6 +992,11 @@ const currentData = portfolioData[currentImageIndex];
   }
 }
 
+
+
+/* ==========================================
+   DESKTOP - min-width: 64em (1024px)
+   ========================================== */
 @media (min-width: 64em) {
   .neural-section {
     padding: var(--size-7);
@@ -1006,7 +1012,7 @@ const currentData = portfolioData[currentImageIndex];
 
   .neural-content {
     /* max-width: 1500px; */
-    max-width:80%;
+    /* max-width:80%; */
     grid-template-columns: 1fr 1fr;
     text-align: left;
     padding: 0;

@@ -269,6 +269,7 @@ h2{
 
 .btn {
   display: inline-block;
+  vertical-align:middle;
   text-decoration: none;
   position: relative;
   border: 2px solid transparent;
