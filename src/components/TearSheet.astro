@@ -95,17 +95,27 @@ const logos: Logo[] = [
 </div>
 
 <style>
+h2{
+    text-wrap:pretty;
+    
+}
+
     .tear-sheet-container {
         --_gap: var(--size-12, 3rem);
         --_duration: 60s;
         
         display: grid;
         place-items: center;
-        width: 80%;
+        
+        width: 95%;
         margin: auto;
         padding-block: var(--size-8);
         color: var(--drkclr, #222);
         overflow: hidden;
+
+        @media (width >= 48em){
+            width:80%;
+        }
     }
     
     .section-title {

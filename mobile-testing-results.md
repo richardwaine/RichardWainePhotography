@@ -211,6 +211,186 @@ CREATE SERVICE PAGES: Need to create dedicated service pages for the 4 headshot 
 
 ---
 
+### COMPONENT 4: Promo Video Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Video container responsive
+- [x] Video displays properly - Aspect ratio maintained
+- [x] Spacing appropriate - Cleaned up padding structure
+
+**Issues Found & Fixed:**
+```
+1. Redundant padding - FIXED: Removed padding-block from .video-container, kept section and wrapper padding only
+2. Container width reduced slightly for better spacing
+```
+
+---
+
+### COMPONENT 5: Neural Portrait Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Responsive at all breakpoints
+- [x] Text readable - All text clear
+- [x] Images display properly - MacBook frame and portraits responsive
+- [x] Interactive elements working - Thumbnail switching functional
+
+**Issues Found & Fixed:**
+```
+1. Double section padding - FIXED: Changed nested <section> to <div> to eliminate duplicate padding from global section rule
+```
+
+---
+
+### COMPONENT 6: Tear Sheet Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Logo scroller responsive
+- [x] Text readable - Heading responsive
+- [x] Animation working - Infinite scroll functioning
+
+**Issues Found & Fixed:**
+```
+1. Container too narrow at mobile - FIXED: Changed container width to 95% at mobile, 80% at 48em+
+```
+
+---
+
+### COMPONENT 7: Office Headshots Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Section responsive
+- [x] Text readable - All text clear
+- [x] Button displays properly - CTA button working
+
+**Issues Found & Fixed:**
+```
+1. "Request Proposal" button text wrapping at 320-404px - FIXED: Added media query range (width <= 25.25em) with smaller padding-inline
+```
+
+---
+
+### COMPONENT 8: WorldMap/What to Expect Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Map responsive with aspect ratio
+- [x] Interactive elements working - Animated paths and location markers
+- [x] Labels readable - Font size corrected with :global() scope
+
+**Issues Found & Fixed:**
+```
+1. Label font-size not applying - FIXED: Changed .label-text to :global(.label-text) for JavaScript-created elements
+```
+
+---
+
+### COMPONENT 9: Testimonials Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Grid using minmax, responsive
+- [x] Text readable - All testimonials clear
+- [x] Cards display properly - All cards responsive
+
+**Issues Found:**
+```
+NONE - Testimonials section responsive as designed
+```
+
+---
+
+### COMPONENT 10: Process Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Game plan cards responsive
+- [x] Text readable - All text clear
+- [x] Interactive hover working - Card flip animations functional
+- [x] Buttons display properly - CTAs working
+
+**Issues Found & Fixed:**
+```
+1. Button touching card edge at <375px - FIXED: User adjusted text content (wordsmithing solution)
+```
+
+---
+
+### COMPONENT 11: Brief Bio Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Desktop hover layout and mobile stacked layout working
+- [x] Text readable - All bio content clear
+- [x] Images display properly - Portrait images loading correctly
+- [x] Content control implemented - showHeadingOnMobile and showOnMobile per paragraph
+
+**Issues Found & Fixed:**
+```
+1. Too much content at mobile - FIXED: Implemented granular show/hide props for headings and paragraphs independently
+   - Added showHeadingOnMobile to control h2 visibility
+   - Added showOnMobile to each paragraph object for individual paragraph control
+   - Mobile now filters content based on these flags
+   - Desktop always shows all content
+```
+
+---
+
+### COMPONENT 12: Headshots Near Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Text-only section responsive
+- [x] Text readable - All text clear
+- [x] Columns responsive - Grid adapts to viewport
+
+**Issues Found:**
+```
+NONE - Text and responsive columns working as designed
+```
+
+---
+
+### COMPONENT 13: Professions Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Tabs and content responsive
+- [x] Interactive elements working - Tab switching functional
+
+**Issues Found:**
+```
+NONE - User noted section needs redesign in future but functional for now
+```
+
+---
+
+### COMPONENT 14: Did You Know Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Section responsive
+- [x] Text readable - All content clear
+
+**Issues Found:**
+```
+NONE - Section working as designed
+```
+
+---
+
+### COMPONENT 15: FAQs Section
+
+#### All Breakpoints (320px - 1440px+)
+- [x] Layout intact - Accordion responsive
+- [x] Text readable - All FAQs clear
+- [x] Interactive elements working - Expand/collapse functional
+
+**Issues Found:**
+```
+NONE - FAQs section working as designed
+```
+
+---
+
+**HOMEPAGE (index.astro) TESTING COMPLETE**
+
+All 15 components tested and responsive at all breakpoints (320px, 375px, 390px, 414px, 600px, 767px, 768px, 1023px, 1024px, 1080px+)
+
+---
+
 ## Page 2: Studio Headshots (richard-waine-photography-studio.astro)
 
 ### 375px (iPhone SE)

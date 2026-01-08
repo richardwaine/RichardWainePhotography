@@ -3,9 +3,15 @@ import { Image } from 'astro:assets';
 import RWHeadshot from '../assets/images/blog/RichardWaine - (16 x 9).jpg';
 
 
+interface BioParagraph {
+  text: string;
+  showOnMobile?: boolean;
+}
+
 interface BioSection {
   clipHeading: string;
-  clipParagraphs: string[];
+  showHeadingOnMobile?: boolean;
+  clipParagraphs: BioParagraph[];
 }
 
 interface Props {
@@ -34,7 +40,7 @@ const { bioSectionHeading, bioSections } = Astro.props;
           <div class="bio-content">
             <h2 class="bio-content-h2">{section.clipHeading}</h2>
             {section.clipParagraphs.map((para) => (
-              <p>{para}</p>
+              <p>{para.text}</p>
             ))}
           </div>
         </div>
@@ -54,9 +60,11 @@ const { bioSectionHeading, bioSections } = Astro.props;
       <div class="bio-mobile-content">
         {bioSections.map((section) => (
           <div class="bio-mobile-section">
-            <h2 class="bio-content-h2">{section.clipHeading}</h2>
-            {section.clipParagraphs.map((para) => (
-              <p>{para}</p>
+            {section.showHeadingOnMobile !== false && (
+              <h2 class="bio-content-h2">{section.clipHeading}</h2>
+            )}
+            {section.clipParagraphs.filter(para => para.showOnMobile !== false).map((para) => (
+              <p>{para.text}</p>
             ))}
           </div>
         ))}
@@ -290,7 +298,7 @@ h2{
 }
 
 .bio-mobile-section {
-  margin-bottom: var(--size-8);
+  /* margin-bottom: var(--size-8); */
 }
 
 .bio-mobile-section h2 {
@@ -298,6 +306,7 @@ h2{
   letter-spacing: var(--ltr-space);
   margin-bottom: var(--size-4);
   color: var(--ltclr);
+  font-weight:var(--fw-semi-bold);
 }
 
 .bio-mobile-section p {

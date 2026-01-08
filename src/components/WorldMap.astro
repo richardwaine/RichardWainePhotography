@@ -81,6 +81,10 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     {
       start: { lat: 28.6139, lng: 77.209, label: "New Delhi" },
       end: { lat: 0.0236, lng: 37.9062, label: "Kenya" }
+    },
+    {
+      start: { lat: 35.6764, lng: 139.6500, label: "Tokyo"},
+      end: { lat: 0.0236, lng: 151.2093 , label: "Sydney" }
     }
   ];
 
@@ -306,20 +310,21 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     display:grid;
     grid-template-columns: 1fr; 
     gap:var(--size-8);
-
-
-    @media (width >= 64em){
-        padding-block:var(--size-8);
-        max-inline-size:80%;
-        grid-template-columns: 1.25fr 1fr;
-        grid-template-rows: 1fr;
-        gap:var(--size-10);
-        align-items:center;
-        justify-content: space-between;
-        /* padding-inline:var(--size-7); */
-       
-    }
 }
+
+
+
+
+    /* ==========================================
+   TABLET - min-width: 67.5 (1080px)
+   ========================================== */
+    
+    @media (width >= 67.5em){
+      .WorldMapSection{
+        grid-template-columns:1.25fr 1fr;
+      }
+  
+  }
 
 
   .world-map-container {
