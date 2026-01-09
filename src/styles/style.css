@@ -224,10 +224,10 @@ img,picture,svg,video {
   color:var(--ltclr)
 }
 
-section:not(#features){
+/* section:not(#features){
   padding-block:var(--size-8);
   
-}
+} */
 
 
 

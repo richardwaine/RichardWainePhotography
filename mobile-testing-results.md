@@ -394,517 +394,259 @@ All 15 components tested and responsive at all breakpoints (320px, 375px, 390px,
 ## Page 2: Studio Headshots (richard-waine-photography-studio.astro)
 
 ### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive and layout fixed
 ```
 
 ### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive and layout fixed
 ```
 
 ### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive and layout fixed
 ```
 
 ### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive and layout fixed
 ```
 
 ### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive and layout fixed
 ```
+
+---
+
+**STUDIO HEADSHOTS PAGE (richard-waine-photography-studio.astro) TESTING COMPLETE**
+
+Page tested and responsive at all breakpoints (375px, 390px, 768px, 1024px, 1440px)
 
 ---
 
 ## Page 3: Baltimore Headshots (baltimore-headshots.astro)
 
-### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+**TESTING COMPLETE** - Uses homepage components tested in Page 1
+
+This page uses the same components as the homepage:
+- Hero
+- Problem
+- Features
+- Neural Portrait
+- Tear Sheet
+- Office Headshots
+- World Map
+- Testimonials
+- Process
+- Brief Bio
+- Floating Stats
+- Headshots Near
+- Professions
+- Did You Know
+- FAQs
+
+All components tested responsive at all breakpoints (320px - 1440px+)
 
 **Issues Found:**
 ```
-[Document issues here]
-```
-
-### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
+NONE - All components already tested and verified responsive
 ```
 
 ---
 
 ## Page 4: Philadelphia Headshots (philadelphia-headshots.astro)
 
-### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+**TESTING COMPLETE** - Uses homepage components tested in Page 1
+
+This page uses the same components as the homepage:
+- Hero
+- Problem
+- Features
+- Neural Portrait
+- Tear Sheet
+- Office Headshots
+- World Map
+- Testimonials
+- Process
+- Brief Bio
+- Floating Stats
+- Headshots Near
+- Professions
+- Did You Know
+- FAQs
+
+All components tested responsive at all breakpoints (320px - 1440px+)
 
 **Issues Found:**
 ```
-[Document issues here]
-```
-
-### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
+NONE - All components already tested and verified responsive
 ```
 
 ---
 
 ## Page 5: Harrisburg Headshots (harrisburg-headshots.astro)
 
-### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+**TESTING COMPLETE** - Uses homepage components tested in Page 1
+
+This page uses the same components as the homepage:
+- Hero
+- Problem
+- Features
+- Neural Portrait
+- Tear Sheet
+- Office Headshots
+- World Map
+- Testimonials
+- Process
+- Brief Bio
+- Floating Stats
+- Headshots Near
+- Professions
+- Did You Know
+- FAQs
+
+All components tested responsive at all breakpoints (320px - 1440px+)
 
 **Issues Found:**
 ```
-[Document issues here]
-```
-
-### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
+NONE - All components already tested and verified responsive
 ```
 
 ---
 
 ## Page 6: York Headshots (york-headshots.astro)
 
-### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+**TESTING COMPLETE** - Uses homepage components tested in Page 1
+
+This page uses the same components as the homepage:
+- Hero
+- Problem
+- Features
+- Neural Portrait
+- Tear Sheet
+- Office Headshots
+- World Map
+- Testimonials
+- Process
+- Brief Bio
+- Floating Stats
+- Headshots Near
+- Professions
+- Did You Know
+- FAQs
+
+All components tested responsive at all breakpoints (320px - 1440px+)
 
 **Issues Found:**
 ```
-[Document issues here]
-```
-
-### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
+NONE - All components already tested and verified responsive
 ```
 
 ---
 
 ## Page 7: Delaware Headshots (delaware-headshots.astro)
 
-### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+**TESTING COMPLETE** - Uses homepage components tested in Page 1
+
+This page uses the same components as the homepage:
+- Hero
+- Problem
+- Features
+- Neural Portrait
+- Tear Sheet
+- Office Headshots
+- World Map
+- Testimonials
+- Process
+- Brief Bio
+- Floating Stats
+- Headshots Near
+- Professions
+- Did You Know
+- FAQs
+
+All components tested responsive at all breakpoints (320px - 1440px+)
 
 **Issues Found:**
 ```
-[Document issues here]
-```
-
-### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
+NONE - All components already tested and verified responsive
 ```
 
 ---
 
 ## Page 8: Conference Headshots (conference-headshots.astro)
 
-### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+**TESTING COMPLETE** - Uses homepage components tested in Page 1
+
+This page uses the same components as the homepage:
+- Hero
+- Problem
+- Features
+- Neural Portrait
+- Tear Sheet
+- Office Headshots
+- World Map
+- Testimonials
+- Process
+- Brief Bio
+- Floating Stats
+- Headshots Near
+- Professions
+- Did You Know
+- FAQs
+
+All components tested responsive at all breakpoints (320px - 1440px+)
 
 **Issues Found:**
 ```
-[Document issues here]
-```
-
-### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
+NONE - All components already tested and verified responsive
 ```
 
 ---
@@ -912,74 +654,82 @@ All 15 components tested and responsive at all breakpoints (320px, 375px, 390px,
 ## Page 9: About (about-lancaster-headshot-photographer-richard-waine.astro)
 
 ### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+Video responsiveness fixed - removed fixed width/height attributes
+Companies logos made responsive - grid now uses auto-fit
+Page functional but needs future style improvements
 ```
 
 ### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+Page functional but needs future style improvements
 ```
 
 ### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks better at this breakpoint
 ```
 
 ### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks better at this breakpoint
 ```
 
 ### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks better at this breakpoint
 ```
+
+**ABOUT PAGE (about-lancaster-headshot-photographer-richard-waine.astro) TESTING COMPLETE**
+
+Page tested and responsive at all breakpoints (375px, 390px, 768px, 1024px, 1440px)
+
+**NOTE:** Page is functional and acceptable for now but will need future style improvements for better presentation at smaller breakpoints (320px-414px).
 
 ---
 
@@ -1060,74 +810,80 @@ All 15 components tested and responsive at all breakpoints (320px, 375px, 390px,
 ## Page 11: Blog Index (blog.astro)
 
 ### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
+
+**BLOG INDEX PAGE (blog.astro) TESTING COMPLETE**
+
+Page tested and responsive at all breakpoints (375px, 390px, 768px, 1024px, 1440px)
+
+**NOTE:** Page is acceptable for now but may need minor style iterations in the future.
 
 ---
 
@@ -1521,79 +1277,85 @@ All 15 components tested and responsive at all breakpoints (320px, 375px, 390px,
 ## Page 17: Resources (resources.astro)
 
 ### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Vendor filtering works
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Vendor filtering works
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Vendor filtering works
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Vendor filtering works
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Vendor filtering works
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Vendor filtering works
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Vendor filtering works
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Vendor filtering works
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Vendor filtering works
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Vendor filtering works
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
+
+**RESOURCES PAGE (resources.astro) TESTING COMPLETE**
+
+Page tested and responsive at all breakpoints (375px, 390px, 768px, 1024px, 1440px)
+
+**NOTE:** Page is acceptable for now but may need minor style iterations in the future.
 
 ---
 
@@ -1748,74 +1510,78 @@ All 15 components tested and responsive at all breakpoints (320px, 375px, 390px,
 ## Page 20: Videos (videos.astro)
 
 ### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Videos display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Videos display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Minor adjustments made, page looks good
 ```
 
 ### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Videos display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Videos display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Videos display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Videos display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Videos display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Videos display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
 
 ### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Videos display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Videos display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page looks good
 ```
+
+**VIDEOS PAGE (videos.astro) TESTING COMPLETE**
+
+Page tested and responsive at all breakpoints (375px, 390px, 768px, 1024px, 1440px)
 
 ---
 
@@ -1959,72 +1725,9 @@ All 15 components tested and responsive at all breakpoints (320px, 375px, 390px,
 
 ## Page 23: Fluid Typography Test (fluid-typography-test.astro)
 
-**Note:** This appears to be a test page - confirm if it should be tested for production
+**NOT TESTED - NOT CLIENT-FACING**
 
-### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
-
-### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
-
-**Issues Found:**
-```
-[Document issues here]
-```
+This is an internal test page and will not be included in production site testing.
 
 ---
 
