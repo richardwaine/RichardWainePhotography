@@ -21,6 +21,9 @@ import videoPoster from '../assets/RW_FINAL_V1_FOR REVIEW.00_00_48_06.Still004 (
 import promoVideo from '../assets/RW_V2_For Review-2.mp4';
 import captions from '../assets/captions.vtt';
 
+import BriefBio2 from '../components/BriefBio2.astro';
+import WorldMap from '../components/WorldMap.astro';
+
 const title = 'York Headshots | Richard Waine Photography';
 const h1 = 'Professional Headshots York';
 
@@ -29,7 +32,7 @@ const heroContent = {
   title: ["WORLD CLASS", "HEADSHOT", "EXPERIENCE"],
   h1: h1,
   primaryButtonText: "GET PRICING",
-  secondaryButtonText: "SCHEDULE CONSULTATION",
+  secondaryButtonText: "SCHEDULE CONSULT",
   heroImages: [
     '/src/assets/images/hero-images/Ken Giglio (16 x 9) - compressed.jpg',
     '/src/assets/images/hero-images/Cindy Nguyen (16 x 9) - compressed.jpg'
@@ -117,7 +120,9 @@ const heroContent = {
 	</section>
 
 	<section id="what-to-expect">
-		<div class="center">
+
+     <WorldMap />
+		<!-- <div class="center">
 			<p>
 Tempor adipiscing et Lorem . adipiscing sit et sit incididunt sed sit . aliqua. consectetur magna consectetur et adipiscing . elit do do eiusmod sed dolor aliqua. . do ipsum labore sed elit .</p>
 
@@ -126,7 +131,7 @@ aliqua. incididunt incididunt sit aliqua. . ipsum amet ut Lorem sed magna amet .
 </p>
 
 
-		</div>
+		</div> -->
 	</section>
 
 
@@ -140,30 +145,33 @@ aliqua. incididunt incididunt sit aliqua. . ipsum amet ut Lorem sed magna amet .
 	</section>
 
 	<section id="brief-bio">
-		<BriefBio 
+		<BriefBio
   bioSectionHeading="York Headshot Photographer"
   bioSections={[
     {
       clipHeading: "YORK HEADSHOT PHOTOGRAPHY",
+      showHeadingOnMobile: false,
       clipParagraphs: [
-        "By now you probably realize that professional headshot photography is about more than just nice pictures.",
-        "I am the best headshot photographer in York, Pennsylvania, Baltimore, and surrounding areas such as Lancaster, Delaware, Harrisburg, Philadelphia, Hershey, and Reading."
+        { text: "By now you probably realize that professional headshot photography is about more than just nice pictures.", showOnMobile: true },
+        { text: "I am the best headshot photographer in York, Pennsylvania, Baltimore, and surrounding areas such as Lancaster, Delaware, Harrisburg, Philadelphia, Hershey, and Reading.", showOnMobile: true }
       ]
     },
     {
       clipHeading: "PROFESSIONAL HEADSHOTS NEAR YORK",
+      showHeadingOnMobile: false,
       clipParagraphs: [
-        "As your professional headshot photographer and trusted advisor, I provide a premium experience, while removing any anxiety or feelings of discomfort over having your photo taken.",
-        "Having your headshot taken should be an enjoyable, and dynamic experience."
+        { text: "As your professional headshot photographer and trusted advisor, I provide a premium experience, while removing any anxiety or feelings of discomfort over having your photo taken.", showOnMobile: true },
+        { text: "Having your headshot taken should be an enjoyable, and dynamic experience.", showOnMobile: true }
       ]
     },
     {
       clipHeading: "PROFESSIONAL HEADSHOT PHOTOGRAPHER",
+      showHeadingOnMobile: false,
       clipParagraphs: [
-        "I have built my career helping individuals, like yourself, make more money, reduce expenses, and expand market share by capturing the best headshots around.",
-        "Your professional headshot needs to showcase you at your best. A modern headshot demonstrates that you have a contemporary mindset, and visionary perspective.",
-        "I am committed to providing you with an easy, first-class experience, while creating high quality headshots that you are proud to use everywhere!",
-        "I love what I do, and I have a blast doing it! Come and see what all the fuss is about!"
+        { text: "I have built my career helping individuals, like yourself, make more money, reduce expenses, and expand market share by capturing the best headshots around.", showOnMobile: true },
+        { text: "Your professional headshot needs to showcase you at your best. A modern headshot demonstrates that you have a contemporary mindset, and visionary perspective.", showOnMobile: true },
+        { text: "I am committed to providing you with an easy, first-class experience, while creating high quality headshots that you are proud to use everywhere!", showOnMobile: true },
+        { text: "I love what I do, and I have a blast doing it! Come and see what all the fuss is about!", showOnMobile: true }
       ]
     }
   ]}
@@ -234,14 +242,14 @@ place-items:center;
 .video-container {
 	
     height: auto;
-    padding-block: var(--size-7);
+    /* padding-block: var(--size-7); */
 }
 
 .video-wrapper {
-    width: min(1000px, 100%);
+    width: min(800px, 100%);
     position: relative;
-	padding-inline: var(--size-3);
-	margin-inline: auto; /* Centers the video in the section */
+    padding-inline: var(--size-4);
+    margin-inline: auto; /* Centers the video in the section */
 }
 
 .video-wrapper .promo-video {
@@ -251,6 +259,9 @@ place-items:center;
 	
    
 }
+
+
+
 
 /* Close Button Styling */
 .close-video-btn {
@@ -293,7 +304,6 @@ place-items:center;
 {
 	/* height:calc(100vh - var(--header-height)); */
 	min-height:100vh;
-	
 	display:grid;
 	place-items:center;
 }
@@ -315,25 +325,19 @@ place-items:center;
 
 }
 
-
 #brief-bio{
-	min-height:100vh;
-	margin:0;
-
-	display:grid;
-	grid-template-rows: auto auto;
-	grid-template-columns: 1fr;
-	place-items:center;
-
-
+  display:flex;
+  flex-direction:column;
+  gap:var(--size-8);
+  justify-content: center;
+  
+  
 }
 
 
 
-
-
-
 </style>
+
 
 
 <!-- Move video to bottom left of the viewport on scroll -->
