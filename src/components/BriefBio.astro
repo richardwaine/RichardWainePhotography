@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import RWHeadshot from '../assets/images/blog/RichardWaine - (16 x 9).jpg';
+import RW1Image from '../assets/images/blog/RW1 - (16 x 9).jpg';
+import RW2Image from '../assets/images/blog/RW2 - (16 x 9).jpg';
 
 
 interface BioParagraph {
@@ -25,7 +27,7 @@ const { bioSectionHeading, bioSections } = Astro.props;
 
 ---
 
-<div class="wrapper">
+<div class="wrapper bio-section-wrapper">
 
 <h2 class="section-title hs-photographer white spacing center">
   {bioSectionHeading}
@@ -36,7 +38,7 @@ const { bioSectionHeading, bioSections } = Astro.props;
 
     <div class="bio-container">
       {bioSections.map((section, index) => (
-        <div class={`clip clip${index + 1} lazy`} title={section.clipHeading}>
+        <div class={`clip clip${index + 1} lazy`} title={section.clipHeading} style={`background-image: url('${index === 0 ? RW1Image.src : index === 1 ? RW2Image.src : RWHeadshot.src}')`}>
           <div class="bio-content">
             <h2 class="bio-content-h2">{section.clipHeading}</h2>
             {section.clipParagraphs.map((para) => (
@@ -53,7 +55,8 @@ const { bioSectionHeading, bioSections } = Astro.props;
 <!-- Mobile/Tablet Bio Layout (displays below 1440px) -->
 <div class="bio-mobile">
       <div class="bio-mobile-image">
-          <Image src={RWHeadshot} alt="Richard Waine - Lancaster Headshot Photographer" loading="lazy" />
+          <Image src={RWHeadshot} alt="Richard Waine - Lancaster Headshot Photographer" loading="lazy" width={1520} 
+        height={855}/>
       </div>
 
 
@@ -80,6 +83,10 @@ const { bioSectionHeading, bioSections } = Astro.props;
 /* ===========================================
    DESKTOP BIO LAYOUT 
    =========================================== */
+
+.bio-section-wrapper{
+  padding-top:var(--size-8)
+}
 
 /* Lazy loading override for background images */
 .lazy {
@@ -148,28 +155,24 @@ h2{
 
 .bio-container .clip.clip1,
 .bio-container:hover {
-  background: url('src/assets/images/blog/RW1 - (16 x 9).jpg');
   background-size: cover;
   background-position: 0 -50px;
   background-repeat: no-repeat;
-  
+
 }
 .clip.clip1 {
-  background: url('src/assets/images/blog/RW1 - (16 x 9).jpg');
   background-size: cover;
   background-position: 0 -50px;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 40% 0, 25% 100%, 0% 100%);
 }
 .clip.clip2 {
-  background: url('src/assets/images/blog/RW2 - (16 x 9).jpg');
   background-size: cover;
   background-position: 0 -110px;
   background-repeat: no-repeat;
   clip-path: polygon(40% 0, 100% 0, 75% 100%, 25% 100%);
 }
 .clip.clip3 {
-  background: url('src/assets/images/blog/RichardWaine - (16 x 9).jpg');
   background-repeat: no-repeat;
   background-size: 60% ;
 
@@ -178,7 +181,7 @@ h2{
   /* background-size:contain; */
   background-position: 510px -1px;
   clip-path: polygon(75% 0, 100% 0, 102% 100%, 60% 102%);
- 
+
 }
 .bio-container:hover .clip {
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
@@ -289,6 +292,9 @@ h2{
   width: 100%;
   max-width: 500px;
   margin: 0 auto var(--size-7);
+   
+
+  
 }
 
 .bio-mobile-image img {
@@ -296,6 +302,8 @@ h2{
   height: auto;
   border-radius: 15px;
   box-shadow: var(--shadow);
+
+  
 }
 
 .bio-mobile-content {

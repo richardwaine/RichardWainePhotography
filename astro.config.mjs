@@ -11,6 +11,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.richardwainephotography.com',
   integrations: [react(), mdx(), sitemap()],
+  build: {
+    inlineStylesheets: 'always'
+  },
   redirects: {
     '/home': '/',
     '/new-folder': '/',

@@ -11,7 +11,10 @@ import chubbImg from '../assets/images/office-headshots/Chubb - ContactSheet (sq
 
 
 const {
-
+  srText1 = "about Business Headshots",
+  srText2 = "about Acting Headshots",
+  srText3 = "about LinkedIn Headshots",
+  srText4 = "about Office Headshots",
   primaryButtonText = "Learn More",
   secondaryButtonText = "SCHEDULE CONSULTATION",
   businessHeadshotsUrl = "/rates", // Business Headshots
@@ -24,7 +27,7 @@ const {
 
 
 
-<section class="features-section">
+<section class="features-section features-section-wrapper">
   <div class="features-container">
     <div class="features-scroller">
 
@@ -54,7 +57,7 @@ const {
             </div>
 
             <div class="button-wrapper">
-              <PrimaryButton text={primaryButtonText} url={businessHeadshotsUrl}  />
+              <PrimaryButton text={primaryButtonText} url={businessHeadshotsUrl} srText={srText1} />
             </div>
           </div>
 
@@ -80,7 +83,7 @@ const {
 
             </div>
             <div class="button-wrapper">
-              <PrimaryButton text={primaryButtonText} url={actingHeadshotsUrl}  />
+              <PrimaryButton text={primaryButtonText} url={actingHeadshotsUrl} srText={srText2} />
             </div>
           </div>
 
@@ -107,7 +110,7 @@ const {
 
             </div>
             <div class="button-wrapper">
-              <PrimaryButton text={primaryButtonText} url={linkedinHeadshotsUrl}  />
+              <PrimaryButton text={primaryButtonText} url={linkedinHeadshotsUrl} srText={srText3} />
             </div>
           </div>
 
@@ -116,7 +119,7 @@ const {
 
       <div class="feature-slide">
         <div class="slide-content-wrapper">
-          <Image class="slide-image" src={chubbImg} alt="Office Headshots, Professional Headshots on Location, Team Headshots" loading="lazy" />
+          <Image class="slide-image" src={chubbImg} alt="Office Headshots, Professional Headshots on Location, Team Headshots" loading="lazy" width={1080} height={1080} />
           <div class="slide-content slide-content4">
             <h2 class="heading">Office Headshots</h2>
             <div class="slide-text">
@@ -137,7 +140,7 @@ const {
 
             </div>
             <div class="button-wrapper">
-              <PrimaryButton text={primaryButtonText} url={officeHeadshotsUrl}  />
+              <PrimaryButton text={primaryButtonText} url={officeHeadshotsUrl} srText={srText4} />
             </div>
           </div>
 
@@ -265,6 +268,11 @@ document.addEventListener("astro:page-load", () => {
 
 
 <style>
+.features-section-wrapper{
+  padding-block:var(--size-8);
+}
+
+
 /* ==========================================
    MOBILE BASE STYLES
    ========================================== */

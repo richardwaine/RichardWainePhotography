@@ -14,7 +14,7 @@ const { mainHeading, paragraphs, locationColumns } = Astro.props;
 ---
 
 
-<div class="wrapper">
+<div class="wrapper headshots-near-section-wrapper">
       <div class="hs-near">
           <h2 class="section-title hs-near-h2 center">{mainHeading}</h2>
           <div class="hs-near-paragraph paragraph">
@@ -99,6 +99,10 @@ const { mainHeading, paragraphs, locationColumns } = Astro.props;
   
 
 <style>
+
+  .headshots-near-section-wrapper{
+    padding-block:var(--size-8);
+  }
 
 /*headshots near styles*/
 

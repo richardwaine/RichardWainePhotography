@@ -1,7 +1,7 @@
 ---
 import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 ---
-
+<div class="map-wrapper">
 <h2 class="section-title center">Global Network of Headshot Photographers</h2>
 <div class="WorldMapSection">
         
@@ -52,6 +52,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 
         </div>
 
+</div>
 </div>
 
 <script>
@@ -296,6 +297,13 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 </script>
 
 <style>
+
+.map-wrapper{
+  padding-block:var(--size-8);
+}
+
+
+
    h2{
     text-wrap:pretty;
      width:calc(100% - 4em);
@@ -305,11 +313,12 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 
 .WorldMapSection{
     width:calc(100% - 4em);
-    /* width:80%; */
+    width:90%;
     margin-inline:auto;
     display:grid;
     grid-template-columns: 1fr; 
     gap:var(--size-8);
+    
 }
 
 
@@ -322,6 +331,9 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     @media (width >= 67.5em){
       .WorldMapSection{
         grid-template-columns:1.25fr 1fr;
+        align-items:center;
+
+      
       }
   
   }
