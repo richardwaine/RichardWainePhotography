@@ -6,8 +6,8 @@
 import { Image } from 'astro:assets';
 import PrimaryButton from './PrimaryButton.astro';
 import SecondaryButton from './SecondaryButton.astro';
-import heroBackground from '../assets/bts-hero-background.jpg';
-import heroBackgroundMobile from '../assets/bts-hero-background-mobile.jpg';
+import heroBackground from '../assets/bts-hero-background.webp';
+import heroBackgroundMobile from '../assets/bts-hero-background-mobile.webp';
 
 export interface Props {
   title?: string[];
@@ -80,12 +80,13 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
 
    <!-- Optimized Background Images - Responsive -->
 <div class="hero-background-picture">
-    <Image 
-        src={heroBackground} 
-        alt="behind the scenes of Richard Waine setting up headshot lighting for a professional headshot session at Richard Waine Photography Studio" 
-        class="hero-background-image" 
+    <Image
+        src={heroBackground}
+        alt="behind the scenes of Richard Waine setting up headshot lighting for a professional headshot session at Richard Waine Photography Studio"
+        class="hero-background-image"
         loading="eager"
         fetchpriority="high"
+        decoding="async"
         widths={[400, 800, 1600]}
         sizes="(max-width: 768px) 400px, 1600px"
         data-mobile-src={heroBackgroundMobile.src}
@@ -173,7 +174,7 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
                                     <Image
                                         src={heroImg1_600}
                                         alt="Professional headshot - Lancaster PA"
-                                        loading="eager"
+                                        loading="eager" fetchpriority="high"
                                         widths={[400, 600]}
                                         sizes="(max-width: 767px) 45vw, (max-width: 1023px) 30vw, 120px"
                                         width={300}

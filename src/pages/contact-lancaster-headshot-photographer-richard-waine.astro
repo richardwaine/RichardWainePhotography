@@ -5,6 +5,9 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Gallery from '../components/Gallery.astro';
 import PrimaryButton from '../components/PrimaryButton.astro';
 import PageTitle from '../components/PageTitle.astro';
+import EnvelopeIcon from '../components/icons/EnvelopeIcon.astro';
+import PhoneIcon from '../components/icons/PhoneIcon.astro';
+import LocationIcon from '../components/icons/LocationIcon.astro';
 
 const title = 'Contact - Richard Waine Photography';
 const h1 = 'Contact Richard Waine Photography';
@@ -67,16 +70,15 @@ const h1 = 'Contact Richard Waine Photography';
         <!-- Contact Information -->
         <div class="contact-info">
           <a href="mailto:info@richardwaine.com" class="contact-item">
-            <i class="fas fa-envelope"></i>
+            <EnvelopeIcon />
             <span>info@richardwaine.com</span>
           </a>
           <a href="tel:7179250061" class="contact-item">
-            <i class="fas fa-phone"></i>
+            <PhoneIcon />
             <span>(717) 925-0061</span>
           </a>
           <a href="https://maps.app.goo.gl/wtVRCXev3VWkweGi7" target="_blank" class="contact-item">
-
-            <i class="fa-solid fa-location-dot"></i>
+            <LocationIcon />
             <span>20 North Queen Street<br>Lancaster, PA 17603</span>
           </a>
         </div>
@@ -192,11 +194,11 @@ const h1 = 'Contact Richard Waine Photography';
     color: var(--accent);
   }
 
-  .contact-item i {
-    font-size: var(--fs-600);
+  .contact-item :global(svg) {
+    width: 20px;
+    height: 25px;
     color: var(--blkclr);
-    width: 30px;
-    text-align: center;
+    flex-shrink: 0;
   }
 
   .contact-form {

@@ -1,18 +1,22 @@
 ---
 // @ts-nocheck
 import logoWhite from '../assets/Logo - Richard Waine Photography (transparent) white.png';
+import FacebookIcon from './icons/FacebookIcon.astro';
+import InstagramIcon from './icons/InstagramIcon.astro';
+import PinterestIcon from './icons/PinterestIcon.astro';
+import LinkedInIcon from './icons/LinkedInIcon.astro';
 
 export interface Props {
   businessInfo?: {name: string; address: string; phone: string};
   logoSrc?: string;
   logoAlt?: string;
-  socialLinks?: Array<{platform: string; url: string; iconClass: string; ariaLabel: string}>;
+  socialLinks?: Array<{platform: string; url: string; ariaLabel: string}>;
   areasServiced?: Array<{name: string; url: string}>;
   quickLinks?: Array<{name: string; url: string}>;
   copyrightYear?: number;
 }
 
-const { 
+const {
   businessInfo = {
     name: 'Richard Waine Photography',
     address: '20 North Queen Street, Lancaster, PA 17603',
@@ -21,10 +25,10 @@ const {
   logoSrc = logoWhite.src,
   logoAlt = 'Richard Waine Photography Logo',
   socialLinks = [
-    { platform: 'facebook', url: 'https://www.facebook.com/RichardWainePhotography', iconClass: 'fa-brands fa-facebook-f', ariaLabel: 'link to Facebook profile' },
-    { platform: 'instagram', url: 'https://www.instagram.com/richardwaine', iconClass: 'fa-brands fa-instagram', ariaLabel: 'link to Instagram profile' },
-    { platform: 'pinterest', url: 'https://www.pinterest.com/RichardWaine', iconClass: 'fa-brands fa-pinterest-p', ariaLabel: 'link to Pinterest profile' },
-    { platform: 'linkedin', url: 'https://www.linkedin.com/in/richardwaine', iconClass: 'fa-brands fa-linkedin-in', ariaLabel: 'link to LinkedIn profile' }
+    { platform: 'facebook', url: 'https://www.facebook.com/RichardWainePhotography', ariaLabel: 'link to Facebook profile' },
+    { platform: 'instagram', url: 'https://www.instagram.com/richardwaine', ariaLabel: 'link to Instagram profile' },
+    { platform: 'pinterest', url: 'https://www.pinterest.com/RichardWaine', ariaLabel: 'link to Pinterest profile' },
+    { platform: 'linkedin', url: 'https://www.linkedin.com/in/richardwaine', ariaLabel: 'link to LinkedIn profile' }
   ],
   areasServiced = [
     { name: 'Lancaster', url: '/' },
@@ -45,6 +49,14 @@ const {
   ],
   copyrightYear = new Date().getFullYear()
 } = Astro.props;
+
+// Icon component mapping
+const iconComponents = {
+  facebook: FacebookIcon,
+  instagram: InstagramIcon,
+  pinterest: PinterestIcon,
+  linkedin: LinkedInIcon
+};
 ---
 
 <!-- Footer Access Trapezoid -->
@@ -93,13 +105,16 @@ const {
             
             <div class="footer-social">
                 <ul class="social-icons">
-                    {socialLinks.map(social => (
-                        <li>
-                            <a href={social.url} aria-label={social.ariaLabel}>
-                                <i class={`${social.iconClass}`}></i>
-                            </a>
-                        </li>
-                    ))}
+                    {socialLinks.map(social => {
+                        const IconComponent = iconComponents[social.platform];
+                        return (
+                            <li>
+                                <a href={social.url} aria-label={social.ariaLabel}>
+                                    <IconComponent />
+                                </a>
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         </div>

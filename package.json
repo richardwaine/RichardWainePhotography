@@ -15,7 +15,6 @@
     "@fontsource/lato": "^5.2.7",
     "@fontsource/montserrat": "^5.2.8",
     "@fontsource/space-grotesk": "^5.2.10",
-    "@fortawesome/fontawesome-free": "^7.1.0",
     "@react-three/drei": "^10.7.4",
     "@react-three/fiber": "^9.3.0",
     "astro": "^5.15.2",
