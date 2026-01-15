@@ -174,7 +174,6 @@ body {
   font-family: var(--ff-primary);
   background-color: var(--ltclr);
   color: var(--blkclr);
-  /* line-height: 1.5; */
   font-weight: var(--fw-normal);
 }
 
@@ -214,41 +213,25 @@ h2 {
 .blog-container {
   width: min(calc(100% - 2em), 100%);
   margin: 0 auto;
-  /* padding: 0 2em; */
+
 }
 
 .main-content {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--size-7);
-  /* gap:6em; */
-  /* padding: var(--size-3) 0; */
   margin-bottom:var(--size-9);
 }
 
 .filter-section {
-position:relative;
-top:auto;
-
-
-  /* position: sticky; */ 
-  /* top: 200px; */
-  
+  position:relative;
+  top:auto;
   height: fit-content;
-
   padding:  var(--size-3);
-  /* padding:  var(--size-7); */
-
-
   background: var(--ltclr);
-
   border: none;
-  /* border: 1px solid #e5e5e5; */
-
   box-shadow: none;
-  /* box-shadow: var(--shadow); */
-  
-  border-radius:8px;
+  border-radius: var(--size-2);
   margin-bottom:var(--size-4);
   
 }
@@ -257,13 +240,8 @@ top:auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: var(--size-2);
   margin: 0 0 var(--size-5) 0;
-  
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* gap: 8px; */
-  /* margin: var(--size-5) 0; */
   font-size:var(--fs-400);
   
 }
@@ -324,7 +302,6 @@ top:auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  /* padding-bottom:var(--size-3); */
     margin-bottom:var(--size-3);
     border-bottom: 1px solid #e5e5e5; /* Separator for mobile header */
 
@@ -337,12 +314,12 @@ top:auto;
     background: var(--blkclr);
     color: var(--ltclr);
     border: none;
-    padding: 10px 12px;
+    padding: 10px 12px; 
     margin-bottom:var(--size-3);
     font-size:var(--fs-350);
     cursor: pointer;
     align-items: center;
-    gap: 8px;
+    gap: var(--size-2);
     transition: background-color 0.2s ease, transform 0.3s ease;
 }
 
@@ -361,20 +338,15 @@ top:auto;
 
 /* Filter Content Wrapper - hidden by default (mobile) */
 .filter-content {
-    max-height: 0; /* Hidden by default */
-    overflow: hidden; /* Hide overflowing content */
+    max-height: 0; 
+    overflow: hidden; 
     padding-block:0;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .filter-content.open {
-    max-height: 1000px; /* Large enough to show all content */
+    max-height: 1000px; 
 }
-
-
-
-
-
 
 
 .blog-posts {
@@ -415,7 +387,7 @@ top:auto;
   .filter-tabs {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--size-2);
     margin:var(--size-5) 0;
   }
 

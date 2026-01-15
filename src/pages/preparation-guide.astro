@@ -205,9 +205,7 @@ const h1 = 'Preparation Guide';
 </main>
 
 <style is:global>
-/**
- * Tabs
- */
+/* Tabs */
 .tabs {
   display: flex;
   flex-wrap: wrap;
@@ -234,6 +232,8 @@ const h1 = 'Preparation Guide';
   width: 100%;
   padding: 3rem 1rem 1rem;
   background: var(--ltclr);
+
+  
 }
 
 .tabs .tab,
@@ -252,7 +252,10 @@ const h1 = 'Preparation Guide';
 
 
 
-/* Mobile-First: Desktop enhancements */
+/* ==========================================
+   LARGE DESKTOP - min-width: 48em (768px)
+   ========================================== */
+
 @media (min-width: 48em) {
   .tabs label {
     order: 1;
@@ -269,10 +272,10 @@ const h1 = 'Preparation Guide';
 main {
   background: var(--ltclr);
   min-height: 100vh;
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
   margin: 0 auto;
   font-size: var(--fs-500);
-  /* padding-top: 2rem; */
+ 
 }
 
 #gallery {

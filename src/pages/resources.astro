@@ -585,11 +585,9 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
        
 
         body {
-            /* font-family: "Montserrat", sans-serif; */
-            background-color: #ffffff;
-            color: #000000;
-            /* line-height: 1.5; */
-            /* font-weight: var(--fw-normal); */
+            
+            background-color: var(--ltclr);
+            color: var(--blkclr);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -600,7 +598,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         h4,
         h5,
         h6 {
-            /* line-height: 1.2; */
+            
             font-weight: 600;
             margin-block: var(--size-3);
             text-wrap: balance;
@@ -643,7 +641,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             width: min(calc(100% - 6em), 100%);
             width:80%;
             margin: 0 auto;
-            /* padding: 0 2em; was commented in original */
+
         }
 
         .category-heading{
@@ -654,7 +652,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         .main-content {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--size-7); /* Set as base, will inherit correctly */
+            gap: var(--size-7); 
             padding:var(--size-7) 0 0 0;
             justify-content: center;
             margin-bottom:var(--size-9);
@@ -669,8 +667,10 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             background: var(--ltclr);
             border: none; /* No border by default (when collapsed) */
             box-shadow: none; /* No shadow by default (when collapsed) */
-            border-radius: 8px; /* Consistent rounded corners */
+            border-radius: var(--size-2);
             margin-bottom: var(--size-4); /* Space below filter on mobile */
+
+         
         }
 
         /* Filter Header (contains title and toggle button) */
@@ -689,11 +689,11 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             background: var(--blkclr);
             color: var(--ltclr);
             border: none;
-            padding: 10px 12px; /* Adjusted padding for better alignment */
+            padding: 10px 12px; 
             font-size: var(--fs-350);
             cursor: pointer;
             align-items: center;
-            gap: 8px;
+            gap: var(--size-2);
             transition: background-color 0.2s ease, transform 0.3s ease;
         }
 
@@ -726,7 +726,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         .filter-tabs {
             display: grid; /* Grid for mobile 2-column layout */
             grid-template-columns: 1fr 1fr; /* Two columns for mobile buttons */
-            gap: 8px; /* Gap between buttons */
+            gap: var(--size-2); /* Gap between buttons */
             margin: 0 0 var(--size-5) 0; /* Adjusted margin for mobile */
             font-size:var(--fs-400);
         }
@@ -766,7 +766,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             color: var(--blkclr);
             border: 1px solid #e5e5e5;
             transition: border-color 0.2s ease;
-            /* border-radius: 4px; */
+            
         }
 
 
@@ -798,7 +798,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             border: 1px solid #e5e5e5;
             color: var(--blkclr);
             transition: box-shadow 0.2s ease;
-            border-radius: 12px;
+            border-radius: var(--size-250);
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -850,6 +850,8 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 
         .vendor-website,
         .vendor-email {
+        
+
             display: inline-block;
             margin-top: var(--size-2);
             color: #0066cc;
@@ -862,7 +864,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         }
 
         .blog-card-excerpt {
-            font-size: 0.875rem;
+            font-size: var(--fs-350);
             margin-top: var(--size-3);
             padding: var(--size-1);
             display: -webkit-box;
@@ -878,7 +880,6 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             -webkit-box-orient: vertical;
             overflow: hidden;
             word-wrap: break-word;
-            /* line-height: 1.2em; */
             padding-inline: 0.15em;
         }
 
@@ -900,30 +901,39 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             width: fit-content;
             border-radius: 4px;
         }
-*/
+
         .read-more:hover {
             background: var(--blkclr);
             color: var(--ltclr);
+
+           
         }
 
         .read-more:focus-visible {
             outline: none;
             box-shadow: 0 0 0 2px var(--blkclr);
+            
         }
-
+*/
         /* Media queries for larger screens (min-width approach) */
 
-        /* Original Media query for 641px and up */
+
+    /* ==========================================
+    LARGE DESKTOP - min-width: 40.0625em (641px)
+    ========================================== */
+
         @media (min-width: 40.0625em) { /* Corrected from 640px to 641px */
             .blog-container {
-                padding: 0 24px;
+                padding: 0 var(--size-5);
             }
             .blog-posts {
                 grid-template-columns: repeat(1, 1fr);
             }
         }
 
-        /* Original Media query for 768px and up */
+    /* ==========================================
+    TABLET - min-width: 48em (768px)
+    ========================================== */
         @media (min-width: 48em) {
             /* Main content grid layout - UNCHANGED from original, allowing gap to inherit */
             .main-content {
@@ -940,7 +950,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 
                 position: sticky;
                 top: 200px;
-                padding: 32px;
+                padding: var(--size-7);
                 border: 1px solid #e5e5e5;
                 box-shadow: var(--_shadow);
             }
@@ -952,7 +962,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             .filter-header {
                 border-bottom: none; /* Remove mobile separator */
                 padding-bottom: 0; /* Reset mobile padding */
-                margin-bottom: 16px; /* Restore original desktop margin */
+                margin-bottom: var(--size-3); /* Restore original desktop margin */
             }
             /* Ensure filter content is visible on desktop */
             .filter-content {
@@ -963,12 +973,14 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             .filter-tabs {
                 display: flex; /* Flex to align items in column */
                 flex-direction: column; /* Stack vertically */
-                gap: 8px; /* Gap between buttons */
-                margin: 24px 0; /* Restore original desktop margin */
+                gap: var(--size-2); /* Gap between buttons */
+                margin: var(--size-5) 0; /* Restore original desktop margin */
             }
         }
 
-        /* Original Media query for 1024px and up */
+    /* ==========================================
+    LARGE DESKTOP - min-width: 64em (1024px)
+    ========================================== */
         @media (min-width: 64em) {
             .blog-container {
                 padding-inline: 0;

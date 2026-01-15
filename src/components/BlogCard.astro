@@ -52,7 +52,7 @@ a {
   border: 1px solid #e5e5e5;
   color: var(--blkclr);
   transition: box-shadow 0.2s ease;
-  border-radius: 12px;
+  border-radius: var(--size-250);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -103,7 +103,7 @@ a {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  word-wrap: break-word; /* Add this */
+  word-wrap: break-word; 
   line-height: var(--line-height-tight);
   margin-block:var(--size-3);
 }
@@ -130,6 +130,10 @@ a {
   box-shadow: 0 0 0 2px var(--blkclr);
 }
 
+
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
 @media (min-width: 48em) {
   .main-content {
     grid-template-columns: 280px 1fr;
@@ -138,8 +142,6 @@ a {
   .blog-card img {
     object-fit:cover;
     width:100%;
-    
-    /* height: 200px; */
   
   }
 }

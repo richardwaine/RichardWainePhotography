@@ -3,35 +3,32 @@ import { Image } from 'astro:assets';
 
 import AccelerateMortgage from '../assets/images/tearsheet/AccelerateMortgage.png';
 import AidemMedia from '../assets/images/tearsheet/AidemMedia.png';
-import AlliedFirstBank from '../assets/images/tearsheet/Allied First Bank - white.png';
-import Aperture from '../assets/images/tearsheet/Aperture.png';
-import Avail from '../assets/images/tearsheet/Avail.png';
+import AlliedFirstBank from '../assets/images/tearsheet/Allied First Bank - black.png';
+import Aperture from '../assets/images/tearsheet/Aperture - black.png';
+import Avail from '../assets/images/tearsheet/Avail - black.png';
 import CapitalOne from '../assets/images/tearsheet/Capital One.png';
 import Carel from '../assets/images/tearsheet/Carel.png';
 import Chubb from '../assets/images/tearsheet/Chubb.png';
-import ColumbiaCottage from '../assets/images/tearsheet/Columbia Cottage - (white).png';
+import ColumbiaCottage from '../assets/images/tearsheet/Columbia Cottage - (black).png';
 import EPNB from '../assets/images/tearsheet/EPNB.png';
 import Havtech from '../assets/images/tearsheet/Havtech.png';
 import Inframark from '../assets/images/tearsheet/Inframark.png';
 import Isaca from '../assets/images/tearsheet/ISACA.png';
 import Janney from '../assets/images/tearsheet/Janney.png';
-import KaufmanDolowich from '../assets/images/tearsheet/Kaufman Dolowich.png';
+import KaufmanDolowich from '../assets/images/tearsheet/Kaufman Dolowich (black).png';
 import LCNBlack from '../assets/images/tearsheet/LCN Logo (black).png';
-import LCNWhite from '../assets/images/tearsheet/LCN Logo (white).png';
 import Metso from '../assets/images/tearsheet/Metso Outotec.png';
 import NorthWestBlack from '../assets/images/tearsheet/Northwest Bank (black).png';
-import NorthWestWhite from '../assets/images/tearsheet/Northwest Bank (white).png';
 import RBC from '../assets/images/tearsheet/RBC.png';
 import RGInjuryLaw from '../assets/images/tearsheet/RG-injury-law.png';
-import SallieMae from '../assets/images/tearsheet/Sallie-Mae.png';
 import SallieMae2 from '../assets/images/tearsheet/Sallie-Mae-2.png';
 import TRC from '../assets/images/tearsheet/TRC.png';
 import ZentisBlack from '../assets/images/tearsheet/Zentis - (black).png';
-import ZentisWhite from '../assets/images/tearsheet/Zentis - (white).png';
+
 
 
 interface Logo {
-  src: string;
+  src: any;
   alt: string;
   scale?: number;
 }
@@ -39,31 +36,29 @@ interface Logo {
 
 
 const logos: Logo[] = [
-  { src: "src/assets/images/tearsheet/AccelerateMortgage.png", alt: "Accelerate Mortgage" },
-  { src: "src/assets/images/tearsheet/AidemMedia.png", alt: "Aidem Media" },
-  { src: "src/assets/images/tearsheet/Allied First Bank - black.png", alt: "Allied First Bank", scale: 1.35 },
-  { src: "src/assets/images/tearsheet/Aperture - black.png", alt: "Aperture LLC" },
-  { src: "src/assets/images/tearsheet/Chubb.png", alt: "Chubb Insurance" },
-  { src: "src/assets/images/tearsheet/Columbia Cottage - (black).png", alt: "Columbia Cottage" },
-  { src: "src/assets/images/tearsheet/EPNB.png", alt: "Ephrata National Bank", scale: 1.5 },
-  { src: "src/assets/images/tearsheet/Havtech.png", alt: "Havtech", scale: 1.25 },
-  { src: "src/assets/images/tearsheet/ISACA.png", alt: "ISACA Harrisburg" },
-  { src: "src/assets/images/tearsheet/Avail - black.png", alt: "Avail Technology Solutions", scale: 0.8 },
-  { src: "src/assets/images/tearsheet/TRC.png", alt: "TRC Companies", scale: 0.9 },
-  { src: "src/assets/images/tearsheet/Loginext.png", alt: "Loginext", scale: 1.25},
-  { src: "src/assets/images/tearsheet/Northwest Bank (black).png", alt: "Northwest Bank", scale: 1.45 },
-  { src: "src/assets/images/tearsheet/Carel.png", alt: "Carel USA", scale: 0.8 },
-  { src: "src/assets/images/tearsheet/Janney.png", alt: "Janney", scale:1.35 },
-  { src: "src/assets/images/tearsheet/RBC.png", alt: "RBC Wealth Management" },
-  { src: "src/assets/images/tearsheet/RG-injury-law.png", alt: "RG Injury Law", scale: 1.35 },
-  { src: "src/assets/images/tearsheet/Sallie-Mae-2.png", alt: "Sallie Mae" },
-  { src: "src/assets/images/tearsheet/LCN Logo (black).png", alt: "LCN Capital", scale:0.9 },
-  { src: "src/assets/images/tearsheet/Capital One.png", alt: "Capital One" },
-  { src: "src/assets/images/tearsheet/Inframark.png", alt: "Inframark", scale: 1.25 },
-  { src: "src/assets/images/tearsheet/Metso Outotec.png", alt: "Metso", scale: 1.25 },
-  { src: "src/assets/images/tearsheet/Kaufman Dolowich (black).png", alt: "Kaufman Dolowich", scale: 1.6 },
-  { src: "src/assets/images/tearsheet/Zentis - (black).png", alt: "Zentis North America", scale: 0.8 },
-  
+  { src: AccelerateMortgage, alt: "Accelerate Mortgage" },
+  { src: AidemMedia, alt: "Aidem Media" },
+  { src: AlliedFirstBank, alt: "Allied First Bank", scale: 1.35 },
+  { src: Aperture, alt: "Aperture LLC" },
+  { src: Chubb, alt: "Chubb Insurance" },
+  { src: ColumbiaCottage, alt: "Columbia Cottage" },
+  { src: EPNB, alt: "Ephrata National Bank", scale: 1.5 },
+  { src: Havtech, alt: "Havtech", scale: 1.25 },
+  { src: Isaca, alt: "ISACA Harrisburg" },
+  { src: Avail, alt: "Avail Technology Solutions", scale: 0.8 },
+  { src: TRC, alt: "TRC Companies", scale: 0.9 },
+  { src: NorthWestBlack, alt: "Northwest Bank", scale: 1.45 },
+  { src: Carel, alt: "Carel USA", scale: 0.8 },
+  { src: Janney, alt: "Janney", scale: 1.35 },
+  { src: RBC, alt: "RBC Wealth Management" },
+  { src: RGInjuryLaw, alt: "RG Injury Law", scale: 1.35 },
+  { src: SallieMae2, alt: "Sallie Mae" },
+  { src: LCNBlack, alt: "LCN Capital", scale: 0.9 },
+  { src: CapitalOne, alt: "Capital One" },
+  { src: Inframark, alt: "Inframark", scale: 1.25 },
+  { src: Metso, alt: "Metso", scale: 1.25 },
+  { src: KaufmanDolowich, alt: "Kaufman Dolowich", scale: 1.6 },
+  { src: ZentisBlack, alt: "Zentis North America", scale: 0.8 },
 ];
 
 
@@ -80,7 +75,7 @@ const logos: Logo[] = [
         <div class="scroller__inner">
             {logos.map((logo) => (
                 <img 
-                    src={logo.src} 
+                    src={logo.src.src} 
                     alt={logo.alt} 
                     loading="lazy" 
                     width="200" 
@@ -109,11 +104,10 @@ h2{
         
         display: grid;
         place-items: center;
-        
         width: 95%;
         margin: auto;
         padding-block: var(--size-8);
-        color: var(--drkclr, #222);
+        color: var(--blkclr);
         overflow: hidden;
 
         @media (width >= 48em){

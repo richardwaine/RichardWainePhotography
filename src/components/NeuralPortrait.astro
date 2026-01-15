@@ -600,24 +600,18 @@ const currentData = portfolioData[currentImageIndex];
 
 <style>
 .neural-section {
-
   display:grid;
-
   grid-template-columns: 1fr;
-
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-inline:var(--size-3);
-  /* padding: var(--size-10) var(--size-2) var(--size-7); */
+  padding:0 var(--size-3);
   overflow-x: hidden;
   min-height: 100vh;
-  /* background: var(--drkbg); */
   color: var(--ltclr);
   font-family: var(--ff-primary);
   width:100%;
 
-  padding-block:0;
 }
 
 
@@ -645,7 +639,6 @@ const currentData = portfolioData[currentImageIndex];
 
 .neural-title {
   font-family: var(--ff-primary);
-  /* font-size: clamp(2.5rem, 6vw, 5rem); */
   font-size:var(--fs-clamp-display);
   font-weight: var(--fw-x-bold);
   line-height:  var(--line-height-dramatic);
@@ -702,15 +695,13 @@ const currentData = portfolioData[currentImageIndex];
   background: rgba(255, 255, 255, 0.025);
   border: 1px solid var(--highlight-clr-soft);
   backdrop-filter: blur(10px);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-
+  transition: all var(--transition-slow) cubic-bezier(0.23, 1, 0.32, 1);
   clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
 }
 
 .data-stream:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.5);
-    /* border-color: rgba(255, 255, 255, 0.4); */
   transform: translateX(10px);
 }
 
@@ -724,7 +715,6 @@ const currentData = portfolioData[currentImageIndex];
   color: var(--accent);
   font-weight: var(--fw-bold);
   font-size: var(--fs-350);
-  /* text-shadow: 0 0 8px rgba(0, 168, 255, 0.25); */
 }
 
 .cta-matrix {
@@ -737,24 +727,14 @@ const currentData = portfolioData[currentImageIndex];
   flex-direction: column;
   align-items: center;
   gap: var(--size-7);
-
   
 }
 
 .holographic-frame {
   position: relative;
-
-  /* DEPRECATED: Fixed dimensions approach - December 2025 */
-  /* height: min(240px, 72vw); */
-  /* width: clamp(300px, 100%, 90vw); */
-  /* height: auto; */
-  /* max-width: 100%; */
-
-  /* Aspect ratio approach - maintains MacBook PNG proportions (1600x919) */
   width: 95%;
   max-width: 800px;
   aspect-ratio: 1600 / 919;
-
   filter: drop-shadow(10px 20px 30px rgba(0,0,0,.75));
 }
 
@@ -777,10 +757,8 @@ const currentData = portfolioData[currentImageIndex];
   position: absolute;
   top: 9%;
   left: 12.3%;
-
   width: 75.25%;
   height: 80.5%;
-
   border-radius: 0;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.9);
@@ -799,10 +777,8 @@ const currentData = portfolioData[currentImageIndex];
 
 .analysis-overlay {
   position: absolute;
-  
   inset:0;
   pointer-events: none;
-
   
 }
 
@@ -845,7 +821,6 @@ const currentData = portfolioData[currentImageIndex];
   }
   50% { 
     transform: scale(1.2);
-    /* opacity: 0.7; */
   }
 }
 
@@ -930,13 +905,7 @@ const currentData = portfolioData[currentImageIndex];
     padding: 6rem var(--size-3) var(--size-7);
   }
 
-  .holographic-frame {
-    /* DEPRECATED: Fixed dimensions - December 2025 */
-    /* width: min(350px, 85vw); */
-    /* height: min(280px, 68vw); */
 
-    /* Aspect ratio inherited from base - no override needed */
-  }
 
   .matrix-cell {
   --_matrix-size:60px;
@@ -962,11 +931,7 @@ const currentData = portfolioData[currentImageIndex];
 @media (min-width: 48em) {
   .holographic-frame {
     width:100%;
-    /* DEPRECATED: Fixed dimensions - December 2025 */
-    /* width: min(400px, 90vw); */
-    /* height: min(320px, 72vw); */
-
-    /* Aspect ratio inherited from base - no override needed */
+  
   }
 
   .matrix-cell {
@@ -1011,8 +976,7 @@ const currentData = portfolioData[currentImageIndex];
   }
 
   .neural-content {
-    /* max-width: 1500px; */
-    /* max-width:80%; */
+  
     grid-template-columns: 1fr 1fr;
     text-align: left;
     padding: 0;
@@ -1023,15 +987,7 @@ const currentData = portfolioData[currentImageIndex];
     margin-bottom: var(--size-7);
   }
 
-  .holographic-frame {
-    /* DEPRECATED: Fixed dimensions - December 2025 */
-    /* width: 800px; */
-    /* height: 500px; */
-  
-    /* At desktop, max-width of 800px from base styles takes effect */
-    /* Aspect ratio maintains correct proportions automatically */
-    
-  }
+
 
 
   .data-streams {

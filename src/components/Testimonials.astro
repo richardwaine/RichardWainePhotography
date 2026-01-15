@@ -46,10 +46,8 @@ const testimonialsToDisplay = filterByNames
   ))}
 </div>
 
-
-
-
 </div>
+
 
 <style>
 .testimonial-section-wrapper{
@@ -66,17 +64,17 @@ const testimonialsToDisplay = filterByNames
 
 
 .testimonial-2 {
-  /* margin: 0 auto var(--size-6); */
   margin: var(--size-6) auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: var(--size-4);
-  /* padding-inline:var(--size-7);  */ /*add this for desktop */
   text-align: center;
 
 }
 
-
+/* ==========================================
+   LARGE DESKTOP - min-width: 67.5em (1080px)
+   ========================================== */
 @media screen and (min-width: 67.5em) {
   .testimonial-2 {
     display: grid;

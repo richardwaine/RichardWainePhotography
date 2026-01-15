@@ -297,13 +297,13 @@ document.addEventListener("astro:page-load", () => {
   height: auto; /* Allows slides to occupy vertical space on mobile */
   flex-shrink: 0;
   display: block;
-  padding-block: 4rem; /* Add vertical padding for mobile stacking*/
+  padding-block: var(--size-9); /* Add vertical padding for mobile stacking*/
   background: var(--drkbg);
   color: var(--ltclr);
 }
 
 .feature-slide:first-child{
-  padding-block:0  4rem;
+  padding-block:0  var(--size-9);
 }
 
 .slide-content-wrapper {

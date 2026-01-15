@@ -138,9 +138,7 @@ import JillLazar from '../assets/images/professions/JillLazar - 0018 (horizontal
   padding-block:var(--size-8);
 }
 
-
 /* --- BASE STYLES (LARGE SCREEN LOGIC) --- */
-/* These styles define the multi-column desktop layout using order: 1/99. */
 
 .tabs, .professions-tabs {
   display: flex;
@@ -183,12 +181,12 @@ import JillLazar from '../assets/images/professions/JillLazar - 0018 (horizontal
 }
 
 .professions-tabs .professions-tab {
-  --_shadow: 2px 2px 10px rgba(0,0,0,.4);
+  --_shadow: 2px 2px 10px var(--shadow-clr-medium);
   flex-grow: 1;
   display: none;
-  /* padding: var(--size-8); */
   background: var(--drkbg);
   box-shadow: var(--_shadow);
+  
 }
 
 .tabs .tab, .tabs input[type=radio], .professions-tabs input[type="radio"] {
@@ -235,6 +233,10 @@ import JillLazar from '../assets/images/professions/JillLazar - 0018 (horizontal
 
 
 /* --- DESKTOP ENHANCEMENTS (MIN-WIDTH QUERIES) --- */
+
+/* ==========================================
+   LARGE DESKTOP - min-width: 48em (768px)
+   ========================================== */
 
 @media screen and (min-width: 48em) {
   /* Desktop Multi-Column Layout */
