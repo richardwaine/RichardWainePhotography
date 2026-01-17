@@ -15,7 +15,6 @@
   --text-color:var(--blkclr);
   --primary-color:var(--blkclr);
   --secondary-color:#F1F1F1;
-  --head-color:var(--primary-color);
 
  /*font family*/
   --ff-primary:'Montserrat',sans-serif;
@@ -143,18 +142,12 @@ p,li{
 
 /*end css reset */
 
-
-
-
 body{
-
-  min-height:auto; /*changed 3/4/2025 */
+  min-height:auto; 
   width:100%;
   font-family:var(--ff-primary);
-  line-height:1.7; /*balanced readability and spacing */
-  
+  line-height:var(--line-height-relaxed); 
  }
-
 
 
 a{
@@ -163,15 +156,12 @@ a{
 }
 
 /* responsive images/videos */
-img,picture,svg,video {
+img,picture,svg,path,video {
   display: block;
   max-inline-size: 100%;
 }
 
 /* END RESET */
-
-
-
 
 /*utility classes*/
 
@@ -186,10 +176,14 @@ img,picture,svg,video {
 }
 
 /*center text*/
-.center{text-align:center}
+.center{
+  text-align:center;
+}
 
 /*ltr spacing*/
-.spacing{letter-spacing:var(--ltr-space)}
+.spacing{
+  letter-spacing:var(--ltr-space);
+}
 
 /*paragraph text*/
 
@@ -208,19 +202,15 @@ strong{
   font-weight:var(--fw-bold);
 }
 
-    .wrapper{
-            
-       margin-inline:auto;
-       width:80%;
-      
-        
-        
-      }
+.wrapper{        
+  margin-inline:auto;
+  width:80%;
+}
 
 
-    footer{
-      width:100%;
-    }
+footer{
+  width:100%;
+}
 
 
 h1{
@@ -234,6 +224,13 @@ h2{
   font-family:var(--ff-primary);
   text-transform:uppercase;
 }
+
+
+p{
+  font-size:var(--fs-450);
+  margin-bottom: var(--size-3);
+}
+
 
 /* ===========================================
    BUTTON SYSTEM - Standardized button classes
@@ -266,8 +263,6 @@ h2{
     padding: calc(var(--size-3) - 4px) var(--size-8);
     font-size: var(--fs-400);
 }
-
-
  }
 
 
@@ -299,6 +294,9 @@ h2{
   transform: translateY(-4px) scale(1.02);
 }
 
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
 
 @media (min-width: 48em) {
   @keyframes buttonGlow {
@@ -331,18 +329,4 @@ h2{
 .button-wrapper .btn:focus,
 .button-wrapper .btn:focus-visible {
   outline: none;
-}
-
-
-
-
-
-p{
-  font-size:var(--fs-450);
-  margin-bottom: var(--size-3);
-}
-
-h1{
-  font-size:var(--fs-800);
-  font-weight:var(--fw-bold);
 }

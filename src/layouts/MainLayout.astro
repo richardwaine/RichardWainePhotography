@@ -7,14 +7,11 @@ import { ClientRouter } from 'astro:transitions';
 // Montserrat Variable (replaces 5 weight files)
 import '@fontsource-variable/montserrat';
 
-// Lato - keep as static (no variable version available)
-import '@fontsource/lato/400.css';
-import '@fontsource/lato/700.css';
-
 // Space Grotesk Variable (replaces 1 weight file)
 import '@fontsource-variable/space-grotesk';
 
 import '../styles/style.css';
+import 'gsap';
 
 export interface Props{
 	title:string;
@@ -124,6 +121,7 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 		}
 		</script>
 
+	
 	</head>
 
 
@@ -138,8 +136,8 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 
 	<Footer  />
 
-	<script>
-	import Lenis from 'lenis';
+	 <script>
+	// import Lenis from 'lenis'; // COMMENTED OUT: Now conditionally imported inside initLenis() for desktop only (≥768px)
 	import gsap from 'gsap';
 	import { Flip } from 'gsap/Flip';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -161,19 +159,20 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 	window.scrollTo(0, 0);
 
 	// Wait for DOM to be ready before initializing Lenis
-	function initLenis() {
-		// Initialize Lenis only once (persists across View Transitions)
+	async function initLenis() {
+		if (window.innerWidth <= 767) return;
+
 		if (!window.lenis) {
+			const { default: Lenis } = await import('lenis');
+
 			window.lenis = new Lenis({
 				duration: 1.2,
 				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 				prevent: (node) => node.hasAttribute('data-lenis-prevent'),
 			});
 
-			// Connect Lenis to GSAP ScrollTrigger
 			window.lenis.on('scroll', ScrollTrigger.update);
 
-			// Animate Lenis on every frame
 			gsap.ticker.add((time) => {
 				window.lenis?.raf(time * 1000);
 			});
@@ -194,7 +193,7 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 		ScrollTrigger.refresh();
 	});
 	</script>
-
+ 
 
 
 </body>

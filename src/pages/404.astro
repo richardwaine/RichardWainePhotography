@@ -89,20 +89,27 @@ const {
 
   .actions {
     display: flex;
+    flex-direction:column;
     gap: var(--size-3);
     justify-content: center;
-  }
 
+    @media (width >= 48em){
+      flex-direction:row;
+  }
+}
 
 
 .actions :global(.btn){
-   padding:var(--size-3) var(--size-8);
+    width:calc(100% - var(--size-7));
+    padding:var(--size-3) var(--size-8);
     font-weight: var(--fw-semi-bold);
     text-decoration: none;
     transition: filter 0.2s;
 
     @media (width >= 48em){
+      width:auto;
       padding:var(--size-3) var(--size-10);
+
 }
 }
 

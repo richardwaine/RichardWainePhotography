@@ -11,13 +11,13 @@ const { faqs, idPrefix = 'faq' } = Astro.props;
 <div class="faq-content">
   {faqs.map((faq, index) => (
     <div>
-      <input type="checkbox" id={`${idPrefix}-question${index}`} name="q" class="questions">
-<label for={`${idPrefix}-question${index}`} class="question">
-        {faq.question}
-      </label>
-      <div class="answers">
-        <p set:html={faq.answer}></p>
-      </div>
+      <input type="checkbox" id={`${idPrefix}-question${index}`} name="q" class="questions" />
+          <label for={`${idPrefix}-question${index}`} class="question">
+            {faq.question}
+          </label>
+          <div class="answers">
+            <p set:html={faq.answer}></p>
+          </div>
     </div>
   ))}
 </div>

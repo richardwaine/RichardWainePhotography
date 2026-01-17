@@ -162,9 +162,12 @@ const isInterview = post.data.type === 'interview';
 }
 
 .article-content{
-  padding-block:var(--size-7);
-  
-  
+padding-block:var(--size-3);
+
+
+   @media (min-width: 48em) {
+      padding-block:var(--size-9);
+    }
 }
 
 .article-content em{
@@ -173,7 +176,6 @@ const isInterview = post.data.type === 'interview';
     margin-inline:auto;
     margin-bottom:var(--size-8);
    
-    
   }
 
  .inline-em{
@@ -181,23 +183,31 @@ const isInterview = post.data.type === 'interview';
  }
 
 .article-content img{
+  margin-block:var(--size-7);
   display: block;
   width: min(600px, 100%);
   height:auto;
   margin-inline: auto;
-  margin-block: var(--size-9);
-  
+
+    @media (min-width: 48em) {
+      margin-block:var(--size-9);
+    }
 }
 
 .article-header-image{
+margin-block:var(--size-7);
+
   display:block;
   width:min(600px, 100%);
   height:auto;
   margin-inline:auto;
-  margin-block:var(--size-9);
   box-shadow:var(--shadow);
-  }
 
+
+    @media (min-width: 48em) {
+    margin-block:var(--size-9);
+  }
+}
 
 
 .article-content > :is(p, div, figure):has(img):not(:has(img) ~ *) img, .article-header-image{
@@ -223,25 +233,26 @@ article li{
 
 
 .references{
-margin-block:var(--size-8);
-  font-size:1rem;
-> p{
-text-align:center
-}
+  margin-block:var(--size-8);
+  font-size:var(--fs-400);
+
+    > p{
+    text-align:center
+  }
 }
 
 
 /* Mobile-First Replacement */
 .references-list {
   columns: 1;
-  gap: 2em;
-}
+  gap: var(--size-7);
 
-@media (min-width: 48em) {
-  .references-list {
-    columns: 2;
-  }
-}
+      @media (min-width: 48em) {
+        columns: 2;
+        }
+      }
+
+
 
 .table-of-contents li, .references li{
   margin-block:var(--size-1);
@@ -278,7 +289,7 @@ text-align:center
     font-weight:var(--fw-bold);
     cursor:pointer;
     color:blue;
-   font-weight:bold;
+    font-weight:bold;
   }
 
 article p{
@@ -288,7 +299,7 @@ article p{
 
 article h2, article h3{
 font-size:var(--fs-600);
-font-weight:bold;
+font-weight:var(--fw-bold);
 margin-block:var(--size-8) var(--size-7);
 
 }
@@ -298,7 +309,7 @@ article h3{
 }
 
 .subtitle{
-font-size:1rem;
+  font-size:var(--fs-400);
   max-inline-size:65ch;
   margin:auto;
 
@@ -322,14 +333,6 @@ margin:var(--size-7) auto;
 }
 
 
-
-
-
-
-p{
-  /* margin-bottom:var(--size-10); */
-}
-
 /*end blog posts*/
 
 .blog-faq-title {
@@ -341,23 +344,11 @@ article .article-content .faq-content {
   width: 100%;
   margin-inline: auto;
   margin-block: var(--size-10);
+
+      @media (min-width:64em){
+      width: 50%;
+    }
 }
-
-  @media (min-width:64em){
-    article .article-content .faq-content {
-    width: 50%;
-  }
-}
-
-
-    
-
-
-/* END NEW CSS */
-
-
-
-
 
 
 </style>

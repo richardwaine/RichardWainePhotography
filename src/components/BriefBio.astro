@@ -76,6 +76,10 @@ const { bioSectionHeading, bioSections } = Astro.props;
       
 </div>
 
+
+
+
+
 <style>
 
   
@@ -100,9 +104,9 @@ h2{
 /*bio hover section*/
 .bio-wrapper{
 
-
   --_wrapper-height:400px;
   --_wrapper-width:calc(var(--_wrapper-height) * 3); 
+
 
   box-shadow: var(--shadow);
   width: var(--_wrapper-width);
@@ -110,17 +114,12 @@ h2{
   height: var(--_wrapper-height);
   margin:0 auto;
   position: relative;
-
-
-
   display:none;
-
   
 }
 
 .bio-container {
   color: var(--blkclr);
- 
   justify-content: center;
   align-items: center;
   display: flex;
@@ -130,16 +129,7 @@ h2{
   width: var(--_wrapper-width);
   max-width: 100%;
   height: var(--_wrapper-height);
- 
-
-
-
-	
-
 }
-
-
-
 
 .bio-container .clip {
   position: absolute;
@@ -148,8 +138,6 @@ h2{
   width: 100%;
   height: 100%;
   transition: 0.5s;
-
-
 }
 
 
@@ -158,49 +146,40 @@ h2{
   background-size: cover;
   background-position: 0 -50px;
   background-repeat: no-repeat;
-
 }
+
 .clip.clip1 {
   background-size: cover;
   background-position: 0 -50px;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 40% 0, 25% 100%, 0% 100%);
 }
+
 .clip.clip2 {
   background-size: cover;
   background-position: 0 -110px;
   background-repeat: no-repeat;
   clip-path: polygon(40% 0, 100% 0, 75% 100%, 25% 100%);
 }
+
 .clip.clip3 {
   background-repeat: no-repeat;
   background-size: 60% ;
-
-  /* background-size:101%; */
-
-  /* background-size:contain; */
   background-position: 510px -1px;
   clip-path: polygon(75% 0, 100% 0, 102% 100%, 60% 102%);
-
 }
+
 .bio-container:hover .clip {
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  
- 
 }
+
 .bio-container .clip:hover {
-  /* clip-path: polygon(0 0, 100% 0, 100% 102%, 0 102%); */
-
  clip-path: polygon(-2% -2%, 102% -2%, 102% 102%, -2% 102%);
-
 }
-
-
 
 
 .bio-content{
    line-height: var(--line-height-relaxed); 
-  
 }
 
 .bio-content h2 {
@@ -213,23 +192,21 @@ h2{
 .bio-container .clip.clip1 .bio-content {
   position: absolute;
   bottom: -100%;
- 
   left: 0;
   width: 70%;
   padding:var(--size-4);
   background: var(--ltclr);
   opacity: 0;
   transition: 0.5s;
- 
 }
 
 .bio-container .clip.clip1:hover .bio-content {
   bottom: 0;
   opacity: 0.85;
 }
+
 .bio-container .clip.clip2 .bio-content {
   position: absolute;
-  /* bottom: 100%; */
   bottom:-90%;
   left: 0;
   width: 70%;
@@ -237,12 +214,13 @@ h2{
   background: var(--ltclr);
   opacity: 0;
   transition: 0.5s;
-
 }
+
 .bio-container .clip.clip2:hover .bio-content {
   bottom: 0;
   opacity: 0.85;
 }
+
 .bio-container .clip.clip3 .bio-content {
   position: absolute;
   top: 0;
@@ -253,13 +231,7 @@ h2{
   background: var(--ltclr);
   opacity: 0;
   transition: 0.5s;
- 
-
-  
 }
-
-
-
 
 
 .bio-container .clip.clip3:hover .bio-content {
@@ -267,10 +239,9 @@ h2{
   opacity: 0.85;
 }
 
-
-
 .bio-content p {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-primary);
+  font-size:var(--fs-400);
 }
 
 
@@ -279,8 +250,6 @@ h2{
    =========================================== */
 
 .bio-mobile {
-  /* display: none;  */
-
   display:block;
   max-width: 100%;
   position: relative;
@@ -288,13 +257,9 @@ h2{
 }
 
 .bio-mobile-image {
-  
   width: 100%;
   max-width: 500px;
   margin: 0 auto var(--size-7);
-   
-
-  
 }
 
 .bio-mobile-image img {
@@ -302,8 +267,6 @@ h2{
   height: auto;
   border-radius: 15px;
   box-shadow: var(--shadow);
-
-  
 }
 
 .bio-mobile-content {
@@ -324,7 +287,7 @@ h2{
 }
 
 .bio-mobile-section p {
-  font-family: var(--ff-secondary);
+  font-size:var(--fs-400);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--size-3);
 }
@@ -336,21 +299,20 @@ h2{
 
 @media (min-width: 90em) {
 
- 
   .bio-wrapper {
     display: grid;
-    
-
   }
 
   .bio-mobile {
     display: none;
   }
-
-  
 }
 
 </style>
+
+
+
+
 
 <script>
 function initLazyBackgrounds() {
