@@ -5,9 +5,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 export interface Props {
   title: string;
   post: any;
+  prevPost?: any;
+  nextPost?: any;
 }
 
-const { title, post } = Astro.props;
+const { title, post, prevPost, nextPost } = Astro.props;
 
 
 // --- NEW LINE HERE ---
@@ -128,6 +130,24 @@ const isInterview = post.data.type === 'interview';
     )}
     {/* --- END NEW SECTION --- */}
 
+{/* --- POST NAVIGATION --- */}
+    {(prevPost || nextPost) && (
+      <nav class="post-navigation">
+        <div class="nav-container">
+          {prevPost && (
+            <a href={`/blog/${prevPost.slug}`} class="nav-link prev-link">
+              ← {prevPost.data.blogTitle}
+            </a>
+          )}
+          {nextPost && (
+            <a href={`/blog/${nextPost.slug}`} class="nav-link next-link">
+              {nextPost.data.blogTitle} →
+            </a>
+          )}
+        </div>
+      </nav>
+    )}
+    {/* --- END POST NAVIGATION --- */}
 
   </article>
 
@@ -350,5 +370,39 @@ article .article-content .faq-content {
     }
 }
 
+/* Post Navigation */
+.post-navigation {
+  margin-block: var(--size-4);
+
+
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-inline:auto;
+  
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--blkclr);
+  font-weight: var(--fw-semi-bold);
+  transition: color 0.2s ease;
+  
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.prev-link {
+  text-align: left;
+}
+
+.next-link {
+  text-align: right;
+}
 
 </style>
