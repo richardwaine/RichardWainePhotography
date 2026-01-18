@@ -133,15 +133,15 @@ const isInterview = post.data.type === 'interview';
 {/* --- POST NAVIGATION --- */}
     {(prevPost || nextPost) && (
       <nav class="post-navigation">
-        <div class="nav-container">
+        <div class={`nav-container ${!prevPost && nextPost ? 'next-only' : ''} ${prevPost && !nextPost ? 'prev-only' : ''}`}>
           {prevPost && (
             <a href={`/blog/${prevPost.slug}`} class="nav-link prev-link">
-              ← {prevPost.data.blogTitle}
+              <span class="nav-arrow">←</span> {prevPost.data.blogTitle}
             </a>
           )}
           {nextPost && (
             <a href={`/blog/${nextPost.slug}`} class="nav-link next-link">
-              {nextPost.data.blogTitle} →
+              {nextPost.data.blogTitle} <span class="nav-arrow">→</span>
             </a>
           )}
         </div>
@@ -186,7 +186,7 @@ padding-block:var(--size-3);
 
 
    @media (min-width: 48em) {
-      padding-block:var(--size-9);
+      padding-block:var(--size-4);
     }
 }
 
@@ -372,17 +372,30 @@ article .article-content .faq-content {
 
 /* Post Navigation */
 .post-navigation {
-  margin-block: var(--size-4);
-
+  margin-block: var(--size-7);
+  padding-bottom:var(--size-7);
 
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: calc(100% - 2em);
   margin-inline:auto;
-  
+  align-items:baseline;
+
+@media (min-width:64em){
+      width: 80%;
+      font-size:var(--fs-450);
+    }
+}
+
+.nav-container.next-only {
+  justify-content: flex-end;
+}
+
+.nav-container.prev-only {
+  justify-content: flex-start;
 }
 
 .nav-link {
@@ -394,7 +407,12 @@ article .article-content .faq-content {
 }
 
 .nav-link:hover {
-  color: var(--accent);
+  color: blue;
+}
+
+.nav-arrow{
+font-size:var(--fs-600);
+padding-inline:.125rem;
 }
 
 .prev-link {
