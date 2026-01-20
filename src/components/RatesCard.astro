@@ -16,7 +16,7 @@ import ChubbContactSheet from '../assets/images/features/Chubb - ContactSheet (s
 
 <div class="wrapper">
 
-    <div class="tabs-container">
+    <div class="tabs-container rates-page-wrapper">
 
         <div class="toggle-wrapper">
             <button class="toggle-btn active" data-tab="0">
@@ -124,7 +124,6 @@ import ChubbContactSheet from '../assets/images/features/Chubb - ContactSheet (s
 
           <div class="rates-card right-card">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous" defer></script>
-            <style>#TaveContactForm {width:1px;min-width:100%;height:100%;min-height:850px}</style>
             <iframe id="TaveContactForm" src="https://richard-waine-photography.vsco.page/inline/contact/contact?tpl=20251016&resizer=4.2.10" scrolling="no" frameborder="0"></iframe>
 
             <script is:inline>
@@ -176,10 +175,11 @@ toggleBtns.forEach((btn) => {
    ========================================== */
 
 .wrapper{
-  /* padding-inline:var(--size-3); */
+  width:100%;
 }
 
 .rates-container{
+  
   display:grid;
   grid-template-columns: 1fr;
   box-shadow:0 5px 10px -5px #222;
@@ -217,12 +217,14 @@ toggleBtns.forEach((btn) => {
 
   > div{
     margin-block: auto;
+  
   }
 }
 
 .rates-card.right-card{
   background:var(--ltclr);
   color:var(--blkclr);
+  
 }
 
 .image-fee, .session-fee{
@@ -300,16 +302,18 @@ toggleBtns.forEach((btn) => {
   margin: 0 auto;
   height: fit-content;
   overflow: visible;
+  width:min(500px,95%);
+  
 }
 
 .toggle-btn{
   position: relative;
   z-index: 2;
-  padding: var(--size-3) var(--size-8);
+  padding: var(--size-3) var(--size-4);
   background: transparent;
   border: none;
   font-family: var(--ff-primary);
-  font-size: var(--fs-350);
+  font-size: var(--fs-300);
   text-transform: uppercase;
   font-weight: var(--fw-bold);
   letter-spacing: 1.5px;
@@ -319,11 +323,13 @@ toggleBtns.forEach((btn) => {
   flex-direction: column;
   align-items: center;
   color: var(--head-color);
-  min-width: 200px;
+  min-width: 50%;
+  
 }
 
 .toggle-btn.active{
   color: var(--ltclr);
+  
 }
 
 .toggle-slider{
@@ -344,6 +350,7 @@ toggleBtns.forEach((btn) => {
     0 0 100px rgba(3, 169, 244, 0.25),
     inset 0 1px 2px var(--highlight-clr-soft),
     inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+  
 }
 
 .toggle-slider::before {
@@ -381,6 +388,7 @@ toggleBtns.forEach((btn) => {
   display: none;
   background-color: var(--ltclr);
   margin-bottom:var(--size-7);
+  padding-inline:var(--size-3);
 }
 
 .tabs-detail-container.active{
@@ -410,7 +418,8 @@ toggleBtns.forEach((btn) => {
   margin: 0 auto;
   gap:var(--size-3);
   padding-inline:var(--size-8);
-  padding:var(--size-10);
+  /* padding:var(--size-10); */
+  
 }
 
 .sm-image-grid img{
@@ -421,7 +430,7 @@ toggleBtns.forEach((btn) => {
   box-shadow:var(--shadow);
 }
 
-.rates-image2, .rates-image3, .rates-image4 {
+.rates-image3{
   display: none;
 }
 
@@ -431,13 +440,35 @@ toggleBtns.forEach((btn) => {
 
 .testimonial-content img {
   box-shadow: var(--shadow);
-  padding:var(--size-7);
+  
 }
+
+#TaveContactForm {
+  width:1px;
+  min-width:100%;
+  /* height:100%; */
+  /* min-height:850px; */
+  min-height:calc(100% + var(--header-height));
+}
+
 
 /* ==========================================
    TABLET - min-width: 48em (768px)
    ========================================== */
+
 @media screen and (min-width: 48em) {
+
+.wrapper{
+
+  width:calc(100% - var(--size-7));
+}
+
+  .rates-page-wrapper{
+    height:calc(100% - var(--header-height));
+  }
+
+
+
   .rates-image2, .rates-image3, .rates-image4 {
     display: block;
   }
@@ -452,7 +483,21 @@ toggleBtns.forEach((btn) => {
 
   .testimonial-content img {
     box-shadow: none;
+    padding:var(--size-7);
   }
+
+  .toggle-wrapper{
+    width:auto;
+  }
+
+  .toggle-btn {
+    min-width: 200px;
+    padding: var(--size-3) var(--size-8);
+    font-size: var(--fs-350);
+  }
+
+  #TaveContactForm {
+    min-height:850px;
 }
 
 /* ==========================================
