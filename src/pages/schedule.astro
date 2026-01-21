@@ -1,22 +1,32 @@
 ---
+// @ts-nocheck
+
 import MainLayout from '../layouts/MainLayout.astro'
 import ZoomPopOut from '../components/ZoomPopOut.astro'
 import RatesCard from '../components/RatesCard.astro'
-import Testimonials from '../components/Testimonials.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
 import PageTitle from '../components/PageTitle.astro';
+import michaelKealeyImage from '../assets/images/testimonials/Michael Kealey - (200px) - Richard Waine - Lancaster - PA_0048.jpg';
 const h1 = 'Schedule Your Headshot Session';
 
-
+// Michael Kealey testimonial
+const michaelKealeyTestimonial = {
+  name: "Michael Kealey",
+  company: "Motor Scout Music",
+  review: "Working with Richard was a pleasure. His direction and eye helped to get the best out of me and feel confident during my session. I highly recommend Richard for your headshot needs.",
+  image: michaelKealeyImage,
+  imageAlt: "Business Headshot of Michael Kealey by Richard Waine Photography"
+};
 
 ---
 
 <MainLayout title="Schedule Your Professional Headshot Session" description="Treat yourself to a 5-star experience, a few laughs, incredible headshot images, and the success that comes along with it!">
 
     <main>
-        <div class="">
+        <div class="wrapper">
 
 
-            <ZoomPopOut />
+        
 
             <PageTitle
               subtitle="SCHEDULE"
@@ -30,10 +40,15 @@ const h1 = 'Schedule Your Headshot Session';
 
                 <div class="two-cols">
 
-
-                  <Testimonials limit={1} filterByNames={["Michael Kealey"]} />
-
-
+                  <div class="testimonial-wrapper">
+                    <TestimonialCard
+                      testimonialText={michaelKealeyTestimonial.review}
+                      author={michaelKealeyTestimonial.name}
+                      company={michaelKealeyTestimonial.company}
+                      image={michaelKealeyTestimonial.image}
+                      imageAlt={michaelKealeyTestimonial.imageAlt}
+                    />
+                  </div>
 
                 <div class="scheduler">
 
@@ -56,6 +71,10 @@ const h1 = 'Schedule Your Headshot Session';
   --pagetitle-subtitle-weight: var(--fw-bold);
 }
 
+.wrapper{
+  width:calc(100% - var(--size-7));
+}
+
 h1{
     margin-block:var(--size-3);
 }
@@ -67,19 +86,36 @@ h1{
   padding-block: var(--size-2);
 }
 
+.scheduler{
+ width:100%;
+ padding-inline:0;
+ margin-inline:auto;
+
+}
+
+
+
 
 
 /* ==========================================
-   LARGE DESKTOP - min-width: 67.5em (1080px)
+   LARGE DESKTOP - min-width: 64em (1024px)
    ========================================== */
 
-@media screen and (min-width: 67.5em) {
+@media screen and (min-width: 64em) {
 
-
+.wrapper{
+  width:80%;
+  margin-inline:auto;
+}
   .two-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: start;
+    gap:var(--size-7);
+  }
+
+  .testimonial-wrapper{
+    padding-top:var(--size-8);
   }
   
 }

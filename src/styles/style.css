@@ -43,7 +43,7 @@
   --ltr-space:0.1em;
 
   --border:4px solid;
-  --shadow:0 10px 20px rgba(0,0,0,.5);
+  --shadow:0 10px 20px var(--shadow-clr-medium);
   
   
   /* Additional variables for consistency */

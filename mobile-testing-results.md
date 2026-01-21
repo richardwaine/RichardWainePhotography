@@ -980,153 +980,165 @@ Page tested and responsive at all breakpoints (375px, 390px, 768px, 1024px, 1440
 ## Page 13: Contact (contact-lancaster-headshot-photographer-richard-waine.astro)
 
 ### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
 
 ### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
 
 ### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
 
 ### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
 
 ### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
+
+---
+
+**CONTACT PAGE (contact-lancaster-headshot-photographer-richard-waine.astro) TESTING COMPLETE**
+
+Page tested and responsive at all breakpoints (375px, 390px, 768px, 1024px, 1440px)
 
 ---
 
 ## Page 14: Schedule (schedule.astro)
 
 ### 375px (iPhone SE)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Acuity widget usable
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Acuity widget usable
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
 
 ### 390px (iPhone 12/13/14)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Acuity widget usable
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Acuity widget usable
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
 
 ### 768px (iPad)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Acuity widget usable
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Acuity widget usable
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
 
 ### 1024px (iPad Pro)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Acuity widget usable
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Acuity widget usable
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
 
 ### 1440px (Desktop)
-- [ ] Layout intact
-- [ ] Text readable
-- [ ] Images display properly
-- [ ] Touch targets adequate
-- [ ] Acuity widget usable
-- [ ] Navigation accessible
-- [ ] No horizontal scroll
-- [ ] Spacing/padding appropriate
+- [x] Layout intact
+- [x] Text readable
+- [x] Images display properly
+- [x] Touch targets adequate
+- [x] Acuity widget usable
+- [x] Navigation accessible
+- [x] No horizontal scroll
+- [x] Spacing/padding appropriate
 
 **Issues Found:**
 ```
-[Document issues here]
+NONE - Page responsive
 ```
+
+---
+
+**SCHEDULE PAGE (schedule.astro) TESTING COMPLETE**
+
+Page tested and responsive at all breakpoints (375px, 390px, 768px, 1024px, 1440px)
 
 ---
 

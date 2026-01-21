@@ -93,14 +93,17 @@ const heroContent = {
 
 	</section>
 
-	<section id="promo-video">
-
-				<video class="promo-video" controls controlslist="nodownload noplaybackrate nopictureinpicture" loop width="1000" height="563" poster={videoPoster.src}>
-  <source src={promoVideo} type="video/mp4">
-  <track kind="captions" src={captions} srclang="en" label="English" default>
-</video>
-
-	</section>
+		<section id="promo-video">
+    <div class="video-container">
+        <div class="video-wrapper">
+            <button class="close-video-btn" aria-label="Close video">×</button>
+            <video class="promo-video" controls controlslist="nodownload noplaybackrate nopictureinpicture" loop width="1000" height="563" poster={videoPoster.src}>
+                <source src={promoVideo} type="video/mp4">
+                <track kind="captions" src={captions} srclang="en" label="English" default>
+            </video>
+        </div>
+    </div>
+  </section>
 
 
 	<section id="neural-portrait">

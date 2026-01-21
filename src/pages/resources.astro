@@ -638,9 +638,8 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 
         /* Blog Container - UNCHANGED from your original */
         .blog-container {
-            width: min(calc(100% - 6em), 100%);
-            width:80%;
-            margin: 0 auto;
+            width:calc(100% - var(--size-7));
+            margin-inline:auto;
 
         }
 
@@ -935,6 +934,11 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
     TABLET - min-width: 48em (768px)
     ========================================== */
         @media (min-width: 48em) {
+
+            .blog-container {
+            width:80%;
+            }
+
             /* Main content grid layout - UNCHANGED from original, allowing gap to inherit */
             .main-content {
                 grid-template-columns: 280px 1fr;

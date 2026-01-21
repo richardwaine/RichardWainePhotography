@@ -313,7 +313,6 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 
 .WorldMapSection{
     width:calc(100% - (var(--size-9)));
-    width:90%;
     margin-inline:auto;
     display:grid;
     grid-template-columns: 1fr; 
@@ -382,7 +381,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     background: rgba(255, 255, 255, 0.95);
     color: black;
     border: 1px solid #e5e7eb;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 var(--shadow-clr-subtle);
   }
 
 
@@ -390,7 +389,12 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
    LARGE DESKTOP - min-width: 48em (768px)
    ========================================== */
 
-  @media (min-width: 768px) {
+  @media (min-width: 48em) {
+    .WorldMapSection{
+     width:80%;
+     margin-inline:auto;
+     
+  }
     .world-map-container {
       aspect-ratio: 2.5 / 1;
     }
@@ -400,7 +404,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
    LARGE DESKTOP - min-width: 64em (1024px)
    ========================================== */
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64em) {
     .world-map-container {
       aspect-ratio: 2 / 1;
     }
