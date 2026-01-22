@@ -4,6 +4,8 @@ import { Image } from 'astro:assets';
 import MainLayout from "../layouts/MainLayout.astro"
 import PrimaryButton from "../components/PrimaryButton.astro"
 import WilliamAdote from "../assets/images/features/Headshot_20240919_William Adote_Richard Waine_Lancaster_PA_0023 (horizontal) - compressed.jpg"
+import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
+
 
 export interface Props {
   // SEO
@@ -62,26 +64,29 @@ const {
 
   heroTitle = 'Business',
   heroTitleAccent = 'Headshots',
-  heroDescription = 'A headshot is not a picture. It is a data point in your client\'s decision-making process. We build images that command authority.',
+  heroDescription = 'A headshot is not just a picture. It is a data point in your client\'s decision-making process. I create headshot images that command authority.',
   heroButtonText = 'GET PRICING',
 
   callout1 = 'CONFIDENCE',
   callout2 = 'APPROACHABILITY',
 
-  pillar1Num = '01 / DISARM',
-  pillar1Title = 'Nervous System Regulation',
-  pillar1Description = "We don't leave your expression to chance. Using a specific coaching sequence, we direct the facial muscles that trigger the 'Trust & Authority' response in the viewer's brain.",
+  pillar1Num = 'THE SCIENCE',
+  pillar1Title = 'Expression Direction',
+  pillar1Description = "I don't leave your expression to chance. Using a specific coaching sequence, I direct your facial muscles to trigger the 'Trust & Authority' response in the viewer's brain.",
 
-  pillar2Num = '02 / ALIGN',
-  pillar2Title = 'Industry Calibrations',
-  pillar2Description = 'The "look" of a Hedge Fund CEO differs from a Tech Founder. We align your micro-expressions with your specific vertical\'s expectations.',
+  pillar2Num = 'THE PROCESS',
+  pillar2Title = 'Real-Time Calibration',
+  pillar2Description = "You’ll never wonder how you’re doing. I work tethered to computer systems for instant feedback, allowing us to adjust lighting and posture in the moment until the image is perfect.",
 
-  pillar3Num = '03 / EXECUTE',
+  pillar3Num = 'THE RESULT',
   pillar3Title = 'Neural Analysis',
-  pillar3Description = 'Post-session, we review assets through the lens of human perception—ensuring the final choice projects maximum credibility.',
+  pillar3Description = 'We review headshots through the lens of human perception, ensuring your choices project maximum credibility. The results are strategic assets designed to align with your personal brand and industry trajectory.',
+
+
+
 
   systemRow1Title = 'The Directing System',
-  systemRow1Description = 'I don\'t expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, actionable cues that result in a natural, powerful presence.',
+  systemRow1Description = "I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, actionable cues that result in a natural, powerful presence. My directions are designed to neutralize camera anxiety and move you into a state of natural confidence.",
   methodItem1 = 'Real-time image tethering for instant feedback',
   methodItem2 = 'Advanced lighting geometry to define features',
   methodItem3 = 'Wardrobe consultation based on color psychology',
@@ -100,6 +105,9 @@ const {
 } = Astro.props;
 
 ---
+
+
+
 
 <MainLayout title={pageTitle} description={metaDescription}>
 
@@ -152,7 +160,7 @@ const {
 <section class="system-section">
   <div class="system-row">
     <div class="system-image">
-       <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#333;">[BEHIND THE SCENES]</div>
+      <Image src={RW1} alt=""/>
     </div>
     <div class="system-content">
       <h2>{systemRow1Title}</h2>
@@ -166,9 +174,6 @@ const {
   </div>
 
   <div class="system-row reverse">
-    <div class="system-image">
-       <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#333;">[GLOBAL CAPABILITIES]</div>
-    </div>
     <div class="system-content">
       <h2>{systemRow2Title}</h2>
       <p>{systemRow2Description}</p>
@@ -176,12 +181,15 @@ const {
         <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
       </div>
     </div>
+    <div class="system-image">
+      <Image src={RW1} alt=""/>
+    </div>
   </div>
 </section>
 
 <section class="global-footer">
   <h2>{footerTitle}</h2>
-  <p style="color: var(--text-dim); margin-bottom: 40px;">{footerDescription}</p>
+  <p class="footer-description">{footerDescription}</p>
   <div class="button-wrapper">
     <PrimaryButton text={footerButtonText} url={footerButtonUrl}/>
   </div>
@@ -290,19 +298,22 @@ document.addEventListener('astro:page-load', () => {
 <style>
   :root {
   --bg: #050505;
+  /* --bg:var(--drkbg); */
   --card: #111111;
   /* --accent: #12c2e9; */
-  --text: #ffffff;
-  --text-dim: #888888;
+  --text:var(--ltclr);
+  /* --text-dim: #888888; */
+  --text-dim:var(--ltclr);
   --border: #1a1a1a;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", -apple-system, sans-serif;
+  /* font-family: "Inter", -apple-system, sans-serif; */
+  font-family:var(--ff-primary);
   margin: 0;
-  line-height: 1.6;
+  line-height:var(--line-height-relaxed);
 }
 
 
@@ -313,8 +324,6 @@ body {
   padding: 0 10%;
   gap: 60px;
   border-bottom: 1px solid var(--border);
-  
-
   display:grid;
   grid-template-columns: 1fr 1fr;
   
@@ -413,9 +422,12 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   background: #080808;
+  /* background:var(--drkbg); */
   perspective: 1000px;
 }
 .pillar-card {
+  --border:transparent;
+  
   padding: 40px;
   border: 1px solid var(--border);
   background: var(--card);
@@ -452,25 +464,32 @@ h1 {
   position: relative;
 }
 .system-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 80px;
   margin-bottom: 120px;
 }
 .system-row.reverse {
-  flex-direction: row-reverse;
+  grid-template-columns: 1fr 1fr;
 }
 .system-image {
-  flex: 1;
-  height: 400px;
+  height: auto;
   background: var(--card);
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
+
+.system-image > * {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
 .system-content {
-  flex: 1;
   opacity: 0;
   transform: translateY(50px);
 }
@@ -504,6 +523,11 @@ h1 {
 }
 .global-footer h2 {
   font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.global-footer .footer-description {
+  color: var(--text-dim);
   margin-bottom: 40px;
 }
 
