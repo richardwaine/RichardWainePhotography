@@ -195,7 +195,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('astro:page-load', () => {
   // Animate pillar cards on scroll
-  gsap.utils.toArray('.pillar-card').forEach((card, index) => {
+  gsap.utils.toArray('.pillar-card').forEach((card: any, index) => {
     gsap.from(card, {
       opacity: 0,
       y: 60,
@@ -212,7 +212,7 @@ document.addEventListener('astro:page-load', () => {
   });
 
   // Animate system content rows
-  gsap.utils.toArray('.system-content').forEach((content) => {
+  gsap.utils.toArray('.system-content').forEach((content: any) => {
     gsap.to(content, {
       opacity: 1,
       y: 0,
@@ -228,7 +228,7 @@ document.addEventListener('astro:page-load', () => {
   });
 
   // Parallax effect on system images
-  gsap.utils.toArray('.system-image').forEach((image) => {
+  gsap.utils.toArray('.system-image').forEach((image: any) => {
     gsap.to(image, {
       y: -50,
       ease: "none",
