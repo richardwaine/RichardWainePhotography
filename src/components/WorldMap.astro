@@ -108,7 +108,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 
   const staggerDelay = 0.3;
   const totalAnimationTime = dots.length * staggerDelay + animationDuration;
-  const pauseTime = 1;
+  const pauseTime = .5;
   const fullCycleDuration = totalAnimationTime + pauseTime;
 
   const pathsContainer = document.getElementById('paths-container');
@@ -391,12 +391,17 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 
   @media (min-width: 48em) {
     .WorldMapSection{
-     width:80%;
-     margin-inline:auto;
-     
+      grid-template-columns: 1fr 1fr;
+      /* gap:var(--size-7); */
+      /* width:80%; */
+      padding:var(--size-8) var(--size-10);
+      margin-inline:auto;
+      gap:10em;
   }
     .world-map-container {
-      aspect-ratio: 2.5 / 1;
+      /* aspect-ratio: 2.5 / 1; */
+      padding:var(--size-8);
+      /* outline:2px solid red; */
     }
   }
 
@@ -406,7 +411,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 
   @media (min-width: 64em) {
     .world-map-container {
-      aspect-ratio: 2 / 1;
+      /* aspect-ratio: 2 / 1; */
     }
   }
 
@@ -416,7 +421,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     
     @media (width >= 67.5em){
       .WorldMapSection{
-        grid-template-columns:1.25fr 1fr;
+        /* grid-template-columns:1.25fr 1fr; */
         align-items:center;
       
       }

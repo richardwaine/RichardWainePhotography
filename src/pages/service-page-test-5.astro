@@ -1,0 +1,144 @@
+---
+// @ts-nocheck
+
+import MainLayout from "../layouts/MainLayout.astro"
+
+
+---
+
+<MainLayout>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  :root {
+    --bg: #000000;
+    --accent: #12c2e9;
+    --panel: #0a0a0a;
+    --border: #1a1a1a;
+    --text-main: #ffffff;
+    --text-dim: #777777;
+  }
+
+  body { background: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; }
+
+  /* Header Simulation */
+  header { padding: 40px 6%; display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); }
+  .logo-block { font-weight: 900; letter-spacing: -1px; font-size: 24px; }
+
+  /* Hero Section */
+  .hero-section { padding: 100px 6%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .hero-content h1 { font-size: 72px; font-weight: 900; line-height: 0.9; text-transform: uppercase; margin: 0 0 30px 0; }
+  .hero-content p { font-size: 22px; color: var(--text-dim); max-width: 500px; line-height: 1.5; }
+
+  /* The Portrait Frame - Matching your aesthetic */
+  .portrait-frame { 
+    position: relative; 
+    border: 1px solid var(--border); 
+    background: var(--panel); 
+    height: 700px; 
+    overflow: hidden; 
+  }
+  .analysis-overlay {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(18, 194, 233, 0.2);
+    margin: 30px;
+    pointer-events: none;
+  }
+  .tag {
+    position: absolute;
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 2px;
+    border-left: 1px solid var(--accent);
+    padding-left: 10px;
+  }
+
+  /* Educational Flow */
+  .edu-row { padding: 120px 6%; border-top: 1px solid var(--border); display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
+  .edu-block h3 { color: var(--accent); font-size: 12px; letter-spacing: 3px; margin-bottom: 20px; }
+  .edu-block h2 { font-size: 28px; margin-bottom: 20px; }
+  .edu-block p { color: var(--text-dim); line-height: 1.7; }
+
+  /* The "System" Section */
+  .system-focus { background: var(--panel); padding: 100px 6%; display: flex; gap: 60px; align-items: center; }
+  .system-text { flex: 1; }
+  .system-visual { flex: 1.5; height: 500px; border: 1px solid var(--border); position: relative; }
+  
+  .btn-cyan {
+    display: inline-block;
+    padding: 18px 40px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-block">W</div>
+  <div style="font-size: 12px; letter-spacing: 2px; color: var(--text-dim);">BUSINESS HEADSHOTS</div>
+</header>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Your Digital <br><span style="color:var(--accent)">Handshake.</span></h1>
+    <p>A high-stakes portrait isn't a vanity project. It’s a tool for establishing instant credibility before you even speak.</p>
+    <div class="btn-cyan">Begin Analysis</div>
+  </div>
+  <div class="portrait-frame">
+    <div class="analysis-overlay"></div>
+    <div class="tag" style="top: 25%; left: 50px;">OCULAR FOCUS: ENGAGED</div>
+    <div class="tag" style="bottom: 30%; right: 50px;">STATURE: COMMANDING</div>
+    <div style="height: 100%; display: flex; align-items: center; justify-content: center; color: #1a1a1a; font-weight: 900; font-size: 40px;">[PORTRAIT]</div>
+  </div>
+</section>
+
+<section class="edu-row">
+  <div class="edu-block">
+    <h3>THE SCIENCE</h3>
+    <h2>Micro-Expression Direction</h2>
+    <p>We don't leave your expression to chance. Using a specific coaching sequence, we direct the facial muscles that trigger the 'Trust & Authority' response in the viewer's brain.</p>
+  </div>
+  <div class="edu-block">
+    <h3>THE PROCESS</h3>
+    <h2>Real-Time Calibration</h2>
+    <p>You’ll never wonder how you’re doing. Our studio is tethered for instant feedback, allowing us to adjust lighting and posture in the moment until the image is perfect.</p>
+  </div>
+  <div class="edu-block">
+    <h3>THE RESULT</h3>
+    <h2>Architectural Presence</h2>
+    <p>The final result is more than a headshot—it’s a piece of strategic assets designed to align with your personal brand and industry trajectory.</p>
+  </div>
+</section>
+
+<section class="system-focus">
+  <div class="system-text">
+    <h2 style="font-size: 48px;">I Hate Having My <br>Picture Taken.</h2>
+    <p style="color: var(--text-dim); font-size: 18px;">I hear this from 90% of my clients. The problem isn't you—it's the lack of a system. My directing method is designed to neutralize camera anxiety and move you into a state of natural confidence.</p>
+  </div>
+  <div class="system-visual">
+    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #1a1a1a;">[BEHIND THE SCENES]</div>
+  </div>
+</section>
+
+<footer style="padding: 100px 6%; text-align: center; border-top: 1px solid var(--border);">
+  <h2 style="font-size: 40px; margin-bottom: 40px;">Ready to elevate?</h2>
+  <div class="btn-cyan" style="background: var(--accent); color: #000;">Schedule Your Session</div>
+</footer>
+
+</body>
+</html>
+
+
+
+</MainLayout>

@@ -5,6 +5,17 @@ import michaelKealeyImg from '../assets/images/testimonials/Michael Kealey - (20
 import wendyBookerImg from '../assets/images/testimonials/Wendy Booker - (200px) - Richard Waine - Lancaster - PA_0104.jpg';
 import scottKantnerImg from '../assets/images/testimonials/Scott Kantner - (200px) - Richard Waine - Lancaster - PA_0205_1.jpg';
 import ellenTaylorImg from '../assets/images/testimonials/Ellen Taylor - (200px) - Richard Waine - Lancaster - PA_0093.jpg';
+import JacquelineJohansen from '../assets/images/testimonials/Jacqueline Johansen - (200px).jpg'
+import JulieEvans from '../assets/images/testimonials/Julie Evans - (200px).jpg'
+import WilliamAdote from '../assets/images/testimonials/William Adote - (200px).jpg'
+import BrianNguyen from '../assets/images/testimonials/Brian Nguyen - (200px).jpg'
+import DillonBomba from '../assets/images/testimonials/Dillon Bomba - (200px).jpg'
+import KeithWoody from '../assets/images/testimonials/Keith Woody - (200px).jpg'
+import AndrewJacobs from '../assets/images/testimonials/Andrew Jacobs - (200px).jpg'
+import EricCooley from '../assets/images/testimonials/Eric Cooley - (200px).jpg'
+import DanShores from '../assets/images/testimonials/Dan Shores - (200px).jpg'
+import KellyGooch from '../assets/images/testimonials/Kelly Gooch - (200px).jpg'
+import NolanFoster from '../assets/images/testimonials/Nolan Foster - (200px).jpg'
 
 export interface Testimonial {
   name: string;
@@ -52,6 +63,105 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: ellenTaylorImg.src,
     image: ellenTaylorImg,
     imageAlt: "Business Portrait of Ellen Taylor by Richard Waine Photography"
+  },
+  {
+    name: "Jacqueline Johansen",
+    company: "DeepJudge", 
+    review: "Richard is a quiet expert in human expression. He makes you feel at ease — then draws out the version of you that’s both authentic and compelling. The resulting headshots work because they feel right. Effortless, but entirely intentional. I have never liked a picture of me so much!",
+    rating: 5,
+    imageUrl: JacquelineJohansen.src,
+    image: JacquelineJohansen,
+    imageAlt: "Business Headshot of Jacqueline Johansen by Richard Waine Photography"
+  },
+   {
+    name: "Julie Evans",
+    company: "Claritas HR", 
+    review: "Rich provided way more than I expected, but somehow just what I needed. He helped me see clearly who I intend to be as a business professional and even more as a person. Impressed is an understatement.",
+    rating: 5,
+    imageUrl: JulieEvans.src,
+    image: JulieEvans,
+    imageAlt: "Corporate Headshot of Julie Evans by Richard Waine Photography"
+  },
+  {
+    name: "William Adote",
+    company: "RBC Wealth Management", 
+    review: "Incredible shoot with Rich. His attention to detail is superb and had a great time connecting with him as well. A 100% recommended service to anyone looking for a seasoned, detailed professional.",
+    rating: 5,
+    imageUrl: WilliamAdote.src,
+    image: WilliamAdote,
+    imageAlt: "Corporate Headshot of William Adote by Richard Waine Photography"
+  },
+  {
+    name: "Brian Nguyen",
+    company: "School District of Lancaster", 
+    review: "Richard is an absolute pleasure to work with - to be able to bring out your inner beauty is a skill and a talent that is much appreciated. Richard was able to see something in me that I never knew existed. He’s amazing to work with, makes you feel super comfortable and the session was absolutely transformational.",
+    rating: 5,
+    imageUrl: BrianNguyen.src,
+    image: BrianNguyen,
+    imageAlt: "Business Headshot of Brian Nguyen by Richard Waine Photography"
+  },
+  {
+    name: "Dillon Bomba",
+    company: "", 
+    review: "This was my first headshot experience, and Rich made the whole thing extremely fun with a relaxed atmosphere. It was like seeing an old friend you’d never met before. His direction is simple, effective, and he can pull the most expressive faces from you with just a few word. If you need any headshot work done, then look no further!",
+    rating: 5,
+    imageUrl: DillonBomba.src,
+    image: DillonBomba,
+    imageAlt: "Acting Headshot of Dillon Bomba by Richard Waine Photography"
+  },
+  {
+    name: "Keith Woody",
+    company: "Fulton Bank", 
+    review: "I had no idea, how amazing this experience would turn out to be. The quality of what is being provided and experienced way surpassed my expectations. As a Sourcing and Procurement executive of over 25 years, I highly recommend Richard for your corporate head shot needs.",
+    rating: 5,
+    imageUrl: KeithWoody.src,
+    image: KeithWoody,
+    imageAlt: "Corporate Headshot of Keith Woody by Richard Waine Photography"
+  },
+  {
+    name: "Andrew Jacobs",
+    company: "Turkey Hill", 
+    review: "Richard is a true professional and I greatly enjoyed my experience working with him in his studio. He provided a clear outline on how the session with would work and made the entire experience fun and enjoyable. And, he helped answer questions and provided technical advice on how best to download the images. If you need headshots - I highly recommend Richard Waine",
+    rating: 5,
+    imageUrl: AndrewJacobs.src,
+    image: AndrewJacobs,
+    imageAlt: "Corporate Headshot of Andy Jacobs by Richard Waine Photography"
+  },
+  {
+    name: "Eric Cooley",
+    company: "Havtech", 
+    review: "We had Richard come in to perform headshots for the business. It was a very busy day. But, he took the time with each person to make sure he got the right shot. I saw mine yesterday. Literally, the best picture I have ever seen of me. I sent it to my mom and she said 'oh wow, that's you?' So good my own mom didn't recognize me. Thanks for everything Richard.",
+    rating: 5,
+    imageUrl: EricCooley.src,
+    image: EricCooley,
+    imageAlt: "Office Headshot of Eric Cooley by Richard Waine Photography"
+  },
+  {
+    name: "Dan Shores",
+    company: "Chase Travel Group", 
+    review: "My experience working with Richard was absolutely outstanding. It is evident how passionate he is about his craft and my headshots could not have turned out better. I had an absolute blast during the photo shoot session to boot. Outstanding experience. Thank you, Richard!",
+    rating: 5,
+    imageUrl: DanShores.src,
+    image: DanShores,
+    imageAlt: "Business Headshot of Dan Shores by Richard Waine Photography"
+  },
+  {
+    name: "Kelly Gooch",
+    company: "Ultimus Fund Solutions", 
+    review: "Richard was intentional in understanding my needs and asking questions to understand what type of look was needed. He was organized, helpful, and inquisitive, making the experience enjoyable. The end product was a direct result of his experience and coaching.",
+    rating: 5,
+    imageUrl: KellyGooch.src,
+    image: KellyGooch,
+    imageAlt: "Corporate Headshot of Kelly Gooch by Richard Waine Photography"
+  },
+  {
+    name: "Nolan Foster",
+    company: "Bursera Capital", 
+    review: "When someone says 'a master of their craft' they typically refer to individuals like Steve Jobs, Leonardo, and Socrates. They were all masters, but I bet they couldn't take photos as good as Richard Waine can.",
+    rating: 5,
+    imageUrl: NolanFoster.src,
+    image: NolanFoster,
+    imageAlt: "Corporate Headshot of Nolan Foster by Richard Waine Photography"
   }
   // Add more testimonials here as needed
 ];
