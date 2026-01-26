@@ -47,6 +47,7 @@ Being "helpful" by making choices for the user has:
 6. **If clarity is required, ask questions**
 7. **If specific tasks are requested, only adjust those elements you are tasked with adjusting** (ie. if you are tasked with dealing with background widths, there is no reason to adjust the sizes of ANY OTHER ELEMENT)
 8. **Before requesting approval for an action, you MUST clearly state in plain english, exactly what that action will do - before you request permission to take that action**
+9. **SEEK THE SIMPLEST SOLUTION FIRST** - Always start with the simplest solution and only get more complicated if necessary. Do NOT gravitate towards complicated solutions first. They waste time, effort, money, and platform usage.
 
 ### CRITICAL: PAGE AND FILE LOCATION RULES
 **ASTRO PROJECT STRUCTURE - NEVER VIOLATE THESE RULES:**

@@ -5,7 +5,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 import PrimaryButton from "../components/PrimaryButton.astro"
 import SecondaryButton from '../components/SecondaryButton.astro'
 import Testimonials from '../components/Testimonials.astro';
-
+import FAQAccordion from '../components/FAQAccordion.astro';
 
 
 import WilliamAdote from "../assets/images/features/Headshot_20240919_William Adote_Richard Waine_Lancaster_PA_0023 (horizontal) - compressed.jpg"
@@ -118,6 +118,43 @@ const {
   systemRow2ButtonText = 'GET PRICING',
   systemRow2ButtonUrl = '/rates',
   footerButtonUrl = '/rates',
+
+  faqs = [                                                                  
+      {                                                                       
+        question: "What should I do if I’m not photogenic and hate being on camera?",                                               
+        answer: `Photogenic is a bullshit, made up word. It is a term people use when they have never seen a photo of themselves they actually like. It suggests the responsibility to look good is on you. It is not.
+        
+        The truth is that the onus of a great headshot is squarely on the photographer. Most of us hate being on camera because we have a complicated relationship with our own faces. We see flaws in the mirror that no one else sees or cares about. If you have had bad experiences in the past, it is because the photographer failed to provide the coaching and direction needed to make you feel at ease.
+        
+        We are not just taking a picture. We are creating an image that makes you look confident, competent, and trustworthy.`                                                   
+      },                                                                      
+      {                                                                       
+        question: "What is the best color to wear for a business headshot session?",                                               
+        answer: `The best colors for a headshot session depend on the person, the purpose, and the application. I usually default to standard choices like white, grey, black, and navy, but I also recommend bringing a color palette you love.
+
+        The most important thing is to avoid busy patterns and attention grabbing clothing. These elements compete with what matters most, which is your facial expression and the message you are communicating. Simplicity is always best.
+
+        I suggest bringing 3 to 5 options that are cleaned and pressed. Only bring clothes you absolutely love because you will not photograph well in something that makes you feel uncomfortable.
+        `                                                    
+      },                                                                      
+      {                                                                       
+        question: "How do I choose the right expression for my brand?",                                               
+        answer: `Choosing an expression is about how you show up in the world and how you want to be perceived. There is no universal expression that works for every scenario. Headshot images serve their desired purpose. 
+
+        People want to look confident, approachable, competent and trustworthy. These characteristics typically mirror what my clients are looking for. As a starting point, I always recommend aiming for poise. 
+
+        I cannot tell you that a headshot with a specific facial expression has a place in your universe. However, I can tell you if that image will help or hurt your messaging. When humans have an incredibly sensitive bullshit meter, it’s imperative that you project authenticity. 
+
+        “Trust me” sounds incredibly cliché. But, if you trust me and trust the process, you’ll end up with awesome headshots with incredibly impactful facial expressions!
+        `                                                    
+      }                                                                       
+    ]                    
+
+
+
+
+
+
 } = Astro.props;
 
 ---
@@ -222,16 +259,12 @@ const {
   <Testimonials title="" limit={3} filterByNames={["Jacqueline Johansen", "Keith Woody", "Kelly Gooch"]}/>
 </section>
 
+<section class="FAQs">
 
+  <FAQAccordion faqs={faqs}/>
 
-
-<section class="global-footer">
-  <h2>{footerTitle}</h2>
-  <p class="footer-description">{footerDescription}</p>
-  <div class="button-wrapper">
-    <PrimaryButton text={footerButtonText} url={footerButtonUrl}/>
-  </div>
 </section>
+
 
 <script>
 import gsap from 'gsap';
@@ -617,6 +650,14 @@ h1 {
     padding-block:0;
   }
 }
+
+.FAQs {
+  width:50%;
+  margin-inline:auto;
+  margin-bottom:var(--size-10);
+ 
+}
+
 
 /* Global Network Preview */
 .global-footer {
