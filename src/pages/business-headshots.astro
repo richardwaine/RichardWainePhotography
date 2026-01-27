@@ -172,9 +172,8 @@ const {
 <MainLayout title={pageTitle} description={metaDescription}>
 
 <body>
-<Image class="hero-bg" src={RW2} alt=""/>
-
 <section class="hero">
+  <Image class="hero-bg" src={RW2} alt=""/>
   <div class="hero-text">
     <h1>{heroTitle} <br><span class="cyan">{heroTitleAccent}</span></h1>
     <p class="hero-p">{heroDescription}</p>
@@ -280,6 +279,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('astro:page-load', () => {
+let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 48em)", () => {
   // Animate pillar cards on scroll
   gsap.utils.toArray('.pillar-card').forEach((card: any, index) => {
     gsap.from(card, {
@@ -361,6 +363,11 @@ document.addEventListener('astro:page-load', () => {
       scrub: true
     }
   });
+
+  return () => {
+    //optional cleanup code here
+    };
+  });
 });
 </script>
 
@@ -385,10 +392,42 @@ document.addEventListener('astro:page-load', () => {
   /* --border: #1a1a1a; */
 }
 
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height:var(--line-height-relaxed);
+  width:100%;
+  margin-inline:auto;
+  padding:0;
+  min-height:calc(100vh + var(--header-height));
+
+
+
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  align-items: center;
+  padding-top:calc(var(--header-height) + var(--size-7));
+  padding-bottom:var(--size-825);
+  gap: var(--size-7);
+  border-bottom: 1px solid var(--border);
+  display:grid;
+  grid-template-columns: 1fr;
+  width:100%;
+  margin-inline:auto;
+  overflow:hidden;
+}
+
 .hero-bg{
+  
   position:absolute;
   inset:0;
-  height:100vh;
+  height:100%;
   width:100%;
   object-fit:cover;
   object-position:center var(--header-height);
@@ -399,86 +438,64 @@ document.addEventListener('astro:page-load', () => {
 
 }
 
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  line-height:var(--line-height-relaxed);
-  width:calc(100% - var(--size-7));
-  margin-inline:auto;
-
-
-}
-
-
-
-/* Hero Section */
-.hero {
-  height: calc(100vh + var(--header-height));
-  align-items: center;
-  padding: 0 10%;
-  gap: 60px;
-  border-bottom: 1px solid var(--border);
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  
-  
-
-}
-
-
-
-.hero-text {
-  /* flex: 1; */
-  
-
-}
-
 h1 {
   font-size: clamp(40px, 5vw, 70px);
   line-height: 1;
-  margin: 0 0 20px;
-  font-weight: 900;
+  margin-bottom: var(--size-4);
+  font-weight: var(--fw-x-bold);
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
+  width:calc(100% - var(--size-7));
+  margin-inline:auto;
+  
+
 }
+
 .cyan {
   color: var(--accent);
 }
 
 .hero-p {
-  font-size: 20px;
+  font-size: var(--fs-500);
   color: var(--text-dim);
-  max-width: 600px;
-  margin-bottom: 40px;
+  width:min(600px, calc(100% - var(--size-7)));
+  margin-inline:auto;
+  text-align:left;
+  margin-bottom: var(--size-775);
 }
 
 .action-group{
+  
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
+  justify-self:center;
   gap:var(--size-7);
   
+  > *{
+    
+    margin-inline:auto;
+  }
+ 
 }
 
 .hero-visual {
   position: relative;
-  justify-items:center;
   
 }
 
 /* Blueprint Visuals */
 .blueprint-box {
-  --_width:min(800px, 100%);
+  --_width:min(800px, calc(100% - var(--size-7)));
 
   width:var(--_width);
+  margin-inline:auto;
   height:auto;
   /* background: #0a0a0a; */
   background:transparent;
-  /* border: 1px solid var(--border); */
   position: relative;
   overflow: hidden;
   perspective: 1200px;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 50px var(--shadow-clr-medium);
 
  
 }
@@ -491,8 +508,8 @@ h1 {
   align-items: center;
   justify-content: center;
   color: #222;
-  font-weight: 900;
-  font-size: 40px;
+  font-weight: var(--fw-x-bold);
+  /* font-size: 40px; */
   transform-style: preserve-3d;
   box-shadow: inset 0 0 60px rgba(3, 169, 244, 0.1);
   
@@ -506,86 +523,74 @@ h1 {
 }
 
 .callout {
-  position: absolute;
-  color: var(--accent);
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: bold;
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 4px;
-  z-index: 10;
-}
-.c-1 {
-  top: 25%;
-  right: 5%;
-}
-.c-2 {
-  bottom: 25%;
-  left: 5%;
+  display:none;
+  
 }
 
 /* Educational Pillars Section */
 .pillars {
-  padding: 100px 10%;
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: 1fr;
+  gap: var(--size-4);
   background: #080808;
   /* background:var(--drkbg); */
   perspective: 1000px;
+  width:calc(100% - var(--size-7));
+  margin-inline:auto;
 }
+
 .pillar-card {
   --border:transparent;
   
-  padding: 40px;
+  padding: var(--size-775) var(--size-4);
   border: 1px solid var(--border);
   background: var(--card);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   transform-style: preserve-3d;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px var(--shadow-clr-soft);
 }
-.pillar-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-10px) rotateX(5deg);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(3, 169, 244, 0.3);
-}
+
+
+
 .pillar-num {
   color: var(--accent);
-  font-weight: 900;
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-weight: var(--fw-x-bold);
+  font-size: var(--fs-350);
+  margin-bottom: var(--size-4);
   display: block;
+  text-align:center;
 }
 .pillar-card h3 {
-  margin: 0 0 15px;
-  font-size: 20px;
+  margin: 0 0 var(--size-3);
+  font-size: var(--fs-500);
   letter-spacing: 1px;
+  text-align:center;
 }
 .pillar-card p {
   color: var(--text-dim);
-  font-size: 15px;
+  font-size: var(--fs-400);
   margin: 0;
 }
 
 /* The "System" Section - Staggered */
 .system-section {
-  padding-block: 100px;
+  margin-block:var(--size-825);
   position: relative;
-
-
+  width:calc(100% - var(--size-7));
+  margin-inline:auto;
 }
 
 
 .system-row {
-  width:80%;
+  width:100%;
   margin-inline:auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap:var(--size-12);
+  grid-template-columns: 1fr;
+  gap:var(--size-7);
   align-items: center;
   justify-items:center;
-  
-  margin-bottom: 100px;
+  margin-bottom: var(--size-7);
 }
 
 .system-row:last-child {                                                         
@@ -593,21 +598,20 @@ h1 {
   }  
 
 .system-row.reverse {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   
 }
 
 .system-image {
---_width:700px;
+--_width:min(700px, 100%);
 
   width:var(--_width);
   height: auto;
   background: var(--card);
-  /* border: 1px solid var(--border); */
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-
+  box-shadow: 0 10px 40px var(--shadow-clr-medium);
+  margin-inline:auto;
 
     > * {
       width: 100%;
@@ -617,18 +621,18 @@ h1 {
 }
 
 .system-content {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(50px);
   /* width:80%; */
 }
 
 .system-content h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: var(--fs-800);
+  margin-bottom: var(--size-4);
 }
 
 .system-content p{
-  margin-bottom:40px;
+  margin-bottom:var(--size-775);
 }
 
 
@@ -636,12 +640,13 @@ h1 {
 .method-list {
   list-style: none;
   padding: 0;
+  margin-bottom:var(--size-7);
 }
 .method-item {
-  padding: 20px 0;
+  padding: var(--size-4) 0;
   border-bottom: 1px solid var(--border);
   display: flex;
-  gap: 20px;
+  gap: var(--size-4);
 }
 .method-item span {
   color: var(--accent);
@@ -651,19 +656,25 @@ h1 {
 
 
 #testimonials{
-  padding-block:100px;
-  background: #080808;
+   width: calc(100% - var(--size-7));
+   margin-inline:auto;
+   padding-bottom: var(--size-3);
+    background: #080808;
   > .testimonial-section-wrapper{
     padding-block:0;
+    margin-inline:0;
+    width:100%;
   }
+
 }
 
 .FAQs {
   
-  width:50%;
+  width:calc(100% - var(--size-4));
   margin-inline:auto;
   margin-bottom:var(--size-10);
   
+  > *{}
  
 }
 
@@ -685,6 +696,117 @@ h1 {
   color: var(--text-dim);
   margin-bottom: 40px;
 } */
+
+
+/* ==========================================                                   
+     TABLET - min-width: 48em (768px)                                             
+     ========================================== */                                
+  @media (min-width: 48em) {                                                      
+          .hero {
+            height:100vh;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 10%;
+            gap: var(--size-875);
+          } 
+        
+
+          h1 {
+            margin-inline:0;
+            text-align:left;
+            margin-bottom: var(--size-2);
+          }
+          .hero p{
+            margin-inline:0;
+          }
+          .action-group{
+            display:flex;
+            flex-direction:row;
+            gap:var(--size-7);
+            justify-self: start;
+            
+          } 
+          
+
+          .callout{
+            display:block;
+            position: absolute;
+            color: var(--accent);
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: var(--size-1);
+            z-index: 10;
+            
+          }
+          .c-1 {
+            top: 25%;
+            right: 5%;
+          }
+          .c-2 {
+            bottom: 25%;
+            left: 5%;
+          }
+
+          
+          .pillars {
+          grid-template-columns: repeat(3, 1fr); 
+          padding: 100px 10%;  
+          gap: var(--size-775);                                                                        
+          }  
+
+          .pillar-card{
+            padding: var(--size-775);
+          }
+
+          .pillar-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 60px var(--shadow-clr-medium), 0 0 40px rgba(3, 169, 244, 0.3);
+}
+
+          .pillar-num {
+            text-align:left;
+          }
+
+          .pillar-card h3{
+            text-align:left;
+          }
+
+          .system-section {
+            padding-block: 100px;
+          }
+
+          .system-content {
+            opacity: 0;
+            transform: translateY(50px);
+            /* width:80%; */
+          }
+
+          .system-row {
+            grid-template-columns: 1fr 1fr;
+            width:80%;
+            gap:var(--size-12);
+            /* margin-bottom: 100px; */
+            margin-bottom: var(--size-10);
+          }
+          .system-row.reverse {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          .FAQs{
+            width:50%;
+          }
+
+
+
+  }
+  /* ==========================================                                   
+     DESKTOP - min-width: 64em (1024px)                                           
+     ========================================== */                                
+  @media (min-width: 64em) {                                                      
+                                                                                  
+  }  
 
 
 </style>
