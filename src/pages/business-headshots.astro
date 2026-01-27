@@ -472,8 +472,9 @@ h1 {
   gap:var(--size-7);
   
   > *{
-    
+
     margin-inline:auto;
+
   }
  
 }
@@ -627,8 +628,9 @@ h1 {
 }
 
 .system-content h2 {
-  font-size: var(--fs-800);
+  font-size: var(--fs-600);
   margin-bottom: var(--size-4);
+  text-align:center;
 }
 
 .system-content p{
@@ -674,7 +676,9 @@ h1 {
   margin-inline:auto;
   margin-bottom:var(--size-10);
   
-  > *{}
+  > *{
+
+  }
  
 }
 
@@ -703,6 +707,7 @@ h1 {
      ========================================== */                                
   @media (min-width: 48em) {                                                      
           .hero {
+            padding-inline:0;
             height:100vh;
             grid-template-columns: 1fr 1fr;
             padding: 0 10%;
@@ -723,7 +728,7 @@ h1 {
             flex-direction:row;
             gap:var(--size-7);
             justify-self: start;
-            
+           
           } 
           
 
@@ -783,6 +788,11 @@ h1 {
             /* width:80%; */
           }
 
+          .system-content h2{
+            font-size: var(--fs-800);
+            text-align:left;
+          }
+
           .system-row {
             grid-template-columns: 1fr 1fr;
             width:80%;
@@ -805,8 +815,24 @@ h1 {
      DESKTOP - min-width: 64em (1024px)                                           
      ========================================== */                                
   @media (min-width: 64em) {                                                      
-                                                                                  
+          .hero {
+           gap: var(--size-7);
+            /* padding: 0 5%; */
+            /* grid-template-columns: 1.5fr 1fr; */
+            
+          }  
+          .hero p{
+            margin-inline:0;
+            max-inline-size:500px;
+          }
+          .action-group{
+            .button-wrapper > *{
+              /* font-size:14px; */
+              /* padding-inline:var(--size-4) */
+            }
   }  
+
+}
 
 
 </style>
