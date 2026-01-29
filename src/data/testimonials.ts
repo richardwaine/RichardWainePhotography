@@ -67,7 +67,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jacqueline Johansen",
     company: "DeepJudge", 
-    review: "Richard is a quiet expert in human expression. He makes you feel at ease — then draws out the version of you that’s both authentic and compelling. The resulting headshots work because they feel right. Effortless, but entirely intentional. I have never liked a picture of me so much!",
+    review: "Richard is an expert in human expression. He makes you feel at ease, then draws out the version of you that’s authentic and compelling. The resulting headshots work because they feel right. Effortless, but entirely intentional. I have never liked a picture of me so much!",
     rating: 5,
     imageUrl: JacquelineJohansen.src,
     image: JacquelineJohansen,
