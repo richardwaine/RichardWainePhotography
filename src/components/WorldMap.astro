@@ -312,7 +312,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
    } 
 
 .WorldMapSection{
-    width:calc(100% - (var(--size-9)));
+    width:calc(100% - (var(--size-7)));
     margin-inline:auto;
     display:grid;
     grid-template-columns: 1fr; 
@@ -322,7 +322,8 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 
 
   .world-map-container {
-    width: 100%;
+
+    /* width:calc(100% - var(--size-7)); */
     margin:auto;
     aspect-ratio: 2 / 1;
     background: white;
@@ -386,43 +387,40 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
 
 
   /* ==========================================
-   LARGE DESKTOP - min-width: 48em (768px)
+   TABLET - min-width: 48em (768px)
    ========================================== */
 
   @media (min-width: 48em) {
     .WorldMapSection{
-      grid-template-columns: 1fr 1fr;
-      /* gap:var(--size-7); */
-      /* width:80%; */
-      padding:var(--size-8) var(--size-10);
+      grid-template-columns: 1fr;
+      padding:var(--size-8);
       margin-inline:auto;
-      gap:10em;
+      gap:var(--size-8);
   }
     .world-map-container {
-      /* aspect-ratio: 2.5 / 1; */
-      /* padding:var(--size-8); */
-      /* outline:2px solid red; */
-    }
+    
   }
 
   /* ==========================================
-   LARGE DESKTOP - min-width: 64em (1024px)
+   DESKTOP - min-width: 64em (1024px)
    ========================================== */
 
   @media (min-width: 64em) {
+
     .world-map-container {
+      width:80%;
+      margin-inline:auto;
       /* aspect-ratio: 2 / 1; */
     }
   }
 
   /* ==========================================
-   TABLET - min-width: 67.5 (1080px)
+   LARGE DESKTOP - min-width: 90em (1440px)
    ========================================== */
     
-    @media (width >= 67.5em){
+    @media (width >= 90em){
       .WorldMapSection{
-        /* grid-template-columns:1.25fr 1fr; */
-        align-items:center;
+        grid-template-columns:1fr 1fr;
       
       }
   

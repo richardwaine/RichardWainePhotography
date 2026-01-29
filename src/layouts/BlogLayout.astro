@@ -1,6 +1,7 @@
 ---
 import FAQAccordion from "../components/FAQAccordion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import ShareButtons from "../components/ShareButtons.astro";
 
 export interface Props {
   title: string;
@@ -129,6 +130,10 @@ const isInterview = post.data.type === 'interview';
       </section>
     )}
     {/* --- END NEW SECTION --- */}
+
+{/* --- SHARE BUTTONS --- */}
+    <ShareButtons url={`/blog/${post.slug}`} title={post.data.blogTitle} />
+{/* --- END SHARE BUTTONS --- */}
 
 {/* --- POST NAVIGATION --- */}
     {(prevPost || nextPost) && (
