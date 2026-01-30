@@ -270,6 +270,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('astro:page-load', () => {
+if (window.location.pathname !== '/acting-headshots') return;
 let mm = gsap.matchMedia();
 
   mm.add("(min-width: 48em)", () => {

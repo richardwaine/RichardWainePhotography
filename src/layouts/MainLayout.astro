@@ -190,6 +190,12 @@ const {title, description = "Professional headshot photography in Lancaster PA. 
 
 	// Refresh ScrollTrigger after View Transitions
 	document.addEventListener('astro:after-swap', () => {
+		ScrollTrigger.getAll().forEach(t => t.kill());
+		gsap.globalTimeline.clear();
+		if (window.lenis) {
+			window.lenis.scrollTo(0, { immediate: true });
+		}
+		window.scrollTo(0, 0);
 		ScrollTrigger.refresh();
 	});
 	</script>
