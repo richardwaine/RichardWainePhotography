@@ -16,6 +16,8 @@ import EricCooley from '../assets/images/testimonials/Eric Cooley - (200px).jpg'
 import DanShores from '../assets/images/testimonials/Dan Shores - (200px).jpg'
 import KellyGooch from '../assets/images/testimonials/Kelly Gooch - (200px).jpg'
 import NolanFoster from '../assets/images/testimonials/Nolan Foster - (200px).jpg'
+import BrandonLesagonicz from '../assets/images/testimonials/Brandon lesagonicz - (200px).jpg'
+import CateCaplan from '../assets/images/testimonials/Cate Caplan - (200px).jpg'
 
 export interface Testimonial {
   name: string;
@@ -103,7 +105,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Dillon Bomba",
     company: "", 
-    review: "This was my first headshot experience, and Rich made the whole thing extremely fun with a relaxed atmosphere. It was like seeing an old friend you’d never met before. His direction is simple, effective, and he can pull the most expressive faces from you with just a few word. If you need any headshot work done, then look no further!",
+    review: "Rich made my first headshot experience so much fun. It was like seeing an old friend you’ve never met before. His direction is simple and effective. He can pull the most expressive faces from you with just a few words.",
     rating: 5,
     imageUrl: DillonBomba.src,
     image: DillonBomba,
@@ -162,6 +164,30 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: NolanFoster.src,
     image: NolanFoster,
     imageAlt: "Corporate Headshot of Nolan Foster by Richard Waine Photography"
+  },
+  {
+    name: "Brandon Lesagonicz",
+    company: "", 
+    review: "Rich is without a doubt one of the most knowledgeable photographers I have ever worked with. Rocking out and fun! Whether it’s a corporate occasion or just to update a model’s portfolio anyone should absolutely work with him!",
+    rating: 5,
+    imageUrl: BrandonLesagonicz.src,
+    image: BrandonLesagonicz,
+    imageAlt: "Model Headshot of Brandon Lesagonicz by Richard Waine Photography"
+  },
+  {
+    name: "Cate Caplan",
+    company: "", 
+    review: "Richard takes the art of headshot photography to the next level. He actively engages his clients in the process far beyond the smile, and manages to create a fun, unparalleled experience. The final shots are of exceptional quality.",
+    rating: 5,
+    imageUrl: CateCaplan.src,
+    image: CateCaplan,
+    imageAlt: "Acting Headshot of Cate Caplan by Richard Waine Photography"
   }
+
+
+
+
+
+
   // Add more testimonials here as needed
 ];
