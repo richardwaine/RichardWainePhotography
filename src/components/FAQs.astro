@@ -37,12 +37,12 @@ const rightColumnFAQs = [
   },
   {
     question: "WHO NEEDS A PROFESSIONAL HEADSHOT?",
-    answer: "A professional headshot is not just a pretty picture. It is a personal and corporate branding tool. This is your virtual handshake and introduction to the world. Here is a list of people and professions that need a professional headshot: <b><a style=\"color:blue;cursor:pointer\" href=\"/blog-content/2016/11/7/who-needs-a-solid-headshot\">Who Needs a Solid Headshot?</a></b>"
+    answer: "A professional headshot is not just a pretty picture. It is a personal and corporate branding tool. This is your virtual handshake and introduction to the world. Here is a list of people and professions that need a professional headshot: <b><a style=\"color:blue;cursor:pointer\" href=\"/blog/who-needs-a-solid-headshot\">Who Needs a Solid Headshot?</a></b>"
   }
 ];
 ---
 
-<div class="wrapper">
+<div class="wrapper faq-section-wrapper">
     <div class="frequently-asked-section">
   <h3 class="frequently-asked section-title">
     Frequently Asked Questions
@@ -54,15 +54,24 @@ const rightColumnFAQs = [
   </p>
 
 <div class="faq-section">
-    <FAQAccordion faqs={leftColumnFAQs} />
-    <FAQAccordion faqs={rightColumnFAQs} />
+  <FAQAccordion faqs={leftColumnFAQs} idPrefix="left" />
+  <FAQAccordion faqs={rightColumnFAQs} idPrefix="right" />
+
 </div>
 
 </div>
 
 <style>
 
+  .faq-section-wrapper{
+    padding-block:var(--size-8);
+  }
+
 /*FAQs - 2*/
+
+.wrapper{
+  margin-bottom:var(--size-3);
+}
 
 .frequently-asked-section p{
     margin-top:var(--size-3);
@@ -70,8 +79,9 @@ const rightColumnFAQs = [
 }
 
 a{
-    color:var(--drkclr);
+    color:var(--blkclr);
     font-weight:var(--fw-bold);
+
 }
 
 .faq-section{
@@ -79,13 +89,16 @@ a{
   
 }
 
-@media (width > 1080px){
-    .faq-section{
-        display:flex;
-        gap:var(--size-8);
-        margin-top:var(--size-7);
 
-    }
+/* ==========================================
+   TABLET - min-width: 67.5em (1080px)
+   ========================================== */
+@media (min-width: 67.5em) {
+  .faq-section {
+    display: flex;
+    gap: var(--size-8);
+    margin-block: var(--size-7);
+  }
 }
 
 .frequently-asked-section h3,

@@ -1,9 +1,14 @@
 ---
+import PrimaryButton from './PrimaryButton.astro';
 
+import { Image } from 'astro:assets';
+import Calendar from '../assets/images/icons/Calendar.png';
+import Camera from '../assets/images/icons/Camera.png';
+import Share from '../assets/images/icons/Share.png';
 ---
 
 
-<div class="wrapper">
+<div class="wrapper process-section-wrapper">
 <div class="process center spacing">
     <h3 class="section-title">The Game Plan</h3>
     <p class="process-paragraph">IT'S EASY TO LOOK AWESOME!
@@ -13,54 +18,65 @@
   <article class="gameplan-card center">
     <div class="face gameplan1">
       <div class=content-gameplan>
-        <img  alt="schedule a professional headshot, lancaster photographer, lancaster headshots,business headshots near me" height=75 
-          src=https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1577471673312-256TTZOWDOXBV99W5BFK/Calendar-1+%28optimized%29.png?content-type=image%2Fpng loading="lazy" width=75>
-          <br>
-          <br>
+
+          <Image src={Calendar} alt="schedule a professional headshot, lancaster photographer, lancaster headshots,business headshots near me" class="" loading="lazy" layout='constrained' width={75} height={75} />
+
+        
+         
           <span class="spacing">SCHEDULE</span>
       </div>
     </div>
     <div class="face gameplan2">
       <div class=content-gameplan>
-        <p>Give the <b>SCHEDULE</b> button a tap!
+        <!-- <p>Give the <b>SCHEDULE</b> button a tap!</p> -->
+        <p>Tap the <b>SCHEDULE</b> button!</p>
+        <!-- <p>Select a convenient appointment date and time.</p> -->
         <p>Select an appointment that works best for you.</p>
-        <a class="spacing" href="/rates">SCHEDULE</a>
+        <div class="button-wrapper">
+          <PrimaryButton text="SCHEDULE" url="/rates"  />
+        </div>
       </div>
     </div>
   </article>
-  
+
   <article class="gameplan-card center">
     <div class="face gameplan1">
       <div class=content-gameplan>
-        <img alt="professional headshot pictures, professional photography, lancaster pa headshots" height=75 
-         src=https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1593027627807-UEKQXEIKT61WFJQI48EP/Camera+%28optimized%29.png?content-type=image%2Fpng loading="lazy" width=75>
-          <br>
-          <br>
+
+          <Image src={Camera} alt="professional headshot pictures, professional photography, lancaster pa headshots" class="" loading="lazy" layout='constrained' width={75} height={75} />
+
+        
+          
           <span class="spacing">SHOOT</span>
       </div>
     </div>
     <div class="face gameplan2">
       <div class=content-gameplan>
-        <p>It's fun and easy!<p>I will guide you into pictures that will propel your career.</p>
-        <a class="spacing" href="/rates">SCHEDULE</a>
+        <p>It's fun and easy!<br>I will guide you into pictures that will propel your career.</p>
+        <div class="button-wrapper">
+          <PrimaryButton text="SCHEDULE" url="/rates"  />
+        </div>
       </div>
     </div>
   </article>
-  
+
   <article class="gameplan-card center">
     <div class="face gameplan1">
       <div class=content-gameplan>
-        <img  alt="company headshots, linkedin headshots, social media headshots, headshot photographers, professional headshots near me" height=75 
-          src=https://images.squarespace-cdn.com/content/50f79c6fe4b00d3480c9bbf0/1593027096649-E21ID0886HMI4H62JU77/share_PNG19%28optimized%29.png?content-type=image%2Fpng loading="lazy" width=75>
-          <br>
-          <br>
+
+        <Image src={Share} alt="company headshots, linkedin headshots, social media headshots, headshot photographers, professional headshots near me" class="" loading="lazy" layout='constrained' width={75} height={75} />
+
+       
+          
           <span class="spacing">SHARE</span>
       </div>
     </div>
     <div class="face gameplan2">
       <div class=content-gameplan>
-        <p>Share your images with everyone! Stand out and be recognized as an expert in your field.</p>
-        <a class="spacing" href="/rates">SCHEDULE</a>
+        <p>Share your images with everyone!<br> Stand out and be recognized as an expert in your field.</p>
+        <div class="button-wrapper">
+          <PrimaryButton text="SCHEDULE" url="/rates"  />
+        </div>
       </div>
     </div>
   </article>
@@ -68,32 +84,38 @@
 </div>
 
 <style>
+  .process-section-wrapper{
+    padding-block:var(--size-8);
+  }
+
+/* ==========================================
+   MOBILE BASE STYLES
+   ========================================== */
 
 /*benefits-3 & Gameplan*/
-.card .face,
 .gameplan-card .face {
-  width: 370px;
+  width: min(370px, 100%);
+  margin-inline:auto;
   height: 200px;
   transition: 0.5s;
   text-align: center;
 }
-.card .face.face1,
-.container-benefits,
+
 .container-gameplan,
 .gameplan-card .face.gameplan1 {
   display: flex;
   align-items: center;
 }
-.container-benefits,
+
 .container-gameplan {
   flex-direction: column;
   justify-items: center;
 }
-.card,
+
 .gameplan-card {
   position: relative;
 }
-.card .face.face1,
+
 .gameplan-card .face.gameplan1 {
   position: relative;
   background-color: var(--drkbg);
@@ -101,94 +123,65 @@
   z-index: 1;
   transform: translateY(100px);
 }
-.card:hover .face.face1,
+
 .gameplan-card:hover .face.gameplan1 {
   background: var(--drkbg);
   transform: translateY(0);
 }
-.face.face1 .content-benefits,
+
 .face.gameplan1 .content-gameplan {
   opacity: 0.75;
   transition: 0.5s;
   line-height: 1;
 }
-.card:hover .face.face1 .content-benefits,
+
 .gameplan-card:hover .face.gameplan1 .content-gameplan {
   opacity: 1;
 }
-.content-benefits img,
+
 .content-gameplan img {
   max-height: 100px;
   filter: invert(100%);
   margin-inline: auto;
 }
-.card span,
+
 .gameplan-card span {
   font-weight: var(--fw-bold);
   color: var(--ltclr);
   margin: 0;
+  margin-top: var(--size-5);
 }
-.container-benefits .card .face.face2,
+
 .container-gameplan .gameplan-card .face.gameplan2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card .face.face2,
+
 .gameplan-card .face.gameplan2 {
   position: relative;
   padding: var(--size-4);
   box-shadow: var(--shadow);
   transform: translateY(-100px);
 }
-.card:hover .face.face2,
+
 .gameplan-card:hover .face.gameplan2 {
   transform: translateY(0);
 }
-.content-benefits a,
-.content-benefits p,
-.content-gameplan a,
+
 .content-gameplan p {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-primary);
   color: var(--blkclr);
   font-size: var(--fs-400);
-}
-.content-benefits p,
-.content-gameplan p {
   margin: 0;
-  line-height: 2;
+  line-height: var(--line-height-relaxed);
 }
-.content-benefits a,
-.content-gameplan a {
-  margin: var(--size-1) 0;
-  display: inline-block;
-  position: relative;
-  top: var(--size-2);
-  text-decoration: none;
-  font-weight: var(--fw-normal);
-  padding: var(--size-3) var(--size-7);
-  border: 2px solid var(--blkclr);
-  cursor: pointer;
-}
-.content-gameplan a {
-  margin-top: var(--size-5);
-}
-.content-benefits a:hover,
-.content-gameplan a:hover {
-  background-color: var(--drkbg);
-  color: var(--ltclr);
-}
-@media screen and (min-width: 641px) {
-  .container-benefits,
-  .container-gameplan {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-inline:var(--size-12);
-  }
+
+.content-gameplan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-3);
 }
 
 /*process styles*/
@@ -199,6 +192,29 @@
   padding-bottom:var(--size-7);
 }
 
+.content-gameplan :global(.primary-btn) {
+  font-size: var(--fs-300);
+  margin-top:var(--size-3);
+  padding: var(--size-225) var(--size-7);
+}
+
+/* ==========================================
+   TABLET - min-width: 40.0625em (641px)
+   ========================================== */
+@media screen and (min-width: 40.0625em) {
+  .container-gameplan {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content-gameplan :global(.primary-btn) {
+    font-size: var(--fs-350);
+  }
 
 
+}
 </style>

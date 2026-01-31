@@ -1,114 +1,334 @@
 ---
+export interface Props {
+    title?: string;
+    description?: string;
+    prefixText?: string;
+    highlightText?: string;
+    suffixText?: string;
+}
 
+const {
+    title = "DO YOU HATE HAVING YOUR PICTURE TAKEN?",
+    description = "LACK OF CONFIDENCE, FEAR OF FAILURE, AND FEELING THAT YOU AREN'T PHOTOGENIC,<br>PREVENT YOU FROM SHOWING YOUR TRUE SELF",
+    prefixText = "A",
+    highlightText = "PROFESSIONAL HEADSHOT",
+    suffixText = "EXPERIENCE CAN CHANGE EVERYTHING"
+} = Astro.props;
+
+// Import problem section images
+import { Image } from 'astro:assets';
+import image0090 from '../assets/images/problem/Headshot_20250917_Sonya Lilienstein_Richard Waine_Lancaster_PA_0090 (horizontal) - compressed.jpg';
+import image0056 from '../assets/images/problem/Headshot_20250917_Sonya Lilienstein_Richard Waine_Lancaster_PA_0056 (horizontal) - compressed.jpg';
+import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienstein_Richard Waine_Lancaster_PA_0079 (horizontal) - compressed.jpg';
 ---
 
-<div class="wrapper">
-		<div class="benefits center" id="problemContent">
-		    <p class="section-title spacing">DO YOU HATE HAVING YOUR PICTURE TAKEN?</p>
-		    <p class="paragraph spacing">LACK OF CONFIDENCE, FEAR OF FAILURE, 
-		        AND FEELING THAT YOU AREN'T PHOTOGENIC,<br>
-		        PREVENT YOU FROM SHOWING YOUR TRUE SELF</p>
-		    <p class="benefits paragraph one spacing">A<h2 class="benefits h2 spacing"> PROFESSIONAL HEADSHOT</h2>
-		    <p class="benefits paragraph two spacing"> EXPERIENCE CAN CHANGE EVERYTHING</p>
-		</div>
+<!-- CONCEPT 5: Diagonal Triptych -->
+<div class="diagonal-triptych">
+    <div class="problem-text-top">
+        <h2 class="problem-title">{title}</h2>
+        <p class="problem-description" set:html={description}></p>
+    </div>
 
+    <div class="triptych-container">
+        <div class="triptych-panel panel-left">
+            <Image src={image0090} alt="Professional headshot example showing confident expression" class="diagonal-img" loading="lazy" layout='constrained' width={1475} height={1180} />
+            <div class="panel-overlay"></div>
+        </div>
+        <div class="triptych-panel panel-center">
+            <Image src={image0056} alt="Professional headshot demonstrating quality photography" class="diagonal-img" loading="lazy" layout='constrained' width={1475} height={1180} />
+            <div class="panel-overlay"></div>
+        </div>
+        <div class="triptych-panel panel-right">
+            <Image src={image0079} alt="Executive headshot showcasing professional presence" class="diagonal-img" loading="lazy" layout='constrained' width={1475} height={1180} />
+            <div class="panel-overlay"></div>
+        </div>
+    </div>
 
+    <div class="problem-text-bottom">
+        <p class="problem-accent">{prefixText} <span class="highlight">{highlightText}</span> {suffixText}</p>
+    </div>
 </div>
 
+<style is:global>
+    /* CONCEPT 5: Diagonal Triptych - SVG clipPath Method */
+    .diagonal-triptych {
+        
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: auto auto auto;
+        gap:0;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        padding-block:var(--size-8);
+
+        /* Border thickness controls */
+        --_triptych-border:2.25%;
+        --_triptych-border-top: calc( var(--_triptych-border) + .5%);
+        --_triptych-border-right: var(--_triptych-border);
+        --_triptych-border-bottom: calc( var(--_triptych-border) + .5%);
+        --_triptych-border-left: var(--_triptych-border);
 
 
-
-
-
-<style>
-
-    /*benefits section style*/
-
-    .wrapper{
-        padding-block:var(--size-7);
-        background: white;
+ 
     }
 
-:is(.benefits.paragraph, .benefits.h2){
-    font-size:var(--fs-450);
-    font-family:var(--ff-primary);
-    font-weight:var(--fw-normal)
-    /* line-height:1.7; */
-   
-}
+    .diagonal-triptych .triptych-container {
+        margin-block: var(--size-7);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--size-7);
+        width: 100%;
+        height:auto;
+        max-inline-size:75%;
+        justify-self:center;
 
-:is(.benefits.one, .benefits.h2, .paragraph.two){
-    display:inline;
+        
+   
+    }
+
+    .diagonal-triptych .triptych-panel {
+        flex: 1;
+        position: relative;
+        overflow: visible;
+        background: #000;
+        background:linear-gradient(270deg,#000, var(--accent))
+        
+        
+    }
+
+    .diagonal-triptych .triptych-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+
+    }
+
+    /* Apply CSS clipPaths */
+    .diagonal-triptych .panel-left {
+        clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+    }
+
+    .diagonal-triptych .panel-left::before {
+     
+
+        clip-path: polygon(
+            var(--_triptych-border-left) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(85% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+      
+    }
+
+    .diagonal-triptych .panel-center {
+        clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+        z-index: 1;
+        margin-inline:-4%;
+    }
+
+    .diagonal-triptych .panel-center::before {
+        clip-path: polygon(
+            calc(15% + var(--_triptych-border-left)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(85% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+    }
+
+    .diagonal-triptych .panel-right {
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .diagonal-triptych .panel-right::before {
+        clip-path: polygon(
+            calc(15% + var(--_triptych-border-left)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+    }
+
+    .diagonal-triptych .diagonal-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+   
+    }
+
+    .diagonal-triptych .panel-left .diagonal-img {
+        clip-path: polygon(
+            var(--_triptych-border-left) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(85% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+    
+    }
+
+    .diagonal-triptych .panel-center .diagonal-img {
+        clip-path: polygon(
+            calc(15% + var(--_triptych-border-left)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(85% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+    }
+
+    .diagonal-triptych .panel-right .diagonal-img {
+        object-position: 20%;
+        clip-path: polygon(
+            calc(15% + var(--_triptych-border-left)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) var(--_triptych-border-top),
+            calc(100% - var(--_triptych-border-right)) calc(100% - var(--_triptych-border-bottom)),
+            var(--_triptych-border-left) calc(100% - var(--_triptych-border-bottom))
+        );
+    
+    }
+
+    .diagonal-triptych .panel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .diagonal-triptych .problem-text-top {
+        text-align: center;
+        max-width: 80%;
+        margin-inline: auto;
+    }
+
+    .diagonal-triptych .problem-title {
+        font-size: var(--fs-800); 
+        font-weight: var(--fw-bold);
+        text-transform: uppercase;
+        line-height: var(--line-height-tight);
+        margin: 0 0 var(--size-7) 0;
+        color: var(--blkclr);
+    }
+
+    .diagonal-triptych .problem-description {
+        font-size: var(--fs-450); 
+        line-height: var(--line-height-relaxed);
+        margin: 0;
+        color: var(--blkclr);
+    }
+
+    .diagonal-triptych .problem-text-bottom {
+        text-align: center;
+        max-width: 80%;
+        margin-inline: auto;
+    }
+
+    .diagonal-triptych .problem-accent {
+        font-size: var(--fs-550); 
+        font-weight: 700;
+        line-height: var(--line-height-relaxed);
+        margin: 0;
+        color: var(--blkclr);
+
+    } 
+
+    .diagonal-triptych .highlight {
+        /* color: #03a9f4; */
+    }
+
   
+
+/* Mobile-First: Desktop enhancements */
+
+ /* ==========================================
+   DESKTOP - min-width: 64em (1024px)
+   ========================================== */
+@media (min-width: 64em) {
+    .diagonal-triptych {
+        display:grid;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .diagonal-triptych .triptych-container {
+        display: flex;
+        gap: 0;
+        margin-block: var(--size-7);
+        max-inline-size:75%;
+        
+        
+    }
+    
+
+    .diagonal-triptych .problem-text-bottom {
+        display:grid;
+        align-self: start;
+        text-align: center;
+        max-width: 80%;
+        margin-inline: auto;
+    }
+
+    .diagonal-triptych .problem-accent {
+
+         font-size: var(--fs-700); 
+        font-weight: var(--fw-bold);
+        text-transform: uppercase;
+        line-height: var(--line-height-tight);
+
+    }
+
+    .diagonal-triptych .problem-text-top{
+        display:grid;
+        align-self:end;
+    }
 }
-
-
-/*problem section style*/
-.problem{
-    font-size:var(--fs-600);
-
-   
- 
-
-
-&.h2{
-  display:inline;
-
-
-&.problem.h2,&.problem.h3{
-  font-size:var(--fs-600);
-
-  }
-}}
-
-.benefits{
-    padding-block:var(--size-3)
-}
-.benefits > p{
-    /* padding-block:var(--size-3); */
-}
-
-.wrapper{
-    display:grid;
-    margin-inline:auto;
-}
-
-
-
-
 </style>
 
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const problemContent = document.querySelector('#problemContent');
-    
-    if (problemContent) {
-        // Set initial state
-        gsap.set(problemContent, { y: 40, opacity: 0 });
-        
-        // Create intersection observer for animation trigger
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    gsap.to(problemContent, {
-                        y: 0,
-                        opacity: 1,
-                        duration: 1,
-                        ease: "power3.out"
-                    });
-                } else {
-                    gsap.set(problemContent, { y: 40, opacity: 0 });
-                }
-            });
-        }, {
-            threshold: 0.3,
-            rootMargin: '0px 0px -50px 0px'
-        });
-        
-        observer.observe(problemContent);
-    }
-});
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate problem text elements
+    gsap.from('.problem-title', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.problem-title',
+            start: 'top 80%'
+        }
+    });
+
+    gsap.from('.problem-description', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.problem-description',
+            start: 'top 80%'
+        }
+    });
+
+    gsap.from('.problem-accent', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.4,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.problem-title',
+            start: 'top 80%'
+        }
+    });
 </script>

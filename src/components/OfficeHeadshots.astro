@@ -1,11 +1,28 @@
 ---
-import Button from './Button.astro';
+import PrimaryButton from './PrimaryButton.astro';
+
+
+import { Image } from 'astro:assets';
+import ChubbContactSheet from '../assets/images/office-headshots/Chubb - ContactSheet (square).jpg';
+import SallieMaeContactSheet from '../assets/images/office-headshots/SallieMae - ContactSheet (square).jpg';
+import HavtechContactSheet from '../assets/images/office-headshots/Havtech - ContactSheet (square).jpg';
+import KenGiglio from '../assets/images/office-headshots/KenGiglio - 0060 (500px).jpg';
+import TsedeyAragie from '../assets/images/office-headshots/TsedeyAragie - 0018 (500px).jpg';
+import AccelerateMortgage from '../assets/images/office-headshots/AccelerateMortgage - 0185 (500px).jpg';
+import ShreePatel from '../assets/images/office-headshots/ShreePatel - 0105 (500px).jpg';
+import RamiCastillo from '../assets/images/office-headshots/RamiCastillo - 0091 (500px).jpg';
+import JasonCooley from '../assets/images/office-headshots/JasonCooley - 0032 (500px).jpg';
+import CamilleSwann from '../assets/images/office-headshots/CamilleSwann - 0105 (500px).jpg';
+import DebbieKerchner from '../assets/images/office-headshots/DebbieKerchner - 0063 (500px).jpg';
+
+
 ---
-<div class="wrapper">
+
+<div class="wrapper office-headshots-section-wrapper">
       <div class="office-headshots">
 
           <h2 class="section-title white office-headshots spacing">Office Headshots</h2>
-          <br>
+          
     
           <div class="office-headshots-text">
               <p class="">
@@ -22,39 +39,57 @@ import Button from './Button.astro';
       </div>
 
       <div class="image-container">
-      
 
-      <img class="contact-sheet contact-sheet1" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/675ee18f65c4ed57e51d4c95/1734271376159/Sallie+Mae+-+Contact+Sheet+%28square%29-1.jpg" alt="Sallie Mae, Employee Headshots, Team Headshots, Office Headshots" loading="lazy"> 
-    
+
+      
+      <Image src={SallieMaeContactSheet} alt="Sallie Mae, Employee Headshots, Team Headshots, Office Headshots" loading="lazy" class="contact-sheet contact-sheet1" height={1080} width={1080}/>
+      
 
       <div class="image-grid image-grid1">
           <div class="quad-image-grid">
-      <img src="https://images.squarespace-cdn.com/content/v1/50f79c6fe4b00d3480c9bbf0/1589985374795-HVKV5YOMY0JOPE99BLKD/Ken-Giglio+-+%28300px%29+-+Richard+Waine+-+Lancaster-PA_0060.jpg" loading="lazy" alt="Team Headshots, Office Headshots, Brand Strategy and Personal Branding, on-location headshots, on location headshots, branding headshots, marketing headshots, professional headshots, professional headshot photographer, professional photographer, professional photography, portrait photography, portrait photographer">
-      <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/64d3cbac4a6105741e8de86d/1691601836424/Tsedey+Aragie+-+%28300px%29+-+Richard_Waine_Lancaster_PA_0018.jpg" loading="lazy" alt="Chief Creative Director headshots. Team headshots, group headshots on location, headshot, headshots, on-location headshots, on location headshots, pittsburgh headshots, pittsburgh office headshots, office headshots, lancaster headshots, lancaster office headshots, lancaster headshot photography, lancaster headshot photographer, harrisburg office headshots, harrisburg headshots, harrisburg attorney headshots, delaware professional headshots, professional headshots, baltimore headshots, contemporary headshots, lancaster expo headshots, philadelphia expo headshots">
-      <img src="https://images.squarespace-cdn.com/content/v1/50f79c6fe4b00d3480c9bbf0/1590513169443-TL9GNIZPQA9X6BBH35KS/Accelerate-Mortgage+-+%28300px%29+-+Richard+Waine+-+Lancaster-PA_0185.jpg" loading="lazy" alt="Executive headshots, marketing headshots, office branding, branding headshots, headshot, headshots, professional headshots, professional headshot photography, professional headshot photographer, Lancaster headshots, Lancaster headshot photography, Philadelphia headshots, Philadelphia professional headshot photographer, Philly headshot photographer, on location headshots, on-location headshots, team headshots, group headshots, Lancaster conference headshots, Philadelphia conference headshots">
-      <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/64d3ca1c4374665401cc3dd9/1691601436850/Shree+Patel+%28300px%29+-+Richard_Waine_Lancaster_PA_0105.jpg" loading="lazy" alt="Executive headshots. Team building and brand alignment, headshot, headshots, professional headshots, professional headshot photography, professional headshot photographer, philadelphia headshot photographer, on-location headshots, on location headshots, office headshots, marketing headshots, harrisburg headshots, harrisburg team headshots, harrisburg office headshots, harrisburg headshot photographer, philly headshots, philly headshot photographer, philadelphia professional headshots, pittsburgh professional headshots, corporate headshots, company headshots, employee headshots, staff headshots on location, staff headshots, pittsburgh office headshots, philadelphia office headshots, lancaster convention headshots, philadelphia conference headshots, lancaster trade show headshots">
+
+          <Image src={KenGiglio} alt="Team Headshots, Office Headshots, Brand Strategy and Personal Branding, on-location headshots, on location headshots, branding headshots, marketing headshots, professional headshots, professional headshot photographer, professional photographer, professional photography, portrait photography, portrait photographer" loading="lazy"  height={500} width={500}/>
+
+       <Image src={TsedeyAragie} alt="Chief Creative Director headshots. Team headshots, group headshots on location, headshot, headshots, on-location headshots, on location headshots, pittsburgh headshots, pittsburgh office headshots, office headshots, lancaster headshots, lancaster office headshots, lancaster headshot photography, lancaster headshot photographer, harrisburg office headshots, harrisburg headshots, harrisburg attorney headshots, delaware professional headshots, professional headshots, baltimore headshots, contemporary headshots, lancaster expo headshots, philadelphia expo headshots" loading="lazy" height={500} width={500} />
+
+      <Image src={AccelerateMortgage} alt="Executive headshots, marketing headshots, office branding, branding headshots, headshot, headshots, professional headshots, professional headshot photography, professional headshot photographer, Lancaster headshots, Lancaster headshot photography, Philadelphia headshots, Philadelphia professional headshot photographer, Philly headshot photographer, on location headshots, on-location headshots, team headshots, group headshots, Lancaster conference headshots, Philadelphia conference headshots" loading="lazy" height={500} width={500} />
+
+      <Image src={ShreePatel} alt="Executive headshots. Team building and brand alignment, headshot, headshots, professional headshots, professional headshot photography, professional headshot photographer, philadelphia headshot photographer, on-location headshots, on location headshots, office headshots, marketing headshots, harrisburg headshots, harrisburg team headshots, harrisburg office headshots, harrisburg headshot photographer, philly headshots, philly headshot photographer, philadelphia professional headshots, pittsburgh professional headshots, corporate headshots, company headshots, employee headshots, staff headshots on location, staff headshots, pittsburgh office headshots, philadelphia office headshots, lancaster convention headshots, philadelphia conference headshots, lancaster trade show headshots" loading="lazy" height={500} width={500} />
+    
+
       
       
         </div> 
 
       </div>
-    
-        <img class="contact-sheet contact-sheet2" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68616b29571b5d6952a25fa4/1751214890211/Chubb+-+Contact+Sheet+%28square%29-1+-+compressed.jpg" alt="Chubb Insurance,Insurance Company Headshots ,Employee Headshots, Team Headshots, Office Headshots" loading="lazy">
+      <Image src={ChubbContactSheet} alt="Chubb Insurance,Insurance Company Headshots ,Employee Headshots, Team Headshots, Office Headshots" loading="lazy" class="contact-sheet contact-sheet2" height={1080} width={1080}/>
+
+        
       
       <div class="image-grid image-grid2">
         <div class="quad-image-grid">
-      <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/64d4c58b6283de5b70653e66/1691665803087/Rami+Castillo+%28300px%29+-+Richard+Waine+-+Lancaster_PA_0091.jpg" loading="lazy" alt="Team Headshots, Office Headshots, Brand Strategy and Personal Branding, on-location headshots, on location headshots, branding headshots, marketing headshots, professional headshots, professional headshot photographer, professional photographer, professional photography, portrait photography, portrait photographer">
-      <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/64d531736b563b39e2b43b27/1691693427169/Debbie+Kerchner+%28300px%29+-+Richard+Waine+-+Lancaster_PA_0063.jpg" loading="lazy" alt="Chief Creative Director headshots. Team headshots, group headshots on location, headshot, headshots, on-location headshots, on location headshots, pittsburgh headshots, pittsburgh office headshots, office headshots, lancaster headshots, lancaster office headshots, lancaster headshot photography, lancaster headshot photographer, harrisburg office headshots, harrisburg headshots, harrisburg attorney headshots, delaware professional headshots, professional headshots, baltimore headshots, contemporary headshots, lancaster expo headshots, philadelphia expo headshots">
-      <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/64d4c64288a0dc52d31bb581/1691665986987/Camille+Swann+%28300px%29+-+Richard+Waine+-+Lancaster_PA_0105.jpg" loading="lazy" alt="Executive headshots, marketing headshots, office branding, branding headshots, headshot, headshots, professional headshots, professional headshot photography, professional headshot photographer, Lancaster headshots, Lancaster headshot photography, Philadelphia headshots, Philadelphia professional headshot photographer, Philly headshot photographer, on location headshots, on-location headshots, team headshots, group headshots, Lancaster conference headshots, Philadelphia conference headshots">
-      <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/64d4c7a4e08833672d3a9f5a/1691666340698/Jason+Cooley+%28300px%29+-+Richard+Waine+-+Lancaster_PA_0032.jpg" loading="lazy" alt="Executive headshots. Team building and brand alignment, headshot, headshots, professional headshots, professional headshot photography, professional headshot photographer, philadelphia headshot photographer, on-location headshots, on location headshots, office headshots, marketing headshots, harrisburg headshots, harrisburg team headshots, harrisburg office headshots, harrisburg headshot photographer, philly headshots, philly headshot photographer, philadelphia professional headshots, pittsburgh professional headshots, corporate headshots, company headshots, employee headshots, staff headshots on location, staff headshots, pittsburgh office headshots, philadelphia office headshots, lancaster convention headshots, philadelphia conference headshots, lancaster trade show headshots">
+
+<Image src={RamiCastillo} alt="Team Headshots, Office Headshots, Brand Strategy and Personal Branding, on-location headshots, on location headshots, branding headshots, marketing headshots, professional headshots, professional headshot photographer, professional photographer, professional photography, portrait photography, portrait photographer" loading="lazy" height={500} width={500} />
+
+
+      
+<Image src={DebbieKerchner} alt="Chief Creative Director headshots. Team headshots, group headshots on location, headshot, headshots, on-location headshots, on location headshots, pittsburgh headshots, pittsburgh office headshots, office headshots, lancaster headshots, lancaster office headshots, lancaster headshot photography, lancaster headshot photographer, harrisburg office headshots, harrisburg headshots, harrisburg attorney headshots, delaware professional headshots, professional headshots, baltimore headshots, contemporary headshots, lancaster expo headshots, philadelphia expo headshots" loading="lazy"  height={500} width={500}/>
+
+
+      <Image src={CamilleSwann} alt="Executive headshots, marketing headshots, office branding, branding headshots, headshot, headshots, professional headshots, professional headshot photography, professional headshot photographer, Lancaster headshots, Lancaster headshot photography, Philadelphia headshots, Philadelphia professional headshot photographer, Philly headshot photographer, on location headshots, on-location headshots, team headshots, group headshots, Lancaster conference headshots, Philadelphia conference headshots" loading="lazy" height={500} width={500} />
+
+   <Image src={JasonCooley} alt="Executive headshots. Team building and brand alignment, headshot, headshots, professional headshots, professional headshot photography, professional headshot photographer, philadelphia headshot photographer, on-location headshots, on location headshots, office headshots, marketing headshots, harrisburg headshots, harrisburg team headshots, harrisburg office headshots, harrisburg headshot photographer, philly headshots, philly headshot photographer, philadelphia professional headshots, pittsburgh professional headshots, corporate headshots, company headshots, employee headshots, staff headshots on location, staff headshots, pittsburgh office headshots, philadelphia office headshots, lancaster convention headshots, philadelphia conference headshots, lancaster trade show headshots" loading="lazy" height={500} width={500} />
+
+
       
 
         </div>
       
       </div>
       
+    <Image src={HavtechContactSheet} alt="Havtech, HVAC headshots, HVAC employees, team headshots, company headshots, office headshots" loading="lazy" class="contact-sheet contact-sheet3" height={1080} width={1080}/>
 
-    <img class="contact-sheet contact-sheet3" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/68616bf50814eb2d6852a70d/1751215094284/Havtech+-+ContactSheet+%28square%29-1+-+compressed.jpg" alt="Havtech, HVAC headshots, HVAC employees, team headshots, company headshots, office headshots" loading="lazy">
+    
 
 
     </div> 
@@ -65,12 +100,19 @@ import Button from './Button.astro';
           <p>LET ME BRING THE STUDIO TO YOU!</p>
       </div>
 
-
-<Button text="REQUEST PROPOSAL" url="/request-proposal" />
+      <div class="button-center">
+          <div class="button-wrapper">
+            <PrimaryButton text="REQUEST PROPOSAL" url="/request-proposal" />
+          </div>
+      </div>
     </div>
 
 
 <style>
+
+ .office-headshots-section-wrapper{
+  padding-block:var(--size-8);
+  }
 
 .office-headshots{
     text-align:center;
@@ -78,16 +120,27 @@ import Button from './Button.astro';
 }
 
 .office-headshots-text p{
-    padding-block:var(--size-2);
-    /* line-height:1.7 */
+    margin-block:var(--size-4);
+    line-height:var(--line-height-relaxed);
 }
 .office-headshots-text p:nth-child(1){
-    font-weight:var(--fw-bold)
+    font-weight:var(--fw-bold);
 }
 
-.office-headshots-two p:not(first-child){
-
+.office-headshots-two p:not(:first-child){
   margin-top:var(--size-3);
+}
+
+.office-headshots-two{
+  margin-block:var(--size-3);
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--size-5);
+
+  
 }
 
 /*office headshots images*/
@@ -98,37 +151,41 @@ import Button from './Button.astro';
   width:100%;
   align-items:center;
   justify-items:center;
-  padding-inline:var(--size-7);
   height:min-content;
  
 }
   
   .image-container > *{
-    --_shadow:2px 5px 10px rgba(0,0,0,0.5);
+    --_shadow:2px 5px 10px var(--shadow-clr-medium);
 
     max-width:400px;
     max-height:auto;
     box-shadow:var(--_shadow);
     margin-block: var(--size-3);
-  }  
-
-@media screen and (max-width:767px){
-  .contact-sheet1,.contact-sheet3,.image-grid1{
-    display:none;
   }
+
+.contact-sheet1,.contact-sheet3,.image-grid1{
+  display:none;
 }
- 
-  @media screen and (min-width:768px){
+
+
+ /* ==========================================
+   LARGE DESKTOP - min-width: 48em (768px)
+   ========================================== */
+
+  @media screen and (min-width: 48em){
     .image-container{
     display:grid;
       width:100%;
       grid-template-columns: repeat(5, 1fr);
       justify-content:space-between;
       gap:var(--size-7);
-    
       padding-block:var(--size-7);
-     
       margin-inline:0;
+   }
+
+   .contact-sheet1,.contact-sheet3,.image-grid1{
+     display:block;
    }
   }  
 
@@ -148,18 +205,15 @@ import Button from './Button.astro';
   
 .quad-image-grid > *{ 
    width:100%;
+   height:auto;
+
   }
   
 
-  
   .contact-sheet{
     width:100%;
     height:auto;
     
   }
-
-
-
-
 
 </style>

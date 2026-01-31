@@ -11,26 +11,27 @@ This document tracks the current live site structure. The new Astro site MUST ma
 ## Current Site Structure (54 Total URLs)
 
 ### Main Pages (6)
-- [ ] `/` - Home
-- [ ] `/about` - About
-- [ ] `/contact` - Contact
-- [ ] `/studio` - Studio
-- [ ] `/terms-and-conditions` - Terms and Conditions
+- [ ] `/home` - Home
+- [x] `/about-lancaster-headshot-photographer-richard-waine` - About
+- [x] `/contact-lancaster-headshot-photographer-richard-waine` - Contact
+- [ ] `/richard-waine-photography-studio` - Studio
+- [x] `/terms-and-conditions` - Terms and Conditions
 - [ ] `/videos` - Videos
 
 ### Location-Specific Headshot Pages (6)
-- [ ] `/harrisburg-headshots` - Harrisburg Headshots
-- [ ] `/delaware-headshots` - Delaware Headshots
-- [ ] `/philadelphia-headshots` - Philadelphia Headshots
-- [ ] `/baltimore-headshots` - Baltimore Headshots
-- [ ] `/york-headshots` - York Headshots
-- [ ] `/conference-headshots` - Conference Headshots
+- [x] `/harrisburg-headshots` - Harrisburg Headshots
+- [x] `/delaware-headshots` - Delaware Headshots
+- [x] `/philadelphia-headshots` - Philadelphia Headshots
+- [x] `/baltimore-headshots` - Baltimore Headshots
+- [x] `/york-headshots` - York Headshots
+- [x] `/conference-headshots` - Conference Headshots
 
-### Resource/Service Pages (4)
+### Resource/Service Pages (5)
 - [ ] `/gift-certificates` - Gift Certificates
-- [ ] `/request-proposal` - Request Proposal
-- [ ] `/schedule` - Schedule
-- [ ] `/resources` - Resources
+- [x] `/request-proposal` - Request Proposal
+- [x] `/schedule` - Schedule
+- [x] `/resources` - Resources
+- [x] `/rates` - Rates (excluded from old sitemap, now included)
 
 ### Blog-2 Pages (20 posts)
 Blog index: `/blog-2`

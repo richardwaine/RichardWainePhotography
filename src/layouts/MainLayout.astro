@@ -2,14 +2,22 @@
 // @ts-nocheck
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
+
+// Montserrat Variable (replaces 5 weight files)
+import '@fontsource-variable/montserrat';
+
+// Space Grotesk Variable (replaces 1 weight file)
+import '@fontsource-variable/space-grotesk';
 
 import '../styles/style.css';
+import 'gsap';
 
 export interface Props{
 	title:string;
+	description?:string;
 }
-const {title} = Astro.props as Props;
+const {title, description = "Professional headshot photography in Lancaster PA. World-class headshot experience with cinematic precision, luxury service, and results that open doors."} = Astro.props as Props;
 ---
 
 
@@ -18,23 +26,102 @@ const {title} = Astro.props as Props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 		<link rel="apple-touch-icon" href="/favicon.png" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="preload" href="/src/assets/bts-hero-background.jpg" as="image" type="image/jpeg">
-		<link rel="preload" href="/src/assets/images/hero-images/Ken Giglio (16 x 9) - compressed.jpg" as="image" type="image/jpeg">
-		<link rel="preload" href="/src/assets/images/hero-images/Cindy Nguyen (16 x 9) - compressed.jpg" as="image" type="image/jpeg">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions />
+		<link rel="canonical" href={Astro.url.href} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="https://www.richardwainephotography.com/Logo-RichardWainePhotography-black.png" />
+		<ClientRouter />
 
+
+
+		<!-- Schema.org Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "Richard Waine Photography",
+			"description": "Professional Headshot Photographer based in Lancaster, Pennsylvania, offering corporate headshots, acting headshots, conference headshots, and commercial photography",
+			"image": "https://www.richardwainephotography.com/Logo-RichardWainePhotography-black.png",
+			"@id": "https://www.richardwainephotography.com",
+			"url": "https://www.richardwainephotography.com",
+			"sameAs": [
+				"https://www.facebook.com/RichardWainePhotography",
+				"https://www.instagram.com/richardwaine",
+				"https://www.linkedin.com/in/richardwaine/",
+				"https://www.richardwaine.com"
+			],
+			"telephone": "(717) 925-0061",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "20 North Queen Street",
+				"addressLocality": "Lancaster",
+				"addressRegion": "PA",
+				"postalCode": "17603",
+				"addressCountry": "US"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": 40.038578,
+				"longitude": -76.306020
+			},
+			"openingHoursSpecification": [
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": "https://schema.org/Monday",
+					"opens": "00:00",
+					"closes": "23:59"
+				},
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": "https://schema.org/Tuesday",
+					"opens": "00:00",
+					"closes": "23:59"
+				},
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": "https://schema.org/Wednesday",
+					"opens": "00:00",
+					"closes": "23:59"
+				},
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": "https://schema.org/Thursday",
+					"opens": "00:00",
+					"closes": "23:59"
+				},
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": "https://schema.org/Friday",
+					"opens": "00:00",
+					"closes": "23:59"
+				},
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": "https://schema.org/Saturday",
+					"opens": "00:00",
+					"closes": "23:59"
+				},
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": "https://schema.org/Sunday",
+					"opens": "00:00",
+					"closes": "23:59"
+				}
+			]
+		}
+		</script>
+
+	
 	</head>
 
 
@@ -46,10 +133,74 @@ const {title} = Astro.props as Props;
 
 	<slot />
 
+
 	<Footer  />
+
+	 <script>
+	// import Lenis from 'lenis'; // COMMENTED OUT: Now conditionally imported inside initLenis() for desktop only (≥768px)
+	import gsap from 'gsap';
+	import { Flip } from 'gsap/Flip';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+	// Extend Window interface for TypeScript
+	declare global {
+		interface Window {
+			lenis?: any;
+		}
+	}
+
+	// Register ScrollTrigger and Flip plugins
+	gsap.registerPlugin(ScrollTrigger, Flip);
+
+	// Disable browser scroll restoration and scroll to top
+	if ('scrollRestoration' in history) {
+		history.scrollRestoration = 'manual';
+	}
+	window.scrollTo(0, 0);
+
+	// Wait for DOM to be ready before initializing Lenis
+	async function initLenis() {
+		if (window.innerWidth <= 767) return;
+
+		if (!window.lenis) {
+			const { default: Lenis } = await import('lenis');
+
+			window.lenis = new Lenis({
+				duration: 1.2,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+				prevent: (node) => node.hasAttribute('data-lenis-prevent'),
+			});
+
+			window.lenis.on('scroll', ScrollTrigger.update);
+
+			gsap.ticker.add((time) => {
+				window.lenis?.raf(time * 1000);
+			});
+
+			gsap.ticker.lagSmoothing(0);
+		}
+	}
+
+	// Initialize on load
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initLenis);
+	} else {
+		initLenis();
+	}
+
+	// Refresh ScrollTrigger after View Transitions
+	document.addEventListener('astro:after-swap', () => {
+		ScrollTrigger.getAll().forEach(t => t.kill());
+		gsap.globalTimeline.clear();
+		if (window.lenis) {
+			window.lenis.scrollTo(0, { immediate: true });
+		}
+		window.scrollTo(0, 0);
+		ScrollTrigger.refresh();
+	});
+	</script>
+ 
 
 
 </body>
 </html>
-
-

@@ -1,0 +1,70 @@
+---
+import FacebookIcon from './icons/FacebookIcon.astro';
+import XTwitterIcon from './icons/XTwitterIcon.astro';
+import LinkedInIcon from './icons/LinkedInIcon.astro';
+import RedditIcon from './icons/RedditIcon.astro';
+import PinterestIcon from './icons/PinterestIcon.astro';
+import BlueskyIcon from './icons/BlueskyIcon.astro';
+import EnvelopeIcon from './icons/EnvelopeIcon.astro';
+
+export interface Props {
+  url: string;
+  title: string;
+}
+
+const { url, title } = Astro.props;
+
+const encodedUrl = encodeURIComponent(url);
+const encodedTitle = encodeURIComponent(title);
+---
+
+<div class="share-buttons">
+  <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
+    <FacebookIcon />
+  </a>
+  <a href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`} target="_blank" rel="noopener noreferrer" aria-label="Share on X">
+    <XTwitterIcon />
+  </a>
+  <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`} target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">
+    <LinkedInIcon />
+  </a>
+  <a href={`https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit">
+    <RedditIcon />
+  </a>
+  <a href={`https://www.pinterest.com/pin/create/link/?url=${encodedUrl}&description=${encodedTitle}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Pinterest">
+    <PinterestIcon />
+  </a>
+  <a href={`https://bsky.app/intent/compose?text=${encodedTitle}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky">
+    <BlueskyIcon />
+  </a>
+  <a href={`mailto:?subject=${encodedTitle}&body=${encodedUrl}`} aria-label="Share via Email">
+    <EnvelopeIcon />
+  </a>
+</div>
+
+<style>
+  .share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--size-4);
+    padding-block: var(--size-7);
+   
+  }
+
+  .share-buttons a {
+    color: var(--blkclr);
+    transition: color 0.2s ease;
+  }
+
+  .share-buttons a:hover {
+    color: blue;
+  }
+
+  .share-buttons :global(svg) { 
+    --_icon-size:20px;
+
+    width: var(--_icon-size); 
+    height: var(--_icon-size);  
+  }
+
+</style>

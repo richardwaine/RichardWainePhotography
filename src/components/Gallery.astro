@@ -2,6 +2,13 @@
 import Button from './Button.astro';
 import { Image } from 'astro:assets';
 
+interface Props {
+  limit?: number;
+  showButton?: boolean;
+}
+
+const { limit, showButton = true } = Astro.props;
+
 // Import gallery images
 import jayPoff400 from '../assets/images/gallery/400px/(400px) - Jay Poff_Richard_Waine_Lancaster_PA_0100 - compressed.jpg';
 import jayPoff600 from '../assets/images/gallery/600px/(600px) - Jay Poff_Richard_Waine_Lancaster_PA_0100. - compressed.jpg';
@@ -42,14 +49,14 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 <section id="gallery-section" class="">
   <div class="wrapper">
 
-<div class="gallery-container">
+<div class="gallery-container" data-limit={limit}>
   <div class="gallery">
     <!-- Always visible images (image1, image2) -->
     <div class="image1">
       <Image 
         src={jayPoff600}
         alt="Best Headshots Lancaster, Lancaster Actor Headshots, Acting Headshots Lancaster, Lancaster professional headshots, Lancaster headshot photographer, Lancaster office headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 640px) 100vw, (max-width: 767px) 180px, (max-width: 1024px) 180px, 150px"
         width={300}
@@ -60,7 +67,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={lisaTorba600}
         alt="headshot, Lancaster headshots, Social Media Marketing Headshots, Lancaster office headshots, group headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 640px) 100vw, (max-width: 767px) 180px, (max-width: 1024px) 180px, 150px"
         width={300}
@@ -73,7 +80,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={aideMMedia520_600}
         alt="Lancaster Social Media Headshots, Headshots for LinkedIn, Lancaster Personal Branding Headshots, Lancaster conference headshots, Lancaster convention headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 767px) 33vw, (max-width: 1024px) 33vw, 150px"
         width={300}
@@ -84,7 +91,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={emilyMainquist600}
         alt="Lancaster executive headshots, professional headshots, business headshots, real estate agent headshot, executive headshots, professional pictures, Lancaster expo headshots, Lancaster convention headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 767px) 33vw, (max-width: 1024px) 33vw, 150px"
         width={300}
@@ -97,7 +104,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={aideMMedia502_600}
         alt="Lancaster Headshot Photographer, Headshots in Lancaster, Professional headshot photographer, Lancaster Business headshots, Lancaster tradeshow headshots, Lancaster convention headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 767px) 33vw, (max-width: 1024px) 33vw, 150px"
         width={300}
@@ -108,7 +115,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={chubbInsurance103_600}
         alt="Lancaster headshots, Lancaster headshot Photographer, Lancaster Professional Headshots, Lancaster acting headshots, Actor headshots, model headshots, modeling headshots, dancer headshots, Lancaster child actor headshots, child headshots, headshots for kids"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 767px) 33vw, (max-width: 1024px) 33vw, 150px"
         width={300}
@@ -121,7 +128,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={kenHenry600}
         alt="Lancaster Business Headshots, corporate headshots, Business headshot Photographer, Lancaster business portraits, Lancaster corporate headshots, commercial photography, Lancaster office headshots, group headshots, on location headshots, Lancaster conference headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 1024px) 33vw, 150px"
         width={300}
@@ -132,7 +139,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={briannaMoscarell600}
         alt="modeling headshots, headshots for models, child actor headshots, child headshots, headshots for kids"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 1024px) 33vw, 150px"
         width={300}
@@ -145,7 +152,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={ellenTaylor600}
         alt="headshots for professionals, personal branding headshots, Lancaster personal branding photographer, marketing headshots, headshots, Lancaster linkedin headshots, linkedin profinder headshots Lancaster, Lancaster convention headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 767px) 33vw, (max-width: 1024px) 33vw, 150px"
         width={300}
@@ -156,7 +163,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={chuckSierk600}
         alt="Real estate agent headshots Lancaster, headshots near me, headshots near Lancaster, Lancaster business headshots, real estate agent, business headshots, Linkedin headshots, LinkedIn profile pictures, Lancaster conference headshots, tradeshow headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 767px) 33vw, (max-width: 1024px) 33vw, 150px"
         width={300}
@@ -169,7 +176,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={chubbInsurance100_600}
         alt="acting headshots, best headshots Lancaster, best photographer Lancaster, photography studio, richard waine studio, studio photography, studio photographer, headshot photographer, business portraits, performer headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="150px"
         width={300}
@@ -180,7 +187,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={joshOutlar600}
         alt="Lancaster trade show headshots, Lancaster expo headshots, conference headshots, real estate headshots, LinkedIn Profile Photo, Linkedin Headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="150px"
         width={300}
@@ -193,7 +200,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={jacquelineEby600}
         alt="executive headshots, headshot, Lancaster office headshots, on location headshots,thought leader headshots, business headshots, business portraits, linkedin profinder headshots, Lancaster conference headshots, convention headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="(max-width: 1024px) 33vw, 150px"
         width={300}
@@ -206,7 +213,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={ethanHaymovitz600}
         alt="Linkedin Headshots, Lancaster Marketing headshots, Professional Pictures, Lancaster professional headshots, Linkedin Profinder Headshot Photographer, conference headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="150px"
         width={300}
@@ -217,7 +224,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={stephanyBaughman600}
         alt="entrepreneur headshots, on location headshots, professional headshots, headshot, conference headshots, office headshots, trade show headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="150px"
         width={300}
@@ -228,7 +235,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
       <Image 
         src={claudeHicks600}
         alt="Executive Headshots, Professional Headshots, Business Headshots Lancaster, Lancaster headshot photographer, Headshots Lancaster, expo headshots, convention headshots"
-        loading="eager"
+        loading="lazy"
         widths={[400, 600]}
         sizes="150px"
         width={300}
@@ -238,11 +245,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
   </div>
 </div>
 
-
-
-<Button text="GET PRICING" url="/rates" />
-
-
+{showButton && <Button text="GET PRICING" url="/rates" />}
 
 </div>
 </section>
@@ -253,13 +256,13 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 
 #gallery-section {
  /* background: var(--drkbg); */
-    padding:var(--size-8);
+    padding-inline:var(--size-8);
 }
 
 .gallery-container {
   container-type: inline-size;
   container-name: header-gallery;
-  padding: var(--size-6);
+  padding: var(--size-6) 0;
   
 }
 
@@ -298,7 +301,7 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 
 /* 641px to 767px breakpoint */
 
-@container header-gallery (min-width: 641px) and (max-width: 767px) {
+@container header-gallery (min-width: 40.0625em) and (max-width: 47.9375em) {
   .gallery {
     --grid-row-gap: 1vw;
 
@@ -312,6 +315,8 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
   .gallery .image2,
   .gallery .image5,
   .gallery .image6,
+  .gallery .image7,
+  .gallery .image8,
   .gallery .image9,
   .gallery .image10 {
     display: block;
@@ -319,8 +324,6 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
   /* Explicitly hide all other images for this specific range */
   .gallery .image3,
   .gallery .image4,
-  .gallery .image7,
-  .gallery .image8,
   .gallery .image11,
   .gallery .image12,
   .gallery .image13,
@@ -332,16 +335,14 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 }
 
 /* 768px to 1024px breakpoint */
-@container header-gallery (min-width: 768px) and (max-width: 1024px) {
+@container header-gallery (min-width: calc(47.9375em + 1px)) and (max-width: 64em) {
   .gallery {
     --grid-row-gap: 1vw;
     --grid-column-gap: 1vw;
 
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(
-      3,
-      1fr
-    ); /* Explicitly set row behavior as per original */
+    grid-template-rows: repeat(3,1fr); 
+    /* Explicitly set row behavior as per original */
     column-gap: var(--grid-column-gap);
     row-gap: var(--grid-row-gap);
   }
@@ -367,10 +368,15 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
   .gallery .image16 {
     display: none;
   }
-}
+
+  .gallery-container[data-limit="8"] .gallery {
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
 
 /* 1025px and up breakpoint */
-@container header-gallery (min-width: 1025px) {
+@container header-gallery (min-width: calc(64em + 1px)) {
   .gallery {
     --grid-row-gap: 0.5vw;
     --grid-column-gap: 0.5vw;
@@ -388,7 +394,24 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 
 /* end gallery */
 
+/* Gallery limit styles */
+.gallery-container[data-limit="8"] .image9,
+.gallery-container[data-limit="8"] .image10,
+.gallery-container[data-limit="8"] .image11,
+.gallery-container[data-limit="8"] .image12,
+.gallery-container[data-limit="8"] .image13,
+.gallery-container[data-limit="8"] .image14,
+.gallery-container[data-limit="8"] .image15,
+.gallery-container[data-limit="8"] .image16 {
+  display: none !important;
+}
 
+@container header-gallery (min-width: 64.0625em) {
+  .gallery-container[data-limit="8"] .gallery {
+    grid-template-rows: 1fr;
+    padding:var(--size-6);
+  }
+}
 
 
 </style>

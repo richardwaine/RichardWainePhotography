@@ -1,0 +1,200 @@
+---
+// @ts-nocheck
+
+import MainLayout from '../layouts/MainLayout.astro';
+import Gallery from '../components/Gallery.astro';
+import PrimaryButton from '../components/PrimaryButton.astro';
+import PageTitle from '../components/PageTitle.astro';
+import { Image } from 'astro:assets';
+import giftCardImage from '../assets/images/gift-cards/Gift Card (16 x 9).jpg';
+
+const title = 'Gift Certificates - Richard Waine Photography';
+const h1 = 'Headshot Gift Certificates';
+const squareStoreUrl = 'https://square.link/u/GS6PmHTs';
+---
+
+<MainLayout title="Gift Certificates" description="Gift Cards towards a headshot session make a fantastic gift for your friends, colleagues and special people in your life.">
+
+<main class="gift-certificates-page">
+
+  <PageTitle title={h1} titleColor="var(--ltclr)" />
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="wrapper">
+      <p class="description">
+        Give the gift of confidence, authenticity, and look-ability. A gift card towards a headshot session is ideal for your colleagues, friends, or for that special someone. They even make great stocking stuffers! Help someone update their headshot this holiday season!
+      </p>
+    </div>
+    <Gallery limit={8} showButton={false} />
+  </section>
+
+  <!-- Gift Card Section -->
+  <section id="gift-card-display">
+    <div class="wrapper">
+      <div class="gift-card-container">
+        <Image
+          src={giftCardImage}
+          alt="Richard Waine Photography Gift Certificate"
+          class="gift-card-image"
+          loading="lazy"
+        />
+
+        <div class="gift-card-info">
+          <h2>Available in Multiple Denominations</h2>
+              <div class="amounts">
+                    <div class="amounts-grp-1">
+                        <span>$25</span>
+                        <span>$50</span>
+                        <span>$100</span>
+                    </div>
+                    <div class="amounts-grp-2">
+                        <span>$250</span>
+                        <span>$500</span>
+                    </div>
+              </div>
+
+          <!-- <p class="amounts">$25 • $50 • $100 • $250 • $500</p> -->
+
+          <div class="button-wrapper">
+            <PrimaryButton text="PURCHASE GIFT CARD" url={squareStoreUrl} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</MainLayout>
+
+<style>
+  .gift-certificates-page {
+    background: var(--drkbg);
+    margin-bottom:var(--size-7);
+  }
+
+  #gallery {
+    background: var(--drkbg);
+    padding-top: 0;
+  
+    > *{
+      padding-inline:0;
+    }
+
+    .gallery-container{
+      padding-inline:0;
+    }
+  }
+
+  #gallery .description {
+    font-size: var(--fs-450);
+    color: var(--ltclr);
+    text-align: center;
+    width:min(900px, 100%);
+    margin: 0 auto;
+    line-height: var(--line-height-relaxed);
+  }
+
+  #gift-card-display {
+    padding: var(--size-8) 0;
+    background: var(--ltclr);
+  }
+
+  .gift-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: var(--size-7);
+  }
+
+  .gift-card-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--size-2);
+    box-shadow: 0 8px 24px var(--shadow-clr-soft);
+
+  }
+
+  .gift-card-info {
+    text-align: center;
+  }
+
+  .gift-card-info h2 {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-semi-bold);
+    color: var(--blkclr);
+    margin-bottom: var(--size-3);
+  }
+
+
+.amounts{
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      justify-content: center;
+      justify-items:center;
+      text-align:center;
+      gap: 0;
+      font-size: var(--fs-450);
+      color: var(--blkclr);
+      margin-bottom: var(--size-5);
+      
+}
+
+ .amounts span {
+      padding: 0 var(--size-2);
+      
+    }
+
+    .amounts span::after {
+      content: " •";
+      margin-left: var(--size-2);
+    }
+
+    .amounts span:nth-child(3)::after,
+    .amounts .amounts-grp-2 span:nth-child(2)::after {
+      content: "";
+      margin-left: 0;
+    }
+
+    .amounts span:nth-child(4),
+    .amounts span:nth-child(5) {
+      
+    
+    }
+  /* .amounts {
+    font-size: var(--fs-400);
+    color: var(--blkclr);
+    margin-bottom: var(--size-5);
+    letter-spacing: 2px;
+    
+  } */
+
+  .button-wrapper{
+
+    > *{
+    padding-inline:var(--size-6);
+  }
+}
+
+/* ==========================================
+   LARGE DESKTOP - min-width: 48em (768px)
+   ========================================== */
+
+  @media (min-width: 48em) {
+    .gift-card-container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .gift-card-image {
+      max-width: 800px;
+    }
+     .button-wrapper{
+
+        > *{
+          padding-inline:var(--size-7);
+          }
+    }
+  }
+</style>

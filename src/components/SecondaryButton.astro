@@ -1,0 +1,55 @@
+---
+export interface Props {
+    text: string;
+    url?: string;
+    type?: 'button' | 'submit' | 'reset';
+}
+
+const { text, url, type = 'button' } = Astro.props;
+const isButton = !url;
+---
+
+{isButton ? (
+    <button type={type} class="btn secondary-btn">
+        <span class="btn-text">{text}</span>
+    </button>
+) : (
+    <a href={url} class="btn secondary-btn">
+        <span class="btn-text">{text}</span>
+    </a>
+)}
+
+<style>
+    .secondary-btn {
+        background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(255, 255, 255, 0.05) 100%);
+        backdrop-filter: blur(15px);
+        border: 2px solid var(--accent);
+        color: var(--accent);
+        box-shadow:
+            0 25px 50px var(--shadow-clr-deep),
+            0 15px 35px var(--glow-clr-strong),
+            0 0 80px rgba(3, 169, 244, 0.4),
+            inset 0 1px 1px var(--highlight-clr-soft);
+    }
+
+    .secondary-btn:hover {
+        box-shadow:
+            0 35px 80px rgba(3, 169, 244, 0.7),
+            0 20px 50px var(--glow-clr-strong),
+            0 0 120px rgba(3, 169, 244, 0.4),
+            inset 0 2px 4px rgba(255, 255, 255, 0.3),
+            inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+   @media (width <= 48em) {
+    .secondary-btn {
+        padding-inline: var(--size-7);
+    }
+  }
+
+
+  
+
+</style>

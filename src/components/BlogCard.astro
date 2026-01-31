@@ -13,7 +13,7 @@ const { category, imageSrc, imageAlt, cardCategory, blogTitle, blogExcerpt, slug
 ---
 
 <div class="blog-card" data-category={category}>
-        <img src={imageSrc} alt={imageAlt}>
+        <img src={imageSrc} alt={imageAlt} loading="lazy">
         <div class="blog-card-content">
               <span class="blog-card-category">{cardCategory}</span>
               <h3 class="blog-card-title">{blogTitle}</h3>
@@ -30,20 +30,13 @@ const { category, imageSrc, imageAlt, cardCategory, blogTitle, blogExcerpt, slug
 
 
 h3 {
-
   font-size: var(--fs-400);
-  font-weight:bold;
+  font-weight:var(--fw-bold);
   text-transform:uppercase;
-  
-}
-
-p {
-  text-wrap: pretty;
 }
 
 a {
   color: var(--accent);
-  text-decoration: none;
 }
 
 
@@ -52,14 +45,14 @@ a {
   border: 1px solid #e5e5e5;
   color: var(--blkclr);
   transition: box-shadow 0.2s ease;
-  border-radius: 12px;
+  border-radius: var(--size-250);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
 .blog-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px var(--shadow-clr-subtle);
 }
 
 .blog-card img {
@@ -75,12 +68,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* line-height: 1.5; */
+  line-height: var(--line-height-normal);
 }
 
 .blog-card-category {
   display: none;
-  padding: 8px;
+  padding: var(--size-2);
   background: transparent;
   color: var(--blkclr);
   font-size:var(--fs-350);
@@ -103,15 +96,14 @@ a {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  word-wrap: break-word; /* Add this */
-  line-height: 1.2em; /* Add this */
-  /* height: 2.4em; Add this */
+  word-wrap: break-word; 
+  line-height: var(--line-height-tight);
   margin-block:var(--size-3);
 }
 
 .read-more {
   display: inline-block;
-  padding: 8px var(--size-3);
+  padding: var(--size-2) var(--size-3);
   background: var(--ltclr);
   color: var(--blkclr);
   font-size:var(--fs-350);
@@ -131,14 +123,20 @@ a {
   box-shadow: 0 0 0 2px var(--blkclr);
 }
 
-@media (min-width: 768px) {
+
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+@media (min-width: 48em) {
   .main-content {
     grid-template-columns: 280px 1fr;
-    
   }
 
   .blog-card img {
-    height: 200px;
+    object-fit:cover;
+    width:100%;
+  
   }
 }
+
 </style>

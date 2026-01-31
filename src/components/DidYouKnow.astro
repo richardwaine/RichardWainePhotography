@@ -1,9 +1,15 @@
 ---
-
+import { Image } from 'astro:assets';
+import graceLong from '../assets/images/didyouknow/Grace Long_Richard_Waine_Lancaster_PA_0805 - 3.jpg';
+import wolfCavalo from '../assets/images/didyouknow/Wolf Cavalo_Richard_Waine_Lancaster_PA_0026-4.jpg';
+import jocelynCrosby from '../assets/images/didyouknow/Jocelyn Crosby_Richard_Waine_Lancaster_PA_0339-1.jpg';
+import brandonLesagonicz from '../assets/images/didyouknow/Brandon Lesagonicz_Richard_Waine_Lancaster_PA_0062.jpg';
+import alyssaMiller from '../assets/images/didyouknow/Alyssa_Miller_Richard_Waine_Lancaster_PA_0099.jpg';
+import danFineberg from '../assets/images/didyouknow/Dan Fineberg_Richard_Waine_Lancaster_PA_0632-3.jpg';
 ---
 
 
-<div class="wrapper">
+<div class="wrapper didyouknow-section-wrapper">
 <div class="portraits center">
    
     <p class="portraits__title section-title">DID YOU KNOW?</p>
@@ -15,12 +21,12 @@
   </div>
 
 <div class="portraits__images">
-  <img class="portrait portrait-1" loading="lazy" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/605791c17e7c406eebf7b39e/1616351681646/Grace+Long+%28500px%29+Richard_Waine_Lancaster_PA_0805+-+3.jpg" alt="model portraits, modeling pictures, model photography">
-  <img class="portrait portrait-2" loading="lazy" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6057924745562a231bf4c179/1616351815835/Wolf+Cavalo+%28500px%29+Richard_Waine_Lancaster_PA_0026-4.jpg" alt="branding photography, personal branding, personal branding pictures">
-  <img class="portrait portrait-3" loading="lazy" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/605791f5a3b3864813837a3a/1616351733604/Jocelyn+Crosby+%28500px%29+Richard_Waine_Lancaster_PA_0339-1.jpg" alt="musician pictures, publicity pictures, press kit images, richard waine photography">
-  <img class="portrait portrait-4" loading="lazy" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/60579274ed1e0809c1c8fc12/1616351860100/Brandon+Lesagonicz+%28500px%29+Richard_Waine_Lancaster_PA_0062.jpg" alt="model portrait, business portraits, branding pictures, photography studio">
-  <img class="portrait portrait-5" loading="lazy" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/605792a545562a231bf4c61d/1616351909496/Nolan+Foster+%28500px%29+Richard_Waine_Lancaster_PA_0210.jpg" alt="business portraits, professional pictures, professional photography">
-  <img class=" portrait portrait-6" loading="lazy" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/60579222bc125625fc770408/1616351778513/Dan+Fineberg+%28500px%29+Richard_Waine_Lancaster_PA_0632-3.jpg" alt="fitness model, professional portraits, professional model portraiture">
+  <Image class="portrait portrait-1" loading="lazy" src={graceLong} width={2400} height={3000} alt="model portraits, modeling pictures, model photography" />
+  <Image class="portrait portrait-2" loading="lazy" src={wolfCavalo} width={2400} height={3000} alt="branding photography, personal branding, personal branding pictures" />
+  <Image class="portrait portrait-3" loading="lazy" src={jocelynCrosby} width={2400} height={3000} alt="musician pictures, publicity pictures, press kit images, richard waine photography" />
+  <Image class="portrait portrait-4" loading="lazy" src={brandonLesagonicz} width={2400} height={3000} alt="model portrait, business portraits, branding pictures, photography studio" />
+  <Image class="portrait portrait-5" loading="lazy" src={alyssaMiller} width={2400} height={3000} alt="business portraits, professional pictures, professional photography" />
+  <Image class=" portrait portrait-6" loading="lazy" src={danFineberg} width={2400} height={3000} alt="fitness model, professional portraits, professional model portraiture" />
 </div>
 </div>
 
@@ -28,17 +34,24 @@
 
 
 <style>
+.didyouknow-section-wrapper{
+  padding-block:var(--size-8);
+}
+
 /*portrait section*/
-
-
-
 .portraits__images{
     display:grid;
     grid-template-columns:repeat(1fr);
     width:100%;
     padding:var(--size-4) 0;
     gap:var(--size-7);
-    place-items: center
+    place-items: center;
+
+    > *{
+      object-fit:cover;
+      width:100%;
+      height:auto;
+       }
 }
 
 .portrait{
@@ -48,21 +61,22 @@
   display:none
 }
 
-@media screen and (min-width:641px) {
-.portraits__images{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  justify-content:center;
-  gap:var(--size-7);
-  margin:var(--size-4) 0
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+
+@media screen and (min-width: 48em) {
+  .portraits__images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    gap: var(--size-7);
+    margin: var(--size-4) 0;
+  }
+
+  .portrait-6, .portrait-5, .portrait-2, .portrait-3 {
+    display: grid;
+  }
 }
-
-.portrait-6,.portrait-5,.portrait-2,.portrait-3{
-  display:grid
-}
-}
-
-
-
 
 </style>

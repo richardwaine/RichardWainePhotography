@@ -1,13 +1,16 @@
 ---
 import FAQAccordion from "../components/FAQAccordion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import ShareButtons from "../components/ShareButtons.astro";
 
 export interface Props {
   title: string;
   post: any;
+  prevPost?: any;
+  nextPost?: any;
 }
 
-const { title, post } = Astro.props;
+const { title, post, prevPost, nextPost } = Astro.props;
 
 
 // --- NEW LINE HERE ---
@@ -20,15 +23,86 @@ const faqs = post.data.faqs || [];
 
 // --- END NEW LINE ---
 
-
+// Determine if this is an interview post
+const isInterview = post.data.type === 'interview';
 
 ---
 
 <MainLayout title={title}>
 
+	{isInterview ? (
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Interview",
+			"headline": post.data.blogTitle,
+			"description": post.data.blogExcerpt,
+			"datePublished": post.data.publishDate,
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": post.data.permalink
+			},
+			"interviewer": {
+				"@type": "Person",
+				"name": "Richard Waine",
+				"url": "https://www.richardwainephotography.com"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Richard Waine Photography",
+				"url": "https://www.richardwainephotography.com"
+			},
+			...(post.data.interviewee && {
+				"interviewee": post.data.interviewee
+			}),
+			"image": post.data.headerImage?.src ? `https://www.richardwainephotography.com${post.data.headerImage.src}` : undefined
+		})} />
+	) : (
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Article",
+			"headline": post.data.blogTitle,
+			"author": {
+				"@type": "Person",
+				"name": post.data.author,
+				"url": post.data.authorUrl,
+				"sameAs": [
+					"https://www.linkedin.com/in/richardwaine/",
+					"https://www.instagram.com/richardwaine"
+				]
+			},
+			"datePublished": post.data.publishDate,
+			"dateModified": post.data.modifiedDate,
+			"publisher": {
+				"@type": "Organization",
+				"name": "Richard Waine Photography",
+				"url": "https://www.richardwainephotography.com",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://www.richardwainephotography.com/Logo-RichardWainePhotography-black.png"
+				},
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "20 North Queen Street",
+					"addressLocality": "Lancaster",
+					"addressRegion": "PA",
+					"postalCode": "17603",
+					"addressCountry": "US"
+				}
+			},
+			"mainEntityOfPage": post.data.permalink,
+			"description": post.data.blogExcerpt,
+			"articleSection": post.data.articleSection,
+			"keywords": post.data.keywords,
+			...(post.data.about && {
+				"about": post.data.about
+			}),
+			"image": post.data.headerImage?.src ? `https://www.richardwainephotography.com${post.data.headerImage.src}` : undefined
+		})} />
+	)}
+
   <article>
     <div class="wrapper">
-    
+
       <h1 class="article-title">{title}</h1>
 
 
@@ -57,6 +131,28 @@ const faqs = post.data.faqs || [];
     )}
     {/* --- END NEW SECTION --- */}
 
+{/* --- SHARE BUTTONS --- */}
+    <ShareButtons url={`/blog/${post.slug}`} title={post.data.blogTitle} />
+{/* --- END SHARE BUTTONS --- */}
+
+{/* --- POST NAVIGATION --- */}
+    {(prevPost || nextPost) && (
+      <nav class="post-navigation">
+        <div class={`nav-container ${!prevPost && nextPost ? 'next-only' : ''} ${prevPost && !nextPost ? 'prev-only' : ''}`}>
+          {prevPost && (
+            <a href={`/blog/${prevPost.slug}`} class="nav-link prev-link">
+              <span class="nav-arrow">←</span> {prevPost.data.blogTitle}
+            </a>
+          )}
+          {nextPost && (
+            <a href={`/blog/${nextPost.slug}`} class="nav-link next-link">
+              {nextPost.data.blogTitle} <span class="nav-arrow">→</span>
+            </a>
+          )}
+        </div>
+      </nav>
+    )}
+    {/* --- END POST NAVIGATION --- */}
 
   </article>
 
@@ -69,6 +165,12 @@ const faqs = post.data.faqs || [];
 
 
 <style is:global>
+
+.wrapper{
+  margin-top:calc(var(--header-height) + var(--size-7));
+  margin-bottom:var(--size-7);
+}
+
 /*blog posts*/
 
 
@@ -85,41 +187,60 @@ const faqs = post.data.faqs || [];
 }
 
 .article-content{
-  padding-block:var(--size-3);
-  
+padding-block:var(--size-3);
+
+
+   @media (min-width: 48em) {
+      padding-block:var(--size-4);
+    }
 }
 
 .article-content em{
     display:block;
     text-align:center;
+    margin-inline:auto;
     margin-bottom:var(--size-8);
    
-    
   }
 
+ .inline-em{
+  font-style: italic;
+ }
+
 .article-content img{
+  margin-block:var(--size-7);
   display: block;
   width: min(600px, 100%);
+  height:auto;
   margin-inline: auto;
-  margin-block: var(--size-9);
-  box-shadow: var(--shadow);
-  
+
+    @media (min-width: 48em) {
+      margin-block:var(--size-9);
+    }
+}
+
+.article-header-image{
+margin-block:var(--size-7);
+
+  display:block;
+  width:min(600px, 100%);
+  height:auto;
+  margin-inline:auto;
+  box-shadow:var(--shadow);
+
+
+    @media (min-width: 48em) {
+    margin-block:var(--size-9);
+  }
 }
 
 
+.article-content > :is(p, div, figure):has(img):not(:has(img) ~ *) img, .article-header-image{
+  box-shadow: var(--shadow);
+}
 /*blog posts*/
 
 
-
-
-
-
-@media screen and (max-width:768px){
-  .wrapper{
-    max-inline-size:100%;
- 	
-  }
-}
 
 article ul{
   padding-inline:0;
@@ -127,32 +248,39 @@ article ul{
 
 article li{
     list-style:none;
-    margin-block:var(--size-7);
+    margin-block:var(--size-2);
  }
 
 .table-of-contents{
-  margin-block:2em;
-  
+  margin-block:var(--size-7);
+
    }
 
 
 .references{
-margin-block:3em;
-  font-size:1rem;
-> p{
-text-align:center
-}
-}
-.references-list {
-columns:2;
-gap:2em;
+  margin-block:var(--size-8);
+  font-size:var(--fs-400);
 
-@media screen and (max-width:768px){
-columns:1;
-  }}
+    > p{
+    text-align:center
+  }
+}
+
+
+/* Mobile-First Replacement */
+.references-list {
+  columns: 1;
+  gap: var(--size-7);
+
+      @media (min-width: 48em) {
+        columns: 2;
+        }
+      }
+
+
 
 .table-of-contents li, .references li{
-  margin-block:.25em;
+  margin-block:var(--size-1);
   line-height:2; /*remove if hard to read */
   font-size:1rem;
     }
@@ -161,8 +289,6 @@ columns:1;
 .blog-button-container{
   padding-block:var(--size-7);
   text-align:center;
-
-
 }
 
 .blog-button {
@@ -177,8 +303,7 @@ columns:1;
   background-color: #000;
   color: #fff;
   cursor:pointer;
-
-  
+ 
 }
 
 */
@@ -189,13 +314,19 @@ columns:1;
     font-weight:var(--fw-bold);
     cursor:pointer;
     color:blue;
-   font-weight:bold;
+    font-weight:bold;
   }
+
+article p{
+  margin-bottom:var(--size-5);
+  line-height:var(--line-height-relaxed);
+}
 
 article h2, article h3{
 font-size:var(--fs-600);
-font-weight:bold;
-margin-top:var(--size-7);
+font-weight:var(--fw-bold);
+margin-block:var(--size-8) var(--size-7);
+
 }
 
 article h3{
@@ -203,7 +334,7 @@ article h3{
 }
 
 .subtitle{
-font-size:1rem;
+  font-size:var(--fs-400);
   max-inline-size:65ch;
   margin:auto;
 
@@ -211,7 +342,7 @@ font-size:1rem;
 
 
 hr{
-margin:4em auto;
+margin:var(--size-9) auto;
 
  
 }
@@ -224,17 +355,8 @@ height:auto;
 display:block;
 margin:var(--size-7) auto;
 
-
-
 }
 
-
-
-
-
-p:last-child{
-  margin-bottom:var(--size-10);
-}
 
 /*end blog posts*/
 
@@ -242,11 +364,68 @@ p:last-child{
   text-align: center;
 }
 
-/* END NEW CSS */
+/* FAQ accordion in blog articles */
+article .article-content .faq-content {
+  width: 100%;
+  margin-inline: auto;
+  margin-block: var(--size-10);
 
+      @media (min-width:64em){
+      width: 50%;
+    }
+}
 
+/* Post Navigation */
+.post-navigation {
+  margin-block: var(--size-7);
+  padding-bottom:var(--size-7);
 
+}
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 2em);
+  margin-inline:auto;
+  align-items:baseline;
 
+@media (min-width:64em){
+      width: 80%;
+      font-size:var(--fs-450);
+    }
+}
+
+.nav-container.next-only {
+  justify-content: flex-end;
+}
+
+.nav-container.prev-only {
+  justify-content: flex-start;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--blkclr);
+  font-weight: var(--fw-semi-bold);
+  transition: color 0.2s ease;
+  
+}
+
+.nav-link:hover {
+  color: blue;
+}
+
+.nav-arrow{
+font-size:var(--fs-600);
+padding-inline:.125rem;
+}
+
+.prev-link {
+  text-align: left;
+}
+
+.next-link {
+  text-align: right;
+}
 
 </style>

@@ -1,180 +1,202 @@
 ---
+import { Image } from 'astro:assets';
+
+import AccelerateMortgage from '../assets/images/tearsheet/AccelerateMortgage.png';
+import AidemMedia from '../assets/images/tearsheet/AidemMedia.png';
+import AlliedFirstBank from '../assets/images/tearsheet/Allied First Bank - black.png';
+import Aperture from '../assets/images/tearsheet/Aperture - black.png';
+import Avail from '../assets/images/tearsheet/Avail - black.png';
+import CapitalOne from '../assets/images/tearsheet/Capital One.png';
+import Carel from '../assets/images/tearsheet/Carel.png';
+import Chubb from '../assets/images/tearsheet/Chubb.png';
+import ColumbiaCottage from '../assets/images/tearsheet/Columbia Cottage - (black).png';
+import EPNB from '../assets/images/tearsheet/EPNB.png';
+import Havtech from '../assets/images/tearsheet/Havtech.png';
+import Inframark from '../assets/images/tearsheet/Inframark.png';
+import Isaca from '../assets/images/tearsheet/ISACA.png';
+import Janney from '../assets/images/tearsheet/Janney.png';
+import KaufmanDolowich from '../assets/images/tearsheet/Kaufman Dolowich (black).png';
+import LCNBlack from '../assets/images/tearsheet/LCN Logo (black).png';
+import Metso from '../assets/images/tearsheet/Metso Outotec.png';
+import NorthWestBlack from '../assets/images/tearsheet/Northwest Bank (black).png';
+import RBC from '../assets/images/tearsheet/RBC.png';
+import RGInjuryLaw from '../assets/images/tearsheet/RG-injury-law.png';
+import SallieMae2 from '../assets/images/tearsheet/Sallie-Mae-2.png';
+import TRC from '../assets/images/tearsheet/TRC.png';
+import ZentisBlack from '../assets/images/tearsheet/Zentis - (black).png';
+
+
+
+interface Logo {
+  src: any;
+  alt: string;
+  scale?: number;
+}
+
+
+
+const logos: Logo[] = [
+  { src: AccelerateMortgage, alt: "Accelerate Mortgage" },
+  { src: AidemMedia, alt: "Aidem Media" },
+  { src: AlliedFirstBank, alt: "Allied First Bank", scale: 1.35 },
+  { src: Aperture, alt: "Aperture LLC" },
+  { src: Chubb, alt: "Chubb Insurance" },
+  { src: ColumbiaCottage, alt: "Columbia Cottage" },
+  { src: EPNB, alt: "Ephrata National Bank", scale: 1.5 },
+  { src: Havtech, alt: "Havtech", scale: 1.25 },
+  { src: Isaca, alt: "ISACA Harrisburg" },
+  { src: Avail, alt: "Avail Technology Solutions", scale: 0.8 },
+  { src: TRC, alt: "TRC Companies", scale: 0.9 },
+  { src: NorthWestBlack, alt: "Northwest Bank", scale: 1.45 },
+  { src: Carel, alt: "Carel USA", scale: 0.8 },
+  { src: Janney, alt: "Janney", scale: 1.35 },
+  { src: RBC, alt: "RBC Wealth Management" },
+  { src: RGInjuryLaw, alt: "RG Injury Law", scale: 1.35 },
+  { src: SallieMae2, alt: "Sallie Mae" },
+  { src: LCNBlack, alt: "LCN Capital", scale: 0.9 },
+  { src: CapitalOne, alt: "Capital One" },
+  { src: Inframark, alt: "Inframark", scale: 1.25 },
+  { src: Metso, alt: "Metso", scale: 1.25 },
+  { src: KaufmanDolowich, alt: "Kaufman Dolowich", scale: 1.6 },
+  { src: ZentisBlack, alt: "Zentis North America", scale: 0.8 },
+];
+
+
 
 ---
 
-<div class="wrapper">
-    <div class="tear-sheet-container">
-        <h2 class="section-title">TRUSTED BY FORWARD-THINKING COMPANIES AROUND THE WORLD</h2>
-        
-        <div class="scroller" data-direction="left" data-speed="slow">
-            <div class="scroller__inner" id="logoContainer">
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f9096acfb084922b9500e/1685033110641/accelerate+mortgage.png" alt="Accelerate Mortgage Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f90de975fb76d11ad2e80/1685033182586/aidem-logo.png" alt="Aidem Media Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f90e5cb38b13ad5a69e9e/1685033189524/Allied+First+Bank+-+logo.png" alt="Allied First Bank logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f936b63d93b50f0f009ab/1685033835491/aperture-dark%402.v3.png" alt="Aperture LLC logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f937230682179bd758f5a/1685033842692/CHUBB_Logo.png" alt="Chubb Insurance logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f93e2bdb97d2ee92c25f2/1685033954507/columbia-cottage-logo.png" alt="Columbia Cottage Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f93ef26bafb6dd6a9fb1f/1685033967416/EPNB+-+logo.png" alt="Ephrata National Bank Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f946bc859da5d8216b2e7/1685034091841/Havtech+Logo.png" alt="Havtech Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f946f63f73a098f2b4511/1685034095484/ISACA_logo_Harrisburg.png" alt="ISACA Harrisburg Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f96b5ac1b170c134a3fbb/1685034677257/Avail+logo+%28black%29.png" alt="Avail Technology Solutions Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95e852babf7d54dd7ba9/1685034472109/TRC+logo.png" alt="TRC Companies Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f947c12f1cf115ee0020c/1685034108346/loginext_red_black.png" alt="Loginext Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f948226bafb6dd6aa124e/1685034114800/northwest-bank-logo.png" alt="Northwest Bank Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f96b9eea70f4b6bf4ddd8/1685034681866/CAREL+logo.png" alt="Carel USA Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f947463f73a098f2b4590/1685034100383/Janney+logo.png" alt="Janney Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95d952babf7d54dd7b32/1685034457174/rbc-wealth-management+logo.png" alt="RBC Wealth Management Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95de66c6cf64645794ca/1685034462556/rg-injury-law-logo.png" alt="RG Injury Law Logo, Rankin and Gregory, Law firm" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f95e2f2190f4ee61496e7/1685034466867/Sallie-Mae-logo.png" alt="Sallie Mae Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/646f9478ff012044ac3cdb8d/1685034104432/LCN+Logo+%28black%29.png" alt="LCN Capital Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/6567855e1816650d4c5675bc/1701283166718/Capital+One+Logo.png" alt="Capital One Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65678662f38b92723c3d9c99/1701283426120/Inframark_logo.png" alt="Inframark Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65678745dd0efe48b22147aa/1701283653167/Metso+Outotec+Logo.png" alt="Metso Logo" loading="lazy"/>
-                <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/65d8ec4144e86d1f3b859454/1708715073374/Kaufman-Dolowich+-+logo+%282%29.png" alt="Kaufman Dolowich Logo" loading="lazy"/>
-            </div>
+<div class="tear-sheet-container">
+    <h2 class="section-title">TRUSTED BY FORWARD-THINKING COMPANIES AROUND THE WORLD</h2>
+
+
+
+    
+    <div class="scroller" data-direction="left" data-speed="slow">
+        <div class="scroller__inner">
+            {logos.map((logo) => (
+                <img 
+                    src={logo.src.src} 
+                    alt={logo.alt} 
+                    loading="lazy" 
+                    width="200" 
+                    height="100"
+                    style={logo.scale ? `transform: scale(${logo.scale});` : null}
+                />
+            ))}
         </div>
     </div>
+
+
 </div>
 
+<style>
 
-<!--NEW scroller tear sheet  -->
 
 
-<script is:inline>
-const scrollers = document.querySelectorAll(".scroller");
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    scrollers.forEach((scroller) => {
-        scroller.setAttribute("data-animated", true);
-        const scrollerInner = scroller.querySelector(".scroller__inner");
-        if (!scrollerInner) return;
+h2{
+    text-wrap:pretty;
+    
+}
+
+    .tear-sheet-container {
+        --_gap: var(--size-12, 3rem);
+        --_duration: 60s;
         
-        Array.from(scrollerInner.children).forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
+        display: grid;
+        place-items: center;
+        width: 95%;
+        margin: auto;
+        padding-block: var(--size-8);
+        color: var(--blkclr);
+        overflow: hidden;
+
+        @media (width >= 48em){
+            width:80%;
+        }
+    }
+    
+    .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: var(--fs-600, 1.5rem);
+    }
+    
+    .scroller {
+        max-width: 100%;
+        overflow: hidden;
+        -webkit-mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+        mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+    }
+    
+    .scroller__inner {
+        width: max-content;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var(--_gap);
+        align-items:center;
+        /* Hardware acceleration hacks */
+        will-change: transform; 
+        transform: translateZ(0); 
+    }
+
+
+    
+    .scroller[data-animated="true"] .scroller__inner {
+        animation: scroll var(--_duration) linear infinite;
+    }
+    
+    @keyframes scroll {
+        to {
+            transform: translate3d(calc(-50% - (var(--_gap) / 2)), 0, 0);
+        }
+    }
+    
+    .scroller img {
+        height: auto;
+        max-width: 175px;
+        filter: grayscale(1);
+        /* Prevent layout shifts on load */
+        aspect-ratio: 3/2; 
+        object-fit: contain; 
+    }
+</style>
+
+<script>
+function initScroller() {
+    const scrollers = document.querySelectorAll<HTMLElement>(".scroller");
+    
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    scrollers.forEach((scroller) => {
+        if (scroller.getAttribute("data-animated")) return;
+        
+        const inner = scroller.querySelector(".scroller__inner");
+        if (!inner) return;
+
+        // 1. Batch Clone: Create a fragment to avoid multiple reflows
+        const fragment = document.createDocumentFragment();
+        const children = Array.from(inner.children);
+        
+        children.forEach((item) => {
+            const clone = item.cloneNode(true) as HTMLElement;
+            clone.setAttribute("aria-hidden", "true");
+            fragment.appendChild(clone);
         });
+        
+        // 2. Single Injection
+        inner.appendChild(fragment);
+        scroller.setAttribute("data-animated", "true");
+        
+        // 3. Observer (Pause when off-screen)
+        new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            const track = entry.target.querySelector('.scroller__inner') as HTMLElement;
+            if (track) track.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
+        }).observe(scroller);
     });
 }
+
+// Astro View Transitions Support
+document.addEventListener('astro:page-load', initScroller);
 </script>
 
-
-<!-- end NEW scroller tear sheet -->
-
-
-
-    <style>
-
-        /*new tear sheet */
-       
-
-        .tear-sheet-container {
-            --_tear-sheet-height:200px;
-
-            display: grid;
-            min-height: var(--_tear-sheet-height);
-            place-items: center;
-            background: var(--ltclr);
-
-            background:transparent;
-            color:white;
-
-
-            width:80%;
-            margin:auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom:var(--size-7);
-            font-size:var(--fs-600);
-            color:var(--drkclr);
-            
-            /* font-weight: bold; */
-        }
-        
-        .scroller {
-            max-width: calc(100% - 2em);
-            overflow: hidden;
-            -webkit-mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
-            mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
-        }
-        
-        .scroller__inner {
-            padding-block:  var(--size-3);
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--size-4);
-        }
-        
-        .scroller[data-animated="true"] .scroller__inner {
-            width: max-content;
-            flex-wrap: nowrap;
-            animation: scroll var(--_animation-duration, 60s) var(--_animation-direction, forwards) linear infinite;
-            align-items: center;
-            height: var(--_tear-sheet-height);
-        }
-        
-        .scroller[data-direction="right"] {
-            --_animation-direction: reverse;
-        }
-        
-        .scroller[data-direction="left"] {
-            --_animation-direction: forwards;
-        }
-        
-        .scroller[data-speed="fast"] {
-            --_animation-duration: 40s;
-        }
-        
-        .scroller[data-speed="slow"] {
-            --_animation-duration: 60s;
-        }
-        
-        @keyframes scroll {
-            to {
-                transform: translate(calc(-50% - 0.5rem));
-            }
-        }
-        
-
-        
-        .scroller img {
-            height: auto;
-            max-width: 175px;
-            filter: grayscale(1);
-            
-            
-            flex-shrink: 0;
-            margin-inline: var(--size-9);
-        }
-
-       
-      
-        /* Specific scaling for certain logos */
-        .scroller img:nth-child(3),
-        .scroller img:nth-child(7),
-        .scroller img:nth-child(8),
-        .scroller img:nth-child(13),
-        .scroller img:nth-child(17),
-        .scroller img:nth-child(21),
-        .scroller img:nth-child(22) {
-            transform: scale(1.35);
-        }
-        
-        .scroller img:nth-child(23) {
-            transform: scale(1.5);
-        }
-        
-        .scroller img:nth-child(14),
-        .scroller img:nth-child(10) {
-            transform: scale(0.8);
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            .scroller__inner {
-                animation: none;
-            }
-        }
-
-/*end new tear sheet */
-    </style>

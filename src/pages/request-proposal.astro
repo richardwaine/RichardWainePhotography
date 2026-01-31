@@ -1,0 +1,151 @@
+---
+// @ts-nocheck
+
+import MainLayout from '../layouts/MainLayout.astro';
+import Gallery from '../components/Gallery.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import PageTitle from '../components/PageTitle.astro';
+import shreePatelImage from '../assets/images/testimonials/Shree Patel - (200px) - Richard_Waine_Lancaster_PA_0157.jpg';
+
+const title = 'Request a Proposal | Richard Waine Photography';
+const h1 = 'Request a Proposal';
+
+// Shree Patel testimonial
+const shreePatelTestimonial = {
+  name: "Shree Patel",
+  company: "Morgan Stanley",
+  review: "Richard made the entire process so comfortable and professional. The headshots turned out amazing and really elevated my professional presence.",
+  image: shreePatelImage,
+  imageAlt: "Shree Patel Professional Headshot"
+};
+---
+
+<MainLayout title="Request a Proposal" description="For a professional headshot photographer to capture your team on location or in your office, request a custom proposal tailored to your needs">
+
+<main class="request-proposal-page">
+
+  <PageTitle
+    subtitle="CUSTOM PROPOSAL"
+    title="Request your headshot proposal"
+    subtitleFirst={true}
+    titleColor="var(--ltclr)"
+    subtitleColor="var(--ltclr)"
+    titleSize="var(--fs-500)"
+    subtitleSize="var(--fs-800)"
+  />
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <Gallery limit={8} showButton={false} />
+  </section>
+
+  <!-- Testimonial and Form Section -->
+  <section id="testimonial-form">
+    <div class="wrapper">
+          <TestimonialCard
+            testimonialText={shreePatelTestimonial.review}
+            author={shreePatelTestimonial.name}
+            company={shreePatelTestimonial.company}
+            image={shreePatelTestimonial.image}
+            imageAlt={shreePatelTestimonial.imageAlt}
+          />
+
+          <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous" defer></script>
+            
+            <iframe id="TaveContactForm" src="https://richard-waine-photography.vsco.page/inline/contact/contact?tpl=20251016&resizer=4.2.10" scrolling="no" frameborder="0"></iframe>
+
+            <script is:inline>
+            const iframe = document.querySelector("#TaveContactForm");
+            if (iframe) {
+                iFrameResize({log:true}, "#TaveContactForm");
+            }
+            </script>
+          </div>
+    </div>
+  </section>
+
+</main>
+
+</MainLayout>
+
+<style>
+  :root {
+    --pagetitle-title-weight: var(--fw-semi-bold);
+    --pagetitle-subtitle-weight: var(--fw-bold);
+  }
+
+  .request-proposal-page {
+    background: var(--drkbg);
+  }
+
+  #gallery {
+    background: var(--drkbg);
+    padding-top: 0;
+  
+    
+    > *{
+      padding-inline:0;
+    }
+  }
+
+  
+
+  .wrapper{
+    width:calc(100% - var(--size-7));
+    /* margin-bottom:var(--size-7); */
+  }
+
+  #testimonial-form {
+    background: var(--ltclr);
+    /* padding-bottom:var(--size-7) */
+    padding-top: var(--size-8);
+  }
+
+  #testimonial-form .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--size-7);
+    align-items: start;
+    
+
+   
+  }
+
+#TaveContactForm {
+  /* width:1px; */
+  width:100%;
+ 
+  margin-inline:auto;
+  /* height:100%; */
+  /* min-height:950px; */
+  min-height:calc(800px + var(--header-height) );
+}
+
+
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+
+  @media (min-width: 48em) {
+    
+     #testimonial-form {
+      padding-top: var(--size-8);
+  }
+
+}
+
+  /* ==========================================
+   DESKTOP - min-width: 64em (1024px)
+   ========================================== */
+  @media (min-width: 64em) {
+    #testimonial-form .wrapper {
+      width:80%;
+      margin-inline:auto;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom:0;
+      padding-bottom:0;
+      grid-template-rows: 1fr;
+    }
+
+</style>

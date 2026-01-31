@@ -1,0 +1,900 @@
+---
+// @ts-nocheck
+import { Image } from 'astro:assets';
+import MainLayout from "../layouts/MainLayout.astro"
+import PrimaryButton from "../components/PrimaryButton.astro"
+import SecondaryButton from '../components/SecondaryButton.astro'
+import Testimonials from '../components/Testimonials.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+
+import WilliamAdote from "../assets/images/features/Headshot_20240919_William Adote_Richard Waine_Lancaster_PA_0023 (horizontal) - compressed.jpg"
+import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
+import RW2 from "../assets/images/blog/RW7 - (16 x 9).jpg"
+import RW11 from "../assets/images/blog/RW11 - (horizontal).jpg"
+
+
+export interface Props {
+  // SEO
+  pageTitle?: string;
+  metaDescription?: string;
+
+  // Hero Section
+  heroTitle?: string;
+  heroTitleAccent?: string;
+  heroDescription?: string;
+  heroButtonText?: string;
+
+  // Blueprint Callouts
+  callout1?: string;
+  callout2?: string;
+
+  // Pillar Cards
+  pillar1Num?: string;
+  pillar1Title?: string;
+  pillar1Description?: string;
+
+  pillar2Num?: string;
+  pillar2Title?: string;
+  pillar2Description?: string;
+
+  pillar3Num?: string;
+  pillar3Title?: string;
+  pillar3Description?: string;
+
+  // System Section Row 1
+  systemRow1Title?: string;
+  systemRow1Description?: string;
+  methodItem1?: string;
+  methodItem2?: string;
+  methodItem3?: string;
+
+  // System Section Row 2
+  systemRow2Title?: string;
+  systemRow2Description?: string;
+
+  // Footer
+  footerTitle?: string;
+  footerDescription?: string;
+  footerButtonText?: string;
+
+  // Button URLs
+  heroButtonUrl?: string;
+  systemRow2ButtonText?: string;
+  systemRow2ButtonUrl?: string;
+  footerButtonUrl?: string;
+}
+
+const {
+  pageTitle = 'Business Headshots | Richard Waine Photography',
+  metaDescription = 'Professional business headshot photography services',
+
+  heroTitle = 'Business',
+  heroTitleAccent = 'Headshots',
+  heroDescription = 'A headshot is not just a picture. It is a data point in your client\'s decision-making process. I create headshot images that build trust and command attention.',
+  heroButtonText = 'GET PRICING',
+  SecondaryButtonText = 'SCHEDULE CONSULT',
+
+  callout1 = 'CONFIDENCE',
+  callout2 = 'APPROACHABILITY',
+
+  pillar1Num = 'THE SCIENCE',
+  pillar1Title = 'Expression Direction',
+  pillar1Description = "I don't leave your expression to chance. Using a specific coaching sequence, I direct your facial muscles to create genuine expressions that make viewers trust you instantly.",
+
+  pillar2Num = 'THE PROCESS',
+  pillar2Title = 'Real-Time Review',
+  pillar2Description = "You’ll never wonder how you’re doing. I work tethered to computer systems for instant feedback, allowing us to adjust lighting and posture in the moment until the image is perfect.",
+
+  pillar3Num = 'THE RESULT',
+  pillar3Title = 'Strategic Selection',
+  pillar3Description = 'We review headshots through the lens of human perception, ensuring your final images project confidence and credibility. The results are strategic assets designed to align with your personal brand and industry trajectory.',
+
+
+
+
+  systemRow1Title = 'System of Direction',
+  systemRow1Description = "I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, actionable cues that result in a natural, powerful presence. My directions are designed to eliminate camera anxiety and move you into a state of natural confidence.  Posture and head position directly affects how authoritative you appear. Slight, nuanced adjustments make the difference between looking uncertain and looking like someone people want to do business with.",
+  methodItem1 = 'Real-time image tethering for instant feedback',
+  methodItem2 = 'Advanced guidance, coaching and direction',
+  methodItem3 = "Systematic approach that's different from typical photographers",
+  methodItem4 = 'Instant review and choice of images',
+  
+
+  systemRow2Title = 'The Experience',
+  systemRow2Description = "Professional headshot sessions have a reputation for being stiff and awkward. That's not what happens here. My sessions are conversational and relaxed. The best moments and often the best expressions happen when you're genuinely enjoying yourself. Clients regularly comment on how much more fun the experience was than they expected.",
+  methodItem5 = 'Session preparation guide provided at time of scheduling',
+  methodItem6 = 'Wardrobe consultation based on purpose and color psychology',
+  methodItem7 = 'Professional lighting that defines your best features',
+  methodItem8 = "The dismantling of the 'I am not photogenic' narrative ",
+
+
+  footerTitle = 'Ready to elevate your brand?',
+  footerDescription = 'Stop settling for "good enough" headshots. Invest in your digital handshake.',
+  footerButtonText = 'GET PRICING',
+
+  heroButtonUrl = '/rates',
+  SecondaryButtonUrl = "https://app.acuityscheduling.com/schedule.php?owner=13511326&appointmentType=11959793",
+  systemRow2ButtonText = 'GET PRICING',
+  systemRow2ButtonUrl = '/rates',
+  footerButtonUrl = '/rates',
+
+  faqs = [                                                                  
+      {                                                                       
+        question: "What should I do if I’m not photogenic and hate being on camera?",                                               
+        answer: `Photogenic is a bullshit, made up word. It is a term people use when they have never seen a photo of themselves they actually like. It suggests the responsibility to look good is on you. It is not.
+        
+        The truth is that the onus of a great headshot is squarely on the photographer. Most of us hate being on camera because we have a complicated relationship with our own faces. We see flaws in the mirror that no one else sees or cares about. If you have had bad experiences in the past, it is because the photographer failed to provide the coaching and direction needed to make you feel at ease.
+        
+        We are not just taking a picture. We are creating an image that makes you look confident, competent, and trustworthy.`                                                   
+      },                                                                      
+      {                                                                       
+        question: "What is the best color to wear for a business headshot session?",                                               
+        answer: `The best colors for a headshot session depend on the person, the purpose, and the application. I usually default to standard choices like white, grey, black, and navy, but I also recommend bringing a color palette you love.
+
+        The most important thing is to avoid busy patterns and attention grabbing clothing. These elements compete with what matters most, which is your facial expression and the message you are communicating. Simplicity is always best.
+
+        I suggest bringing 3 to 5 options that are cleaned and pressed. Only bring clothes you absolutely love because you will not photograph well in something that makes you feel uncomfortable.
+        `                                                    
+      },                                                                      
+      {                                                                       
+        question: "How do I choose the right expression for my brand?",                                               
+        answer: `Choosing an expression is about how you show up in the world and how you want to be perceived. There is no universal expression that works for every scenario. Headshot images serve their desired purpose. 
+
+        People want to look confident, approachable, competent and trustworthy. These characteristics typically mirror what my clients are looking for. As a starting point, I always recommend aiming for poise. 
+
+        I cannot tell you that a headshot with a specific facial expression has a place in your universe. However, I can tell you if that image will help or hurt your messaging. When humans have an incredibly sensitive bullshit meter, it’s imperative that you project authenticity. 
+
+        “Trust me” sounds incredibly cliché. But, if you trust me and trust the process, you’ll end up with awesome headshots with incredibly impactful facial expressions!
+        `                                                    
+      },
+      {
+        question: "How much time will my session take?",
+        answer: `Your headshot session will take as much time as necessary. I don't set arbitrary time limits on my sessions because we work until we have the images you need. I block off three hours for every session to ensure we have a sufficient window, whether we use all of it or not. I recommend allowing at least two hours in your own schedule. While I can accommodate a shorter timeframe, having that buffer ensures we never feel rushed.
+
+        Some clients are in and out in minutes; others take longer to find their stride. In my experience, very few people ever exceed that three-hour mark. While it may sound like a significant block of time, the process is engaging, enjoyable, and the time tends to fly by.
+        `
+      }                                                                       
+    ]                    
+
+
+
+
+
+
+} = Astro.props;
+
+---
+
+
+
+
+<MainLayout title={pageTitle} description={metaDescription}>
+
+<body>
+<section class="hero">
+    <Image class="hero-bg" src={RW2} alt=""/>
+    <div class="hero-text">
+        <h1>{heroTitle} <br><span class="cyan">{heroTitleAccent}</span></h1>
+        <p class="hero-p">{heroDescription}</p>
+
+        <div class="action-group">
+          <div class="button-wrapper">
+            <PrimaryButton text={heroButtonText} url={heroButtonUrl}/>
+        </div>
+        
+        <div class="button-wrapper">
+            <SecondaryButton text={SecondaryButtonText} url={SecondaryButtonUrl}/>
+        </div>
+    </div>
+
+    </div>
+  
+    <div class="hero-visual">
+        <div class="blueprint-box">
+            <div class="portrait-sim">
+              <Image src={WilliamAdote}  alt=""/>
+            </div>
+
+            <div class="callout c-1">{callout1}</div>
+            <div class="callout c-2">{callout2}</div>
+        </div>
+    </div>
+</section>
+
+<section class="pillars">
+  <div class="pillar-card">
+    <span class="pillar-num">{pillar1Num}</span>
+    <h3>{pillar1Title}</h3>
+    <p>{pillar1Description}</p>
+  </div>
+  <div class="pillar-card">
+    <span class="pillar-num">{pillar2Num}</span>
+    <h3>{pillar2Title}</h3>
+    <p>{pillar2Description}</p>
+  </div>
+  <div class="pillar-card">
+    <span class="pillar-num">{pillar3Num}</span>
+    <h3>{pillar3Title}</h3>
+    <p>{pillar3Description}</p>
+  </div>
+</section>
+
+<section class="system-section">
+  <div class="system-row">
+        <div class="system-image">
+          <Image src={RW1} alt=""/>
+        </div>
+        
+        <div class="system-content">
+            <h2>{systemRow1Title}</h2>
+            <p>{systemRow1Description}</p>
+            <ul class="method-list">
+              <li class="method-item"><span>◆</span> {methodItem1}</li>
+              <li class="method-item"><span>◆</span> {methodItem2}</li>
+              <li class="method-item"><span>◆</span> {methodItem3}</li>
+              <li class="method-item"><span>◆</span> {methodItem4}</li>  
+            </ul>
+        </div>
+  </div>
+
+  <div class="system-row reverse">
+    <div class="system-content">
+      <h2>{systemRow2Title}</h2>
+      <p>{systemRow2Description}</p>
+
+    <ul class="method-list">
+        <li class="method-item"><span>◆</span> {methodItem5}</li>
+        <li class="method-item"><span>◆</span> {methodItem6}</li>
+        <li class="method-item"><span>◆</span> {methodItem7}</li>
+        <li class="method-item"><span>◆</span> {methodItem8}</li>
+       
+      </ul>
+
+      <!-- <div class="button-wrapper">
+        <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
+      </div> -->
+
+    </div>
+    <div class="system-image">
+      <Image src={RW11} alt=""/>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <Testimonials title="" limit={3} filterByNames={["Jacqueline Johansen", "Keith Woody", "Kelly Gooch"]}/>
+</section>
+
+<section class="FAQs">
+
+  <FAQAccordion faqs={faqs}/>
+
+</section>
+
+
+<script>
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('astro:page-load', () => {
+if (window.location.pathname !== '/business-headshots') return;
+let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 48em)", () => {
+  // Animate pillar cards on scroll
+  gsap.utils.toArray('.pillar-card').forEach((card: any, index) => {
+    gsap.from(card, {
+      opacity: 0,
+      y: 60,
+      rotateX: -15,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 80%",
+        end: "top 50%",
+        scrub: 1
+      }
+    });
+  });
+
+  // Animate system content rows
+  gsap.utils.toArray('.system-content').forEach((content: any) => {
+    gsap.to(content, {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: content,
+        start: "top 90%",
+        end: "top 40%",
+        scrub: 1
+      }
+    });
+  });
+
+  // Parallax effect on system images
+  gsap.utils.toArray('.system-image').forEach((image: any) => {
+    gsap.to(image, {
+      y: -50,
+      ease: "none",
+      scrollTrigger: {
+        trigger: image,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  });
+
+  // Blueprint callouts animation
+  gsap.from('.callout', {
+    opacity: 0,
+    x: -30,
+    stagger: 0.3,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: '.blueprint-box',
+      start: "top 70%"
+    }
+  });
+
+  // Hero text animation
+  gsap.from('.hero-text > *', {
+    opacity: 0,
+    y: 30,
+    stagger: 0.2,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  // Blueprint box 3D rotation on scroll
+  gsap.to('.blueprint-box', {
+    rotateY: 5,
+    rotateX: 2,
+    ease: "none",
+    scrollTrigger: {
+      trigger: '.hero',
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+
+  return () => {
+    //optional cleanup code here
+    };
+  });
+});
+</script>
+
+</body>
+
+</MainLayout>
+
+
+<style>
+  :root {
+  --bg: #050505;
+  /* --bg:var(--drkbg); */
+  --card: #111111;
+  /* --accent: #12c2e9; */
+  --text:var(--ltclr);
+  /* --text-dim: #888888; */
+  --text-dim:var(--ltclr);
+  /* --border: #1a1a1a; */
+}
+
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height:var(--line-height-relaxed);
+  width:100%;
+  margin-inline:auto;
+  padding:0;
+  min-height:calc(100vh + var(--header-height));
+
+a{
+    color:blue;
+}
+
+}
+
+
+.cyan {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  align-items: center;
+  padding-top:calc(var(--header-height) + var(--size-7));
+  padding-bottom:var(--size-825);
+  gap: var(--size-8);
+  border-bottom: 1px solid var(--border);
+  display:grid;
+  grid-template-columns: 1fr;
+  width:100%;
+  margin-inline:auto;
+  /* overflow:hidden; */
+  overflow:clip;
+}
+
+.hero-bg{
+  
+  position:absolute;
+  inset:0;
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  object-position:center var(--header-height);
+  filter:grayscale(1);
+  opacity:.25;
+  z-index: -2;
+  overflow:hidden;
+
+}
+
+.hero-text{
+  margin-inline:auto;
+  width:min(700px, calc(100% - var(--size-7)));
+  text-align:center;
+}
+
+h1 {
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 1;
+  margin-bottom: var(--size-4);
+  font-weight: var(--fw-x-bold);
+  text-transform: uppercase;
+  
+ 
+
+  
+
+}
+
+.hero-p {
+  font-size: var(--fs-500);
+  color: var(--text-dim);
+  text-align:center;
+  margin-bottom: var(--size-775);
+}
+
+.action-group{
+  
+  display:flex;
+  flex-direction:column;
+  justify-self:center;
+  gap:var(--size-4);
+  
+  > *{
+
+    margin-inline:auto;
+
+  }
+ 
+}
+
+.hero-visual {
+  position: relative;
+  justify-self: center;
+  width:calc(100% - var(--size-7));
+  
+}
+
+/* Blueprint Visuals */
+.blueprint-box {
+  --_width:min(700px, 80%);
+
+  width:var(--_width);
+  margin-inline:auto;
+  height:auto;
+  background:transparent;
+  position: relative;
+  overflow: hidden;
+  perspective: 1200px;
+  box-shadow: 0 10px 50px var(--shadow-clr-medium);
+
+ 
+}
+
+.portrait-sim {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  font-weight: var(--fw-x-bold);
+  transform-style: preserve-3d;
+  box-shadow: inset 0 0 60px rgba(3, 169, 244, 0.1);
+  overflow:clip;
+  /* overflow:hidden; */
+  
+  > * {
+
+  object-fit:cover;
+  width:100%;
+  height:100%;
+
+}
+}
+
+
+
+
+
+.callout {
+  display:none;
+  
+}
+
+/* Educational Pillars Section */
+.pillars {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-4);
+  background: #080808;
+  /* background:var(--drkbg); */
+  perspective: 1000px;
+  width:calc(100% - var(--size-7));
+  margin-inline:auto;
+
+
+  
+}
+
+.pillar-card {
+  --border:transparent;
+  
+  padding: var(--size-775) var(--size-4);
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px var(--shadow-clr-soft);
+}
+
+
+
+.pillar-num {
+  color: var(--accent);
+  font-weight: var(--fw-x-bold);
+  font-size: var(--fs-350);
+  margin-bottom: var(--size-4);
+  display: block;
+  text-align:center;
+}
+.pillar-card h3 {
+  margin: 0 0 var(--size-3);
+  font-size: var(--fs-500);
+  letter-spacing: 1px;
+  text-align:center;
+}
+.pillar-card p {
+  color: var(--text-dim);
+  font-size: var(--fs-400);
+  margin: 0;
+}
+
+/* The "System" Section - Staggered */
+.system-section {
+  margin-block:var(--size-825);
+  position: relative;
+  width:calc(100% - var(--size-7));
+  margin-inline:auto;
+}
+
+
+.system-row {
+  width:100%;
+  margin-inline:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:var(--size-7);
+  align-items: center;
+  justify-items:center;
+  margin-bottom: var(--size-7);
+}
+
+.system-row:last-child {                                                         
+    margin-bottom: 0;                                                              
+  }  
+
+.system-row.reverse {
+  grid-template-columns: 1fr;
+  
+}
+
+.system-image {
+--_width:min(700px, 80%);
+
+  width:var(--_width);
+  height: auto;
+  background: var(--card);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px var(--shadow-clr-medium);
+  margin-inline:auto;
+
+    > * {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
+
+.system-content {
+  opacity: 1;
+  transform: translateY(50px);
+}
+
+.system-content h2 {
+  font-size: var(--fs-600);
+  margin-bottom: var(--size-4);
+  text-align:center;
+}
+
+.system-content p{
+  margin-bottom:var(--size-775);
+  /* font-size: var(--fs-400); */
+}
+
+
+/* Methodology List */
+.method-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom:var(--size-7);
+}
+.method-item {
+  padding: var(--size-4) 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: var(--size-4);
+}
+.method-item span {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+
+
+#testimonials{
+
+    height: auto;                                                                
+     display: grid;                                                               
+     place-items: center;                                                         
+     background: #080808; 
+
+      > * > * > * .card-testimonial{
+    margin-inline:0;
+      }
+
+      > * > * > * > * .testimonial-content{
+        padding-inline:0;
+        margin-inline:0;
+      }
+
+}
+
+.FAQs {
+  
+  width:calc(100% - var(--size-4));
+  margin-inline:auto;
+  margin-bottom:var(--size-10);
+ 
+}
+
+
+/* Global Network Preview */
+
+/* .global-footer {
+  padding: 100px 10%;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: radial-gradient(circle at center, #111 0%, #050505 100%);
+}
+.global-footer h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.global-footer .footer-description {
+  color: var(--text-dim);
+  margin-bottom: 40px;
+} */
+
+
+/* ==========================================                                   
+     TABLET - min-width: 48em (768px)                                             
+     ========================================== */                                
+        @media (min-width: 48em) {                                                      
+           .hero {
+            min-height:100vh;
+            grid-template-columns: 1fr;
+            gap: var(--size-875);
+         
+          }
+
+
+          .action-group{
+
+          display:flex;
+          flex-direction:row;
+          }
+
+          .callout{
+            display:block;
+            position: absolute;
+            color: var(--accent);
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: var(--size-1);
+            z-index: 10;
+            
+          }
+          .c-1 {
+            top: 25%;
+            right: 5%;
+          }
+          .c-2 {
+            bottom: 25%;
+            left: 5%;
+          } 
+          
+          
+          .pillars {
+           
+          grid-template-columns: 1fr;
+          padding: 50px 0;  
+          gap: var(--size-775);  
+        
+                                                                              
+          }  
+
+          .pillar-card{
+            padding: var(--size-775);
+          }
+
+          .pillar-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 60px var(--shadow-clr-medium), 0 0 40px rgba(3, 169, 244, 0.3);
+}
+
+          .pillar-num {
+            text-align:left;
+          }
+
+          .pillar-card h3{
+            text-align:left;
+          }
+
+          .system-section {
+            /* padding-block: 100px; */
+          }
+
+          .system-content {
+            opacity: 0;
+            transform: translateY(50px);
+            width:80%;
+            margin-inline:auto;
+          }
+
+          .system-content h2{
+            font-size: var(--fs-800);
+            text-align:left;
+          }
+
+          .system-row {
+            grid-template-columns: 1fr;
+            margin-bottom: var(--size-10);
+          }
+          .system-row.reverse {
+            grid-template-columns: 1fr;
+          }
+
+          .FAQs{
+            width:80%;
+          }
+
+
+
+  }
+  /* ==========================================                                   
+     DESKTOP - min-width: 64em (1024px)                                           
+     ========================================== */                                
+  @media (min-width: 64em) {                                                      
+          .hero {
+            /* gap: var(--size-2); */
+            /* padding-inline:var(--size-7); */
+            /* padding: 0 5%; */
+            /* grid-template-columns: 1.5fr 1fr; */
+            
+          }  
+          
+  
+
+         .pillars{
+          width:100%;
+          margin-inline:auto; 
+          
+           > *{
+            width:80%;
+            margin-inline:auto;
+           }
+         }
+      
+  }
+ /* ==========================================                                   
+     DESKTOP - min-width: 90em (1440px)                                           
+     ========================================== */                                
+  @media (min-width: 90em) { 
+
+        .hero {
+            /* gap: var(--size-2); */
+            /* padding-inline:var(--size-7); */
+            /* padding: 0 5%; */
+            grid-template-columns: 1fr 1fr;
+            
+          }  
+          
+
+          h1 {
+
+            margin-inline:0;
+            text-align:left;
+            margin-bottom: var(--size-2);
+            width:calc(100% - var(--size-7));
+
+          }
+
+          .hero-p{
+            text-align:left;
+          }
+          
+
+        .action-group{
+            flex-direction:row;
+            justify-self: flex-start;
+          } 
+
+          .pillars{
+                       
+            grid-template-columns: repeat(3, 1fr);
+            
+            > *{
+                width:80%;
+                
+            }
+          }
+
+          .system-row{
+            width:100%;
+          
+            grid-template-columns: 1fr 1fr;
+          }
+          .system-row.reverse{
+            grid-template-columns: 1fr 1fr;
+          }
+
+        .FAQs{
+            width:50%;
+          }
+
+        
+  }
+
+</style>

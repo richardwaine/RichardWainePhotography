@@ -1,0 +1,275 @@
+---
+// @ts-nocheck
+
+import MainLayout from "../layouts/MainLayout.astro"
+
+
+---
+
+<MainLayout>
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- <div class="hud">
+        <div style="display:flex; justify-content:space-between;">
+            <div>SERIES_01 // <span style="color:var(--accent)">INDIVIDUAL_BUSINESS</span></div>
+            <div>[ AUTHORITY_VERIFIED ]</div>
+        </div>
+        <div>©2026 // SCROLL_TO_EDUCATE</div>
+    </div> -->
+
+    <div class="viewport">
+        <div class="scene" id="scene">
+            
+            <div class="master-portrait">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2400" alt="Executive Authority">
+            </div>
+
+            <section class="panel">
+                <div class="module">
+                    <div class="header-box">
+                        <h1>THE<br>EXECUTIVE<br>DRE.</h1>
+                    </div>
+                    <div class="education-content">
+                        <span class="label">ENTRY_POINT</span>
+                        <h2>THE PSYCHOLOGY OF COMPETENCE.</h2>
+                        <p>We do not take photos; we engineer visual indicators of high-level professional capacity. This process begins with the structural analysis of your existing digital footprint.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="module">
+                    <div class="education-content">
+                        <span class="label">PHASE_01 // NEURAL</span>
+                        <h2>NEURAL ANCHORING</h2>
+                        <p>Eliminating the 'deer in headlights' effect by regulating the autonomic nervous system. We use specific physiological triggers to ensure your expression is grounded and decisive.</p>
+                    </div>
+                    <div class="education-content">
+                        <span class="label">PHASE_02 // OPTIC</span>
+                        <h2>OPTIC GEOMETRY</h2>
+                        <p>We calibrate ocular tension—the specific 'look' of focus—to mirror the eye-contact of a leader during high-stakes negotiations.</p>
+                        <div class="data-grid">
+                            <div class="data-item"><b>Tension Level</b><span>[ CALIBRATED ]</span></div>
+                            <div class="data-item"><b>Trust Metric</b><span>[ +42% ]</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="module">
+                    <div class="education-content" style="grid-column: span 2;">
+                        <span class="label">FINAL_OUTPUT</span>
+                        <h2>THE ASSET ARCHITECTURE.</h2>
+                        <div class="data-grid">
+                            <div class="data-item"><b>Master Assets</b><span>5 Primary Variations</span></div>
+                            <div class="data-item"><b>Tethered Review</b><span>Real-time On-site</span></div>
+                            <div class="data-item"><b>Post-Production</b><span>Non-Destructive</span></div>
+                            <div class="data-item"><b>Initiate</b><span style="color:var(--text); cursor:pointer;">[ REQUEST ANALYSIS ]</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+</MainLayout>
+
+
+    <script is:inline>
+        window.addEventListener('load', function() {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const scene = document.querySelector("#scene");
+            if (!scene) return;
+
+            // Horizontal Move
+            gsap.to(scene, {
+                x: () => -(scene.scrollWidth - window.innerWidth),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "body",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    invalidateOnRefresh: true
+                }
+            });
+
+            // Parallax for Background Portrait
+            gsap.to(".master-portrait", {
+                x: "20%",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "body",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1
+                }
+            });
+        });
+    </script>
+
+
+
+
+<style>
+
+:root {
+  --accent: #12c2e9;
+  --bg: #000;
+  --text: #fff;
+  --gray: #888;
+}
+:global(body) {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  height: 600vh;
+  overflow-x: hidden;
+}
+
+/* FIXED HUD */
+.hud {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  text-transform: uppercase;
+  
+  
+}
+
+/* 3D ENGINE */
+.viewport {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  perspective: 1200px;
+  overflow: hidden;
+}
+.scene {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+/* SECTIONS */
+.panel {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* BACKGROUND PORTRAIT (STAYS BEHIND) */
+.master-portrait {
+  position: absolute;
+  width: 160vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateZ(-300px);
+  opacity: 0.4;
+  
+  
+
+}
+.master-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+/* EDUCATION MODULES */
+.module {
+  position: relative;
+  z-index: 10;
+  width: 80%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  transform: translateZ(50px);
+}
+.header-box h1 {
+  font-size: 8vw;
+  line-height: 0.8;
+  margin: 0;
+  letter-spacing: -6px;
+  text-transform: uppercase;
+  text-align:left;
+}
+
+/* DENSITY CONTENT */
+.education-content {
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 1px solid var(--accent);
+  padding: 40px;
+  backdrop-filter: blur(20px);
+}
+.label {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 4px;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+p {
+  color: var(--gray);
+  line-height: 1.7;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* DATA GRID */
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  border-top: 1px solid #222;
+  pt: 30px;
+}
+.data-item b {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.data-item span {
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 12px;
+}
+</style>
+

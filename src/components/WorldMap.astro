@@ -1,0 +1,429 @@
+---
+import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
+---
+<div class="map-wrapper">
+<h2 class="section-title center">Global Network of Headshot Photographers</h2>
+<div class="WorldMapSection">
+        
+        <div class="world-map-container">
+        <img 
+            src={worldMapSvg.src}
+            alt="world map"
+            class="world-map-background"
+        />
+        <svg
+            class="world-map-svg"
+            viewBox="0 0 800 400"
+            preserveAspectRatio="xMidYMid meet"
+        >
+            <defs>
+            <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="white" stop-opacity="0" />
+                <stop offset="5%" stop-color="#0ea5e9" stop-opacity="1" />
+                <stop offset="95%" stop-color="#0ea5e9" stop-opacity="1" />
+                <stop offset="100%" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+            
+            <filter id="glow">
+                <feMorphology operator="dilate" radius="0.5" />
+                <feGaussianBlur stdDeviation="1" result="coloredBlur" />
+                <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+            </defs>
+
+            <g id="paths-container"></g>
+            <g id="points-container"></g>
+        </svg>
+
+        </div>
+
+        <div class="text">
+            
+            
+           <p> My work doesn’t stop at a single city or studio. I collaborate with a global network of professional headshot photographers across the United States and internationally, which allows me to support clients wherever their people are located. If your team spans multiple offices, states, or countries, you are not limited by geography—and neither am I.</p>
+
+            <p>When I’ve already worked with a client, this network becomes an extension of that relationship. I coordinate directly with trusted photographers in other locations to ensure your team members receive the same level of care, direction, and attention to detail. The goal is simple: no visual disconnect, no mismatched styles, and no surprises when images are placed side by side.</p>
+
+            <p>The result is a consistent, cohesive set of headshots that feels intentional across your entire organization. One visual standard. One professional presence. No matter where your people happen to be working.</p>
+
+
+        </div>
+
+</div>
+</div>
+
+<script>
+  import { gsap } from 'gsap';
+
+  const dots = [
+    {
+      start: { lat: 64.2008, lng: -149.4937, label: "Fairbanks" },
+      end: { lat: 34.0522, lng: -118.2437, label: "Los Angeles"   }
+    },
+    {
+      start: { lat: 34.0522, lng: -118.2437, label: "Los Angeles"  },
+      end: { lat: 40.038578, lng: -76.306020, label: "Lancaster" }
+    },
+    {
+      start: { lat: -15.7975, lng: -47.8919, label: "Brazil" },
+      end: { lat: 38.7223, lng: -9.1393, label: "Lisbon" }
+    },
+    {
+      start: { lat: 51.5074, lng: -0.1278, label: "London" },
+      end: { lat: 31.7769, lng: 35.2224, label: "Jerusalem" }
+    },
+    {
+      start: { lat: 28.6139, lng: 77.209, label: "New Delhi" },
+      end: { lat: 35.6764, lng: 139.6500, label: "Tokyo" }
+    },
+    {
+      start: { lat: 28.6139, lng: 77.209, label: "New Delhi" },
+      end: { lat: 0.0236, lng: 37.9062, label: "Kenya" }
+    },
+    {
+      start: { lat: 35.6764, lng: 139.6500, label: "Tokyo"},
+      end: { lat: 0.0236, lng: 151.2093 , label: "Sydney" }
+    }
+  ];
+
+  const lineColor = "var(--accent)";
+  const showLabels = true;
+  const animationDuration = 2;
+  const loop = true;
+
+  function projectPoint(lat: number, lng: number) {
+    const x = (lng + 180) * (800 / 360);
+    const y = (90 - lat) * (400 / 180);
+    return { x, y };
+  }
+
+  function createCurvedPath(start: {x: number, y: number}, end: {x: number, y: number}) {
+    const midX = (start.x + end.x) / 2;
+    const midY = Math.min(start.y, end.y) - 50;
+    return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
+  }
+
+  const staggerDelay = 0.3;
+  const totalAnimationTime = dots.length * staggerDelay + animationDuration;
+  const pauseTime = .5;
+  const fullCycleDuration = totalAnimationTime + pauseTime;
+
+  const pathsContainer = document.getElementById('paths-container');
+  const pointsContainer = document.getElementById('points-container');
+
+  dots.forEach((dot, i) => {
+    const startPoint = projectPoint(dot.start.lat, dot.start.lng);
+    const endPoint = projectPoint(dot.end.lat, dot.end.lng);
+    const pathData = createCurvedPath(startPoint, endPoint);
+
+    const startTime = (i * staggerDelay) / fullCycleDuration;
+    const endTime = (i * staggerDelay + animationDuration) / fullCycleDuration;
+    const resetTime = totalAnimationTime / fullCycleDuration;
+
+    // Create path
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', pathData);
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke', 'url(#path-gradient)');
+    path.setAttribute('stroke-width', '1');
+    pathsContainer?.appendChild(path);
+
+    // Animate path with exact timing from original
+    const pathLength = path.getTotalLength();
+    
+    if (loop) {
+      gsap.fromTo(path,
+        {
+          strokeDasharray: pathLength,
+          strokeDashoffset: pathLength
+        },
+        {
+          strokeDashoffset: pathLength,
+          duration: fullCycleDuration,
+          ease: "power2.inOut",
+          repeat: -1,
+          repeatDelay: 0,
+          keyframes: [
+            { strokeDashoffset: pathLength, duration: startTime * fullCycleDuration },
+            { strokeDashoffset: 0, duration: (endTime - startTime) * fullCycleDuration },
+            { strokeDashoffset: 0, duration: (resetTime - endTime) * fullCycleDuration },
+            { strokeDashoffset: pathLength, duration: (1 - resetTime) * fullCycleDuration }
+          ]
+        }
+      );
+    }
+
+    // Start point group
+    const startG = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    
+    const startCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    startCircle.setAttribute('cx', startPoint.x.toString());
+    startCircle.setAttribute('cy', startPoint.y.toString());
+    startCircle.setAttribute('r', '3');
+    startCircle.setAttribute('fill', lineColor);
+    startCircle.setAttribute('filter', 'url(#glow)');
+    startCircle.classList.add('location-point');
+    
+    const startPulse = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    startPulse.setAttribute('cx', startPoint.x.toString());
+    startPulse.setAttribute('cy', startPoint.y.toString());
+    startPulse.setAttribute('r', '3');
+    startPulse.setAttribute('fill', lineColor);
+    startPulse.setAttribute('opacity', '0.5');
+    
+    const startAnimateR = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+    startAnimateR.setAttribute('attributeName', 'r');
+    startAnimateR.setAttribute('from', '3');
+    startAnimateR.setAttribute('to', '12');
+    startAnimateR.setAttribute('dur', '2s');
+    startAnimateR.setAttribute('begin', '0s');
+    startAnimateR.setAttribute('repeatCount', 'indefinite');
+    
+    const startAnimateOpacity = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+    startAnimateOpacity.setAttribute('attributeName', 'opacity');
+    startAnimateOpacity.setAttribute('from', '0.6');
+    startAnimateOpacity.setAttribute('to', '0');
+    startAnimateOpacity.setAttribute('dur', '2s');
+    startAnimateOpacity.setAttribute('begin', '0s');
+    startAnimateOpacity.setAttribute('repeatCount', 'indefinite');
+    
+    startPulse.appendChild(startAnimateR);
+    startPulse.appendChild(startAnimateOpacity);
+    
+    startG.appendChild(startCircle);
+    startG.appendChild(startPulse);
+    pointsContainer?.appendChild(startG);
+
+    // Start label
+    if (showLabels && dot.start.label) {
+      const startLabel = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
+      startLabel.setAttribute('x', (startPoint.x - 50).toString());
+      startLabel.setAttribute('y', (startPoint.y - 35).toString());
+      startLabel.setAttribute('width', '100');
+      startLabel.setAttribute('height', '30');
+      startLabel.classList.add('pointer-events-none');
+      
+      const labelDiv = document.createElement('div');
+      labelDiv.className = 'label-wrapper';
+      
+      const labelSpan = document.createElement('span');
+      labelSpan.className = 'label-text';
+      labelSpan.textContent = dot.start.label;
+      
+      labelDiv.appendChild(labelSpan);
+      startLabel.appendChild(labelDiv);
+      pointsContainer?.appendChild(startLabel);
+      
+      gsap.from(startLabel, {
+        opacity: 0,
+        y: 5,
+        duration: 0.5,
+        delay: 0.5 * i + 0.3
+      });
+    }
+
+    // End point group
+    const endG = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    
+    const endCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    endCircle.setAttribute('cx', endPoint.x.toString());
+    endCircle.setAttribute('cy', endPoint.y.toString());
+    endCircle.setAttribute('r', '3');
+    endCircle.setAttribute('fill', lineColor);
+    endCircle.setAttribute('filter', 'url(#glow)');
+    endCircle.classList.add('location-point');
+    
+    const endPulse = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    endPulse.setAttribute('cx', endPoint.x.toString());
+    endPulse.setAttribute('cy', endPoint.y.toString());
+    endPulse.setAttribute('r', '3');
+    endPulse.setAttribute('fill', lineColor);
+    endPulse.setAttribute('opacity', '0.5');
+    
+    const endAnimateR = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+    endAnimateR.setAttribute('attributeName', 'r');
+    endAnimateR.setAttribute('from', '3');
+    endAnimateR.setAttribute('to', '12');
+    endAnimateR.setAttribute('dur', '2s');
+    endAnimateR.setAttribute('begin', '0.5s');
+    endAnimateR.setAttribute('repeatCount', 'indefinite');
+    
+    const endAnimateOpacity = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+    endAnimateOpacity.setAttribute('attributeName', 'opacity');
+    endAnimateOpacity.setAttribute('from', '0.6');
+    endAnimateOpacity.setAttribute('to', '0');
+    endAnimateOpacity.setAttribute('dur', '2s');
+    endAnimateOpacity.setAttribute('begin', '0.5s');
+    endAnimateOpacity.setAttribute('repeatCount', 'indefinite');
+    
+    endPulse.appendChild(endAnimateR);
+    endPulse.appendChild(endAnimateOpacity);
+    
+    endG.appendChild(endCircle);
+    endG.appendChild(endPulse);
+    pointsContainer?.appendChild(endG);
+
+    // End label
+    if (showLabels && dot.end.label) {
+      const endLabel = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
+      endLabel.setAttribute('x', (endPoint.x - 50).toString());
+      endLabel.setAttribute('y', (endPoint.y - 35).toString());
+      endLabel.setAttribute('width', '100');
+      endLabel.setAttribute('height', '30');
+      endLabel.classList.add('pointer-events-none');
+      
+      const labelDiv = document.createElement('div');
+      labelDiv.className = 'label-wrapper';
+      
+      const labelSpan = document.createElement('span');
+      labelSpan.className = 'label-text';
+      labelSpan.textContent = dot.end.label;
+      
+      labelDiv.appendChild(labelSpan);
+      endLabel.appendChild(labelDiv);
+      pointsContainer?.appendChild(endLabel);
+      
+      gsap.from(endLabel, {
+        opacity: 0,
+        y: 5,
+        duration: 0.5,
+        delay: 0.5 * i + 0.5
+      });
+    }
+  });
+</script>
+
+<style>
+
+.map-wrapper{
+  padding-block:var(--size-8);
+}
+
+
+
+   h2{
+    text-wrap:pretty;
+    width:calc(100% - (var(--size-9)));
+    margin-inline:auto;
+    margin-bottom:var(--size-7);
+   } 
+
+.WorldMapSection{
+    width:calc(100% - (var(--size-7)));
+    margin-inline:auto;
+    display:grid;
+    grid-template-columns: 1fr; 
+    gap:var(--size-8);
+    
+}
+
+
+  .world-map-container {
+
+    /* width:calc(100% - var(--size-7)); */
+    margin:auto;
+    aspect-ratio: 2 / 1;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--ff-primary);
+
+    
+  }
+
+  .world-map-background {
+    height: 100%;
+    width: 100%;
+    mask-image: linear-gradient(to bottom, transparent, white 10%, white 90%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, white 10%, white 90%, transparent);
+    pointer-events: none;
+    user-select: none;
+    object-fit: cover;
+    
+   
+  }
+
+  .world-map-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    pointer-events: auto;
+    user-select: none;
+  }
+
+  .location-point {
+    cursor: pointer;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+
+    
+  }
+
+  .pointer-events-none {
+    pointer-events: none;
+  }
+
+  .label-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+  }
+
+  :global(.label-text) {
+    font-size: var(--fs-275);
+    font-weight: 500;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.375rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: black;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px 0 var(--shadow-clr-subtle);
+  }
+
+
+  /* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+
+  @media (min-width: 48em) {
+    .WorldMapSection{
+      grid-template-columns: 1fr;
+      padding:var(--size-8);
+      margin-inline:auto;
+      gap:var(--size-8);
+  }
+    .world-map-container {
+    
+  }
+
+  /* ==========================================
+   DESKTOP - min-width: 64em (1024px)
+   ========================================== */
+
+  @media (min-width: 64em) {
+
+    .world-map-container {
+      width:80%;
+      margin-inline:auto;
+      /* aspect-ratio: 2 / 1; */
+    }
+  }
+
+  /* ==========================================
+   LARGE DESKTOP - min-width: 90em (1440px)
+   ========================================== */
+    
+    @media (width >= 90em){
+      .WorldMapSection{
+        grid-template-columns:1fr 1fr;
+      
+      }
+  
+  }
+
+</style>

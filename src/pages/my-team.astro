@@ -1,0 +1,318 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import PageTitle from "../components/PageTitle.astro";
+import PrimaryButton from '../components/PrimaryButton.astro';
+
+const h1 = 'My Team';
+// Team member data
+const lionel = {
+  name: "Lionel Adriano",
+  role: "Makeup Artist",
+  image: "src/assets/images/team/LionelAdriano - 0040 (horizontal).jpg",
+  bio: [
+    "Lionel is a world-class makeup artist who has worked with some of the world's most recognizable people. He has an amazing eye for color and complexion, and ensures that no detail is overlooked.",
+    "Lionel is a certified M.A.C. makeup artist and was voted the best makeup artist in Lancaster County, Pennsylvania by the readers of Lancaster County Magazine, Susquehanna Style Magazine and Lancaster Newspaper.",
+    "His attention to detail, positive attitude, and perfectionism gels very well with my operation.",
+    "Lionel is an integral part of my workflow and client experience. Let him work his magic on you. Not only will you get pampered, but you will feel more beautiful than you already are!"
+  ]
+};
+
+const lisa = {
+  name: "Lisa Torba",
+  role: "Stylist",
+  image: "src/assets/images/team/LisaTorba - 0158 (horizontal).jpg",
+  bio: [
+    "Lisa is an incredible Personal Stylist for men. She styles you in high-quality clothing that fits perfectly and looks and feels amazing, making your life easier and your wardrobe sharper than ever.",
+    "She provides a collaborative, frustration-free shopping experience, meticulously measuring you and guiding every step of the customization process.",
+    "Working with Lisa saves you time and money while ensuring you are among the best dressed in the room, no matter the occasion.",
+    "Contact Lisa ahead of your headshot or branding photo session to ensure you look and feel like a million bucks!"
+  ],
+  ctaText: "CONTACT LISA",
+  ctaUrl: "https://clientela.myjhilburn.com/stylist/15327"
+};
+---
+
+<MainLayout title="My Team" description="I work with the best in the business. Here are the members of my team and how they can help to elevate your personal brand.">
+
+<div class="team-page-wrapper">
+  <PageTitle title={h1} subtitle="Meet the Richard Waine Team" />
+
+  <main class="team-slides-container">
+
+  <!-- Slide 1: Lionel (Image Left, Content Right) -->
+  <section class="slide active" id="lionel-slide">
+    <div class="slide-image">
+      <img src={lionel.image} alt={`${lionel.name} - ${lionel.role}`} loading="lazy" />
+    </div>
+    <div class="slide-content">
+      <h2>{lionel.name}</h2>
+      <span class="role-label">{lionel.role}</span>
+      <div class="bio-content">
+        {lionel.bio.map(paragraph => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 2: Lisa (Image Left, Content Right) -->
+  <section class="slide" id="lisa-slide">
+    <div class="slide-image">
+      <img src={lisa.image} alt={`${lisa.name} - ${lisa.role}`} loading="lazy" />
+    </div>
+    <div class="slide-content">
+      <h2>{lisa.name}</h2>
+      <span class="role-label">{lisa.role}</span>
+      <div class="bio-content">
+        {lisa.bio.map(paragraph => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
+      <div class="button-wrapper">
+        <PrimaryButton url={lisa.ctaUrl} text={lisa.ctaText} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Arrows -->
+  <div class="arrows">
+    <button id="prev">&lt;</button>
+    <button id="next">&gt;</button>
+  </div>
+
+</main>
+</div>
+
+
+
+
+</MainLayout>
+
+<style is:global>
+
+
+/* ========================================
+   TEAM PAGE - Mobile First
+   ======================================== */
+
+/* MOBILE BASE STYLES */
+
+main.team-slides-container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+
+}
+
+main.team-slides-container .slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  
+  margin-bottom: var(--size-9);
+  
+  
+}
+
+main.team-slides-container .slide-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+main.team-slides-container .slide-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  
+}
+
+main.team-slides-container .slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--size-7);
+  background: var(--ltbg);
+}
+
+main.team-slides-container .slide-content h2 {
+  font-size: clamp(var(--fs-700), 4vw, var(--fs-800));
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  color: var(--blkclr);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--size-2);
+  text-align: center;
+  width: 100%;
+}
+
+main.team-slides-container .role-label {
+  display: inline-block;
+  font-size: var(--fs-350);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--size-8);
+  text-align: center;
+  width: 100%;
+}
+
+main.team-slides-container .bio-content {
+  width: 100%;
+  
+}
+
+main.team-slides-container .bio-content p {
+  font-size: var(--fs-450);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--size-4);
+  color: var(--blkclr);
+}
+
+main.team-slides-container .button-wrapper {
+  margin-top: var(--size-5);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main.team-slides-container .arrows {
+  display: none;
+}
+
+/* ==========================================
+   DESKTOP - min-width: 64em (1024px)
+   ========================================== */
+
+@media (min-width: 64em) {
+  .team-page-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+  }
+
+  main.team-slides-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+  }
+
+  main.team-slides-container .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    margin-bottom: 0;
+  }
+
+  main.team-slides-container .slide.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  main.team-slides-container .slide-image {
+    height: 100%;
+    
+  }
+
+  main.team-slides-container .slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* object-position: center; */
+    object-position:left ;
+  }
+
+  main.team-slides-container .slide-content {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  main.team-slides-container .slide-content h2 {
+    text-align: left;
+    width: auto;
+  }
+
+  main.team-slides-container .role-label {
+    text-align: left;
+    width: auto;
+  }
+
+  main.team-slides-container .button-wrapper {
+    width: auto;
+    display: block;
+  }
+
+  main.team-slides-container .arrows {
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    justify-content: center;
+    gap: 1.25em;
+    align-items: center;
+  }
+
+  main.team-slides-container .arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--blkclr);
+    border: none;
+    color: var(--accent);
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  main.team-slides-container .arrows button:hover {
+    background: var(--ltclr);
+    border:2px solid var(--accent);
+    color: var(--blkclr);
+  }
+}
+
+
+</style>
+
+<script>
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  const lionelSlide = document.getElementById('lionel-slide');
+  const lisaSlide = document.getElementById('lisa-slide');
+
+  let currentSlide = 0;
+  const slides = [lionelSlide, lisaSlide];
+
+  nextBtn?.addEventListener('click', () => {
+    slides[currentSlide]?.classList.remove('active');
+    currentSlide = (currentSlide + 1) % 2;
+    slides[currentSlide]?.classList.add('active');
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    slides[currentSlide]?.classList.remove('active');
+    currentSlide = (currentSlide - 1 + 2) % 2;
+    slides[currentSlide]?.classList.add('active');
+  });
+</script>
+
+

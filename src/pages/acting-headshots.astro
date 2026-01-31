@@ -1,0 +1,890 @@
+---
+// @ts-nocheck
+import { Image } from 'astro:assets';
+import MainLayout from "../layouts/MainLayout.astro"
+import PrimaryButton from "../components/PrimaryButton.astro"
+import SecondaryButton from '../components/SecondaryButton.astro'
+import Testimonials from '../components/Testimonials.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+
+import JackCottrell from "../assets/images/features/Headshot_20220829_Jack Cottrell_Richard_Waine_Lancaster_PA_0318 (horizontal) - compressed.jpg"
+import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
+import RW2 from "../assets/images/blog/RW7 - (16 x 9).jpg"
+import RW11 from "../assets/images/blog/RW11 - (horizontal).jpg"
+
+
+export interface Props {
+  // SEO
+  pageTitle?: string;
+  metaDescription?: string;
+
+  // Hero Section
+  heroTitle?: string;
+  heroTitleAccent?: string;
+  heroDescription?: string;
+  heroButtonText?: string;
+
+  // Blueprint Callouts
+  callout1?: string;
+  callout2?: string;
+
+  // Pillar Cards
+  pillar1Num?: string;
+  pillar1Title?: string;
+  pillar1Description?: string;
+
+  pillar2Num?: string;
+  pillar2Title?: string;
+  pillar2Description?: string;
+
+  pillar3Num?: string;
+  pillar3Title?: string;
+  pillar3Description?: string;
+
+  // System Section Row 1
+  systemRow1Title?: string;
+  systemRow1Description?: string;
+  methodItem1?: string;
+  methodItem2?: string;
+  methodItem3?: string;
+
+  // System Section Row 2
+  systemRow2Title?: string;
+  systemRow2Description?: string;
+
+  // Footer
+  footerTitle?: string;
+  footerDescription?: string;
+  footerButtonText?: string;
+
+  // Button URLs
+  heroButtonUrl?: string;
+  systemRow2ButtonText?: string;
+  systemRow2ButtonUrl?: string;
+  footerButtonUrl?: string;
+}
+
+const {
+  pageTitle = 'Acting Headshots | Richard Waine Photography',
+  metaDescription = 'Professional acting headshot photography services',
+
+  heroTitle = 'Acting',
+  heroTitleAccent = 'Headshots',
+  heroDescription = 'Every audition begins long before you enter the room. I create headshots that carry the weight of a performance, ensuring your first impression does the work of starting a conversation.',
+  heroButtonText = 'GET PRICING',
+  SecondaryButtonText = 'SCHEDULE CONSULT',
+
+  callout1 = 'CONFIDENCE',
+  callout2 = 'CONNECTION',
+
+  pillar1Num = 'THE SCIENCE',
+  pillar1Title = 'Expression Direction',
+  pillar1Description = "Most photographers tell you to relax and be yourself, then hope something good happens. I coach you through a deliberate process that elicits authentic expressions casting directors respond to. The kind that look effortless on camera but require real skill to create. Not the stiff, manufactured look actors get stuck with everywhere else.",
+
+  pillar2Num = 'THE PROCESS',
+  pillar2Title = 'Real-Time Review',
+  pillar2Description = "I photograph tethered to a computer so images appear on a large screen during the session. We'll review your headshots together at key moments to make adjustments to expression, lighting, and posture. No waiting until after the session to find out how things turned out. You leave knowing exactly what you're getting.",
+
+  pillar3Num = 'THE RESULT',
+  pillar3Title = 'Strategic Selection',
+  pillar3Description = 'We review your photos together, analyzing which images will actually work for casting and auditions. I help you select pictures that show range and authenticity. You walk away with headshots that make casting directors believe you are someone worth bringing in, not just another face in the pile.',
+
+
+
+
+  systemRow1Title = 'System of Direction',
+  systemRow1Description = "I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, specific direction that results in a natural, engaging presence on camera. My approach is designed to eliminate self-consciousness and help you settle into genuine expression. Posture and head position directly affect how approachable and compelling you appear. Slight, nuanced adjustments make the difference between looking stiff and looking like someone casting directors remember.",
+  methodItem1 = 'Real-time image tethering for instant feedback',
+  methodItem2 = 'Advanced guidance, coaching and direction',
+  methodItem3 = "Systematic approach that's different from typical photographers",
+  methodItem4 = 'Instant review and choice of images',
+  
+
+  systemRow2Title = 'The Experience',
+  systemRow2Description = "Getting professional headshots doesn't have to feel awkward or performative. My headshot sessions are conversational, collaborative and comfortable. The strongest images come from moments when you're engaged and present instead of overthinking it. Actors and performers tell me their headshot session was more enjoyable than they anticipated.",
+  methodItem5 = 'Session preparation guide provided at time of scheduling',
+  methodItem6 = 'Wardrobe consultation based on purpose and color psychology',
+  methodItem7 = 'Professional lighting that defines your best features',
+  methodItem8 = "The dismantling of the 'I am not photogenic' narrative ",
+
+
+  footerTitle = 'Ready to elevate your brand?',
+  footerDescription = 'Stop settling for "good enough" headshots. Invest in your digital handshake.',
+  footerButtonText = 'GET PRICING',
+
+  heroButtonUrl = '/rates',
+  SecondaryButtonUrl = "https://app.acuityscheduling.com/schedule.php?owner=13511326&appointmentType=11959793",
+  systemRow2ButtonText = 'GET PRICING',
+  systemRow2ButtonUrl = '/rates',
+  footerButtonUrl = '/rates',
+
+  faqs = [                                                                  
+      {                                                                       
+        question: "Should I lose weight before getting my headshot taken?",                                               
+        answer: `The best time for your headshot is now. Casting directors want to see the real you, and waiting until you reach some future version of yourself means missing opportunities that exist today. Your headshot needs to match who walks through the door at auditions, which means representing yourself authentically as you are right now.
+
+        Professional headshot sessions are designed to present you at your most compelling, regardless of where you are with fitness goals or appearance concerns. I've worked with actors at every stage of their journey who felt the same hesitation. The breakthrough happens when you trust an experienced photographer to guide the process and show you what others already see. I wrote an entire article about <a href="/blog/should-i-wait-to-have-my-headshot-taken">whether you should wait to get your headshot taken</a> that addresses appearance concerns, self-consciousness, and timing in depth.`                                                   
+      },                                                                      
+      {                                                                       
+        question: "How often should actors update their headshots?",                                               
+        answer: `Update your headshots every 1-2 years, or sooner if your appearance changes significantly. Your headshot represents your current look, and casting directors need accurate images that match who walks into the audition room. If your hairstyle, facial hair, weight, or overall appearance has shifted noticeably since your last session, your headshots are outdated.
+
+        When your headshot doesn't match your current appearance, it creates immediate disconnect at auditions and callbacks. Casting directors form expectations based on your submitted images. Walking in looking different from your headshot damages trust before you've even started the audition. Keeping your headshots current shows you're actively managing your career and respecting the casting process.
+        `                                                    
+      },                                                                      
+      {                                                                       
+        question: "How do acting headshots differ from corporate headshots?",                                               
+        answer: `Acting headshots and corporate headshots serve completely different professional objectives. Casting directors evaluate acting headshots for type, range, and character potential. They need to see if you can embody specific roles and bring authentic presence to auditions. Corporate headshots serve business credibility, approachability, and professional authority. Both require the same level of skill and attention, but the strategy behind each session addresses distinct career goals.
+        `                                                    
+      },
+      {
+        question: "Do I need multiple images for acting headshots?",
+        answer: `Yes. Actors need multiple headshots to match different casting requirements. A single, universal image limits your ability to submit the most appropriate headshot for each audition. When casting directors request specific character types or energy levels, having a library of images means you can provide exactly what they're looking for rather than forcing one headshot to serve every role.
+
+        How many images you select depends on your current career needs and casting goals. Some actors need images that serve theatrical versus commercial auditions. Others need variety that demonstrates range across character types. The session provides opportunities to create different expressions and looks. You select the final images that best serve your specific casting requirements.
+        `
+      }                                                                       
+    ]                    
+
+
+
+
+
+
+} = Astro.props;
+
+---
+
+
+
+
+<MainLayout title={pageTitle} description={metaDescription}>
+
+<body>
+<section class="hero">
+    <Image class="hero-bg" src={RW2} alt=""/>
+    <div class="hero-text">
+        <h1>{heroTitle} <br><span class="cyan">{heroTitleAccent}</span></h1>
+        <p class="hero-p">{heroDescription}</p>
+
+        <div class="action-group">
+          <div class="button-wrapper">
+            <PrimaryButton text={heroButtonText} url={heroButtonUrl}/>
+        </div>
+        
+        <div class="button-wrapper">
+            <SecondaryButton text={SecondaryButtonText} url={SecondaryButtonUrl}/>
+        </div>
+    </div>
+
+    </div>
+  
+    <div class="hero-visual">
+        <div class="blueprint-box">
+            <div class="portrait-sim">
+              <Image src={JackCottrell}  alt=""/>
+            </div>
+
+            <div class="callout c-1">{callout1}</div>
+            <div class="callout c-2">{callout2}</div>
+        </div>
+    </div>
+</section>
+
+<section class="pillars">
+  <div class="pillar-card">
+    <span class="pillar-num">{pillar1Num}</span>
+    <h3>{pillar1Title}</h3>
+    <p>{pillar1Description}</p>
+  </div>
+  <div class="pillar-card">
+    <span class="pillar-num">{pillar2Num}</span>
+    <h3>{pillar2Title}</h3>
+    <p>{pillar2Description}</p>
+  </div>
+  <div class="pillar-card">
+    <span class="pillar-num">{pillar3Num}</span>
+    <h3>{pillar3Title}</h3>
+    <p>{pillar3Description}</p>
+  </div>
+</section>
+
+<section class="system-section">
+  <div class="system-row">
+        <div class="system-image">
+          <Image src={RW1} alt=""/>
+        </div>
+        
+        <div class="system-content">
+            <h2>{systemRow1Title}</h2>
+            <p>{systemRow1Description}</p>
+            <ul class="method-list">
+              <li class="method-item"><span>◆</span> {methodItem1}</li>
+              <li class="method-item"><span>◆</span> {methodItem2}</li>
+              <li class="method-item"><span>◆</span> {methodItem3}</li>
+              <li class="method-item"><span>◆</span> {methodItem4}</li>  
+            </ul>
+        </div>
+  </div>
+
+  <div class="system-row reverse">
+    <div class="system-content">
+      <h2>{systemRow2Title}</h2>
+      <p>{systemRow2Description}</p>
+
+    <ul class="method-list">
+        <li class="method-item"><span>◆</span> {methodItem5}</li>
+        <li class="method-item"><span>◆</span> {methodItem6}</li>
+        <li class="method-item"><span>◆</span> {methodItem7}</li>
+        <li class="method-item"><span>◆</span> {methodItem8}</li>
+       
+      </ul>
+
+      <!-- <div class="button-wrapper">
+        <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
+      </div> -->
+
+    </div>
+    <div class="system-image">
+      <Image src={RW11} alt=""/>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <Testimonials title="" limit={3} filterByNames={["Dillon Bomba", "Cate Caplan", "Brandon Lesagonicz"]}/>
+</section>
+
+<section class="FAQs">
+
+  <FAQAccordion faqs={faqs}/>
+
+</section>
+
+
+<script>
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('astro:page-load', () => {
+if (window.location.pathname !== '/acting-headshots') return;
+let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 48em)", () => {
+  // Animate pillar cards on scroll
+  gsap.utils.toArray('.pillar-card').forEach((card: any, index) => {
+    gsap.from(card, {
+      opacity: 0,
+      y: 60,
+      rotateX: -15,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 80%",
+        end: "top 50%",
+        scrub: 1
+      }
+    });
+  });
+
+  // Animate system content rows
+  gsap.utils.toArray('.system-content').forEach((content: any) => {
+    gsap.to(content, {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: content,
+        start: "top 90%",
+        end: "top 40%",
+        scrub: 1
+      }
+    });
+  });
+
+  // Parallax effect on system images
+  gsap.utils.toArray('.system-image').forEach((image: any) => {
+    gsap.to(image, {
+      y: -50,
+      ease: "none",
+      scrollTrigger: {
+        trigger: image,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  });
+
+  // Blueprint callouts animation
+  gsap.from('.callout', {
+    opacity: 0,
+    x: -30,
+    stagger: 0.3,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: '.blueprint-box',
+      start: "top 70%"
+    }
+  });
+
+  // Hero text animation
+  gsap.from('.hero-text > *', {
+    opacity: 0,
+    y: 30,
+    stagger: 0.2,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  // Blueprint box 3D rotation on scroll
+  gsap.to('.blueprint-box', {
+    rotateY: 5,
+    rotateX: 2,
+    ease: "none",
+    scrollTrigger: {
+      trigger: '.hero',
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+
+  return () => {
+    //optional cleanup code here
+    };
+  });
+});
+</script>
+
+</body>
+
+</MainLayout>
+
+
+<style>
+  :root {
+  --bg: #050505;
+  /* --bg:var(--drkbg); */
+  --card: #111111;
+  /* --accent: #12c2e9; */
+  --text:var(--ltclr);
+  /* --text-dim: #888888; */
+  --text-dim:var(--ltclr);
+  /* --border: #1a1a1a; */
+}
+
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height:var(--line-height-relaxed);
+  width:100%;
+  margin-inline:auto;
+  padding:0;
+  min-height:calc(100vh + var(--header-height));
+
+a{
+    color:blue;
+}
+
+}
+
+
+.cyan {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  align-items: center;
+  padding-top:calc(var(--header-height) + var(--size-7));
+  padding-bottom:var(--size-825);
+  gap: var(--size-8);
+  border-bottom: 1px solid var(--border);
+  display:grid;
+  grid-template-columns: 1fr;
+  width:100%;
+  margin-inline:auto;
+  /* overflow:hidden; */
+  overflow:clip;
+}
+
+.hero-bg{
+  
+  position:absolute;
+  inset:0;
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  object-position:center var(--header-height);
+  filter:grayscale(1);
+  opacity:.25;
+  z-index: -2;
+  overflow:hidden;
+
+}
+
+.hero-text{
+  margin-inline:auto;
+  width:min(700px, calc(100% - var(--size-7)));
+  text-align:center;
+}
+
+h1 {
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 1;
+  margin-bottom: var(--size-4);
+  font-weight: var(--fw-x-bold);
+  text-transform: uppercase;
+  
+ 
+
+  
+
+}
+
+.hero-p {
+  font-size: var(--fs-500);
+  color: var(--text-dim);
+  text-align:center;
+  margin-bottom: var(--size-775);
+}
+
+.action-group{
+  
+  display:flex;
+  flex-direction:column;
+  justify-self:center;
+  gap:var(--size-4);
+  
+  > *{
+
+    margin-inline:auto;
+
+  }
+ 
+}
+
+.hero-visual {
+  position: relative;
+  justify-self: center;
+  width:calc(100% - var(--size-7));
+  
+}
+
+/* Blueprint Visuals */
+.blueprint-box {
+  --_width:min(700px, 80%);
+
+  width:var(--_width);
+  margin-inline:auto;
+  height:auto;
+  background:transparent;
+  position: relative;
+  overflow: hidden;
+  perspective: 1200px;
+  box-shadow: 0 10px 50px var(--shadow-clr-medium);
+
+ 
+}
+
+.portrait-sim {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  font-weight: var(--fw-x-bold);
+  transform-style: preserve-3d;
+  box-shadow: inset 0 0 60px rgba(3, 169, 244, 0.1);
+  overflow:clip;
+  /* overflow:hidden; */
+  
+  > * {
+
+  object-fit:cover;
+  width:100%;
+  height:100%;
+
+}
+}
+
+
+
+
+
+.callout {
+  display:none;
+  
+}
+
+/* Educational Pillars Section */
+.pillars {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-4);
+  background: #080808;
+  /* background:var(--drkbg); */
+  perspective: 1000px;
+  width:calc(100% - var(--size-7));
+  margin-inline:auto;
+
+
+  
+}
+
+.pillar-card {
+  --border:transparent;
+  
+  padding: var(--size-775) var(--size-4);
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px var(--shadow-clr-soft);
+}
+
+
+
+.pillar-num {
+  color: var(--accent);
+  font-weight: var(--fw-x-bold);
+  font-size: var(--fs-350);
+  margin-bottom: var(--size-4);
+  display: block;
+  text-align:center;
+}
+.pillar-card h3 {
+  margin: 0 0 var(--size-3);
+  font-size: var(--fs-500);
+  letter-spacing: 1px;
+  text-align:center;
+}
+.pillar-card p {
+  color: var(--text-dim);
+  font-size: var(--fs-400);
+  margin: 0;
+}
+
+/* The "System" Section - Staggered */
+.system-section {
+  margin-block:var(--size-825);
+  position: relative;
+  width:calc(100% - var(--size-7));
+  margin-inline:auto;
+}
+
+
+.system-row {
+  width:100%;
+  margin-inline:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:var(--size-7);
+  align-items: center;
+  justify-items:center;
+  margin-bottom: var(--size-7);
+}
+
+.system-row:last-child {                                                         
+    margin-bottom: 0;                                                              
+  }  
+
+.system-row.reverse {
+  grid-template-columns: 1fr;
+  
+}
+
+.system-image {
+--_width:min(700px, 80%);
+
+  width:var(--_width);
+  height: auto;
+  background: var(--card);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px var(--shadow-clr-medium);
+  margin-inline:auto;
+
+    > * {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
+
+.system-content {
+  opacity: 1;
+  transform: translateY(50px);
+}
+
+.system-content h2 {
+  font-size: var(--fs-600);
+  margin-bottom: var(--size-4);
+  text-align:center;
+}
+
+.system-content p{
+  margin-bottom:var(--size-775);
+  /* font-size: var(--fs-400); */
+}
+
+
+/* Methodology List */
+.method-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom:var(--size-7);
+}
+.method-item {
+  padding: var(--size-4) 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: var(--size-4);
+}
+.method-item span {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+
+
+#testimonials{
+
+    height: auto;                                                                
+     display: grid;                                                               
+     place-items: center;                                                         
+     background: #080808; 
+
+      > * > * > * .card-testimonial{
+    margin-inline:0;
+      }
+
+      > * > * > * > * .testimonial-content{
+        padding-inline:0;
+        margin-inline:0;
+      }
+
+}
+
+.FAQs {
+  
+  width:calc(100% - var(--size-4));
+  margin-inline:auto;
+  margin-bottom:var(--size-10);
+ 
+}
+
+
+/* Global Network Preview */
+
+/* .global-footer {
+  padding: 100px 10%;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: radial-gradient(circle at center, #111 0%, #050505 100%);
+}
+.global-footer h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.global-footer .footer-description {
+  color: var(--text-dim);
+  margin-bottom: 40px;
+} */
+
+
+/* ==========================================                                   
+     TABLET - min-width: 48em (768px)                                             
+     ========================================== */                                
+        @media (min-width: 48em) {                                                      
+           .hero {
+            min-height:100vh;
+            grid-template-columns: 1fr;
+            gap: var(--size-875);
+         
+          }
+
+
+          .action-group{
+
+          display:flex;
+          flex-direction:row;
+          }
+
+          .callout{
+            display:block;
+            position: absolute;
+            color: var(--accent);
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: var(--size-1);
+            z-index: 10;
+            
+          }
+          .c-1 {
+            top: 25%;
+            left: 5%;
+          }
+          .c-2 {
+            bottom: 25%;
+            right: 5%;
+          } 
+          
+          
+          .pillars {
+           
+          grid-template-columns: 1fr;
+          padding: 50px 0;  
+          gap: var(--size-775);  
+        
+                                                                              
+          }  
+
+          .pillar-card{
+            padding: var(--size-775);
+          }
+
+          .pillar-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 60px var(--shadow-clr-medium), 0 0 40px rgba(3, 169, 244, 0.3);
+}
+
+          .pillar-num {
+            text-align:left;
+          }
+
+          .pillar-card h3{
+            text-align:left;
+          }
+
+          .system-section {
+            /* padding-block: 100px; */
+          }
+
+          .system-content {
+            opacity: 0;
+            transform: translateY(50px);
+            width:80%;
+            margin-inline:auto;
+          }
+
+          .system-content h2{
+            font-size: var(--fs-800);
+            text-align:left;
+          }
+
+          .system-row {
+            grid-template-columns: 1fr;
+            margin-bottom: var(--size-10);
+          }
+          .system-row.reverse {
+            grid-template-columns: 1fr;
+          }
+
+          .FAQs{
+            width:80%;
+          }
+
+
+
+  }
+  /* ==========================================                                   
+     DESKTOP - min-width: 64em (1024px)                                           
+     ========================================== */                                
+  @media (min-width: 64em) {                                                      
+          .hero {
+            /* gap: var(--size-2); */
+            /* padding-inline:var(--size-7); */
+            /* padding: 0 5%; */
+            /* grid-template-columns: 1.5fr 1fr; */
+            
+          }  
+          
+  
+
+         .pillars{
+          width:100%;
+          margin-inline:auto; 
+          
+           > *{
+            width:80%;
+            margin-inline:auto;
+           }
+         }
+      
+  }
+ /* ==========================================                                   
+     DESKTOP - min-width: 90em (1440px)                                           
+     ========================================== */                                
+  @media (min-width: 90em) { 
+
+        .hero {
+            /* gap: var(--size-2); */
+            /* padding-inline:var(--size-7); */
+            /* padding: 0 5%; */
+            grid-template-columns: 1fr 1fr;
+            
+          }  
+          
+
+          h1 {
+
+            margin-inline:0;
+            text-align:left;
+            margin-bottom: var(--size-2);
+            width:calc(100% - var(--size-7));
+
+          }
+
+          .hero-p{
+            text-align:left;
+          }
+          
+
+        .action-group{
+            flex-direction:row;
+            justify-self: flex-start;
+          } 
+
+          .pillars{
+                       
+            grid-template-columns: repeat(3, 1fr);
+            
+            > *{
+                width:80%;
+                
+            }
+          }
+
+          .system-row{
+            width:100%;
+          
+            grid-template-columns: 1fr 1fr;
+          }
+          .system-row.reverse{
+            grid-template-columns: 1fr 1fr;
+          }
+
+        .FAQs{
+            width:50%;
+          }
+
+        
+  }
+
+</style>

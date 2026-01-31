@@ -1,87 +1,125 @@
 ---
+import SecondaryButton from './SecondaryButton.astro';
+import { Image } from 'astro:assets';
+
+
+import macbookFrame from '../assets/macbook_PNG36.png';
+
+// Import neural portrait images
+import idaGrandyMain from '../assets/images/neural/Ida Grandy - (800px) - Richard_Waine_Lancaster_PA_0154.jpg';
+import idaGrandyThumb from '../assets/images/neural/Ida Grandy - (500px sq) - Richard_Waine_Lancaster_PA_0154.jpg';
+import shreePatelMain from '../assets/images/neural/Shree Patel - (800px) - Richard_Waine_Lancaster_PA_0157.jpg';
+import shreePatelThumb from '../assets/images/neural/Shree Patel - (500px sq) - Richard_Waine_Lancaster_PA_0157.jpg';
+import sonyaLiliensteinMain from '../assets/images/neural/Sonya Lilienstein - (800px) - Richard Waine_Lancaster_PA_0079.jpg';
+import sonyaLiliensteinThumb from '../assets/images/neural/Sonya Lilienstein -  (500px sq) - Richard Waine_Lancaster_PA_0079.jpg';
+import ethanHaymovitzMain from '../assets/images/neural/Ethan Haymovitz - (800px) - Richard_Waine_Lancaster_PA_0135.jpg';
+import ethanHaymovitzThumb from '../assets/images/neural/Ethan Haymovitz - (500px sq) - Richard_Waine_Lancaster_PA_0135.jpg';
+
 const portfolioData = [
   {
-    image: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: idaGrandyMain,
+    thumbnail: idaGrandyThumb,
+    dataStreams: {
+      confidenceLevel: "98.7%",
+      authenticityIndex: "MAXIMUM",
+      impactProjection: "EXPONENTIAL"
+    },
     characteristics: [
-      { 
-        label: "MYSTERIOUS", 
-        facePoint: { top: '35%', left: '45%' },
-        labelPosition: { top: '15%', left: '75%' },
+      {
+        label: "APPROACHABLE",
+        facePoint: { top: '41%', left: '36%' },
+        labelPosition: { top: '60%', left: '70%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '60%', left: '60%' },
         visible: true
       },
-      { 
-        label: "COOL", 
-        facePoint: { top: '25%', left: '55%' },
-        labelPosition: { top: '5%', left: '85%' },
-        visible: true
-      },
-      { 
-        label: "EDGY", 
-        facePoint: { top: '50%', left: '40%' },
-        labelPosition: { top: '70%', left: '10%' },
+      {
+        label: "CONFIDENT",
+        facePoint: { top: '30%', left: '39%' },
+        labelPosition: { top: '15%', left: '65%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '15%', left: '60%' },
         visible: true
       }
     ]
   },
   {
-    image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: shreePatelMain,
+    thumbnail: shreePatelThumb,
+    dataStreams: {
+      confidenceLevel: "97.3%",
+      authenticityIndex: "ELEVATED",
+      impactProjection: "SUBSTANTIAL"
+    },
     characteristics: [
-      { 
-        label: "CONFIDENT", 
-        facePoint: { top: '30%', left: '50%' },
-        labelPosition: { top: '10%', left: '80%' },
+      {
+        label: "COMPETENT",
+        facePoint: { top: '30%', left: '60%' },
+        labelPosition: { top: '15%', left: '25%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '15%', left: '10%' },
         visible: true
       },
-      { 
-        label: "APPROACHABLE", 
-        facePoint: { top: '55%', left: '60%' },
-        labelPosition: { top: '60%', left: '75%' },
+      {
+        label: "TRUSTWORTHY",
+        facePoint: { top: '52%', left: '63%' },
+        labelPosition: { top: '60%', left: '10%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '60%', left: '10%' },
         visible: true
       }
     ]
   },
   {
-    image: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: sonyaLiliensteinMain,
+    thumbnail: sonyaLiliensteinThumb,
+    dataStreams: {
+      confidenceLevel: "96.4%",
+      authenticityIndex: "OPTIMAL",
+      impactProjection: "DYNAMIC"
+    },
     characteristics: [
-      { 
-        label: "PROFESSIONAL", 
-        facePoint: { top: '25%', left: '50%' },
-        labelPosition: { top: '5%', left: '75%' },
+      {
+        label: "ENGAGING",
+        facePoint: { top: '30%', left: '35%' },
+        labelPosition: { top: '15%', left: '60%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '15%', left: '60%' },
         visible: true
       },
-      { 
-        label: "TRUSTWORTHY", 
-        facePoint: { top: '40%', left: '55%' },
-        labelPosition: { top: '60%', left: '85%' },
-        visible: true
-      },
-      { 
-        label: "RELIABLE", 
-        facePoint: { top: '60%', left: '45%' },
-        labelPosition: { top: '85%', left: '10%' },
+      {
+        label: "WARM",
+        facePoint: { top: '45.5%', left: '33%' },
+        labelPosition: { top: '55%', left: '75%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '55%', left: '75%' },
         visible: true
       }
     ]
   },
   {
-    image: "https://images.pexels.com/photos/1680174/pexels-photo-1680174.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: ethanHaymovitzMain,
+    thumbnail: ethanHaymovitzThumb,
+    dataStreams: {
+      confidenceLevel: "95.8%",
+      authenticityIndex: "ENHANCED",
+      impactProjection: "PROGRESSIVE"
+    },
     characteristics: [
-      { 
-        label: "CREATIVE", 
-        facePoint: { top: '30%', left: '45%' },
-        labelPosition: { top: '10%', left: '15%' },
+      {
+        label: "THOUGHTFUL",
+        facePoint: { top: '30%', left: '60%' },
+        labelPosition: { top: '20%', left: '25%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '20%', left: '10%' },
         visible: true
       },
-      { 
-        label: "ARTISTIC", 
-        facePoint: { top: '50%', left: '60%' },
-        labelPosition: { top: '75%', left: '80%' },
-        visible: true
-      },
-      { 
-        label: "EXPRESSIVE", 
-        facePoint: { top: '40%', left: '35%' },
-        labelPosition: { top: '20%', left: '5%' },
+      {
+        label: "POISED",
+        facePoint: { top: '50%', left: '63%' },
+        labelPosition: { top: '55%', left: '10%' },
+        /* Mobile label position (below 768px) - adjust top/left as needed */
+        labelPositionMobile: { top: '55%', left: '10%' },
         visible: true
       }
     ]
@@ -92,105 +130,107 @@ const currentImageIndex = 0;
 const currentData = portfolioData[currentImageIndex];
 ---
 
-<section class="neural-section">
-  <div class="neural-content">
-    <div class="text-section">
-      <div class="neural-title">
-        <div class="title-line" data-delay="0">
-          <span class="neural-title-word word">NEURAL</span>
-        </div>
-        <div class="title-line" data-delay="100">
-          <span class="neural-title-word word">PORTRAIT</span>
-        </div>
-        <div class="title-line" data-delay="200">
-          <span class="neural-title-word word">SYNTHESIS</span>
-        </div>
-      </div>
-      
-      <div class="data-streams">
-        <div class="data-stream">
-          <span class="stream-label">CONFIDENCE LEVEL:</span>
-          <span class="stream-value">98.7%</span>
-        </div>
-        <div class="data-stream">
-          <span class="stream-label">AUTHENTICITY INDEX:</span>
-          <span class="stream-value">MAXIMUM</span>
-        </div>
-        <div class="data-stream">
-          <span class="stream-label">IMPACT PROJECTION:</span>
-          <span class="stream-value">EXPONENTIAL</span>
-        </div>
-      </div>
+<!-- Hidden data for JavaScript to access -->
+<script id="portfolio-data" type="application/json" set:html={JSON.stringify(portfolioData)} />
 
-      <div class="cta-matrix">
-        <button class="quantum-cta">
-          <span class="cta-text">INITIATE SESSION</span>
-        </button>
-      </div>
-    </div>
+<div class="neural-section">
+    <div class="neural-content">
+        <div class="text-section">
+          <div class="neural-title">
+            <div class="title-line" data-delay="0">
+              <span class="neural-title-word word">NEURAL</span>
+            </div>
+            <div class="title-line" data-delay="100">
+              <span class="neural-title-word word">PORTRAIT</span>
+            </div>
+            <div class="title-line" data-delay="200">
+              <span class="neural-title-word word">ANALYSIS</span>
+            </div>
+          </div>
+          
+          <div class="data-streams">
+            <div class="data-stream">
+              <span class="stream-label">CONFIDENCE LEVEL:</span>
+              <span class="stream-value" id="confidence-level">{currentData.dataStreams.confidenceLevel}</span>
+            </div>
+            <div class="data-stream">
+              <span class="stream-label">AUTHENTICITY INDEX:</span>
+              <span class="stream-value" id="authenticity-index">{currentData.dataStreams.authenticityIndex}</span>
+            </div>
+            <div class="data-stream">
+              <span class="stream-label">IMPACT PROJECTION:</span>
+              <span class="stream-value" id="impact-projection">{currentData.dataStreams.impactProjection}</span>
+            </div>
+          </div>
 
-    <div class="holographic-section">
-      <div class="holographic-frame">
-        <div class="holo-border"></div>
-        <div class="image-container">
-          <img 
-            src={currentData.image}
-            alt="Neural Portrait Analysis"
-            class="portrait-scan"
-            id="main-portrait"
-            loading="eager"
-            width="500"
-            height="500"
-          />
-          <div class="analysis-overlay">
-            <div class="data-points" id="data-points">
-              {currentData.characteristics.filter(characteristic => 
-                characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
-              ).map((characteristic) => (
-                <div>
-                  <div 
-                    class="face-point" 
-                    style={`top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left}`}
-                  >
-                    <div class="point-marker"></div>
-                  </div>
-                  <div 
-                    class="characteristic-label" 
-                    style={`top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}`}
-                  >
-                    <span class="point-label">{characteristic.label}</span>
-                  </div>
-                  <svg class="connection-line" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
-                    <line
-                      x1={characteristic.facePoint.left}
-                      y1={characteristic.facePoint.top}
-                      x2={characteristic.labelPosition.left}
-                      y2={characteristic.labelPosition.top}
-                      stroke="#00a8ff"
-                      stroke-width="1"
-                      opacity="0.6"
-                    />
-                  </svg>
+          <div class="cta-matrix">
+            <div class="button-wrapper">
+              <SecondaryButton text="INITIATE SESSION" url="/rates" />
+            </div>
+          </div>
+        </div>
+
+        <div class="holographic-section">
+          <div class="holographic-frame">
+          <Image 
+        src={macbookFrame} 
+        alt="Apple Macbook laptop computer" 
+        class="macbook-frame-image"
+        loading="eager"
+        width={1600}
+        height={919}
+      />
+      <div class="holo-border"></div>
+      <div class="image-container">
+              <Image
+                src={currentData.image}
+                alt="Neural Portrait Analysis"
+                class="portrait-scan"
+                id="main-portrait"
+                loading="eager"
+                width={800}
+                height={800}
+              />
+              <div class="analysis-overlay">
+                <div class="data-points" id="data-points">
+                  {/* Labels positioned via JS to support responsive labelPositionMobile */}
+                  {currentData.characteristics.filter(characteristic =>
+                    characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
+                  ).map((characteristic) => (
+                    <div>
+                      <div
+                        class="face-point"
+                        style={`position: absolute; top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left}`}
+                      >
+                        <div class="point-marker"></div>
+                      </div>
+                      <div
+                        class="characteristic-label"
+                        data-desktop-top={characteristic.labelPosition.top}
+                        data-desktop-left={characteristic.labelPosition.left}
+                        data-mobile-top={characteristic.labelPositionMobile?.top || characteristic.labelPosition.top}
+                        data-mobile-left={characteristic.labelPositionMobile?.left || characteristic.labelPosition.left}
+                        style={`position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left}`}
+                      >
+                        <span class="point-label">{characteristic.label}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
+          </div>
+
+          <div class="portfolio-matrix">
+            {portfolioData.map((data, index) => (
+              <div class="matrix-cell" data-index={index.toString()}>
+                <Image src={data.thumbnail} alt={`Neural scan ${index + 1}`} loading="lazy" width={500} height={500} />
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-
-      <div class="portfolio-matrix">
-        {portfolioData.map((data, index) => (
-          <div class="matrix-cell" data-index={index.toString()}>
-            <img src={data.image} alt={`Neural scan ${index + 1}`} loading="lazy" width="300" height="300" />
-            <div class="cell-overlay">
-              <span class="cell-id">ID_{String(index + 1).padStart(3, '0')}</span>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
-  </div>
-</section>
+</div>
 
 <script>
   function initNeuralAnimation() {
@@ -234,95 +274,11 @@ const currentData = portfolioData[currentImageIndex];
   document.addEventListener('DOMContentLoaded', initNeuralAnimation);
   document.addEventListener('astro:page-load', initNeuralAnimation);
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const portfolioData = [
-      {
-        image: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=800",
-        characteristics: [
-          { 
-            label: "MYSTERIOUS", 
-            facePoint: { top: '35%', left: '45%' },
-            labelPosition: { top: '15%', left: '75%' },
-            visible: true
-          },
-          { 
-            label: "COOL", 
-            facePoint: { top: '25%', left: '55%' },
-            labelPosition: { top: '5%', left: '85%' },
-            visible: true
-          },
-          { 
-            label: "EDGY", 
-            facePoint: { top: '50%', left: '40%' },
-            labelPosition: { top: '70%', left: '10%' },
-            visible: true
-          }
-        ]
-      },
-      {
-        image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800",
-        characteristics: [
-          { 
-            label: "CONFIDENT", 
-            facePoint: { top: '30%', left: '50%' },
-            labelPosition: { top: '10%', left: '80%' },
-            visible: true
-          },
-          { 
-            label: "APPROACHABLE", 
-            facePoint: { top: '55%', left: '60%' },
-            labelPosition: { top: '60%', left: '75%' },
-            visible: true
-          }
-        ]
-      },
-      {
-        image: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800",
-        characteristics: [
-          { 
-            label: "PROFESSIONAL", 
-            facePoint: { top: '25%', left: '50%' },
-            labelPosition: { top: '5%', left: '75%' },
-            visible: true
-          },
-          { 
-            label: "TRUSTWORTHY", 
-            facePoint: { top: '40%', left: '55%' },
-            labelPosition: { top: '60%', left: '85%' },
-            visible: true
-          },
-          { 
-            label: "RELIABLE", 
-            facePoint: { top: '60%', left: '45%' },
-            labelPosition: { top: '85%', left: '10%' },
-            visible: true
-          }
-        ]
-      },
-      {
-        image: "https://images.pexels.com/photos/1680174/pexels-photo-1680174.jpeg?auto=compress&cs=tinysrgb&w=800",
-        characteristics: [
-          { 
-            label: "CREATIVE", 
-            facePoint: { top: '30%', left: '45%' },
-            labelPosition: { top: '10%', left: '15%' },
-            visible: true
-          },
-          { 
-            label: "ARTISTIC", 
-            facePoint: { top: '50%', left: '60%' },
-            labelPosition: { top: '75%', left: '80%' },
-            visible: true
-          },
-          { 
-            label: "EXPRESSIVE", 
-            facePoint: { top: '40%', left: '35%' },
-            labelPosition: { top: '20%', left: '5%' },
-            visible: true
-          }
-        ]
-      }
-    ];
+  function initNeuralPortrait() {
+    // Use the portfolioData from Astro instead of duplicating it
+    const dataElement = document.getElementById('portfolio-data');
+    if (!dataElement || !dataElement.textContent) return;
+    const portfolioData = JSON.parse(dataElement.textContent);
 
     const matrixCells = document.querySelectorAll('.matrix-cell');
     const portraitScan = document.querySelector('#main-portrait');
@@ -335,124 +291,367 @@ const currentData = portfolioData[currentImageIndex];
         updatePortrait(index);
       });
     });
-    
+
     function updatePortrait(index: any) {
       const currentData = portfolioData[index];
-      
+
       // Update image
       if (portraitScan && portraitScan instanceof HTMLImageElement) {
-        portraitScan.src = currentData.image;
+        portraitScan.src = currentData.image.src;
       }
-      
+
+      // Update data streams
+      const confidenceLevel = document.getElementById('confidence-level');
+      const authenticityIndex = document.getElementById('authenticity-index');
+      const impactProjection = document.getElementById('impact-projection');
+
+      if (confidenceLevel) confidenceLevel.textContent = currentData.dataStreams.confidenceLevel;
+      if (authenticityIndex) authenticityIndex.textContent = currentData.dataStreams.authenticityIndex;
+      if (impactProjection) impactProjection.textContent = currentData.dataStreams.impactProjection;
+
       // Update data points
       if (dataPoints) {
+        // Get the Astro scoped CSS attribute from the dataPoints element
+        const astroScopeAttr = Array.from(dataPoints.attributes).find(attr =>
+          attr.name.startsWith('data-astro-cid-')
+        );
+        const scopeAttrName = astroScopeAttr ? astroScopeAttr.name : null;
+
         dataPoints.innerHTML = '';
-        
-        currentData.characteristics.filter(characteristic => 
+
+        currentData.characteristics.filter((characteristic: any) =>
           characteristic && characteristic.facePoint && characteristic.labelPosition && characteristic.visible !== false
-        ).forEach((characteristic) => {
+        ).forEach((characteristic: any) => {
           // Create wrapper div for each characteristic (matching initial HTML structure)
           const characteristicWrapper = document.createElement('div');
-          
-          // Create face point
+
+          // Create face point with dot
           const facePoint = document.createElement('div');
           facePoint.className = 'face-point';
-          facePoint.style.cssText = `position: absolute; top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left};`;
-          
+          facePoint.setAttribute('style', `position: absolute; top: ${characteristic.facePoint.top}; left: ${characteristic.facePoint.left};`);
+          if (scopeAttrName) facePoint.setAttribute(scopeAttrName, '');
+
           const pointMarker = document.createElement('div');
           pointMarker.className = 'point-marker';
+          if (scopeAttrName) pointMarker.setAttribute(scopeAttrName, '');
           facePoint.appendChild(pointMarker);
-          
-          // Create characteristic label
+
+          // Create characteristic label with responsive positioning
           const characteristicLabel = document.createElement('div');
           characteristicLabel.className = 'characteristic-label';
-          characteristicLabel.style.cssText = `position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left};`;
-          
+
+          // Determine if mobile viewport (below 768px)
+          const isMobile = window.innerWidth < 768;
+          const mobileTop = characteristic.labelPositionMobile?.top || characteristic.labelPosition.top;
+          const mobileLeft = characteristic.labelPositionMobile?.left || characteristic.labelPosition.left;
+          const useTop = isMobile ? mobileTop : characteristic.labelPosition.top;
+          const useLeft = isMobile ? mobileLeft : characteristic.labelPosition.left;
+
+          /* DEPRECATED: Original non-responsive positioning - December 2025 */
+          /* characteristicLabel.setAttribute('style', `position: absolute; top: ${characteristic.labelPosition.top}; left: ${characteristic.labelPosition.left};`); */
+
+          characteristicLabel.setAttribute('style', `position: absolute; top: ${useTop}; left: ${useLeft};`);
+
+          // Add data attributes for resize handling
+          characteristicLabel.dataset.desktopTop = characteristic.labelPosition.top;
+          characteristicLabel.dataset.desktopLeft = characteristic.labelPosition.left;
+          characteristicLabel.dataset.mobileTop = mobileTop;
+          characteristicLabel.dataset.mobileLeft = mobileLeft;
+
+          if (scopeAttrName) characteristicLabel.setAttribute(scopeAttrName, '');
+
           const pointLabel = document.createElement('span');
           pointLabel.className = 'point-label';
           pointLabel.textContent = characteristic.label;
+          if (scopeAttrName) pointLabel.setAttribute(scopeAttrName, '');
           characteristicLabel.appendChild(pointLabel);
-          
+
+          // Append elements to DOM
+          characteristicWrapper.appendChild(facePoint);
+          characteristicWrapper.appendChild(characteristicLabel);
+          dataPoints.appendChild(characteristicWrapper);
+        });
+
+        // Add lines after a brief delay to ensure elements are rendered
+        setTimeout(() => {
+          const allWrappers = dataPoints.querySelectorAll(':scope > div');
+          allWrappers.forEach((wrapper) => {
+            const facePoint = wrapper.querySelector('.face-point') as HTMLElement;
+            const label = wrapper.querySelector('.characteristic-label') as HTMLElement;
+
+            if (!facePoint || !label) return;
+
+            const containerRect = dataPoints.getBoundingClientRect();
+            const labelRect = label.getBoundingClientRect();
+            const facePointStyle = facePoint.style;
+
+            // Calculate line start point (center of dot)
+            const faceLeftStr = facePointStyle.left || '';
+            const faceTopStr = facePointStyle.top || '';
+            const faceLeft = parseFloat(faceLeftStr.replace('%', ''));
+            const faceTop = parseFloat(faceTopStr.replace('%', ''));
+
+            if (isNaN(faceLeft) || isNaN(faceTop)) return;
+
+            const x1 = (faceLeft * containerRect.width / 100) + 4;
+            const y1 = (faceTop * containerRect.height / 100) + 4;
+
+            // Calculate line end point (bottom-center of label)
+            const labelLeft = labelRect.left - containerRect.left;
+            const labelTop = labelRect.top - containerRect.top;
+            const x2 = labelLeft + (labelRect.width / 2);
+            const y2 = labelTop + labelRect.height;
+
+            // Create SVG line
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('class', 'connection-line');
+            svg.setAttribute('style', 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;');
+
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', x1.toString());
+            line.setAttribute('y1', y1.toString());
+            line.setAttribute('x2', x2.toString());
+            line.setAttribute('y2', y2.toString());
+            line.setAttribute('stroke', 'var(--accent)');
+            line.setAttribute('stroke-width', '1');
+            line.setAttribute('opacity', '0.6');
+
+            svg.appendChild(line);
+            wrapper.appendChild(svg);
+          });
+        }, 50);
+      }
+    }
+
+    // Draw initial lines for the first portrait without clearing existing HTML
+    if (dataPoints) {
+      setTimeout(() => {
+        const containerRect = dataPoints.getBoundingClientRect();
+
+        // Ensure container has dimensions before drawing lines
+        if (containerRect.width === 0 || containerRect.height === 0) {
+          return;
+        }
+
+        const existingLabels = dataPoints.querySelectorAll('.characteristic-label');
+
+        existingLabels.forEach((label) => {
+          const labelRect = label.getBoundingClientRect();
+          const wrapper = label.parentElement;
+          const facePoint = wrapper?.querySelector('.face-point') as HTMLElement;
+
+          if (!facePoint) return;
+
+          const facePointStyle = facePoint.style;
+
+          // Calculate line endpoints
+          const faceLeftStr = facePointStyle.left || '';
+          const faceTopStr = facePointStyle.top || '';
+          const faceLeft = parseFloat(faceLeftStr.replace('%', ''));
+          const faceTop = parseFloat(faceTopStr.replace('%', ''));
+
+          if (isNaN(faceLeft) || isNaN(faceTop)) return;
+
+          const x1 = (faceLeft * containerRect.width / 100) + 4;
+          const y1 = (faceTop * containerRect.height / 100) + 4;
+
+          // Calculate bottom-center of label
+          const labelLeft = labelRect.left - containerRect.left;
+          const labelTop = labelRect.top - containerRect.top;
+          const x2 = labelLeft + (labelRect.width / 2);
+          const y2 = labelTop + labelRect.height;
+
           // Create SVG line
           const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
           svg.setAttribute('class', 'connection-line');
           svg.setAttribute('style', 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;');
-          
-          // Convert percentage to pixel values for SVG coordinates
-          const containerRect = dataPoints.getBoundingClientRect();
-          const x1 = parseFloat(characteristic.facePoint.left) * containerRect.width / 100;
-          const y1 = parseFloat(characteristic.facePoint.top) * containerRect.height / 100;
-          const x2 = parseFloat(characteristic.labelPosition.left) * containerRect.width / 100;
-          const y2 = parseFloat(characteristic.labelPosition.top) * containerRect.height / 100;
-          
+
           const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line.setAttribute('x1', x1.toString());
           line.setAttribute('y1', y1.toString());
           line.setAttribute('x2', x2.toString());
           line.setAttribute('y2', y2.toString());
-          line.setAttribute('stroke', '#00a8ff');
+          line.setAttribute('stroke', 'var(--accent)');
           line.setAttribute('stroke-width', '1');
           line.setAttribute('opacity', '0.6');
-          
+
           svg.appendChild(line);
-          
-          // Append all elements to wrapper
-          characteristicWrapper.appendChild(facePoint);
-          characteristicWrapper.appendChild(characteristicLabel);
-          characteristicWrapper.appendChild(svg);
-          
-          // Add wrapper to data points container
-          dataPoints.appendChild(characteristicWrapper);
+          wrapper?.appendChild(svg);
         });
-      }
+      }, 250);
     }
-  });
+  }
+
+  // Function to reposition labels based on viewport width
+  function repositionLabels() {
+    const isMobile = window.innerWidth < 768;
+    const labels = document.querySelectorAll('.characteristic-label');
+
+    labels.forEach((label) => {
+      const el = label as HTMLElement;
+      const desktopTop = el.dataset.desktopTop;
+      const desktopLeft = el.dataset.desktopLeft;
+      const mobileTop = el.dataset.mobileTop;
+      const mobileLeft = el.dataset.mobileLeft;
+
+      if (isMobile && mobileTop && mobileLeft) {
+        el.style.top = mobileTop;
+        el.style.left = mobileLeft;
+      } else if (desktopTop && desktopLeft) {
+        el.style.top = desktopTop;
+        el.style.left = desktopLeft;
+      }
+    });
+
+    // Redraw lines after repositioning
+    redrawLines();
+  }
+
+  // Function to redraw SVG connection lines
+  function redrawLines() {
+    const dataPoints = document.querySelector('#data-points');
+    if (!dataPoints) return;
+
+    const containerRect = dataPoints.getBoundingClientRect();
+    if (containerRect.width === 0 || containerRect.height === 0) return;
+
+    // Remove existing SVG lines
+    const existingLines = dataPoints.querySelectorAll('.connection-line');
+    existingLines.forEach(line => line.remove());
+
+    // Redraw lines for each label
+    const wrappers = dataPoints.querySelectorAll(':scope > div');
+    wrappers.forEach((wrapper) => {
+      const facePoint = wrapper.querySelector('.face-point') as HTMLElement;
+      const label = wrapper.querySelector('.characteristic-label') as HTMLElement;
+
+      if (!facePoint || !label) return;
+
+      const labelRect = label.getBoundingClientRect();
+      const facePointStyle = facePoint.style;
+
+      const faceLeftStr = facePointStyle.left || '';
+      const faceTopStr = facePointStyle.top || '';
+      const faceLeft = parseFloat(faceLeftStr.replace('%', ''));
+      const faceTop = parseFloat(faceTopStr.replace('%', ''));
+
+      if (isNaN(faceLeft) || isNaN(faceTop)) return;
+
+      const x1 = (faceLeft * containerRect.width / 100) + 4;
+      const y1 = (faceTop * containerRect.height / 100) + 4;
+
+      const labelLeft = labelRect.left - containerRect.left;
+      const labelTop = labelRect.top - containerRect.top;
+      const x2 = labelLeft + (labelRect.width / 2);
+      const y2 = labelTop + labelRect.height;
+
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('class', 'connection-line');
+      svg.setAttribute('style', 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;');
+
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x1.toString());
+      line.setAttribute('y1', y1.toString());
+      line.setAttribute('x2', x2.toString());
+      line.setAttribute('y2', y2.toString());
+      line.setAttribute('stroke', 'var(--accent)');
+      line.setAttribute('stroke-width', '1');
+      line.setAttribute('opacity', '0.6');
+
+      svg.appendChild(line);
+      wrapper.appendChild(svg);
+    });
+  }
+
+  // Debounce function to prevent excessive recalculations
+  function debounce(func: Function, wait: number) {
+    let timeout: number;
+    return function executedFunction(...args: any[]) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = window.setTimeout(later, wait);
+    };
+  }
+
+  // Debounced resize handler
+  const handleResize = debounce(() => {
+    repositionLabels();
+  }, 150);
+
+  // Initialize resize listener
+  window.addEventListener('resize', handleResize);
+
+  // Initial positioning on load
+  setTimeout(() => {
+    repositionLabels();
+  }, 300);
+
+  // Initialize on page load and after view transitions
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNeuralPortrait);
+  } else {
+    initNeuralPortrait();
+  }
+  document.addEventListener('astro:page-load', initNeuralPortrait);
 </script>
 
 <style>
 .neural-section {
-  display: flex;
+  display:grid;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 2rem;
-  overflow: hidden;
-  /* background: var(--drkbg); */
+  padding:0 var(--size-3);
+  overflow-x: hidden;
+  min-height: 100vh;
   color: var(--ltclr);
   font-family: var(--ff-primary);
+  width:100%;
+
 }
 
+
+
+
 .neural-content {
-  max-width: 1400px;
+  max-width: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8rem;
+  grid-template-columns: 1fr;
+  gap: var(--size-8);
   align-items: center;
+  place-self: center;
   z-index: 2;
   position: relative;
+  text-align: center;
+  padding:0;
 }
 
 .text-section {
   z-index: 3;
   position: relative;
+  order:2;
 }
 
 .neural-title {
   font-family: var(--ff-primary);
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 900;
-  line-height: 0.85;
-  margin-bottom: 2rem;
+  font-size:var(--fs-clamp-display);
+  font-weight: var(--fw-x-bold);
+  line-height:  var(--line-height-dramatic);
+  margin-bottom: var(--size-5);
   perspective: 1000px;
-  text-align: left;
+  text-align: center;
   text-transform: none;
   color: var(--ltclr);
 }
 
 .title-line {
   overflow: hidden;
-  margin: 10px 0;
+  margin: var(--size-225) 0;
   transform-style: preserve-3d;
 }
 
@@ -466,8 +665,8 @@ const currentData = portfolioData[currentImageIndex];
   transform: translateY(100%) rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  font-weight: 900;
+  text-shadow: 0 10px 30px var(--shadow-clr-deep);
+  font-weight: var(--fw-x-bold);
   font-size: inherit;
 }
 
@@ -478,112 +677,76 @@ const currentData = portfolioData[currentImageIndex];
 .data-streams {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  font-family: 'Space Grotesk', monospace;
+  gap: var(--size-3);
+  align-items: center;
+  margin-bottom: var(--size-8);
+  font-family: var(--ff-primary);
 }
 
 .data-stream {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
+  gap: var(--size-1);
+  padding: var(--size-2) var(--size-250);
+  flex-direction: column;
+  max-width: min(400px, 90vw);
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--highlight-clr-soft);
   backdrop-filter: blur(10px);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all var(--transition-slow) cubic-bezier(0.23, 1, 0.32, 1);
+  clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
 }
 
 .data-stream:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.5);
   transform: translateX(10px);
 }
 
 .stream-label {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9rem;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--fs-325);
+  font-weight: var(--fw-normal);
 }
 
 .stream-value {
-  color: #00a8ff;
-  font-weight: 700;
-  font-size: 1rem;
-  text-shadow: 0 0 10px rgba(0, 168, 255, 0.5);
+  color: var(--accent);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-350);
 }
 
 .cta-matrix {
   position: relative;
-}
 
-.quantum-cta {
-  position: relative;
-  padding: 1.25rem 3rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid #00a8ff;
-  border-radius: 0;
-  color: #00a8ff;
-  font-family: 'Space Grotesk', monospace;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.1rem;
-  cursor: pointer;
-  overflow: hidden;
-  text-transform: uppercase;
-  clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-
-  
-}
-
-.quantum-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 168, 255, 0.2), transparent);
-  transition: left 0.6s;
-}
-
-.quantum-cta:hover::before {
-  left: 100%;
-}
-
-.quantum-cta:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 
-    0 35px 80px rgba(0, 168, 255, 0.7),
-    0 20px 50px rgba(0, 168, 255, 0.5),
-    0 0 120px rgba(0, 168, 255, 0.4),
-    inset 0 2px 4px rgba(255, 255, 255, 0.3),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.1);
-  background: rgba(0, 168, 255, 0.1);
-}
-
-.cta-text {
-  position: relative;
-  z-index: 2;
 }
 
 .holographic-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: var(--size-7);
+  
 }
 
 .holographic-frame {
   position: relative;
-  width: 800px;
-  height: 500px;
-  max-width: 100%;
-  background: url('/src/assets/macbook_PNG36.png') no-repeat center center;
-  background-size: contain;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+  width: 95%;
+  max-width: 800px;
+  aspect-ratio: 1600 / 919;
+  filter: drop-shadow(10px 20px 30px rgba(0,0,0,.75));
+}
+
+.macbook-frame-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .holo-border {
@@ -592,17 +755,18 @@ const currentData = portfolioData[currentImageIndex];
 
 .image-container {
   position: absolute;
-  top: 12.25%;
-  left: 12.32%;
+  top: 9%;
+  left: 12.3%;
   width: 75.25%;
-  height: 73.5%;
+  height: 80.5%;
   border-radius: 0;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.9);
   object-fit:cover;
-
   
 }
+
+
 
 .portrait-scan {
   width: 100%;
@@ -613,11 +777,9 @@ const currentData = portfolioData[currentImageIndex];
 
 .analysis-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset:0;
   pointer-events: none;
+  
 }
 
 .data-points {
@@ -631,6 +793,7 @@ const currentData = portfolioData[currentImageIndex];
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .characteristic-label {
@@ -638,14 +801,16 @@ const currentData = portfolioData[currentImageIndex];
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .point-marker {
-  width: 8px;
-  height: 8px;
-  background: #00a8ff;
+
+  width: var(--size-2);
+  height: var(--size-2);
+  background: var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 168, 255, 0.8);
+  box-shadow: 0 0 10px rgba(3, 169, 244, 0.8);
   animation: pulse 2s infinite;
 }
 
@@ -656,192 +821,183 @@ const currentData = portfolioData[currentImageIndex];
   }
   50% { 
     transform: scale(1.2);
-    opacity: 0.7;
   }
 }
 
 :global(.point-label) {
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.75rem;
-  color: #00a8ff;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-275);
+  color: var(--accent);
   background: rgba(0, 0, 0, 0.9);
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--size-1);
+  border: 1px solid var(--highlight-clr-soft);
   white-space: nowrap;
-  font-weight: 600;
+  font-weight: var(--fw-semi-bold);
   letter-spacing: 0.05rem;
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px var(--shadow-clr-medium);
 }
 
 .connection-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   z-index: 1;
 }
 
 .connection-line line {
-  filter: drop-shadow(0 0 3px rgba(0, 168, 255, 0.5));
+  filter: drop-shadow(0 0 3px var(--glow-clr-strong));
 }
 
 .portfolio-matrix {
   display: flex;
-  gap: 1rem;
+  gap: var(--size-3);
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .matrix-cell {
+--_matrix-size:60px;
+
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: var(--_matrix-size);
+  height: var(--_matrix-size);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
+  border-radius:var(--size-2);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
+  transition: .3s ease-in-out all;
+
 }
 
 .matrix-cell:hover {
   transform: scale(1.1);
-  border-color: rgba(0, 168, 255, 0.6);
-  box-shadow: 0 5px 20px rgba(0, 168, 255, 0.3);
+  border-color: rgba(3, 169, 244, 0.6);
+  box-shadow: 0 5px 20px var(--glow-clr-medium);
 }
 
 .matrix-cell img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(0.3) contrast(1.1);
+  /* filter: grayscale(0.3) contrast(1.0); */
   transition: filter 0.3s ease;
 }
 
 .matrix-cell:hover img {
-  filter: grayscale(0) contrast(1.2);
+  filter: grayscale(0) contrast(1.0);
 }
 
-.cell-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-  padding: 0.5rem 0.25rem 0.25rem;
-}
 
-.cell-id {
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.6rem;
-  color: #00a8ff;
-  font-weight: 600;
-}
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .neural-content {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-    text-align: center;
-    padding: 0 1rem;
-  }
-  
-  .holographic-frame {
-    width: min(400px, 90vw);
-    height: min(320px, 72vw);
-  }
-  
-  .data-streams {
-    align-items: center;
-  }
-  
-  .data-stream {
-    max-width: min(400px, 90vw);
-    width: 100%;
-  }
-}
+/* Mobile-First Responsive Design */
 
-@media (max-width: 768px) {
+/* ==========================================
+   TABLET - min-width: 30em (480px)
+   ========================================== */
+@media (min-width: 30em) {
   .neural-section {
-    padding: 6rem 1rem 2rem;
-    min-height: 100vh;
-    overflow-x: hidden;
+    padding: 6rem var(--size-3) var(--size-7);
   }
+
+
+
+  .matrix-cell {
+  --_matrix-size:60px;
+
+    width: var(--_matrix-size);
+    height: var(--_matrix-size);
+  }
+
+  .data-stream {
+    padding: var(--size-2) var(--size-3);
+  }
+
+  :global(.point-label) {
+    font-size: var(--fs-300);
+    padding: var(--size-2) var(--size-3);
+  }
+}
+
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+
+@media (min-width: 48em) {
+  .holographic-frame {
+    width:100%;
   
+  }
+
+  .matrix-cell {
+  --_matrix-size:80px;
+
+    width: var(--_matrix-size);
+    height: var(--_matrix-size);
+  }
+
+  .data-stream {
+    flex-direction: row;
+    gap: var(--size-3);
+    padding: var(--size-250) var(--size-5);
+    text-align: left;
+  }
+
+  .stream-label {
+    font-size: var(--fs-350);
+  }
+
+  .stream-value {
+    font-size: var(--fs-400);
+  }
+}
+
+
+
+/* ==========================================
+   DESKTOP - min-width: 64em (1024px)
+   ========================================== */
+@media (min-width: 64em) {
+  .neural-section {
+    padding: var(--size-7);
+    min-height: auto;
+    overflow-x: visible;
+ 
+  }
+
+  .neural-section .text-section{
+   display:grid;
+   justify-content: center;
+  }
+
   .neural-content {
-    gap: 3rem;
-    max-width: 100%;
+  
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
     padding: 0;
   }
-  
-  .neural-title {
-    font-size: clamp(2rem, 8vw, 3.5rem);
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .holographic-frame {
-    width: min(350px, 85vw);
-    height: min(280px, 68vw);
-  }
-  
-  .matrix-cell {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .quantum-cta {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .data-stream {
-    padding: 0.5rem 1rem;
-    flex-direction: column;
-    gap: 0.25rem;
-    text-align: center;
-  }
-  
-  .stream-label {
-    font-size: 0.8rem;
-  }
-  
-  .stream-value {
-    font-size: 0.9rem;
-  }
-  
-  .point-label {
-    font-size: 0.6rem;
-    padding: 0.3rem 0.6rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .neural-section {
-    padding: 5rem 0.5rem 2rem;
-  }
-  
   .neural-title {
-    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    text-align: left;
+    margin-bottom: var(--size-7);
   }
-  
-  .holographic-frame {
-    width: min(300px, 90vw);
-    height: min(240px, 72vw);
+
+
+
+
+  .data-streams {
+    align-items: flex-start;
   }
-  
-  .matrix-cell {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .quantum-cta {
-    padding: 0.875rem 1.5rem;
-    font-size: 0.9rem;
-  }
-  
+
   .data-stream {
-    padding: 0.5rem 0.75rem;
+    max-width: none;
+    width: auto;
+    text-align: left;
   }
 }
 </style>

@@ -1,24 +1,25 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
+import PageTitle from '../components/PageTitle.astro';
 import { getCollection } from 'astro:content';
 
 const title = 'Richard Waine Photography Blog';
 const h1 = "Blog"
 
-const posts = await getCollection('blog')
+const posts = (await getCollection('blog')).sort((a, b) => {
+  const dateA = new Date(a.data.publishDate);
+  const dateB = new Date(b.data.publishDate);
+  return dateB.getTime() - dateA.getTime(); // Most recent first
+});
 
 
 ---
 
 
-<MainLayout title={title}>
- 
+<MainLayout title = "Headshot Photography Information and Thoughts" description="Headshot Photography rants and raves. Insights and information for your professional headshot photography needs, marketing, branding, and social media use.">
 
-
-
-
-<h1>{h1}</h1>
+<PageTitle title={h1} />
 
 
 
@@ -167,10 +168,9 @@ if (toggle && content) toggle.onclick = () => {
 
 <style>
 
-
-
 :root {
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --pagetitle-h1-margin: 0;
+  --shadow: 0 8px 24px var(--shadow-clr-subtle);
 }
 
 /* Blog-specific styling */
@@ -178,7 +178,6 @@ body {
   font-family: var(--ff-primary);
   background-color: var(--ltclr);
   color: var(--blkclr);
-  /* line-height: 1.5; */
   font-weight: var(--fw-normal);
 }
 
@@ -207,10 +206,6 @@ margin-block: var(--size-3);
 
 }
 
-h1{
-    font-size:var(--fs-800);
-     
-}
 
 h2 {
  
@@ -220,37 +215,38 @@ h2 {
 
 
 .blog-container {
-  width: min(calc(100% - 2em), 100%);
-  margin: 0 auto;
-  /* padding: 0 2em; */
+  width:calc(100% - var(--size-7));
+  padding: 0 var(--size-5);
+  margin-inline:auto;
+
 }
 
 .main-content {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--size-7);
-  /* gap:6em; */
-  padding: var(--size-7) 0;
+  margin-bottom:var(--size-9);
 }
 
 .filter-section {
-  position: sticky;
-  /* top: 16px; */
-  top: 200px;
+  position:relative;
+  top:auto;
   height: fit-content;
-  padding:  var(--size-7);
+  padding:  var(--size-3);
   background: var(--ltclr);
-  border: 1px solid #e5e5e5;
-  box-shadow: var(--shadow);
-  
+  border: none;
+  box-shadow: none;
+  border-radius: var(--size-2);
+  margin-bottom:var(--size-4);
   
 }
 
 .filter-tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: var(--size-5) 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--size-2);
+  margin: 0 0 var(--size-5) 0;
   font-size:var(--fs-400);
   
 }
@@ -311,7 +307,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  /* padding-bottom:var(--size-3); */
     margin-bottom:var(--size-3);
     border-bottom: 1px solid #e5e5e5; /* Separator for mobile header */
 
@@ -324,12 +319,12 @@ h2 {
     background: var(--blkclr);
     color: var(--ltclr);
     border: none;
-    padding: 10px 12px;
+    padding: 10px 12px; 
     margin-bottom:var(--size-3);
     font-size:var(--fs-350);
     cursor: pointer;
     align-items: center;
-    gap: 8px;
+    gap: var(--size-2);
     transition: background-color 0.2s ease, transform 0.3s ease;
 }
 
@@ -348,70 +343,14 @@ h2 {
 
 /* Filter Content Wrapper - hidden by default (mobile) */
 .filter-content {
-    max-height: 0; /* Hidden by default */
-    overflow: hidden; /* Hide overflowing content */
+    max-height: 0; 
+    overflow: hidden; 
     padding-block:0;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .filter-content.open {
-    max-height: 1000px; /* Large enough to show all content */
-}
-
-/* Mobile-first adjustments to existing filter-section */
-@media (max-width: 767px) {
-    .filter-section {
-        position: relative; /* Not sticky on mobile */
-        top: auto;
-        padding:var(--size-3); /* Reduced padding for mobile */
-        border: none; /* No border when collapsed */
-        box-shadow: none; /* No shadow when collapsed */
-        border-radius: 8px;
-        margin-bottom:var(--size-4);
-
-        
-    }
-    
-    .filter-tabs {
-        display: grid; /* Grid for mobile 2-column layout */
-        grid-template-columns: 1fr 1fr; /* Two columns for mobile buttons */
-        gap: 8px;
-        margin: 0 0 var(--size-5) 0;
-    }
-}
-
-/* Desktop styles - hide toggle and ensure content is visible */
-@media (min-width: 768px) {
-    .filter-toggle-btn {
-        display: none;
-    }
-    
-    .filter-header {
-        border-bottom: none;
-        padding-bottom: 0;
-        margin-bottom: var(--size-3);
-
-        
-    }
-    
-    .filter-content {
-        max-height: none;
-        overflow: visible;
-    }
-    
-    .filter-tabs {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-       margin:var(--size-5) 0;
-
-      
-    }
-
-    .blog-container {
-        width: 80%;
-        margin: auto;
-    }
+    max-height: 1000px; 
 }
 
 
@@ -421,28 +360,59 @@ h2 {
   gap: var(--size-5);
 }
 
-
-@media (min-width: 768px) {
-  .main-content {
-    grid-template-columns: 280px 1fr;
-    
-  }}
-
-
-
-@media (min-width: 640px) {
-  .blog-container {
-     padding:0 var(--size-5);
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+@media (min-width: 48em) {
+  .filter-section {
+    position: sticky;
+    top: 200px;
+    padding: var(--size-7);
+    border: 1px solid #e5e5e5;
+    box-shadow: var(--shadow);
+    border-radius: 0;
+    margin-bottom: 0;
   }
 
-  .blog-posts {
-    grid-template-columns: repeat(1, 1fr);
+  .filter-toggle-btn {
+    display: none;
+  }
+
+  .filter-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: var(--size-3);
+  }
+
+  .filter-content {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .filter-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-2);
+    margin:var(--size-5) 0;
+  }
+
+  .blog-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  .main-content {
+    grid-template-columns: 280px 1fr;
   }
 }
 
-@media (min-width: 1024px) {
+/* ==========================================
+   DESKTOP - min-width: 64em (1024px)
+   ========================================== */
+@media (min-width: 64em) {
   .blog-container {
-    padding:0 var(--size-7);
+    margin-bottom: var(--size-9);
+    padding-bottom:var(--size-7);
   }
 
   .blog-posts {

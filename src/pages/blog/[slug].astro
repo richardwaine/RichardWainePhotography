@@ -2,21 +2,44 @@
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getCollection } from 'astro:content';
 
+// OLD CODE - COMMENTED OUT FOR BACKUP
+// export async function getStaticPaths() {
+//   const posts = await getCollection('blog');
+//   return posts.map((post) => ({
+//     params: { slug: post.slug },
+//     props: { post },
+//   }));
+// }
+// const { post } = Astro.props;
+// const { Content } = await post.render();
+
+// NEW CODE - ADDS PREV/NEXT POST NAVIGATION
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.map((post) => ({
+  const allPosts = (await getCollection('blog')).sort((a, b) => {
+    const dateA = new Date(a.data.publishDate);
+    const dateB = new Date(b.data.publishDate);
+    return dateB.getTime() - dateA.getTime(); // Most recent first
+  });
+
+  return allPosts.map((post, index) => ({
     params: { slug: post.slug },
-    props: { post },
+    props: {
+      post,
+      prevPost: index > 0 ? allPosts[index - 1] : null,
+      nextPost: index < allPosts.length - 1 ? allPosts[index + 1] : null,
+    },
   }));
 }
 
-const { post } = Astro.props;
+const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await post.render();
 ---
 
 <BlogLayout
   title={post.data.blogTitle}
   post={post}
+  prevPost={prevPost}
+  nextPost={nextPost}
 >
   <Content />
 </BlogLayout>

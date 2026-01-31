@@ -2,18 +2,23 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import ZoomPopOut from '../components/ZoomPopOut.astro'
 import RatesCard from '../components/RatesCard.astro'
+import PageTitle from '../components/PageTitle.astro';
 let h1 = 'Headshot Rates';
+
+
+
 ---
 
-<MainLayout title= "Headshot Rates">
+<MainLayout title = "Headshot Session Rates" description="These are my rates for the time, coaching, and direction in my Lancaster,PA headshot studio.  You can schedule your session from this page.">
+
+<PageTitle title={h1} />
 
 <main>
 
-    
-<h1>{h1}</h1> 
-<ZoomPopOut />
+<!-- <ZoomPopOut /> -->
 
 <RatesCard >/
+
 
 </main>
 
@@ -22,8 +27,10 @@ let h1 = 'Headshot Rates';
 
 
 <style>
-
-    h1{
-        font-size:var(--fs-800);
+    :root{
+/* --pagetitle-h1-margin:0; */
     }
+
+
+
 </style>

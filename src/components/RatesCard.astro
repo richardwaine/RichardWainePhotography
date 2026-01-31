@@ -1,30 +1,58 @@
 ---
+import PrimaryButton from './PrimaryButton.astro';
+import SecondaryButton from './SecondaryButton.astro';
+
+
+import { Image } from 'astro:assets';
+import JackCottrell1 from '../assets/images/rates/JackCottrell - 0318 (500px).jpg';
+import JackCottrell2 from '../assets/images/rates/JackCottrell - 0285 (500px).jpg';
+import JackCottrell3 from '../assets/images/rates/JackCottrell - 0280 (500px).jpg';
+import JackCottrell4 from '../assets/images/rates/JackCottrell - 0158 (500px).jpg';
+import ChubbContactSheet from '../assets/images/features/Chubb - ContactSheet (square).jpg';
 
 ---
 
+
+
 <div class="wrapper">
 
-    <div class="tabs-container">
+    <div class="tabs-container rates-page-wrapper">
 
-        <ul>
-            <li class="active">Individual<span>Headshots</span></li>
-            <li>Group<span>Headshots</span></li>
-        </ul>
+        <div class="toggle-wrapper">
+            <button class="toggle-btn active" data-tab="0">
+                <span>Individual</span>
+                <span>Headshots</span>
+            </button>
+            <button class="toggle-btn" data-tab="1">
+                <span>Group</span>
+                <span>Headshots</span>
+            </button>
+            <div class="toggle-slider"></div>
+        </div>
 
 
         <div class="individual-headshots tabs-detail-container active">
-            <h2 class="center">Individual Headshots</h2>
+           
 
 
         <div class="rates-container">
+          
             <div class="rates-card left-card">
+              <h2 class="center">Individual Headshots</h2>
             <div class="">
                 <div class="">
                     <div class="sm-image-grid">
-                        <img class="rates-image1" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/653d38fd4c040b6446500339/1698511101755/Headshot_20220829_Jack+Cottrell_Richard_Waine_Lancaster_PA_0318+%28500px%29.jpg" alt="Acting headshots Lancaster, Lancaster headshot Photographer, Actor headshots">
-                        <img class="rates-image2" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/653d38f66ab65d370acffed5/1698511094280/Headshot_20220829_Jack+Cottrell_Richard_Waine_Lancaster_PA_0285+%28500px%29.jpg" alt="Lancaster Headshots, Professional Headshot Photographer Lancaster, Headshots for Actors">
-                        <img class="rates-image3" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/653d38f14929881119588992/1698511089076/Headshot_20220829_Jack+Cottrell_Richard_Waine_Lancaster_PA_0280+%28500px%29.jpg" alt="Lancaster Pennsylvania Headshots, Professional Headshots for Performers, Acting Headshots Lancaster">
-                        <img class="rates-image4" src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/653d38eca5593c4dbe2a745b/1698511084544/Headshot_20220829_Jack+Cottrell_Richard_Waine_Lancaster_PA_0158+%28500px%29.jpg" alt="Best Headshots Lancaster, Best Actor Headshots in PA, Best Headshots in PA">
+
+
+                        <Image src={JackCottrell1} alt="Acting headshots Lancaster, Lancaster headshot Photographer, Actor headshots" loading="lazy" class="rates-image1" />
+                        
+                        <Image src={JackCottrell2} alt="Lancaster Headshots, Professional Headshot Photographer Lancaster, Headshots for Actors" loading="lazy" class="rates-image2" />
+
+                        <Image src={JackCottrell3} alt="Lancaster Pennsylvania Headshots, Professional Headshots for Performers, Acting Headshots Lancaster" loading="lazy" class="rates-image3" />
+
+                        <Image src={JackCottrell4} alt="Best Headshots Lancaster, Best Actor Headshots in PA, Best Headshots in PA" loading="lazy" class="rates-image4" />
+
+                        
 
                     </div>
                 </div>
@@ -51,89 +79,123 @@
       <p class="">5-star Experience</p>
     </div>
 
-
-    <div class="rates-btn">
-      <a class="" href="/schedule">SCHEDULE MY SESSION</a>
-    </div>
-      </div>
-</div>
-  <div class="center" style="text-transform:none;margin-top:3em">
-  <p><b>Optional Makeup Artist: $145</b></p>
-  <p><b>Gift Certificates: <a href="/gift-certificates" style="margin-left:1rem;font-weight:var(--wt700)">BUY NOW</a></b></p>
-</div>
-
-</div>
-</div>
-
-
-  <div class="tabs-detail-container">
-    <h2 class="center">Group Headshots</h2>
-
-
-    <div class="rates-container">
-    <div class="rates-card left-card">
-       <div class="testimonial">
-
-           <div class="">
-               <div class="testimonial-content">
-                   <img src="https://static1.squarespace.com/static/50f79c6fe4b00d3480c9bbf0/t/675ef24237488f7c4db858aa/1734275651178/Chubb+-+Contact+Sheet+%28square%29-1.jpg" alt="Group Headshots, Office Headshots, team Headshots, Professional Headshot Photographer, Best headshots MidAtlantic">
-
-               </div>
-           </div>
-
-        </div>
+    <div class="button-wrapper">
+      <PrimaryButton text="SCHEDULE MY SESSION" url="/schedule" />
     </div>
 
 
-  <div class="rates-card right-card">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous" defer></script>
-    <style>#TaveContactForm {width:1px;min-width:100%;min-height:100%;}</style>
-    <iframe id="TaveContactForm" src="https://tave.com/richard-waine-photography-inline/contact/contact?tpl=20231011&resizer=4.2.10" scrolling="no" frameborder="0"></iframe>
 
-    <script is:inline>
-    const iframe = document.querySelector("#TaveContactForm");
-    if (iframe) {
-        iFrameResize({log:true}, "#TaveContactForm");
-    }
-    </script>
-
-
+<div class="center" style="text-transform:none;margin-top:var(--size-10);">
+      <p style="font-size:var(--fs-350);font-weight:var(--fw-bold);">Optional Makeup Artist: $145</p>
+      <!-- <p style="font-size:var(--fs-350);font-weight:var(--fw-bold);">Gift Certificates: <a href="/gift-certificates" style="margin-left:.5rem;font-weight:var(--fw-bold);background:transparent;color:blue; padding-inline:0;">BUY NOW</a></p> -->
   </div>
 
+      </div>
 </div>
 
-<div class="center" style="text-transform:none;margin-top:3em">
-   <!-- <p><b>For a custom quote for your team, please complete the form below.</b></p> -->
-    <p><b>Gift Certificates: <a href="/gift-certificates" style="margin-left:1rem;font-weight:var(--wt700)">BUY NOW</a></b></p>
-</div>
+<!-- 
+  <div class="center" style="text-transform:none;margin-top:var(--size-8)">
+      <p><b>Optional Makeup Artist: $145</b></p>
+      <p><b>Gift Certificates: <a href="/gift-certificates" style="margin-left:1rem;font-weight:var(--wt700)">BUY NOW</a></b></p>
+  </div> -->
+
 </div>
 
+    <div class="tabs-detail-container">
+      <!-- <h2 class="center">Group Headshots</h2> -->
+
+
+      <div class="rates-container">
+          <div class="rates-card left-card">
+            <h2 class="center">Group Headshots</h2>
+              <div class="testimonial">
+
+                <div class="">
+                    <div class="testimonial-content">
+
+                        <Image src={ChubbContactSheet} alt="Group Headshots, Office Headshots, team Headshots, Professional Headshot Photographer, Best headshots MidAtlantic" loading="lazy" class="" />
+
+                    </div>
+                </div>
+
+              </div>
+          </div>
+
+
+          <div class="rates-card right-card">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous" defer></script>
+            <iframe id="TaveContactForm" src="https://richard-waine-photography.vsco.page/inline/contact/contact?tpl=20251016&resizer=4.2.10" scrolling="no" frameborder="0"></iframe>
+
+            <script is:inline>
+            const iframe = document.querySelector("#TaveContactForm");
+            if (iframe) {
+                iFrameResize({log:true}, "#TaveContactForm");
+            }
+            </script>
+
+
+          </div>
+
+      </div>
+
+      <!-- <div class="center" style="text-transform:none;margin-top:3em">
+        <p><b>For a custom quote for your team, please complete the form below.</b></p>
+          <p><b>Gift Certificates: <a href="/gift-certificates" style="margin-left:1rem;font-weight:var(--wt700)">BUY NOW</a></b></p>
+      </div> -->
+</div>
+
+</div>
 
 <script is:inline>
-const t=document.querySelectorAll('.tabs-container ul li'),c=document.querySelectorAll('.tabs-detail-container');t.forEach((b,i)=>b.onclick=()=>{t.forEach(x=>x.classList.remove('active'));c.forEach(x=>x.classList.remove('active'));b.classList.add('active');c[i]?.classList.add('active')});
+const toggleBtns = document.querySelectorAll('.toggle-btn');
+const containers = document.querySelectorAll('.tabs-detail-container');
+const slider = document.querySelector('.toggle-slider');
+
+toggleBtns.forEach((btn) => {
+  btn.onclick = () => {
+    const tabIndex = parseInt(btn.dataset.tab);
+
+    toggleBtns.forEach(b => b.classList.remove('active'));
+    containers.forEach(c => c.classList.remove('active'));
+
+    btn.classList.add('active');
+    containers[tabIndex]?.classList.add('active');
+
+    // Move slider
+    slider.style.transform = `translateX(${tabIndex * 100}%)`;
+  };
+});
 </script>
 
 
 
 <style>
+/* ==========================================
+   MOBILE BASE STYLES
+   ========================================== */
 
 .wrapper{
-        /* padding-inline:var(--size-3); */
-    }
+ width:calc(100% - var(--size-7));
+}
 
 .rates-container{
-  display:flex;
-  flex-direction:column;
-  box-shadow:0 5px 10px -5px #222;
+  
+  display:grid;
+  grid-template-columns: 1fr;
+  box-shadow:0 5px 10px -5px var(--shadow-clr-deep);
   overflow:hidden;
   text-align:center;
   max-width:1200px;
-  margin:var(--size-7) auto
+  max-width:1500px;
+  margin:var(--size-7) auto;
 }
 
 .fees,.included{
   margin-block:var(--size-3);
- 
+}
+
+.included{
+  margin-bottom:var(--size-5)
 }
 
 .rates-card{
@@ -144,44 +206,46 @@ const t=document.querySelectorAll('.tabs-container ul li'),c=document.querySelec
   width:100%;
   font-family:var(--ff-primary);
   position:relative;
-  min-height:850px
+  min-height:850px;
 }
 
 .rates-card.left-card{
   background:var(--drkbg);
   color:var(--ltclr);
-  position:relative
+  position:relative;
+  padding-top:var(--size-8);
+
+  > div{
+    margin-block: auto;
+  
+  }
 }
 
 .rates-card.right-card{
   background:var(--ltclr);
   color:var(--blkclr);
+  
 }
 
 .image-fee, .session-fee{
-    text-transform:uppercase;
-    margin-bottom: var(--size-3);
+  text-transform:uppercase;
+  margin-bottom: var(--size-3);
 }
 
 .image-fee{
   font-size:var(--fs-750);
   font-weight:var(--fw-bold);
- 
- 
 }
 
 .session-fee{
   font-size:var(--fs-600);
-  
 }
 
 .included{
   font-weight:var(--fw-semi-bold);
-
-  
 }
 
-.included p:not(first-child){
+.included p:not(:first-child){
   margin-bottom:var(--size-3);
 }
 
@@ -190,7 +254,7 @@ const t=document.querySelectorAll('.tabs-container ul li'),c=document.querySelec
 }
 
 .rates-card a{
-  padding:21px 34px;
+  padding:var(--size-4) var(--size-725);
   font-size:var(--fs-400);
   font-weight:var(--fw-normal);
   background:var(--blkclr);
@@ -206,77 +270,125 @@ const t=document.querySelectorAll('.tabs-container ul li'),c=document.querySelec
   background:var(--drkbg);
   border:var(--border) var(--accent);
   overflow:hidden;
-   
-
 }
 
 .testimonial-content img{
-  padding-inline:var(--size-8)
+  width:100%;
+  height:auto;
+  /* padding-inline:var(--size-8) */
 }
-
-@media screen and (min-width:1080px){
-  .rates-container{
-    flex-direction:row
-  }}
-
-
 
 /*rates properties*/
 /*rates page*/
- .tabs-container{
+.tabs-container{
   width: 100%;
   height:min-content;
   margin:0 auto;
-  overflow: hidden
-}
+  overflow: hidden;
 
-.tabs-container ul{
+  background:var(--ltclr);
   display: flex;
-  gap:var(--size-3);
-  justify-content:center;
-  padding:var(--size-3) 0;
-  background-color:var(--ltclr);
-  list-style:none
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.tabs-container ul li{
-  line-height:2;
-  padding:var(--size-1) var(--size-8);
-  background-color: var(--secondary-color);
-  color: var(--head-color);
-  font-size: var(--fs-400);
-  text-transform:uppercase;
-  font-weight:var(--fw-semi-bold);
-  transition:background-color var(--transition-slow) linear;
-  border-right:1.5px solid rgba(0,0,0,.1);
-  cursor:pointer;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
+.toggle-wrapper{
+  position: relative;
+  display: inline-flex;
+  background: var(--secondary-color);
+  clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
+  padding: calc( var(--size-1) / 2 );
+  margin: 0 auto;
+  height: fit-content;
+  overflow: visible;
+  width:min(500px,95%);
   
 }
 
-.tabs-container ul li:hover{
-  background-color: var(--li-hover);
-  transition:background-color var(--transition-slow) linear
+.toggle-btn{
+  position: relative;
+  z-index: 2;
+  padding: var(--size-3) var(--size-4);
+  background: transparent;
+  border: none;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-300);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--head-color);
+  min-width: 50%;
+  
 }
 
-.tabs-container ul li.active,
-.tabs-container ul li:last-child{
-  border-right:0
+.toggle-btn.active{
+  color: var(--ltclr);
+  
 }
 
-.tabs-container ul li.active{
-  background-color: var(--primary-color);
-  color: var(--ltclr)
+.toggle-slider{
+  position: absolute;
+  z-index: 1;
+  top: calc(var(--size-225) / 2);
+  left: var(--size-225);
+  width: calc(50% -  10px);
+  height:calc(100% - 10px);
+  background: var(--accent);
+  clip-path: polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  animation: buttonGlow 4s ease-in-out infinite;
+  box-shadow:
+    0 25px 60px var(--glow-clr-strong),
+    0 15px 35px var(--glow-clr-medium),
+    0 0 100px rgba(3, 169, 244, 0.25),
+    inset 0 1px 2px var(--highlight-clr-soft),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+  
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--highlight-clr-bright), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.8s ease;
+}
+
+@keyframes buttonGlow {
+  0%, 100% {
+    box-shadow:
+      0 25px 60px var(--glow-clr-strong),
+      0 15px 35px var(--glow-clr-medium),
+      0 0 100px rgba(3, 169, 244, 0.25),
+      inset 0 1px 2px var(--highlight-clr-soft),
+      inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 30px 70px rgba(3, 169, 244, 0.6),
+      0 18px 40px rgba(3, 169, 244, 0.4),
+      0 0 120px rgba(3, 169, 244, 0.35),
+      inset 0 1px 2px rgba(255, 255, 255, 0.25),
+      inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .tabs-detail-container{
   display: none;
-  padding: var(--size-8) 0;
-  background-color: var(--ltclr)
+  background-color: var(--ltclr);
+  margin-bottom:var(--size-7);
+  padding-inline:var(--size-3);
 }
 
 .tabs-detail-container.active{
@@ -284,57 +396,115 @@ const t=document.querySelectorAll('.tabs-container ul li'),c=document.querySelec
 }
 
 .tabs-detail-container h2{
- font-size: var(--fs-550);
- /* line-height:1.5; */
- margin-block:var(--size-3);
- font-weight: medium;
- color: var(--primary-color);
-
+  font-size: var(--fs-550);
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom:0;
+  font-weight: medium;
+  color:var(--ltclr);
 }
 
 .tabs-detail-container p{
   font-size:var(--fs-400);
-  /* line-height: 1.5; */
+  line-height: var(--line-height-normal);
   font-weight:var(--fw-semi-bold);
 }
- 
-  .sm-image-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:1fr;
-    align-items:center;
-    margin: 0 auto;
-    gap:var(--size-3);
-    padding-inline:var(--size-8);
+
+.sm-image-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:1fr;
+  align-items:center;
+  margin: 0 auto;
+  gap:var(--size-3);
+  padding-inline:var(--size-8);
+  /* padding:var(--size-10); */
+  
+}
+
+.sm-image-grid img{
+  width:100%;
+  height:auto;
+  padding:0;
+  margin:0;
+  box-shadow:var(--shadow);
+}
+
+.rates-image3{
+  display: none;
+}
+
+.testimonial-content {
+  padding-inline: var(--size-7);
+}
+
+.testimonial-content img {
+  box-shadow: var(--shadow);
+  
+}
+
+#TaveContactForm {
+  width:1px;
+  min-width:100%;
+  /* height:100%; */
+  /* min-height:850px; */
+  min-height:calc(100% + var(--header-height));
+}
+
+
+/* ==========================================
+   TABLET - min-width: 48em (768px)
+   ========================================== */
+
+@media screen and (min-width: 48em) {
+
+.wrapper{
+  width:80%;
+}
+
+  .rates-page-wrapper{
+    height:calc(100% - var(--header-height));
   }
 
-  .sm-image-grid img{
-    width:100%;
-    height:auto;
-    padding:0;
-    margin:0;
-    box-shadow:var(--shadow)
+
+
+  .rates-image2, .rates-image3, .rates-image4 {
+    display: block;
   }
 
-@media screen and (max-width:767px){
-  .rates-image2,.rates-image3,.rates-image4{display:none}
-  .sm-image-grid{
-    grid-template-columns:1fr;
+  .sm-image-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
-
-  .testimonial-content{
-   padding-inline:var(--size-7)
+  .testimonial-content {
+    padding-inline: var(--size-8);
   }
 
-  .testimonial-content img{
-    box-shadow:var(--shadow);
-    
-    
+  .testimonial-content img {
+    box-shadow: none;
+    padding:var(--size-7);
   }
 
-   
+  .toggle-wrapper{
+    width:auto;
   }
 
+  .toggle-btn {
+    min-width: 200px;
+    padding: var(--size-3) var(--size-8);
+    font-size: var(--fs-350);
+  }
 
+  #TaveContactForm {
+    min-height:850px;
+}
+
+/* ==========================================
+   LARGE DESKTOP - min-width: 67.5em (1080px)
+   ========================================== */
+@media screen and (min-width: 67.5em) {
+  .rates-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 </style>

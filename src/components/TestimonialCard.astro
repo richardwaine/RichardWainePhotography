@@ -25,9 +25,9 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
                         <p class="stars">&#9733&nbsp&#9733&nbsp&#9733&nbsp&#9733&nbsp&#9733</p><p class="white">{testimonialText}
                         </p>
                         
-                        <br>
                         
-                        <div class="testimonial-image"><Image src={image} height={128} width={128} alt={imageAlt} /> 
+                        
+                        <div class="testimonial-image"><Image src={image} height={128} width={128} alt={imageAlt} loading="lazy" /> 
                         </div>
                             
                         <div class="testimonial-details">
@@ -40,12 +40,8 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
 <style>
     .stars {
   color: var(--stars);
-  /* padding: var(--size-2) 0 0; */
   padding-block: var(--size-2);
 }
-
-
-
 
 :is(.testimonial-content p, .testimonial-details h5, .testimonial-details .author) {
   font-size: var(--fs-400);
@@ -55,16 +51,12 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
 }
 
 
-
-
 .testimonial-2 {
-  /* margin: 0 auto var(--size-6); */
   margin: var(--size-6) auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: var(--size-4);
   padding: 0;
-  padding-inline:var(--size-7);
   text-align: center;
   justify-items:center;
 
@@ -93,7 +85,7 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
 
 .testimonial-content p,
 .rates-card-testimonial p {
-  /* line-height: 1.9; */
+  line-height: var(--line-height-loose);
    padding-inline: var(--size-4);
   
   

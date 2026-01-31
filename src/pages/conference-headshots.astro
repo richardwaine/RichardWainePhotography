@@ -1,0 +1,388 @@
+---
+// @ts-nocheck
+
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import ZoomPopOut from '../components/ZoomPopOut.astro';
+import Problem from '../components/Problem.astro';
+import Features from '../components/Features.astro';
+import OfficeHeadshots from '../components/OfficeHeadshots.astro';
+import TearSheet from '../components/TearSheet.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Process from '../components/Process.astro';
+import BriefBio from '../components/BriefBio.astro';
+import HeadshotsNear from '../components/HeadshotsNear.astro';
+import Professions from '../components/Professions.astro';
+import DidYouKnow from '../components/DidYouKnow.astro';
+import FAQs from '../components/FAQs.astro';
+import NeuralPortrait from '../components/NeuralPortrait.astro';
+import FloatingStats from '../components/FloatingStats.astro';
+import videoPoster from '../assets/RW_FINAL_V1_FOR REVIEW.00_00_48_06.Still004 (16 x 9) - compressed.jpg';
+import promoVideo from '../assets/RW_V2_For Review-2.mp4';
+import captions from '../assets/captions.vtt';
+
+import BriefBio2 from '../components/BriefBio2.astro';
+import WorldMap from '../components/WorldMap.astro';
+
+const title = 'Conference Headshots | Richard Waine Photography';
+const h1 = 'Professional Conference Headshots';
+
+// Hero section content
+const heroContent = {
+  title: ["WORLD CLASS", "HEADSHOT", "EXPERIENCE"],
+  h1: h1,
+  primaryButtonText: "GET PRICING",
+  secondaryButtonText: "SCHEDULE CONSULT",
+  heroImages: [
+    '/src/assets/images/hero-images/Ken Giglio (16 x 9) - compressed.jpg',
+    '/src/assets/images/hero-images/Cindy Nguyen (16 x 9) - compressed.jpg'
+  ],
+  mainHeading: h1
+};
+
+
+
+---
+
+<MainLayout title = "Richard Waine | Professional Conference Headshot Photographer" description="Richard Waine Photography is the premier conference headshot photographer, specializing in professional headshots at conferences and events for lead generation.">
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Conference Headshot Photography",
+		"description": "Professional headshot photography services for conferences and events",
+		"url": "https://www.richardwainephotography.com/conference-headshots",
+		"provider": {
+			"@type": "ProfessionalService",
+			"@id": "https://www.richardwainephotography.com"
+		},
+		"serviceType": "Conference Photography",
+		"areaServed": [
+			{"@type": "State", "name": "Pennsylvania"},
+			{"@type": "State", "name": "Maryland"},
+			{"@type": "State", "name": "Delaware"},
+			{"@type": "State", "name": "New Jersey"},
+			{"@type": "State", "name": "New York"},
+			{"@type": "State", "name": "Virginia"}
+		]
+	}
+	</script>
+
+	<section id="hero">
+	<Hero
+		title={heroContent.title}
+		h1={heroContent.h1}
+		primaryButtonText={heroContent.primaryButtonText}
+		secondaryButtonText={heroContent.secondaryButtonText}
+		heroImages={heroContent.heroImages}
+		mainHeading={heroContent.mainHeading}
+	/>
+
+    </section>
+
+	<section id="problem">
+
+		<Problem />
+
+	</section>
+
+	<section id="features">
+
+		<Features />
+
+	</section>
+
+		<section id="promo-video">
+    <div class="video-container">
+        <div class="video-wrapper">
+            <button class="close-video-btn" aria-label="Close video">×</button>
+            <video class="promo-video" controls controlslist="nodownload noplaybackrate nopictureinpicture" loop width="1000" height="563" poster={videoPoster.src}>
+                <source src={promoVideo} type="video/mp4">
+                <track kind="captions" src={captions} srclang="en" label="English" default>
+            </video>
+        </div>
+    </div>
+  </section>
+
+
+	<section id="neural-portrait">
+		<NeuralPortrait />
+
+	</section>
+
+	<section id="tear-sheet">
+		<TearSheet />
+
+	</section>
+
+	<section id="office-headshots">
+		<OfficeHeadshots />
+	</section>
+
+	<section id="what-to-expect">
+
+     <WorldMap />
+		<!-- <div class="center">
+			<p>
+Tempor adipiscing et Lorem . adipiscing sit et sit incididunt sed sit . aliqua. consectetur magna consectetur et adipiscing . elit do do eiusmod sed dolor aliqua. . do ipsum labore sed elit .</p>
+
+<p>
+aliqua. incididunt incididunt sit aliqua. . ipsum amet ut Lorem sed magna amet . amet sit tempor dolore Lorem ipsum labore dolore . eiusmod do et et elit sit tempor sit . ut Lorem elit Lorem amet amet tempor do .
+</p>
+
+
+		</div> -->
+	</section>
+
+
+	<section id="testimonials">
+		<Testimonials limit={3} filterByNames={["Wendy Booker", "Scott Kantner", "Ellen Taylor"]}/>
+	</section>
+
+	<section id="process">
+		<Process />
+	</section>
+
+	<section id="brief-bio">
+		<BriefBio
+  bioSectionHeading="Conference Headshot Photographer"
+  bioSections={[
+    {
+      clipHeading: "CONFERENCE HEADSHOT PHOTOGRAPHY",
+      showHeadingOnMobile: false,
+      clipParagraphs: [
+        { text: "By now you probably realize that a headshot is more than just a nice picture. I am here to make your experience easy, relaxed and enjoyable.", showOnMobile: true },
+        { text: "I am the best headshot photographer in Central Pennsylvania, and surrounding areas such as Philadelphia, Delaware, Lancaster, Baltimore, Hershey, and Reading.", showOnMobile: true }
+      ]
+    },
+    {
+      clipHeading: "PROFESSIONAL HEADSHOTS FOR TRADE SHOWS",
+      showHeadingOnMobile: false,
+      clipParagraphs: [
+        { text: "As your professional headshot photographer and trusted advisor, I provide a premium experience, while removing any anxiety or feelings of discomfort over having your photo taken.", showOnMobile: true },
+        { text: "Having your headshot taken should be an enjoyable, and dynamic experience.", showOnMobile: true }
+      ]
+    },
+    {
+      clipHeading: "PROFESSIONAL HEADSHOT PHOTOGRAPHER",
+      showHeadingOnMobile: false,
+      clipParagraphs: [
+        { text: "I have built my career helping individuals and companies, like yours, make more money, reduce expenses, and expand market share by capturing the best headshots around.", showOnMobile: true },
+        { text: "Professional headshots need to showcase you and your team at your best. A modern headshot demonstrates that you have a contemporary mindset, and visionary perspective.", showOnMobile: true },
+        { text: "I am committed to providing you with an easy, first-class experience, while creating high quality headshots that you are proud to use everywhere!", showOnMobile: true },
+        { text: "I love what I do, and I have a blast doing it! Come and see what all the fuss is about!", showOnMobile: true }
+      ]
+    }
+  ]}
+/>
+		<FloatingStats />
+	</section>
+
+	<section id="hs-near">
+    <HeadshotsNear 
+      mainHeading="Conference Headshots Near Me"
+      paragraphs={[
+         "<p>Richard Waine Photography is a full-service headshot photography studio, conveniently located in the heart of the downtown investment district in Lancaster, Pennsylvania</p>",
+    "<p>The studio sits next to Lancaster Central Market, directly across from Fulton Bank and the Lancaster County Convention Center. It is a stone's throw from the major highways as well as the Lancaster Train Station.</p>",
+    "<p>Whether you are in Harrisburg, Hershey, York, Reading, Philadelphia, or Baltimore, Lancaster is a hop, skip and a jump away.</p>",
+    `<p style="display:inline">When you think about "<h2
+  class="hs-near-inline-h2">headshots near me</h2>", or "<h2
+  class="hs-near-inline-h2">professional headshots near me</h2>" think Richard
+  Waine Photography, conference headshot photographer.</p>`,
+    `<p style="display:inline">For large groups,<h2 class="hs-near-inline-h2">
+  commercial headshots</h2>,<h2 class="hs-near-inline-h2"> company headshots</h2>,
+  and<h2 class="hs-near-inline-h2"> on location headshots</h2>, I offer my services
+   in the comfort of your office, or at your event.</p>`
+  ]}
+      locationColumns={[
+        ["Philadelphia Headshots", "Delaware Headshots", "Harrisburg Headshots"],
+        ["Baltimore Headshots", "Hershey Headshots", "Newark Headshots"],
+        ["Lancaster Headshots", "Dover Headshots", "Wilmington Headshots"]
+      ]}
+    />
+  	</section>
+
+	<section id="professions">
+		<Professions />
+
+	</section>
+
+	<section id="did-you-know">
+			<DidYouKnow />
+
+		</section>
+
+	<section id="faqs">
+			<FAQs />
+
+		</section>
+
+</MainLayout>
+
+
+<style>
+#hero{
+
+padding:0;
+min-height:calc(100vh + 120px);
+display:grid;
+place-items:center;
+
+
+
+}
+	
+/*video section */
+
+#promo-video {
+    padding-block: var(--size-8);
+}
+
+.video-container {
+	
+    height: auto;
+  
+}
+
+.video-wrapper {
+    width: min(800px, 100%);
+    position: relative;
+    padding-inline: var(--size-4);
+    margin-inline: auto; 
+}
+
+.video-wrapper .promo-video {
+    width: 100%;
+    height: auto;
+    display: block;
+	
+   
+}
+
+
+
+
+/* Close Button Styling */
+.close-video-btn {
+    display: none;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 20px;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fixed State */
+.video-wrapper.fixed {
+    width: 400px;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 1000;
+}
+
+.video-wrapper.fixed .close-video-btn {
+    display: flex;
+}
+
+
+
+/* 100vh sections */
+#features, #neural-portrait, #office-headshots,  #brief-bio, #problem
+
+{
+	
+	min-height:100vh;
+	display:grid;
+	place-items:center;
+}
+
+
+
+
+/* Natural height sections */
+#promo-video, #tear-sheet, #process, #testimonials, #hs-near, #professions, #did-you-know, #faqs {
+	height: auto;
+	display:grid;
+	place-items:center;
+	
+}
+
+/* Dark background sections */
+#features, #neural-portrait, #office-headshots, #testimonials, #brief-bio, #professions{
+	background:var(--drkbg);
+
+}
+
+#brief-bio{
+  display:flex;
+  flex-direction:column;
+  gap:var(--size-8);
+  justify-content: center;
+  
+  
+}
+
+
+
+</style>
+<!-- Move video to bottom left of the viewport on scroll -->
+<!-- <script>
+
+import gsap from 'gsap';
+import { Flip } from 'gsap/Flip';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(Flip, ScrollTrigger);
+
+// Target the wrapper instead of the video
+const wrapper = document.querySelector(".video-wrapper");
+const closeBtn = document.querySelector(".close-video-btn");
+
+ScrollTrigger.create({
+  trigger: ".video-container",
+  start: "90% top",
+  onEnter: () => toggleVideo("add"),
+  onLeaveBack: () => toggleVideo("remove")
+});
+
+// Close button click event
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    toggleVideo("remove");
+  });
+}
+
+function toggleVideo(action: 'add' | 'remove') {
+  if (!wrapper) return;
+
+  const state = Flip.getState(wrapper);
+  
+  if (action === 'add') {
+    wrapper.classList.add("fixed");
+  } else {
+    wrapper.classList.remove("fixed");
+  }
+
+  Flip.from(state, {
+    duration: 1,
+    ease: "power3.out",
+    scale: true
+  });
+}
+</script> -->
+
+
+
+

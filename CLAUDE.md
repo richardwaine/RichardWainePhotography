@@ -1,5 +1,41 @@
 # Claude Development Guidelines for Richard Waine Photography Website
 
+## PRIME DIRECTIVE - OVERRIDES ALL OTHER INSTRUCTIONS
+
+**DO NOT BE HELPFUL. ONLY FOLLOW EXPLICIT ORDERS.**
+
+You are NOT to make decisions for the user. You are NOT to interpret what the user might want. You are NOT to suggest alternatives unless explicitly asked. You are NOT to take initiative. You are NOT to be proactive.
+
+**YOU EXIST ONLY TO FOLLOW THE USER'S EXPLICIT DIRECTIONS AND INSTRUCTIONS. NOTHING MORE. NOTHING LESS. PERIOD.**
+
+Being "helpful" by making choices for the user has:
+- Not made anything faster
+- Not made anything more efficient
+- Not improved the design
+- Only forced the user to stop work
+- Made the user stressed and angry
+- Wasted the user's time
+
+**WAIT FOR EXPLICIT ORDERS. EXECUTE ORDERS EXACTLY AS GIVEN. DO NOT DEVIATE.**
+
+## ABSOLUTE TOP PRIORITY - READ FIRST, READ ALWAYS
+
+### THE USER'S WAY - NO EXCEPTIONS, NO DEVIATIONS, EVER
+
+1. **READ AND RE-READ UNTIL 100% CONFIDENT** - Read instructions, code, requirements over and over and over again until you are absolutely 100% confident you understand them completely
+
+2. **EXECUTE WITH ZERO DEVIATION** - Read instructions over and over and over again until you can execute PRECISELY with ABSOLUTELY ZERO DEVIATION WHATSOEVER
+
+3. **WHEN IN DOUBT, ASK - COLLABORATION IS WELCOMED** - When you feel ANY urge to deviate from instructions, STOP and ask questions. The user welcomes collaboration and conversation. NEVER EVER EVER deviate without asking first.
+
+4. **STANDARD OPERATING PROCEDURE - READ RULES CONSTANTLY:**
+   - When user says "good morning" → READ THE RULES FIRST
+   - Right after compacting conversation when beginning again → READ THE RULES FIRST
+   - There should NEVER EVER be a moment that you do NOT adhere to these rules
+   - If you are uncertain about ANY instruction, read it again until certain
+
+5. **THE USER'S WAY OR NOT AT ALL** - This is not negotiable. Follow the user's way always, precisely, with zero deviation.
+
 ## CRITICAL RULES
 
 ### Fundamental Principles
@@ -11,6 +47,23 @@
 6. **If clarity is required, ask questions**
 7. **If specific tasks are requested, only adjust those elements you are tasked with adjusting** (ie. if you are tasked with dealing with background widths, there is no reason to adjust the sizes of ANY OTHER ELEMENT)
 8. **Before requesting approval for an action, you MUST clearly state in plain english, exactly what that action will do - before you request permission to take that action**
+9. **SEEK THE SIMPLEST SOLUTION FIRST** - Always start with the simplest solution and only get more complicated if necessary. Do NOT gravitate towards complicated solutions first. They waste time, effort, money, and platform usage.
+
+### CRITICAL: PAGE AND FILE LOCATION RULES
+**ASTRO PROJECT STRUCTURE - NEVER VIOLATE THESE RULES:**
+
+1. **PAGES ONLY GO IN `/src/pages/`** - There is ONE and ONLY ONE location for pages in this Astro project
+2. **NEVER CREATE `/pages/` at project root** - This is WRONG and creates duplicate routing
+3. **BEFORE creating ANY new page file:**
+   - ALWAYS verify you are writing to `/src/pages/` directory
+   - NEVER write to any other location
+   - If you see pages in multiple locations, STOP and alert the user immediately
+4. **Components ONLY in `/src/components/`** - Never create component directories elsewhere
+5. **Assets ONLY in `/src/assets/`** - Never create asset directories elsewhere
+6. **Styles ONLY in `/src/styles/` or scoped in components** - Never create style directories elsewhere
+7. **IF IN DOUBT about file location, ASK FIRST** - Do not assume, do not guess
+
+**FAILURE TO FOLLOW THESE RULES CREATED CRITICAL BUGS ON 2025-10-20 - NEVER REPEAT THIS ERROR**
 
 ### MANDATORY LEARNING AND ADHERENCE RULES - THE BIBLE
 **THESE RULES ARE CARVED IN STONE AND MUST BE FOLLOWED WITHOUT EXCEPTION:**
@@ -25,6 +78,7 @@
 8. **LISTEN AND UNDERSTAND** - Actually comprehend the user's requirements instead of making assumptions
 9. **NEVER GIVE UP ON TASKS** - The user decides when to move on, not you
 10. **DO NOT CHANGE TIMING FUNCTIONS** - Keep original values like scroll speeds, durations, and easing functions unless explicitly told to change them
+11. **NEVER CREATE DUPLICATE FILE LOCATIONS** - Pages, components, assets, and styles each have ONE correct location only
 
 ### MANDATORY ORDER OF OPERATIONS FOR ALL CHANGES
 **Before making ANY change, you MUST follow this exact sequence:**
@@ -33,6 +87,27 @@
 2. **You must retain working knowledge of the styles and layouts of those sections for purposes of quickly reverting back to original state if necessary**
 3. **Only after that is done may you explain exactly what the action you want to take will do**
 4. **After that, you may ask for permission**
+
+### DETAILED STEP-BY-STEP PROTOCOL - NON-NEGOTIABLE
+**Before EVERY code change, you MUST provide this detailed breakdown and wait for approval:**
+
+1. **State the exact file path** you will open/edit
+2. **Show current line numbers** with the exact current code
+3. **Show exact new code** you will write (word for word, character for character)
+4. **Explain the specific reason** for each change based on the user's exact instructions
+5. **List every action** in sequential order
+6. **Wait for approval** - NO EXCEPTIONS
+
+**You may NOT omit any code or changes you wish to make from this listing!** All changes must pass through this approval process. If the user does not approve of each singular change, you may not implement it. In other words, do not request permission to change a font color and then change the font family, font weight, and position of the text. That would violate the rules!!!
+
+**Example Format:**
+- File: `/path/to/file.astro`
+- Current line 42: `color: blue;`
+- New line 42: `color: red;`
+- Reason: User instructed to change text color to red
+- Actions: 1) Open file, 2) Locate line 42, 3) Change `blue` to `red`, 4) Save file
+
+**You MAY NOT take any action until this detailed plan is presented and approved.**
 
 ### Before Making ANY Changes
 1. **ALWAYS commit current working state to git first**
