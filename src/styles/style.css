@@ -202,11 +202,16 @@ strong{
   font-weight:var(--fw-bold);
 }
 
-.wrapper{        
+.wrapper{
   margin-inline:auto;
-  width:80%;
-}
+  /* width:80%; */
+  width: calc(100% - var(--size-7));
 
+    @media (min-width: 64em) {
+    width: 80%;
+
+    }
+}
 
 footer{
   width:100%;
@@ -256,11 +261,12 @@ p{
   animation: buttonGlow 4s ease-in-out infinite;
   padding: var(--size-3) var(--size-4);
   font-size: var(--fs-350);
+  
 
 
 
 @media (min-width: 48em) {
-    padding: calc(var(--size-3) - 4px) var(--size-8);
+    padding: calc(var(--size-3) - 4px) var(--size-7);
     font-size: var(--fs-400);
 }
  }

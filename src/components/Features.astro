@@ -313,11 +313,12 @@ document.addEventListener("astro:page-load", () => {
   margin-inline: auto;
   place-items: center;
   width: 100%;
-  max-inline-size: 100%;
+  /* max-inline-size: 100%; */
+  width: calc(100% - var(--size-7));
 }
 
 .slide-image, .slide-image > img{
-  padding-inline:var(--size-7);
+  /* padding-inline:var(--size-7); */
 }
 
 .slide-content{
@@ -338,7 +339,7 @@ p {
 
 .slide-content {
   margin-inline: auto;
-  max-inline-size:75%;
+  /* max-inline-size:75%; */
 }
 
 .slide-content h2 {
@@ -356,6 +357,10 @@ p {
   font-size: var(--fs-350);
 }
 
+.button-wrapper{
+  justify-self: center;
+}
+
 /* ==========================================
    TABLET - min-width: 48em (768px)
    ========================================== */
@@ -363,16 +368,25 @@ p {
 .slide-image, .slide-image > img{
 padding-inline:0;
 }
+
+/* .slide-content-wrapper{
+  width:80%;
+  margin-inline:auto;
+} */
+
 }
 
+
+
 /* ==========================================
-   DESKTOP - min-width: 67.5em (1080px)
+   LARGE DESKTOP - min-width: 67.5em (1080px)
    ========================================== */
 
 @media (min-width: 67.5em) {
   
   .slide-content{
     margin-top:var(--size-3);
+    max-inline-size:75%;
   }
 
   .slide-content-wrapper{
@@ -396,6 +410,11 @@ padding-inline:0;
     display: flex; /* Restore centered content layout */
     padding-block: 0;
   }
+
+ .button-wrapper{
+    justify-self: left;
+  }
+
 }
 
 

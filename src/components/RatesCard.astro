@@ -174,9 +174,6 @@ toggleBtns.forEach((btn) => {
    MOBILE BASE STYLES
    ========================================== */
 
-.wrapper{
- width:calc(100% - var(--size-7));
-}
 
 .rates-container{
   
@@ -388,7 +385,7 @@ toggleBtns.forEach((btn) => {
   display: none;
   background-color: var(--ltclr);
   margin-bottom:var(--size-7);
-  padding-inline:var(--size-3);
+  /* padding-inline:var(--size-3); */
 }
 
 .tabs-detail-container.active{
@@ -458,9 +455,9 @@ toggleBtns.forEach((btn) => {
 
 @media screen and (min-width: 48em) {
 
-.wrapper{
+/* .wrapper{
   width:80%;
-}
+} */
 
   .rates-page-wrapper{
     height:calc(100% - var(--header-height));
@@ -506,5 +503,8 @@ toggleBtns.forEach((btn) => {
   .rates-container {
     grid-template-columns: 1fr 1fr;
   }
+  .tabs-detail-container{
+  padding-inline:var(--size-3);
+}
 }
 </style>
