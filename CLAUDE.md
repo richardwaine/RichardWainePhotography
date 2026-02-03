@@ -155,8 +155,10 @@ Being "helpful" by making choices for the user has:
 - If build fails, check error messages carefully
 
 ### Git Workflow
+**ABSOLUTE RULE: ALWAYS commit ALL changes. Never commit selectively. Every single modified file must be included. No exceptions. Ever.**
+
 1. Check status: `git status`
-2. Add changes: `git add .`
+2. Add changes: `git add .` ← This means ALL changes, not selective files
 3. Commit: `git commit -m "Brief description"`
 4. Push to backup: `git push origin main`
 

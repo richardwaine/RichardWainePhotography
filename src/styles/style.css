@@ -232,7 +232,8 @@ h2{
 
 
 p{
-  font-size:var(--fs-450);
+  /* font-size:var(--fs-450); */
+  font-size:var(--fs-400);
   margin-bottom: var(--size-3);
 }
 

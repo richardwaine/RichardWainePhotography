@@ -74,13 +74,14 @@ const lisa = {
     </div>
   </section>
 
+</main>
+
   <!-- Navigation Arrows -->
   <div class="arrows">
     <button id="prev">&lt;</button>
     <button id="next">&gt;</button>
   </div>
 
-</main>
 </div>
 
 
@@ -171,7 +172,7 @@ main.team-slides-container .bio-content {
 }
 
 main.team-slides-container .bio-content p {
-  font-size: var(--fs-450);
+  font-size: var(--fs-400);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--size-4);
   color: var(--blkclr);
@@ -184,7 +185,7 @@ main.team-slides-container .button-wrapper {
   justify-content: center;
 }
 
-main.team-slides-container .arrows {
+.team-page-wrapper > .arrows {
   display: none;
 }
 
@@ -195,8 +196,9 @@ main.team-slides-container .arrows {
 @media (min-width: 64em) {
   .team-page-wrapper {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     height: 100vh;
+    padding-bottom: var(--size-8);
   }
 
   main.team-slides-container {
@@ -231,7 +233,7 @@ main.team-slides-container .arrows {
   }
 
   main.team-slides-container .slide-image img {
-    width: 100%;
+    width: 80%;
     height: auto;
     object-fit: contain;
     /* object-position: center; */
@@ -258,19 +260,15 @@ main.team-slides-container .arrows {
     display: block;
   }
 
-  main.team-slides-container .arrows {
+  .team-page-wrapper > .arrows {
     display: flex;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9;
     justify-content: center;
     gap: 1.25em;
     align-items: center;
+    padding: var(--size-4);
   }
 
-  main.team-slides-container .arrows button {
+  .team-page-wrapper > .arrows button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -283,7 +281,7 @@ main.team-slides-container .arrows {
     transition: 0.5s;
   }
 
-  main.team-slides-container .arrows button:hover {
+  .team-page-wrapper > .arrows button:hover {
     background: var(--ltclr);
     border:2px solid var(--accent);
     color: var(--blkclr);
