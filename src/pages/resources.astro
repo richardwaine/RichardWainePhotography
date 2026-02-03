@@ -774,8 +774,11 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         }
 
         .filter-btn:focus-visible {
-            outline: none;
-            box-shadow: 0 0 0 2px var(--blkclr);
+            /* outline: none;
+            box-shadow: 0 0 0 2px var(--blkclr); */
+
+            outline:2px solid orange;
+            outline-offset:2px;
         }
 
         .filter-btn.active {
@@ -859,8 +862,14 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         }
 
         .vendor-website:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
+
+        .vendor-website:focus-visible,                                                            
+        .vendor-email:focus-visible {                                                             
+            outline: 2px solid orange;                                                            
+            outline-offset: 2px;                                                                  
+        }  
 
         .blog-card-excerpt {
             font-size: var(--fs-350);
