@@ -123,11 +123,11 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Andrew Jacobs",
     company: "Turkey Hill", 
-    review: "Richard is a true professional and I greatly enjoyed my experience working with him in his studio. He provided a clear outline on how the session with would work and made the entire experience fun and enjoyable. And, he helped answer questions and provided technical advice on how best to download the images. If you need headshots - I highly recommend Richard Waine",
+    review: "Richard is a true professional and I greatly enjoyed my experience working with him. He provided a clear instructions and made the entire experience fun and enjoyable. If you need headshots I highly recommend Richard Waine",
     rating: 5,
     imageUrl: AndrewJacobs.src,
     image: AndrewJacobs,
-    imageAlt: "Corporate Headshot of Andy Jacobs by Richard Waine Photography"
+    imageAlt: "LinkedIn Headshot of Andy Jacobs by Richard Waine Photography"
   },
   {
     name: "Eric Cooley",

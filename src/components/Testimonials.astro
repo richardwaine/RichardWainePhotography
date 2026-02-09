@@ -22,7 +22,7 @@ const {
 // We will use ALL_TESTIMONIALS directly
 
 const testimonialsToDisplay = filterByNames
-  ? ALL_TESTIMONIALS.filter(testimonial => filterByNames.includes(testimonial.name)).slice(0, limit)
+  ? filterByNames.map(name => ALL_TESTIMONIALS.find(testimonial => testimonial.name === name)).filter(Boolean).slice(0, limit)
   : ALL_TESTIMONIALS.slice(0, limit);
 ---
 
