@@ -12,6 +12,7 @@ import WilliamAdote from "../assets/images/features/Headshot_20240919_William Ad
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
 import RW2 from "../assets/images/blog/RW7 - (16 x 9).jpg"
 import RW11 from "../assets/images/blog/RW11 - (horizontal).jpg"
+import EthanHaymovitz from "../assets/images/business-headshots/Ethan Haymovitz - 0135 (horizontal).jpg"
 
 
 export interface Props {
@@ -93,20 +94,31 @@ const {
 
 
 
-  systemRow1Title = 'System of Direction',
-  systemRow1Description = "I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, actionable cues that result in a natural, powerful presence. My directions are designed to eliminate camera anxiety and move you into a state of natural confidence.  Posture and head position directly affects how authoritative you appear. Slight, nuanced adjustments make the difference between looking uncertain and looking like someone people want to do business with.",
-  methodItem1 = 'Real-time image tethering for instant feedback',
-  methodItem2 = 'Advanced guidance, coaching and direction',
-  methodItem3 = "Systematic approach that's different from typical photographers",
-  methodItem4 = 'Instant review and choice of images',
+  systemRow1Title = 'Why Your Business Headshot Matters',
+  systemRow1Description = `Your business headshot shows up everywhere potential clients look for you. It appears on your website, email signature, industry directories, speaking bios, marketing materials, and proposals. That image is often the first thing someone sees before they ever talk to you, and it shapes their impression of whether you're credible and professional. Research from Princeton University shows people form judgments about trustworthiness and competence in just 100 milliseconds of seeing a face. A solid corporate headshot tells them you take your work seriously.
+  
+  An amateur photo or outdated image undermines everything else you do well in your business. Your headshot should match the quality of work you deliver and the clients you serve. If you invest in your expertise, your systems, and your reputation, your corporate headshot deserves the same attention.
+  `,
+  methodItem1 = 'Professional headshots increase how competent you appear by 76%',
+  methodItem2 = 'Bad photos take 8 times more work to overcome',
+  methodItem3 = "A high-quality headshot signals leadership and intelligence",
+  methodItem4 = 'A strong headshot influences how people judge your entire professional presence',
+
+
+  systemRow2Title = 'System of Direction',
+  systemRow2Description = "I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, actionable cues that result in a natural, powerful presence. My directions are designed to eliminate camera anxiety and move you into a state of natural confidence.  Posture and head position directly affects how authoritative you appear. Slight, nuanced adjustments make the difference between looking uncertain and looking like someone people want to do business with.",
+  methodItem5 = 'Real-time image tethering for instant feedback',
+  methodItem6 = 'Advanced guidance, coaching and direction',
+  methodItem7 = "Systematic approach that's different from typical photographers",
+  methodItem8 = 'Instant review and choice of images',
   
 
-  systemRow2Title = 'The Experience',
-  systemRow2Description = "Professional headshot sessions have a reputation for being stiff and awkward. That's not what happens here. My sessions are conversational and relaxed. The best moments and often the best expressions happen when you're genuinely enjoying yourself. Clients regularly comment on how much more fun the experience was than they expected.",
-  methodItem5 = 'Session preparation guide provided at time of scheduling',
-  methodItem6 = 'Wardrobe consultation based on purpose and color psychology',
-  methodItem7 = 'Professional lighting that defines your best features',
-  methodItem8 = "The dismantling of the 'I am not photogenic' narrative ",
+  systemRow3Title = 'The Experience',
+  systemRow3Description = "Professional headshot sessions have a reputation for being stiff and awkward. That's not what happens here. My sessions are conversational and relaxed. The best moments and often the best expressions happen when you're genuinely enjoying yourself. Clients regularly comment on how much more fun the experience was than they expected.",
+  methodItem9 = 'Session preparation guide provided at time of scheduling',
+  methodItem10 = 'Wardrobe consultation based on purpose and color psychology',
+  methodItem11 = 'Professional lighting that defines your best features',
+  methodItem12 = "The dismantling of the 'I am not photogenic' narrative ",
 
 
   footerTitle = 'Ready to elevate your brand?',
@@ -221,33 +233,58 @@ const {
 </section>
 
 <section class="system-section">
+
+<div class="system-row reverse">
+    <div class="system-content">
+      <h2>{systemRow1Title}</h2>
+      <p>{systemRow1Description}</p>
+
+    <ul class="method-list">
+        <li class="method-item"><span>◆</span> {methodItem1}</li>
+        <li class="method-item"><span>◆</span> {methodItem2}</li>
+        <li class="method-item"><span>◆</span> {methodItem3}</li>
+        <li class="method-item"><span>◆</span> {methodItem4}</li>
+       
+      </ul>
+
+      <!-- <div class="button-wrapper">
+        <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
+      </div> -->
+
+    </div>
+    <div class="system-image">
+      <Image src={EthanHaymovitz} alt="Professional business headshot of psychotherapist with beard and glasses in blue blazer over white shirt, friendly smile and confident facial expression against black studio background, headshot made by Richard Waine in Lancaster Pennsylvania"/>
+    </div>
+  </div>
+
+
   <div class="system-row">
         <div class="system-image">
           <Image src={RW1} alt=""/>
         </div>
         
         <div class="system-content">
-            <h2>{systemRow1Title}</h2>
-            <p>{systemRow1Description}</p>
+            <h2>{systemRow2Title}</h2>
+            <p>{systemRow2Description}</p>
             <ul class="method-list">
-              <li class="method-item"><span>◆</span> {methodItem1}</li>
-              <li class="method-item"><span>◆</span> {methodItem2}</li>
-              <li class="method-item"><span>◆</span> {methodItem3}</li>
-              <li class="method-item"><span>◆</span> {methodItem4}</li>  
+              <li class="method-item"><span>◆</span> {methodItem5}</li>
+              <li class="method-item"><span>◆</span> {methodItem6}</li>
+              <li class="method-item"><span>◆</span> {methodItem7}</li>
+              <li class="method-item"><span>◆</span> {methodItem8}</li>  
             </ul>
         </div>
   </div>
 
   <div class="system-row reverse">
     <div class="system-content">
-      <h2>{systemRow2Title}</h2>
-      <p>{systemRow2Description}</p>
+      <h2>{systemRow3Title}</h2>
+      <p>{systemRow3Description}</p>
 
     <ul class="method-list">
-        <li class="method-item"><span>◆</span> {methodItem5}</li>
-        <li class="method-item"><span>◆</span> {methodItem6}</li>
-        <li class="method-item"><span>◆</span> {methodItem7}</li>
-        <li class="method-item"><span>◆</span> {methodItem8}</li>
+        <li class="method-item"><span>◆</span> {methodItem9}</li>
+        <li class="method-item"><span>◆</span> {methodItem10}</li>
+        <li class="method-item"><span>◆</span> {methodItem11}</li>
+        <li class="method-item"><span>◆</span> {methodItem12}</li>
        
       </ul>
 
@@ -647,7 +684,8 @@ h1 {
 
 .system-content p{
   margin-bottom:var(--size-775);
-  /* font-size: var(--fs-400); */
+   white-space: pre-line;
+  
 }
 
 

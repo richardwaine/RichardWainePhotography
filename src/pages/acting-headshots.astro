@@ -12,6 +12,7 @@ import JackCottrell from "../assets/images/features/Headshot_20220829_Jack Cottr
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
 import RW2 from "../assets/images/blog/RW7 - (16 x 9).jpg"
 import RW11 from "../assets/images/blog/RW11 - (horizontal).jpg"
+import ColleenClark from "../assets/images/acting-headshots/Colleen Clark - 0043 (horizontal).jpg"
 
 
 export interface Props {
@@ -90,23 +91,31 @@ const {
   pillar3Title = 'Strategic Selection',
   pillar3Description = 'We review your photos together, analyzing which images will actually work for casting and auditions. I help you select pictures that show range and authenticity. You walk away with headshots that make casting directors believe you are someone worth bringing in, not just another face in the pile.',
 
+  systemRow1Title = 'Why Your Acting Headshot Matters',
+  systemRow1Description = `Your acting headshots are the only part of your performance that enters the casting room before you do. In an industry where casting directors filter through hundreds of thumbnails in seconds, your image must do more than just show what you look like. It must communicate your specific type, energy, and character range. Your photos act as your primary marketing asset and signal that you are a serious professional who is prepared to work at a high level.
+
+  When an image lacks depth or authentic expression, it creates an immediate barrier between you and a potential audition. Casting is a process of elimination and an amateur photo provides an easy reason for you to be overlooked in favor of talent who appear camera ready. By getting headshots that capture genuine personality and presence, you ensure that your submission is an accurate and compelling representation of the actor you are today. This forces decision makers to stop scrolling and start considering you for the role.
+  `,
+  methodItem1 = '30% more audition invitations for actors with current professional headshots',
+  methodItem2 = "70% instant rejection for actors who don't look like their photo",
+  methodItem3 = '200% higher click-through rate for actor profiles with professional photos',
+  methodItem4 = '50% more callbacks for professional versus amateur headshots',
 
 
-
-  systemRow1Title = 'System of Direction',
-  systemRow1Description = "I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, specific direction that results in a natural, engaging presence on camera. My approach is designed to eliminate self-consciousness and help you settle into genuine expression. Posture and head position directly affect how approachable and compelling you appear. Slight, nuanced adjustments make the difference between looking stiff and looking like someone casting directors remember.",
-  methodItem1 = 'Real-time image tethering for instant feedback',
-  methodItem2 = 'Advanced guidance, coaching and direction',
-  methodItem3 = "Systematic approach that's different from typical photographers",
-  methodItem4 = 'Instant review and choice of images',
+  systemRow2Title = 'System of Direction',
+  systemRow2Description = "I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, specific direction that results in a natural, engaging presence on camera. My approach is designed to eliminate self-consciousness and help you settle into genuine expression. Posture and head position directly affect how approachable and compelling you appear. Slight, nuanced adjustments make the difference between looking stiff and looking like someone casting directors remember.",
+  methodItem5 = 'Real-time image tethering for instant feedback',
+  methodItem6 = 'Advanced guidance, coaching and direction',
+  methodItem7 = "Systematic approach that's different from typical photographers",
+  methodItem8 = 'Instant review and choice of images',
   
 
-  systemRow2Title = 'The Experience',
-  systemRow2Description = "Getting professional headshots doesn't have to feel awkward or performative. My headshot sessions are conversational, collaborative and comfortable. The strongest images come from moments when you're engaged and present instead of overthinking it. Actors and performers tell me their headshot session was more enjoyable than they anticipated.",
-  methodItem5 = 'Session preparation guide provided at time of scheduling',
-  methodItem6 = 'Wardrobe consultation based on purpose and color psychology',
-  methodItem7 = 'Professional lighting that defines your best features',
-  methodItem8 = "The dismantling of the 'I am not photogenic' narrative ",
+  systemRow3Title = 'The Experience',
+  systemRow3Description = "Getting professional headshots doesn't have to feel awkward or performative. My headshot sessions are conversational, collaborative and comfortable. The strongest images come from moments when you're engaged and present instead of overthinking it. Actors and performers tell me their headshot session was more enjoyable than they anticipated.",
+  methodItem9 = 'Session preparation guide provided at time of scheduling',
+  methodItem10 = 'Wardrobe consultation based on purpose and color psychology',
+  methodItem11 = 'Professional lighting that defines your best features',
+  methodItem12 = "The dismantling of the 'I am not photogenic' narrative ",
 
 
   footerTitle = 'Ready to elevate your brand?',
@@ -211,33 +220,57 @@ const {
 </section>
 
 <section class="system-section">
+
+<div class="system-row reverse">
+    <div class="system-content">
+      <h2>{systemRow1Title}</h2>
+      <p>{systemRow1Description}</p>
+
+    <ul class="method-list">
+        <li class="method-item"><span>◆</span> {methodItem1}</li>
+        <li class="method-item"><span>◆</span> {methodItem2}</li>
+        <li class="method-item"><span>◆</span> {methodItem3}</li>
+        <li class="method-item"><span>◆</span> {methodItem4}</li>
+       
+      </ul>
+
+      <!-- <div class="button-wrapper">
+        <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
+      </div> -->
+
+    </div>
+    <div class="system-image">
+      <Image src={ColleenClark} alt="Professional acting headshot of woman with red hair in light blue shirt, smiling warmly against white studio background, headshot made by Richard Waine in Lancaster Pennsylvania"/>
+    </div>
+  </div>
+
   <div class="system-row">
         <div class="system-image">
           <Image src={RW1} alt=""/>
         </div>
         
         <div class="system-content">
-            <h2>{systemRow1Title}</h2>
-            <p>{systemRow1Description}</p>
+            <h2>{systemRow2Title}</h2>
+            <p>{systemRow2Description}</p>
             <ul class="method-list">
-              <li class="method-item"><span>◆</span> {methodItem1}</li>
-              <li class="method-item"><span>◆</span> {methodItem2}</li>
-              <li class="method-item"><span>◆</span> {methodItem3}</li>
-              <li class="method-item"><span>◆</span> {methodItem4}</li>  
+              <li class="method-item"><span>◆</span> {methodItem5}</li>
+              <li class="method-item"><span>◆</span> {methodItem6}</li>
+              <li class="method-item"><span>◆</span> {methodItem7}</li>
+              <li class="method-item"><span>◆</span> {methodItem8}</li>  
             </ul>
         </div>
   </div>
 
   <div class="system-row reverse">
     <div class="system-content">
-      <h2>{systemRow2Title}</h2>
-      <p>{systemRow2Description}</p>
+      <h2>{systemRow3Title}</h2>
+      <p>{systemRow3Description}</p>
 
     <ul class="method-list">
-        <li class="method-item"><span>◆</span> {methodItem5}</li>
-        <li class="method-item"><span>◆</span> {methodItem6}</li>
-        <li class="method-item"><span>◆</span> {methodItem7}</li>
-        <li class="method-item"><span>◆</span> {methodItem8}</li>
+        <li class="method-item"><span>◆</span> {methodItem9}</li>
+        <li class="method-item"><span>◆</span> {methodItem10}</li>
+        <li class="method-item"><span>◆</span> {methodItem11}</li>
+        <li class="method-item"><span>◆</span> {methodItem12}</li>
        
       </ul>
 
@@ -637,7 +670,7 @@ h1 {
 
 .system-content p{
   margin-bottom:var(--size-775);
-  /* font-size: var(--fs-400); */
+  white-space: pre-line;
 }
 
 

@@ -8,10 +8,11 @@ import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 
 
-import JackCottrell from "../assets/images/features/Headshot_20220829_Jack Cottrell_Richard_Waine_Lancaster_PA_0318 (horizontal) - compressed.jpg"
+import KenGiglio from "../assets/images/features/Headshot_20180414_Ken Giglio_Richard_Waine_Lancaster_PA_0060-2 - compressed.jpg"
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
 import RW2 from "../assets/images/blog/RW7 - (16 x 9).jpg"
 import RW11 from "../assets/images/blog/RW11 - (horizontal).jpg"
+import Chubb from "../assets/images/blog/Chubb - 0100 (horizontal).jpg"
 
 
 export interface Props {
@@ -75,12 +76,12 @@ const {
   heroButtonText = 'GET PRICING',
   SecondaryButtonText = 'SCHEDULE CONSULT',
 
-  callout1 = 'CONFIDENCE',
-  callout2 = 'CONNECTION',
+  callout1 = 'PROFESSIONALISM',
+  callout2 = 'COMPETENCE',
 
   pillar1Num = 'THE SCIENCE',
   pillar1Title = 'Expression Direction',
-  pillar1Description = "Your profile photo acts as the visual anchor for your professional history. When that headshot image is forced and lacks authenticity, it contradicts the experience listed in your background. I bridge that gap by coaching your facial expression to capture the poise and confidence you bring to your work. This produces a business portrait that actually looks like the person described on your resume and in your LinkedIn profile.",
+  pillar1Description = "Your profile photo acts as the visual anchor for your professional history. When that business portrait is forced and lacks authenticity, it contradicts the experience listed in your background. I bridge that gap by coaching your facial expression to capture the poise and confidence you bring to your work. This produces a LinkedIn headshot that actually looks like the person described on your resume and in your LinkedIn profile.",
 
   pillar2Num = 'THE PROCESS',
   pillar2Title = 'Real-Time Review',
@@ -91,22 +92,32 @@ const {
   pillar3Description = 'We review images together with LinkedIn use in mind. Each photo is reviewed and evaluated for credibility, approachability, and presence. Together, we select the images that highlight your strengths and professional qualities. You leave with a headshot that clearly communicates confidence, competence, approachability, and trustworthiness.',
 
 
+  systemRow1Title = 'Why Your LinkedIn Headshot Matters',
+  systemRow1Description = `Your LinkedIn profile photo is not optional decoration. It is a primary factor in how often your profile appears in search results, how recruiters evaluate your credibility, and whether you are taken seriously as a professional. LinkedIn's algorithm prioritizes complete profiles, and a professional headshot is one of the most important signals the platform uses to determine profile quality. When someone searches for professionals in your field, a high-quality headshot dramatically increases the likelihood that your profile appears in their results.
+
+  Recruiters spend nearly 20% of their review time looking at your photo before they read your experience or qualifications. This means your headshot functions as a screening filter. A poor-quality photo creates immediate doubt about your judgment and professionalism, while a professional headshot signals that you take your career seriously and understand the value of a strong first impression. The difference between a professional image and an amateur photo is not just technical quality. It is the message you send about your commitment to your career and how you want to be perceived.
+  `,
+  methodItem1 = 'Professional headshots receive up to 21 times more profile views',
+  methodItem2 = 'Recruiters spend 19% of their time reviewing your headshot',
+  methodItem3 = '71% of hiring managers reject unprofessional headshots',
+  methodItem4 = 'Professional headshots demonstrate career investment',
 
 
-  systemRow1Title = 'System of Direction',
-  systemRow1Description = "Standing in front of a camera for a professional headshot can feel unnatural and vulnerable. Most people don’t instinctively know how to pose, hold their head, or position their hands. During the session, I guide posture and facial expression, so everything feels effortless and authentic. Clear, specific direction ensures that each movement and position demonstrates your approachability, confidence, and professionalism. Small, precise adjustments, a subtle tilt of the head, a shift in your shoulders, the placement of your hands, dramatically influence the final result.",
-  methodItem1 = 'Real-time image tethering for instant feedback',
-  methodItem2 = 'Advanced guidance, coaching and direction',
-  methodItem3 = "Systematic approach that's different from typical photographers",
-  methodItem4 = 'Instant review and choice of images',
+
+  systemRow2Title = 'System of Direction',
+  systemRow2Description = "Standing in front of a camera for a professional headshot can feel unnatural and vulnerable. Most people don’t instinctively know how to pose, hold their head, or position their hands. During the session, I guide posture and facial expression, so everything feels effortless and authentic. Clear, specific direction ensures that each movement and position demonstrates your approachability, confidence, and professionalism. Small, precise adjustments, a subtle tilt of the head, a shift in your shoulders, the placement of your hands, dramatically influence the final result.",
+  methodItem5 = 'Real-time image tethering for instant feedback',
+  methodItem6 = 'Advanced guidance, coaching and direction',
+  methodItem7 = "Systematic approach that's different from typical photographers",
+  methodItem8 = 'Instant review and choice of images',
   
 
-  systemRow2Title = 'The Experience',
-  systemRow2Description = "Getting professional headshots doesn't have to feel awkward or performative. My headshot sessions are conversational, collaborative and comfortable. The strongest images come from moments when you're engaged and present instead of overthinking it. Actors and performers tell me their headshot session was more enjoyable than they anticipated.",
-  methodItem5 = 'Session preparation guide provided at time of scheduling',
-  methodItem6 = 'Wardrobe consultation based on purpose and color psychology',
-  methodItem7 = 'Professional lighting that defines your best features',
-  methodItem8 = "The dismantling of the 'I am not photogenic' narrative ",
+  systemRow3Title = 'The Experience',
+  systemRow3Description = "Most professionals approach their LinkedIn headshot session with some level of apprehension. The idea of being photographed can feel uncomfortable when the outcome matters for your career. My headshot sessions eliminate that tension by creating an environment that feels more like a conversation with a trusted friend than a formal photo shoot. Music plays, we laugh, and the direction I provide feels natural rather than forced. Rather than expecting you to know what to do in front of the camera, I guide your posture, expression, and positioning throughout. Most people are surprised by how much they enjoy the process.",
+  methodItem9 = 'Session preparation guide provided at time of scheduling',
+  methodItem10 = 'Wardrobe consultation based on purpose and color psychology',
+  methodItem11 = 'Professional lighting that defines your best features',
+  methodItem12 = "The dismantling of the 'I am not photogenic' narrative ",
 
 
   footerTitle = 'Ready to elevate your brand?',
@@ -121,16 +132,20 @@ const {
 
   faqs = [                                                                  
       {                                                                       
-        question: "Should I lose weight before getting my headshot taken?",                                               
-        answer: `The best time for your headshot is now. Casting directors want to see the real you, and waiting until you reach some future version of yourself means missing opportunities that exist today. Your headshot needs to match who walks through the door at auditions, which means representing yourself authentically as you are right now.
+        question: "Will recruiters take you less seriously with a bad headshot?",                                               
+        answer: `Yes. A bad headshot functions as a primary screening filter that leads to immediate disqualification. Research from Ladders using eye tracking technology proves that recruiters spend 19% of their total profile review time looking at your photo. If the image is unprofessional, they are statistically less likely to even read your experience. This is supported by data from CareerBuilder, which found that 71% of hiring managers have rejected candidates based on their online professional presence, citing a poor headshot as a sign of low professional judgment and a lack of attention to detail.
 
-        Professional headshot sessions are designed to present you at your most compelling, regardless of where you are with fitness goals or appearance concerns. I've worked with actors at every stage of their journey who felt the same hesitation. The breakthrough happens when you trust an experienced photographer to guide the process and show you what others already see. I wrote an entire article about <a href="/blog/should-i-wait-to-have-my-headshot-taken">whether you should wait to get your headshot taken</a> that addresses appearance concerns, self-consciousness, and timing in depth.`                                                   
+        Furthermore, a professional headshot signals a willingness to invest in yourself. Recruiters view a high quality image as evidence that you take your career and personal brand seriously and are committed to presenting yourself as a polished professional. Using a low effort or low quality photo suggests a lack of self investment, leading hiring managers to question whether you will apply that same lack of effort to your work. A professional headshot photo removes that doubt by demonstrating that you value your own professional brand.
+        `                                                   
       },                                                                      
       {                                                                       
-        question: "How often should actors update their headshots?",                                               
-        answer: `Update your headshots every 1-2 years, or sooner if your appearance changes significantly. Your headshot represents your current look, and casting directors need accurate images that match who walks into the audition room. If your hairstyle, facial hair, weight, or overall appearance has shifted noticeably since your last session, your headshots are outdated.
+        question: "Why choose a professional session over an AI headshot?",                                               
+        answer: `AI headshots might cost less, but they are a poor investment because they are completely contrived fabrications. Business happens when people know, like, and trust you, and a professional headshot facilitates that trust by providing an accurate representation of your appearance, personality, and style. By choosing AI, you sacrifice the skill, ability, knowledge, professional equipment, and collaboration required to capture your professionalism and message, in exchange for a few pennies saved.
 
-        When your headshot doesn't match your current appearance, it creates immediate disconnect at auditions and callbacks. Casting directors form expectations based on your submitted images. Walking in looking different from your headshot damages trust before you've even started the audition. Keeping your headshots current shows you're actively managing your career and respecting the casting process.
+        While an algorithm simply regurgitates indexed data without coaching or direction, I work with you in real time to elicit genuine facial expressions. AI headshots are just cheap renditions of what a computer thinks you should look like or how it thinks society should see you. Whereas I provide the expert guidance, nuanced lighting, and intentional composition needed to ensure the resulting image truly represents you. You gain a reliable, trusted collaborator and confidant who actively listens to your concerns, has a vested interest in your success, and tailors the final images to best suit your needs.
+
+        AI cannot replicate the human interaction required to make you feel comfortable or to ensure the final product looks like the person who actually shows up to the meeting. By choosing a professional headshot session, you are choosing a relatable, authentic image and a dedicated service experience over a guess made by software that lacks any real human element. Not only do you get a specialist determined to align with your goals, but you ensure a smooth, enjoyable experience rather than wasting valuable resources on a fabricated result.
+
         `                                                    
       },                                                                      
       {                                                                       
@@ -185,7 +200,7 @@ const {
     <div class="hero-visual">
         <div class="blueprint-box">
             <div class="portrait-sim">
-              <Image src={JackCottrell}  alt=""/>
+              <Image src={KenGiglio}  alt=""/>
             </div>
 
             <div class="callout c-1">{callout1}</div>
@@ -213,33 +228,58 @@ const {
 </section>
 
 <section class="system-section">
+
+<div class="system-row reverse">
+    <div class="system-content">
+      <h2>{systemRow1Title}</h2>
+      <p>{systemRow1Description}</p>
+
+    <ul class="method-list">
+        <li class="method-item"><span>◆</span> {methodItem1}</li>
+        <li class="method-item"><span>◆</span> {methodItem2}</li>
+        <li class="method-item"><span>◆</span> {methodItem3}</li>
+        <li class="method-item"><span>◆</span> {methodItem4}</li>
+       
+      </ul>
+
+      <!-- <div class="button-wrapper">
+        <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
+      </div> -->
+
+    </div>
+    <div class="system-image">
+      <Image src={Chubb} alt="Professional LinkedIn headshot of African American woman with long braided hair in burgundy shirt, confident and poised facial expression against gray studio background, headshot made by Richard Waine in Philadelphia Pennsylvania for Chubb Insurance"/>
+    </div>
+  </div>
+
+    
   <div class="system-row">
         <div class="system-image">
           <Image src={RW1} alt=""/>
         </div>
         
         <div class="system-content">
-            <h2>{systemRow1Title}</h2>
-            <p>{systemRow1Description}</p>
+            <h2>{systemRow2Title}</h2>
+            <p>{systemRow2Description}</p>
             <ul class="method-list">
-              <li class="method-item"><span>◆</span> {methodItem1}</li>
-              <li class="method-item"><span>◆</span> {methodItem2}</li>
-              <li class="method-item"><span>◆</span> {methodItem3}</li>
-              <li class="method-item"><span>◆</span> {methodItem4}</li>  
+              <li class="method-item"><span>◆</span> {methodItem5}</li>
+              <li class="method-item"><span>◆</span> {methodItem6}</li>
+              <li class="method-item"><span>◆</span> {methodItem7}</li>
+              <li class="method-item"><span>◆</span> {methodItem8}</li>  
             </ul>
         </div>
   </div>
 
   <div class="system-row reverse">
     <div class="system-content">
-      <h2>{systemRow2Title}</h2>
-      <p>{systemRow2Description}</p>
+      <h2>{systemRow3Title}</h2>
+      <p>{systemRow3Description}</p>
 
     <ul class="method-list">
-        <li class="method-item"><span>◆</span> {methodItem5}</li>
-        <li class="method-item"><span>◆</span> {methodItem6}</li>
-        <li class="method-item"><span>◆</span> {methodItem7}</li>
-        <li class="method-item"><span>◆</span> {methodItem8}</li>
+        <li class="method-item"><span>◆</span> {methodItem9}</li>
+        <li class="method-item"><span>◆</span> {methodItem10}</li>
+        <li class="method-item"><span>◆</span> {methodItem11}</li>
+        <li class="method-item"><span>◆</span> {methodItem12}</li>
        
       </ul>
 
@@ -639,7 +679,7 @@ h1 {
 
 .system-content p{
   margin-bottom:var(--size-775);
-  
+  white-space: pre-line;
 }
 
 
