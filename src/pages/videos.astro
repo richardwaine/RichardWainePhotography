@@ -1,12 +1,116 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import PageTitle from '../components/PageTitle.astro';
+import { buildVideoObjectSchema } from '../utils/schema';
 
 const title = 'Videos - Richard Waine Photography';
 const h1 = 'VIDEOS';
+
+// Video schemas - Physical Technique Videos
+const squinchVideoSchema = buildVideoObjectSchema(
+  {
+    name: "Mastering the Squinch | Look Confident in Photos",
+    description: "Learn the squinch technique to look more confident and engaged in your professional headshots.",
+    thumbnailUrl: "https://img.youtube.com/vi/ff7nltdBCHs/maxresdefault.jpg",
+    uploadDate: "2020-01-01",
+    embedUrl: "https://www.youtube.com/embed/ff7nltdBCHs"
+  },
+  "Richard Waine Photography"
+);
+
+const jawlineVideoSchema = buildVideoObjectSchema(
+  {
+    name: "Mastering Jawlines in Photos | The Perfect Jawline Trick",
+    description: "Learn the jawline technique to look your best in professional headshots.",
+    thumbnailUrl: "https://img.youtube.com/vi/Qe3oJnFtA_k/maxresdefault.jpg",
+    uploadDate: "2020-01-01",
+    embedUrl: "https://www.youtube.com/embed/Qe3oJnFtA_k"
+  },
+  "Richard Waine Photography"
+);
+
+const thinnerVideoSchema = buildVideoObjectSchema(
+  {
+    name: "How To Look Thinner | Holding Your Sub",
+    description: "Posing techniques to look thinner and more confident in your professional headshots.",
+    thumbnailUrl: "https://img.youtube.com/vi/lXbOx36YXrU/maxresdefault.jpg",
+    uploadDate: "2020-01-01",
+    embedUrl: "https://www.youtube.com/embed/lXbOx36YXrU"
+  },
+  "Richard Waine Photography"
+);
+
+const spreadVideoSchema = buildVideoObjectSchema(
+  {
+    name: "Spread em to look better in pictures!",
+    description: "Body positioning techniques for better headshots and professional photos.",
+    thumbnailUrl: "https://img.youtube.com/vi/axFJvIfPMZc/maxresdefault.jpg",
+    uploadDate: "2020-01-01",
+    embedUrl: "https://www.youtube.com/embed/axFJvIfPMZc"
+  },
+  "Richard Waine Photography"
+);
+
+// Video schemas - Psychological Videos
+const doveSketchVideoSchema = buildVideoObjectSchema(
+  {
+    name: "Dove -- Real Beauty Sketch Commercial",
+    description: "Understanding self-perception vs how others see you. Important psychological insights for professional headshots.",
+    thumbnailUrl: "https://img.youtube.com/vi/rymT28Z6KQY/maxresdefault.jpg",
+    uploadDate: "2013-04-15",
+    embedUrl: "https://www.youtube.com/embed/rymT28Z6KQY"
+  },
+  "Richard Waine Photography"
+);
+
+const innerCriticVideoSchema = buildVideoObjectSchema(
+  {
+    name: "Dove Inner Critic | Are you your own worst critic?",
+    description: "Overcoming your inner critic to achieve great results in your professional headshots.",
+    thumbnailUrl: "https://img.youtube.com/vi/PPjeelgG9Cg/maxresdefault.jpg",
+    uploadDate: "2015-01-01",
+    embedUrl: "https://www.youtube.com/embed/PPjeelgG9Cg"
+  },
+  "Richard Waine Photography"
+);
+
+const tedxVideoSchema = buildVideoObjectSchema(
+  {
+    name: "Bridging the self-acceptance gap with psyphotology | Anna Rowley & Peter Hurley | TEDxCambridge",
+    description: "Understanding the psychology of being photographed and self-acceptance in professional headshots.",
+    thumbnailUrl: "https://img.youtube.com/vi/oYJCDYNsL6A/maxresdefault.jpg",
+    uploadDate: "2016-01-01",
+    embedUrl: "https://www.youtube.com/embed/oYJCDYNsL6A"
+  },
+  "Richard Waine Photography"
+);
+
+const selfAcceptanceVideoSchema = buildVideoObjectSchema(
+  {
+    name: "Self Acceptance",
+    description: "Self acceptance and confidence in professional headshot photography.",
+    thumbnailUrl: "https://img.youtube.com/vi/B0NMXcVUvDs/maxresdefault.jpg",
+    uploadDate: "2015-01-01",
+    embedUrl: "https://www.youtube.com/embed/B0NMXcVUvDs"
+  },
+  "Richard Waine Photography"
+);
+
 ---
 
 <MainLayout title="Looking confident isn't easy! Let me help you look great!" description="Watch these videos before your professional headshot session to understand key factors that affect perceptions of confidence and approachability.">
+
+<!-- Video Schemas - Physical Techniques -->
+<script type="application/ld+json" set:html={JSON.stringify(squinchVideoSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(jawlineVideoSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(thinnerVideoSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(spreadVideoSchema)} />
+
+<!-- Video Schemas - Psychological -->
+<script type="application/ld+json" set:html={JSON.stringify(doveSketchVideoSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(innerCriticVideoSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(tedxVideoSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(selfAcceptanceVideoSchema)} />
 
 <PageTitle title={h1} titleColor="var(--ltclr)" />
 

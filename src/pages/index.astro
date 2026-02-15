@@ -24,6 +24,7 @@ import captions from '../assets/captions.vtt';
 
 import BriefBio2 from '../components/BriefBio2.astro';
 import WorldMap from '../components/WorldMap.astro';
+import { buildVideoObjectSchema, buildReviewSchema } from '../utils/schema';
 
 const title = 'Richard Waine Photography';
 const h1 = 'Professional Headshots Lancaster';
@@ -41,11 +42,63 @@ const heroContent = {
   mainHeading: h1
 };
 
+// Video schema
+const promoVideoSchema = buildVideoObjectSchema(
+  {
+    name: "Professional Headshot Photography Experience - Richard Waine",
+    description: "See what it's like to work with professional headshot photographer Richard Waine. Experience the process, direction, and results that make great headshots.",
+    thumbnailUrl: "https://richardwainephotography.com" + videoPoster.src,
+    uploadDate: "2024-01-15",
+    embedUrl: "https://richardwainephotography.com" + promoVideo
+  },
+  "Richard Waine Photography"
+);
 
+// Review schemas
+const wendyBookerReview = buildReviewSchema(
+  {
+    author: "Wendy Booker",
+    company: "Armstrong Flooring, Inc.",
+    rating: "5",
+    reviewBody: "Rich captured exactly the look and feel I wanted in my headshots. He demands the best from himself and his subjects, and it shows. Thank you for taking my re-branding efforts to the next level!"
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const scottKantnerReview = buildReviewSchema(
+  {
+    author: "Scott Kantner",
+    company: "Larson Design Group",
+    rating: "5",
+    reviewBody: "Richard is the person you want to do your headshots. Stop searching, don't hesitate, just stop reading this and make the appointment. You won't find anyone better, nor a more enjoyable experience."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const ellenTaylorReview = buildReviewSchema(
+  {
+    author: "Ellen Taylor",
+    company: "The Center For Health Design",
+    rating: "5",
+    reviewBody: "Relaxed. Results. Repeat. Richard's approach is perfect to get the best 'you' for your headshot. Your trepidations will gradually disappear as he walks you through the session. I will be back!"
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
 
 ---
 
 <MainLayout title = "Professional Headshot Photographer | Lancaster, PA" description="Lancaster Pennsylvania's Best Headshot Photographer for professional headshots, office headshots, business headshots, corporate headshots, acting headshots">
+
+	<!-- Video Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(promoVideoSchema)} />
+
+	<!-- Review Schemas -->
+	<script type="application/ld+json" set:html={JSON.stringify(wendyBookerReview)} />
+	<script type="application/ld+json" set:html={JSON.stringify(scottKantnerReview)} />
+	<script type="application/ld+json" set:html={JSON.stringify(ellenTaylorReview)} />
 
 	<section id="hero">
 	<Hero

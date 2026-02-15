@@ -1,6 +1,6 @@
 ---
 import PrimaryButton from './PrimaryButton.astro';
-
+import { buildServiceSchema } from '../utils/schema';
 
 import { Image } from 'astro:assets';
 import ChubbContactSheet from '../assets/images/office-headshots/Chubb - ContactSheet (square).jpg';
@@ -15,6 +15,17 @@ import JasonCooley from '../assets/images/office-headshots/JasonCooley - 0032 (5
 import CamilleSwann from '../assets/images/office-headshots/CamilleSwann - 0105 (500px).jpg';
 import DebbieKerchner from '../assets/images/office-headshots/DebbieKerchner - 0063 (500px).jpg';
 
+// Generate Service schema for office headshots
+const officeHeadshotsSchema = buildServiceSchema(
+  "Corporate Office Headshots",
+  "On-Location Office Headshots",
+  "On-location headshots for teams and companies. Consistent images for maximum impact. Align your team profile images with your company's brand. Save time, money, and increase productivity with studio-quality headshots at your office.",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "+1-717-509-9274",
+  ["Pennsylvania", "Maryland", "Delaware"]
+);
 
 ---
 
@@ -107,6 +118,7 @@ import DebbieKerchner from '../assets/images/office-headshots/DebbieKerchner - 0
       </div>
     </div>
 
+<script type="application/ld+json" set:html={JSON.stringify(officeHeadshotsSchema)} />
 
 <style>
 

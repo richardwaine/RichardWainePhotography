@@ -1,5 +1,14 @@
 ---
 // Floating Statistics Component
+import { buildAggregateRatingSchema } from '../utils/schema';
+
+// Generate aggregate rating schema from stats
+const ratingSchema = buildAggregateRatingSchema(
+  "Richard Waine Photography",
+  "5",
+  "652",
+  "https://richardwainephotography.com"
+);
 ---
 
 <!-- 3D Floating Statistics -->
@@ -12,17 +21,19 @@
     </div>
     <div class="stat-card" data-delay="200">
         <div class="stat-3d-container">
-            <div class="stat-number" data-count="651">0</div>
+            <div class="stat-number" data-count="652">0</div>
             <div class="stat-label">5-Star Google Reviews</div>
         </div>
     </div>
     <div class="stat-card" data-delay="400">
         <div class="stat-3d-container">
-            <div class="stat-number" data-count="100">0</div>
-            <div class="stat-label">Client Satisfaction %</div>
+            <div class="stat-number" data-count="100" data-suffix="%">0</div>
+            <div class="stat-label">Client Satisfaction</div>
         </div>
     </div>
 </div>
+
+<script type="application/ld+json" set:html={JSON.stringify(ratingSchema)} />
 
 <style>
     /* 3D Floating Statistics */
@@ -115,7 +126,8 @@ function initFloatingStats() {
             const progress = Math.min((currentTime - startTime) / duration, 1);
 
             const current = Math.floor(start + (target - start) * progress);
-            element.textContent = current.toString();
+            const suffix = element.dataset.suffix || '';
+            element.textContent = current.toString() + suffix;
 
             if (progress < 1) {
                 requestAnimationFrame(update);

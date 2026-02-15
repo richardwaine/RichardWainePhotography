@@ -71,6 +71,15 @@ import heroImg12_600 from '../assets/images/hero-images/600px/(600px) - Josh Out
 import heroImg13_600 from '../assets/images/hero-images/600px/(600px) - Jacqueline Eby_Richard_Waine_Lancaster_PA_0091 - compressed.jpg';
 import heroImg14_600 from '../assets/images/hero-images/600px/(600px) - Ethan Haymovitz_Richard_Waine_Lancaster_PA_0135 - compressed.jpg';
 import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany Baughman_Richard_Waine_Lancaster_PA_0160 - compressed.jpg';
+import { buildImageGallerySchema } from '../utils/schema';
+
+// Generate ImageGallery schema for hero portfolio
+const heroGallerySchema = buildImageGallerySchema(
+  "Professional Headshot Portfolio",
+  "Portfolio gallery showcasing professional headshots by Richard Waine Photography - business headshots, acting headshots, and corporate photography",
+  "Richard Waine",
+  "Professional Headshot Photographer"
+);
 
 ---
 
@@ -391,6 +400,7 @@ import heroImg15_600 from '../assets/images/hero-images/600px/(600px) - Stephany
     </div>
 </main>
 
+<script type="application/ld+json" set:html={JSON.stringify(heroGallerySchema)} />
 
 <style>
 

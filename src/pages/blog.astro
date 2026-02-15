@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 import PageTitle from '../components/PageTitle.astro';
 import { getCollection } from 'astro:content';
+import { buildBlogSchema } from '../utils/schema';
 
 const title = 'Richard Waine Photography Blog';
 const h1 = "Blog"
@@ -13,11 +14,21 @@ const posts = (await getCollection('blog')).sort((a, b) => {
   return dateB.getTime() - dateA.getTime(); // Most recent first
 });
 
+// Blog schema
+const blogSchema = buildBlogSchema(
+  "Richard Waine Photography Blog",
+  "Professional headshot photography insights, tips, and industry knowledge. Learn about professional headshots, personal branding, and business photography.",
+  "https://richardwainephotography.com/blog",
+  "Richard Waine Photography"
+);
 
 ---
 
 
 <MainLayout title = "Headshot Photography Information and Thoughts" description="Headshot Photography rants and raves. Insights and information for your professional headshot photography needs, marketing, branding, and social media use.">
+
+<!-- Blog Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
 
 <PageTitle title={h1} />
 

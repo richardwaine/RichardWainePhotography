@@ -6,7 +6,7 @@ import PrimaryButton from "../components/PrimaryButton.astro"
 import SecondaryButton from '../components/SecondaryButton.astro'
 import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
-
+import { buildServiceSchema, buildReviewSchema } from '../utils/schema';
 
 import KenGiglio from "../assets/images/features/Headshot_20180414_Ken Giglio_Richard_Waine_Lancaster_PA_0060-2 - compressed.jpg"
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
@@ -171,12 +171,66 @@ const {
 
 } = Astro.props;
 
+// Service schema
+const linkedinHeadshotsServiceSchema = buildServiceSchema(
+  "LinkedIn Headshots",
+  "Professional LinkedIn Headshot Photography",
+  "Professional LinkedIn headshots that make you stand out. Optimized profile photos that enhance your professional brand and attract opportunities.",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "+1-717-925-0061",
+  ["Pennsylvania", "Maryland", "Delaware"]
+);
+
+// Review schemas - 3 testimonials
+const andrewJacobsReview = buildReviewSchema(
+  {
+    author: "Andrew Jacobs",
+    company: "Turkey Hill",
+    rating: "5",
+    reviewBody: "Richard is a true professional and I greatly enjoyed my experience working with him. He provided a clear instructions and made the entire experience fun and enjoyable. If you need headshots I highly recommend Richard Waine"
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const julieEvansReview = buildReviewSchema(
+  {
+    author: "Julie Evans",
+    company: "Claritas HR",
+    rating: "5",
+    reviewBody: "Rich provided way more than I expected, but somehow just what I needed. He helped me see clearly who I intend to be as a business professional and even more as a person. Impressed is an understatement."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const nolanFosterReview = buildReviewSchema(
+  {
+    author: "Nolan Foster",
+    company: "Bursera Capital",
+    rating: "5",
+    reviewBody: "When someone says 'a master of their craft' they typically refer to individuals like Steve Jobs, Leonardo, and Socrates. They were all masters, but I bet they couldn't take photos as good as Richard Waine can."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
 ---
 
 
 
 
 <MainLayout title={pageTitle} description={metaDescription}>
+
+<!-- Service Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(linkedinHeadshotsServiceSchema)} />
+
+<!-- Review Schemas -->
+<script type="application/ld+json" set:html={JSON.stringify(andrewJacobsReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(julieEvansReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(nolanFosterReview)} />
 
 <body>
 <section class="hero">

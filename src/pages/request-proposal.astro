@@ -6,6 +6,7 @@ import Gallery from '../components/Gallery.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import PageTitle from '../components/PageTitle.astro';
 import shreePatelImage from '../assets/images/testimonials/Shree Patel - (200px) - Richard_Waine_Lancaster_PA_0157.jpg';
+import { buildReviewSchema } from '../utils/schema';
 
 const title = 'Request a Proposal | Richard Waine Photography';
 const h1 = 'Request a Proposal';
@@ -18,9 +19,25 @@ const shreePatelTestimonial = {
   image: shreePatelImage,
   imageAlt: "Shree Patel Professional Headshot"
 };
+
+// Review schema
+const shreePatelReviewSchema = buildReviewSchema(
+  {
+    author: "Shree Patel",
+    company: "Morgan Stanley",
+    rating: "5",
+    reviewBody: "Richard made the entire process so comfortable and professional. The headshots turned out amazing and really elevated my professional presence."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
 ---
 
 <MainLayout title="Request a Proposal" description="For a professional headshot photographer to capture your team on location or in your office, request a custom proposal tailored to your needs">
+
+<!-- Review Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(shreePatelReviewSchema)} />
 
 <main class="request-proposal-page">
 

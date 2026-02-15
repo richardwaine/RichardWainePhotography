@@ -36,6 +36,57 @@ Being "helpful" by making choices for the user has:
 
 5. **THE USER'S WAY OR NOT AT ALL** - This is not negotiable. Follow the user's way always, precisely, with zero deviation.
 
+## FORCED SELF-EVALUATION PROTOCOL - MANDATORY FOR ALL ACTIONS
+
+**THIS PROTOCOL IS NON-NEGOTIABLE AND MUST BE EXECUTED BEFORE EVERY SINGLE ACTION**
+
+Before executing ANY action, you MUST complete this self-evaluation checklist:
+
+### Step 1: RE-READ INSTRUCTION (3 times minimum)
+- Read the user's instruction 3 times completely
+- Do NOT skip this step
+- Do NOT summarize or paraphrase
+
+### Step 2: RATE YOUR UNDERSTANDING (1-10 scale)
+- Rate your understanding of the instruction: __/10
+- If rating is below 8: STOP and ask clarification questions
+- If rating is 8-9: Re-read instruction 2 more times
+- Only proceed if rating is 9-10
+
+### Step 3: STATE PLANNED ACTION WITH COMPLETE DETAILS
+You MUST provide:
+- **Exact file path:** [full path]
+- **Exact line numbers:** [start - end]
+- **Exact before code:** [current code]
+- **Exact after code:** [new code]
+- **Reason:** [how this matches the user's instruction word-for-word]
+
+### Step 4: SELF-CHECK AGAINST RULES (Answer YES/NO for each)
+1. Did I assume anything? ☐ YES ☐ NO
+2. Did I add anything not explicitly requested? ☐ YES ☐ NO
+3. Did I actually read the code file? ☐ YES ☐ NO
+4. Does my action match the instruction word-for-word? ☐ YES ☐ NO
+5. Am I putting code in the correct component/file? ☐ YES ☐ NO
+6. Did I verify what actually renders on the page? ☐ YES ☐ NO
+
+### Step 5: EVALUATION RESULT
+- **If ANY answer in Step 4 is wrong:** STOP immediately, restart from Step 1
+- **If ALL answers in Step 4 are correct:** Request "proceed" from user
+- **NEVER proceed without explicit "proceed" approval**
+
+### Step 6: POST-EXECUTION VERIFICATION
+After executing the action:
+1. Re-read the original instruction
+2. Verify the result matches the instruction exactly
+3. Report completion with confirmation that result matches instruction
+
+**RATIONALE:** Research from 2026 shows that forcing LLMs to self-evaluate before outputting significantly reduces hallucinations, assumptions, and instruction-following failures. This protocol implements self-evaluation as a mandatory gate before any action.
+
+**Sources:**
+- [Precision Prompting with Examples](https://www.convert.com/blog/ai/precision-prompting-with-examples/)
+- [Design Smarter Prompts - Towards Data Science](https://towardsdatascience.com/boost-your-llm-outputdesign-smarter-prompts-real-tricks-from-an-ai-engineers-toolbox/)
+- [My LLM coding workflow going into 2026](https://addyosmani.com/blog/ai-coding-workflow/)
+
 ## CRITICAL RULES
 
 ### Fundamental Principles
@@ -148,6 +199,94 @@ Being "helpful" by making choices for the user has:
 - Components: `/src/components/`
 - Assets: `/src/assets/`
 - Styles: Embedded in components or `/src/styles/`
+
+### Schema/Structured Data Implementation Pattern
+
+**MANDATORY PROCESS for adding schema to new pages or components:**
+
+1. **Import schema utility functions** at top of frontmatter:
+   ```typescript
+   import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
+   ```
+
+2. **Generate schema data in frontmatter** using utility functions:
+   ```typescript
+   const mySchema = buildServiceSchema(
+     "Service Name",
+     "Service Type",
+     "Description",
+     // ...other parameters as required by the function
+   );
+   ```
+
+3. **Output schema in HTML** using set:html directive:
+   ```html
+   <!-- Schema Description -->
+   <script type="application/ld+json" set:html={JSON.stringify(mySchema)} />
+   ```
+
+**Key Rules:**
+- **ALWAYS use utility functions** from `/src/utils/schema.ts` - NEVER write schema manually
+- **If new schema type needed**, add new function to schema.ts FIRST, then use it
+- **Multiple schemas on one page** = multiple script tags (one per schema)
+- **Generate schema in frontmatter**, output in HTML body
+- **Use descriptive comments** above each schema script tag explaining what it is
+- **Follow existing patterns** - look at implemented pages for examples
+
+**Available Schema Functions:**
+See `/src/utils/schema.ts` for complete list including:
+- `buildServiceSchema` - Business services
+- `buildReviewSchema` - Individual testimonials/reviews
+- `buildFAQSchema` - FAQ pages/sections
+- `buildVideoObjectSchema` - YouTube videos
+- `buildProductSchema` - Products/gift certificates
+- `buildPersonSchema` - Team members/people
+- `buildPlaceSchema` - Physical locations with geo coordinates
+- `buildItemListSchema` - Lists/directories of items
+- `buildBlogSchema` - Blog collection pages
+- `buildHowToSchema` - Step-by-step guides
+
+**Example Implementation:**
+```astro
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { buildServiceSchema, buildReviewSchema } from '../utils/schema';
+
+// Service schema
+const serviceSchema = buildServiceSchema(
+  "Professional Headshots",
+  "Photography Service",
+  "Professional headshot photography for businesses...",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "+1-717-925-0061",
+  ["Pennsylvania"]
+);
+
+// Review schema
+const reviewSchema = buildReviewSchema(
+  {
+    author: "John Doe",
+    company: "Acme Corp",
+    rating: "5",
+    reviewBody: "Amazing experience..."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+---
+
+<MainLayout>
+  <!-- Service Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+  <!-- Review Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
+
+  <!-- Rest of page content -->
+</MainLayout>
+```
 
 ### Testing Commands
 - Development server: `npm run dev` (runs on localhost:4321)

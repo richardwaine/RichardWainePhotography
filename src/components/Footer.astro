@@ -4,6 +4,7 @@ import FacebookIcon from './icons/FacebookIcon.astro';
 import InstagramIcon from './icons/InstagramIcon.astro';
 import PinterestIcon from './icons/PinterestIcon.astro';
 import LinkedInIcon from './icons/LinkedInIcon.astro';
+import { buildOrganizationSchema } from '../utils/schema';
 
 export interface Props {
   businessInfo?: {name: string; address: string; phone: string};
@@ -52,6 +53,20 @@ const iconComponents = {
   pinterest: PinterestIcon,
   linkedin: LinkedInIcon
 };
+
+// Generate Organization schema
+const socialUrls = socialLinks.map(link => link.url);
+const organizationSchema = buildOrganizationSchema(
+  businessInfo.name,
+  "https://richardwainephotography.com",
+  "Professional headshot photographer in Lancaster, PA specializing in business headshots, acting headshots, LinkedIn profiles, and corporate photography",
+  "Lancaster",
+  "PA",
+  "+1-717-925-0061",
+  socialUrls,
+  "Richard Waine",
+  "Professional Headshot Photographer"
+);
 ---
 
 <!-- Footer Access Trapezoid -->
@@ -138,6 +153,8 @@ const iconComponents = {
         </div>
     </div>
 </div>
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 
 <style>
 

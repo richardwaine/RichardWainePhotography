@@ -188,20 +188,22 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     });
   }
 
-  function setupObserver() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) { initMap(); observer.unobserve(entry.target); } });
-    }, { threshold: 0.1 });
+  document.addEventListener('astro:page-load', () => {
+    function setupObserver() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { initMap(); observer.unobserve(entry.target); } });
+      }, { threshold: 0.1 });
 
-    const target = document.querySelector('.WorldMapSection');
-    if (target) observer.observe(target);
-  }
+      const target = document.querySelector('.WorldMapSection');
+      if (target) observer.observe(target);
+    }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupObserver);
-  } else {
-    setupObserver();
-  }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupObserver);
+    } else {
+      setupObserver();
+    }
+  });
 </script>
 
 

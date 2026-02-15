@@ -1,12 +1,36 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import PageTitle from '../components/PageTitle.astro';
+import { buildPlaceSchema } from '../utils/schema';
 
 const title = 'Richard Waine Photography Studio - Lancaster PA';
 const h1 = 'Richard Waine Photography Studio';
+
+// Place schema for studio location
+const studioPlaceSchema = buildPlaceSchema(
+  "Richard Waine Photography Studio",
+  "Professional headshot photography studio in downtown Lancaster, PA. Located next to Lancaster Central Market, across from Fulton Bank and the Lancaster County Convention Center.",
+  "Downtown Lancaster",
+  "Lancaster",
+  "PA",
+  "17603",
+  "40.0385633",
+  "-76.305992",
+  "+1-717-925-0061",
+  "https://richardwainephotography.com/richard-waine-photography-studio",
+  [
+    "Monday-Friday 9:00 AM - 5:00 PM",
+    "Saturday By Appointment",
+    "Sunday Closed"
+  ]
+);
+
 ---
 
 <MainLayout title="Richard Waine Headshot Photography | Location" description="Richard Waine Photography is centrally located in downtown Lancaster, PA. Specializing in professional headshots, portraiture, and personal branding.">
+
+<!-- Place Schema for Studio Location -->
+<script type="application/ld+json" set:html={JSON.stringify(studioPlaceSchema)} />
 
 <main>
   <div class="studio-page">

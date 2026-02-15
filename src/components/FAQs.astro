@@ -1,5 +1,6 @@
 ---
 import FAQAccordion from './FAQAccordion.astro';
+import { buildFAQSchema } from '../utils/schema';
 
 const tel = "(717) 925 - 0061"
 
@@ -40,6 +41,10 @@ const rightColumnFAQs = [
     answer: "A professional headshot is not just a pretty picture. It is a personal and corporate branding tool. This is your virtual handshake and introduction to the world. Here is a list of people and professions that need a professional headshot: <b><a style=\"color:blue;cursor:pointer\" href=\"/blog/who-needs-a-solid-headshot\">Who Needs a Solid Headshot?</a></b>"
   }
 ];
+
+// Generate FAQ schema from component data
+const allFAQs = [...leftColumnFAQs, ...rightColumnFAQs];
+const faqSchema = buildFAQSchema(allFAQs);
 ---
 
 <div class="wrapper faq-section-wrapper">
@@ -60,6 +65,8 @@ const rightColumnFAQs = [
 </div>
 
 </div>
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 <style>
 

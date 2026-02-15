@@ -6,7 +6,7 @@ import PrimaryButton from "../components/PrimaryButton.astro"
 import SecondaryButton from '../components/SecondaryButton.astro'
 import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
-
+import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
 
 import WilliamAdote from "../assets/images/features/Headshot_20240919_William Adote_Richard Waine_Lancaster_PA_0023 (horizontal) - compressed.jpg"
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
@@ -176,12 +176,72 @@ const {
 
 } = Astro.props;
 
+// Service schema
+const businessHeadshotsServiceSchema = buildServiceSchema(
+  "Business Headshots",
+  "Professional Business Headshot Photography",
+  "Professional business headshots for executives, entrepreneurs, and corporate professionals. High-quality images that enhance your professional presence and brand.",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "+1-717-925-0061",
+  ["Pennsylvania", "Maryland", "Delaware"]
+);
+
+// Review schemas - 3 testimonials
+const jacquelineJohansenReview = buildReviewSchema(
+  {
+    author: "Jacqueline Johansen",
+    company: "DeepJudge",
+    rating: "5",
+    reviewBody: "Richard is an expert in human expression. He makes you feel at ease, then draws out the version of you that's authentic and compelling. The resulting headshots work because they feel right. Effortless, but entirely intentional. I have never liked a picture of me so much!"
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const keithWoodyReview = buildReviewSchema(
+  {
+    author: "Keith Woody",
+    company: "Fulton Bank",
+    rating: "5",
+    reviewBody: "I had no idea, how amazing this experience would turn out to be. The quality of what is being provided and experienced way surpassed my expectations. As a Sourcing and Procurement executive of over 25 years, I highly recommend Richard for your corporate head shot needs."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const kellyGoochReview = buildReviewSchema(
+  {
+    author: "Kelly Gooch",
+    company: "Ultimus Fund Solutions",
+    rating: "5",
+    reviewBody: "Richard was intentional in understanding my needs and asking questions to understand what type of look was needed. He was organized, helpful, and inquisitive, making the experience enjoyable. The end product was a direct result of his experience and coaching."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+// FAQ schema
+const businessHeadshotsFAQSchema = buildFAQSchema(faqs);
+
 ---
 
 
 
 
 <MainLayout title={pageTitle} description={metaDescription}>
+
+<!-- Service Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(businessHeadshotsServiceSchema)} />
+
+<!-- Review Schemas -->
+<script type="application/ld+json" set:html={JSON.stringify(jacquelineJohansenReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(keithWoodyReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(kellyGoochReview)} />
+
+<!-- FAQ Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(businessHeadshotsFAQSchema)} />
 
 <body>
 <section class="hero">

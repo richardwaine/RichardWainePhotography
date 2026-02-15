@@ -7,13 +7,63 @@ import PrimaryButton from '../components/PrimaryButton.astro';
 import PageTitle from '../components/PageTitle.astro';
 import { Image } from 'astro:assets';
 import giftCardImage from '../assets/images/gift-cards/Gift Card (16 x 9).jpg';
+import { buildProductSchema } from '../utils/schema';
 
 const title = 'Gift Certificates - Richard Waine Photography';
 const h1 = 'Headshot Gift Certificates';
 const squareStoreUrl = 'https://square.link/u/GS6PmHTs';
+
+// Product schemas for gift certificates
+const giftCert25Schema = buildProductSchema(
+  "$25 Headshot Gift Certificate",
+  "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
+  "25",
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const giftCert50Schema = buildProductSchema(
+  "$50 Headshot Gift Certificate",
+  "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
+  "50",
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const giftCert100Schema = buildProductSchema(
+  "$100 Headshot Gift Certificate",
+  "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
+  "100",
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const giftCert250Schema = buildProductSchema(
+  "$250 Headshot Gift Certificate",
+  "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
+  "250",
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const giftCert500Schema = buildProductSchema(
+  "$500 Headshot Gift Certificate",
+  "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
+  "500",
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
 ---
 
 <MainLayout title="Gift Certificates" description="Gift Cards towards a headshot session make a fantastic gift for your friends, colleagues and special people in your life.">
+
+<!-- Product Schemas for Gift Certificates -->
+<script type="application/ld+json" set:html={JSON.stringify(giftCert25Schema)} />
+<script type="application/ld+json" set:html={JSON.stringify(giftCert50Schema)} />
+<script type="application/ld+json" set:html={JSON.stringify(giftCert100Schema)} />
+<script type="application/ld+json" set:html={JSON.stringify(giftCert250Schema)} />
+<script type="application/ld+json" set:html={JSON.stringify(giftCert500Schema)} />
 
 <main class="gift-certificates-page">
 

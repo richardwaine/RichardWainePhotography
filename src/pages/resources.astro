@@ -2,6 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import { Image } from 'astro:assets';
+import { buildItemListSchema } from '../utils/schema';
 
 // Import vendor images
 import envyStudio from '../assets/images/vendors/Envy Studio (16 x 9) - compressed.jpg';
@@ -29,10 +30,47 @@ import gemsCatering from '../assets/images/vendors/GEM\'s Catering (16 x 9) - co
 
 const title = 'Richard Waine Photography Resources';
 const h1 = "Resources"
+
+// Vendor directory for ItemList schema
+const vendors = [
+  { name: "Envy Studio", url: "https://bnvied.net", category: "Hair and Makeup Artists" },
+  { name: "Karlo Gesner Photography", url: "https://karlogesner.com", category: "Wedding & Event Photographers" },
+  { name: "Sam Interrante Photography", url: "https://saminterrante.com", category: "Real Estate Photographers" },
+  { name: "Dillon Snyder Photography", url: "https://dillonsnyder.com", category: "Product Photographers" },
+  { name: "Garrity Powers Photography", url: "https://garritypowers.com", category: "Food & Beverage Photographers" },
+  { name: "Gabe McMullen Photography", url: "https://gabemcmullen.com", category: "Commercial Photographers" },
+  { name: "Mike Miville", url: "https://mikemiville.com", category: "Wedding & Event Photographers" },
+  { name: "Revolve Atelier", url: "https://revolveatelier.com", category: "Hair and Makeup Artists" },
+  { name: "Mark Yang Photography", url: "https://markyang.com", category: "Wedding & Event Photographers" },
+  { name: "Donovan Witmer Photography", url: "https://donovanwitmer.com", category: "Real Estate Photographers" },
+  { name: "Jason Langheine Photography", url: "https://jasonlangheine.com", category: "Commercial Photographers" },
+  { name: "Make Films", url: "https://makefilms.com", category: "Videographers" },
+  { name: "LampHouse Films", url: "https://lamphousefilms.com", category: "Videographers" },
+  { name: "Lauren Fisher", url: "https://laurenfisher.com", category: "Hair and Makeup Artists" },
+  { name: "DJ Mast", url: "https://djmast.com", category: "DJs" },
+  { name: "Beats and Focus", url: "https://beatsandfocus.com", category: "Event Planners" },
+  { name: "Central Market Flowers", url: "https://centralmarketflowers.com", category: "Florists" },
+  { name: "Bixler Blooms", url: "https://bixlerblooms.com", category: "Florists" },
+  { name: "Petals With Style", url: "https://petalswithstyle.com", category: "Florists" },
+  { name: "Lancaster Flower Company", url: "https://lancasterflowercompany.com", category: "Florists" },
+  { name: "Rettew's Catering", url: "https://rettewscatering.com", category: "Caterers" },
+  { name: "GEM's Catering", url: "https://gemscatering.com", category: "Caterers" }
+];
+
+// ItemList schema for vendor directory
+const vendorDirectorySchema = buildItemListSchema(
+  "Lancaster PA Creative Services Directory",
+  "Directory of professional creative service vendors in Lancaster, PA including photographers, videographers, makeup artists, florists, DJs, event planners, and caterers.",
+  vendors
+);
+
 ---
 
 
 <MainLayout title="Lancaster PA Creative Services Directory - Local Professional Vendors" description="Browse Lancaster PA's top creative professionals. Find photographers, videographers, makeup artists, florists, and caterers serving the area.">
+
+<!-- ItemList Schema for Vendor Directory -->
+<script type="application/ld+json" set:html={JSON.stringify(vendorDirectorySchema)} />
 
 <PageTitle title={h1} />
 

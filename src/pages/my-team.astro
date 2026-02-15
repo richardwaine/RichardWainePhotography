@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import PageTitle from "../components/PageTitle.astro";
 import PrimaryButton from '../components/PrimaryButton.astro';
+import { buildPersonSchema } from '../utils/schema';
 
 const h1 = 'My Team';
 // Team member data
@@ -30,9 +31,39 @@ const lisa = {
   ctaText: "CONTACT LISA",
   ctaUrl: "https://clientela.myjhilburn.com/stylist/15327"
 };
+
+// Person schemas for team members
+const lionelSchema = buildPersonSchema(
+  "Lionel Adriano",
+  "Makeup Artist",
+  "World-class makeup artist, certified M.A.C. makeup artist voted best in Lancaster County. Specializes in professional makeup for headshot photography.",
+  "https://richardwainephotography.com/my-team",
+  "https://richardwainephotography.com/assets/images/team/LionelAdriano.jpg",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  []
+);
+
+const lisaSchema = buildPersonSchema(
+  "Lisa Torba",
+  "Personal Stylist",
+  "Professional stylist for men specializing in high-quality clothing that fits perfectly. Provides collaborative, frustration-free styling experience for headshot photography.",
+  "https://clientela.myjhilburn.com/stylist/15327",
+  "https://richardwainephotography.com/assets/images/team/LisaTorba.jpg",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  []
+);
+
 ---
 
 <MainLayout title="My Team" description="I work with the best in the business. Here are the members of my team and how they can help to elevate your personal brand.">
+
+<!-- Person Schemas for Team Members -->
+<script type="application/ld+json" set:html={JSON.stringify(lionelSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(lisaSchema)} />
 
 <div class="team-page-wrapper">
   <PageTitle title={h1} subtitle="Meet the Richard Waine Team" />

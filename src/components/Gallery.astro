@@ -42,6 +42,15 @@ import stephanyBaughman400 from '../assets/images/gallery/400px/(400px) - Stepha
 import stephanyBaughman600 from '../assets/images/gallery/600px/(600px) - Stephany Baughman_Richard_Waine_Lancaster_PA_0160 - compressed.jpg';
 import claudeHicks400 from '../assets/images/gallery/400px/(400px) - Claude Hicks_Richard_Waine_Lancaster_PA_0021 - compressed.jpg';
 import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hicks_Richard_Waine_Lancaster_PA_0021 - compressed.jpg';
+import { buildImageGallerySchema } from '../utils/schema';
+
+// Generate ImageGallery schema for portfolio
+const gallerySchema = buildImageGallerySchema(
+  "Headshot Photography Portfolio",
+  "Professional headshot photography portfolio featuring business professionals, actors, executives, and corporate teams",
+  "Richard Waine",
+  "Professional Headshot Photographer"
+);
 ---
 
 
@@ -249,6 +258,8 @@ import claudeHicks600 from '../assets/images/gallery/600px/(600px) - Claude Hick
 
 </div>
 </section>
+
+<script type="application/ld+json" set:html={JSON.stringify(gallerySchema)} />
 
 <style>
 

@@ -2,15 +2,50 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import Gallery from '../components/Gallery.astro';
 import PageTitle from '../components/PageTitle.astro';
+import { buildHowToSchema } from '../utils/schema';
 
 import { Image } from 'astro:assets';
 import Signature from '../assets/images/icons/Signature.png';
 
 
 const h1 = 'Preparation Guide';
+
+// HowTo schema for preparation guide
+const preparationSteps = [
+  {
+    name: "Trust the Process",
+    text: "Trust your photographer. Come prepared and ready to take direction. Allow yourself to be coached to achieve greatness in your headshot."
+  },
+  {
+    name: "Get Ample Rest",
+    text: "Arrive at your session looking refreshed and energized. Get a good night's sleep before your session."
+  },
+  {
+    name: "Prepare Your Clothing",
+    text: "Bring 3-5 clothing options that are cleaned and pressed. Choose solid colors that complement your skin tone. Avoid busy patterns and attention-grabbing clothing."
+  },
+  {
+    name: "Grooming and Styling",
+    text: "Schedule haircuts well in advance. Arrive with hair styled how you normally wear it. Professional makeup and styling services are available."
+  },
+  {
+    name: "Relax and Have Fun",
+    text: "The session is relaxed and dynamic. Trust the photographer's direction and enjoy the experience."
+  }
+];
+
+const preparationGuideSchema = buildHowToSchema(
+  "How to Prepare for Your Professional Headshot Session",
+  "Complete guide to preparing for your professional headshot photo session. Learn how to prepare clothing, grooming, and mindset for amazing headshot results.",
+  preparationSteps
+);
+
 ---
 
 <MainLayout title = "Preparation Guide" description="This is your complete guide to preparing for your professional headshot photo session with Richard Waine">
+
+<!-- HowTo Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(preparationGuideSchema)} />
 
 <PageTitle title={h1} />
 

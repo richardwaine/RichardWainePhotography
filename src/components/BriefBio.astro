@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import RWHeadshot from '../assets/images/blog/RichardWaine - (16 x 9).jpg';
 import RW1Image from '../assets/images/blog/RW1 - (16 x 9).jpg';
 import RW2Image from '../assets/images/blog/RW2 - (16 x 9).jpg';
+import { buildPersonSchema } from '../utils/schema';
 
 
 interface BioParagraph {
@@ -23,7 +24,21 @@ interface Props {
 
 const { bioSectionHeading, bioSections } = Astro.props;
 
-
+// Generate Person schema for photographer bio
+const personSchema = buildPersonSchema(
+  "Richard Waine",
+  "Professional Headshot Photographer",
+  "Professional headshot photographer with 17 years of experience specializing in business headshots, acting headshots, LinkedIn profiles, and corporate photography in Lancaster, PA",
+  "https://richardwainephotography.com",
+  "https://richardwainephotography.com/images/richard-waine-headshot.jpg",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  [
+    "https://www.instagram.com/richardwainephotography",
+    "https://www.facebook.com/richardwainephotography"
+  ]
+);
 
 ---
 
@@ -73,9 +88,10 @@ const { bioSectionHeading, bioSections } = Astro.props;
         ))}
       </div>
 
-      
+
 </div>
 
+<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 
 
 

@@ -7,6 +7,8 @@ import RatesCard from '../components/RatesCard.astro'
 import TestimonialCard from '../components/TestimonialCard.astro';
 import PageTitle from '../components/PageTitle.astro';
 import michaelKealeyImage from '../assets/images/testimonials/Michael Kealey - (200px) - Richard Waine - Lancaster - PA_0048.jpg';
+import { buildReviewSchema } from '../utils/schema';
+
 const h1 = 'Schedule Your Headshot Session';
 
 // Michael Kealey testimonial
@@ -18,9 +20,24 @@ const michaelKealeyTestimonial = {
   imageAlt: "Business Headshot of Michael Kealey by Richard Waine Photography"
 };
 
+// Review schema
+const michaelKealeyReviewSchema = buildReviewSchema(
+  {
+    author: "Michael Kealey",
+    company: "Motor Scout Music",
+    rating: "5",
+    reviewBody: "Working with Richard was a pleasure. His direction and eye helped to get the best out of me and feel confident during my session. I highly recommend Richard for your headshot needs."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
 ---
 
 <MainLayout title="Schedule Your Professional Headshot Session" description="Treat yourself to a 5-star experience, a few laughs, incredible headshot images, and the success that comes along with it!">
+
+<!-- Review Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(michaelKealeyReviewSchema)} />
 
     <main>
         <div class="wrapper">

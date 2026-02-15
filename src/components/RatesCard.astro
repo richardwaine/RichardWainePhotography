@@ -1,7 +1,7 @@
 ---
 import PrimaryButton from './PrimaryButton.astro';
 import SecondaryButton from './SecondaryButton.astro';
-
+import { buildOfferSchema } from '../utils/schema';
 
 import { Image } from 'astro:assets';
 import JackCottrell1 from '../assets/images/rates/JackCottrell - 0318 (500px).jpg';
@@ -9,6 +9,18 @@ import JackCottrell2 from '../assets/images/rates/JackCottrell - 0285 (500px).jp
 import JackCottrell3 from '../assets/images/rates/JackCottrell - 0280 (500px).jpg';
 import JackCottrell4 from '../assets/images/rates/JackCottrell - 0158 (500px).jpg';
 import ChubbContactSheet from '../assets/images/features/Chubb - ContactSheet (square).jpg';
+
+// Generate Offer schema for individual headshot pricing
+const offerSchema = buildOfferSchema(
+  "Individual Headshot Session",
+  "Professional headshot session with unlimited outfit changes, no time limit, instant review, professional retouching, and images delivered in multiple crops",
+  "195",
+  "300",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "https://richardwainephotography.com"
+);
 
 ---
 
@@ -145,6 +157,8 @@ import ChubbContactSheet from '../assets/images/features/Chubb - ContactSheet (s
 </div>
 
 </div>
+
+<script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
 
 <script is:inline>
 const toggleBtns = document.querySelectorAll('.toggle-btn');

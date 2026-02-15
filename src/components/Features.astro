@@ -1,6 +1,7 @@
 ---
 import FloatingStats from '../components/FloatingStats.astro';
 import PrimaryButton from './PrimaryButton.astro';
+import { buildServiceCatalogSchema } from '../utils/schema';
 
 import { Image } from 'astro:assets';
 
@@ -23,6 +24,34 @@ const {
   officeHeadshotsUrl = "/rates", // Office Headshots
   secondaryButtonUrl = "https://app.acuityscheduling.com/schedule.php?owner=13511326&appointmentType=11959793",
 } = Astro.props;
+
+// Define services for schema
+const services = [
+  {
+    name: "Business Headshots",
+    description: "Professional business headshots for executives, professionals, and entrepreneurs to elevate your professional image"
+  },
+  {
+    name: "Acting Headshots",
+    description: "High-quality acting headshots for performers, actors, and entertainers seeking to showcase their range and personality"
+  },
+  {
+    name: "LinkedIn Headshots",
+    description: "Professional LinkedIn profile photos that make you stand out and attract opportunities"
+  },
+  {
+    name: "Office Headshots",
+    description: "On-location corporate headshots for teams, ensuring brand consistency across your organization"
+  }
+];
+
+// Generate Service catalog schema
+const servicesSchema = buildServiceCatalogSchema(
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  services
+);
 ---
 
 
@@ -151,8 +180,7 @@ const {
   </div>
 </section>
 
-
-
+<script type="application/ld+json" set:html={JSON.stringify(servicesSchema)} />
 
 <script>
 

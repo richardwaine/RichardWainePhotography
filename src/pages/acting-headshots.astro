@@ -6,7 +6,7 @@ import PrimaryButton from "../components/PrimaryButton.astro"
 import SecondaryButton from '../components/SecondaryButton.astro'
 import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
-
+import { buildServiceSchema, buildReviewSchema } from '../utils/schema';
 
 import JackCottrell from "../assets/images/features/Headshot_20220829_Jack Cottrell_Richard_Waine_Lancaster_PA_0318 (horizontal) - compressed.jpg"
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
@@ -163,12 +163,66 @@ const {
 
 } = Astro.props;
 
+// Service schema
+const actingHeadshotsServiceSchema = buildServiceSchema(
+  "Acting Headshots",
+  "Professional Acting Headshot Photography",
+  "Professional acting headshots for performers, actors, and entertainers. High-quality theatrical headshots that capture your range and help you book more roles.",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "+1-717-925-0061",
+  ["Pennsylvania", "Maryland", "Delaware", "New York", "New Jersey"]
+);
+
+// Review schemas - 3 testimonials
+const dillonBombaReview = buildReviewSchema(
+  {
+    author: "Dillon Bomba",
+    company: "",
+    rating: "5",
+    reviewBody: "Rich made my first headshot experience so much fun. It was like seeing an old friend you've never met before. His direction is simple and effective. He can pull the most expressive faces from you with just a few words."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const cateCaplanReview = buildReviewSchema(
+  {
+    author: "Cate Caplan",
+    company: "",
+    rating: "5",
+    reviewBody: "Richard takes the art of headshot photography to the next level. He actively engages his clients in the process far beyond the smile, and manages to create a fun, unparalleled experience. The final shots are of exceptional quality."
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
+const brandonLesagoniczReview = buildReviewSchema(
+  {
+    author: "Brandon Lesagonicz",
+    company: "",
+    rating: "5",
+    reviewBody: "Rich is without a doubt one of the most knowledgeable photographers I have ever worked with. Rocking out and fun! Whether it's a corporate occasion or just to update a model's portfolio anyone should absolutely work with him!"
+  },
+  "Richard Waine Photography",
+  "https://richardwainephotography.com"
+);
+
 ---
 
 
 
 
 <MainLayout title={pageTitle} description={metaDescription}>
+
+<!-- Service Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(actingHeadshotsServiceSchema)} />
+
+<!-- Review Schemas -->
+<script type="application/ld+json" set:html={JSON.stringify(dillonBombaReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(cateCaplanReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(brandonLesagoniczReview)} />
 
 <body>
 <section class="hero">

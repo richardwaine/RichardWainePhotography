@@ -1,4 +1,5 @@
 ---
+import { buildLocalBusinessSchema } from '../utils/schema';
 
  interface Props {
     mainHeading: string;
@@ -9,7 +10,31 @@
 
 const { mainHeading, paragraphs, locationColumns } = Astro.props;
 
+// Define service cities for schema
+const serviceCities = [
+  { name: "Lancaster", state: "Pennsylvania" },
+  { name: "Philadelphia", state: "Pennsylvania" },
+  { name: "Baltimore", state: "Maryland" },
+  { name: "Harrisburg", state: "Pennsylvania" },
+  { name: "York", state: "Pennsylvania" },
+  { name: "Reading", state: "Pennsylvania" },
+  { name: "Hershey", state: "Pennsylvania" },
+  { name: "Delaware", state: "Delaware" },
+  { name: "Allentown", state: "Pennsylvania" }
+];
 
+// Generate LocalBusiness schema with service areas
+const localBusinessSchema = buildLocalBusinessSchema(
+  "Richard Waine Photography",
+  "Professional headshot photographer serving Lancaster, Philadelphia, Baltimore, Harrisburg, York, Reading, Hershey, Delaware, and Allentown",
+  "Lancaster",
+  "PA",
+  "40.038578",
+  "-76.306020",
+  "+1-717-509-9274",
+  "https://richardwainephotography.com",
+  serviceCities
+);
 
 ---
 
@@ -37,8 +62,9 @@ const { mainHeading, paragraphs, locationColumns } = Astro.props;
 
 </div>
 
+<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 
- 
+
 
 
 
