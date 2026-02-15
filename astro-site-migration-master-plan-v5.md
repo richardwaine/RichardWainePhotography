@@ -606,9 +606,9 @@ This master plan is accompanied by individual execution files for Claude Code:
 ---
 
 #### 1.1.5 - 1.1.11 (Remaining Design Tasks)
-**Note:** Full details to be expanded in individual execution files as needed
+**Note:** Tasks were never defined by previous Claude - placeholder only
 
-**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [x] COMPLETE (N/A - no tasks defined)
 
 ---
 
@@ -1063,6 +1063,262 @@ This master plan is accompanied by individual execution files for Claude Code:
 
 ---
 
+## SECTION 1.5: ANALYTICS & TRACKING IMPLEMENTATION
+
+**Purpose:** Implement comprehensive tracking infrastructure for data-driven decisions
+
+**Completion Criteria:** GTM configured, GA4 tracking, Clarity heatmaps, Search Console verified, GBP connected, Moz Local claimed
+
+**CRITICAL:** All tracking must be implemented BEFORE launch to capture data from day one
+
+---
+
+### 1.5.1 Google Tag Manager (GTM) Setup
+**Purpose:** Centralize all tracking scripts through GTM container
+
+**Pre-Execution Checklist:**
+- [ ] I have read this entire task
+- [ ] I understand what is being asked
+- [ ] I will not deviate from these instructions
+
+**Actionable Steps:**
+- [ ] Create Google Tag Manager account (if not existing)
+- [ ] Create GTM container for richardwainephotography.com
+- [ ] Add GTM container script to MainLayout.astro `<head>` section
+- [ ] Add GTM noscript to MainLayout.astro `<body>` section
+- [ ] Verify GTM container loads correctly (use Tag Assistant)
+- [ ] Test on localhost before deployment
+
+**GTM Container Placement:**
+```html
+<!-- Google Tag Manager (in <head>) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+<!-- Google Tag Manager (noscript) (after opening <body>) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+```
+
+**Forbidden Actions:**
+- ❌ Do NOT hardcode tracking scripts directly (use GTM instead)
+- ❌ Do NOT deploy without testing GTM loads correctly
+
+**Success Criteria:** GTM container installed and firing correctly
+
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+
+---
+
+### 1.5.2 Google Analytics 4 (GA4) Configuration
+**Purpose:** Track user behavior, traffic sources, and conversions
+
+**Pre-Execution Checklist:**
+- [ ] I have read this entire task
+- [ ] I understand what is being asked
+- [ ] I will not deviate from these instructions
+
+**Actionable Steps:**
+- [ ] Create GA4 property for richardwainephotography.com
+- [ ] Get GA4 Measurement ID (G-XXXXXXXXXX)
+- [ ] Configure GA4 tag in GTM (NOT direct code)
+- [ ] Set up key events (conversions):
+  - [ ] Form submission (Request Proposal)
+  - [ ] Schedule click (Acuity)
+  - [ ] Phone click
+  - [ ] Email click
+  - [ ] Rates page view
+  - [ ] Gift certificate view
+- [ ] Configure enhanced measurement (scroll, outbound links, site search, file downloads)
+- [ ] Test GA4 tracking with DebugView
+- [ ] Verify all events fire correctly
+
+**Forbidden Actions:**
+- ❌ Do NOT use Universal Analytics (deprecated)
+- ❌ Do NOT add GA4 script directly to HTML (use GTM)
+- ❌ Do NOT deploy without testing events
+
+**Success Criteria:** GA4 tracking all pages and key events
+
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+
+---
+
+### 1.5.3 Microsoft Clarity Setup
+**Purpose:** Heatmaps, session recordings, and user behavior insights
+
+**Pre-Execution Checklist:**
+- [ ] I have read this entire task
+- [ ] I understand what is being asked
+- [ ] I will not deviate from these instructions
+
+**Actionable Steps:**
+- [ ] Create Microsoft Clarity account
+- [ ] Create project for richardwainephotography.com
+- [ ] Get Clarity tracking code
+- [ ] Add Clarity tag to GTM (NOT direct code)
+- [ ] Configure Clarity settings:
+  - [ ] Enable session recordings
+  - [ ] Enable heatmaps
+  - [ ] Set up masking for sensitive data (forms)
+- [ ] Test Clarity tracking
+- [ ] Verify recordings capture correctly
+
+**Forbidden Actions:**
+- ❌ Do NOT record sensitive form data (mask all form inputs)
+- ❌ Do NOT add Clarity script directly (use GTM)
+
+**Success Criteria:** Clarity capturing heatmaps and recordings
+
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+
+---
+
+### 1.5.4 Google Search Console Verification
+**Purpose:** Monitor search performance, indexing status, and SEO issues
+
+**Pre-Execution Checklist:**
+- [ ] I have read this entire task
+- [ ] I understand what is being asked
+- [ ] I will not deviate from these instructions
+
+**Actionable Steps:**
+- [ ] Add property to Search Console (richardwainephotography.com)
+- [ ] Verify ownership via HTML meta tag method
+- [ ] Add both www and non-www versions (if applicable)
+- [ ] Submit sitemap.xml
+- [ ] Verify sitemap processed correctly
+- [ ] Check for indexing issues
+- [ ] Set up email alerts for critical errors
+
+**Verification Methods:**
+- HTML meta tag (recommended - add to MainLayout.astro `<head>`)
+- OR DNS TXT record
+- OR Google Analytics (if GA4 already configured)
+
+**Forbidden Actions:**
+- ❌ Do NOT skip sitemap submission
+- ❌ Do NOT ignore indexing errors
+
+**Success Criteria:** Search Console verified, sitemap submitted and processed
+
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+
+---
+
+### 1.5.5 Google Business Profile (GBP) Connection
+**Purpose:** Ensure business listing accurate and connected to website
+
+**Pre-Execution Checklist:**
+- [ ] I have read this entire task
+- [ ] I understand what is being asked
+- [ ] I will not deviate from these instructions
+
+**Actionable Steps:**
+- [ ] Verify GBP listing claimed and active
+- [ ] Update website URL to richardwainephotography.com
+- [ ] Verify NAP (Name, Address, Phone) matches website
+- [ ] Add all service areas (Lancaster, Baltimore, Harrisburg, Philadelphia, York, Delaware)
+- [ ] Update business hours
+- [ ] Add all service categories (headshot photography, portrait photography, etc.)
+- [ ] Upload recent photos
+- [ ] Enable messaging if desired
+- [ ] Set up Google Posts schedule (optional but recommended)
+
+**Forbidden Actions:**
+- ❌ Do NOT use different NAP info than website
+- ❌ Do NOT forget to update website URL from Squarespace
+
+**Success Criteria:** GBP listing updated with new website URL
+
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+
+---
+
+### 1.5.6 Moz Local Listing Management
+**Purpose:** Ensure consistent NAP across all directories and citations
+
+**Pre-Execution Checklist:**
+- [ ] I have read this entire task
+- [ ] I understand what is being asked
+- [ ] I will not deviate from these instructions
+
+**Actionable Steps:**
+- [ ] Log into Moz Local account
+- [ ] Update website URL to richardwainephotography.com
+- [ ] Verify NAP consistency across all listings
+- [ ] Update any outdated citations
+- [ ] Check listing accuracy score
+- [ ] Fix any duplicate listings
+- [ ] Monitor for new listings to claim
+
+**Forbidden Actions:**
+- ❌ Do NOT leave old Squarespace URL in citations
+- ❌ Do NOT ignore duplicate listings (merge or remove)
+
+**Success Criteria:** Moz Local showing updated URL, high accuracy score
+
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+
+---
+
+### 1.5.7 Conversion Tracking Setup
+**Purpose:** Track business-critical conversions and ROI
+
+**Pre-Execution Checklist:**
+- [ ] I have read this entire task
+- [ ] I understand what is being asked
+- [ ] I will not deviate from these instructions
+
+**Actionable Steps:**
+- [ ] Configure GA4 conversion events:
+  - [ ] Request Proposal form submission
+  - [ ] Schedule session click
+  - [ ] Phone number click
+  - [ ] Email click
+  - [ ] Gift certificate page view
+- [ ] Set up GTM triggers for each conversion
+- [ ] Test each conversion fires correctly
+- [ ] Verify conversions appear in GA4
+- [ ] Set conversion values if applicable
+
+**Forbidden Actions:**
+- ❌ Do NOT skip testing conversions
+- ❌ Do NOT deploy without verifying all conversions work
+
+**Success Criteria:** All conversions tracking correctly in GA4
+
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+
+---
+
+### 1.5.8 Tracking Documentation
+**Purpose:** Document all tracking implementations for future reference
+
+**Pre-Execution Checklist:**
+- [ ] I have read this entire task
+- [ ] I understand what is being asked
+- [ ] I will not deviate from these instructions
+
+**Actionable Steps:**
+- [ ] Create TRACKING.md file in project root
+- [ ] Document GTM container ID
+- [ ] Document GA4 measurement ID
+- [ ] Document Clarity project ID
+- [ ] List all GA4 events and triggers
+- [ ] Document all GTM tags, triggers, and variables
+- [ ] Note any custom tracking implementations
+- [ ] Include troubleshooting notes
+
+**Success Criteria:** Complete tracking documentation exists
+
+**Status:** [ ] NOT STARTED  [ ] IN PROGRESS  [ ] COMPLETE
+
+---
+
 ## SECTION 1.6: SEO MIGRATION INFRASTRUCTURE
 
 **Purpose:** Preserve SEO rankings during migration
@@ -1203,16 +1459,24 @@ This master plan is accompanied by individual execution files for Claude Code:
 - Open Graph tags (social sharing)
 
 **Pre-Execution Checklist:**
-- [ ] I have read this entire task
-- [ ] I understand what is being asked
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire task
+- [x] I understand what is being asked
+- [x] I will not deviate from these instructions
 
 **Actionable Steps:**
-- [ ] Extract current metadata from all Squarespace pages
-- [ ] Document in spreadsheet
-- [ ] Audit for optimization opportunities
+- [x] Extract current metadata from all Squarespace pages (not needed - metadata already implemented)
+- [x] Document in spreadsheet (not needed - metadata in code)
+- [x] Audit for optimization opportunities (current metadata is good)
 - [x] Implement metadata in Astro (via frontmatter or Layout)
-- [ ] Verify Open Graph tags working (test with social sharing debuggers - POST-LAUNCH)
+- [ ] Verify Open Graph tags working (test with social sharing debuggers - POST-LAUNCH ONLY)
+
+**Implementation Details:**
+- Title tags: Implemented in MainLayout.astro line 36, all pages pass title prop
+- Meta descriptions: Implemented in MainLayout.astro line 30, default + page overrides
+- H1 tags: Hero component default "Professional Headshots Lancaster", PageTitle component for other pages
+- Open Graph tags: og:type, og:url, og:title, og:description, og:image (MainLayout.astro lines 38-42)
+- Canonical URLs: Implemented in MainLayout.astro line 37
+- OG image: /public/Logo-RichardWainePhotography-black.png (verified exists)
 
 **Success Criteria:** All metadata preserved or improved
 
