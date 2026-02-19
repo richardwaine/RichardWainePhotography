@@ -1,0 +1,88 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import PageTitle from '../components/PageTitle.astro';
+import { Image } from 'astro:assets';
+import checkMark from '../assets/check-mark-black.png';
+
+const title = 'Contact Thank You | Richard Waine Photography';
+const h1 = 'Thank You!';
+---
+
+<MainLayout title={title} description="Thank you for your inquiry about a headshot session! I will respond to your message as soon as possible.">
+
+<main>
+  <div class="wrapper thank-you-page">
+
+    <PageTitle
+      title={h1}
+      titleColor="var(--blkclr)"
+    />
+
+    <div class="content">
+      <Image
+        src={checkMark}
+        height={125}
+        width={125}
+        alt="check mark"
+        class="check-mark"
+      />
+
+      <div class="message">
+        <p>Thank you for your inquiry.</p>
+        <p>I have received your message and will respond as quickly as possible.</p>
+        <p>Please call <a href="tel:7179250061"><strong>(717) 925-0061</strong></a> for immediate assistance.</p>
+        <p>I look forward to helping you with an exceptional headshot experience and amazing images!</p>
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+</MainLayout>
+
+<style>
+  .thank-you-page {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--size-7);
+    
+  }
+
+  .content {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .check-mark {
+    margin-inline:auto;
+    margin-bottom: var(--size-6);
+
+    
+  }
+
+  .message {
+    text-transform: uppercase;
+    font-size: var(--fs-450);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .message p {
+    margin-bottom: var(--size-5);
+  }
+
+  .message p:last-child {
+    margin-bottom: 0;
+  }
+
+  .message a {
+    color: var(--blkclr);
+    text-decoration: none;
+  }
+
+  .message a:hover {
+    text-decoration: underline;
+  }
+</style>

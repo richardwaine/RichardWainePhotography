@@ -6,7 +6,7 @@ import PrimaryButton from "../components/PrimaryButton.astro"
 import SecondaryButton from '../components/SecondaryButton.astro'
 import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
-import { buildServiceSchema, buildReviewSchema } from '../utils/schema';
+import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
 
 import JackCottrell from "../assets/images/features/Headshot_20220829_Jack Cottrell_Richard_Waine_Lancaster_PA_0318 (horizontal) - compressed.jpg"
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
@@ -209,6 +209,8 @@ const brandonLesagoniczReview = buildReviewSchema(
   "https://richardwainephotography.com"
 );
 
+const actingHeadshotsFAQSchema = buildFAQSchema(faqs);
+
 ---
 
 
@@ -223,6 +225,9 @@ const brandonLesagoniczReview = buildReviewSchema(
 <script type="application/ld+json" set:html={JSON.stringify(dillonBombaReview)} />
 <script type="application/ld+json" set:html={JSON.stringify(cateCaplanReview)} />
 <script type="application/ld+json" set:html={JSON.stringify(brandonLesagoniczReview)} />
+
+<!-- FAQ Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(actingHeadshotsFAQSchema)} />
 
 <body>
 <section class="hero">

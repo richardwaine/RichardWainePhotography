@@ -18,6 +18,10 @@ import KellyGooch from '../assets/images/testimonials/Kelly Gooch - (200px).jpg'
 import NolanFoster from '../assets/images/testimonials/Nolan Foster - (200px).jpg'
 import BrandonLesagonicz from '../assets/images/testimonials/Brandon lesagonicz - (200px).jpg'
 import CateCaplan from '../assets/images/testimonials/Cate Caplan - (200px).jpg'
+import MackenzieLucas from '../assets/images/testimonials/ProAssurance - 0111 - (200px).jpg'
+import DanielHagelberg from '../assets/images/testimonials/Daniel Hagelberg - (200px).jpg'
+
+
 
 export interface Testimonial {
   name: string;
@@ -132,7 +136,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Eric Cooley",
     company: "Havtech", 
-    review: "We had Richard come in to perform headshots for the business. It was a very busy day. But, he took the time with each person to make sure he got the right shot. I saw mine yesterday. Literally, the best picture I have ever seen of me. I sent it to my mom and she said 'oh wow, that's you?' So good my own mom didn't recognize me. Thanks for everything Richard.",
+    review: "We had Richard come in to perform headshots for the business. He took the time with each person to make sure he got the right shot. Literally, the best picture I have ever seen of me. I sent it to my mom and she said 'oh wow, that's you?' So good my own mom didn't recognize me. Thanks for everything Richard!",
     rating: 5,
     imageUrl: EricCooley.src,
     image: EricCooley,
@@ -182,8 +186,25 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: CateCaplan.src,
     image: CateCaplan,
     imageAlt: "Acting Headshot of Cate Caplan by Richard Waine Photography"
-  }
-
+  },
+  {
+    name: "Mackenzie Lucas",
+    company: "ProAssurance", 
+    review: "We used Richard Waine for company headshots and we loved him! He worked with our schedule, and was warned that the people who were getting their photos taken disliked the previous photographer and that did not phase him! He was great at communicating and all of the people who worked with him that day loved him. Absolutely will use again.",
+    rating: 5,
+    imageUrl: MackenzieLucas.src,
+    image: MackenzieLucas,
+    imageAlt: "Office Headshot of Mackenzie Lucas by Richard Waine Photography"
+  },
+{
+    name: "Daniel Hagelberg",
+    company: "Kaufman Dolowich", 
+    review: "My firm hired Richard for my headshot and he was excellent. He brought his equipment to our office, and set everything up to get a top quality studio shot. His instructions were easy to follow and the pictures look amazing. He will work with you to get what you want but he also knows what will make the best shot. Would definitely use him again.",
+    rating: 5,
+    imageUrl: DanielHagelberg.src,
+    image: DanielHagelberg,
+    imageAlt: "Office Headshot of Daniel Hagelberg by Richard Waine Photography"
+  },
 
 
 

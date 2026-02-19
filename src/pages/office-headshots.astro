@@ -8,11 +8,13 @@ import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
 
-import KenGiglio from "../assets/images/features/Headshot_20180414_Ken Giglio_Richard_Waine_Lancaster_PA_0060-2 - compressed.jpg"
+
+import Chubb from "../assets/images/features/Chubb - ContactSheet (square).jpg"
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
 import RW2 from "../assets/images/blog/RW7 - (16 x 9).jpg"
 import RW11 from "../assets/images/blog/RW11 - (horizontal).jpg"
-import Chubb from "../assets/images/blog/Chubb - 0100 (horizontal).jpg"
+import TsedeyAragie from "../assets/images/office-headshots/TsedeyAragie - 0018 (horizontal).jpg"
+
 
 
 export interface Props {
@@ -67,45 +69,45 @@ export interface Props {
 }
 
 const {
-  pageTitle = 'LinkedIn Headshots | Richard Waine Photography',
-  metaDescription = 'Professional LinkedIn headshot photography services',
+  pageTitle = 'Office Headshots | Richard Waine Photography',
+  metaDescription = 'Professional Office headshot photography services',
 
-  heroTitle = 'LinkedIn',
+  heroTitle = 'Office',
   heroTitleAccent = 'Headshots',
-  heroDescription = 'Every professional interaction begins long before you introduce yourself. I create LinkedIn headshots that stop the scroll and establish a level of professional authority, making sure that when you show up in a search, you look like someone worth knowing.',
-  heroButtonText = 'GET PRICING',
+  heroDescription = 'Your people are the most visible extension of the brand and values you have worked hard to build. The high-quality headshots that represent your team should reflect the same level of professionalism that your clients have come to expect from your business. When your team looks unified, polished, and consistent, your brand carries greater respect and authority.',
+  heroButtonText = 'REQUEST PROPOSAL',
   SecondaryButtonText = 'SCHEDULE CONSULT',
 
-  callout1 = 'PROFESSIONALISM',
-  callout2 = 'COMPETENCE',
+  callout1 = '',
+  callout2 = '',
 
   pillar1Num = 'THE SCIENCE',
   pillar1Title = 'Expression Direction',
-  pillar1Description = "Your profile photo acts as the visual anchor for your professional history. When that business portrait is forced and lacks authenticity, it contradicts the experience listed in your background. I bridge that gap by coaching your facial expression to capture the poise and confidence you bring to your work. This produces a LinkedIn headshot that actually looks like the person described on your resume and in your LinkedIn profile.",
+  pillar1Description = "Standing in front of a camera can feel unnatural. I guide every team member through a tailored process that elicits genuine, confident facial expressions which build trust and credibility. That kind of authenticity does not happen by accident. This is a skilled and deliberate process where your people are guided to look their best and not left to figure it out themselves.",
 
   pillar2Num = 'THE PROCESS',
   pillar2Title = 'Real-Time Review',
-  pillar2Description = "Every decision is made with your LinkedIn audience in mind. Images are reviewed and evaluated as they are created to refine presence, approachability, and authority in real time. Direction is given during the session so nothing is left to chance. You leave with a headshot that supports how you want to be perceived the moment someone views your profile.",
+  pillar2Description = "Every image appears on my computer the moment it is captured. Team members see themselves in real time and we make adjustments together. Lighting, posture and facial expression are refined on the spot. Every team member works collaboratively with me to select their headshot before stepping away.",
 
   pillar3Num = 'THE RESULT',
   pillar3Title = 'Strategic Selection',
-  pillar3Description = 'We review images together with LinkedIn use in mind. Each photo is reviewed and evaluated for credibility, approachability, and presence. Together, we select the images that highlight your strengths and professional qualities. You leave with a headshot that clearly communicates confidence, competence, approachability, and trustworthiness.',
+  pillar3Description = 'Each team member reviews their headshot images with me as they are captured. I guide the selection process to ensure consistency across your organization while honoring what makes each team member unique. The final collection presents a unified and professional image of your company.',
 
+  systemRow1Title = 'Why Your Office Headshots Matter',
+  systemRow1Description = `Mismatched photos make your team look like a collection of freelancers instead of a unified organization. When every headshot has different lighting, backgrounds and quality, it signals inconsistency. Clients notice. They wonder if the company pays the same attention to their work as they do to their image.
 
-  systemRow1Title = 'Why Your LinkedIn Headshot Matters',
-  systemRow1Description = `Your LinkedIn profile photo is not optional decoration. It is a primary factor in how often your profile appears in search results, how recruiters evaluate your credibility, and whether you are taken seriously as a professional. LinkedIn's algorithm prioritizes complete profiles, and a professional headshot is one of the most important signals the platform uses to determine profile quality. When someone searches for professionals in your field, a high-quality headshot dramatically increases the likelihood that your profile appears in their results.
+  Professional headshots that match in style and quality tell a different story. They show a team that operates under the same high standards and takes their work seriously. Clients trust organizations that look organized. They feel confident doing business with people who present themselves as capable professionals.
 
-  Recruiters spend nearly 20% of their review time looking at your photo before they read your experience or qualifications. This means your headshot functions as a screening filter. A poor-quality photo creates immediate doubt about your judgment and professionalism, while a professional headshot signals that you take your career seriously and understand the value of a strong first impression. The difference between a professional image and an amateur photo is not just technical quality. It is the message you send about your commitment to your career and how you want to be perceived.
+  Your team benefits too. Employees who receive a headshot they actually like feel valued. They represent your company with more confidence on LinkedIn, in email signatures and in every client interaction. The investment in their image becomes an investment in how they see themselves as part of your organization.
   `,
-  methodItem1 = 'Professional headshots receive up to 21 times more profile views',
-  methodItem2 = 'Recruiters spend 19% of their time reviewing your headshot',
-  methodItem3 = '71% of hiring managers reject unprofessional headshots',
-  methodItem4 = 'Professional headshots demonstrate career investment',
-
+  methodItem1 = 'Consistent team headshots increase revenue by up to 33%',
+  methodItem2 = "95% increase in contact form conversions with professional team photos",
+  methodItem3 = 'Professional headshots increase perceived company trustworthiness by 29%',
+  methodItem4 = '35% more leads generated with professional employee photos over stock imagery',
 
 
   systemRow2Title = 'System of Direction',
-  systemRow2Description = "Standing in front of a camera for a professional headshot can feel unnatural and vulnerable. Most people don’t instinctively know how to pose, hold their head, or position their hands. During the session, I guide posture and facial expression, so everything feels effortless and authentic. Clear, specific direction ensures that each movement and position demonstrates your approachability, confidence, and professionalism. Small, precise adjustments, a subtle tilt of the head, a shift in your shoulders, the placement of your hands, dramatically influence the final result.",
+  systemRow2Description = "Your team members are not professional models. They don't know what to do with their hands, their posture, or their facial expressions. That is my job. I provide clear and specific coaching that eliminates awkwardness and draws out authenticity. Small adjustments to posture, head angle, and expression make the difference between a stiff corporate photo and a high-quality headshot that projects confidence, competence, approachability, and trustworthiness. The goal is for every team member to see themselves at their best and leave with a skip in their step.",
   methodItem5 = 'Real-time image tethering for instant feedback',
   methodItem6 = 'Advanced guidance, coaching and direction',
   methodItem7 = "Systematic approach that's different from typical photographers",
@@ -113,18 +115,18 @@ const {
   
 
   systemRow3Title = 'The Experience',
-  systemRow3Description = "Most professionals approach their LinkedIn headshot session with some level of apprehension. The idea of being photographed can feel uncomfortable when the outcome matters for your career. My headshot sessions eliminate that tension by creating an environment that feels more like a conversation with a trusted friend than a formal photo shoot. Music plays, we laugh, and the direction I provide feels natural rather than forced. Rather than expecting you to know what to do in front of the camera, I guide your posture, expression, and positioning throughout. Most people are surprised by how much they enjoy the process.",
-  methodItem9 = 'Session preparation guide provided at time of scheduling',
-  methodItem10 = 'Wardrobe consultation based on purpose and color psychology',
-  methodItem11 = 'Professional lighting that defines your best features',
-  methodItem12 = "The dismantling of the 'I am not photogenic' narrative ",
+  systemRow3Description = "Most people dread having their photo taken. Their last experience was probably a high school yearbook session where they were rushed through with no direction, no coaching, awkward silence, forced smiles, and results that matched. That is not how I work. My sessions are conversational and collaborative. I keep people talking, laughing, and engaged so they forget they are in front of a camera. When your team is comfortable, it shows in the final images. Most people tell me afterward they actually enjoyed the experience.",
+  methodItem9 = 'Professional studio lighting brought directly to your corporate location',
+  methodItem10 = 'Active coaching and conversational direction for every team member',
+  methodItem11 = 'Studio quality results delivered without requiring staff to leave the office',
+  methodItem12 = "Expertly guided sessions that dismantle the not photogenic narrative",
 
 
   footerTitle = 'Ready to elevate your brand?',
   footerDescription = 'Stop settling for "good enough" headshots. Invest in your digital handshake.',
   footerButtonText = 'GET PRICING',
 
-  heroButtonUrl = '/rates',
+  heroButtonUrl = '/request-proposal',
   SecondaryButtonUrl = "https://app.acuityscheduling.com/schedule.php?owner=13511326&appointmentType=11959793",
   systemRow2ButtonText = 'GET PRICING',
   systemRow2ButtonUrl = '/rates',
@@ -132,34 +134,23 @@ const {
 
   faqs = [                                                                  
       {                                                                       
-        question: "Will recruiters take you less seriously with a bad headshot?",                                               
-        answer: `Yes. A bad headshot functions as a primary screening filter that leads to immediate disqualification. Research from Ladders using eye tracking technology proves that recruiters spend 19% of their total profile review time looking at your photo. If the image is unprofessional, they are statistically less likely to even read your experience. This is supported by data from CareerBuilder, which found that 71% of hiring managers have rejected candidates based on their online professional presence, citing a poor headshot as a sign of low professional judgment and a lack of attention to detail.
-
-        Furthermore, a professional headshot signals a willingness to invest in yourself. Recruiters view a high quality image as evidence that you take your career and personal brand seriously and are committed to presenting yourself as a polished professional. Using a low effort or low quality photo suggests a lack of self investment, leading hiring managers to question whether you will apply that same lack of effort to your work. A professional headshot photo removes that doubt by demonstrating that you value your own professional brand.
+        question: "How does scheduling work for office headshot sessions?",                                               
+        answer: `I arrange the date and terms with your point of contact in advance. On the day of the session, I arrive about an hour early to set up equipment, ensure everything is in good working order, and confirm I am ready to work with team members. Team members can be scheduled in increments that work for your company, whether that is every 5 minutes, 15 minutes, or something else. Scheduling can be handled through my online scheduler, a shared spreadsheet, or internally by your team. I also accommodate a first come first served approach if that works better for your office.
         `                                                   
       },                                                                      
       {                                                                       
-        question: "Why choose a professional session over an AI headshot?",                                               
-        answer: `AI headshots might cost less, but they are a poor investment because they are completely contrived fabrications. Business happens when people know, like, and trust you, and a professional headshot facilitates that trust by providing an accurate representation of your appearance, personality, and style. By choosing AI, you sacrifice the skill, ability, knowledge, professional equipment, and collaboration required to capture your professionalism and message, in exchange for a few pennies saved.
-
-        While an algorithm simply regurgitates indexed data without coaching or direction, I work with you in real time to elicit genuine facial expressions. AI headshots are just cheap renditions of what a computer thinks you should look like or how it thinks society should see you. Whereas I provide the expert guidance, nuanced lighting, and intentional composition needed to ensure the resulting image truly represents you. You gain a reliable, trusted collaborator and confidant who actively listens to your concerns, has a vested interest in your success, and tailors the final images to best suit your needs.
-
-        AI cannot replicate the human interaction required to make you feel comfortable or to ensure the final product looks like the person who actually shows up to the meeting. By choosing a professional headshot session, you are choosing a relatable, authentic image and a dedicated service experience over a guess made by software that lacks any real human element. Not only do you get a specialist determined to align with your goals, but you ensure a smooth, enjoyable experience rather than wasting valuable resources on a fabricated result.
-
+        question: "How much time do you spend photographing each team member?",                                               
+        answer: `Some people are done in 5 minutes. Others need a bit more time and coaching. I schedule in 5 to 15 minute increments, but rushing does not produce high quality results. Every team member gets the time they need to walk away with an image they are proud of.
         `                                                    
       },                                                                      
       {                                                                       
-        question: "What is the best background for a LinkedIn headshot in 2026?",                                               
-        answer: `<a href="/blog/best-backgrounds-for-professional-headshots">The best background for headshots for your LinkedIn profile</a> is one that keeps the focus on you, not what's behind you. Solid backgrounds work best because they eliminate distractions. White, grey, and black are the most popular choices. I also offer hand-painted canvas backgrounds in various colors if you want something with subtle texture.
-
-        During your session, we'll collaborate on background selection through discussion and strategic choices, similar to how we approach clothing options. The most important factor is making sure nothing pulls attention away from your face and expression.
+        question: "What if a team member misses the headshot session?",                                               
+        answer: `I am happy to arrange a return trip to photograph anyone who missed the original session. This requires coordination with your point of contact and carries an additional fee. If your team members are willing to travel to my studio in Lancaster, I can photograph them there as well. Either way, the images will match.
         `                                                    
       },
       {
-        question: "Why do LinkedIn profiles with headshots perform better?",
-        answer: `According to LinkedIn, profiles with professional headshots receive up to 14 to 21 times more profile views, up to 36 times more messages, and about nine times more connection requests compared to profiles without photos. This increase is driven not just by platform algorithms but by human behavior. People respond to professional images that show credibility, competence, and approachability. A high-quality headshot helps your profile attract attention from recruiters, clients, and collaborators.
-
-        Independent research also supports these findings. A study published in the Online Journal of Communication and Media Technologies found that LinkedIn users with profile pictures are perceived as more competent and socially attractive than those without photos. Professional headshots also improve profile completeness, which LinkedIn favors in search results and recommendations. Together these factors contribute to more visibility, connections, and professional authority.
+        question: "How much space is needed for an office headshot session?",
+        answer: `I require a space that is at least 15 feet by 15 feet with accessible power outlets. Wifi is helpful but not necessary. I am relatively self-contained. I bring all of my own equipment including camera, lights, backgrounds, computer, stands, tripods, and cables. I always clean my work area, and leave it in the same condition I found it.
         `
       }                                                                       
     ]                    
@@ -172,52 +163,53 @@ const {
 } = Astro.props;
 
 // Service schema
-const linkedinHeadshotsServiceSchema = buildServiceSchema(
-  "LinkedIn Headshots",
-  "Professional LinkedIn Headshot Photography",
-  "Professional LinkedIn headshots that make you stand out. Optimized profile photos that enhance your professional brand and attract opportunities.",
+const officeHeadshotsServiceSchema = buildServiceSchema(
+  "Office Headshots",
+  "Professional On-Location Office Headshot Photography",
+  "Professional on-location office headshots for businesses and corporate teams. Richard Waine Photography brings studio-quality headshots directly to your office, delivering consistent, polished results for your entire team.",
   "Richard Waine Photography",
   "Lancaster",
   "PA",
   "+1-717-925-0061",
-  ["Pennsylvania", "Maryland", "Delaware"]
+  ["Pennsylvania", "Maryland", "Delaware", "New York", "New Jersey"]
 );
 
 // Review schemas - 3 testimonials
-const andrewJacobsReview = buildReviewSchema(
+const ericCooleyReview = buildReviewSchema(
   {
-    author: "Andrew Jacobs",
-    company: "Turkey Hill",
+    author: "Eric Cooley",
+    company: "Havtech",
     rating: "5",
-    reviewBody: "Richard is a true professional and I greatly enjoyed my experience working with him. He provided a clear instructions and made the entire experience fun and enjoyable. If you need headshots I highly recommend Richard Waine"
+    reviewBody: "We had Richard come in to perform headshots for the business. He took the time with each person to make sure he got the right shot. Literally, the best picture I have ever seen of me. I sent it to my mom and she said 'oh wow, that's you?' So good my own mom didn't recognize me. Thanks for everything Richard!"
   },
   "Richard Waine Photography",
   "https://richardwainephotography.com"
 );
 
-const julieEvansReview = buildReviewSchema(
+const mackenzieLucasReview = buildReviewSchema(
   {
-    author: "Julie Evans",
-    company: "Claritas HR",
+    author: "Mackenzie Lucas",
+    company: "ProAssurance",
     rating: "5",
-    reviewBody: "Rich provided way more than I expected, but somehow just what I needed. He helped me see clearly who I intend to be as a business professional and even more as a person. Impressed is an understatement."
+    reviewBody: "We used Richard Waine for company headshots and we loved him! He worked with our schedule, and was warned that the people who were getting their photos taken disliked the previous photographer and that did not phase him! He was great at communicating and all of the people who worked with him that day loved him. Absolutely will use again."
   },
   "Richard Waine Photography",
   "https://richardwainephotography.com"
 );
 
-const nolanFosterReview = buildReviewSchema(
+const danielHagelbergReview = buildReviewSchema(
   {
-    author: "Nolan Foster",
-    company: "Bursera Capital",
+    author: "Daniel Hagelberg",
+    company: "Kaufman Dolowich",
     rating: "5",
-    reviewBody: "When someone says 'a master of their craft' they typically refer to individuals like Steve Jobs, Leonardo, and Socrates. They were all masters, but I bet they couldn't take photos as good as Richard Waine can."
+    reviewBody: "My firm hired Richard for my headshot and he was excellent. He brought his equipment to our office, and set everything up to get a top quality studio shot. His instructions were easy to follow and the pictures look amazing. He will work with you to get what you want but he also knows what will make the best shot. Would definitely use him again."
   },
   "Richard Waine Photography",
   "https://richardwainephotography.com"
 );
 
-const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
+// FAQ schema
+const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
 
 ---
 
@@ -227,15 +219,15 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
 <MainLayout title={pageTitle} description={metaDescription}>
 
 <!-- Service Schema -->
-<script type="application/ld+json" set:html={JSON.stringify(linkedinHeadshotsServiceSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(officeHeadshotsServiceSchema)} />
 
 <!-- Review Schemas -->
-<script type="application/ld+json" set:html={JSON.stringify(andrewJacobsReview)} />
-<script type="application/ld+json" set:html={JSON.stringify(julieEvansReview)} />
-<script type="application/ld+json" set:html={JSON.stringify(nolanFosterReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(ericCooleyReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(mackenzieLucasReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(danielHagelbergReview)} />
 
 <!-- FAQ Schema -->
-<script type="application/ld+json" set:html={JSON.stringify(linkedinHeadshotsFAQSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(officeHeadshotsFAQSchema)} />
 
 <body>
 <section class="hero">
@@ -259,7 +251,7 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
     <div class="hero-visual">
         <div class="blueprint-box">
             <div class="portrait-sim">
-              <Image src={KenGiglio}  alt=""/>
+              <Image src={Chubb}  alt=""/>
             </div>
 
             <div class="callout c-1">{callout1}</div>
@@ -307,11 +299,10 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
 
     </div>
     <div class="system-image">
-      <Image src={Chubb} alt="Professional LinkedIn headshot of African American woman with long braided hair in burgundy shirt, confident and poised facial expression against gray studio background, headshot made by Richard Waine in Philadelphia Pennsylvania for Chubb Insurance"/>
+      <Image src={TsedeyAragie} alt="Professional office headshot of an African-American woman in white shirt and blue blazer, smiling warmly against white studio background, headshot made by Richard Waine in Lancaster Pennsylvania"/>
     </div>
   </div>
 
-    
   <div class="system-row">
         <div class="system-image">
           <Image src={RW1} alt=""/>
@@ -354,7 +345,7 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
 </section>
 
 <section id="testimonials">
-  <Testimonials title="" limit={3} filterByNames={["Andrew Jacobs", "Julie Evans", "Nolan Foster"]}/>
+  <Testimonials title="" limit={3} filterByNames={["Eric Cooley", "Mackenzie Lucas", "Daniel Hagelberg"]}/>
 </section>
 
 <section class="FAQs">
@@ -371,7 +362,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('astro:page-load', () => {
-if (window.location.pathname !== '/linkedin-headshots') return;
+if (window.location.pathname !== '/office-headshots') return;
 let mm = gsap.matchMedia();
 
   mm.add("(min-width: 48em)", () => {
@@ -733,7 +724,7 @@ h1 {
   font-size: var(--fs-600);
   margin-bottom: var(--size-4);
   text-align:center;
-  color:var(--accent); /* remove to make text white */
+  color:var(--accent);
 }
 
 .system-content p{
