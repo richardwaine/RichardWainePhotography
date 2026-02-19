@@ -19,6 +19,7 @@ const portfolioData = [
   {
     image: idaGrandyMain,
     thumbnail: idaGrandyThumb,
+    alt: "Professional business headshot by Richard Waine of African American woman with curly dark brown hair and radiant smile wearing black v-neck blouse against gray studio background",
     dataStreams: {
       confidenceLevel: "98.7%",
       authenticityIndex: "MAXIMUM",
@@ -46,6 +47,7 @@ const portfolioData = [
   {
     image: shreePatelMain,
     thumbnail: shreePatelThumb,
+    alt: "Professional executive headshot of man with receding hairline and rectangular glasses wearing dark suit jacket over white dress shirt against white studio background by Richard Waine Photography",
     dataStreams: {
       confidenceLevel: "97.3%",
       authenticityIndex: "ELEVATED",
@@ -73,6 +75,7 @@ const portfolioData = [
   {
     image: sonyaLiliensteinMain,
     thumbnail: sonyaLiliensteinThumb,
+    alt: "Professional acting headshot of woman with long dark brown wavy hair and warm smile wearing red sleeveless top against seamless white studio background by Richard Waine Photography",
     dataStreams: {
       confidenceLevel: "96.4%",
       authenticityIndex: "OPTIMAL",
@@ -100,6 +103,7 @@ const portfolioData = [
   {
     image: ethanHaymovitzMain,
     thumbnail: ethanHaymovitzThumb,
+    alt: "Professional linkedin profile headshot of bald man with short reddish-brown beard and round dark-framed glasses wearing navy blue blazer over white crew neck shirt against dark studio background by Richard Waine Photography Lancaster PA",
     dataStreams: {
       confidenceLevel: "95.8%",
       authenticityIndex: "ENHANCED",
@@ -174,7 +178,7 @@ const currentData = portfolioData[currentImageIndex];
           <div class="holographic-frame">
           <Image 
         src={macbookFrame} 
-        alt="Apple Macbook laptop computer" 
+        alt="Apple Macbook laptop computer frame" 
         class="macbook-frame-image"
         loading="eager"
         width={1600}
@@ -184,7 +188,7 @@ const currentData = portfolioData[currentImageIndex];
       <div class="image-container">
               <Image
                 src={currentData.image}
-                alt="Neural Portrait Analysis"
+                alt={currentData.alt}
                 class="portrait-scan"
                 id="main-portrait"
                 loading="eager"
@@ -224,7 +228,7 @@ const currentData = portfolioData[currentImageIndex];
           <div class="portfolio-matrix">
             {portfolioData.map((data, index) => (
               <div class="matrix-cell" data-index={index.toString()}>
-                <Image src={data.thumbnail} alt={`Neural scan ${index + 1}`} loading="lazy" width={500} height={500} />
+                <Image src={data.thumbnail} alt={data.alt} loading="lazy" width={500} height={500} />
               </div>
             ))}
           </div>
