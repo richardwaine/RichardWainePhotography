@@ -1,6 +1,7 @@
 ---
 import type { TestimonialData } from '../types/components';
 import { ALL_TESTIMONIALS } from '../data/testimonials';
+import type { Testimonial } from '../data/testimonials';
 import TestimonialCard from './TestimonialCard.astro';
 
 export interface Props {
@@ -22,7 +23,7 @@ const {
 // We will use ALL_TESTIMONIALS directly
 
 const testimonialsToDisplay = filterByNames
-  ? filterByNames.map(name => ALL_TESTIMONIALS.find(testimonial => testimonial.name === name)).filter(Boolean).slice(0, limit)
+  ? filterByNames.map(name => ALL_TESTIMONIALS.find(testimonial => testimonial.name === name)).filter((t): t is Testimonial => t !== undefined).slice(0, limit)
   : ALL_TESTIMONIALS.slice(0, limit);
 ---
 
