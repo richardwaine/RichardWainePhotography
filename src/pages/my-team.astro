@@ -10,6 +10,7 @@ const lionel = {
   name: "Lionel Adriano",
   role: "Makeup Artist",
   image: "src/assets/images/team/LionelAdriano - 0040 (horizontal).jpg",
+  alt: "Professional headshot of makeup artist Lionel Adriano with styled dark brown hair swept back wearing tan blazer over black collared shirt photographed against seamless white studio backdrop with high-key professional lighting by Richard Waine Photography Lancaster Pennsylvania",
   bio: [
     "Lionel is a world-class makeup artist who has worked with some of the world's most recognizable people. He has an amazing eye for color and complexion, and ensures that no detail is overlooked.",
     "Lionel is a certified M.A.C. makeup artist and was voted the best makeup artist in Lancaster County, Pennsylvania by the readers of Lancaster County Magazine, Susquehanna Style Magazine and Lancaster Newspaper.",
@@ -22,6 +23,7 @@ const lisa = {
   name: "Lisa Torba",
   role: "Stylist",
   image: "src/assets/images/team/LisaTorba - 0158 (horizontal).jpg",
+  alt: "Professional headshot of J. Hilburn stylist Lisa Torba with voluminous dark brown curly shoulder-length hair and warm smile wearing navy blue scoop neck top photographed against seamless white studio backdrop with professional studio lighting by Richard Waine Photography Lancaster Pennsylvania",
   bio: [
     "Lisa is an incredible Personal Stylist for men. She styles you in high-quality clothing that fits perfectly and looks and feels amazing, making your life easier and your wardrobe sharper than ever.",
     "She provides a collaborative, frustration-free shopping experience, meticulously measuring you and guiding every step of the customization process.",
@@ -73,7 +75,7 @@ const lisaSchema = buildPersonSchema(
   <!-- Slide 1: Lionel (Image Left, Content Right) -->
   <section class="slide active" id="lionel-slide">
     <div class="slide-image">
-      <img src={lionel.image} alt={`${lionel.name} - ${lionel.role}`} loading="lazy" />
+      <img src={lionel.image} alt={lionel.alt} loading="lazy" />
     </div>
     <div class="slide-content">
       <h2>{lionel.name}</h2>
@@ -89,7 +91,7 @@ const lisaSchema = buildPersonSchema(
   <!-- Slide 2: Lisa (Image Left, Content Right) -->
   <section class="slide" id="lisa-slide">
     <div class="slide-image">
-      <img src={lisa.image} alt={`${lisa.name} - ${lisa.role}`} loading="lazy" />
+      <img src={lisa.image} alt={lisa.alt} loading="lazy" />
     </div>
     <div class="slide-content">
       <h2>{lisa.name}</h2>
