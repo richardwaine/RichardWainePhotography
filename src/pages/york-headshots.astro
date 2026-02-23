@@ -23,7 +23,7 @@ import captions from '../assets/captions.vtt';
 
 import BriefBio2 from '../components/BriefBio2.astro';
 import WorldMap from '../components/WorldMap.astro';
-import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema } from '../utils/schema';
+import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema, buildBreadcrumbSchema } from '../utils/schema';
 
 const title = 'York Headshots | Richard Waine Photography';
 const h1 = 'Professional Headshots York';
@@ -99,6 +99,11 @@ const yorkHeadshotsServiceSchema = buildServiceSchema(
   ["Pennsylvania", "York"]
 );
 
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "York Headshots", url: "/york-headshots" }
+]);
+
 ---
 
 <MainLayout title = "Richard Waine | York Headshot Photographer" description="York, PA professional headshot photography. Corporate portraits, business headshots, LinkedIn photos for York County professionals. Studio and on-location.">
@@ -113,6 +118,9 @@ const yorkHeadshotsServiceSchema = buildServiceSchema(
 	<script type="application/ld+json" set:html={JSON.stringify(wendyBookerReview)} />
 	<script type="application/ld+json" set:html={JSON.stringify(scottKantnerReview)} />
 	<script type="application/ld+json" set:html={JSON.stringify(ellenTaylorReview)} />
+
+	<!-- Breadcrumb Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
 	<section id="hero">
 	<Hero

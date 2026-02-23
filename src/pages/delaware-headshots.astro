@@ -23,7 +23,7 @@ import captions from '../assets/captions.vtt';
 
 import BriefBio2 from '../components/BriefBio2.astro';
 import WorldMap from '../components/WorldMap.astro';
-import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema } from '../utils/schema';
+import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema, buildBreadcrumbSchema } from '../utils/schema';
 
 const title = 'Delaware Headshots | Richard Waine Photography';
 const h1 = 'Professional Headshots Delaware';
@@ -99,6 +99,12 @@ const delawareHeadshotsServiceSchema = buildServiceSchema(
   ["Delaware"]
 );
 
+// Breadcrumb schema
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "Delaware Headshots", url: "/delaware-headshots" }
+]);
+
 ---
 
 <MainLayout title = "Richard Waine | Delaware Headshot Photographer" description="Professional headshot photographer serving Delaware including Wilmington, Newark, and Dover. Corporate headshots, business portraits, and LinkedIn profile photos for professionals">
@@ -113,6 +119,9 @@ const delawareHeadshotsServiceSchema = buildServiceSchema(
 	<script type="application/ld+json" set:html={JSON.stringify(wendyBookerReview)} />
 	<script type="application/ld+json" set:html={JSON.stringify(scottKantnerReview)} />
 	<script type="application/ld+json" set:html={JSON.stringify(ellenTaylorReview)} />
+
+	<!-- Breadcrumb Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
 	<section id="hero">
 	<Hero

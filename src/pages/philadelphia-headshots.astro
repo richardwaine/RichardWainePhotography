@@ -23,7 +23,7 @@ import captions from '../assets/captions.vtt';
 
 import BriefBio2 from '../components/BriefBio2.astro';
 import WorldMap from '../components/WorldMap.astro';
-import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema } from '../utils/schema';
+import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema, buildBreadcrumbSchema } from '../utils/schema';
 
 const title = 'Philadelphia Headshots | Richard Waine Photography';
 const h1 = 'Professional Headshots Philadelphia';
@@ -100,6 +100,11 @@ const philadelphiaHeadshotsServiceSchema = buildServiceSchema(
   ["Pennsylvania", "Philadelphia"]
 );
 
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "Philadelphia Headshots", url: "/philadelphia-headshots" }
+]);
+
 ---
 
 <MainLayout title = "Richard Waine | Philadelphia Headshot Photographer" description="Philadelphia headshot photographer for professionals, actors, corporate teams. Business portraits, LinkedIn headshots, office headshots across the city.">
@@ -114,6 +119,9 @@ const philadelphiaHeadshotsServiceSchema = buildServiceSchema(
 	<script type="application/ld+json" set:html={JSON.stringify(wendyBookerReview)} />
 	<script type="application/ld+json" set:html={JSON.stringify(scottKantnerReview)} />
 	<script type="application/ld+json" set:html={JSON.stringify(ellenTaylorReview)} />
+
+	<!-- Breadcrumb Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
 	<section id="hero">
 	<Hero
