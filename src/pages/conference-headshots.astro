@@ -23,7 +23,7 @@ import captions from '../assets/captions.vtt';
 
 import BriefBio2 from '../components/BriefBio2.astro';
 import WorldMap from '../components/WorldMap.astro';
-import { buildVideoObjectSchema, buildReviewSchema } from '../utils/schema';
+import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema } from '../utils/schema';
 
 const title = 'Conference Headshots | Richard Waine Photography';
 const h1 = 'Professional Conference Headshots';
@@ -87,32 +87,24 @@ const ellenTaylorReview = buildReviewSchema(
   "https://richardwainephotography.com"
 );
 
+// Service schema
+const conferenceHeadshotsServiceSchema = buildServiceSchema(
+  "Conference Headshots",
+  "Professional Conference Headshot Photography",
+  "Professional headshot photography for conferences and events. Richard Waine Photography provides on-site headshot services at conferences nationwide, delivering high-quality professional headshots for attendees and speakers.",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "+1-717-925-0061",
+  ["Pennsylvania", "Maryland", "Delaware", "New York", "New Jersey", "Virginia"]
+);
+
 ---
 
 <MainLayout title = "Richard Waine | Professional Conference Headshot Photographer" description="Richard Waine Photography is the premier conference headshot photographer, specializing in professional headshots at conferences and events for lead generation.">
 
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Service",
-		"name": "Conference Headshot Photography",
-		"description": "Professional headshot photography services for conferences and events",
-		"url": "https://www.richardwainephotography.com/conference-headshots",
-		"provider": {
-			"@type": "ProfessionalService",
-			"@id": "https://www.richardwainephotography.com"
-		},
-		"serviceType": "Conference Photography",
-		"areaServed": [
-			{"@type": "State", "name": "Pennsylvania"},
-			{"@type": "State", "name": "Maryland"},
-			{"@type": "State", "name": "Delaware"},
-			{"@type": "State", "name": "New Jersey"},
-			{"@type": "State", "name": "New York"},
-			{"@type": "State", "name": "Virginia"}
-		]
-	}
-	</script>
+	<!-- Service Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(conferenceHeadshotsServiceSchema)} />
 
 	<!-- Video Schema -->
 	<script type="application/ld+json" set:html={JSON.stringify(promoVideoSchema)} />

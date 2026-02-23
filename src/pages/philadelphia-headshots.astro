@@ -23,7 +23,7 @@ import captions from '../assets/captions.vtt';
 
 import BriefBio2 from '../components/BriefBio2.astro';
 import WorldMap from '../components/WorldMap.astro';
-import { buildVideoObjectSchema, buildReviewSchema } from '../utils/schema';
+import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema } from '../utils/schema';
 
 const title = 'Philadelphia Headshots | Richard Waine Photography';
 const h1 = 'Professional Headshots Philadelphia';
@@ -88,30 +88,24 @@ const ellenTaylorReview = buildReviewSchema(
   "https://richardwainephotography.com"
 );
 
+// Service schema
+const philadelphiaHeadshotsServiceSchema = buildServiceSchema(
+  "Philadelphia Headshots",
+  "Professional Headshot Photography in Philadelphia",
+  "Professional headshots in Philadelphia, Pennsylvania. Richard Waine Photography provides world-class headshot photography services for Philadelphia professionals, offering corporate headshots, business headshots, and executive portraits.",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "+1-717-925-0061",
+  ["Pennsylvania", "Philadelphia"]
+);
+
 ---
 
-<MainLayout title = "Richard Waine | Philadelphia Headshot Photographer" description="Richard Waine is Philadelphia's best headshot photographer, specializing in Professional headshots for corporate professionals, offices, and conferences">
+<MainLayout title = "Richard Waine | Philadelphia Headshot Photographer" description="Philadelphia headshot photographer for professionals, actors, corporate teams. Business portraits, LinkedIn headshots, office headshots across the city.">
 
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "ProfessionalService",
-		"name": "Richard Waine Photography - Philadelphia Headshots",
-		"description": "Professional headshot photography services in Philadelphia, Pennsylvania",
-		"url": "https://www.richardwainephotography.com/philadelphia-headshots",
-		"telephone": "(717) 925-0061",
-		"areaServed": {
-			"@type": "City",
-			"name": "Philadelphia",
-			"addressRegion": "PA",
-			"addressCountry": "US"
-		},
-		"provider": {
-			"@type": "ProfessionalService",
-			"@id": "https://www.richardwainephotography.com"
-		}
-	}
-	</script>
+	<!-- Service Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(philadelphiaHeadshotsServiceSchema)} />
 
 	<!-- Video Schema -->
 	<script type="application/ld+json" set:html={JSON.stringify(promoVideoSchema)} />

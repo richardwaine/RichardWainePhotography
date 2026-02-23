@@ -12,12 +12,6 @@ export interface FAQItem {
   answer: string;
 }
 
-export interface HowToStep {
-  name: string;
-  text: string;
-  url?: string;
-}
-
 export interface City {
   name: string;
   state: string;
@@ -74,29 +68,6 @@ export function buildFAQSchema(faqs: FAQItem[]) {
         "@type": "Answer",
         "text": faq.answer
       }
-    }))
-  };
-}
-
-/**
- * Builds HowTo schema for process steps
- */
-export function buildHowToSchema(
-  name: string,
-  description: string,
-  steps: HowToStep[]
-) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": name,
-    "description": description,
-    "step": steps.map((step, index) => ({
-      "@type": "HowToStep",
-      "position": index + 1,
-      "name": step.name,
-      "text": step.text,
-      ...(step.url && { "url": step.url })
     }))
   };
 }

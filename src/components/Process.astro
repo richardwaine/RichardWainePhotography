@@ -1,35 +1,10 @@
 ---
 import PrimaryButton from './PrimaryButton.astro';
-import { buildHowToSchema } from '../utils/schema';
 
 import { Image } from 'astro:assets';
 import Calendar from '../assets/images/icons/Calendar.png';
 import Camera from '../assets/images/icons/Camera.png';
 import Share from '../assets/images/icons/Share.png';
-
-// Define process steps for schema
-const processSteps = [
-  {
-    name: "Schedule",
-    text: "Tap the SCHEDULE button! Select an appointment that works best for you.",
-    url: "https://richardwainephotography.com/schedule"
-  },
-  {
-    name: "Shoot",
-    text: "It's fun and easy! I will guide you into pictures that will propel your career."
-  },
-  {
-    name: "Share",
-    text: "Share your images with everyone! Stand out and be recognized as an expert in your field."
-  }
-];
-
-// Generate HowTo schema
-const processSchema = buildHowToSchema(
-  "How to Get Professional Headshots",
-  "The simple three-step process to get professional headshots with Richard Waine Photography",
-  processSteps
-);
 ---
 
 
@@ -107,8 +82,6 @@ const processSchema = buildHowToSchema(
   </article>
 </div>
 </div>
-
-<script type="application/ld+json" set:html={JSON.stringify(processSchema)} />
 
 <style>
 

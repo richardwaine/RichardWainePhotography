@@ -24,7 +24,7 @@ import captions from '../assets/captions.vtt';
 
 import BriefBio2 from '../components/BriefBio2.astro';
 import WorldMap from '../components/WorldMap.astro';
-import { buildVideoObjectSchema, buildReviewSchema } from '../utils/schema';
+import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema, buildAggregateRatingSchema } from '../utils/schema';
 
 const title = 'Richard Waine Photography';
 const h1 = 'Professional Headshots Lancaster';
@@ -88,6 +88,26 @@ const ellenTaylorReview = buildReviewSchema(
   "https://richardwainephotography.com"
 );
 
+// Service schema for Lancaster
+const lancasterHeadshotsServiceSchema = buildServiceSchema(
+  "Lancaster Headshots",
+  "Professional Headshot Photography in Lancaster",
+  "Professional headshots in Lancaster, Pennsylvania. Richard Waine Photography provides world-class headshot photography services from our Lancaster studio, offering corporate headshots, business headshots, executive portraits, and acting headshots.",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "+1-717-925-0061",
+  ["Pennsylvania", "Lancaster", "Central Pennsylvania"]
+);
+
+// Aggregate Rating schema - 652 5-star reviews
+const aggregateRatingSchema = buildAggregateRatingSchema(
+  "Richard Waine Photography",
+  "5",
+  "652",
+  "https://richardwainephotography.com"
+);
+
 ---
 
 <MainLayout title = "Professional Headshot Photographer | Lancaster, PA" description="Lancaster Pennsylvania's Best Headshot Photographer for professional headshots, office headshots, business headshots, corporate headshots, acting headshots">
@@ -99,6 +119,12 @@ const ellenTaylorReview = buildReviewSchema(
 	<script type="application/ld+json" set:html={JSON.stringify(wendyBookerReview)} />
 	<script type="application/ld+json" set:html={JSON.stringify(scottKantnerReview)} />
 	<script type="application/ld+json" set:html={JSON.stringify(ellenTaylorReview)} />
+
+	<!-- Service Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(lancasterHeadshotsServiceSchema)} />
+
+	<!-- Aggregate Rating Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(aggregateRatingSchema)} />
 
 	<section id="hero">
 	<Hero

@@ -23,7 +23,7 @@ import captions from '../assets/captions.vtt';
 
 import BriefBio2 from '../components/BriefBio2.astro';
 import WorldMap from '../components/WorldMap.astro';
-import { buildVideoObjectSchema, buildReviewSchema } from '../utils/schema';
+import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema } from '../utils/schema';
 
 const title = 'Delaware Headshots | Richard Waine Photography';
 const h1 = 'Professional Headshots Delaware';
@@ -87,29 +87,24 @@ const ellenTaylorReview = buildReviewSchema(
   "https://richardwainephotography.com"
 );
 
+// Service schema
+const delawareHeadshotsServiceSchema = buildServiceSchema(
+  "Delaware Headshots",
+  "Professional Headshot Photography in Delaware",
+  "Professional headshots in Delaware. Richard Waine Photography provides world-class headshot photography services for Delaware professionals, offering corporate headshots, business headshots, and executive portraits.",
+  "Richard Waine Photography",
+  "Lancaster",
+  "PA",
+  "+1-717-925-0061",
+  ["Delaware"]
+);
+
 ---
 
-<MainLayout title = "Richard Waine | Delaware Headshot Photographer" description="Richard Waine is Delaware’s premier headshot photographer, specializing in Professional headshots for companies, professionals, offices, and conferences">
+<MainLayout title = "Richard Waine | Delaware Headshot Photographer" description="Professional headshot photographer serving Delaware including Wilmington, Newark, and Dover. Corporate headshots, business portraits, and LinkedIn profile photos for professionals">
 
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "ProfessionalService",
-		"name": "Richard Waine Photography - Delaware Headshots",
-		"description": "Professional headshot photography services in Delaware",
-		"url": "https://www.richardwainephotography.com/delaware-headshots",
-		"telephone": "(717) 925-0061",
-		"areaServed": {
-			"@type": "State",
-			"name": "Delaware",
-			"addressCountry": "US"
-		},
-		"provider": {
-			"@type": "ProfessionalService",
-			"@id": "https://www.richardwainephotography.com"
-		}
-	}
-	</script>
+	<!-- Service Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(delawareHeadshotsServiceSchema)} />
 
 	<!-- Video Schema -->
 	<script type="application/ld+json" set:html={JSON.stringify(promoVideoSchema)} />
