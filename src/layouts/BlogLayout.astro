@@ -20,6 +20,12 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: post.data.blogTitle, url: post.slug }
 ]);
 
+// Format the last updated date
+const lastUpdated = new Date(post.data.modifiedDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
 
 // --- NEW LINE HERE ---
 // Get the faqs from the blog post's front matter.
@@ -115,9 +121,7 @@ const isInterview = post.data.type === 'interview';
     <div class="wrapper">
 
       <h1 class="article-title">{title}</h1>
-
-
-
+      <p class="article-meta">Last Updated: {lastUpdated}</p>
 
         <div class="article-content">
            
@@ -194,7 +198,15 @@ const isInterview = post.data.type === 'interview';
   /* margin-bottom: var(--size-4); */
   color: var(--blkclr);
 
-  
+
+}
+
+.article-meta {
+  text-align: center;
+  font-size: var(--fs-350);
+  color: var(--faded);
+  margin-top: var(--size-2);
+  margin-bottom: var(--size-6);
 }
 
 .article-content{

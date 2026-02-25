@@ -118,7 +118,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Keith Woody",
     company: "Fulton Bank", 
-    review: "I had no idea, how amazing this experience would turn out to be. The quality of what is being provided and experienced way surpassed my expectations. As a Sourcing and Procurement executive of over 25 years, I highly recommend Richard for your corporate head shot needs.",
+    review: "I had no idea, how amazing this experience would be. The quality of what is being provided and experienced way surpassed my expectations. As a Sourcing and Procurement executive of over 25 years, I highly recommend Richard for your corporate head shot needs.",
     rating: 5,
     imageUrl: KeithWoody.src,
     image: KeithWoody,

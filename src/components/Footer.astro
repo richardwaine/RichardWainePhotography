@@ -10,6 +10,7 @@ export interface Props {
   businessInfo?: {name: string; address: string; phone: string};
   socialLinks?: Array<{platform: string; url: string; ariaLabel: string}>;
   areasServiced?: Array<{name: string; url: string}>;
+  services?: Array<{name: string; url: string}>;
   quickLinks?: Array<{name: string; url: string}>;
   copyrightYear?: number;
 }
@@ -34,6 +35,16 @@ const {
     { name: 'Baltimore', url: '/baltimore-headshots' },
     { name: 'Delaware', url: '/delaware-headshots' }
   ],
+
+  services =[
+    { name: 'Business Headshots', url:'/business-headshots'},
+    { name: 'Acting Headshots', url:'/acting-headshots'},
+    { name: 'LinkedIn Headshots', url:'/linkedin-headshots'},
+    { name: 'Office Headshots', url:'/office-headshots'},
+    { name: 'Gift Cards', url:'/gift-certificates'},
+  ],
+
+
   quickLinks = [
     { name: 'About', url: '/about-lancaster-headshot-photographer-richard-waine' },
     { name: 'Contact', url: '/contact-lancaster-headshot-photographer-richard-waine' },
@@ -101,12 +112,7 @@ const organizationSchema = buildOrganizationSchema(
             </svg>
             </a>
         </div>
-            <!-- <div class="footer-logo-section">
-                <a href="/" aria-label="Richard Waine Photography Home">
-
-                   <img class="footer-logo" src={logoSrc} alt={logoAlt} width="120" height="120" loading="lazy">
-                </a>
-            </div> -->
+            
             
             <div class="footer-section">
                 <h4>AREAS SERVICED</h4>
@@ -116,6 +122,16 @@ const organizationSchema = buildOrganizationSchema(
                     ))}
                 </ul>
             </div>
+
+            <div class="footer-section">
+                <h4>SERVICES</h4>
+                <ul class="footer-links">
+                    {services.map(service => (
+                        <li><a href={service.url}>{service.name}</a></li>
+                    ))}
+                </ul>
+            </div>
+
             
             <div class="footer-section">
                 <h4>QUICK LINKS</h4>
@@ -386,7 +402,7 @@ const organizationSchema = buildOrganizationSchema(
         }
 
         .footer-main-row {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: calc(var(--size-650) / 2);
             text-align: left;
             align-items: start;

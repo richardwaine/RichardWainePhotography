@@ -36,9 +36,9 @@ const {title, description = "Professional headshot photographer. Corporate heads
 		<link rel="apple-touch-icon" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="canonical" href={Astro.url.href} />
+		<link rel="canonical" href={`https://richardwainephotography.com${Astro.url.pathname}`} />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:url" content={`https://richardwainephotography.com${Astro.url.pathname}`} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content="https://www.richardwainephotography.com/Logo-RichardWainePhotography-black.png" />
