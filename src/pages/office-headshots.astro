@@ -107,7 +107,10 @@ const {
 
 
   systemRow2Title = 'System of Direction',
-  systemRow2Description = "Your team members are not professional models. They don't know what to do with their hands, their posture, or their facial expressions. That is my job. I provide clear and specific coaching that eliminates awkwardness and draws out authenticity. Small adjustments to posture, head angle, and expression make the difference between a stiff corporate photo and a high-quality headshot that projects confidence, competence, approachability, and trustworthiness. The goal is for every team member to see themselves at their best and leave with a skip in their step.",
+  systemRow2Description = `Your team members are not professional models. They don't know what to do with their hands, their posture, or their facial expressions. That is my job. I provide clear and specific coaching that eliminates awkwardness and draws out authenticity. Small adjustments to posture, head angle, and expression make the difference between a stiff corporate photo and a high-quality headshot that projects confidence, competence, approachability, and trustworthiness. The goal is for every team member to see themselves at their best and leave with a skip in their step.
+
+  Over 17 years photographing corporate teams, I have refined this coaching approach to help professionals who never thought they could look good in photos walk away surprised by how much they enjoyed the process.
+  `,
   methodItem5 = 'Real-time image tethering for instant feedback',
   methodItem6 = 'Advanced guidance, coaching and direction',
   methodItem7 = "Systematic approach that's different from typical photographers",
@@ -326,6 +329,29 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
       <h2>{systemRow3Title}</h2>
       <p>{systemRow3Description}</p>
 
+      <!-- <table class="logistics-table">
+        <tr>
+          <td class="logistics-label">Time Per Person</td>
+          <td class="logistics-value">Approx. 5 - 15 minutes</td>
+        </tr>
+        <tr>
+          <td class="logistics-label">Space Required</td>
+          <td class="logistics-value">15 x 15 feet minimum</td>
+        </tr>
+        <tr>
+          <td class="logistics-label">Equipment Provided</td>
+          <td class="logistics-value">Full studio setup included</td>
+        </tr>
+        <tr>
+          <td class="logistics-label">Selection Process</td>
+          <td class="logistics-value">Real-time review with guidance</td>
+        </tr>
+        <tr>
+          <td class="logistics-label">Service Area</td>
+          <td class="logistics-value">PA, MD, DE, NY, NJ</td>
+        </tr>
+      </table> -->
+
     <ul class="method-list">
         <li class="method-item"><span>◆</span> {methodItem9}</li>
         <li class="method-item"><span>◆</span> {methodItem10}</li>
@@ -333,6 +359,29 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
         <li class="method-item"><span>◆</span> {methodItem12}</li>
        
       </ul>
+
+      <table class="logistics-table">
+        <tr>
+          <td class="logistics-label">Time Per Person</td>
+          <td class="logistics-value">Approx. 5 - 15 minutes</td>
+        </tr>
+        <tr>
+          <td class="logistics-label">Space Required</td>
+          <td class="logistics-value">15 x 15 feet minimum</td>
+        </tr>
+        <tr>
+          <td class="logistics-label">Equipment Provided</td>
+          <td class="logistics-value">Full studio setup included</td>
+        </tr>
+        <tr>
+          <td class="logistics-label">Selection Process</td>
+          <td class="logistics-value">Real-time review with guidance</td>
+        </tr>
+        <tr>
+          <td class="logistics-label">Service Area</td>
+          <td class="logistics-value">PA, MD, DE, NY, NJ</td>
+        </tr>
+      </table>
 
       <!-- <div class="button-wrapper">
         <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
@@ -757,6 +806,36 @@ h1 {
   font-weight: bold;
 }
 
+.logistics-table {
+  width:calc(100% - var(--size-7));
+  margin-inline:auto;
+  margin-left:0;
+  margin-bottom: var(--size-7);
+  border-collapse: collapse;
+}
+
+.logistics-table tr {
+  border-bottom: 1px solid var(--accent);
+}
+
+.logistics-table td {
+  padding-block: var(--size-4);
+}
+
+.logistics-label {
+  /* color: var(--accent); */
+  font-weight: var(--fw-bold);
+  width: 60%;
+
+  
+
+}
+
+.logistics-value {
+  color: var(--text-dim);
+  /* outline:2px solid red; */
+  
+}
 
 
 #testimonials{

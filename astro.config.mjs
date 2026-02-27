@@ -8,7 +8,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.richardwainephotography.com',
+  site: 'https://richardwainephotography.com',
   integrations: [ mdx(), sitemap()],
   build: {
     inlineStylesheets: 'always'
