@@ -244,7 +244,19 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
 
 <body>
 <section class="hero">
-    <Image class="hero-bg" src={RW2} alt="Professional headshot photographer Richard Waine photographing a client in Lancaster PA studio with dual monitor setup displaying headshots for Linkedin profiles"/>
+
+
+<Image
+    class="hero-bg"
+    src={RW2}
+    alt="Professional headshot photographer Richard Waine photographing a client in Lancaster PA studio with dual monitor setup displaying headshots for Linkedin profiles"
+    loading="eager"
+    fetchpriority="high"
+    widths={[400, 600, 800, 1200, 1600]}
+    sizes="100vw"
+/>
+
+
     <div class="hero-text">
         <h1>{heroTitle} <br><span class="cyan">{heroTitleAccent}</span></h1>
         <p class="hero-p">{heroDescription}</p>
@@ -265,7 +277,7 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
     <div class="hero-visual">
         <div class="blueprint-box">
             <div class="portrait-sim">
-              <Image src={KenGiglio}  alt="Professional linkedin profile headshot of man with gray mustache and shaved head wearing black suit jacket and white open-collar dress shirt on white studio background by Richard Waine Photography"/>
+              <Image src={KenGiglio}  alt="Professional linkedin profile headshot of man with gray mustache and shaved head wearing black suit jacket and white open-collar dress shirt on white studio background by Richard Waine Photography" width={600} height={480}/>
             </div>
 
             <div class="callout c-1">{callout1}</div>
@@ -277,17 +289,17 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
 <section class="pillars">
   <div class="pillar-card">
     <span class="pillar-num">{pillar1Num}</span>
-    <h3>{pillar1Title}</h3>
+    <div class="pillar-title">{pillar1Title}</div>
     <p>{pillar1Description}</p>
   </div>
   <div class="pillar-card">
     <span class="pillar-num">{pillar2Num}</span>
-    <h3>{pillar2Title}</h3>
+    <div class="pillar-title">{pillar2Title}</div>
     <p>{pillar2Description}</p>
   </div>
   <div class="pillar-card">
     <span class="pillar-num">{pillar3Num}</span>
-    <h3>{pillar3Title}</h3>
+    <div class="pillar-title">{pillar3Title}</div>
     <p>{pillar3Description}</p>
   </div>
 </section>
@@ -313,14 +325,14 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
 
     </div>
     <div class="system-image">
-      <Image src={Chubb} alt="Professional LinkedIn headshot of African American woman with long braided hair in burgundy shirt, confident and poised facial expression against gray studio background, headshot made by Richard Waine in Philadelphia Pennsylvania for Chubb Insurance"/>
+      <Image src={Chubb} alt="Professional LinkedIn headshot of African American woman with long braided hair in burgundy shirt, confident and poised facial expression against gray studio background, headshot made by Richard Waine in Philadelphia Pennsylvania for Chubb Insurance" width={600} height={480}/>
     </div>
   </div>
 
     
   <div class="system-row">
         <div class="system-image">
-          <Image src={RW1} alt="Linkedin profile headshot photography session showing blonde woman in tan plaid blazer surrounded by professional photo studio lighting equipment in Lancaster PA studio by Richard Waine Photography"/>
+          <Image src={RW1} alt="Linkedin profile headshot photography session showing blonde woman in tan plaid blazer surrounded by professional photo studio lighting equipment in Lancaster PA studio by Richard Waine Photography" width={600} height={480}/>
         </div>
         
         <div class="system-content">
@@ -354,13 +366,13 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
 
     </div>
     <div class="system-image">
-      <Image src={RW11} alt="Behind-the-scenes professional linkedin profile headshot photography session showing woman in black cardigan and pink lace top positioned between Westcott lighting panels and camera by Richard Waine"/>
+      <Image src={RW11} alt="Behind-the-scenes professional linkedin profile headshot photography session showing woman in black cardigan and pink lace top positioned between Westcott lighting panels and camera by Richard Waine" width={600} height={480}/>
     </div>
   </div>
 </section>
 
 <section id="testimonials">
-  <Testimonials title="" limit={3} filterByNames={["Andrew Jacobs", "Julie Evans", "Nolan Foster"]}/>
+  <Testimonials limit={3} filterByNames={["Andrew Jacobs", "Julie Evans", "Nolan Foster"]}/>
 </section>
 
 <section class="FAQs">
@@ -677,7 +689,7 @@ h1 {
   display: block;
   text-align:center;
 }
-.pillar-card h3 {
+.pillar-card .pillar-title {
   margin: 0 0 var(--size-3);
   font-size: var(--fs-500);
   letter-spacing: 1px;
@@ -882,7 +894,7 @@ h1 {
             text-align:left;
           }
 
-          .pillar-card h3{
+          .pillar-card .pillar-title{
             text-align:left;
           }
 

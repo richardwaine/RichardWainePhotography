@@ -65,7 +65,8 @@ const gallerySchema = buildImageGallerySchema(
       <Image 
         src={jayPoff600}
         alt="Professional acting headshot of Jay Poff with medium-length tousled brown hair and full brown beard with slight gray highlights wearing black ribbed quarter-zip mock neck pullover layered over charcoal gray crew neck shirt photographed against seamless white studio backdrop with professional headshot lighting by Richard Waine Photography Lancaster Pennsylvania headshot photographer"
-        loading="lazy"
+        loading="eager"
+        fetchpriority="high"
         widths={[400, 600]}
         sizes="(max-width: 640px) 100vw, (max-width: 767px) 180px, (max-width: 1024px) 180px, 150px"
         width={300}

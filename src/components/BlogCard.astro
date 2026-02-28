@@ -1,7 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   category: string;
-  imageSrc: string;
+  imageSrc: ImageMetadata;
   imageAlt: string;
   cardCategory: string;
   blogTitle: string;
@@ -13,7 +16,7 @@ const { category, imageSrc, imageAlt, cardCategory, blogTitle, blogExcerpt, slug
 ---
 
 <div class="blog-card" data-category={category}>
-        <img src={imageSrc} alt={imageAlt} loading="lazy">
+        <Image src={imageSrc} alt={imageAlt} loading="lazy" width={400} height={225} />
         <div class="blog-card-content">
               <span class="blog-card-category">{cardCategory}</span>
               <h3 class="blog-card-title">{blogTitle}</h3>

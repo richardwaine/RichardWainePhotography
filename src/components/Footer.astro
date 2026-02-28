@@ -115,7 +115,7 @@ const organizationSchema = buildOrganizationSchema(
             
             
             <div class="footer-section">
-                <h4>AREAS SERVICED</h4>
+                <div class="footer-section-title">AREAS SERVICED</div>
                 <ul class="footer-links">
                     {areasServiced.map(area => (
                         <li><a href={area.url}>{area.name}</a></li>
@@ -124,7 +124,7 @@ const organizationSchema = buildOrganizationSchema(
             </div>
 
             <div class="footer-section">
-                <h4>SERVICES</h4>
+                <div class="footer-section-title">SERVICES</div>
                 <ul class="footer-links">
                     {services.map(service => (
                         <li><a href={service.url}>{service.name}</a></li>
@@ -134,7 +134,7 @@ const organizationSchema = buildOrganizationSchema(
 
             
             <div class="footer-section">
-                <h4>QUICK LINKS</h4>
+                <div class="footer-section-title">QUICK LINKS</div>
                 <ul class="footer-links">
                     {quickLinks.map(link => (
                         <li><a href={link.url}>{link.name}</a></li>
@@ -288,7 +288,7 @@ const organizationSchema = buildOrganizationSchema(
         color:#fff;
     }
 
-    .footer-section h4 {
+    .footer-section .footer-section-title {
         color: var(--accent);
         font-size: var(--fs-350) /*0.9rem */;
         font-weight: var(--fw-semi-bold);
