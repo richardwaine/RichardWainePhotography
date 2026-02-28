@@ -210,12 +210,11 @@ const heroGallerySchema = buildImageGallerySchema(
                                     <Image
                                         src={heroImg1_600}
                                         alt="Professional acting headshot of Jay Poff with medium-length tousled brown hair and full brown beard with slight gray highlights wearing black ribbed quarter-zip mock neck pullover layered over charcoal gray crew neck shirt photographed against seamless white studio backdrop with professional headshot lighting by Richard Waine Photography Lancaster Pennsylvania headshot photographer"
-                                        loading="eager"
+                                        loading="lazy"
                                         widths={[400, 600]}
                                         sizes="(max-width: 767px) 45vw, (max-width: 1023px) 30vw, 120px"
                                         width={300}
                                         height={300}
-                                        fetchpriority="high"
                                         decoding="async"
                                     />
                                 </div>
@@ -223,7 +222,7 @@ const heroGallerySchema = buildImageGallerySchema(
                                     <Image
                                         src={heroImg2_600}
                                         alt="Professional headshot of J. Hilburn stylist Lisa Torba with voluminous dark brown curly shoulder-length hair and warm smile wearing navy blue scoop neck top photographed against seamless white studio backdrop with professional studio lighting by Richard Waine Photography Lancaster Pennsylvania headshot photographer"
-                                        loading="eager"
+                                        loading="lazy"
                                         widths={[400, 600]}
                                         sizes="(max-width: 767px) 45vw, (max-width: 1023px) 30vw, 120px"
                                         width={300}
@@ -536,7 +535,7 @@ object-fit: cover;
     margin-bottom: var(--size-775);
     perspective: 1000px;
     text-shadow: 0 0 60px rgba(3, 169, 244, 0.1);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--ff-primary);
     text-align: center;
     text-transform: none;
     color: #ffffff;

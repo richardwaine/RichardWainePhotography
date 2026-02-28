@@ -17,7 +17,7 @@
   --secondary-color:#F1F1F1;
 
  /*font family*/
-  --ff-primary:'Montserrat',sans-serif;
+  --ff-primary:'Montserrat Variable',sans-serif;
   --ff-secondary:'Lato',sans-serif;
   --ff-mono:'Space Grotesk',monospace;
 
@@ -143,11 +143,24 @@ p,li{
 /*end css reset */
 
 body{
-  min-height:auto; 
+  min-height:auto;
   width:100%;
   font-family:var(--ff-primary);
-  line-height:var(--line-height-relaxed); 
+  line-height:var(--line-height-relaxed);
  }
+
+/* Safari scroll performance fixes */
+@supports (-webkit-touch-callout: none) {
+  /* Safari-only styles */
+  html, body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent Safari's elastic bounce from causing layout issues */
+  html {
+    overscroll-behavior: none;
+  }
+}
 
 
 a{
@@ -249,7 +262,7 @@ p{
   position: relative;
   border: 2px solid transparent;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--ff-primary);
   font-weight: var(--fw-bold); 
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -336,4 +349,40 @@ p{
 .button-wrapper .btn:focus,
 .button-wrapper .btn:focus-visible {
   outline: none;
+}
+
+/* ===========================================
+   LENIS SMOOTH SCROLL - Required CSS
+   Per: https://github.com/darkroomengineering/lenis
+   =========================================== */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* ===========================================
+   GPU ACCELERATION - Cross-browser smooth animations
+   Per: https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/
+   =========================================== */
+.gpu-accelerate {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }

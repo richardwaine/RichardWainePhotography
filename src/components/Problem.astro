@@ -69,8 +69,12 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
         --_triptych-border-bottom: calc( var(--_triptych-border) + .5%);
         --_triptych-border-left: var(--_triptych-border);
 
+        /* Safari GPU acceleration */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
 
- 
     }
 
     .diagonal-triptych .triptych-container {
@@ -308,7 +312,8 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
         ease: 'power2.out',
         scrollTrigger: {
             trigger: '.problem-title',
-            start: 'top 80%'
+            start: 'top 80%',
+            refreshPriority: 1
         }
     });
 
@@ -332,7 +337,8 @@ import image0079 from '../assets/images/problem/Headshot_20250917_Sonya Lilienst
         ease: 'power2.out',
         scrollTrigger: {
             trigger: '.problem-title',
-            start: 'top 80%'
+            start: 'top 80%',
+            refreshPriority: 1
         }
     });
 </script>

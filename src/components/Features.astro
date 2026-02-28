@@ -222,9 +222,11 @@ document.addEventListener("astro:page-load", () => {
                 trigger: ".features-section",
                 pin: true,
                 scrub: 1,
-                refreshPriority: 1, //added 12/13/25
+                anticipatePin: 1,
+                refreshPriority: -1, // Lower priority than Problem section (refreshes after)
+                pinSpacing: true,
                 // Calculate end dynamically based on the number of slides
-                end: () => `+=${slides.length * window.innerWidth}`, 
+                end: () => `+=${slides.length * window.innerWidth}`,
                 invalidateOnRefresh: true,
             }
         });
@@ -307,6 +309,11 @@ document.addEventListener("astro:page-load", () => {
 .features-section {
   width: 100%;
   overflow: hidden;
+  /* Safari GPU acceleration */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .features-container {
@@ -318,6 +325,12 @@ document.addEventListener("astro:page-load", () => {
   display: flex;
   flex-wrap: wrap; /* MOBILE FIX: Allows slides to stack vertically */
   width: 100%;
+  /* Safari GPU acceleration */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .feature-slide {
@@ -328,6 +341,10 @@ document.addEventListener("astro:page-load", () => {
   padding-block: var(--size-9); /* Add vertical padding for mobile stacking*/
   background: var(--drkbg);
   color: var(--ltclr);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .feature-slide:first-child{

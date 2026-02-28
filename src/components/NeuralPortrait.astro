@@ -839,8 +839,14 @@ const currentData = portfolioData[currentImageIndex];
   white-space: nowrap;
   font-weight: var(--fw-semi-bold);
   letter-spacing: 0.05rem;
-  backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px var(--shadow-clr-medium);
+}
+
+/* Firefox-specific fix: backdrop-filter makes labels invisible */
+@supports not (-moz-appearance:none) {
+  :global(.point-label) {
+    backdrop-filter: blur(10px);
+  }
 }
 
 .connection-line {

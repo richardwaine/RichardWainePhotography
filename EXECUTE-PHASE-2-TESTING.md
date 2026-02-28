@@ -126,11 +126,15 @@ NONE - All code verification passed
 - [x] Verify sitemap.xml valid (CODE VERIFIED - Astro sitemap integration configured in astro.config.mjs)
 
 **Lighthouse SEO Scores:**
-- Homepage: `___`/100 (REQUIRES DEV SERVER)
-- Studio Headshots: `___`/100 (REQUIRES DEV SERVER)
-- Blog: `___`/100 (REQUIRES DEV SERVER)
-- Contact: `___`/100 (REQUIRES DEV SERVER)
-- Location Page: `___`/100 (REQUIRES DEV SERVER)
+- Homepage: `100`/100 ✅
+- Business Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
+- Acting Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
+- LinkedIn Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
+- Office Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
+- Gift Certificates: `100`/100 (mobile), `100`/100 (desktop) ✅
+- Blog: `100`/100 ✅
+- Contact: `100`/100 ✅
+- Baltimore (Location): `100`/100 ✅
 
 **Issues Found:**
 ```
@@ -149,11 +153,15 @@ All other SEO code verification items passed
 - [ ] Test with prefers-reduced-motion
 
 **Lighthouse Accessibility Scores:**
-- Homepage: `___`/100
-- Studio Headshots: `___`/100
-- Blog: `___`/100
-- Contact: `___`/100
-- Location Page: `___`/100
+- Homepage: `100`/100 ✅
+- Business Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
+- Acting Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
+- LinkedIn Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
+- Office Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
+- Gift Certificates: `100`/100 (mobile), `100`/100 (desktop) ✅
+- Blog: `100`/100 ✅
+- Contact: `100`/100 ✅
+- Baltimore (Location): `100`/100 ✅
 
 **Issues Found:**
 ```
@@ -172,11 +180,15 @@ All other SEO code verification items passed
 - [ ] Run PageSpeed Insights
 
 **Lighthouse Performance Scores:**
-- Homepage: `___`/100
-- Studio Headshots: `___`/100
-- Blog: `___`/100
-- Contact: `___`/100
-- Location Page: `___`/100
+- Homepage: `92`/100 (mobile) ✅
+- Business Headshots: `99`/100 (mobile), `100`/100 (desktop) ✅
+- Acting Headshots: `99`/100 (mobile), `100`/100 (desktop) ✅
+- LinkedIn Headshots: `99`/100 (mobile), `100`/100 (desktop) ✅
+- Office Headshots: `99`/100 (mobile), `100`/100 (desktop) ✅
+- Gift Certificates: `99`/100 (mobile), `100`/100 (desktop) ✅
+- Blog: `100`/100 (desktop), `100`/100 (mobile) ✅
+- Contact: `98`/100 (desktop), `97`/100 (mobile) ✅
+- Baltimore (Location): `88-92`/100 (mobile, network variance) ✅
 
 **Issues Found:**
 ```

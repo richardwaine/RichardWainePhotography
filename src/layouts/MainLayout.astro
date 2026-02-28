@@ -154,21 +154,32 @@ const {title, description = "Professional headshot photographer. Corporate heads
 
 	<Footer  />
 
-	 <script>
-	// import Lenis from 'lenis'; // COMMENTED OUT: Now conditionally imported inside initLenis() for desktop only (≥768px)
+
+	
+
+	<script>
 	import gsap from 'gsap';
 	import { Flip } from 'gsap/Flip';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	// Extend Window interface for TypeScript
+	
 	declare global {
 		interface Window {
 			lenis?: any;
 		}
 	}
 
-	// Register ScrollTrigger and Flip plugins
+	
 	gsap.registerPlugin(ScrollTrigger, Flip);
+
+	// Safari-specific fix: normalizeScroll makes jitter worse, keeping disabled
+	const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+	// if (isSafari) {
+	// 	ScrollTrigger.normalizeScroll({
+	// 		allowNestedScroll: true,
+	// 		type: "touch,wheel,pointer"
+	// 	});
+	// }
 
 	// Disable browser scroll restoration and scroll to top
 	if ('scrollRestoration' in history) {
@@ -178,7 +189,7 @@ const {title, description = "Professional headshot photographer. Corporate heads
 
 	// Wait for DOM to be ready before initializing Lenis
 	async function initLenis() {
-		if (window.innerWidth <= 767) return;
+		if (window.innerWidth <= 767 || isSafari) return;
 
 		if (!window.lenis) {
 			const { default: Lenis } = await import('lenis');
@@ -187,6 +198,7 @@ const {title, description = "Professional headshot photographer. Corporate heads
 				duration: 1.2,
 				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 				prevent: (node) => node.hasAttribute('data-lenis-prevent'),
+				autoRaf:false,
 			});
 
 			window.lenis.on('scroll', ScrollTrigger.update);
@@ -196,6 +208,11 @@ const {title, description = "Professional headshot photographer. Corporate heads
 			});
 
 			gsap.ticker.lagSmoothing(0);
+
+			// Safari fix: Force ScrollTrigger refresh after Lenis initializes
+			requestAnimationFrame(() => {
+				ScrollTrigger.refresh();
+			});
 		}
 	}
 
@@ -210,13 +227,19 @@ const {title, description = "Professional headshot photographer. Corporate heads
 	document.addEventListener('astro:after-swap', () => {
 		ScrollTrigger.getAll().forEach(t => t.kill());
 		gsap.globalTimeline.clear();
+
 		if (window.lenis) {
-			window.lenis.scrollTo(0, { immediate: true });
+			window.lenis.destroy();
+			window.lenis = null;	
 		}
+		requestAnimationFrame(() =>{
 		window.scrollTo(0, 0);
-		ScrollTrigger.refresh();
-	});
+        initLenis();
+        ScrollTrigger.refresh();
+    });
+});
 	</script>
+
  
 
 
