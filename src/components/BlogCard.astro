@@ -21,7 +21,7 @@ const { category, imageSrc, imageAlt, cardCategory, blogTitle, blogExcerpt, slug
               <span class="blog-card-category">{cardCategory}</span>
               <h3 class="blog-card-title">{blogTitle}</h3>
               <p class="blog-card-excerpt">{blogExcerpt}</p>
-              <a href={`/blog/${slug}`} class="read-more">Read More</a>
+              <a href={`/blog/${slug}`} class="read-more">Read More<span class="sr-only"> about {blogTitle}</span></a>
         </div>
 </div>
 
@@ -128,6 +128,16 @@ a {
   outline-offset: 2px;   
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
 
 /* ==========================================
    TABLET - min-width: 48em (768px)
