@@ -221,7 +221,7 @@ NONE - All code verification passed
 - [x] Verify sitemap.xml valid (CODE VERIFIED - Astro sitemap integration configured in astro.config.mjs)
 
 **Lighthouse SEO Scores:**
-- Homepage: `100`/100 ✅
+- Homepage: `100`/100 (desktop) ✅, `100`/100 (mobile) ✅
 - Business Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
 - Acting Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
 - LinkedIn Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
@@ -248,8 +248,11 @@ All other SEO code verification items passed
 - [ ] Test with prefers-reduced-motion
 
 **Lighthouse Accessibility Scores:**
-- Homepage: `100`/100 ✅
+- Homepage: `100`/100 (desktop) ✅, `100`/100 (mobile) ✅
 - Business Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
+
+**Lighthouse Best Practices Scores:**
+- Homepage: `100`/100 (desktop) ✅, `100`/100 (mobile) ✅
 - Acting Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
 - LinkedIn Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
 - Office Headshots: `100`/100 (mobile), `100`/100 (desktop) ✅
@@ -275,7 +278,7 @@ All other SEO code verification items passed
 - [ ] Run PageSpeed Insights
 
 **Lighthouse Performance Scores:**
-- Homepage: `92`/100 (mobile) ✅
+- Homepage: `100`/100 (desktop) ✅, `95`/100 (mobile) ✅
 - Business Headshots: `99`/100 (mobile), `100`/100 (desktop) ✅
 - Acting Headshots: `99`/100 (mobile), `100`/100 (desktop) ✅
 - LinkedIn Headshots: `99`/100 (mobile), `100`/100 (desktop) ✅

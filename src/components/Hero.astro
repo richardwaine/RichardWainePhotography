@@ -2,7 +2,8 @@
 
 // @ts-nocheck
 // Hero Section Component - World Class Headshot Experience
-import { Picture } from 'astro:assets';
+import { Picture } from "astro:assets";
+
 import { Image } from 'astro:assets';
 import PrimaryButton from './PrimaryButton.astro';
 import SecondaryButton from './SecondaryButton.astro';
@@ -83,38 +84,14 @@ const heroGallerySchema = buildImageGallerySchema(
 
 ---
 
-<link rel="preload" as="image" href={heroBackground.src} fetchpriority="high" slot="head" />
+<!-- <link rel="preload" as="image" href={heroBackgroundMobile.src} fetchpriority="high" media="(max-width: 768px)" slot="head" /> -->
+
+
 
 <!-- World-Class Hero Experience -->
 <main class="hero-experience" id="heroExperience">
 
    <!-- Optimized Background Images - Responsive -->
-
-
-<!-- <div class="hero-background-picture">
-    <Picture
-        src={heroBackground} 
-        alt="Behind the scenes at Richard Waine Photography Studio, Professional headshot photography studio setup showing photographer Richard Waine adjusting boom mounted studio lights with white backdrop and tethered camera workstation in Lancaster PA studio"
-        class="hero-background-image"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-        widths={[800, 1200, 1600]} 
-        sizes="100vw"
-        formats={['avif', 'webp']}
-        pictureAttributes={{ 
-            style: "display: block; width: 100%; height: 100%;",
-            class: "hero-picture-wrapper" 
-        }}
-        sources={[
-            {
-                src: heroBackgroundMobile,
-                media: '(max-width: 768px)',
-                widths: [400, 600, 800],
-            }
-        ]}
-    />
-</div> -->
 
 <div class="hero-background-picture">
     <Picture
@@ -122,32 +99,25 @@ const heroGallerySchema = buildImageGallerySchema(
         alt="Behind the scenes at Richard Waine Photography Studio"
         class="hero-background-image"
         widths={[400, 800, 1200, 1600]}
-        sizes="(max-width: 768px) 400px, 100vw"
+        sizes="100vw"
         formats={['avif', 'webp']}
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
+       
+        priority={true}
         pictureAttributes={{
             style: "position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;",
-            class: "hero-picture-wrapper",
-            "fetchpriority": "high"
-        }}
+            class: "hero-picture-wrapper"
+       }}
+        sources={[
+            {
+                src: heroBackgroundMobile,
+                media: '(max-width: 768px)',
+                widths: [400, 600, 800],
+                
+            }
+        ]}
     />
 </div>
 
-<!-- <div class="hero-background-picture">
-    <Image
-        src={heroBackground}
-        alt="behind the scenes of Richard Waine setting up headshot lighting for a professional headshot session at Richard Waine Photography Studio"
-        class="hero-background-image"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-        widths={[400, 800, 1600]}
-        sizes="(max-width: 768px) 400px, 1600px"
-        data-mobile-src={heroBackgroundMobile.src}
-    />
-</div> -->
 
     <!-- Background with Sophisticated Depth -->
     <div class="background-depth">

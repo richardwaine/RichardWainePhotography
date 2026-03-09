@@ -1,6 +1,6 @@
 ---
 // @ts-nocheck
-
+import { getImage } from "astro:assets";
 import MainLayout from '../layouts/MainLayout.astro';
 import Hero from '../components/Hero.astro';
 import ZoomPopOut from '../components/ZoomPopOut.astro';
@@ -45,7 +45,7 @@ const promoVideoSchema = buildVideoObjectSchema(
   {
     name: "Professional Headshot Photography Experience - Richard Waine",
     description: "See what it's like to work with professional headshot photographer Richard Waine. Experience the process, direction, and results that make great headshots.",
-    thumbnailUrl: "https://richardwainephotography.com" + videoPoster.src,
+    thumbnailUrl: "https://richardwainephotography.com" + (await getImage({ src: videoPoster, width: 800 })).src,
     uploadDate: "2024-01-15",
     embedUrl: "https://richardwainephotography.com" + promoVideo
   },
@@ -145,14 +145,21 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 
 	</section>
 
-		<section id="promo-video">
+	<section id="promo-video">
     <div class="video-container">
         <div class="video-wrapper">
             <button class="close-video-btn" aria-label="Close video">×</button>
-            <video class="promo-video" controls controlslist="nodownload noplaybackrate nopictureinpicture" loop width="1000" height="563" poster={videoPoster.src}>
-                <source src={promoVideo} type="video/mp4">
-                <track kind="captions" src={captions} srclang="en" label="English" default>
-            </video>
+                <video class="promo-video" 
+                controls 
+                controlslist="nodownload noplaybackrate nopictureinpicture" 
+                loop width="1000" 
+                height="563" 
+                poster={(await getImage({ src: videoPoster, width: 800 })).src}
+                >
+
+                    <source src={promoVideo} type="video/mp4">
+                    <track kind="captions" src={captions} srclang="en" label="English" default>
+                </video>
         </div>
     </div>
   </section>

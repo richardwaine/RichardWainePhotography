@@ -1788,7 +1788,7 @@ Sitemap: https://richardwainephotography.com/sitemap.xml
 - ⏸️ STEP 1, 2, 5, 6, 7: Require dev server or live domain
 
 **Lighthouse Testing Completed:**
-- ✅ Homepage: 100 SEO, 100 Accessibility, 92 Performance (mobile)
+- ✅ Homepage: 100/100/100/100 (desktop), 100/100/95/100 (mobile) - Performance/Accessibility/Best Practices/SEO
 - ✅ Business Headshots: 100/100/100/100 (mobile), 100/100/100/100 (desktop)
 - ✅ Acting Headshots: 100/100/100/100 (mobile), 100/100/100/100 (desktop)
 - ✅ LinkedIn Headshots: 100/100/100/100 (mobile), 100/100/100/100 (desktop)
