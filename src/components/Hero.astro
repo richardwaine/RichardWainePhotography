@@ -83,13 +83,15 @@ const heroGallerySchema = buildImageGallerySchema(
 
 ---
 
+<link rel="preload" as="image" href={heroBackground.src} fetchpriority="high" slot="head" />
 
 <!-- World-Class Hero Experience -->
 <main class="hero-experience" id="heroExperience">
 
    <!-- Optimized Background Images - Responsive -->
 
-<div class="hero-background-picture">
+
+<!-- <div class="hero-background-picture">
     <Picture
         src={heroBackground} 
         alt="Behind the scenes at Richard Waine Photography Studio, Professional headshot photography studio setup showing photographer Richard Waine adjusting boom mounted studio lights with white backdrop and tethered camera workstation in Lancaster PA studio"
@@ -112,8 +114,26 @@ const heroGallerySchema = buildImageGallerySchema(
             }
         ]}
     />
-</div>
+</div> -->
 
+<div class="hero-background-picture">
+    <Picture
+        src={heroBackground}
+        alt="Behind the scenes at Richard Waine Photography Studio"
+        class="hero-background-image"
+        widths={[400, 800, 1200, 1600]}
+        sizes="(max-width: 768px) 400px, 100vw"
+        formats={['avif', 'webp']}
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        pictureAttributes={{
+            style: "position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;",
+            class: "hero-picture-wrapper",
+            "fetchpriority": "high"
+        }}
+    />
+</div>
 
 <!-- <div class="hero-background-picture">
     <Image
@@ -578,10 +598,6 @@ object-fit: cover;
     transform: translateY(var(--size-6));
     opacity: 0;
     transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
-
-  
-
-    /* padding-left:.25rem; */
 }
 
 .experience-h1.revealed {
@@ -773,8 +789,6 @@ object-fit: cover;
 
         width:100%;
         height:100%;
-        
-
         margin: 0 auto;
         aspect-ratio: 3 / 2;
     }
@@ -1076,7 +1090,7 @@ object-fit: cover;
     .showcase-container {
         margin-top:var(--size-10);
 }
-
+}
 </style>
 
 

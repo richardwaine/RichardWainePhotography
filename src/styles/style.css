@@ -1,5 +1,15 @@
+@font-face {
+  font-family: 'Montserrat Variable';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk Variable';
+  font-display: swap;
+}
+
 :root{
- /*colors*/  
+ /*colors*/
   --ltclr:#fff;
   --blkclr:#000;
   --drkbg:#121212;

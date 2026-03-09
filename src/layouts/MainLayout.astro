@@ -28,7 +28,7 @@ const {title, description = "Professional headshot photographer. Corporate heads
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content={description} />
-		<link rel="preconnect" href="https://www.googletagmanager.com">
+		 <link rel="preconnect" href="https://www.googletagmanager.com">
 		<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -127,11 +127,30 @@ const {title, description = "Professional headshot photographer. Corporate heads
 		</script>
 
 		<!-- Google Tag Manager -->
-		<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+
+		 <!-- Google Tag Manager - Delayed Load -->                                                
+		<script is:inline>                                                                        
+			document.addEventListener('DOMContentLoaded', () => {                                 
+				setTimeout(() => {                                                                
+					(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':                    
+					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],     
+					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=         
+																									
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);        
+					})(window,document,'script','dataLayer','GTM-KS6CRSL');                       
+				}, 3000);                                                                         
+			});                                                                                   
+		</script>                                                                                 
+  <!-- End Google Tag Manager -->                  
+
+		<!-- <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-KS6CRSL');</script>
+		})(window,document,'script','dataLayer','GTM-KS6CRSL');
+		</script> -->
+
 		<!-- End Google Tag Manager -->
 
 
