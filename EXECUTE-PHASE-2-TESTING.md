@@ -34,20 +34,20 @@ If unclear: STOP and ASK.
 ## STEP 1: CROSS-BROWSER TESTING
 
 ### Chrome
-- [x] All pages load correctly
-- [x] All interactive elements work
-- [x] No console errors
+- [ ] All pages load correctly
+- [ ] All interactive elements work
+- [ ] No console errors
 
 ### Firefox
-- [x] All pages load correctly
-- [x] All interactive elements work
-- [x] No console errors
+- [ ] All pages load correctly
+- [ ] All interactive elements work
+- [ ] No console errors
 
 ### Safari
 - [x] All pages load correctly
 - [x] All interactive elements work
 - [x] No console errors
-- [x] **KNOWN ISSUE (ACCEPTABLE):** GSAP ScrollTrigger Features section has marginal jitter when scrolling fast - not noticeable at normal scroll speed
+- [ ] **ISSUE:** GSAP ScrollTrigger sections have visible jitter/shake during scroll (macOS trackpad)
 
 **Issues Found:**
 
@@ -198,9 +198,9 @@ const horizontalScroll = gsap.to(slides, {
 - [x] Any accordions/dropdowns (CODE VERIFIED - FAQAccordion component uses CSS checkbox inputs)
 
 ### Media
-- [x] All images load (TESTED ON SAFARI - homepage, business-headshots, blog, about, contact)
-- [x] All images correct sizes (VERIFIED DURING TESTING)
-- [x] Videos play (N/A - no videos on tested pages)
+- [ ] All images load (REQUIRES DEV SERVER)
+- [ ] All images correct sizes (REQUIRES DEV SERVER)
+- [ ] Videos play (REQUIRES DEV SERVER)
 - [x] Alt text present (CODE VERIFIED - all Image/img tags have alt attributes)
 
 **Issues Found:**
@@ -212,7 +212,7 @@ NONE - All code verification passed
 
 ## STEP 4: SEO TESTING
 
-- [x] Run Lighthouse SEO audit on 5 pages (COMPLETED - 9 pages tested, all 100/100)
+- [ ] Run Lighthouse SEO audit on 5 pages (REQUIRES DEV SERVER)
 - [x] Check all pages have meta titles (CODE VERIFIED - MainLayout requires title prop, all pages pass it)
 - [x] Check all pages have meta descriptions (CODE VERIFIED - MainLayout has default + page overrides, 404 bug FIXED)
 - [x] Verify H1 tags present and correct (CODE VERIFIED - Hero/PageTitle components + BlogLayout all render H1)
@@ -241,9 +241,9 @@ All other SEO code verification items passed
 
 ## STEP 5: ACCESSIBILITY TESTING
 
-- [x] Run Lighthouse Accessibility audit (COMPLETED - 9 pages tested, all 100/100)
+- [ ] Run Lighthouse Accessibility audit
 - [ ] Run WAVE tool on 5 pages
-- [ ] Test keyboard navigation - **ISSUE FOUND:** Safari only focuses on video, play button, footer trigger. Chrome shows focus on all interactive elements (nav links, CTA buttons, etc.). Safari needs tabindex/focus fixes for full keyboard accessibility.
+- [ ] Test keyboard navigation
 - [ ] Verify focus indicators visible
 - [ ] Test with prefers-reduced-motion
 
@@ -267,12 +267,11 @@ All other SEO code verification items passed
 
 ## STEP 6: PERFORMANCE TESTING
 
-- [x] Run Lighthouse Performance audit (COMPLETED - 9 pages tested, scores: 88-100/100)
-- [x] Check Core Web Vitals:
-  - LCP: Desktop `0.6s` ✅ / Mobile `3.4s` ⚠️ FAILS target (target: <2.5s)
-  - INP: `N/A` (Not available in Lighthouse) (target: <200ms)
-  - CLS: Desktop `0.003` ✅ / Mobile `0.002` ✅ (target: <0.1)
-  - **ISSUE:** Mobile LCP fails target - Hero background image needs fetchpriority="high" and compression optimization
+- [ ] Run Lighthouse Performance audit
+- [ ] Check Core Web Vitals:
+  - LCP: `___` (target: <2.5s)
+  - INP: `___` (target: <200ms)
+  - CLS: `___` (target: <0.1)
 - [ ] Run PageSpeed Insights
 
 **Lighthouse Performance Scores:**
