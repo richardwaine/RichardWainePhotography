@@ -109,7 +109,6 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
       const pathData = createCurvedPath(startPoint, endPoint);
       const startTime = (i * staggerDelay) / fullCycleDuration;
       const endTime = (i * staggerDelay + animationDuration) / fullCycleDuration;
-      // const resetTime = totalAnimationTime / fullCycleDuration;
       const resetTime = (totalAnimationTime / fullCycleDuration) - .05;
 
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -235,10 +234,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
   .world-map-container {
     width:100%;
     width:90%;
-    /* width: clamp(20rem, 90vw, 60rem);    */
-    /* width:calc(100% - var(--size-7)); */
     margin-inline:auto;
-    /* aspect-ratio: 2 / 1; */
     background: white;
     position: relative;
     overflow: hidden;
@@ -319,7 +315,6 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
   @media (min-width: 64em) {
 
     .world-map-container {
-      /* width:100%; */
       padding: var(--size-7);
       margin-inline:auto;
      
@@ -334,14 +329,12 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     
     @media (width >= 90em){
       .WorldMapSection{
-        /* grid-template-columns:1fr 2fr; */
         grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);    
         align-items: center;
         line-height:var(--line-height-loose);
       }
 
   .world-map-container {
-    /* max-inline-size:calc(100% - var(--size-12)); */
     margin-inline:auto;
   }
 

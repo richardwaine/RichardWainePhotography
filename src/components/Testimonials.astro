@@ -36,7 +36,7 @@ const testimonialsToDisplay = filterByNames
 
 
   <div class="testimonial-2">
-  {testimonialsToDisplay.map(testimonial => ( // Note: we're using testimonialsToDisplay now
+  {testimonialsToDisplay.map(testimonial => ( 
     <TestimonialCard
       testimonialText={testimonial.review}
       author={testimonial.name}
@@ -85,7 +85,6 @@ const testimonialsToDisplay = filterByNames
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
-    /* padding-inline: var(--size-12); */
   }
 }
 </style>

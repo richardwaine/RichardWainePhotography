@@ -40,14 +40,11 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
 <style>
     .stars {
   color: var(--stars);
-  /* padding-block: var(--size-2); */
 }
 
 :is(.testimonial-content p, .testimonial-details h5, .testimonial-details .author) {
   font-size: var(--fs-400);
   padding-top:var(--size-3);
-
-  
 }
 
 
@@ -77,18 +74,10 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
   
 }
 
-.testimonial-content {
-  /* padding-inline: var(--size-2); */
-  
-  
-}
 
 .testimonial-content p,
 .rates-card-testimonial p {
   line-height: var(--line-height-loose);
-   /* padding-inline: var(--size-4); */
-  
-  
 }
 
 .testimonial-image {
@@ -106,9 +95,7 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
 
 
 .testimonial-details {
-    
-  margin-block: var(--size-3);
-  
+  margin-block: var(--size-3); 
 }
 
 
@@ -116,6 +103,5 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
 .testimonial-details span {
   color: var(--accent);
   font-size: var(--fs-400);
-  
 }
 </style>

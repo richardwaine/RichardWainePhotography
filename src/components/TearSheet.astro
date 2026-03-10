@@ -91,8 +91,6 @@ const logos: Logo[] = [
 
 <style>
 
-
-
 h2{
     text-wrap:pretty;
     
@@ -134,7 +132,6 @@ h2{
         flex-wrap: nowrap;
         gap: var(--_gap);
         align-items:center;
-        /* Hardware acceleration hacks */
         will-change: transform; 
         transform: translateZ(0); 
     }
@@ -155,7 +152,6 @@ h2{
         height: auto;
         max-width: 175px;
         filter: grayscale(1);
-        /* Prevent layout shifts on load */
         aspect-ratio: 3/2;
         object-fit: contain;
     }

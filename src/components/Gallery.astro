@@ -267,7 +267,6 @@ const gallerySchema = buildImageGallerySchema(
 /*gallery*/
 
 #gallery-section {
- /* background: var(--drkbg); */
     padding-inline:var(--size-8);
 }
 
@@ -282,13 +281,9 @@ const gallerySchema = buildImageGallerySchema(
   --grid-row-gap: var(--size-3);
 
   display: grid;
-  grid-template-columns: 1fr; /* Default for mobile */
-
+  grid-template-columns: 1fr; 
   column-gap: var(--grid-column-gap);
   row-gap: var(--grid-row-gap);
-
-  
-  /* width:80%; */
   max-width: 2000px;
   margin: 0 auto;
 }
@@ -318,7 +313,7 @@ const gallerySchema = buildImageGallerySchema(
     --grid-row-gap: 1vw;
 
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr; /* Explicitly set row behavior as per original */
+    grid-template-rows: 1fr; 
     row-gap: var(--grid-row-gap);
   }
 
@@ -354,7 +349,7 @@ const gallerySchema = buildImageGallerySchema(
 
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3,1fr); 
-    /* Explicitly set row behavior as per original */
+    
     column-gap: var(--grid-column-gap);
     row-gap: var(--grid-row-gap);
   }

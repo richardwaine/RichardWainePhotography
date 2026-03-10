@@ -222,7 +222,7 @@ document.addEventListener("astro:page-load", () => {
                 pin: true,
                 scrub: 1,
                 anticipatePin: 1,
-                refreshPriority: -1, // Lower priority than Problem section (refreshes after)
+                refreshPriority: -1, 
                 pinSpacing: true,
                 // Calculate end dynamically based on the number of slides
                 end: () => `+=${slides.length * window.innerWidth}`,
@@ -258,17 +258,6 @@ document.addEventListener("astro:page-load", () => {
         });
 
 
-// Cleanup function: Kills ScrollTriggers when screen size shrinks below 768px
-        // return () => {
-        //     if (horizontalScroll && horizontalScroll.scrollTrigger) {
-        //         horizontalScroll.scrollTrigger.kill(true); // Kill main trigger
-        //     }
-        //     // Instead of killing ALL triggers, we clear props on the elements
-        //     // and trust the mobile logic below to handle the rest.
-        //     // We explicitly AVOID ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        //     gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
-        // };
-
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
             gsap.set('.features-section, .features-scroller, .feature-slide, .heading, .slide-text, .slide-image', { clearProps: 'all' });
@@ -277,18 +266,7 @@ document.addEventListener("astro:page-load", () => {
 
 
 
-        // Cleanup function: Kills ScrollTriggers when screen size shrinks below 768px
-//        return () => {
- //           horizontalScroll.kill(); 
-   //         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-     //       gsap.set('.features-section', { clearProps: 'all' });
-       // };
-    //});
-
-
     // MOBILE FALLBACK LOGIC (Runs ONLY on screens smaller than 768px)
-    // mm.add("(max-width: 767px)", () => {
-    // mm.add("(width < 48em)", () => {
     mm.add("(width < 67.5em)", () => {
         // Clear any pinned/transformed styles left by ScrollTrigger
         gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
@@ -325,7 +303,7 @@ document.addEventListener("astro:page-load", () => {
 
 .features-scroller {
   display: flex;
-  flex-wrap: wrap; /* MOBILE FIX: Allows slides to stack vertically */
+  flex-wrap: wrap; 
   width: 100%;
   /* Safari GPU acceleration */
   -webkit-transform: translateZ(0);
@@ -336,11 +314,11 @@ document.addEventListener("astro:page-load", () => {
 }
 
 .feature-slide {
-  width: 100%; /* FIX: Prevents 100vw overflow on mobile */
-  height: auto; /* Allows slides to occupy vertical space on mobile */
+  width: 100%; 
+  height: auto; 
   flex-shrink: 0;
   display: block;
-  padding-block: var(--size-9); /* Add vertical padding for mobile stacking*/
+  padding-block: var(--size-9); 
   background: var(--drkbg);
   color: var(--ltclr);
   -webkit-transform: translateZ(0);
@@ -360,13 +338,10 @@ document.addEventListener("astro:page-load", () => {
   margin-inline: auto;
   place-items: center;
   width: 100%;
-  /* max-inline-size: 100%; */
   width: calc(100% - var(--size-7));
 }
 
-.slide-image, .slide-image > img{
-  /* padding-inline:var(--size-7); */
-}
+
 
 .slide-content{
   margin-top:var(--size-7);
@@ -386,7 +361,7 @@ p {
 
 .slide-content {
   margin-inline: auto;
-  /* max-inline-size:75%; */
+
 }
 
 .slide-content h2 {
@@ -416,11 +391,6 @@ p {
 padding-inline:0;
 }
 
-/* .slide-content-wrapper{
-  width:80%;
-  margin-inline:auto;
-} */
-
 }
 
 
@@ -439,7 +409,7 @@ padding-inline:0;
   .slide-content-wrapper{
     padding-inline:var(--size-7);
      grid-template-columns: 1fr 1.25fr;
-    /* margin-top:var(--header-height); */
+    
   }
 
   .slide-content h2 {
@@ -447,14 +417,14 @@ padding-inline:0;
   }
 
   .features-scroller {
-    flex-wrap: nowrap; /* Forces slides back into a horizontal row */
+    flex-wrap: nowrap; 
     width: fit-content;
   }
 
   .feature-slide {
-    width: 100vw; /* Re-enables 100vw width for horizontal scroll calculation */
-    height: 100vh; /* Re-enables full viewport height for pinning */
-    display: flex; /* Restore centered content layout */
+    width: 100vw; 
+    height: 100vh; 
+    display: flex; 
     padding-block: 0;
   }
 
