@@ -139,10 +139,12 @@ const offerSchema = buildOfferSchema(
             <iframe id="TaveContactForm" src="https://richard-waine-photography.vsco.page/inline/contact/contact?tpl=20251016&resizer=4.2.10" scrolling="no" frameborder="0"></iframe>
 
             <script is:inline>
-            const iframe = document.querySelector("#TaveContactForm");
-            if (iframe) {
-                iFrameResize({log:true}, "#TaveContactForm");
-            }
+            window.addEventListener('load', function() {
+                const iframe = document.querySelector("#TaveContactForm");
+                if (iframe && typeof iFrameResize !== 'undefined') {
+                    iFrameResize({log:true}, "#TaveContactForm");
+                }
+            });
             </script>
 
 
@@ -161,24 +163,31 @@ const offerSchema = buildOfferSchema(
 <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
 
 <script is:inline>
-const toggleBtns = document.querySelectorAll('.toggle-btn');
-const containers = document.querySelectorAll('.tabs-detail-container');
-const slider = document.querySelector('.toggle-slider');
+function initToggle() {
+  const toggleBtns = document.querySelectorAll('.toggle-btn');
+  const containers = document.querySelectorAll('.tabs-detail-container');
+  const slider = document.querySelector('.toggle-slider');
 
-toggleBtns.forEach((btn) => {
-  btn.onclick = () => {
-    const tabIndex = parseInt(btn.dataset.tab);
+  if (!toggleBtns.length || !containers.length || !slider) return;
 
-    toggleBtns.forEach(b => b.classList.remove('active'));
-    containers.forEach(c => c.classList.remove('active'));
+  toggleBtns.forEach((btn) => {
+    btn.onclick = () => {
+      const tabIndex = parseInt(btn.dataset.tab);
 
-    btn.classList.add('active');
-    containers[tabIndex]?.classList.add('active');
+      toggleBtns.forEach(b => b.classList.remove('active'));
+      containers.forEach(c => c.classList.remove('active'));
 
-    // Move slider
-    slider.style.transform = `translateX(${tabIndex * 100}%)`;
-  };
-});
+      btn.classList.add('active');
+      containers[tabIndex]?.classList.add('active');
+
+      // Move slider
+      slider.style.transform = `translateX(${tabIndex * 100}%)`;
+    };
+  });
+}
+
+// Initialize on first load and after Astro view transitions
+document.addEventListener('astro:page-load', initToggle);
 </script>
 
 

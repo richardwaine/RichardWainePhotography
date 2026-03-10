@@ -156,8 +156,21 @@ h2{
         max-width: 175px;
         filter: grayscale(1);
         /* Prevent layout shifts on load */
-        aspect-ratio: 3/2; 
-        object-fit: contain; 
+        aspect-ratio: 3/2;
+        object-fit: contain;
+    }
+
+    /* Allow wrapping for reduced-motion users so all logos are visible */
+    @media (prefers-reduced-motion: reduce) {
+        .scroller__inner {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .scroller {
+            -webkit-mask: none;
+            mask: none;
+        }
     }
 </style>
 

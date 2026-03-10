@@ -200,9 +200,6 @@ document.addEventListener("astro:page-load", () => {
 
     // DESKTOP LOGIC (Horizontal Scroll)
     mm.add(DESKTOP_BREAKPOINT, () => {
-        
-        // Disable animation for reduced motion users
-        if (window.matchMedia(REDUCED_MOTION_QUERY).matches) return; 
 
         const slides = gsap.utils.toArray('.feature-slide');
         const scroller = document.querySelector('.features-scroller');
@@ -213,6 +210,8 @@ document.addEventListener("astro:page-load", () => {
         // Force a ScrollTrigger refresh before setting up the animation
         ScrollTrigger.refresh();
 
+        // Check if user prefers reduced motion
+        const prefersReducedMotion = window.matchMedia(REDUCED_MOTION_QUERY).matches;
 
         // Main horizontal scroll animation controlled by vertical scroll
         const horizontalScroll = gsap.to(slides, {
@@ -231,11 +230,14 @@ document.addEventListener("astro:page-load", () => {
             }
         });
 
-        // Animate content within each slide
+        // Animate content within each slide (skip decorative animations if reduced motion preferred)
         slides.forEach((slide: any) => {
             const heading = slide.querySelector(".heading");
             const text = slide.querySelector(".slide-text");
             const image = slide.querySelector(".slide-image");
+
+            // Skip decorative animations for reduced motion users, but keep scroll functional
+            if (prefersReducedMotion) return;
 
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -248,11 +250,11 @@ document.addEventListener("astro:page-load", () => {
             });
 
 
-    
+
            if (heading) tl.from(heading, { opacity: 0, ease: "power1.inOut" }, 0);
            if (text) tl.from(text, { opacity: 0, ease: "power2.out" }, 0.2);
            if (image) tl.from(image, { opacity: 0, scale: 0.8, ease: "slow" }, 0);
-           
+
         });
 
 

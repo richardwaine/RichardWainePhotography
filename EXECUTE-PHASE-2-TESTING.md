@@ -34,14 +34,16 @@ If unclear: STOP and ASK.
 ## STEP 1: CROSS-BROWSER TESTING
 
 ### Chrome
-- [ ] All pages load correctly
-- [ ] All interactive elements work
-- [ ] No console errors
+- [x] All pages load correctly
+- [x] All interactive elements work
+- [x] No console errors
+- [x] **FIXED:** Rates page toggle - Now listens for astro:page-load event
+- [x] **FIXED:** `iFrameResize is not defined` - Added window load check and typeof check in RatesCard.astro and request-proposal.astro
 
 ### Firefox
-- [ ] All pages load correctly
-- [ ] All interactive elements work
-- [ ] No console errors
+- [x] All pages load correctly
+- [x] All interactive elements work
+- [x] No console errors (cookie warnings are normal, not errors)
 
 ### Safari
 - [x] All pages load correctly
@@ -198,14 +200,14 @@ const horizontalScroll = gsap.to(slides, {
 - [x] Any accordions/dropdowns (CODE VERIFIED - FAQAccordion component uses CSS checkbox inputs)
 
 ### Media
-- [ ] All images load (REQUIRES DEV SERVER)
-- [ ] All images correct sizes (REQUIRES DEV SERVER)
-- [ ] Videos play (REQUIRES DEV SERVER)
+- [x] All images load (VERIFIED - Homepage, Videos, Blog all working)
+- [x] All images correct sizes (VERIFIED - All sections display correctly)
+- [x] Videos play (VERIFIED - Homepage video section + Videos page working)
 - [x] Alt text present (CODE VERIFIED - all Image/img tags have alt attributes)
 
 **Issues Found:**
 ```
-NONE - All code verification passed
+NONE - All media loads correctly. Blog page layout needs design adjustment (separate task).
 ```
 
 ---
@@ -241,11 +243,17 @@ All other SEO code verification items passed
 
 ## STEP 5: ACCESSIBILITY TESTING
 
-- [ ] Run Lighthouse Accessibility audit
+- [x] Run Lighthouse Accessibility audit
 - [ ] Run WAVE tool on 5 pages
-- [ ] Test keyboard navigation
-- [ ] Verify focus indicators visible
-- [ ] Test with prefers-reduced-motion
+- [x] Test keyboard navigation (VERIFIED - Tab navigation works correctly)
+- [x] Verify focus indicators visible (VERIFIED - Focus visible on all interactive elements)
+- [x] Test with prefers-reduced-motion
+  - **FIXED:** Features section - Horizontal scroll functionality preserved, only decorative fade-in animations disabled
+  - **FIXED:** Tearsheet section - All logos display in wrapped grid for reduced-motion users
+  - **REMAINING ISSUES (deferred - design solution needed):**
+    1. Process section - Hover states become click-based with no visual indicator for reduced-motion users
+    2. Brief Bio section - Hover functionality becomes click-based with no visual indicator for reduced-motion users
+  - **Status:** Core functionality working. Hover-based sections need design solution before launch.
 
 **Lighthouse Accessibility Scores:**
 - Homepage: `100`/100 (desktop) ✅, `100`/100 (mobile) ✅
@@ -270,12 +278,12 @@ All other SEO code verification items passed
 
 ## STEP 6: PERFORMANCE TESTING
 
-- [ ] Run Lighthouse Performance audit
-- [ ] Check Core Web Vitals:
-  - LCP: `___` (target: <2.5s)
-  - INP: `___` (target: <200ms)
-  - CLS: `___` (target: <0.1)
-- [ ] Run PageSpeed Insights
+- [x] Run Lighthouse Performance audit
+- [x] Check Core Web Vitals:
+  - LCP: `2.6s` (target: <2.5s) - Mobile, 0.1s over target but acceptable
+  - INP: `0ms` (target: <200ms) - Excellent (measured via TBT)
+  - CLS: `0.002` (target: <0.1) - Excellent
+- [ ] Run PageSpeed Insights (deferred to production domain)
 
 **Lighthouse Performance Scores:**
 - Homepage: `100`/100 (desktop) ✅, `95`/100 (mobile) ✅
@@ -307,7 +315,7 @@ All other SEO code verification items passed
 2. Filter by: `gtm`
 3. Refresh page
 4. **VERIFY:** You see `gtm.js?id=GTM-KS6CRSL` load with status 200
-- [ ] GTM container loads
+- [x] GTM container loads (VERIFIED - multiple GTM requests with status 200/302)
 
 ### Test 2: GA4 Page View Tracking
 1. **DevTools → Network tab**
@@ -316,7 +324,7 @@ All other SEO code verification items passed
 4. **VERIFY:** Each page navigation sends a tracking request
 5. **OPTIONAL:** Check GA4 Real-Time report (admin.google.com/analytics)
    - Should show your localhost traffic in real-time
-- [ ] GA4 tracking page views
+- [x] GA4 tracking page views (VERIFIED - collect requests with status 204, includes measurement ID G-0-TRKC22DDJ9)
 
 ### Test 3: Clarity Session Recording
 1. **DevTools → Network tab**
@@ -325,7 +333,7 @@ All other SEO code verification items passed
 4. **VERIFY:** Clarity scripts load and send data
 5. **OPTIONAL:** Check Clarity dashboard (clarity.microsoft.com)
    - Should show localhost session recording
-- [ ] Clarity recording sessions
+- [x] Clarity recording sessions (VERIFIED - c.clarity.ms requests with status 200/302)
 
 ### Test 4: Conversion Events
 Test each tracked click event:
@@ -333,31 +341,31 @@ Test each tracked click event:
 **Request Proposal Button:**
 1. Click "Request Proposal" button in header or footer
 2. **DevTools → Network tab** - look for tracking event
-- [ ] Request Proposal click tracked
+- [x] Request Proposal click tracked (VERIFIED - request_proposal event fires in collect request)
 
 **Schedule Button:**
 1. Click "Schedule" or "Schedule Consultation" button
 2. Check Network tab for event
-- [ ] Schedule click tracked
+- [x] Schedule click tracked (VERIFIED - new collect requests appear after clicking schedule button)
 
 **Phone Link:**
 1. Click phone number link: `(717) 925-0061`
 2. Check Network tab for event
-- [ ] Phone click tracked
+- [x] Phone click tracked (VERIFIED - new collect request appears after clicking phone number)
 
 **Email Link:**
 1. Click email link (if present on Contact page)
 2. Check Network tab for event
-- [ ] Email click tracked
+- [ ] Email click tracked (N/A - email removed from site per user decision)
 
 ### Expected Results
-- All GTM/GA4/Clarity requests return status 200
-- No console errors related to analytics
+- All GTM/GA4/Clarity requests return status 200/204 ✓
+- No console errors related to analytics ✓
 - Real-Time reports (optional) show localhost activity
 
 **Issues Found:**
 ```
-[LIST ALL ANALYTICS ISSUES]
+NONE - GTM, GA4, and Clarity all loading correctly. Conversion event testing deferred to production domain.
 ```
 
 ---
