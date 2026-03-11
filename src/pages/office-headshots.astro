@@ -216,9 +216,6 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
 
 ---
 
-
-
-
 <MainLayout title={pageTitle} description={metaDescription}>
 
 <!-- Service Schema -->
@@ -308,9 +305,6 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
        
       </ul>
 
-      <!-- <div class="button-wrapper">
-        <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
-      </div> -->
 
     </div>
     <div class="system-image">
@@ -340,28 +334,6 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
       <h2>{systemRow3Title}</h2>
       <p>{systemRow3Description}</p>
 
-      <!-- <table class="logistics-table">
-        <tr>
-          <td class="logistics-label">Time Per Person</td>
-          <td class="logistics-value">Approx. 5 - 15 minutes</td>
-        </tr>
-        <tr>
-          <td class="logistics-label">Space Required</td>
-          <td class="logistics-value">15 x 15 feet minimum</td>
-        </tr>
-        <tr>
-          <td class="logistics-label">Equipment Provided</td>
-          <td class="logistics-value">Full studio setup included</td>
-        </tr>
-        <tr>
-          <td class="logistics-label">Selection Process</td>
-          <td class="logistics-value">Real-time review with guidance</td>
-        </tr>
-        <tr>
-          <td class="logistics-label">Service Area</td>
-          <td class="logistics-value">PA, MD, DE, NY, NJ</td>
-        </tr>
-      </table> -->
 
     <ul class="method-list">
         <li class="method-item"><span>◆</span> {methodItem9}</li>
@@ -393,10 +365,6 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
           <td class="logistics-value">PA, MD, DE, NY, NJ</td>
         </tr>
       </table>
-
-      <!-- <div class="button-wrapper">
-        <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
-      </div> -->
 
     </div>
     <div class="system-image">
@@ -524,16 +492,10 @@ let mm = gsap.matchMedia();
 <style>
   :root {
   --bg: #050505;
-  /* --bg:var(--drkbg); */
   --card: #111111;
-  /* --accent: #12c2e9; */
   --text:var(--ltclr);
-  /* --text-dim: #888888; */
   --text-dim:var(--ltclr);
-  /* --border: #1a1a1a; */
 }
-
-
 
 body {
   background: var(--bg);
@@ -544,10 +506,9 @@ body {
   padding:0;
   min-height:calc(100vh + var(--header-height));
 
-a{
-    color:blue;
-}
-
+      a{
+          color:blue;
+      }
 }
 
 
@@ -567,7 +528,6 @@ a{
   grid-template-columns: 1fr;
   width:100%;
   margin-inline:auto;
-  /* overflow:hidden; */
   overflow:clip;
 }
 
@@ -599,10 +559,6 @@ h1 {
   font-weight: var(--fw-x-bold);
   text-transform: uppercase;
   
- 
-
-  
-
 }
 
 .hero-p {
@@ -619,17 +575,10 @@ h1 {
 }
 
 .action-group{
-  
   display:flex;
   flex-direction:column;
   justify-self:center;
   gap:var(--size-4);
-  
-  > *{
-
-    /* margin-inline:auto; */
-
-  }
  
 }
 
@@ -652,8 +601,6 @@ h1 {
   overflow: hidden;
   perspective: 1200px;
   box-shadow: 0 10px 50px var(--shadow-clr-medium);
-
- 
 }
 
 .portrait-sim {
@@ -666,20 +613,14 @@ h1 {
   transform-style: preserve-3d;
   box-shadow: inset 0 0 60px rgba(3, 169, 244, 0.1);
   overflow:clip;
-  /* overflow:hidden; */
   
-  > * {
+    > * {
 
-  object-fit:cover;
-  width:100%;
-  height:100%;
-
+    object-fit:cover;
+    width:100%;
+    height:100%;
+  }
 }
-}
-
-
-
-
 
 .callout {
   display:none;
@@ -688,18 +629,14 @@ h1 {
 
 /* Educational Pillars Section */
 .pillars {
-
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--size-4);
   background: #080808;
-  /* background:var(--drkbg); */
   perspective: 1000px;
   width:calc(100% - var(--size-7));
   margin-inline:auto;
 
-
-  
 }
 
 .pillar-card {
@@ -713,8 +650,6 @@ h1 {
   box-shadow: 0 10px 30px var(--shadow-clr-soft);
 }
 
-
-
 .pillar-num {
   color: var(--accent);
   font-weight: var(--fw-x-bold);
@@ -723,12 +658,14 @@ h1 {
   display: block;
   text-align:center;
 }
+
 .pillar-card .pillar-title {
   margin: 0 0 var(--size-3);
   font-size: var(--fs-500);
   letter-spacing: 1px;
   text-align:center;
 }
+
 .pillar-card p {
   color: var(--text-dim);
   font-size: var(--fs-400);
@@ -806,12 +743,14 @@ h1 {
   padding: 0;
   margin-bottom:var(--size-7);
 }
+
 .method-item {
   padding: var(--size-4) 0;
   border-bottom: 1px solid var(--border);
   display: flex;
   gap: var(--size-4);
 }
+
 .method-item span {
   color: var(--accent);
   font-weight: bold;
@@ -834,30 +773,23 @@ h1 {
 }
 
 .logistics-label {
-  /* color: var(--accent); */
   font-weight: var(--fw-bold);
   width: 60%;
-
-  
-
 }
 
 .logistics-value {
   color: var(--text-dim);
-  /* outline:2px solid red; */
-  
 }
 
 
 #testimonials{
-
     height: auto;                                                                
-     display: grid;                                                               
-     place-items: center;                                                         
-     background: #080808; 
+    display: grid;                                                               
+    place-items: center;                                                         
+    background: #080808; 
 
       > * > * > * .card-testimonial{
-    margin-inline:0;
+        margin-inline:0;
       }
 
       > * > * > * > * .testimonial-content{
@@ -872,28 +804,7 @@ h1 {
   width:calc(100% - var(--size-4));
   margin-inline:auto;
   margin-bottom:var(--size-10);
- 
 }
-
-
-/* Global Network Preview */
-
-/* .global-footer {
-  padding: 100px 10%;
-  text-align: center;
-  border-top: 1px solid var(--border);
-  background: radial-gradient(circle at center, #111 0%, #050505 100%);
-}
-.global-footer h2 {
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-
-.global-footer .footer-description {
-  color: var(--text-dim);
-  margin-bottom: 40px;
-} */
-
 
 /* ==========================================                                   
      TABLET - min-width: 48em (768px)                                             
@@ -903,9 +814,7 @@ h1 {
             min-height:100vh;
             grid-template-columns: 1fr;
             gap: var(--size-875);
-         
           }
-
 
           .action-group{
 
@@ -923,24 +832,22 @@ h1 {
             border-bottom: 1px solid var(--accent);
             padding-bottom: var(--size-1);
             z-index: 10;
-            
           }
+
           .c-1 {
             top: 25%;
             left: 5%;
           }
+
           .c-2 {
             bottom: 25%;
             right: 5%;
           } 
           
-          
           .pillars {
-           
           grid-template-columns: 1fr;
           padding: 50px 0;  
           gap: var(--size-775);  
-        
                                                                               
           }  
 
@@ -960,10 +867,6 @@ h1 {
 
           .pillar-card .pillar-title{
             text-align:left;
-          }
-
-          .system-section {
-            /* padding-block: 100px; */
           }
 
           .system-content {
@@ -989,24 +892,13 @@ h1 {
           .FAQs{
             width:80%;
           }
-
-
-
   }
+
   /* ==========================================                                   
      DESKTOP - min-width: 64em (1024px)                                           
      ========================================== */                                
   @media (min-width: 64em) {                                                      
-          .hero {
-            /* gap: var(--size-2); */
-            /* padding-inline:var(--size-7); */
-            /* padding: 0 5%; */
-            /* grid-template-columns: 1.5fr 1fr; */
-            
-          }  
-          
-  
-
+         
          .pillars{
           width:100%;
           margin-inline:auto; 
@@ -1016,21 +908,16 @@ h1 {
             margin-inline:auto;
            }
          }
-      
   }
+
  /* ==========================================                                   
      DESKTOP - min-width: 90em (1440px)                                           
      ========================================== */                                
   @media (min-width: 90em) { 
 
         .hero {
-            /* gap: var(--size-2); */
-            /* padding-inline:var(--size-7); */
-            /* padding: 0 5%; */
             grid-template-columns: 1fr 1fr;
-            
           }  
-          
 
           h1 {
 
@@ -1038,7 +925,6 @@ h1 {
             text-align:left;
             margin-bottom: var(--size-2);
             width:calc(100% - var(--size-7));
-
           }
 
           .hero-p{
@@ -1063,7 +949,6 @@ h1 {
 
           .system-row{
             width:100%;
-          
             grid-template-columns: 1fr 1fr;
           }
           .system-row.reverse{
@@ -1073,8 +958,6 @@ h1 {
         .FAQs{
             width:50%;
           }
-
-        
   }
 
 </style>

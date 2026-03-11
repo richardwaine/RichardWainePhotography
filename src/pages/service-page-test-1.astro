@@ -3,7 +3,6 @@
 
 import MainLayout from "../layouts/MainLayout.astro"
 
-
 ---
 
 <MainLayout>
@@ -115,8 +114,6 @@ import MainLayout from "../layouts/MainLayout.astro"
     </script>
 
 
-
-
 <style>
 
 :root {
@@ -125,6 +122,7 @@ import MainLayout from "../layouts/MainLayout.astro"
   --text: #fff;
   --gray: #888;
 }
+
 :global(body) {
   margin: 0;
   background: var(--bg);
@@ -148,7 +146,6 @@ import MainLayout from "../layouts/MainLayout.astro"
   letter-spacing: 4px;
   font-weight: 900;
   text-transform: uppercase;
-  
   
 }
 
@@ -193,9 +190,8 @@ import MainLayout from "../layouts/MainLayout.astro"
   transform: translateZ(-300px);
   opacity: 0.4;
   
-  
-
 }
+
 .master-portrait img {
   width: 100%;
   height: 100%;
@@ -214,6 +210,7 @@ import MainLayout from "../layouts/MainLayout.astro"
   gap: 80px;
   transform: translateZ(50px);
 }
+
 .header-box h1 {
   font-size: 8vw;
   line-height: 0.8;
@@ -230,6 +227,7 @@ import MainLayout from "../layouts/MainLayout.astro"
   padding: 40px;
   backdrop-filter: blur(20px);
 }
+
 .label {
   color: var(--accent);
   font-size: 11px;
@@ -238,12 +236,14 @@ import MainLayout from "../layouts/MainLayout.astro"
   margin-bottom: 20px;
   text-transform: uppercase;
 }
+
 h2 {
   font-size: 32px;
   letter-spacing: -1px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
+
 p {
   color: var(--gray);
   line-height: 1.7;
@@ -259,6 +259,7 @@ p {
   border-top: 1px solid #222;
   pt: 30px;
 }
+
 .data-item b {
   display: block;
   color: #fff;
@@ -266,10 +267,12 @@ p {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
+
 .data-item span {
   color: var(--accent);
   font-family: monospace;
   font-size: 12px;
 }
+
 </style>
 

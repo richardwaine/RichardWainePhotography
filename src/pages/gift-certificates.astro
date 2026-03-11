@@ -104,8 +104,6 @@ const giftCert500Schema = buildProductSchema(
                     </div>
               </div>
 
-          <!-- <p class="amounts">$25 • $50 • $100 • $250 • $500</p> -->
-
           <div class="button-wrapper">
             <PrimaryButton text="PURCHASE GIFT CARD" url={squareStoreUrl} />
           </div>
@@ -179,7 +177,7 @@ const giftCert500Schema = buildProductSchema(
   }
 
 
-.amounts{
+  .amounts{
       display: grid;
       grid-template-columns: repeat(1, auto);
       justify-content: center;
@@ -192,12 +190,12 @@ const giftCert500Schema = buildProductSchema(
       
 }
 
- .amounts span {
+  .amounts span {
       padding: 0 var(--size-2);
       
     }
 
-    .amounts span::after {
+  .amounts span::after {
       content: " •";
       margin-left: var(--size-2);
     }
@@ -213,13 +211,6 @@ const giftCert500Schema = buildProductSchema(
       
     
     }
-  /* .amounts {
-    font-size: var(--fs-400);
-    color: var(--blkclr);
-    margin-bottom: var(--size-5);
-    letter-spacing: 2px;
-    
-  } */
 
   .button-wrapper{
 

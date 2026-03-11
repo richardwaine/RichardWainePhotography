@@ -131,9 +131,7 @@ const {title, description = "Professional headshot photographer. Corporate heads
 		</script>
 
 		<!-- Google Tag Manager -->
-
-
-		 <!-- Google Tag Manager - Delayed Load -->                                                
+                                             
 		<script is:inline>                                                                        
 			document.addEventListener('DOMContentLoaded', () => {                                 
 				setTimeout(() => {                                                                
@@ -148,14 +146,6 @@ const {title, description = "Professional headshot photographer. Corporate heads
 		</script>                                                                                 
   <!-- End Google Tag Manager -->                  
 
-		<!-- <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-KS6CRSL');
-		</script> -->
-
-		<!-- End Google Tag Manager -->
 
 
 	</head>
@@ -197,12 +187,7 @@ const {title, description = "Professional headshot photographer. Corporate heads
 
 	// Safari-specific fix: normalizeScroll makes jitter worse, keeping disabled
 	const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-	// if (isSafari) {
-	// 	ScrollTrigger.normalizeScroll({
-	// 		allowNestedScroll: true,
-	// 		type: "touch,wheel,pointer"
-	// 	});
-	// }
+	
 
 	// Disable browser scroll restoration and scroll to top
 	if ('scrollRestoration' in history) {

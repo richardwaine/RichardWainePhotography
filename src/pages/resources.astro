@@ -621,7 +621,6 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 
         /* Reset and base styles - UNCHANGED from your original */
        
-
         body {
             
             background-color: var(--ltclr);
@@ -645,7 +644,6 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         #current-category {
             text-transform: capitalize;
         }
-
 
         h2 {
            
@@ -678,7 +676,6 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         .blog-container {
             width:calc(100% - var(--size-7));
             margin-inline:auto;
-
         }
 
         .category-heading{
@@ -697,15 +694,15 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 
         /* Filter Section - MOBILE-FIRST defaults for collapsible behavior */
         .filter-section {
-            position: relative; /* Not sticky by default for mobile */
-            top: auto; /* Reset top */
-            height: fit-content; /* Allow height to adjust */
-            padding: var(--size-3); /* Reduced padding for mobile */
+            position: relative; 
+            top: auto; 
+            height: fit-content; 
+            padding: var(--size-3); 
             background: var(--ltclr);
-            border: none; /* No border by default (when collapsed) */
-            box-shadow: none; /* No shadow by default (when collapsed) */
+            border: none;
+            box-shadow: none; 
             border-radius: var(--size-2);
-            margin-bottom: var(--size-4); /* Space below filter on mobile */
+            margin-bottom: var(--size-4); 
 
          
         }
@@ -717,12 +714,12 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             align-items: center;
             padding-bottom: var(--size-3);
             margin-bottom: var(--size-3);
-            border-bottom: 1px solid #e5e5e5; /* Separator for mobile header */
+            border-bottom: 1px solid #e5e5e5; 
         }
 
         /* NEW: Filter Toggle Button - visible by default (mobile) */
         .filter-toggle-btn {
-            display: flex; /* Show for mobile */
+            display: flex; 
             background: var(--blkclr);
             color: var(--ltclr);
             border: none;
@@ -748,23 +745,23 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 
         /* NEW: Filter Content Wrapper - hidden by default (mobile) */
         .filter-content {
-            max-height: 0; /* Hidden by default */
-            overflow: hidden; /* Hide overflowing content */
-            padding-top: 0; /* No padding when collapsed */
-            padding-bottom: 0; /* No padding when collapsed */
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth collapse/expand */
+            max-height: 0; 
+            overflow: hidden; 
+            padding-top: 0;
+            padding-bottom: 0; 
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out; 
         }
 
         .filter-content.open {
-            max-height: 1000px; /* Large enough to ensure search bar and all buttons are visible */
+            max-height: 1000px; 
         }
 
         /* Filter Tabs - MOBILE-FIRST grid for buttons */
         .filter-tabs {
-            display: grid; /* Grid for mobile 2-column layout */
-            grid-template-columns: 1fr 1fr; /* Two columns for mobile buttons */
-            gap: var(--size-2); /* Gap between buttons */
-            margin: 0 0 var(--size-5) 0; /* Adjusted margin for mobile */
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: var(--size-2); 
+            margin: 0 0 var(--size-5) 0; 
             font-size:var(--fs-400);
         }
 
@@ -782,8 +779,6 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             background:var(--ltclr);
             color: var(--blkclr);
             transition: border-color 0.2s ease;
-
-               
         }
 
         .search-input:hover {
@@ -802,19 +797,14 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             background: transparent;
             color: var(--blkclr);
             border: 1px solid #e5e5e5;
-            transition: border-color 0.2s ease;
-            
+            transition: border-color 0.2s ease; 
         }
-
 
         .filter-btn:hover {
             border-color: var(--blkclr);
         }
 
         .filter-btn:focus-visible {
-            /* outline: none;
-            box-shadow: 0 0 0 2px var(--blkclr); */
-
             outline:2px solid orange;
             outline-offset:2px;
         }
@@ -845,11 +835,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         }
 
         .blog-card:hover {
-        
-
             box-shadow:var(--_shadow);
-            
-           
         }
 
         .blog-card img {
@@ -890,8 +876,6 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 
         .vendor-website,
         .vendor-email {
-        
-
             display: inline-block;
             margin-top: var(--size-2);
             color: #0066cc;
@@ -935,40 +919,12 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             padding-block: 0;
         }
 
-       /* .read-more {
-            display: inline-block;
-            padding: 8px var(--size-3);
-            background: var(--ltclr);
-            color: var(--blkclr);
-            font-size: var(--fs-350);
-            border: 1px solid var(--blkclr);;
-            transition: all 0.2s ease;
-            margin-top: auto;
-            width: fit-content;
-            border-radius: 4px;
-        }
-
-        .read-more:hover {
-            background: var(--blkclr);
-            color: var(--ltclr);
-
-           
-        }
-
-        .read-more:focus-visible {
-            outline: none;
-            box-shadow: 0 0 0 2px var(--blkclr);
-            
-        }
-*/
-        /* Media queries for larger screens (min-width approach) */
-
 
     /* ==========================================
-    LARGE DESKTOP - min-width: 40.0625em (641px)
+   MOBILE / TABLET - min-width: 40.0625em (641px)
     ========================================== */
 
-        @media (min-width: 40.0625em) { /* Corrected from 640px to 641px */
+        @media (min-width: 40.0625em) { 
             .blog-container {
                 padding: 0 var(--size-5);
             }
@@ -980,8 +936,8 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
     /* ==========================================
     TABLET - min-width: 48em (768px)
     ========================================== */
-        @media (min-width: 48em) {
 
+        @media (min-width: 48em) {
             .blog-container {
             width:80%;
             }
@@ -1011,9 +967,9 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             }
             /* Ensure filter header looks original on desktop */
             .filter-header {
-                border-bottom: none; /* Remove mobile separator */
-                padding-bottom: 0; /* Reset mobile padding */
-                margin-bottom: var(--size-3); /* Restore original desktop margin */
+                border-bottom: none; 
+                padding-bottom: 0;
+                margin-bottom: var(--size-3); 
             }
             /* Ensure filter content is visible on desktop */
             .filter-content {
@@ -1022,10 +978,10 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             }
             /* Filter tabs layout reverts to desktop column for menu */
             .filter-tabs {
-                display: flex; /* Flex to align items in column */
-                flex-direction: column; /* Stack vertically */
-                gap: var(--size-2); /* Gap between buttons */
-                margin: var(--size-5) 0; /* Restore original desktop margin */
+                display: flex;
+                flex-direction: column; 
+                gap: var(--size-2); 
+                margin: var(--size-5) 0; 
             }
         }
 

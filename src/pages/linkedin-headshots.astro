@@ -319,9 +319,6 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
        
       </ul>
 
-      <!-- <div class="button-wrapper">
-        <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
-      </div> -->
 
     </div>
     <div class="system-image">
@@ -359,10 +356,6 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
         <li class="method-item"><span>◆</span> {methodItem12}</li>
        
       </ul>
-
-      <!-- <div class="button-wrapper">
-        <PrimaryButton text={systemRow2ButtonText} url={systemRow2ButtonUrl}/>
-      </div> -->
 
     </div>
     <div class="system-image">
@@ -488,17 +481,13 @@ let mm = gsap.matchMedia();
 
 
 <style>
+
   :root {
   --bg: #050505;
-  /* --bg:var(--drkbg); */
   --card: #111111;
-  /* --accent: #12c2e9; */
   --text:var(--ltclr);
-  /* --text-dim: #888888; */
   --text-dim:var(--ltclr);
-  /* --border: #1a1a1a; */
 }
-
 
 
 body {
@@ -510,12 +499,11 @@ body {
   padding:0;
   min-height:calc(100vh + var(--header-height));
 
-a{
-    color:blue;
-}
+    a{
+        color:blue;
+    }
 
 }
-
 
 .cyan {
   color: var(--accent);
@@ -533,7 +521,6 @@ a{
   grid-template-columns: 1fr;
   width:100%;
   margin-inline:auto;
-  /* overflow:hidden; */
   overflow:clip;
 }
 
@@ -565,10 +552,6 @@ h1 {
   font-weight: var(--fw-x-bold);
   text-transform: uppercase;
   
- 
-
-  
-
 }
 
 .hero-p {
@@ -590,12 +573,6 @@ h1 {
   flex-direction:column;
   justify-self:center;
   gap:var(--size-4);
-  
-  > *{
-
-    /* margin-inline:auto; */
-
-  }
  
 }
 
@@ -619,7 +596,6 @@ h1 {
   perspective: 1200px;
   box-shadow: 0 10px 50px var(--shadow-clr-medium);
 
- 
 }
 
 .portrait-sim {
@@ -632,15 +608,14 @@ h1 {
   transform-style: preserve-3d;
   box-shadow: inset 0 0 60px rgba(3, 169, 244, 0.1);
   overflow:clip;
-  /* overflow:hidden; */
   
-  > * {
+    > * {
 
-  object-fit:cover;
-  width:100%;
-  height:100%;
+    object-fit:cover;
+    width:100%;
+    height:100%;
 
-}
+  }
 }
 
 
@@ -659,13 +634,10 @@ h1 {
   grid-template-columns: 1fr;
   gap: var(--size-4);
   background: #080808;
-  /* background:var(--drkbg); */
   perspective: 1000px;
   width:calc(100% - var(--size-7));
   margin-inline:auto;
 
-
-  
 }
 
 .pillar-card {
@@ -679,8 +651,6 @@ h1 {
   box-shadow: 0 10px 30px var(--shadow-clr-soft);
 }
 
-
-
 .pillar-num {
   color: var(--accent);
   font-weight: var(--fw-x-bold);
@@ -689,12 +659,14 @@ h1 {
   display: block;
   text-align:center;
 }
+
 .pillar-card .pillar-title {
   margin: 0 0 var(--size-3);
   font-size: var(--fs-500);
   letter-spacing: 1px;
   text-align:center;
 }
+
 .pillar-card p {
   color: var(--text-dim);
   font-size: var(--fs-400);
@@ -757,7 +729,7 @@ h1 {
   font-size: var(--fs-600);
   margin-bottom: var(--size-4);
   text-align:center;
-  color:var(--accent); /* remove to make text white */
+  color:var(--accent); 
 }
 
 .system-content p{
@@ -772,12 +744,14 @@ h1 {
   padding: 0;
   margin-bottom:var(--size-7);
 }
+
 .method-item {
   padding: var(--size-4) 0;
   border-bottom: 1px solid var(--border);
   display: flex;
   gap: var(--size-4);
 }
+
 .method-item span {
   color: var(--accent);
   font-weight: bold;
@@ -810,25 +784,6 @@ h1 {
   margin-bottom:var(--size-10);
  
 }
-
-
-/* Global Network Preview */
-
-/* .global-footer {
-  padding: 100px 10%;
-  text-align: center;
-  border-top: 1px solid var(--border);
-  background: radial-gradient(circle at center, #111 0%, #050505 100%);
-}
-.global-footer h2 {
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-
-.global-footer .footer-description {
-  color: var(--text-dim);
-  margin-bottom: 40px;
-} */
 
 
 /* ==========================================                                   
@@ -898,10 +853,6 @@ h1 {
             text-align:left;
           }
 
-          .system-section {
-            /* padding-block: 100px; */
-          }
-
           .system-content {
             opacity: 0;
             transform: translateY(50px);
@@ -927,21 +878,11 @@ h1 {
           }
 
 
-
   }
   /* ==========================================                                   
      DESKTOP - min-width: 64em (1024px)                                           
      ========================================== */                                
   @media (min-width: 64em) {                                                      
-          .hero {
-            /* gap: var(--size-2); */
-            /* padding-inline:var(--size-7); */
-            /* padding: 0 5%; */
-            /* grid-template-columns: 1.5fr 1fr; */
-            
-          }  
-          
-  
 
          .pillars{
           width:100%;
@@ -954,19 +895,15 @@ h1 {
          }
       
   }
+
  /* ==========================================                                   
      DESKTOP - min-width: 90em (1440px)                                           
      ========================================== */                                
   @media (min-width: 90em) { 
 
         .hero {
-            /* gap: var(--size-2); */
-            /* padding-inline:var(--size-7); */
-            /* padding: 0 5%; */
             grid-template-columns: 1fr 1fr;
-            
           }  
-          
 
           h1 {
 
@@ -1008,9 +945,7 @@ h1 {
 
         .FAQs{
             width:50%;
-          }
-
-        
+          }  
   }
 
 </style>

@@ -96,12 +96,10 @@ const studioPlaceSchema = buildPlaceSchema(
 
  
   .studio-page {
-   
     background: var(--drkbg);
     min-height:100vh;
     display: grid;
     grid-template-rows: auto 1fr;
-  
   }
 
 .layout{
@@ -112,14 +110,11 @@ const studioPlaceSchema = buildPlaceSchema(
   margin-block:var(--size-7); 
 }
 
-
-
   #header p {
     font-size: var(--fs-450);
     color: var(--ltclr);
     margin-bottom: var(--size-7);
     line-height:var(--line-height-relaxed);
-   
   }
 
   #header p:last-child {
@@ -155,15 +150,13 @@ const studioPlaceSchema = buildPlaceSchema(
     box-shadow:var(--shadow);
   }
 
-
-
   /* ==========================================
    DESKTOP - min-width: 64em (1024px)
    ========================================== */
   @media (min-width: 64em) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 /* ==========================================
    LARGE DESKTOP - min-width: 90em (1440px)
@@ -172,9 +165,8 @@ const studioPlaceSchema = buildPlaceSchema(
  @media (min-width: 90em) {
    .layout{
   margin-block:0; /*added for mobile */
-
-   }}
-
+   }
+  }
 
 </style>
 

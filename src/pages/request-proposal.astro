@@ -89,6 +89,7 @@ const shreePatelReviewSchema = buildReviewSchema(
 </MainLayout>
 
 <style>
+
   :root {
     --pagetitle-title-weight: var(--fw-semi-bold);
     --pagetitle-subtitle-weight: var(--fw-bold);
@@ -101,18 +102,14 @@ const shreePatelReviewSchema = buildReviewSchema(
   #gallery {
     background: var(--drkbg);
     padding-top: 0;
-  
     
     > *{
       padding-inline:0;
     }
   }
 
-
-
   #testimonial-form {
     background: var(--ltclr);
-    /* padding-bottom:var(--size-7) */
     padding-top: var(--size-8);
   }
 
@@ -121,19 +118,12 @@ const shreePatelReviewSchema = buildReviewSchema(
     grid-template-columns: 1fr;
     gap: var(--size-7);
     align-items: start;
-    
-
-   
   }
 
 #TaveContactForm {
-  /* width:1px; */
   width:100%;
- 
   margin-inline:auto;
-  /* height:100%; */
-  /* min-height:950px; */
-  min-height:calc(800px + var(--header-height) );
+  min-height:calc(800px + var(--header-height));
 }
 
 
@@ -142,24 +132,22 @@ const shreePatelReviewSchema = buildReviewSchema(
    ========================================== */
 
   @media (min-width: 48em) {
-    
      #testimonial-form {
       padding-top: var(--size-8);
   }
-
 }
 
   /* ==========================================
    DESKTOP - min-width: 64em (1024px)
    ========================================== */
-  @media (min-width: 64em) {
+  
+   @media (min-width: 64em) {
     #testimonial-form .wrapper {
-      /* width:80%;
-      margin-inline:auto; */
       grid-template-columns: 1fr 1fr;
       margin-bottom:0;
       padding-bottom:0;
       grid-template-rows: 1fr;
     }
+  }
 
 </style>
