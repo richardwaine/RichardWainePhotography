@@ -212,8 +212,6 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
   padding-block:var(--size-8);
 }
 
-
-
    h2{
     text-wrap:pretty;
     width:calc(100% - (var(--size-9)));
@@ -227,9 +225,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     display:grid;
     grid-template-columns: 1fr; 
     gap:var(--size-8);
-    
 }
-
 
   .world-map-container {
     width:100%;
@@ -240,7 +236,6 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     overflow: hidden;
     font-family: var(--ff-primary);
 
-    
   }
 
   .world-map-background {
@@ -251,7 +246,6 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     pointer-events: none;
     user-select: none;
     object-fit: cover;
-    
    
   }
 
@@ -267,8 +261,7 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
   .location-point {
     cursor: pointer;
     filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-
-    
+ 
   }
 
   .pointer-events-none {
@@ -280,7 +273,6 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
     align-items: center;
     justify-content: center;
     height: 100%;
-    
   }
 
   :global(.label-text) {
@@ -305,21 +297,17 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
       padding:var(--size-8);
       margin-inline:auto;
       gap:var(--size-8);
+    } 
   }
-    
-  }
+
   /* ==========================================
    DESKTOP - min-width: 64em (1024px)
    ========================================== */
 
   @media (min-width: 64em) {
-
     .world-map-container {
       padding: var(--size-7);
       margin-inline:auto;
-     
-    
-  
     }
   }
 
@@ -334,14 +322,14 @@ import worldMapSvg from '../assets/images/whattoexpect/worldmap.svg';
         line-height:var(--line-height-loose);
       }
 
-  .world-map-container {
-    margin-inline:auto;
-  }
+      .world-map-container {
+        margin-inline:auto;
+      }
 
-  .text{
-    max-width:75%;
-    margin-inline:auto;
-  }
+      .text{
+        max-width:75%;
+        margin-inline:auto;
+      }
 }
 
 </style>
