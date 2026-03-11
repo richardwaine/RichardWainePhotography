@@ -20,22 +20,24 @@ If unclear: STOP and ASK.
 **CRITICAL:** This phase happens AFTER Phase 2 testing, BEFORE launch.
 
 **Dependencies:**
-- [ ] All Phase 1 tasks complete
-- [ ] All Phase 2 testing complete
+- [x] All Phase 1 tasks complete
+- [x] All Phase 2 testing complete
 
 ---
 
 ## PRE-FLIGHT CHECKLIST
 
-- [ ] I have read this entire document
-- [ ] Phase 2 testing is complete
-- [ ] I will refactor ONE thing at a time
-- [ ] I will re-test after each refactor
-- [ ] I will not deviate from these instructions
+- [x] I have read this entire document
+- [x] Phase 2 testing is complete
+- [x] I will refactor ONE thing at a time
+- [x] I will re-test after each refactor
+- [x] I will not deviate from these instructions
 
 ---
 
 ## STEP 1: CSS OPTIMIZATION
+
+**STATUS: SKIPPED - User will handle CSS optimization manually due to expertise in modern CSS (logical properties, DRY principles)**
 
 ### 1.1 Find Unused CSS
 
@@ -46,19 +48,12 @@ If unclear: STOP and ASK.
 
 **Unused CSS Found:**
 ```
-[LIST FILES AND APPROXIMATE % UNUSED]
+Coverage analysis completed but unreliable for safe automated removal.
 ```
 
 ### 1.2 Remove Unused CSS (WITH CAUTION)
 
-**⚠️ STOP - WAIT FOR RICH TO APPROVE REMOVAL PLAN ⚠️**
-
-For each CSS removal:
-- [ ] Document BEFORE STATE
-- [ ] Remove ONE section of unused CSS
-- [ ] Save file
-- [ ] Test site thoroughly
-- [ ] If layout breaks: RESTORE immediately
+**SKIPPED - User will handle manually**
 
 ---
 
@@ -66,25 +61,29 @@ For each CSS removal:
 
 ### 2.1 Audit JavaScript
 
-- [ ] List all JS files and their purposes:
+- [x] List all JS files and their purposes:
 
 **JavaScript Files:**
 ```
-[LIST ALL JS FILES]
+Total Files Audited: 61
+- Components: 29
+- Layouts: 2
+- Pages: 30
 ```
 
 ### 2.2 Remove Unused Imports
 
-- [ ] Check each file for unused imports
-- [ ] Document unused imports found:
+- [x] Check each file for unused imports
+- [x] Document unused imports found:
 
 **Unused Imports:**
 ```
-[LIST UNUSED IMPORTS BY FILE]
+1. src/pages/rates.astro - Line 3: ZoomPopOut (imported but only used in commented code)
+2. src/pages/blog.astro - Line 2: Image from 'astro:assets' (imported but not used in markup)
 ```
 
-- [ ] Remove unused imports ONE FILE AT A TIME
-- [ ] Test after each removal
+- [x] Remove unused imports ONE FILE AT A TIME (User completed removal)
+- [x] Test after each removal
 
 ---
 
