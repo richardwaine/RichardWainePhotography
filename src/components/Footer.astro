@@ -88,6 +88,8 @@ const organizationSchema = buildOrganizationSchema(
 </div>
 
 <div class="footer-panel" id="footerPanel">
+    <div class="view-slider">
+        <section class="view" id="view-nav">
     <div class="footer-content">
         <div class="footer-main-row">
              <div class="logo-container">
@@ -111,6 +113,7 @@ const organizationSchema = buildOrganizationSchema(
 <path fill="currentColor" d="M0 0 C4.62 0 9.24 0 14 0 C14 33 14 66 14 100 C9.38 100 4.76 100 0 100 C0 67 0 34 0 0 Z " fill="currentColor" transform="translate(360,2416)"/>
             </svg>
             </a>
+            <button id="btn-open-news" class="newsletter-cta">Join The Inner Circle</button>
         </div>
             
             
@@ -167,6 +170,18 @@ const organizationSchema = buildOrganizationSchema(
                 </ul>
             </div>
         </div>
+    </div>
+        </section>
+
+        <section class="view newsletter-view" id="view-news">
+            <div class="newsletter-container">
+                <button class="btn-back" id="btn-close-news">← Back to Menu</button>
+                <div class="newsletter-title">The Inner Circle</div>
+                <p>Be the first to know about studio updates, new headshot dates, and professional tips.</p>
+
+                <div class="ml-embedded" data-form="ckP0SH"></div>
+            </div>
+        </section>
     </div>
 </div>
 
@@ -286,7 +301,15 @@ const organizationSchema = buildOrganizationSchema(
         justify-content: center;
         align-self:center;
 
-        
+
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .logo {
@@ -398,6 +421,101 @@ const organizationSchema = buildOrganizationSchema(
         color: var(--accent);
     }
 
+    /* ==========================================
+   SLIDER FUNCTIONALITY
+   ========================================== */
+    .view-slider {
+        display: flex;
+        width: 200%;
+        height: 100%;
+        transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .footer-panel.show-newsletter .view-slider {
+        transform: translateX(-50%);
+    }
+
+    .view {
+        width: 50%;
+        height: 100%;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    /* Newsletter View Styles */
+    .newsletter-view {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--ltclr);
+        font-family: var(--ff-primary);
+        padding: var(--size-650);
+        background: linear-gradient(135deg,
+            rgba(15, 15, 15, 1) 0%,
+            rgba(26, 26, 26, 1) 100%);
+    }
+
+    .newsletter-container {
+        width: 100%;
+
+    }
+
+    .newsletter-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: var(--size-2);
+        color: var(--accent);
+        text-transform: uppercase;
+        text-shadow: 0 2px 8px var(--shadow-clr-deep);
+    }
+
+    .newsletter-container p {
+        color: var(--faded);
+        margin-inline: auto;
+        margin-bottom: var(--size-5);
+        max-width: 500px;
+    }
+
+    .btn-back {
+        background: none;
+        border: 1px solid var(--faded);
+        color: var(--faded);
+        padding: 8px 20px;
+        cursor: pointer;
+        margin-bottom: var(--size-5);
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        font-family: var(--ff-primary);
+    }
+
+    .btn-back:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    .newsletter-cta {
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+        padding: 10px 20px;
+        font-family: var(--ff-primary);
+        font-weight: var(--fw-semi-bold);
+        text-transform: uppercase;
+        font-size: var(--fs-325);
+        cursor: pointer;
+        margin-top: 3em;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .newsletter-cta:hover {
+        background: var(--accent);
+        color: #000;
+    }
 
     /* ==========================================
    TABLET - min-width: 48em (768px)
@@ -445,11 +563,32 @@ document.addEventListener('astro:page-load', () => {
     const panel = document.getElementById('footerPanel');
 
     if (trigger && panel) {
+        const btnOpenNews = document.getElementById('btn-open-news');
+        const btnCloseNews = document.getElementById('btn-close-news');
+
         trigger.addEventListener('click', () => {
-            panel.classList.toggle('open');
-            const isOpen = panel.classList.contains('open');
+            const isOpen = panel.classList.toggle('open');
             trigger.setAttribute('aria-expanded', isOpen.toString());
+            if (!isOpen) {
+                setTimeout(() => panel.classList.remove('show-newsletter'), 400);
+            }
         });
+
+        // Slide to Newsletter
+        if (btnOpenNews) {
+            btnOpenNews.addEventListener('click', (e) => {
+                e.stopPropagation();
+                panel.classList.add('show-newsletter');
+            });
+        }
+
+        // Slide back to Nav
+        if (btnCloseNews) {
+            btnCloseNews.addEventListener('click', (e) => {
+                e.stopPropagation();
+                panel.classList.remove('show-newsletter');
+            });
+        }
 
         document.addEventListener('click', (e) => {
             if (!trigger.contains(e.target as Node) && !panel.contains(e.target as Node)) {
@@ -459,4 +598,13 @@ document.addEventListener('astro:page-load', () => {
         });
     }
 });
+</script>
+
+<!-- MailerLite Universal Script -->
+<script is:inline>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '734406');
 </script>
