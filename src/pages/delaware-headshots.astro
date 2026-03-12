@@ -22,7 +22,7 @@ import videoPoster from '../assets/RW_FINAL_V1_FOR REVIEW.00_00_48_06.Still004 (
 
 const promoVideo = 'https://pub-36d15bab0c0f430aaf17981265388376.r2.dev/RW_V2_For%20Review-2.mp4';
 
-import captions from '../assets/captions.vtt?url';
+const captions = 'https://pub-36d15bab0c0f430aaf17981265388376.r2.dev/captions.vtt';
 
 import WorldMap from '../components/WorldMap.astro';
 import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema, buildBreadcrumbSchema } from '../utils/schema';
@@ -154,7 +154,8 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         <div class="video-wrapper">
             <button class="close-video-btn" aria-label="Close video">×</button>
                 <video class="promo-video" 
-                controls 
+                controls
+                crossorigin="anonymous"  
                 controlslist="nodownload noplaybackrate nopictureinpicture" 
                 loop width="1000" 
                 height="563" 
