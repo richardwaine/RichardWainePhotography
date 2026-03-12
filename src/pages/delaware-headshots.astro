@@ -20,7 +20,7 @@ import FloatingStats from '../components/FloatingStats.astro';
 import videoPoster from '../assets/RW_FINAL_V1_FOR REVIEW.00_00_48_06.Still004 (16 x 9) - compressed.jpg';
 
 // import promoVideo from '../assets/RW_V2_For Review-2.mp4';
-const promoVideo = 'https://pub-36d15bab0c0f430aaf17981265388376.r2.dev/RW_V2_For Review-2.mp4';
+const promoVideo = 'https://pub-36d15bab0c0f430aaf17981265388376.r2.dev/RW_V2_For%20Review-2.mp4';
 
 import captions from '../assets/captions.vtt';
 
@@ -50,7 +50,7 @@ const promoVideoSchema = buildVideoObjectSchema(
     description: "See what it's like to work with professional headshot photographer Richard Waine. Experience the process, direction, and results that make great headshots.",
     thumbnailUrl: "https://richardwainephotography.com" + (await getImage({ src: videoPoster, width: 800 })).src,
     uploadDate: "2024-01-15",
-    embedUrl: "https://richardwainephotography.com" + promoVideo
+    embedUrl: promoVideo
   },
   "Richard Waine Photography"
 );
@@ -159,6 +159,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
                 loop width="1000" 
                 height="563" 
                 poster={(await getImage({ src: videoPoster, width: 800 })).src}
+                src={promoVideo}
                 >
 
                     <source src={promoVideo} type="video/mp4">
