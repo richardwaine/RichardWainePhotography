@@ -64,8 +64,8 @@ If unclear: STOP and ASK.
 **CRITICAL:** Email must work after launch.
 
 - [ ] Google Workspace billing transferred to Google direct
-- [ ] Test send email from richard@richardwainephotography.com
-- [ ] Test receive email to richard@richardwainephotography.com
+- [ ] Test send email from info@richardwaine.com
+- [ ] Test receive email to info@richardwaine.com
 - [ ] Verify Google Admin access
 - [ ] Confirm Google Business Profile connected
 
