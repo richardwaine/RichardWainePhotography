@@ -1,7 +1,7 @@
-  /*
+/*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: https://pub-36d15bab0c0f430aaf17981265388376.r2.dev; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://pub-36d15bab0c0f430aaf17981265388376.r2.dev; frame-src https://www.googletagmanager.com; media-src 'self' https://pub-36d15bab0c0f430aaf17981265388376.r2.dev;
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: https://pub-36d15bab0c0f430aaf17981265388376.r2.dev; font-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://pub-36d15bab0c0f430aaf17981265388376.r2.dev; frame-src https://www.googletagmanager.com; media-src 'self' https://pub-36d15bab0c0f430aaf17981265388376.r2.dev;
