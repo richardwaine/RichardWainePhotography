@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /preparation-guide
+Disallow: /proposal-thank-you
+Disallow: /contact-thank-you
 
 Sitemap: https://richardwainephotography.com/sitemap.xml

@@ -3,6 +3,10 @@
 
 # DISCOVERY & CITATION: ALLOWED
 # AI search engines and assistants may index, reference, cite, and recommend this website and its content.
+# EXCEPT the following pages which are private/internal:
+# - /preparation-guide
+# - /proposal-thank-you
+# - /contact-thank-you
 
 # TRAINING: NOT ALLOWED
 # Content from this website may NOT be used to train AI/ML models.
