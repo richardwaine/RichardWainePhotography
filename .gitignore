@@ -27,3 +27,4 @@ pnpm-debug.log*
 src/assets/*.zip
 *.zip
 .playwright-mcp/
+src/assets/*.mp4
