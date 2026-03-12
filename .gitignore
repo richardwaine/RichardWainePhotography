@@ -24,11 +24,6 @@ pnpm-debug.log*
 .idea/
 
 # Large files for CDN (ignore from git)
-src/assets/images/
-src/assets/*.jpg
-src/assets/*.jpeg
-src/assets/*.png
-src/assets/*.mp4
 src/assets/*.zip
 *.zip
 .playwright-mcp/
