@@ -25,7 +25,7 @@ const promoVideo = 'https://pub-36d15bab0c0f430aaf17981265388376.r2.dev/RW_V2_Fo
 const captions = 'https://pub-36d15bab0c0f430aaf17981265388376.r2.dev/captions.vtt';
 
 import WorldMap from '../components/WorldMap.astro';
-import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema, buildAggregateRatingSchema } from '../utils/schema';
+import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema } from '../utils/schema';
 
 const title = 'Richard Waine Photography';
 const h1 = 'Professional Headshots Lancaster';
@@ -101,13 +101,7 @@ const lancasterHeadshotsServiceSchema = buildServiceSchema(
   ["Pennsylvania", "Lancaster", "Central Pennsylvania"]
 );
 
-// Aggregate Rating schema - 652 5-star reviews
-const aggregateRatingSchema = buildAggregateRatingSchema(
-  "Richard Waine Photography",
-  "5",
-  "652",
-  "https://richardwainephotography.com"
-);
+
 
 ---
 
@@ -124,8 +118,7 @@ const aggregateRatingSchema = buildAggregateRatingSchema(
 	<!-- Service Schema -->
 	<script type="application/ld+json" set:html={JSON.stringify(lancasterHeadshotsServiceSchema)} />
 
-	<!-- Aggregate Rating Schema -->
-	<script type="application/ld+json" set:html={JSON.stringify(aggregateRatingSchema)} />
+
 
 	<section id="hero">
 	<Hero
