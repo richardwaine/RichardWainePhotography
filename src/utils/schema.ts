@@ -234,7 +234,7 @@ export function buildServiceAudienceSchema(
     },
     "audience": audiences.map(audience => ({
       "@type": audience.name === "Companies" ? "BusinessAudience" :
-               audience.name === "Performers" ? "ProfessionalAudience" : "BusinessAudience",
+               audience.name === "Performers" ? "Audience" : "BusinessAudience",
       "name": audience.name,
       "description": audience.description
     }))
@@ -452,7 +452,15 @@ export function buildReviewSchema(
     "itemReviewed": {
       "@type": "LocalBusiness",
       "name": businessName,
-      "url": businessUrl
+      "url": businessUrl,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "20 North Queen Street",
+        "addressLocality": "Lancaster",
+        "addressRegion": "PA",
+        "postalCode": "17603",
+        "addressCountry": "US"
+      }
     },
     "author": {
       "@type": "Person",
