@@ -233,8 +233,7 @@ export function buildServiceAudienceSchema(
       }
     },
     "audience": audiences.map(audience => ({
-      "@type": audience.name === "Companies" ? "BusinessAudience" :
-               audience.name === "Performers" ? "Audience" : "BusinessAudience",
+      "@type": audience.name.includes("Companies") || audience.name.includes("Corporate") ? "BusinessAudience" : "PeopleAudience",
       "name": audience.name,
       "description": audience.description
     }))
