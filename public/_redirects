@@ -1,0 +1,38 @@
+# Redirects for Richard Waine Photography
+# Format: [source] [destination] [status-code]
+
+# Home and legacy pages
+/home / 301
+/new-folder / 301
+/portfolio / 301
+/student-sessions / 301
+/before-and-after / 301
+/client-experiences / 301
+/philadelphia-lancaster-headshot-client-experiences / 301
+
+# Contact pages
+/contact /contact-lancaster-headshot-photographer-richard-waine 301
+/contact-philadelphia-and-lancaster-headshot-photographer /contact-lancaster-headshot-photographer-richard-waine 301
+
+# Team/stylist
+/stylist /my-team 301
+
+# Shop
+/shop/power-hour-headshot-session / 301
+
+# Proposal typo
+/requst-proposal /request-proposal 301
+
+# Blog redirects - specific URLs first (must come before wildcards)
+/blog/2017/6/18/perceived-flaws-and-self-acceptance /blog/perceived-flaws-and-self-acceptance 301
+/blog-2/tkeowv0pj4eiucblmdznyhax0dhz6l /blog/how-to-prepare-for-your-professional-headshot-session 301
+/blog-content/why-being-photographed-is-scarier-than-dating-taylor-swift /blog/why-being-photographed-is-scarier-than-dating-taylor-swift 301
+/blog-content/your-brand-is-not-about-you /blog/your-brand-is-not-about-you 301
+/blog/planning-professional-headshots-website-redesigns /blog/planning-headshots-for-websites 301
+/what-photographers-dont-tell-you-about-headshots /blog/what-photographers-dont-tell-you-about-headshots 301
+/blog-2/why-headshots-are-so-expensive / 301
+/blog/the-best-way-to-make-more-money /blog/the-best-way-to-make-more-money 301
+
+# Blog wildcard redirects - MUST come AFTER specific redirects
+/blog-content/* /blog/:splat 301
+/blog-2/* /blog/:splat 301
