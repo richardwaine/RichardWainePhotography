@@ -139,6 +139,19 @@ body{
   line-height:var(--line-height-relaxed);
  }
 
+/* MailerLite font-display override - prevent render blocking */
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+  src: local('Roboto');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  src: local('Montserrat');
+}
+
 /* Safari scroll performance fixes */
 @supports (-webkit-touch-callout: none) {
   /* Safari-only styles */

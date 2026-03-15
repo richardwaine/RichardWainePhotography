@@ -600,11 +600,23 @@ document.addEventListener('astro:page-load', () => {
 });
 </script>
 
-<!-- MailerLite Universal Script -->
+<!-- MailerLite Universal Script - Lazy loaded when newsletter view is opened -->
 <script is:inline>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '734406');
+    let mailerliteLoaded = false;
+
+    function loadMailerLite() {
+        if (mailerliteLoaded) return;
+        mailerliteLoaded = true;
+
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '734406');
+    }
+
+    const btnOpenNews = document.getElementById('btn-open-news');
+    if (btnOpenNews) {
+        btnOpenNews.addEventListener('click', loadMailerLite, { once: true });
+    }
 </script>
