@@ -186,6 +186,11 @@ const {title, description = "Professional headshot photographer. Corporate heads
 	
 	gsap.registerPlugin(ScrollTrigger, Flip);
 
+	// === DIAGNOSTIC START ===
+	const scriptStartTime = performance.now();
+	console.log(`[DIAGNOSTIC] MainLayout script started at ${scriptStartTime.toFixed(2)}ms`);
+	// === DIAGNOSTIC END ===
+
 	// Safari-specific fix: normalizeScroll makes jitter worse, keeping disabled
 	const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 	
@@ -198,6 +203,11 @@ const {title, description = "Professional headshot photographer. Corporate heads
 
 	// Wait for DOM to be ready before initializing Lenis
 	async function initLenis() {
+		// === DIAGNOSTIC START ===
+		const lenisStartTime = performance.now();
+		console.log(`[DIAGNOSTIC] Lenis init called at ${lenisStartTime.toFixed(2)}ms`);
+		// === DIAGNOSTIC END ===
+
 		if (window.innerWidth <= 767 || isSafari) return;
 
 		if (!window.lenis) {
@@ -222,6 +232,13 @@ const {title, description = "Professional headshot photographer. Corporate heads
 			requestAnimationFrame(() => {
 				ScrollTrigger.refresh();
 			});
+
+			// === DIAGNOSTIC START ===
+			const lenisEndTime = performance.now();
+			const lenisDuration = lenisEndTime - lenisStartTime;
+			console.log(`[DIAGNOSTIC] Lenis init completed at ${lenisEndTime.toFixed(2)}ms`);
+			console.log(`[DIAGNOSTIC] Lenis init took ${lenisDuration.toFixed(2)}ms`);
+			// === DIAGNOSTIC END ===
 		}
 	}
 
@@ -269,6 +286,16 @@ const {title, description = "Professional headshot photographer. Corporate heads
         });
     });
 
+	// === DIAGNOSTIC START ===
+	// Measure total script execution time
+	const scriptEndTime = performance.now();
+	const totalDuration = scriptEndTime - scriptStartTime;
+	console.log(`[DIAGNOSTIC] MainLayout script finished at ${scriptEndTime.toFixed(2)}ms`);
+	console.log(`[DIAGNOSTIC] Total execution time: ${totalDuration.toFixed(2)}ms`);
+	if (totalDuration > 50) {
+		console.warn(`[DIAGNOSTIC] ⚠️ LONG TASK DETECTED: ${totalDuration.toFixed(2)}ms (threshold: 50ms)`);
+	}
+	// === DIAGNOSTIC END ===
 
 	</script>
 
