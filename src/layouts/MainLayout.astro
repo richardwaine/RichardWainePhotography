@@ -137,17 +137,13 @@ const {title, description = "Professional headshot photographer. Corporate heads
 		}
 		</script>
 
-		<!-- Google Tag Manager -->
-		<script is:inline>
-			document.addEventListener('DOMContentLoaded', () => {
-				setTimeout(() => {
-					(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-					})(window,document,'script','dataLayer','GTM-KS6CRSL');
-				}, 3000);
-			});
+		<!-- Google Tag Manager - Running in Partytown Web Worker -->
+		<script type="text/partytown" is:inline>
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-KS6CRSL');
 		</script>
   <!-- End Google Tag Manager -->                  
 
@@ -290,23 +286,6 @@ const {title, description = "Professional headshot photographer. Corporate heads
 		setTimeout(()=>{(function(d,w,c){w.ChatraID='FgXkx58Ji2MyFqBvP';var s=d.createElement('script');w[c]=w[c]||function(){(w[c].q=w[c].q||[]).push(arguments)};s.async=1;s.src='https://call.chatra.io/chatra.js';d.head.appendChild(s)})(document,window,'Chatra')},3000);
 	</script>
 
-	<!-- DIAGNOSTIC: Track long tasks -->
-	<script is:inline>
-		const observer = new PerformanceObserver((list) => {
-			for (const entry of list.getEntries()) {
-				if (entry.duration > 50) {
-					console.group('%c ⏱️ Long Task Detected', 'color: #ff6348; font-weight: bold;');
-					console.log('Duration:', entry.duration + 'ms');
-					console.log('Start time:', entry.startTime + 'ms');
-					console.log('Name:', entry.name);
-					console.log('Entry:', entry);
-					console.groupEnd();
-				}
-			}
-		});
-		observer.observe({ entryTypes: ['longtask', 'measure', 'navigation'] });
-		console.log('🔍 Long Task Monitor active');
-	</script>
 
 
 </body>
