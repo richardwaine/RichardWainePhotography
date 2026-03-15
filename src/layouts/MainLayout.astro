@@ -1,10 +1,8 @@
 ---
 // @ts-nocheck
-import { Picture, getImage } from "astro:assets";
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
-import heroBackground from '../assets/bts-hero-background.webp';
 
 
 
@@ -23,13 +21,6 @@ export interface Props{
 	robots?:string;
 }
 const {title, description = "Professional headshot photographer. Corporate headshots, business headshots, executive portraits, LinkedIn profile photos, and acting headshots. Serving Pennsylvania, Maryland, and Delaware", robots} = Astro.props as Props;
-
-// Generate optimized hero background for preload
-const optimizedHero = await getImage({
-	src: heroBackground,
-	format: "avif",
-	width: 1600
-});
 
 ---
 
@@ -59,9 +50,6 @@ const optimizedHero = await getImage({
 		<meta property="og:image:height" content="3000" />
 		<meta property="og:locale" content="en_US" />
 		<ClientRouter />
-
-		<!-- Preload LCP hero background image -->
-		<link rel="preload" as="image" href={optimizedHero.src} fetchpriority="high" type="image/avif">
 
 		<!-- Schema.org Structured Data -->
 		<script type="application/ld+json">
