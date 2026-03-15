@@ -192,6 +192,11 @@ gsap.registerPlugin(ScrollTrigger);
 // Ensure the code runs after all elements are present and styles are calculated
 document.addEventListener("astro:page-load", () => {
 
+    // === DIAGNOSTIC START ===
+    const featuresStartTime = performance.now();
+    console.log(`[DIAGNOSTIC] Features script started at ${featuresStartTime.toFixed(2)}ms`);
+    // === DIAGNOSTIC END ===
+
     let mm = gsap.matchMedia();
     // const DESKTOP_BREAKPOINT = "(min-width: 768px)";
     // const DESKTOP_BREAKPOINT = "(min-width: 48em)";
@@ -275,6 +280,16 @@ document.addEventListener("astro:page-load", () => {
         // Clear any pinned/transformed styles left by ScrollTrigger
         gsap.set('.features-section, .features-scroller, .feature-slide', { clearProps: 'all' });
     });
+
+    // === DIAGNOSTIC START ===
+    const featuresEndTime = performance.now();
+    const featuresDuration = featuresEndTime - featuresStartTime;
+    console.log(`[DIAGNOSTIC] Features script finished at ${featuresEndTime.toFixed(2)}ms`);
+    console.log(`[DIAGNOSTIC] Features script took ${featuresDuration.toFixed(2)}ms`);
+    if (featuresDuration > 50) {
+        console.warn(`[DIAGNOSTIC] ⚠️ Features LONG TASK: ${featuresDuration.toFixed(2)}ms`);
+    }
+    // === DIAGNOSTIC END ===
 });
 
 </script>
