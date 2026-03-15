@@ -290,40 +290,7 @@ const {title, description = "Professional headshot photographer. Corporate heads
 		setTimeout(()=>{(function(d,w,c){w.ChatraID='FgXkx58Ji2MyFqBvP';var s=d.createElement('script');w[c]=w[c]||function(){(w[c].q=w[c].q||[]).push(arguments)};s.async=1;s.src='https://call.chatra.io/chatra.js';d.head.appendChild(s)})(document,window,'Chatra')},3000);
 	</script>
 
-	<!-- TEMPORARY DIAGNOSTIC - REMOVE AFTER TESTING -->
-	<script is:inline>
-	(function() {
-		const triggers = [
-			{ obj: HTMLElement.prototype, prop: 'offsetWidth', isFn: false },
-			{ obj: HTMLElement.prototype, prop: 'offsetHeight', isFn: false },
-			{ obj: HTMLElement.prototype, prop: 'getBoundingClientRect', isFn: true },
-			{ obj: window, prop: 'scrollY', isFn: false }
-		];
 
-		triggers.forEach(({ obj, prop, isFn }) => {
-			const original = isFn ? obj[prop] : Object.getOwnPropertyDescriptor(obj, prop).get;
-
-			const tracker = function() {
-				const stack = new Error().stack;
-				if (stack.includes('ClientRouter') || stack.includes('router')) {
-					console.group('%c 🚨 Forced Reflow Detected!', 'color: #ff4757; font-weight: bold;');
-					console.log(`Property: ${prop}`);
-					console.log('Element:', this);
-					console.trace();
-					console.groupEnd();
-				}
-				return isFn ? original.apply(this, arguments) : original.call(this);
-			};
-
-			if (isFn) {
-				obj[prop] = tracker;
-			} else {
-				Object.defineProperty(obj, prop, { get: tracker });
-			}
-		});
-		console.log('🔍 Reflow Hunter is active. Monitoring Astro Router...');
-	})();
-	</script>
 
 
 </body>
