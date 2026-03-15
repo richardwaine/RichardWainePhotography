@@ -60,9 +60,6 @@ const optimizedHero = await getImage({
 		<meta property="og:locale" content="en_US" />
 		<ClientRouter />
 
-		<!-- Preconnect to improve font loading performance -->
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 		<!-- Preload LCP hero background image -->
 		<link rel="preload" as="image" href={optimizedHero.src} fetchpriority="high" type="image/avif">
 
@@ -152,36 +149,17 @@ const optimizedHero = await getImage({
 		}
 		</script>
 
-		<!-- Google Tag Manager - Deferred for Performance -->
+		<!-- Google Tag Manager -->
 		<script is:inline>
-			(function() {
-				const GTM_ID = "GTM-KS6CRSL";
-
-				// Minimal dataLayer init
-				window.dataLayer = window.dataLayer || [];
-				window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-
-				function loadGTM() {
-					if (window.__gtmLoaded) return;
-					window.__gtmLoaded = true;
-
-					const s = document.createElement("script");
-					s.async = true;
-					s.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
-					document.head.appendChild(s);
-				}
-
-				// Trigger load on first interaction or after idle timeout
-				const trigger = () => loadGTM();
-				["scroll", "pointerdown", "keydown"].forEach(evt =>
-					window.addEventListener(evt, trigger, { once: true, passive: true })
-				);
-
-				if ("requestIdleCallback" in window)
-					requestIdleCallback(loadGTM, { timeout: 5000 });
-				else
-					setTimeout(loadGTM, 5000);
-			})();
+			document.addEventListener('DOMContentLoaded', () => {
+				setTimeout(() => {
+					(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+					})(window,document,'script','dataLayer','GTM-KS6CRSL');
+				}, 3000);
+			});
 		</script>
   <!-- End Google Tag Manager -->                  
 
