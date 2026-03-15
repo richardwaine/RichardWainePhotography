@@ -269,25 +269,6 @@ const {title, description = "Professional headshot photographer. Corporate heads
         });
     });
 
-	// === DIAGNOSTIC START ===
-	// Monitor ALL long tasks on the page
-	if ('PerformanceObserver' in window) {
-		const observer = new PerformanceObserver((list) => {
-			for (const entry of list.getEntries()) {
-				if (entry.duration > 50) {
-					console.warn(`[DIAGNOSTIC] 🔴 LONG TASK DETECTED:`);
-					console.warn(`  Duration: ${entry.duration.toFixed(2)}ms`);
-					console.warn(`  Start: ${entry.startTime.toFixed(2)}ms`);
-					console.warn(`  Name: ${entry.name}`);
-					console.warn(`  Entry:`, entry);
-				}
-			}
-		});
-		observer.observe({ entryTypes: ['longtask'] });
-		console.log('[DIAGNOSTIC] Performance Observer monitoring long tasks...');
-	}
-	// === DIAGNOSTIC END ===
-
 	</script>
 
 	<!-- Chatra Chat Widget - COMMENTED OUT UNTIL LAUNCH -->
