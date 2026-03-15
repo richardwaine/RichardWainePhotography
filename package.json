@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
-    "@astrojs/partytown": "^2.1.5",
     "@astrojs/sitemap": "^3.6.0",
     "@fontsource-variable/montserrat": "^5.2.8",
     "@fontsource-variable/space-grotesk": "^5.2.10",
