@@ -1088,21 +1088,6 @@ font-size: clamp(3rem, 8vw + 1rem, 6rem);
             this.animationTimeouts.forEach(timeout => clearTimeout(timeout));
             this.animationTimeouts = [];
 
-            // Skip animations on mobile (< 768px)
-            const isMobile = window.matchMedia('(max-width: 767px)').matches;
-
-            if (isMobile) {
-                // Mobile: show everything immediately without animation
-                this.elements.titleLines.forEach((line: Element) => {
-                    const word = line.querySelector('.word');
-                    if (word) word.classList.add('revealed');
-                });
-                if (this.elements.h1) this.elements.h1.classList.add('revealed');
-                if (this.elements.actionArea) this.elements.actionArea.classList.add('revealed');
-                return;
-            }
-
-            // Desktop/Tablet: run animations normally
             // Stagger text reveal animations
             const mainTimeout = setTimeout(() => {
                 this.elements.titleLines.forEach((line: Element, index: number) => {
@@ -1124,7 +1109,7 @@ font-size: clamp(3rem, 8vw + 1rem, 6rem);
                 }
             }, 1200);
             this.animationTimeouts.push(subtitleTimeout);
-
+            
             // Action area reveal
             const actionTimeout = setTimeout(() => {
                 if (this.elements.actionArea) {
