@@ -193,7 +193,8 @@ export function buildServiceCatalogSchema(
         "addressRegion": state,
         "addressCountry": "US"
       },
-      "telephone": "+1-717-925-0061"
+      "telephone": "+1-717-925-0061",
+      "image": "https://richardwainephotography.com/images/logo.png"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -232,7 +233,8 @@ export function buildServiceAudienceSchema(
         "addressRegion": state,
         "addressCountry": "US"
       },
-      "telephone": "+1-717-925-0061"
+      "telephone": "+1-717-925-0061",
+      "image": "https://richardwainephotography.com/images/logo.png"
     },
     "audience": audiences.map(audience => ({
       "@type": audience.name.includes("Companies") || audience.name.includes("Corporate") ? "BusinessAudience" : "PeopleAudience",
@@ -330,7 +332,8 @@ export function buildOfferSchema(
         "addressRegion": state,
         "addressCountry": "US"
       },
-      "telephone": "+1-717-925-0061"
+      "telephone": "+1-717-925-0061",
+      "image": "https://richardwainephotography.com/images/logo.png"
     },
     "itemOffered": {
       "@type": "Service",
@@ -468,7 +471,8 @@ export function buildReviewSchema(
         "postalCode": "17603",
         "addressCountry": "US"
       },
-      "telephone": "+1-717-925-0061"
+      "telephone": "+1-717-925-0061",
+      "image": "https://richardwainephotography.com/images/logo.png"
     },
     "author": {
       "@type": "Person",
