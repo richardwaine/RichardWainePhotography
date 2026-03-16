@@ -189,8 +189,10 @@ export function buildServiceCatalogSchema(
       "name": businessName,
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "20 North Queen Street",
         "addressLocality": city,
         "addressRegion": state,
+        "postalCode": "17603",
         "addressCountry": "US"
       },
       "telephone": "+1-717-925-0061",
@@ -229,8 +231,10 @@ export function buildServiceAudienceSchema(
       "name": businessName,
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "20 North Queen Street",
         "addressLocality": city,
         "addressRegion": state,
+        "postalCode": "17603",
         "addressCountry": "US"
       },
       "telephone": "+1-717-925-0061",
@@ -328,8 +332,10 @@ export function buildOfferSchema(
       "name": businessName,
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "20 North Queen Street",
         "addressLocality": city,
         "addressRegion": state,
+        "postalCode": "17603",
         "addressCountry": "US"
       },
       "telephone": "+1-717-925-0061",
