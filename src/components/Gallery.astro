@@ -262,34 +262,39 @@ const gallerySchema = buildImageGallerySchema(
 
 <script type="application/ld+json" set:html={JSON.stringify(gallerySchema)} />
 
-
 <style>
-/* 1. Base / Mobile (0px and up) */
+
+/*gallery*/
+
 #gallery-section {
-  padding-inline: var(--size-8);
+    padding-inline:var(--size-8);
 }
 
 .gallery-container {
   container-type: inline-size;
   container-name: header-gallery;
   padding: var(--size-6) 0;
+  
 }
 
 .gallery {
+  --grid-row-gap: var(--size-3);
+
   display: grid;
   grid-template-columns: 1fr; 
-  row-gap: var(--size-3);
+  column-gap: var(--grid-column-gap);
+  row-gap: var(--grid-row-gap);
   max-width: 2000px;
   margin: 0 auto;
 }
 
-/* Hide everything by default */
+/* Initially hide all images */
 .gallery > div {
   display: none;
   line-height: 0;
 }
 
-/* Only 2 images visible on mobile */
+/* Always show image1 and image2 on all screen sizes */
 .gallery .image1,
 .gallery .image2 {
   display: block;
@@ -301,16 +306,54 @@ const gallerySchema = buildImageGallerySchema(
   box-shadow: var(--shadow);
 }
 
-/* 2. Tablet (768px and up) */
-/* This covers everything from 768px until the desktop kicks in */
-@container header-gallery (min-width: 48em) {
+/* 641px to 767px breakpoint */
+
+@container header-gallery  (max-width: 48em) {
   .gallery {
+    --grid-row-gap: 1vw;
+
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 1vw;
-    row-gap: 1vw;
+    grid-template-rows: 1fr; 
+    row-gap: var(--grid-row-gap);
   }
 
-  /* Show 6 images total */
+  /* Show only the images that were visible in the original at this breakpoint */
+  .gallery .image1,
+  .gallery .image2,
+  .gallery .image5,
+  .gallery .image6,
+  .gallery .image7,
+  .gallery .image8,
+  .gallery .image9,
+  .gallery .image10 {
+    display: block;
+  }
+  /* Explicitly hide all other images for this specific range */
+  .gallery .image3,
+  .gallery .image4,
+  .gallery .image11,
+  .gallery .image12,
+  .gallery .image13,
+  .gallery .image14,
+  .gallery .image15,
+  .gallery .image16 {
+    display: none;
+  }
+}
+
+/* 768px to 1024px breakpoint */
+@container header-gallery (min-width: 48.0625em) and (max-width: 64em) {
+  .gallery {
+    --grid-row-gap: 1vw;
+    --grid-column-gap: 1vw;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    column-gap: var(--grid-column-gap);
+    row-gap: var(--grid-row-gap);
+  }
+  /* Show only the images that were visible in the original at this breakpoint */
   .gallery .image1,
   .gallery .image2,
   .gallery .image5,
@@ -319,24 +362,46 @@ const gallerySchema = buildImageGallerySchema(
   .gallery .image8 {
     display: block;
   }
-}
+  /* Explicitly hide all other images for this specific range */
+  .gallery .image3,
+  .gallery .image4,
+  .gallery .image9,
+  .gallery .image10,
+  .gallery .image11,
+  .gallery .image12,
+  .gallery .image13,
+  .gallery .image14,
+  .gallery .image15,
+  .gallery .image16 {
+    display: none;
+  }
 
-/* 3. Desktop (1025px and up) */
+  .gallery-container[data-limit="8"] .gallery {
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+
+/* 1025px and up breakpoint */
 @container header-gallery (min-width: 64.0625em) {
   .gallery {
+    --grid-row-gap: 0.5vw;
+    --grid-column-gap: 0.5vw;
+
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    column-gap: 0.5vw;
-    row-gap: 0.5vw;
+    row-gap: var(--grid-row-gap);
+    column-gap: var(--grid-column-gap);
   }
-  
-  /* Show all images */
+  /* Show all images for large screens */
   .gallery > div {
     display: block;
   }
 }
 
-/* 4. Logic for the 'limit' prop */
+/* end gallery */
+
+/* Gallery limit styles */
 .gallery-container[data-limit="8"] .image9,
 .gallery-container[data-limit="8"] .image10,
 .gallery-container[data-limit="8"] .image11,
@@ -351,6 +416,9 @@ const gallerySchema = buildImageGallerySchema(
 @container header-gallery (min-width: 64.0625em) {
   .gallery-container[data-limit="8"] .gallery {
     grid-template-rows: 1fr;
+    padding:var(--size-6);
   }
 }
+
+
 </style>
