@@ -79,11 +79,11 @@ If unclear: STOP and ASK.
 **Check every 2-4 hours:**
 
 ### Traffic
-- [ ] GA4 Real-Time showing activity
-- [ ] Traffic flowing normally
+- [x] GA4 Real-Time showing activity
+- [x] Traffic flowing normally
 
 ### Errors
-- [ ] No 404 errors in Search Console
+- [x] No 404 errors in Search Console
 - [ ] No 500 errors
 - [ ] No browser console errors
 
