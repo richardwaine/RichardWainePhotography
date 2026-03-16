@@ -1,14 +1,5 @@
 ---
 // Floating Statistics Component
-import { buildAggregateRatingSchema } from '../utils/schema';
-
-// Generate aggregate rating schema from stats
-const ratingSchema = buildAggregateRatingSchema(
-  "Richard Waine Photography",
-  "5",
-  "657",
-  "https://richardwainephotography.com"
-);
 ---
 
 <!-- 3D Floating Statistics -->
@@ -32,8 +23,6 @@ const ratingSchema = buildAggregateRatingSchema(
         </div>
     </div>
 </div>
-
-<script type="application/ld+json" set:html={JSON.stringify(ratingSchema)} />
 
 <style>
     /* 3D Floating Statistics */

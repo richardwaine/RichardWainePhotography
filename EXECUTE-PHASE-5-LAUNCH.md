@@ -35,32 +35,31 @@ If unclear: STOP and ASK.
 
 **Do this early in the day to allow propagation time.**
 
-- [ ] Log into domain registrar (Squarespace for richardwainephotography.com)
-- [ ] Update DNS records to point to Cloudflare Pages:
-  - A record: `___`
-  - CNAME record: `___`
-- [ ] Verify richardwaine.com → richardwainephotography.com redirect still works
-- [ ] Monitor DNS propagation at dnschecker.org
+- [x] Log into domain registrar (Squarespace for richardwainephotography.com)
+- [x] Update DNS records to point to Cloudflare Pages:
+  - Nameservers changed to Cloudflare (Cloudflare handles DNS/records automatically)
+- [x] Verify richardwaine.com → richardwainephotography.com redirect still works
+- [x] Monitor DNS propagation at dnschecker.org
 
-**DNS switched:** YES / NO
-**Propagation status:** `___`
+**DNS switched:** YES
+**Propagation status:** Complete - site live and accessible
 
 ---
 
 ## STEP 2: VERIFY SITE ACCESSIBLE
 
-- [ ] Site loads at https://richardwainephotography.com
-- [ ] HTTPS working (no certificate errors)
-- [ ] Homepage displays correctly
-- [ ] Navigation works
+- [x] Site loads at https://richardwainephotography.com
+- [x] HTTPS working (no certificate errors)
+- [x] Homepage displays correctly
+- [x] Navigation works
 
 ---
 
 ## STEP 3: SUBMIT SITEMAP
 
-- [ ] Log into Google Search Console
-- [ ] Submit sitemap.xml
-- [ ] Verify submission successful
+- [x] Log into Google Search Console
+- [x] Submit sitemap-index.xml
+- [x] Verify submission successful
 
 ---
 
@@ -68,10 +67,10 @@ If unclear: STOP and ASK.
 
 **Only after site is live on production:**
 
-- [ ] Remove Chatra from Squarespace site
-- [ ] Add Chatra code to Astro site (via GTM)
-- [ ] Test chat widget displays
-- [ ] Test notifications working
+- [x] Remove Chatra from Squarespace site
+- [x] Add Chatra code to Astro site (directly in MainLayout.astro)
+- [x] Test chat widget displays
+- [x] Test notifications working (awaiting real-world user test)
 
 ---
 

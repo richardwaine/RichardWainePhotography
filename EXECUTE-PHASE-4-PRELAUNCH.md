@@ -54,8 +54,8 @@ If unclear: STOP and ASK.
 ### External Services
 - [ ] Google Workspace transferred from Squarespace
 - [ ] Acuity verified working independently
-- [ ] Táve/VSCO form working
-- [ ] Sitemap ready for submission
+- [x] Táve/VSCO form working
+- [x] Sitemap ready for submission
 
 ---
 
@@ -84,29 +84,29 @@ If unclear: STOP and ASK.
 - [ ] Wait for old TTL to expire
 - [ ] Verify new TTL in effect
 
-**TTL reduced:** YES / NO / SKIPPED
+**TTL reduced:** SKIPPED - Site already live, DNS propagation complete. No longer relevant.
 
 ---
 
 ## STEP 4: FINAL BUILD TEST
 
-- [ ] Run `npm run build`
-- [ ] Build succeeds without errors: YES / NO
-- [ ] Run `npm run preview`
-- [ ] Test production build locally
-- [ ] All functionality works in production build
+- [x] Run `npm run build`
+- [x] Build succeeds without errors: YES
+- [x] Run `npm run preview`
+- [x] Test production build locally
+- [x] All functionality works in production build
 
 ---
 
 ## STEP 5: PRE-LAUNCH SUMMARY
 
 **Ready for Launch:**
-- [ ] All content complete
-- [ ] All functionality working
-- [ ] All tracking verified
-- [ ] Email verified working
-- [ ] Production build tested
-- [ ] DNS prepared (if doing TTL reduction)
+- [x] All content complete
+- [x] All functionality working
+- [x] All tracking verified
+- [ ] Email verified working (Email functional via Squarespace; Google Workspace not yet transferred)
+- [x] Production build tested
+- [x] DNS prepared (TTL reduction skipped - site already live)
 
 **Any blockers:**
 ```
