@@ -192,7 +192,8 @@ export function buildServiceCatalogSchema(
         "addressLocality": city,
         "addressRegion": state,
         "addressCountry": "US"
-      }
+      },
+      "telephone": "+1-717-925-0061"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -230,7 +231,8 @@ export function buildServiceAudienceSchema(
         "addressLocality": city,
         "addressRegion": state,
         "addressCountry": "US"
-      }
+      },
+      "telephone": "+1-717-925-0061"
     },
     "audience": audiences.map(audience => ({
       "@type": audience.name.includes("Companies") || audience.name.includes("Corporate") ? "BusinessAudience" : "PeopleAudience",
@@ -327,7 +329,8 @@ export function buildOfferSchema(
         "addressLocality": city,
         "addressRegion": state,
         "addressCountry": "US"
-      }
+      },
+      "telephone": "+1-717-925-0061"
     },
     "itemOffered": {
       "@type": "Service",
@@ -464,7 +467,8 @@ export function buildReviewSchema(
         "addressRegion": "PA",
         "postalCode": "17603",
         "addressCountry": "US"
-      }
+      },
+      "telephone": "+1-717-925-0061"
     },
     "author": {
       "@type": "Person",
