@@ -372,8 +372,10 @@ export function buildServiceSchema(
       "name": businessName,
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "20 North Queen Street",
         "addressLocality": city,
         "addressRegion": state,
+        "postalCode": "17603",
         "addressCountry": "US"
       },
       "telephone": phone
@@ -417,8 +419,10 @@ export function buildOrganizationSchema(
     "description": description,
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "20 North Queen Street",
       "addressLocality": city,
       "addressRegion": state,
+      "postalCode": "17603",
       "addressCountry": "US"
     },
     "contactPoint": {
