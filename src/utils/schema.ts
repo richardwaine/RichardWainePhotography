@@ -262,7 +262,7 @@ export function buildLocalBusinessSchema(
     "image": `${websiteUrl}/images/logo.png`,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Downtown Lancaster",
+      "streetAddress": "20 North Queen Street",
       "addressLocality": city,
       "addressRegion": state,
       "postalCode": "17603",
@@ -378,7 +378,8 @@ export function buildServiceSchema(
         "postalCode": "17603",
         "addressCountry": "US"
       },
-      "telephone": phone
+      "telephone": phone,
+      "image": "https://richardwainephotography.com/images/logo.png"
     },
     "areaServed": serviceAreas.map(area => ({
       "@type": "State",
