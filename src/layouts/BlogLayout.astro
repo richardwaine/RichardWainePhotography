@@ -2,7 +2,7 @@
 import FAQAccordion from "../components/FAQAccordion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import ShareButtons from "../components/ShareButtons.astro";
-import { buildBreadcrumbSchema } from "../utils/schema";
+import { buildBreadcrumbSchema, buildFAQSchema } from "../utils/schema";
 
 export interface Props {
   title: string;
@@ -32,8 +32,8 @@ const lastUpdated = new Date(post.data.modifiedDate).toLocaleDateString('en-US',
 // If there are no faqs, it will just be an empty list, which is fine.
 const faqs = post.data.faqs || [];
 
-
-
+// Generate FAQ schema if FAQs exist
+const faqSchema = faqs.length > 0 ? buildFAQSchema(faqs) : null;
 
 // --- END NEW LINE ---
 
@@ -116,6 +116,11 @@ const isInterview = post.data.type === 'interview';
 
 	<!-- Breadcrumb Schema -->
 	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+	<!-- FAQ Schema -->
+	{faqSchema && (
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+	)}
 
   <article>
     <div class="wrapper">
