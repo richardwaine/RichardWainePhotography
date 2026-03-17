@@ -15,7 +15,14 @@ enabled:false
   },
   integrations: [
     mdx(),
-    sitemap(),
+    sitemap({
+      serialize(item) {
+        return {
+          ...item,
+          lastmod: new Date()
+        };
+      }
+    }),
   ],
   build: {
     inlineStylesheets: 'always'

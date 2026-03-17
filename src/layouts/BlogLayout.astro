@@ -42,7 +42,7 @@ const isInterview = post.data.type === 'interview';
 
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} description={post.data.blogExcerpt}>
 
 	{isInterview ? (
 		<script type="application/ld+json" set:html={JSON.stringify({
