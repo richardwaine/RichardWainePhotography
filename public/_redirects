@@ -10,6 +10,9 @@
 /client-experiences / 301
 /philadelphia-lancaster-headshot-client-experiences / 301
 /specials / 301
+/resources / 301
+/testimonials / 301
+/testimonials/ / 301
 
 # Contact pages
 /contact /contact-lancaster-headshot-photographer-richard-waine 301
@@ -17,6 +20,7 @@
 
 # Team/stylist
 /stylist /my-team 301
+/stylist/ /my-team 301
 
 # Shop
 /shop/power-hour-headshot-session / 301
@@ -26,6 +30,7 @@
 
 # Blog redirects - Specific dated URLs (must come FIRST before wildcards)
 /blog-content/2016/11/7/who-needs-a-solid-headshot /blog/who-needs-a-solid-headshot 301
+/blog-content/2016/12/7/personal-branding-for-a-humble-doctor /blog/personal-branding-for-a-humble-doctor 301
 /blog-content/interview-with-a-retoucher-spotlight-on-pratik-naik /blog/interview-with-a-retoucher-spotlight-on-pratik-naik 301
 /blog-content/interview-with-a-retoucher-spotli /blog/interview-with-a-retoucher-spotlight-on-pratik-naik 301
 
@@ -46,6 +51,7 @@
 /blog/planning-professional-headshots-website-redesigns /blog/planning-headshots-for-websites 301
 /what-photographers-dont-tell-you-about-headshots /blog/what-photographers-dont-tell-you-about-headshots 301
 /blog-2/why-headshots-are-so-expensive / 301
+/blog-2/debunking-common-myths-about-professional-headshots /blog/common-myths-about-professional-headshots 301
 /blog/the-best-way-to-make-more-money /blog/the-best-way-to-make-more-money 301
 
 # Blog wildcard redirects - MUST come LAST
