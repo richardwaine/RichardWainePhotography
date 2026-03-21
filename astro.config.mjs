@@ -9,6 +9,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://richardwainephotography.com',
+  trailingSlash: 'always',
   devToolbar:{
 enabled:false
   },
@@ -35,14 +36,12 @@ enabled:false
     '/client-experiences': '/',
     '/philadelphia-lancaster-headshot-client-experiences': '/',
     '/specials': '/',
-    '/testimonials': '/',
     '/contact': '/contact-lancaster-headshot-photographer-richard-waine',
     '/contact-philadelphia-and-lancaster-headshot-photographer': '/contact-lancaster-headshot-photographer-richard-waine',
     '/stylist': '/my-team',
     '/shop/power-hour-headshot-session': '/',
     '/requst-proposal': '/request-proposal',
     '/blog-content/2016/11/7/who-needs-a-solid-headshot': '/blog/who-needs-a-solid-headshot',
-    '/blog-content/2016/12/7/personal-branding-for-a-humble-doctor': '/blog/personal-branding-for-a-humble-doctor',
     '/blog-content/interview-with-a-retoucher-spotlight-on-pratik-naik': '/blog/interview-with-a-retoucher-spotlight-on-pratik-naik',
     '/blog-content/interview-with-a-retoucher-spotli': '/blog/interview-with-a-retoucher-spotlight-on-pratik-naik',
     '/blog/blog-2/linkedin-headshots': '/blog/linkedin-headshots',
@@ -56,7 +55,6 @@ enabled:false
     '/blog/planning-professional-headshots-website-redesigns': '/blog/planning-headshots-for-websites',
     '/what-photographers-dont-tell-you-about-headshots': '/blog/what-photographers-dont-tell-you-about-headshots',
     '/blog-2/why-headshots-are-so-expensive': '/',
-    '/blog-2/debunking-common-myths-about-professional-headshots': '/blog/common-myths-about-professional-headshots',
     '/blog/the-best-way-to-make-more-money': '/blog/the-best-way-to-make-more-money',
     '/blog/blog-2/*': '/blog/:splat',
     '/blog-content/*': '/blog/:splat',
