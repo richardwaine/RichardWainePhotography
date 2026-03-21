@@ -56,8 +56,8 @@ enabled:false
     '/what-photographers-dont-tell-you-about-headshots': '/blog/what-photographers-dont-tell-you-about-headshots',
     '/blog-2/why-headshots-are-so-expensive': '/',
     '/blog/the-best-way-to-make-more-money': '/blog/the-best-way-to-make-more-money',
-    '/blog/blog-2/*': '/blog/:splat',
-    '/blog-content/*': '/blog/:splat',
-    '/blog-2/*': '/blog/:splat'
+    '/blog/blog-2/*': '/blog/:splat/',
+    '/blog-content/*': '/blog/:splat/',
+    '/blog-2/*': '/blog/:splat/'
   }
 });

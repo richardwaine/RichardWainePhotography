@@ -32,7 +32,7 @@
 # Blog-2 double nested paths
 /blog/blog-2/linkedin-headshots /blog/linkedin-headshots 301
 /blog/blog-2/what-is-a-professional-headshot /blog/what-is-a-professional-headshot 301
-/blog/blog-2/* /blog/:splat 301
+/blog/blog-2/* /blog/:splat/ 301
 
 # Tag pages redirect to blog home
 /blog-content/tag/* /blog 301
@@ -49,5 +49,5 @@
 /blog/the-best-way-to-make-more-money /blog/the-best-way-to-make-more-money 301
 
 # Blog wildcard redirects - MUST come LAST
-/blog-content/* /blog/:splat 301
-/blog-2/* /blog/:splat 301
+/blog-content/* /blog/:splat/ 301
+/blog-2/* /blog/:splat/ 301
