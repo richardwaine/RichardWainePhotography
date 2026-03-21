@@ -9,6 +9,7 @@
 /before-and-after / 301
 /client-experiences / 301
 /philadelphia-lancaster-headshot-client-experiences / 301
+/specials / 301
 
 # Contact pages
 /contact /contact-lancaster-headshot-photographer-richard-waine 301
@@ -23,7 +24,21 @@
 # Proposal typo
 /requst-proposal /request-proposal 301
 
-# Blog redirects - specific URLs first (must come before wildcards)
+# Blog redirects - Specific dated URLs (must come FIRST before wildcards)
+/blog-content/2016/11/7/who-needs-a-solid-headshot /blog/who-needs-a-solid-headshot 301
+/blog-content/interview-with-a-retoucher-spotlight-on-pratik-naik /blog/interview-with-a-retoucher-spotlight-on-pratik-naik 301
+/blog-content/interview-with-a-retoucher-spotli /blog/interview-with-a-retoucher-spotlight-on-pratik-naik 301
+
+# Blog-2 double nested paths
+/blog/blog-2/linkedin-headshots /blog/linkedin-headshots 301
+/blog/blog-2/what-is-a-professional-headshot /blog/what-is-a-professional-headshot 301
+/blog/blog-2/* /blog/:splat 301
+
+# Tag pages redirect to blog home
+/blog-content/tag/* /blog 301
+/blog-2/tag/* /blog 301
+
+# Other specific blog redirects
 /blog/2017/6/18/perceived-flaws-and-self-acceptance /blog/perceived-flaws-and-self-acceptance 301
 /blog-2/tkeowv0pj4eiucblmdznyhax0dhz6l /blog/how-to-prepare-for-your-professional-headshot-session 301
 /blog-content/why-being-photographed-is-scarier-than-dating-taylor-swift /blog/why-being-photographed-is-scarier-than-dating-taylor-swift 301
@@ -33,6 +48,6 @@
 /blog-2/why-headshots-are-so-expensive / 301
 /blog/the-best-way-to-make-more-money /blog/the-best-way-to-make-more-money 301
 
-# Blog wildcard redirects - MUST come AFTER specific redirects
+# Blog wildcard redirects - MUST come LAST
 /blog-content/* /blog/:splat 301
 /blog-2/* /blog/:splat 301
