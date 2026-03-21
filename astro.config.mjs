@@ -36,7 +36,6 @@ enabled:false
     '/client-experiences': '/',
     '/philadelphia-lancaster-headshot-client-experiences': '/',
     '/specials': '/',
-    '/resources': '/',
     '/testimonials': '/',
     '/testimonials/': '/',
     '/contact': '/contact-lancaster-headshot-photographer-richard-waine',
