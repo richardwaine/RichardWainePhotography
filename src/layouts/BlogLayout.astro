@@ -15,9 +15,9 @@ const { title, post, prevPost, nextPost } = Astro.props;
 
 // Build breadcrumb navigation
 const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: "Home", url: "/" },
-  { name: "Blog", url: "/blog" },
-  { name: post.data.blogTitle, url: post.slug }
+  { name: "Home", url: Astro.site.href },
+  { name: "Blog", url: new URL('/blog/', Astro.site).href },
+  { name: post.data.blogTitle, url: new URL(`/blog/${post.slug}/`, Astro.site).href }
 ]);
 
 // Format the last updated date

@@ -101,8 +101,8 @@ const harrisburgHeadshotsServiceSchema = buildServiceSchema(
 );
 
 const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: "Home", url: "/" },
-  { name: "Harrisburg Headshots", url: "/harrisburg-headshots" }
+  { name: "Home", url: Astro.site.href },
+  { name: "Harrisburg Headshots", url: new URL('/harrisburg-headshots/', Astro.site).href }
 ]);
 
 ---

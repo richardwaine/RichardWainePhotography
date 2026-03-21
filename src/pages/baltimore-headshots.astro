@@ -103,8 +103,8 @@ const baltimoreHeadshotsServiceSchema = buildServiceSchema(
 
 // Breadcrumb schema
 const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: "Home", url: "/" },
-  { name: "Baltimore Headshots", url: "/baltimore-headshots" }
+  { name: "Home", url: Astro.site.href },
+  { name: "Baltimore Headshots", url: new URL('/baltimore-headshots/', Astro.site).href }
 ]);
 
 ---
