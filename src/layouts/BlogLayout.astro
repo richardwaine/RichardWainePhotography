@@ -152,7 +152,7 @@ const isInterview = post.data.type === 'interview';
     {/* --- END NEW SECTION --- */}
 
 {/* --- SHARE BUTTONS --- */}
-    <ShareButtons url={`/blog/${post.slug}`} title={post.data.blogTitle} />
+    <ShareButtons url={post.data.permalink} title={post.data.blogTitle} />
 {/* --- END SHARE BUTTONS --- */}
 
 {/* --- POST NAVIGATION --- */}
