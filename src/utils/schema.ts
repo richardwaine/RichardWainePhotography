@@ -603,6 +603,7 @@ export function buildProductSchema(
       "price": price,
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2099-12-31",
       "seller": {
         "@type": "Organization",
         "name": businessName,
