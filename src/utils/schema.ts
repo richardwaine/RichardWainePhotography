@@ -589,13 +589,15 @@ export function buildProductSchema(
   description: string,
   price: string,
   businessName: string,
-  businessUrl: string
+  businessUrl: string,
+  imageUrl: string
 ) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": name,
     "description": description,
+    "image": imageUrl,
     "offers": {
       "@type": "Offer",
       "price": price,

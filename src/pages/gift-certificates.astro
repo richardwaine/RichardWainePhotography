@@ -5,7 +5,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Gallery from '../components/Gallery.astro';
 import PrimaryButton from '../components/PrimaryButton.astro';
 import PageTitle from '../components/PageTitle.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import giftCardImage from '../assets/images/gift-cards/Gift Card (16 x 9).jpg';
 import { buildProductSchema } from '../utils/schema';
 
@@ -13,13 +13,17 @@ const title = 'Gift Certificates - Richard Waine Photography';
 const h1 = 'Headshot Gift Certificates';
 const squareStoreUrl = 'https://checkout.square.site/merchant/810CT0PNMJYCZ/checkout/6ZHNK5QO6JDM5EFLA4JVV24B';
 
+// Generate gift card image URL for schema
+const giftCardImageUrl = "https://richardwainephotography.com" + (await getImage({ src: giftCardImage, width: 1200 })).src;
+
 // Product schemas for gift certificates
 const giftCert25Schema = buildProductSchema(
   "$25 Headshot Gift Certificate",
   "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
   "25",
   "Richard Waine Photography",
-  "https://richardwainephotography.com"
+  "https://richardwainephotography.com",
+  giftCardImageUrl
 );
 
 const giftCert50Schema = buildProductSchema(
@@ -27,7 +31,8 @@ const giftCert50Schema = buildProductSchema(
   "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
   "50",
   "Richard Waine Photography",
-  "https://richardwainephotography.com"
+  "https://richardwainephotography.com",
+  giftCardImageUrl
 );
 
 const giftCert100Schema = buildProductSchema(
@@ -35,7 +40,8 @@ const giftCert100Schema = buildProductSchema(
   "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
   "100",
   "Richard Waine Photography",
-  "https://richardwainephotography.com"
+  "https://richardwainephotography.com",
+  giftCardImageUrl
 );
 
 const giftCert250Schema = buildProductSchema(
@@ -43,7 +49,8 @@ const giftCert250Schema = buildProductSchema(
   "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
   "250",
   "Richard Waine Photography",
-  "https://richardwainephotography.com"
+  "https://richardwainephotography.com",
+  giftCardImageUrl
 );
 
 const giftCert500Schema = buildProductSchema(
@@ -51,7 +58,8 @@ const giftCert500Schema = buildProductSchema(
   "Gift certificate towards a professional headshot session with Richard Waine Photography. Give the gift of confidence and authenticity.",
   "500",
   "Richard Waine Photography",
-  "https://richardwainephotography.com"
+  "https://richardwainephotography.com",
+  giftCardImageUrl
 );
 
 ---
