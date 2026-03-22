@@ -57,7 +57,7 @@ const personSchema = buildPersonSchema(
           <div class="bio-content">
             <h2 class="bio-content-h2">{section.clipHeading}</h2>
             {section.clipParagraphs.map((para) => (
-              <p>{para.text}</p>
+              <p set:html={para.text}></p>
             ))}
           </div>
         </div>
@@ -82,7 +82,7 @@ const personSchema = buildPersonSchema(
               <h2 class="bio-content-h2">{section.clipHeading}</h2>
             )}
             {section.clipParagraphs.filter(para => para.showOnMobile !== false).map((para) => (
-              <p>{para.text}</p>
+              <p set:html={para.text}></p>
             ))}
           </div>
         ))}
@@ -103,6 +103,7 @@ const personSchema = buildPersonSchema(
 /* ===========================================
    DESKTOP BIO LAYOUT 
    =========================================== */
+
 
 .bio-section-wrapper{
   padding-top:var(--size-8)
@@ -205,6 +206,7 @@ h2{
     
   }
 
+
 .bio-container .clip.clip1 .bio-content {
   position: absolute;
   bottom: -100%;
@@ -258,7 +260,9 @@ h2{
 .bio-content p {
   font-family: var(--ff-primary);
   font-size:var(--fs-400);
+  color:var(--blkclr);
 }
+
 
 
 /* ===========================================
@@ -303,8 +307,16 @@ h2{
   font-size:var(--fs-400);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--size-3);
+  color:var(--ltclr);
 }
 
+.bio-content p :global(a) {
+  color: var(--blkclr);
+}
+
+.bio-mobile-section p :global(a) {
+  color: var(--ltclr);
+}
 
 /* ==========================================
    TABLET - min-width: 90em (1440px)
