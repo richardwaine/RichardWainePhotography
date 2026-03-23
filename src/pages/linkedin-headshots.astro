@@ -260,7 +260,14 @@ const linkedinHeadshotsFAQSchema = buildFAQSchema(faqs);
     <div class="hero-text">
         <h1>{heroTitle} <br><span class="cyan">{heroTitleAccent}</span></h1>
         <p class="hero-p">{heroDescription}</p>
-        <p class="hero-p service-areas">Sessions available in Lancaster PA, Philadelphia, Baltimore, Harrisburg, York, and Delaware.</p>
+        <p class="hero-p service-areas">Sessions available in 
+            <a href="/lancaster-headshots">Lancaster PA</a>, 
+            <a href="/philadelphia-headshots">Philadelphia</a>, 
+            <a href="/baltimore-headshots">Baltimore</a>, 
+            <a href="/harrisburg-headshots">Harrisburg</a>, 
+            <a href="/york-headshots">York</a>, and 
+            <a href="/delaware-headshots">Delaware</a>.
+        </p> 
 
         <div class="action-group">
           <div class="button-wrapper">
@@ -565,6 +572,10 @@ h1 {
   font-size:var(--fs-400);
   color: var(--faded);
   text-wrap:balance;
+}
+
+.hero-p a{
+  color:var(--faded);
 }
 
 .action-group{
