@@ -651,7 +651,10 @@ export function buildBreadcrumbSchema(items: Array<{name: string, url: string}>)
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": item.url
+      "item": {
+        "@id": item.url,
+        "name": item.name
+      }
     }))
   };
 }
