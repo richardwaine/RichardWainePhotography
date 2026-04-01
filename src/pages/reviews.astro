@@ -18,7 +18,7 @@ const h1 = "Reviews"
 <!-- ItemList Schema for Vendor Directory -->
 <!-- <script type="application/ld+json" set:html={JSON.stringify(vendorDirectorySchema)} /> -->
 
-<PageTitle title={h1} />
+<PageTitle title={h1} titleColor="var(--ltclr)" />
 
     
 
@@ -89,7 +89,10 @@ const h1 = "Reviews"
                     
                 </div>
                 <div class="blog-card-excerpt">
-                    <p>{testimonial.review}</p>
+                    <p><span class="quote opening-quote">&ldquo;</span>
+                        {testimonial.review}
+                        <span class="quote closing-quote">&rdquo;</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -130,7 +133,10 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         body {
             
             background-color: var(--ltclr);
+            background:var(--drkbg);
+
             color: var(--blkclr);
+            color:var(--ltclr);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -165,6 +171,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         p {
             margin-bottom: var(--size-3);
             text-wrap: pretty;
+            text-wrap:balance;
         }
 
         a {
@@ -308,6 +315,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 
         .filter-btn:hover {
             border-color: var(--blkclr);
+            
         }
 
         .filter-btn:focus-visible {
@@ -331,8 +339,15 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         /* Blog Card - UNCHANGED from your original */
         .blog-card {
             background: var(--ltclr);
+            /* background:var(--drkbg); */
+
             border: 1px solid #e5e5e5;
+
+    
+
             color: var(--blkclr);
+            /* color:var(--ltclr); */
+
             transition: box-shadow 0.2s ease;
             border-radius: var(--size-250);
             overflow: hidden;
@@ -341,6 +356,8 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         }
 
         .blog-card:hover {
+             /* --_shadow: 0 8px 24px var(--shadow-clr-subtle); */
+              --_shadow: 0 4px 24px var(--accent);
             box-shadow:var(--_shadow);
         }
 
@@ -362,10 +379,12 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             margin-inline:auto;
             object-fit: cover;
             object-position: center;
-       
             box-shadow:var(--shadow);
-          
+
+            
         }
+
+    
 
         .blog-card-content {
             padding:var(--size-3);
