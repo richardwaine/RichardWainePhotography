@@ -1,0 +1,259 @@
+{
+  "reviews": [{
+    "reviewer": {
+      "displayName": "Ben Miller"
+    },
+    "starRating": "FIVE",
+    "comment": "Richard is an incredibly skilled photographer who gets the best out of his subjects natural features. Would recommend to anyone looking to get photos done.",
+    "createTime": "2021-09-01T18:39:10.845906Z",
+    "updateTime": "2021-09-01T18:39:10.845906Z",
+    "reviewReply": {
+      "comment": "Ben, Thanks so much for your incredibly kind words! It was a pleasure meeting and working with you!",
+      "updateTime": "2021-09-04T12:56:33.414564Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChdDSUhNMG9nS0VJQ0FnSUM2d29LNHpnRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Tim Jones"
+    },
+    "starRating": "FIVE",
+    "comment": "Best photographer in the tri state area",
+    "createTime": "2021-09-01T18:21:11.344358Z",
+    "updateTime": "2021-09-01T18:21:11.344358Z",
+    "reviewReply": {
+      "comment": "Tim, Thanks so much for your incredible review!",
+      "updateTime": "2021-09-04T12:56:52.554419Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChdDSUhNMG9nS0VJQ0FnSUM2d3ZTcl9BRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Matthew Metz"
+    },
+    "starRating": "FIVE",
+    "comment": "Fantastic experience, phenomenal photos!!",
+    "createTime": "2021-09-01T15:57:55.385441Z",
+    "updateTime": "2021-09-01T15:57:55.385441Z",
+    "reviewReply": {
+      "comment": "Matt, Thanks so much for your great review! It was a pleasure meeting and working with you!",
+      "updateTime": "2021-09-04T12:57:12.870262Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChdDSUhNMG9nS0VJQ0FnSUM2Z3FYczh3RRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Jake Hellenschmidt"
+    },
+    "starRating": "FIVE",
+    "comment": "Phenomenal headshots and a delivers a great time. A true pro!!!",
+    "createTime": "2021-09-01T14:50:51.831666Z",
+    "updateTime": "2021-09-01T14:50:51.831666Z",
+    "reviewReply": {
+      "comment": "Jake, Thanks so much for your incredibly kind words. I really enjoyed meeting and working with you!",
+      "updateTime": "2021-09-04T12:57:40.853179Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSUM2Z3JySE53EAE"
+  }, {
+    "reviewer": {
+      "displayName": "Raul Perero"
+    },
+    "starRating": "FIVE",
+    "comment": "Richard was incredibly knowledge and super helpful. Great work, and best headshot ever in my life. I 10000% recommend for any occasion or in my case, for a professional corporate headshot. Thank you again Richard! 10 stars!",
+    "createTime": "2021-09-01T14:26:20.502773Z",
+    "updateTime": "2021-09-01T14:26:20.502773Z",
+    "reviewReply": {
+      "comment": "Raul, thanks so much for your incredibly kind words! It was a pleasure meeting and working with you!",
+      "updateTime": "2021-09-04T12:58:03.458769Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSUM2Z3FMd2FBEAE"
+  }, {
+    "reviewer": {
+      "displayName": "Deb Hatfield"
+    },
+    "starRating": "FIVE",
+    "comment": "Such a fun experience. I highly recommend Richard for your photo needs.",
+    "createTime": "2021-08-30T15:08:12.844629Z",
+    "updateTime": "2021-08-30T15:08:12.844629Z",
+    "reviewReply": {
+      "comment": "Thanks so much for your great review, Deb! It was a pleasure meeting and working with you!",
+      "updateTime": "2021-08-31T18:47:57.059782Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSUM2LU5xQWVREAE"
+  }, {
+    "reviewer": {
+      "displayName": "Ethan Haymovitz"
+    },
+    "starRating": "FIVE",
+    "comment": "Rich is an exceptional photographer. It is obvious that he is passionate about what he does. It shows in his work.",
+    "createTime": "2021-08-27T16:04:58.621110Z",
+    "updateTime": "2021-08-27T16:04:58.621110Z",
+    "reviewReply": {
+      "comment": "Ethan, It was a pleasure meeting and working with you! Thanks so much for your incredibly kind words!",
+      "updateTime": "2021-08-30T10:43:11.649488Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSUM2b0lhX1lnEAE"
+  }, {
+    "reviewer": {
+      "displayName": "Chris Bomberger"
+    },
+    "starRating": "FIVE",
+    "comment": "Took these best photos I have ever had anyone take of me! Was extremely professional and brought out the best of my look! Would recommend to anyone looking for amazing headshots.",
+    "createTime": "2021-08-24T15:32:53.206328Z",
+    "updateTime": "2021-08-24T15:32:53.206328Z",
+    "reviewReply": {
+      "comment": "Thanks for the great review, Chris! It was a pleasure meeting and working with you!",
+      "updateTime": "2021-08-25T12:42:41.553223Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSURhemJ6NGZ3EAE"
+  }, {
+    "reviewer": {
+      "displayName": "Bob Bonitz"
+    },
+    "starRating": "FIVE",
+    "comment": "He was awesome. Took his time and made me look great. Made me very comfortable during the process. Recommend him highly",
+    "createTime": "2021-08-24T15:17:58.731252Z",
+    "updateTime": "2021-08-24T15:17:58.731252Z",
+    "reviewReply": {
+      "comment": "Thanks for your kind words, Bob! It was a pleasure working with you!",
+      "updateTime": "2021-08-25T12:42:59.220534Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSURhemNDX1ZREAE"
+  }, {
+    "reviewer": {
+      "displayName": "Krista Olnick"
+    },
+    "starRating": "FIVE",
+    "comment": "Great experience. Made me feel very comfortable.",
+    "createTime": "2021-08-24T14:19:49.999513Z",
+    "updateTime": "2021-08-24T14:19:49.999513Z",
+    "reviewReply": {
+      "comment": "Thanks so much for the great review, Krista! It was great meeting and working with you!",
+      "updateTime": "2021-08-25T12:43:21.892793Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChdDSUhNMG9nS0VJQ0FnSURhamRTdjN3RRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Craig Nebel"
+    },
+    "starRating": "FIVE",
+    "comment": "Very easy to work with.  Headshots look great!",
+    "createTime": "2021-08-24T14:03:54.268353Z",
+    "updateTime": "2021-08-24T14:03:54.268353Z",
+    "reviewReply": {
+      "comment": "Thanks for your great review, Craig! It was a pleasure meeting and working with you!",
+      "updateTime": "2021-08-25T12:43:42.436118Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChdDSUhNMG9nS0VJQ0FnSURhallEeDZ3RRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Traci Bowers"
+    },
+    "starRating": "FIVE",
+    "createTime": "2021-08-24T13:25:59.044169Z",
+    "updateTime": "2021-08-24T13:25:59.044169Z",
+    "reviewReply": {
+      "comment": "Thanks so much for the great review, Traci!",
+      "updateTime": "2021-08-25T12:43:54.999561Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChdDSUhNMG9nS0VJQ0FnSURhOVlYM2h3RRAB"
+  }, {
+    "reviewer": {
+      "displayName": "David Brechbill"
+    },
+    "starRating": "FIVE",
+    "comment": "Awesome time with Richard!!",
+    "createTime": "2021-08-24T12:35:03.276995Z",
+    "updateTime": "2021-08-24T12:35:03.276995Z",
+    "reviewReply": {
+      "comment": "Thanks so much for the great review, David! It was a pleasure working with you again!",
+      "updateTime": "2021-08-25T12:44:18.058706Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSURhOWNEeldREAE"
+  }, {
+    "reviewer": {
+      "displayName": "willie maddox"
+    },
+    "starRating": "FIVE",
+    "comment": "Richard deployed a unique expressionist process that is fun and captures the essence of an individual through the camera lens. A very rich experience!",
+    "createTime": "2021-08-12T20:06:51.407205Z",
+    "updateTime": "2021-08-12T20:06:51.407205Z",
+    "reviewReply": {
+      "comment": "Willie, Thank you so much for your incredibly kind words. It was an absolute pleasure meeting and working with you!",
+      "updateTime": "2021-08-13T13:09:53.056439Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSURhNEptWE53EAE"
+  }, {
+    "reviewer": {
+      "displayName": "Kaye Peloquin"
+    },
+    "starRating": "FIVE",
+    "createTime": "2021-07-22T21:49:03.688711Z",
+    "updateTime": "2021-07-22T21:49:03.688711Z",
+    "reviewReply": {
+      "comment": "Kaye, Thanks so much for the great review! It was a pleasure having you in the studio!",
+      "updateTime": "2021-07-23T20:46:08.133246Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChdDSUhNMG9nS0VJQ0FnSUNhNks2RHlRRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "thomas"
+    },
+    "starRating": "FIVE",
+    "createTime": "2021-07-16T20:31:42.695987Z",
+    "updateTime": "2021-07-16T20:31:42.695987Z",
+    "reviewReply": {
+      "comment": "Thanks for the great review, Thomas!",
+      "updateTime": "2021-07-17T01:22:11.774017Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChdDSUhNMG9nS0VJQ0FnSURxLTUyNm5RRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "kris “No Thanks” F"
+    },
+    "starRating": "FIVE",
+    "comment": "Richard is wonderful to make with and the results are amazing.  This is my second visit to him for headshots and I highly recommend.",
+    "createTime": "2021-07-03T17:30:50.113021Z",
+    "updateTime": "2021-07-03T17:30:50.113021Z",
+    "reviewReply": {
+      "comment": "Thank you so much for your incredibly kind words! It\u0027s always a pleasure working with you!",
+      "updateTime": "2021-07-04T11:36:51.633963Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSURxa3BlS1N3EAE"
+  }, {
+    "reviewer": {
+      "displayName": "Sadie Owocki"
+    },
+    "starRating": "FIVE",
+    "createTime": "2021-07-02T20:04:32.880643Z",
+    "updateTime": "2021-07-02T20:04:32.880643Z",
+    "reviewReply": {
+      "comment": "Thank you for the great review!",
+      "updateTime": "2021-07-04T11:35:54.913115Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChdDSUhNMG9nS0VJQ0FnSURxd3BtbmlBRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Andrew Jacobs"
+    },
+    "starRating": "FIVE",
+    "comment": "Richard is a true professional and I greatly enjoyed my experience working with him in his studio.  He provided a clear outline on how the session with would work and made the entire experience fun and enjoyable.  And, he helped answer questions and provided technical advice on how best to download the images.  If you need headshots - I highly recommend Richard Waine",
+    "createTime": "2021-06-27T23:01:01.535909Z",
+    "updateTime": "2021-06-27T23:01:01.535909Z",
+    "reviewReply": {
+      "comment": "Andy, it was an absolute pleasure having you in the studio. Thank you for your incredibly kind words!",
+      "updateTime": "2021-06-28T20:18:04.314275Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSURxMk55aGJnEAE"
+  }, {
+    "reviewer": {
+      "displayName": "John Stauffer"
+    },
+    "starRating": "FIVE",
+    "comment": "Amazing experience and awesome pictures!",
+    "createTime": "2021-06-25T15:04:04.030578Z",
+    "updateTime": "2021-06-25T15:04:04.030578Z",
+    "reviewReply": {
+      "comment": "John, thanks so much for your great review! It was so much fun having you in the studio!",
+      "updateTime": "2021-06-26T13:53:59.264225Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/ChZDSUhNMG9nS0VJQ0FnSURxa1BEN1BnEAE"
+  }]
+}

@@ -1,0 +1,263 @@
+{
+  "reviews": [{
+    "reviewer": {
+      "displayName": "Nicole O\u0027Brien"
+    },
+    "starRating": "FIVE",
+    "comment": "Richard was amazing to work with. He was kind, funny and totally made me feel comfortable. I would highly recommend working with Richard.",
+    "createTime": "2026-03-28T19:44:17.097522Z",
+    "updateTime": "2026-03-28T19:44:33.036197Z",
+    "reviewReply": {
+      "comment": "Nicole, it was such a pleasure having you in the studio for your headshot session. Thank you so much for your kind words and great review! ",
+      "updateTime": "2026-03-29T11:47:32.005021Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21SYWQwUmhRMU55YWxGa2NrRnBVSE5WYzBGWGFtYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "William Sanchez"
+    },
+    "starRating": "FIVE",
+    "comment": "Rich is the best headshot photographer in Lancaster PA.  Had an amazing experience!",
+    "createTime": "2026-03-27T14:50:45.526209Z",
+    "updateTime": "2026-03-27T14:50:45.526209Z",
+    "reviewReply": {
+      "comment": "William, it was a pleasure having you in the studio for your headshot session! Thank you so much for your incredibly kind words and great review!",
+      "updateTime": "2026-03-29T11:46:06.681306Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pobVpHUXdYMjV2ZUZCTE5ETkdPREpyYlZOaVVVRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Kyle Sadorf"
+    },
+    "starRating": "FIVE",
+    "comment": "Best photo I have had taken. Very friendly and overall just a great job. Highly recommend!",
+    "createTime": "2026-03-24T16:33:56.569247Z",
+    "updateTime": "2026-03-24T16:33:56.569247Z",
+    "reviewReply": {
+      "comment": "Kyle, thank you so much for the kind words and great review! It was a pleasure having you in the studio for your headshot session! ",
+      "updateTime": "2026-03-25T13:52:46.549404Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21STVdUUnNOekpyZG1seVZIWnBObEJDVWtFME4zYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Samuel Stewart"
+    },
+    "starRating": "FIVE",
+    "comment": "Great at getting the best out of you",
+    "createTime": "2026-03-24T14:27:54.378695Z",
+    "updateTime": "2026-03-24T14:27:54.378695Z",
+    "reviewReply": {
+      "comment": "Sam, thanks so much the great review! It was great meeting you and working with you on your new headshot images!",
+      "updateTime": "2026-03-25T13:53:32.181461Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT25OVFdEVlBUMHAzVUhBeGMyUTJOR0ppT1VKNVFWRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Derek Arnold"
+    },
+    "starRating": "FIVE",
+    "comment": "The shoot was great.  Fun, loose, and the pics turned out awesome.",
+    "createTime": "2026-03-20T16:15:54.352041Z",
+    "updateTime": "2026-03-20T16:15:54.352041Z",
+    "reviewReply": {
+      "comment": "Derek, it was a pleasure having you in the studio! Thank you for the kind words and great review!",
+      "updateTime": "2026-03-24T11:13:33.480702Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xKSUxVbGZTRlV0VFVkaVpFbE9NWEJuU2tWd2JWRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Andrew Petsu"
+    },
+    "starRating": "FIVE",
+    "comment": "Great experience",
+    "createTime": "2026-03-20T14:43:09.612598Z",
+    "updateTime": "2026-03-20T14:43:09.612598Z",
+    "reviewReply": {
+      "comment": "Andy, Thanks so much for the great review!",
+      "updateTime": "2026-03-24T11:13:53.032369Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pWSmFqbERaMlJmVkZCa2IyWnhSbkJWYXkxVExVRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Liza Minner"
+    },
+    "starRating": "FIVE",
+    "comment": "I really enjoyed working with you. You made me feel so confident and comfortable. I had a blast!",
+    "createTime": "2026-03-19T17:44:57.453661Z",
+    "updateTime": "2026-03-19T17:44:57.453661Z",
+    "reviewReply": {
+      "comment": "Liza, it was such a pleasure having you in the studio for your headshot session. Thank you for your kind words and great review!",
+      "updateTime": "2026-03-24T11:14:34.798005Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xkUWIzZGplWFpmYjJ0T1JHSlBhbVprTW1jeGNXYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Kim Engle"
+    },
+    "starRating": "FIVE",
+    "comment": "Amazing experience! Rich did a great job making me feel comfortable and relaxed. I would highly recommend!",
+    "createTime": "2026-03-17T18:27:15.464168Z",
+    "updateTime": "2026-03-17T18:27:15.464168Z",
+    "reviewReply": {
+      "comment": "Kim, Thank you for your great review! It was a pleasure meeting and working with you!",
+      "updateTime": "2026-03-24T11:14:53.747582Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21OM1ZtMVdWRjgwY0VOdGNrcDBTa1ZvWWtSYWNIYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Jason Seibert"
+    },
+    "starRating": "FOUR",
+    "comment": "Very easy and he explains the process to know why he does what he does.",
+    "createTime": "2026-03-12T14:20:21.333847Z",
+    "updateTime": "2026-03-12T14:20:21.333847Z",
+    "reviewReply": {
+      "comment": "Hi Jason, I appreciate the feedback. Glad you found the process helpful!",
+      "updateTime": "2026-03-24T11:36:31.915415Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21wQmNuaGtRbGxGWjNoalJXRnZNRjl5VFhSeWJsRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Christopher Bradley"
+    },
+    "starRating": "FIVE",
+    "comment": "Dynamite experience with Rich, and the photography was impeccable.",
+    "createTime": "2026-03-10T19:37:57.930179Z",
+    "updateTime": "2026-03-10T19:37:57.930179Z",
+    "reviewReply": {
+      "comment": "Chris, it was such a pleasure having you in the studio for your headshot session. I\u0027m thrilled that you enjoyed your experience and love the images we created! Thank you for your incredibly kind words and great review!",
+      "updateTime": "2026-03-11T12:27:57.950163Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tabk9UWTVOMmhqTlVjMFpteE9hVU5GUmxCaFIzYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Darryl Walker"
+    },
+    "starRating": "FIVE",
+    "comment": "An Awesome Experience!!\n\nTrue Professional.",
+    "createTime": "2026-03-06T16:59:59.455417Z",
+    "updateTime": "2026-03-06T16:59:59.455417Z",
+    "reviewReply": {
+      "comment": "Darryl,\nI\u0027m thrilled that you enjoyed your experience. It was a pleasure having you in the studio this morning for your headshot session. Thank you for your trust, kind words, and great review.",
+      "updateTime": "2026-03-06T21:08:56.356161Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21GQ1V6Qm1Relp6VldwMFdWaGhRMVk1U1hGRmJYYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Doug Barton"
+    },
+    "starRating": "FIVE",
+    "comment": "A very entertaining photo session.",
+    "createTime": "2026-02-27T15:41:39.301848Z",
+    "updateTime": "2026-02-27T15:41:39.301848Z",
+    "reviewReply": {
+      "comment": "Doug, it was a pleasure having you in the studio for your headshot session! I\u0027m thrilled that you enjoyed your experience! Thank you for your kind words and great review!",
+      "updateTime": "2026-02-28T14:23:37.887836Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pGNWFHZERVMFp3WXpKMFkxQnRjazl0Um14SFFuYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Mabry Fish"
+    },
+    "starRating": "FIVE",
+    "comment": "Rich was a pleasure to work with. He made the process enjoyable and takes his craft seriously.",
+    "createTime": "2026-02-26T18:28:51.714690Z",
+    "updateTime": "2026-02-26T18:28:51.714690Z",
+    "reviewReply": {
+      "comment": "It was a pleasure having you in the studio for your headshot session! Thanks so much for the kind words and great review!",
+      "updateTime": "2026-02-27T11:03:02.324774Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xaaVEwVkZlalJ5ZW1wd1RIWkdWSGxhVEVSQ2RtYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Aimee Narkiewicz"
+    },
+    "starRating": "FIVE",
+    "comment": "Absolutely blown away by my headshots — hands down the best experience ever! The entire session was professional, comfortable, and actually fun. They knew exactly how to capture the most flattering angles, perfect lighting, and natural expressions that truly represent me and my brand.\n\nThe final images are stunning, polished, and elevated my professional presence instantly. If you want headshots that make you look confident, approachable, and like your absolute best self, this is the place to go. Highly recommend — 10/10 experience!",
+    "createTime": "2026-02-11T20:28:59.691155Z",
+    "updateTime": "2026-02-11T20:28:59.691155Z",
+    "reviewReply": {
+      "comment": "Aimee, It was such a pleasure having you in the studio for your headshot session.  Thank you for your incredibly kind words and great review! I\u0027m thrilled that you had a great time, and that you love the photos we created!",
+      "updateTime": "2026-02-12T13:41:54.459325Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xKVFVYZHlRM2R0WnpSeWNWQkZkVFJYYUY5NFgzYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Louise Diem"
+    },
+    "starRating": "FIVE",
+    "comment": "I never take pictures, hate it. I was dreading doing this today but Richard has turned me into a true fan! He was amazing, made the experience fun and interesting. Photos are the best I have ever seen myself in a picture. I highly recommend to anyone who dreads the camera. Thank you so much Richard!",
+    "createTime": "2026-01-21T16:16:44.780365Z",
+    "updateTime": "2026-01-21T16:16:44.780365Z",
+    "reviewReply": {
+      "comment": "Louise, thank you so much for your incredibly kind words and great review! I am always thrilled when clients leave my studio with a skip in their step! ",
+      "updateTime": "2026-01-23T16:37:39.762925Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2twNmRUbGxlSGhpY0ZOdmJXeHlVbFpaUTFjMFJIYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Maria Elizabeth Del Rey"
+    },
+    "starRating": "FIVE",
+    "comment": "Wonderful detailed work very happy with the work !",
+    "createTime": "2026-01-13T20:13:54.157366Z",
+    "updateTime": "2026-01-13T20:13:54.157366Z",
+    "reviewReply": {
+      "comment": "Thank you so much for the kind words and great review, Maria!",
+      "updateTime": "2026-01-20T13:14:02.476856Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pkMkxVbFBhVzVMTTJsTlJXczJXWFkwTm5sTVdsRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Ishmael Osborn"
+    },
+    "starRating": "FIVE",
+    "comment": "Fantastic experience - Richard is an excellent coach and does a fantastic job, definitely would recommend!",
+    "createTime": "2026-01-10T18:55:03.475201Z",
+    "updateTime": "2026-01-10T18:55:03.475201Z",
+    "reviewReply": {
+      "comment": "Shel, It was such a pleasure meeting and working with you! Thanks so much for the incredibly kind words and great review! ",
+      "updateTime": "2026-01-11T15:58:47.487311Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT25SS1JtbE1TVkEyTVdkUFFVcDZTa0pFYmpaSFdtYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "B"
+    },
+    "starRating": "FIVE",
+    "comment": "Excellent quality and fantastic to work with!",
+    "createTime": "2025-11-26T20:24:19.929005Z",
+    "updateTime": "2025-11-26T20:24:19.929005Z",
+    "reviewReply": {
+      "comment": "Thanks so much for the kind words and great review! It was a pleasure meeting you and working with you on your headshots!",
+      "updateTime": "2025-11-26T22:32:45.558550Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tSMGIzQm1PVk16YWxBM1dEVkNNRTFJVEZOT1RFRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Jon K"
+    },
+    "starRating": "FIVE",
+    "comment": "Richard is perfect for someone who needs a little bit more than a guide. He is more a coach that will get the best shots out of you. A great experience that I would highly recommend to anyone.",
+    "createTime": "2025-11-15T18:39:10.608784Z",
+    "updateTime": "2025-11-15T18:39:10.608784Z",
+    "reviewReply": {
+      "comment": "Jon, thank you so much for your incredibly kind words and great review! It was a pleasure meeting you and helping you with your new headshots. Wishing you the very best in your new role!",
+      "updateTime": "2025-11-17T13:34:11.708583Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pJemFrNVFZVEpxVVRVek5FeE1ja05aY2s5UFgzYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Ryan Evans"
+    },
+    "starRating": "FIVE",
+    "comment": "Best photographer I\u0027ve ever been to, very helpful in getting the correct pose and position for an excellent picture. The whole process was quick and painless, and the picture turned out great! Would definitely recommend to anyone looking for professional photos.",
+    "createTime": "2025-11-12T20:12:40.751035Z",
+    "updateTime": "2025-11-15T01:29:36.483146Z",
+    "reviewReply": {
+      "comment": "Ryan, it was a pleasure meeting and working with you. Thanks so much for the kind words, and I\u0027m glad you enjoyed the experience!",
+      "updateTime": "2025-11-13T14:32:42.929987Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT200d09FZFdTVFF0TkhsbmMyWmFMVGRGV1d0V1oyYxAB"
+  }]
+}

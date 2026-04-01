@@ -1,0 +1,252 @@
+{
+  "reviews": [{
+    "reviewer": {
+      "displayName": "Renee Miller"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T18:17:28.757357Z",
+    "updateTime": "2025-11-12T21:15:56.258278Z",
+    "reviewReply": {
+      "comment": "Renee, thank you so much for the great review! It was a pleasure working with you!",
+      "updateTime": "2025-11-13T14:31:11.481840Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21aRWNIRklTR0l6VFcwd1gwWjVielZ2VW1nNWVXYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Eun Jun Choi"
+    },
+    "starRating": "FIVE",
+    "comment": "Excellent photographer! He helped me select an approachable business look for my headshot. Wonderful experience. Highly recommend.",
+    "createTime": "2025-11-12T20:02:12.612753Z",
+    "updateTime": "2025-11-12T20:02:12.612753Z",
+    "reviewReply": {
+      "comment": "Eun, Thanks so much for the kind words and great review! It was a pleasure meeting and working with you!",
+      "updateTime": "2025-11-13T14:31:45.656141Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tsU1FqSjJUVWxpTjFacU1UbEJTVGhsT1RGdFRGRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Paul Mcneish"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T19:30:11.543033Z",
+    "updateTime": "2025-11-12T19:30:11.543033Z",
+    "reviewReply": {
+      "comment": "Thanks so much for the great review, Paul! It was a pleasure meeting you!",
+      "updateTime": "2025-11-13T14:33:05.365890Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pock9WbGplVFZCWjBkT1JuQk9PVTgxZDFSemJHYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Molly O\u0027Brien"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T18:45:04.595177Z",
+    "updateTime": "2025-11-12T18:45:04.595177Z",
+    "reviewReply": {
+      "comment": "Molly, thank you so much for the great review! I enjoyed meeting and working with you!",
+      "updateTime": "2025-11-13T14:33:30.366400Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xwVWN6VnVWVlI1VEhweFpXZFJlSE50Wmtac1VrRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "rogert kola"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T18:04:57.534169Z",
+    "updateTime": "2025-11-12T18:04:57.534169Z",
+    "reviewReply": {
+      "comment": "Thanks so much for the great review, Rogert!",
+      "updateTime": "2025-11-13T14:33:45.851147Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21acllXOVZXazFZU0hweGREWnhZM3AxVEdwaFZFRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Martin Römgens"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T17:42:23.605310Z",
+    "updateTime": "2025-11-12T17:42:23.605310Z",
+    "reviewReply": {
+      "comment": "Martin, it was a pleasure meeting and working with you. Thank you for the great review!",
+      "updateTime": "2025-11-13T14:34:35.642657Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT25oV05IQTFWMGMxZWxOMVRXTXdaRzVSTFV4emJHYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Kristin Marino"
+    },
+    "starRating": "FIVE",
+    "comment": "Gave directions and got great shots",
+    "createTime": "2025-11-12T17:37:51.105600Z",
+    "updateTime": "2025-11-12T17:37:51.105600Z",
+    "reviewReply": {
+      "comment": "Kristin, thanks so much for the kind words and great review.  I\u0027m glad you enjoyed the headshot experience!",
+      "updateTime": "2025-11-13T14:35:13.169110Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2w4Mk9FZHdWR3B6TURKbGJ6Sm9WVkY0YjBOc2JYYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Nolan Davis"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T17:31:34.912118Z",
+    "updateTime": "2025-11-12T17:31:34.912118Z",
+    "reviewReply": {
+      "comment": "Nolan, Thanks so much for the great review!",
+      "updateTime": "2025-11-13T14:35:56.145851Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xCRVdpMVVjbWxQTVhvMmFsZDZVVGhxWlU1MFpHYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Kolja Klemkow"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T17:23:35.935407Z",
+    "updateTime": "2025-11-12T17:23:35.935407Z",
+    "reviewReply": {
+      "comment": "Kolja, it was a pleasure meeting and working with you! Thanks so much for the great review!",
+      "updateTime": "2025-11-13T14:36:13.924466Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xSbmJrRnFYM2h2ZUdVNGJITTBOVzB4T0U5QlNrRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Steven Sacco"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T17:18:35.720400Z",
+    "updateTime": "2025-11-12T17:18:35.720400Z",
+    "reviewReply": {
+      "comment": "Steven, thanks so much for the great review! It was a pleasure working with you!",
+      "updateTime": "2025-11-13T14:36:35.938517Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2paQ1JVdDROMGxHTkdWVVgyMWZPRUZhUkhsdE9XYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Joseph Markle"
+    },
+    "starRating": "FIVE",
+    "comment": "Rich took great pics and was a pleasure to talk to. I’d highly recommend working with him. 👍",
+    "createTime": "2025-11-12T16:55:07.238624Z",
+    "updateTime": "2025-11-12T16:55:07.238624Z",
+    "reviewReply": {
+      "comment": "Joe, it was a pleasure meeting and working with you. Thank you so much for the incredibly kind words and great review!",
+      "updateTime": "2025-11-13T14:39:32.248292Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2twdE5uZDZTMXB1WkVrelUxWmtWakZ3UlhKelVsRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Jduhgee C"
+    },
+    "starRating": "FIVE",
+    "comment": "Awesome Photos with great instructions!!!",
+    "createTime": "2025-11-12T16:37:35.406411Z",
+    "updateTime": "2025-11-12T16:37:35.406411Z",
+    "reviewReply": {
+      "comment": "Thanks so much for the kind words and great review! It was a pleasure working with you on your new headshots!",
+      "updateTime": "2025-11-13T14:40:30.318827Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21Gc1dFNXBWRzVKTW5VeWJXZGpVRXRMYjBaSFZIYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Μαρίνος Μ."
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T16:28:11.423341Z",
+    "updateTime": "2025-11-12T16:28:11.423341Z",
+    "reviewReply": {
+      "comment": "Thank you so much for the great review, Marinos! It was a pleasure meeting and working with you!",
+      "updateTime": "2025-11-13T14:50:03.219049Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT214NWQyMW5hbHB0VGpKRVZVbHVVbVpIY3pKWWNWRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "William Nettles"
+    },
+    "starRating": "FIVE",
+    "comment": "Loved it great job",
+    "createTime": "2025-11-12T16:11:10.069803Z",
+    "updateTime": "2025-11-12T16:11:10.069803Z",
+    "reviewReply": {
+      "comment": "William, thanks so much for the kind words and great review! I\u0027m glad you enjoyed the headshot experience!",
+      "updateTime": "2025-11-13T14:41:04.722042Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21OMmJrODJaRTF5Y25rdGNtVXdRa1pyZDAxWE5sRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Jaden Levin"
+    },
+    "starRating": "FIVE",
+    "comment": "great photographer! headshots very nice.!",
+    "createTime": "2025-11-12T15:58:46.552911Z",
+    "updateTime": "2025-11-12T15:58:46.552911Z",
+    "reviewReply": {
+      "comment": "Jaden, thanks so much for the kind words and great review! It was a pleasure working with you on your new headshots!",
+      "updateTime": "2025-11-13T14:41:34.541879Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xCaUxVaEhlak0xWjA1WWQzTjBWM0JtWlZac09FRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "jerrell marcus"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-12T15:00:45.944319Z",
+    "updateTime": "2025-11-12T15:00:45.944319Z",
+    "reviewReply": {
+      "comment": "Jerrell, thanks so much for the great review! It was a pleasure getting to meet and work with you!",
+      "updateTime": "2025-11-13T14:48:29.264945Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT21sS1dsQldWbmxGYVhCVVUwMUlVRGxtY210TFkwRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Joshan Philip"
+    },
+    "starRating": "FIVE",
+    "comment": "He’s very outgoing and makes the whole process easy and smooth",
+    "createTime": "2025-11-12T14:32:14.483748Z",
+    "updateTime": "2025-11-12T14:32:14.483748Z",
+    "reviewReply": {
+      "comment": "Joshan, thanks so much for the incredibly kind words and great review! I\u0027m thrilled that you had a great time and enjoyed the headshot experience!",
+      "updateTime": "2025-11-13T14:42:41.793176Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT200eGJUQkdaREJoZVdSaWJrNWFaWGd3YWxWRk1XYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Angelica Lopez"
+    },
+    "starRating": "FIVE",
+    "comment": "He did headshots for my workplace and was very fun to work with. Highlight was the wonderful advice given for posing and looking best for the camera!",
+    "createTime": "2025-11-12T14:22:23.472901Z",
+    "updateTime": "2025-11-12T14:22:23.472901Z",
+    "reviewReply": {
+      "comment": "Angelica, It was such a pleasure meeting and working with you.  Thank you for the kind words, great review, and the fun conversation! ",
+      "updateTime": "2025-11-13T14:45:26.206852Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xOemQyUktVV2d3ZVd3NFJYUXlXR1ZJYldGNmExRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Jennifer Fitzgerald"
+    },
+    "starRating": "FIVE",
+    "comment": "This was nothing like the usual awkward photo session. Rich was incredibly professional, extremely funny, and detail-oriented. He made me feel completely at ease and even took the time to adjust my hair so everything looked perfect. I couldn’t be happier with the experience",
+    "createTime": "2025-11-12T13:49:04.252294Z",
+    "updateTime": "2025-11-12T13:49:04.252294Z",
+    "reviewReply": {
+      "comment": "Jennifer, thank you so much for the incredibly kind words and great review. I am thrilled to hear that you enjoyed your headshot experience!  That means everything to me!",
+      "updateTime": "2025-11-13T14:46:30.778367Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pSMlpEZGZOMmQzWlhoV2RHUllhamgyU0VkZmJFRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Slesha Fadte"
+    },
+    "starRating": "FIVE",
+    "createTime": "2025-11-10T19:01:01.965357Z",
+    "updateTime": "2025-11-10T19:01:01.965357Z",
+    "reviewReply": {
+      "comment": "Thank you for the great review, Slesha! It was a pleasure meeting and working with you on your new headshots!",
+      "updateTime": "2025-11-10T19:31:14.911945Z"
+    },
+    "name": "accounts/101502605353067483453/locations/16369961085334029347/reviews/Ci9DQUlRQUNvZENodHljRjlvT2twaWFGTm1WVk53WldSR05sQldjRUp0UlU1cVFXYxAB"
+  }]
+}

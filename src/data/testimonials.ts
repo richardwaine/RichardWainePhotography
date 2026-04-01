@@ -20,6 +20,7 @@ import BrandonLesagonicz from '../assets/images/testimonials/Brandon lesagonicz 
 import CateCaplan from '../assets/images/testimonials/Cate Caplan - (200px).jpg'
 import MackenzieLucas from '../assets/images/testimonials/ProAssurance - 0111 - (200px).jpg'
 import DanielHagelberg from '../assets/images/testimonials/Daniel Hagelberg - (200px).jpg'
+import AvatarPlaceholder from '../assets/images/testimonials/Avatar - (200px).jpg'
 
 
 
@@ -205,10 +206,4668 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     image: DanielHagelberg,
     imageAlt: "Office Headshot of Daniel Hagelberg by Richard Waine Photography"
   },
-
-
-
-
+  {
+    name: "Jessica Goyco",
+    company: "",
+    review: "I was a bit nervous but once you spend a minute with Rich he makes you feel great about yourself! You was awesome thank you! Jessy Goyco",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jessica Goyco"
+  },
+  {
+    name: "Steve Adolt",
+    company: "",
+    review: "Richard was not only the consummate professional but also a helluva lot of fun to work with.\n\nHe understands what truly makes a great headshot and I would recommend him to anyone looking for one!\n\nDid I mention he’s a helluva nice guy too?",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Steve Adolt"
+  },
+  {
+    name: "Eric cooley",
+    company: "",
+    review: "We had Richard come in to perform headshots for the business. It was a very busy day. But, he took the time with each person to make sure he got the right shot. I saw mine yesterday. Literally, the best picture I have ever seen of me. I sent it to my mom and she said \"oh wow, that's you?\" So good my own mom didn't recognize me. Thanks for everything Richard.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Eric cooley"
+  },
+  {
+    name: "Tim M",
+    company: "",
+    review: "Great experience! Would definitely recommend if you want great shots and fun doing it.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tim M"
+  },
+  {
+    name: "Chad Neiss",
+    company: "",
+    review: "Rich was great.   Had a fun time and the final production was great.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Chad Neiss"
+  },
+  {
+    name: "Damain Cavalo",
+    company: "",
+    review: "Master photographer always enjoy working with you Richard Waine #Push",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Damain Cavalo"
+  },
+  {
+    name: "Tonya Snyder",
+    company: "",
+    review: "So much fun ! Thank you",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tonya Snyder"
+  },
+  {
+    name: "Heather Courtney",
+    company: "",
+    review: "Super awesome to work with! Loved my session!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Heather Courtney"
+  },
+  {
+    name: "Bader Suleiman",
+    company: "",
+    review: "Great personality very professional",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Bader Suleiman"
+  },
+  {
+    name: "Kevin Furbush",
+    company: "",
+    review: "Knows how to get the best pictures",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kevin Furbush"
+  },
+  {
+    name: "Joe Cavallio",
+    company: "",
+    review: "Does great work, and really great personality.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joe Cavallio"
+  },
+  {
+    name: "Daniel May",
+    company: "",
+    review: "Very personable and professional.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Daniel May"
+  },
+  {
+    name: "Peter Breese",
+    company: "",
+    review: "Enjoyable and productive\nGreat results and a good time with RW!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Peter Breese"
+  },
+  {
+    name: "Mg W",
+    company: "",
+    review: "I needed high quality professional headshots, and Richard was awesome - the process, the coaching, the results.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mg W"
+  },
+  {
+    name: "Rob Schwarz",
+    company: "",
+    review: "Very professional and personable.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rob Schwarz"
+  },
+  {
+    name: "Ben Miller",
+    company: "",
+    review: "Richard is an incredibly skilled photographer who gets the best out of his subjects natural features. Would recommend to anyone looking to get photos done.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ben Miller"
+  },
+  {
+    name: "Tim Jones",
+    company: "",
+    review: "Best photographer in the tri state area",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tim Jones"
+  },
+  {
+    name: "Matthew Metz",
+    company: "",
+    review: "Fantastic experience, phenomenal photos!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Matthew Metz"
+  },
+  {
+    name: "Jake Hellenschmidt",
+    company: "",
+    review: "Phenomenal headshots and a delivers a great time. A true pro!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jake Hellenschmidt"
+  },
+  {
+    name: "Raul Perero",
+    company: "",
+    review: "Richard was incredibly knowledge and super helpful. Great work, and best headshot ever in my life. I 10000% recommend for any occasion or in my case, for a professional corporate headshot. Thank you again Richard! 10 stars!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Raul Perero"
+  },
+  {
+    name: "Deb Hatfield",
+    company: "",
+    review: "Such a fun experience. I highly recommend Richard for your photo needs.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Deb Hatfield"
+  },
+  {
+    name: "Ethan Haymovitz",
+    company: "",
+    review: "Rich is an exceptional photographer. It is obvious that he is passionate about what he does. It shows in his work.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ethan Haymovitz"
+  },
+  {
+    name: "Chris Bomberger",
+    company: "",
+    review: "Took these best photos I have ever had anyone take of me! Was extremely professional and brought out the best of my look! Would recommend to anyone looking for amazing headshots.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Chris Bomberger"
+  },
+  {
+    name: "Bob Bonitz",
+    company: "",
+    review: "He was awesome. Took his time and made me look great. Made me very comfortable during the process. Recommend him highly",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Bob Bonitz"
+  },
+  {
+    name: "Krista Olnick",
+    company: "",
+    review: "Great experience. Made me feel very comfortable.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Krista Olnick"
+  },
+  {
+    name: "Craig Nebel",
+    company: "",
+    review: "Very easy to work with.  Headshots look great!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Craig Nebel"
+  },
+  {
+    name: "David Brechbill",
+    company: "",
+    review: "Awesome time with Richard!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by David Brechbill"
+  },
+  {
+    name: "willie maddox",
+    company: "",
+    review: "Richard deployed a unique expressionist process that is fun and captures the essence of an individual through the camera lens. A very rich experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by willie maddox"
+  },
+  {
+    name: "kris “No Thanks” F",
+    company: "",
+    review: "Richard is wonderful to make with and the results are amazing.  This is my second visit to him for headshots and I highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by kris “No Thanks” F"
+  },
+  {
+    name: "Andrew Jacobs",
+    company: "",
+    review: "Richard is a true professional and I greatly enjoyed my experience working with him in his studio.  He provided a clear outline on how the session with would work and made the entire experience fun and enjoyable.  And, he helped answer questions and provided technical advice on how best to download the images.  If you need headshots - I highly recommend Richard Waine",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Andrew Jacobs"
+  },
+  {
+    name: "John Stauffer",
+    company: "",
+    review: "Amazing experience and awesome pictures!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by John Stauffer"
+  },
+  {
+    name: "alexis mott",
+    company: "",
+    review: "Such a great experience. Rich is very well versed in his work. He is such genuine person and is passionate about what he does and that reflects in the experience.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by alexis mott"
+  },
+  {
+    name: "Julia Cristino",
+    company: "",
+    review: "I did not know what to expect when my employer said I needed to get professional headshots done. Right away, as soon as I walked into the studio I knew this was going to be a great person to work with. I felt relaxed right away. I will recommend Rich to anyone I run into.  Thank you for the great experience and I will definitely be back.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Julia Cristino"
+  },
+  {
+    name: "Zach Love",
+    company: "",
+    review: "I was very impressed with Richard’s professionalism, skill set, and experience in taking excellent portraits for my company!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Zach Love"
+  },
+  {
+    name: "Kris Fraser",
+    company: "",
+    review: "Richard was a pleasure to work with. Excellent pictures very professional throughout!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kris Fraser"
+  },
+  {
+    name: "Dooze1",
+    company: "",
+    review: "This was a great experience. Richard is extremely professional and made this process fun.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Dooze1"
+  },
+  {
+    name: "Pamela Adam",
+    company: "",
+    review: "Super awesome experience! Thank you!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Pamela Adam"
+  },
+  {
+    name: "Rossi Mena",
+    company: "",
+    review: "My experience with Richard Waine Photography was exceptional. From the moment I stepped into the studio, I was greeted by a warm and inviting atmosphere. Richard has an incredible talent for making clients feel at ease, and I immediately felt comfortable during the entire shoot. He not only provided expert guidance but also took the time to understand my preferences, resulting in headshots that perfectly captured my personality and professional image. The quality of the photographs exceeded my expectations, thanks in part to the exceptional skills of the makeup artist, @lionel_makeup, who worked on the session. Their attention to detail and expertise enhanced the overall experience and contributed to the stunning final results. I highly recommend Richard Waine Photography to anyone in need of headshot photography—they excel at creating a comfortable environment, providing expert guidance, and delivering exceptional results.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rossi Mena"
+  },
+  {
+    name: "Kelley V",
+    company: "",
+    review: "Excellent session, very professional and thought provoking. Appreciate the time and patience.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kelley V"
+  },
+  {
+    name: "Bud Megargee",
+    company: "",
+    review: "Excellent experience. A great adventure",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Bud Megargee"
+  },
+  {
+    name: "LaTricia Morris",
+    company: "",
+    review: "Absolutely LOVE seeing the level of expertise. The whole process was incredibly well thought out and the photography looks amazing!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by LaTricia Morris"
+  },
+  {
+    name: "Sommer VanBrunt",
+    company: "",
+    review: "Richard and his team made me feel completely at ease during my entire shoot.  Richard does a great job creating an atmosphere that is relaxed so that you aren't feeling overwhelmed in being the center of attention.  His directive is supportive and he takes amazing photos!!  I couldn't be more pleased with how my headshots turned out!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sommer VanBrunt"
+  },
+  {
+    name: "Hope Wagner",
+    company: "",
+    review: "Richard made this an easy and enjoyable experience that captured everything I wanted.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Hope Wagner"
+  },
+  {
+    name: "Don Carrick",
+    company: "",
+    review: "Had a blast with Richard. Thanks dude, great pics",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Don Carrick"
+  },
+  {
+    name: "Lindsay Faccenda",
+    company: "",
+    review: "Great experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lindsay Faccenda"
+  },
+  {
+    name: "Missy Argall",
+    company: "",
+    review: "Best pictures ever!  Thank you Rich!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Missy Argall"
+  },
+  {
+    name: "Kimberly Weidman",
+    company: "",
+    review: "Who likes having their photograph taken? Me now … if it’s with Rich. First, he spends a fair amount of time just talking, a perfect way to get comfortable with each other. Then he explains the posing process and what to expect. From there, it’s bright lights and the magic happens. So thankful for this experience. With more than 10,000+ headshots to his credit … he’s a pro every step of the way. Thanks, Rich!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kimberly Weidman"
+  },
+  {
+    name: "Lucia Saldana",
+    company: "",
+    review: "It was the best headshot I have ever had’ Richard made it so easy and knows exactly what he’s doing. He makes it fun and makes you feel comfortable. I would only go to him from now on and will recommend to everyone I know.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lucia Saldana"
+  },
+  {
+    name: "Sara Beth Kohut",
+    company: "",
+    review: "Had a great time working with Rich. He was very patient with my stray hairs and making sure I was satisfied with my photos.  I  got a great selection of photos!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sara Beth Kohut"
+  },
+  {
+    name: "michaelf",
+    company: "",
+    review: "Great experience!!  Made it easy and fun!  Head shot session in Lancaster!  Thank you!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by michaelf"
+  },
+  {
+    name: "William Ojeda",
+    company: "",
+    review: "I had an amazing experience! This was my first professional photo shoot. It was such a great time and had a lot of fun!! I highly recommend!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by William Ojeda"
+  },
+  {
+    name: "Omar Alvi",
+    company: "",
+    review: "Had a blast! One of the funnest experiences i have had.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Omar Alvi"
+  },
+  {
+    name: "Jon Erlien",
+    company: "",
+    review: "Richard is an amazing talent that defines the word \"expert\". He is a master at his craft and gives his clients 110%. Not only did he help me with my business, but he helped raise my confidence. I can't recommend Richard enough. He's worth the money and the investment in yourself.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jon Erlien"
+  },
+  {
+    name: "Jessica Hollinger",
+    company: "",
+    review: "Working with Rich was a fantastic, top notch experience.  He was professional, friendly and created a relaxed environment.  His photography is out of this world and I couldn't be more pleased with the results.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jessica Hollinger"
+  },
+  {
+    name: "Jennifer Hollister",
+    company: "",
+    review: "Richard Waine photographed my husband Bob who needed professional head shots for a website. A quick search of photographers in the Lancaster and Harrisburg areas led us to Richard’s website, and we found his work remarkable. The quality and style stood out from all other photographers. Despite our short deadline Richard cleared a day to focus on my husband. As the session began, we had a conversation where Richard was careful to understand who Bob is and what he wanted to convey in the photographs. The experience was intense at times, fun and fueled by positive energy - exactly what was needed to capture the perfect shots. Richard is personable and highly skilled, and focused on achieving excellence for his clients. We couldn’t recommend him more highly.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jennifer Hollister"
+  },
+  {
+    name: "Robert Hollister",
+    company: "",
+    review: "It was a great a experience.  Talented professional!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Robert Hollister"
+  },
+  {
+    name: "A M",
+    company: "",
+    review: "Very professional, knowledgeable and patient process.  I highly recommend his services!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by A M"
+  },
+  {
+    name: "Debbie Dupler",
+    company: "",
+    review: "Rich is a true professional. He made the experience enjoyable!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Debbie Dupler"
+  },
+  {
+    name: "William Kitsch",
+    company: "",
+    review: "Coaching made all the difference.  Love the process and the images.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by William Kitsch"
+  },
+  {
+    name: "Christian Heckman",
+    company: "",
+    review: "Rich did an excellent job on my photos. It was a blast!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Christian Heckman"
+  },
+  {
+    name: "Jodi Yiengst",
+    company: "",
+    review: "Richard is AMAZING! Trust the process, have fun and embrace how amazing he is going to make you look! Thank you for capturing images I LOVE!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jodi Yiengst"
+  },
+  {
+    name: "Tracy Lisi",
+    company: "",
+    review: "Always a great experience. Photos never disappoint!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tracy Lisi"
+  },
+  {
+    name: "Rich Aquino",
+    company: "",
+    review: "Excellent experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rich Aquino"
+  },
+  {
+    name: "mruby410",
+    company: "",
+    review: "Great team. Quick and effective. Direct enough to get you where you need to be. Highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by mruby410"
+  },
+  {
+    name: "Mark Neely",
+    company: "",
+    review: "Awesome help getting the best look!\nThank you!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mark Neely"
+  },
+  {
+    name: "Rob Wit",
+    company: "",
+    review: "I met up with Richard today for an updated headshot and all I can say is the guy knows what he’s doing. He had a plan, knew exactly what to do and how to get It out of me. I recommend anyone looking for a headshot go see Richard. All he cares about is making sure you’re happy with the outcome and will take as many shots as It takes. Very happy with the results. Thanks again Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rob Wit"
+  },
+  {
+    name: "Chris Sciamanna",
+    company: "",
+    review: "A true professional. He put me at ease can captured images of me like I'd never seen before. He knows exactly what he's doing, exactly what he's looking for an knows exactly when he sees it - even when it's only very slightly different than the last images. Brace yourself - it's not inexpensive - but well worth it. I would recommend him to others for sure.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Chris Sciamanna"
+  },
+  {
+    name: "Grace Shoemaker",
+    company: "",
+    review: "Enjoyed my photo session and took great pictures! Thank you!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Grace Shoemaker"
+  },
+  {
+    name: "carlos chavez",
+    company: "",
+    review: "Working with Richard was one of the best professional experiences I have ever had. Richard delivers a exceptional product while making the customer comfortable and working with them thought the entire process. I would highly recommend Richard Waine Photography for all of your professional needs.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by carlos chavez"
+  },
+  {
+    name: "David January",
+    company: "",
+    review: "Richard has an amazing ability to capture the moment.  I was very pleased with his work!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by David January"
+  },
+  {
+    name: "Logan W",
+    company: "",
+    review: "Richard has great personality and technique. Made the process fun for me.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Logan W"
+  },
+  {
+    name: "Alley Gordon",
+    company: "",
+    review: "Richard was awesome to work with. Made me look very professional and I love my picture! Can’t wait to see the final result! I wouldn’t say I’m a great picture taker so I was pleasantly surprised.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Alley Gordon"
+  },
+  {
+    name: "Patrick Lloyd",
+    company: "",
+    review: "Richard made things incredibly easy!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Patrick Lloyd"
+  },
+  {
+    name: "Richard White",
+    company: "",
+    review: "Awesome personality and a great photographer!!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Richard White"
+  },
+  {
+    name: "Lauren Garner",
+    company: "",
+    review: "Fun time, great direction, and perfect posture explanation - led to the best picture I’ve ever had taken of me in my entire professional career! Thanks for everything!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lauren Garner"
+  },
+  {
+    name: "Rachel Bitner",
+    company: "",
+    review: "Richard was professional and fun.  He not only knows what he's doing, but makes the process enjoyable and personal.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rachel Bitner"
+  },
+  {
+    name: "Jodi Stauffer",
+    company: "",
+    review: "What a great experience. Rich is a real professional, makes it fun, and delivers an experience like no other.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jodi Stauffer"
+  },
+  {
+    name: "Dylan Patrick",
+    company: "",
+    review: "Richard is an exception headshot photographer and all around awesome human being. I had a wonderful experience and would highly recommend him to anyone looking to take their public image to the next level. Thanks again Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Dylan Patrick"
+  },
+  {
+    name: "Aaron Groff",
+    company: "",
+    review: "Prior to the photo shoot, we enjoyed a congenial conversation about life as he carefully & methodically introduced  me to his style of photography. This relaxed atmosphere, I believe, prepared me for the photo shoot yielding a great result.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Aaron Groff"
+  },
+  {
+    name: "Adrienne Miller",
+    company: "",
+    review: "personable, professional and creative with end goal of accurate branding",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Adrienne Miller"
+  },
+  {
+    name: "Agricultural Veterinary Associates",
+    company: "",
+    review: "Richard did a great job for me with a head shot. Very professional, high quality and at the same time helped to make the whole experience enjoyable. Highly recommend Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Agricultural Veterinary Associates"
+  },
+  {
+    name: "Justin Ide",
+    company: "",
+    review: "Richard was very responsive and helpful in all aspects of our work together, and his professionalism is unparalleled. Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Justin Ide"
+  },
+  {
+    name: "Keith Wann",
+    company: "",
+    review: "Both my kids, 10 and 12, needed professional acting headshots.  The results were a vast improvement on what we currently had.  Richard was an ultimate professional and guided the kids through what they needed to do.  Our agent was also impressed with the results and felt confident they could start submitting our kids for auditions right away.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Keith Wann"
+  },
+  {
+    name: "Joshua Landis",
+    company: "",
+    review: "Don’t waste your time and money going anywhere else.  Richard took the time to explain the entire process and the why behind it.   His pursuit for perfection shows in his work.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joshua Landis"
+  },
+  {
+    name: "Kevin Bledsoe",
+    company: "",
+    review: "Richard is a master of his craft and he really knows how to get the best images from his clients. It takes a very talented photographer to get the best out of their client during a shoot and to capture their best moments. Thank you for all of your hard work and I'm looking forward to working with you again in the near future.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kevin Bledsoe"
+  },
+  {
+    name: "Cody Bort",
+    company: "",
+    review: "Richard's ability to capture a great frame is evident from his portfolio. What I really liked about working with him was how he makes that happen. We spent a while chatting before we started. After learning about me and my reasons for booking a session, he was able to coach me towards getting even better results than I was expecting. He has an excellent process and I recommend him highly to anyone in the area looking for a headshot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Cody Bort"
+  },
+  {
+    name: "Robert Feiner",
+    company: "",
+    review: "Richard is incredibly attentive and a pleasure to work with. What a great experience! Highly recommended.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Robert Feiner"
+  },
+  {
+    name: "Chuck Sierk",
+    company: "",
+    review: "What an awesome experience! Richard made me feel comfortable and had me laughing. Good times with an all around great guy! Never before would I have believed I'd enjoy a photo shoot... I'm a believer now, and you should too.\n\nUpdate: It was time for a branding update and I knew I needed the best headshot photographer in Lancaster PA for the job! Richard and I had a blast and I'm pumped to get the final product back. If you want to look your best, go to the best! Thank you Richard Waine!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Chuck Sierk"
+  },
+  {
+    name: "Joe Migliore",
+    company: "",
+    review: "I struggle to “look natural” for photos but his coaching made all the difference.  Thanks!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joe Migliore"
+  },
+  {
+    name: "Laura Jacobs",
+    company: "",
+    review: "Thank you for a great experience! I am very happy with the pictures and it was nice to take as many as needed!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Laura Jacobs"
+  },
+  {
+    name: "Pete Costanzo",
+    company: "",
+    review: "Richard is welcoming, professional, personable, and brilliant with his work.  He takes the time to understand exactly what you're trying to portray and present through his amazing photography.  Highly recommended!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Pete Costanzo"
+  },
+  {
+    name: "Kelly Gooch",
+    company: "",
+    review: "Richard was very timely in responding to my original inquiry and providing helpful information to prepare. He was intentional in understanding my needs and asking questions to know best what type of look was needed. During the shoot he was organized,  helpful, and inquisitive,  making the experience enjoyable.  The end product was a direct result of his experience and coaching.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kelly Gooch"
+  },
+  {
+    name: "James Zimmerman",
+    company: "",
+    review: "Richard did an amazing job, I couldn’t ask for a better headshot.  I consider my standards very high in who I choose to recommend but I wouldn’t hesitate to recommend Richard to anyone.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by James Zimmerman"
+  },
+  {
+    name: "Eun Jun Choi",
+    company: "",
+    review: "Excellent photographer! He helped me select an approachable business look for my headshot. Wonderful experience. Highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Eun Jun Choi"
+  },
+  {
+    name: "Kristin Marino",
+    company: "",
+    review: "Gave directions and got great shots",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kristin Marino"
+  },
+  {
+    name: "Joseph Markle",
+    company: "",
+    review: "Rich took great pics and was a pleasure to talk to. I’d highly recommend working with him. 👍",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joseph Markle"
+  },
+  {
+    name: "Jduhgee C",
+    company: "",
+    review: "Awesome Photos with great instructions!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jduhgee C"
+  },
+  {
+    name: "William Nettles",
+    company: "",
+    review: "Loved it great job",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by William Nettles"
+  },
+  {
+    name: "Jaden Levin",
+    company: "",
+    review: "great photographer! headshots very nice.!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jaden Levin"
+  },
+  {
+    name: "Joshan Philip",
+    company: "",
+    review: "He’s very outgoing and makes the whole process easy and smooth",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joshan Philip"
+  },
+  {
+    name: "Angelica Lopez",
+    company: "",
+    review: "He did headshots for my workplace and was very fun to work with. Highlight was the wonderful advice given for posing and looking best for the camera!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Angelica Lopez"
+  },
+  {
+    name: "Jennifer Fitzgerald",
+    company: "",
+    review: "This was nothing like the usual awkward photo session. Rich was incredibly professional, extremely funny, and detail-oriented. He made me feel completely at ease and even took the time to adjust my hair so everything looked perfect. I couldn’t be happier with the experience",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jennifer Fitzgerald"
+  },
+  {
+    name: "Renee French",
+    company: "",
+    review: "Richard immediately builds trust and puts you at ease! He has the expertise and awesome relating skills to highlight your best you! Great experience working with him!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Renee French"
+  },
+  {
+    name: "Thomas Polansky",
+    company: "",
+    review: "Richard was great, knows what he is doing to get the best shot!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Thomas Polansky"
+  },
+  {
+    name: "Erik Smith",
+    company: "",
+    review: "Rich made the process of getting my headshot comfortable and fun. He is great to work with!\n\nThe quality of the shot was top notch as well!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Erik Smith"
+  },
+  {
+    name: "Chad Snyder",
+    company: "",
+    review: "Very professional and a very fun person to work with.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Chad Snyder"
+  },
+  {
+    name: "Michelle Kerns",
+    company: "",
+    review: "My photo shoot was an amazing experience!  He made me feel so comfortable and confident.  Ladies, no need to worry about silly imperfections, follow his guidance-you won’t be disappointed!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Michelle Kerns"
+  },
+  {
+    name: "Kate",
+    company: "",
+    review: "I was so nervous when I got to the studio, BUT Rich made me feel relaxed and happy.\nFirst time I’ve ever had a true photographer take my picture….. first time was the greatest time !!\nThank you Rich for making it fun !!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kate"
+  },
+  {
+    name: "Scott Kramer",
+    company: "",
+    review: "Awesome experience!  Had no idea how cool taking a picture could be. Extremely professional from the start!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Scott Kramer"
+  },
+  {
+    name: "Megan Pinker",
+    company: "",
+    review: "Richard was AWESOME! I am very camera shy & he made it very easy. Thank you so much!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Megan Pinker"
+  },
+  {
+    name: "James Gagliano",
+    company: "",
+    review: "A Great experience with a top professional in his field. Highly recommended.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by James Gagliano"
+  },
+  {
+    name: "Rhonda Lord",
+    company: "",
+    review: "Rich was so professional and never knew getting a picture could be so fun, and educational!!!  Thanks Rich!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rhonda Lord"
+  },
+  {
+    name: "Fran Cooper",
+    company: "",
+    review: "Richard is amazing!  He has an incredible eye and is truly gifted.  He will see the best in you and bring that out in your photos.  Thanks Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Fran Cooper"
+  },
+  {
+    name: "Wendy Laubach",
+    company: "",
+    review: "Richard made this process painless and me look better than I actually do!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Wendy Laubach"
+  },
+  {
+    name: "Todd Keagy",
+    company: "",
+    review: "What an incredible experience!  It was the best picture I’ve ever had taken and Rich has the patience of a Saint.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Todd Keagy"
+  },
+  {
+    name: "Kelsey Staab",
+    company: "",
+    review: "Great time! Makes the process super easy!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kelsey Staab"
+  },
+  {
+    name: "Ethan Haymovitz",
+    company: "",
+    review: "This dude rocks. He takes awesome photos. Fun to work with too.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ethan Haymovitz"
+  },
+  {
+    name: "Samantha Murphy",
+    company: "",
+    review: "This was a fun, helpful and super productive experience! I was nervous cause taking pics of myself isn't my thing- but I actually enjoyed it and got pics I love!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Samantha Murphy"
+  },
+  {
+    name: "Casey McKay",
+    company: "",
+    review: "Richard Wayne Photography is remarkably easy to work with. I appreciate the process and having input.  End product is fantastic!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Casey McKay"
+  },
+  {
+    name: "Stephen Clark",
+    company: "",
+    review: "Excellent and very professional!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Stephen Clark"
+  },
+  {
+    name: "Sam Wilson",
+    company: "",
+    review: "Amazing, 5-stars at a minimum!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sam Wilson"
+  },
+  {
+    name: "Larry M",
+    company: "",
+    review: "Great experience throughout!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Larry M"
+  },
+  {
+    name: "Erik Hess",
+    company: "",
+    review: "Great guy to work with!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Erik Hess"
+  },
+  {
+    name: "Nora Castro",
+    company: "",
+    review: "I highly recommend Richard Waine Photography. Richard resolved to create for me an authentic image that reflected the brand I sought to promote. He did not conclude the session until that result was achieved. To do so, he employed the services of an award-winning makeup artist (who stayed for the duration of the session to apply touch-ups as needed), maximized lighting, and educated me on facial expression/alignment and body positioning techniques that enhance natural features. With his friendly, welcoming manner, he made the whole process fun.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nora Castro"
+  },
+  {
+    name: "Jeff Brohawn",
+    company: "",
+    review: "Top notch service and even more amazing photos for my entire team. I own a mortgage company with 5 locations across the US. Richard did the photos for everyone in my HQ and also helped facilitate the heads shots for everyone else in my other locations. All head shots have the same look, feel and quality. The work that Richard did for us has been an amazing complement to the employee directory on our website. Will use again and again!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jeff Brohawn"
+  },
+  {
+    name: "Brandon Lesagonicz",
+    company: "",
+    review: "Richard is without a doubt one of the most knowledgeable photographers i have ever worked with. Rocking out and fun while learning how headshots should be. Whether its a corporate occasion or just to update a models portfolio anyone should absolutely work with him!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Brandon Lesagonicz"
+  },
+  {
+    name: "Ronit Henriquez",
+    company: "",
+    review: "Richard is good at what he does. He is very charismatic and made me feel at ease during the photo session. If you are looking for a professional head shot, I recommend giving Richard a shout.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ronit Henriquez"
+  },
+  {
+    name: "Sharon Moscarell",
+    company: "",
+    review: "I was recommended to Richard by a friend so I contacted him and he was very responsive and friendly from the beginning.  He took the time to explain the whole process with me.  My daughter is 9 years old and he has been taking her headshots of her for a couple of years now and they turned out so professional.  They were amazing.  My daughter, Bree really enjoys having Richard do her photo shoots and he makes her feel comfortable and just has fun with it and plays heavy metal music for her.  I would recommend Richard to anyone who wants professional shots taken.  You will not be disappointed.  Richard you are a great photographer with a great personality.  I cannot wait until Bree’s next photo shoot with you.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sharon Moscarell"
+  },
+  {
+    name: "Lori Titus",
+    company: "",
+    review: "There is a huge difference between an actor's headshot, a corporate headshot, and a pretty picture.  Plus, different looks and lighting techniques go in and out of fashion.  (Remember when black and white headshots were all the rage?  And when submissions were all done with 8x10's by mail?)\n\nRichard networks with CD's and other photographers to learn and understand what CD's look for in an actor's headshot.  What catches the eye, and why.  His technique provides that polished look that tells the CD \"I am a professional actor, this is what you get.\"\n\nMy entire family has returned to Richard multiple times as our looks have changed, and we are getting ready for our new round of headshots.  He always takes the amount of time necessary to get the shots we need, regardless of how long or short it takes.  No rushing, no hurries.\n\nOh, yeah, and don't tell him this, but he undercharges for his work.  You definitely get more than what you pay for, between time, knowledge, and finished product.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lori Titus"
+  },
+  {
+    name: "Zane Browne",
+    company: "",
+    review: "If there were 6 stars I would of chose that. Professional, upbeat, focused, and passionate with his work. In my photo shoot he was able to turn posing and smiling into just more than pictures, but a great experience all around.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Zane Browne"
+  },
+  {
+    name: "carla saylor",
+    company: "",
+    review: "Richard strives to capture your authentic best look. His attention to detail and lighting combined with strong communication skills and advanced training will yield a headshot you'll love and use often until it's time for you to update your image with a return visit. I highly recommend Richard Waine Photography as your headshot specialist. Even if you're not used to being in front of the camera, Richard is adept at creating a relaxed and enjoyable experience with killer results.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by carla saylor"
+  },
+  {
+    name: "Zachary Schober",
+    company: "",
+    review: "First class, would recommend to everyone in need of a quality headshot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Zachary Schober"
+  },
+  {
+    name: "Naomi Beach",
+    company: "",
+    review: "I can highly recommend Richard Waine for headshot photography. I don't always feel comfortable in front of a camera, but Richard's skill and personality made me feel relaxed. In just a short time, he was able to capture the perfect image.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Naomi Beach"
+  },
+  {
+    name: "Chad Hake",
+    company: "",
+    review: "Professional and experienced. Great to work with and the  headshots I got for my website were amazing. I will do continue to use in the future and I recommend using Richard if you want some awesome photography!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Chad Hake"
+  },
+  {
+    name: "chris timmons",
+    company: "",
+    review: "Richard is great at catching the essence of who you are. There are 100's of people who do head shots, but there is only a handful that do them well. Richard does better than well he is in my opinion the best. I will only use Richard for my head shots.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by chris timmons"
+  },
+  {
+    name: "Erick Huertas",
+    company: "",
+    review: "Professional and easy going. Walks you through every step in a calm, cool collect environment.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Erick Huertas"
+  },
+  {
+    name: "Martin Valins",
+    company: "",
+    review: "As a musician I hired Richard for some publicity head shots. It was great  to work with him. He made the whole process fun and easy. I would without hesitation recommend this fine Photographer and all round good guy.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Martin Valins"
+  },
+  {
+    name: "B C",
+    company: "",
+    review: "Great to work with. Very Professional. Will definitely be back.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by B C"
+  },
+  {
+    name: "David Ziegler",
+    company: "",
+    review: "Rich was great to work with and really brings out your best.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by David Ziegler"
+  },
+  {
+    name: "Jenny Labella",
+    company: "",
+    review: "Rich is a pleasure to work with.  Personable and professional and my pictures came out stunning!  Highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jenny Labella"
+  },
+  {
+    name: "Jordan Luntz",
+    company: "",
+    review: "Great experience! He really works to make sure you feel & look like yourself in the photos.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jordan Luntz"
+  },
+  {
+    name: "Justin Uzarski",
+    company: "",
+    review: "Very professional and great technique to get the perfect picture.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Justin Uzarski"
+  },
+  {
+    name: "Kirk Rizzolla",
+    company: "",
+    review: "Very productive and kept me smiling!  Great results too!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kirk Rizzolla"
+  },
+  {
+    name: "Kathryn Weill",
+    company: "",
+    review: "Richard is both professional and personable. Upon arriving, Richard made me feel welcomed and at ease which was incredibly comforting as I was a bit nervous. Richard gives clear and helpful advice during the whole photo shoot session. He quickly understand and achieved the look I wanted to achieve. He is also funny which helped me to relax and get a more authentic expression. All and all my time with Richard Waine Photography was a five-star experience.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kathryn Weill"
+  },
+  {
+    name: "Krista Topper",
+    company: "",
+    review: "So much fun! Amazing photos! Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Krista Topper"
+  },
+  {
+    name: "Armando Rojas",
+    company: "",
+    review: "I had the best experience working with Richard Waine! He walked me through every step and made sure that I knew everything I needed to know in order to get the best results. For him \"good enough\" wasn't in his vocabulary, he worked hard with me to create the best product I could get. I highly recommend Richard to anyone in need of his services!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Armando Rojas"
+  },
+  {
+    name: "Roger Zimmerman",
+    company: "",
+    review: "Professional and expert service, I certainly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Roger Zimmerman"
+  },
+  {
+    name: "Justin Apostolico",
+    company: "",
+    review: "Great guy, even better photographer. Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Justin Apostolico"
+  },
+  {
+    name: "Soukie Tounkara",
+    company: "",
+    review: "Best headshots ever! Seriously made me feel at home in front of the camera, highly recommend. 10/10",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Soukie Tounkara"
+  },
+  {
+    name: "Rita",
+    company: "",
+    review: "Puts you at ease and very patient, definitely knows his craft and what works best for each person. Highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rita"
+  },
+  {
+    name: "Frank",
+    company: "",
+    review: "(Translated by Google) Best photo op ever!\n\n(Original)\nBest photo opp ever!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Frank"
+  },
+  {
+    name: "Sabra Madsen",
+    company: "",
+    review: "This was our third session with Richard and we can't say enough about him.  Wonderful experience and really impressive photography that will help to jump-start new opportunities for our family.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sabra Madsen"
+  },
+  {
+    name: "Jay Martin",
+    company: "",
+    review: "I had an enjoyable photo shoot.  Richard was engaging and took the time to explain what he was doing to get the best shot possible and explained each step of the way.  I was very pleased with the results.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jay Martin"
+  },
+  {
+    name: "Helene Williams",
+    company: "",
+    review: "Richard brings professionalism to a new level.  I was incredibly nervous, but he put me at ease immediately.  He is incredibly detail oriented and his coaching was so easy follow.  I highly recommend his services!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Helene Williams"
+  },
+  {
+    name: "Emily Mainquist",
+    company: "",
+    review: "Richard is a fantastic photographer! He is so helpful in making sure you get the perfect photo! He coaches and shows you the pictures as he is taking them so you can learn and adjust to get the shot. He is a perfectionist and it shows in his work. I definitely recommend Richard Waine Photography. He definitely has a customer for life in me and my family.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Emily Mainquist"
+  },
+  {
+    name: "Alisa McGowan",
+    company: "",
+    review: "Simply put.....Richard is awesome! Very enjoyable to work with and knows how to guide you to get the perfect executive headshot. Highly recommended!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Alisa McGowan"
+  },
+  {
+    name: "Cyndi Sensenig",
+    company: "",
+    review: "Had so much fun here, can't wait to see the finished product!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Cyndi Sensenig"
+  },
+  {
+    name: "Savannah Harper",
+    company: "",
+    review: "Great place for headshots! Richard took plenty of time with my son to be sure we got the best possible shot. I highly recommend him.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Savannah Harper"
+  },
+  {
+    name: "Maggie",
+    company: "",
+    review: "Highly recommend him for all your head shots.  He is the best!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Maggie"
+  },
+  {
+    name: "Dianne Summers",
+    company: "",
+    review: "My session with Richard was awesome. He made it fun and knew just how to get the perfect look! I’ve gotten so many compliments on my headshot from actors and directors! Thanks, Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Dianne Summers"
+  },
+  {
+    name: "Jim Deitch",
+    company: "",
+    review: "Awesome experience, and NYC quality in Central PA!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jim Deitch"
+  },
+  {
+    name: "Christine Bacher",
+    company: "",
+    review: "Who knew that having headshots taken could be so fun??!!  Honestly, I wasn't looking forward to my appointment AT ALL.  Having photos taken of myself pushes me way outside of my comfort zone.  Richard made the experience unintimidating and fun.  And as a result, the photos are fantastic!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Christine Bacher"
+  },
+  {
+    name: "Janet Sierk (Your Lancaster Realtor)",
+    company: "",
+    review: "Very Professional and Passionate!  Richard makes sure your Brand comes across in a great unique way.  Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Janet Sierk (Your Lancaster Realtor)"
+  },
+  {
+    name: "Laura Fowler",
+    company: "",
+    review: "Richard was wonderful to work with! High energy, professional, and gave great guidance.  He knows exactly what he's looking for, for the perfect shot and doesn't settled for less than perfect.  Will recommend him to everyone!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Laura Fowler"
+  },
+  {
+    name: "Julie Martin",
+    company: "",
+    review: "We contacted Richard Waine Photography on Friday and he was able to get my son in the next day for a photoshoot.  Richard went above and beyond to the get perfect shots. He was amazing to work with, he made it such a positive experience combining a relaxed atmosphere with superior direction. I received our proofs yesterday and I am beyond thrilled with all of them – now to pick which ones that will get submitted. I highly recommend him and when we need more pictures I know who to call. Thanks Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Julie Martin"
+  },
+  {
+    name: "Versatek Enterprises, LLC Lititz, PA",
+    company: "",
+    review: "It was fantastic working with Richard.  In a fun, relaxed environment he captured my personality.  His attention to detail and instructions made the end result even better.   Highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Versatek Enterprises, LLC Lititz, PA"
+  },
+  {
+    name: "Sarah D'Stair",
+    company: "",
+    review: "Terrific experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sarah D'Stair"
+  },
+  {
+    name: "Tim Hepler",
+    company: "",
+    review: "We booked this appointment very last minute and Richard was very accommodating!  We are very happy with the resulting photos.  The entire experience was very comfortable and enjoyable for our daughter.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tim Hepler"
+  },
+  {
+    name: "Angel Rosario",
+    company: "",
+    review: "Working with Richard was a pleasure he made me feel confident and strong which came out in the images, one of which is my google profile image.  I Highly recommend give him an opportunity to help you change the way you look at yourself and appreciating all of the uniqueness we have to offer.  I feel very confident it will impact my brand and business in a positive way and I look forward to updating the image as I grow in my career.  Thanks Richard you did great!!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Angel Rosario"
+  },
+  {
+    name: "Shannon Young",
+    company: "",
+    review: "Richard made the headshot experience fabulous.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Shannon Young"
+  },
+  {
+    name: "Tyler Trettin",
+    company: "",
+    review: "Rich is great! True professional and knows his stuff. Also he makes it fun and entertaining. My photos were great! Highly recommend",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tyler Trettin"
+  },
+  {
+    name: "Peyton Taylor",
+    company: "",
+    review: "Where can I start? I have never had a professional headshot service before so I knew this would be a treat compared to the JC Penney styled shoots I’m used to, but this far exceeded my expectations.\nRich is a truly calculated and analytical man. He measures everything off of data but also isn’t naive to understand there is such a deep human element to the whole process of capturing someone’s headshot.\nHe studied my face through organic conversation, overly communicated expectations and flow of the process, and delivered - by far - the highest quality headshot service I will ever receive.\nAnd most importantly, I know it will affect my interactions with prospects and future clients because they will see me through one photo. They will see a calm/collected, poised, and professional individual that is dedicated to serve them through my individual expertise. That is one of the greatest gifts Rich has green me.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Peyton Taylor"
+  },
+  {
+    name: "Jordan Rizzo",
+    company: "",
+    review: "Richard was amazing. He was very professional but still made you laugh while taking the photos. He is hands down the best photographer around. Check Richard out he is great!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jordan Rizzo"
+  },
+  {
+    name: "Susan",
+    company: "",
+    review: "Rich was amazing! Extremely knowledgeable and passionate about his work!! Thanks for an amazing session!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Susan"
+  },
+  {
+    name: "Melissa Kushner",
+    company: "",
+    review: "You will have a great time and Rich will capture your authentic self!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Melissa Kushner"
+  },
+  {
+    name: "Conor Adams",
+    company: "",
+    review: "Rich is the most professional and entertaining photographer I have met! My session was efficient and the results were awesome.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Conor Adams"
+  },
+  {
+    name: "Daniel Hagelberg",
+    company: "",
+    review: "My firm hired Richard for my headshot and he was excellent. He brought his equipment to our office, and set everything up so he could get a top quality studio shot. His instructions were easy to follow and the pictures look amazing. He will work with you to get it exactly how you want but if you aren't sure he also has some strong opinions of what is going to make the best shot (and he is correct). Would definitely use him again.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Daniel Hagelberg"
+  },
+  {
+    name: "Rahwa Teklai",
+    company: "",
+    review: "Richard is an extremely experienced photographer, truly enjoyed the session. He will guide you toward achieving an image that represents your profession, brand and personally.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rahwa Teklai"
+  },
+  {
+    name: "Lisa Williams",
+    company: "",
+    review: "Experience was amazing!!! He made me feel so comfortable!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lisa Williams"
+  },
+  {
+    name: "Nicole Brennan",
+    company: "",
+    review: "Great session and definitely invested in making sure that your goals are met",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nicole Brennan"
+  },
+  {
+    name: "Derek Marion",
+    company: "",
+    review: "Thank you for a phenomenal experience!\nLove the energy !!!\nNot only was he professional but personable.\nYou won’t regret finding the best version of yourself",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Derek Marion"
+  },
+  {
+    name: "Andy Carter",
+    company: "",
+    review: "Incredible session that led to images that reflect my best. Richard is a master director, coach, photographer and professional.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Andy Carter"
+  },
+  {
+    name: "JASON GROFF",
+    company: "",
+    review: "An amazing experience with Rich! He simplified  the process and made it so comfortable and fun! Highly recommend for any professional photo shoot!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by JASON GROFF"
+  },
+  {
+    name: "Lisa G",
+    company: "",
+    review: "What a wonderful person to sit with me for over 2.5 hours and talk SEO. Richard was super helpful in pointing me in the right direction and helped de-clutter my message to my ideal client. I have a lot of work to do but have wonderful insight on which direction to take first. I so appreciate his time and expertise!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lisa G"
+  },
+  {
+    name: "SC",
+    company: "",
+    review: "Five star experience, professional studio.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by SC"
+  },
+  {
+    name: "Taylor Darden",
+    company: "",
+    review: "Best picture of me I've ever seen in my life! Richard makes it fun and easy to get a great headshot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Taylor Darden"
+  },
+  {
+    name: "Melissa Sarnocinski",
+    company: "",
+    review: "Great experience for a professional picture.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Melissa Sarnocinski"
+  },
+  {
+    name: "Jen Heimbach",
+    company: "",
+    review: "Richard Waine Photography was great to work with and made my photo look amazing! Thank you!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jen Heimbach"
+  },
+  {
+    name: "rossana Pecoraro",
+    company: "",
+    review: "Thanks for making my very first professional headshot experience an amazing one! Truly enjoyed it!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by rossana Pecoraro"
+  },
+  {
+    name: "PerfectFlyer",
+    company: "",
+    review: "It was a great experience. Easy to follow instructions that led to a great photo. Richard is a great person to work with.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by PerfectFlyer"
+  },
+  {
+    name: "Greg Verbosky",
+    company: "",
+    review: "Richard is the best! Made me feel very welcome and very special! Very detailed and super friendly! Funny as hell too!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Greg Verbosky"
+  },
+  {
+    name: "Abby Millager",
+    company: "",
+    review: "Richard will get you the photos you need, however reluctant a subject you are! Highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Abby Millager"
+  },
+  {
+    name: "Kelly Good",
+    company: "",
+    review: "Fantastic photo shoot!  Enjoyed the experience and the professionalism.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kelly Good"
+  },
+  {
+    name: "Keni Galmai",
+    company: "",
+    review: "Excellent. Richard is amazing! Never thought I can look so pretty and confident in my picture. I will definitely comeback for a headshot!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Keni Galmai"
+  },
+  {
+    name: "Sonya L",
+    company: "",
+    review: "Richard is the best! I have never felt more comfortable in front of the camera or been happier with photos of myself, if you want to see yourself in the best way take a look through Richard's lens. Thank you again!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sonya L"
+  },
+  {
+    name: "Heather Stoltzfus",
+    company: "",
+    review: "I had the best experience! Walking out with a new level of confidence! THANK YOU!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Heather Stoltzfus"
+  },
+  {
+    name: "Jeanette Lamson",
+    company: "",
+    review: "So professional and great time !!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jeanette Lamson"
+  },
+  {
+    name: "Taylor Dunn",
+    company: "",
+    review: "Richard is amazing! Definitely an experience worth having. Thankful for the awesome pictures!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Taylor Dunn"
+  },
+  {
+    name: "Andrea C",
+    company: "",
+    review: "Fun entertaining and finds the positive in it all! Great experience!  Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Andrea C"
+  },
+  {
+    name: "Andrea Devine",
+    company: "",
+    review: "Awesome Experience!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Andrea Devine"
+  },
+  {
+    name: "Randy Covington",
+    company: "",
+    review: "Great session and easy going!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Randy Covington"
+  },
+  {
+    name: "shannon ritter",
+    company: "",
+    review: "Great experience! Appreciate the time and dedication",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by shannon ritter"
+  },
+  {
+    name: "Tom K",
+    company: "",
+    review: "I normally don’t enjoy having my picture taken (I prefer to be taking the picture), but Richard was amazing and I highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tom K"
+  },
+  {
+    name: "Danielle Diggs",
+    company: "",
+    review: "Rich is so great, killed my headshot with in 2 clicks!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Danielle Diggs"
+  },
+  {
+    name: "Daryn Moore",
+    company: "",
+    review: "He did such an amazing job at my office",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Daryn Moore"
+  },
+  {
+    name: "Nicholas Uva",
+    company: "",
+    review: "Rich was professional and made the headshot process enjoyable. He worked with me until I was happy with my headshot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nicholas Uva"
+  },
+  {
+    name: "Ryan Brockman",
+    company: "",
+    review: "Had an awesome experience with a very talented photographer!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ryan Brockman"
+  },
+  {
+    name: "Jesse Hereda",
+    company: "",
+    review: "Rich was engaging, entertaining, and quite a professional! I had a good time and received an excellent product in return. Highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jesse Hereda"
+  },
+  {
+    name: "James Good",
+    company: "",
+    review: "Richard is great! You will be very relaxed and learn a great deal about what goes in to his awesome photos!\nI would diffidently recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by James Good"
+  },
+  {
+    name: "Michael",
+    company: "",
+    review: "Wonderful session: learned, laughed, and got exactly the photos I needed.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Michael"
+  },
+  {
+    name: "Edward Ballach",
+    company: "",
+    review: "He was an expert, never had a photographer who exactly how to take my photo. Brilliant!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Edward Ballach"
+  },
+  {
+    name: "TLiyah Harris",
+    company: "",
+    review: "Amazing super nice",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by TLiyah Harris"
+  },
+  {
+    name: "Kyle Bowen",
+    company: "",
+    review: "Took great pictures and very professional",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kyle Bowen"
+  },
+  {
+    name: "Amanda Mantegna",
+    company: "",
+    review: "Richard made the whole headshot experience fun and natural. He educates you on your optimal posture for the best photo. Truly someone  passionate about his work!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Amanda Mantegna"
+  },
+  {
+    name: "Ashley Nguyen",
+    company: "",
+    review: "Had an amazing time, made very comfortable through the picture.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ashley Nguyen"
+  },
+  {
+    name: "Janell Moser",
+    company: "",
+    review: "Had a lot of fun, Richard is great and very knowledgeable!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Janell Moser"
+  },
+  {
+    name: "Michael Rice",
+    company: "",
+    review: "Headshots for work ! Great and easy experience! Awesome place for photography",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Michael Rice"
+  },
+  {
+    name: "Garth Brown",
+    company: "",
+    review: "Richard made my headshot process quite enjoyable and easy - he proved his reputation! It's always great working with a detailed professional that really loves what he does - excited to see the results!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Garth Brown"
+  },
+  {
+    name: "Tracy K",
+    company: "",
+    review: "Super personable and very talented.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tracy K"
+  },
+  {
+    name: "Diana Dudley",
+    company: "",
+    review: "Amazing service and team!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Diana Dudley"
+  },
+  {
+    name: "Hiren Patel",
+    company: "",
+    review: "True professional. Highly recommended.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Hiren Patel"
+  },
+  {
+    name: "Spencer Baum",
+    company: "",
+    review: "Professional, detailed and the headshots came out great!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Spencer Baum"
+  },
+  {
+    name: "Ralph Murray",
+    company: "",
+    review: "Richard was awesome. I would highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ralph Murray"
+  },
+  {
+    name: "Tricia DeCesare",
+    company: "",
+    review: "Professional & friendly",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tricia DeCesare"
+  },
+  {
+    name: "Nancy Dove",
+    company: "",
+    review: "Had a great time in my headshot session with Rich. He brought out exactly what I was hoping for and more in my photo!! I loved his sense of humor. I also appreciated that he took the time to explain everything to me. Would highly recommend!!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nancy Dove"
+  },
+  {
+    name: "Christina Edgerton",
+    company: "",
+    review: "Rich was very attentive and did a great job at capturing authentic headshots. I’d highly recommend Rich to anyone looking for a professional headshot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Christina Edgerton"
+  },
+  {
+    name: "Jenna Hohlefelder",
+    company: "",
+    review: "Rich made my experience so easy and as someone who doesn’t like to have their photo taken, I had a great time and loved the results! Thanks, Rich!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jenna Hohlefelder"
+  },
+  {
+    name: "Stacy Carcel",
+    company: "",
+    review: "Was a great coach and took my insecurities away to get a great picture!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Stacy Carcel"
+  },
+  {
+    name: "Emily Austin-Bruns",
+    company: "",
+    review: "Rich was the right choice for headshot photographer. My child struggles with body dysmorphia and anxiety and he made her feel at ease. He was an expert communicator helping her to show off the many layers of her personality in the most amazing images.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Emily Austin-Bruns"
+  },
+  {
+    name: "William N. Adote III",
+    company: "",
+    review: "Incredible shoot with Rich. His attention to detail is superb and had a great time connecting with him as well. A 100% recommended service to anyone looking for a seasoned, detailed professional.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by William N. Adote III"
+  },
+  {
+    name: "Lindsay Gerhard",
+    company: "",
+    review: "Richard made the whole process fun!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lindsay Gerhard"
+  },
+  {
+    name: "James Tagg",
+    company: "",
+    review: "Shattered expectations, Richard is a professional in every sense of the word. Well worth the time and investment!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by James Tagg"
+  },
+  {
+    name: "Adelina White",
+    company: "",
+    review: "Great shoot! I was very nervous and Richard made the process so easy and fun! Great guy… amazing at what he does!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Adelina White"
+  },
+  {
+    name: "Jamie",
+    company: "",
+    review: "Wonderful experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jamie"
+  },
+  {
+    name: "Michelle Dahlkemper",
+    company: "",
+    review: "Exceeded all Expectations!  I thought I would be running in and getting a headshot.... lol\nPlan on a few hours. You will need to spend some time getting comfortable with having your picture taken (which I am not), changing clothes and backgrounds, and then reviewing your pictures. I was super pleased with the whole engagement and my final pics were perfect! Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Michelle Dahlkemper"
+  },
+  {
+    name: "Gilad Bar",
+    company: "",
+    review: "Rich is a great photographer and made the whole experience a breeze. We took headshots in the office first thing in the morning and Rich’s bright personality and fun exchange was a great start to my day!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Gilad Bar"
+  },
+  {
+    name: "Sean Williams",
+    company: "",
+    review: "Awesome quality great personality",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sean Williams"
+  },
+  {
+    name: "Mathew Carter",
+    company: "",
+    review: "Rich was very personable and made me feel very comfortable while taking my pictures. Pictures came out looking great!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mathew Carter"
+  },
+  {
+    name: "Samantha Besnoff",
+    company: "",
+    review: "I really enjoyed my head-shot session with Richard Waine Photography.  Very professional during the whole process.  And great results too with my head-shot.  Thank you Richard Waine Photography!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Samantha Besnoff"
+  },
+  {
+    name: "Justin Uczynski",
+    company: "",
+    review: "Much more fun than I expected.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Justin Uczynski"
+  },
+  {
+    name: "Mackenzie Lucas",
+    company: "",
+    review: "We used Richard Waine for company headshots and we loved him! He worked with our schedule, our offsite location, and was warned that the people who were getting their photos taken disliked the previous photographer and that did not phase him! He was great at communicating and all of the people who worked with him that day loved him. Absolutely will use again.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mackenzie Lucas"
+  },
+  {
+    name: "holly mcgloshen",
+    company: "",
+    review: "The best, most professional experience.  I highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by holly mcgloshen"
+  },
+  {
+    name: "mason bram",
+    company: "",
+    review: "Rich’s photography blends the precision of an engineer and craft of an artist, resulting in photos with beauty and perfection.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by mason bram"
+  },
+  {
+    name: "Jenna Swope",
+    company: "",
+    review: "My session with Richard was so fun! He is so easy to work with. I would highly recommend him to anyone.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jenna Swope"
+  },
+  {
+    name: "Christian A. Drye",
+    company: "",
+    review: "Amazing energy!!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Christian A. Drye"
+  },
+  {
+    name: "Pam Harris",
+    company: "",
+    review: "Rich was absolutely amazing. I love my photos!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Pam Harris"
+  },
+  {
+    name: "Jo Ann Kimmick",
+    company: "",
+    review: "Great Job Rich!!!   Very professional.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jo Ann Kimmick"
+  },
+  {
+    name: "Tori G",
+    company: "",
+    review: "Haven't had professional photos taken in 15 years. That being said, best photos of myself I have ever had taken. Highly recommend. So easy to work with.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tori G"
+  },
+  {
+    name: "Victoria C",
+    company: "",
+    review: "Richard did a great job and I highly recommend having a session with him. Professional and fun. All that you need",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Victoria C"
+  },
+  {
+    name: "James Ballan",
+    company: "",
+    review: "Great attention to detail and creates a comfortable environment.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by James Ballan"
+  },
+  {
+    name: "Matt High",
+    company: "",
+    review: "Great experience! Richard was timely & professional and took really great shots. Would go back and I would definitely recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Matt High"
+  },
+  {
+    name: "Erin Kreisher",
+    company: "",
+    review: "Thank you for making this a great experience!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Erin Kreisher"
+  },
+  {
+    name: "Guillermo Xabier Bustamante",
+    company: "",
+    review: "Richard is a very talented photographer. He made the session very enjoyable and the product was incredible.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Guillermo Xabier Bustamante"
+  },
+  {
+    name: "Robin Gibson",
+    company: "",
+    review: "Great photo experience definitely recommend for any of your photo needs. Lots of laughs.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Robin Gibson"
+  },
+  {
+    name: "Christopher Iacona",
+    company: "",
+    review: "Richard's professionalism and work is exceptional!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Christopher Iacona"
+  },
+  {
+    name: "Dan S",
+    company: "",
+    review: "Rich is an expert at what he does.  If you are looking for an amazing head shot for a linked in profile, website,  or even something to hang over the mantle...Rich is the guy for you",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Dan S"
+  },
+  {
+    name: "Adam Snyder",
+    company: "",
+    review: "Amazing headshot. Great way to market yourself and boost confidence. Thanks Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Adam Snyder"
+  },
+  {
+    name: "Steven Lesher",
+    company: "",
+    review: "Knows his business and how to do quality work.   Fun experience.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Steven Lesher"
+  },
+  {
+    name: "Lionel Adriano",
+    company: "",
+    review: "Richard’s talent, skills, and knowledge are unparalleled. Being a makeup artist and I’ve had the privilege of working on countless photo shoots with incredible photographers from around the world, so its within reason that I can make such claims. Not only is he an expert in his field but he is also a pleasure to work with. Every single detail is carefully calculated down to the slightest micro-expression that results in professional, captivating images.\n1000% recommended.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lionel Adriano"
+  },
+  {
+    name: "Nathanael Tagg",
+    company: "",
+    review: "Richard Waine treats photography as an art and a science. The result? An ideal shot of you at your absolute best. In my case, it was the perfect headshot for my book’s back cover. Thanks, Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nathanael Tagg"
+  },
+  {
+    name: "Amy Khan",
+    company: "",
+    review: "Richard, and his makeup artist Lionel, were both AMAZING to work with! From the moment I arrived they made me feel comfortable and walked me through everything. Having never done a shoot before, I needed a bit of coaching, but Richard was patient in his persistence about getting just the right shot. :) I highly recommend working with Richard for your photography needs!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Amy Khan"
+  },
+  {
+    name: "Chris Patille",
+    company: "",
+    review: "From the minute i met Richard Waine i knew their was something special about this guy. He found my need for a new headshot and produced incredible results. I have never felt more confident in myself and my brand until after posting the headshots he took of me. Thanks again Richard you were awesome to work with.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Chris Patille"
+  },
+  {
+    name: "Penny J Hartwell",
+    company: "",
+    review: "Richard is by far the best in what he does.  I can't believe I found such a gem in my backyard. The techniques he uses to capture you as a confident, approachable professional are simply brilliant. While his work is hands down amazing, Richard ,the person, is as well.   His style and approach when working with you is unlike any other experience you have ever had before.  From start to finish, he is engaging and supportive.  It is hard work to get the results he gets,  but you will have fun doing so.  He creates a connection with you and the results are astounding.  I left having made a new friend and knowing I will be back again and again for any photo needs.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Penny J Hartwell"
+  },
+  {
+    name: "Ellen Taylor",
+    company: "",
+    review: "Relaxed. Results. Repeat. Richard's philosophy and approach is perfect to get the best 'you' there is for your headshot. If you have any trepidations about having your picture taken, they will gradually disappear as he walks you through the session. In the end, the photos speak for themselves. I will be back!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ellen Taylor"
+  },
+  {
+    name: "Jedidiah Franklin",
+    company: "",
+    review: "Recently had my head shots done by Richard who has a great eye for the details and has an easy process to put the personality into your look. 5/5 would go again",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jedidiah Franklin"
+  },
+  {
+    name: "Karlo Gesner",
+    company: "",
+    review: "Richard is the man!  Feeling super confident about this headshot.  It's not a typical \"sit and pose\" situation.  Richard is a scientist at bringing out a \"confident and approachable\" feel that makes my headshot stand above the rest.  Highly recommended!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Karlo Gesner"
+  },
+  {
+    name: "Michael Kealey",
+    company: "",
+    review: "Working with Richard was a pleasure. His direction and eye for photography helped to get the best out of me and feel confident during my session. I highly recommend Richard for your image needs. Great facility, equipment, energy, and output.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Michael Kealey"
+  },
+  {
+    name: "Jay Poff",
+    company: "",
+    review: "About a month ago I had an excellent headshot session in downtown Lancaster, PA with Richard Waine of Richard Waine Photography. What I liked most? He didn't leave it to me to know what would look best. Since then, I am getting more callbacks than I got using other headshot images and and hoping to start booking even more work soon.\n\nWe are always our own worst critic and our greatest deceiver. Richard employed an arsenal of easy to follow direction, and attention to minute detail, that drove the session toward capturing me as my best self. Narrowing down the shots was a collaborative effort. Rather than just tossing shots he explained why they don't work. For those we kept, he explained why they were the best image of me as it relates to roles I typically seek and/or my type. Ultimately, we worked, but had a great time.\n\nGive him a call if you want headshots. This is not just someone with a camera...he specializes in headshot photography...and not just for the stage. If you need an image to use for an online resource for work (Attorney, Chef, Financial Advisor, Clergy) he can provide you the perfect shot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jay Poff"
+  },
+  {
+    name: "Jason Ranalli",
+    company: "",
+    review: "Let me preface this review by saying I myself don't like being in front of a camera nor do I feel I ever have any good pictures of myself let alone a quality headshot.\n\nRichard easily managed to fix all that with a bit of coaching.  Just by following his instructions and talking in a way that got my mind off the camera he nailed an amazing shot of me in a short amount of time.\n\nIf you want something that makes you look polished and professional you NEED to go to someone like Richard.  He sweats all the details for you so that your headshot doesn't come off looking like something out of a high-school yearbook.  His work is nothing like the 15-minute, take a few shots against a brick wall, blank-faced expression headshots like you normally see.  It's all about making you look confident, polished,and friendly.\n\nWhile I still don't like being in front of a camera so much I love my headshot and can't recommend this service enough.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jason Ranalli"
+  },
+  {
+    name: "Bruno Kongawoin",
+    company: "",
+    review: "Richard is one of the hardest working and most resourceful person I have come across. His talent and ability as a photographer put him in the league of the best in the world. Peter Hurley the world renown headshot and portrait photographer in the world asked him to be become one of his handpicked Associate Photographer. This is the ultimate testament that the photographs he creates are amongst the best you can have. Being a member of the Headshot Crew which is largest team of headshot and portrait photographer in the world comprising of 12,000 members from 131 countries and growing, his talent had earned him the batch of Mentor. This elite team of associates from the headshot shot helps Peter in coaching those 12,000 members. To further underlining his ability and talent, Peter asked Richard to be one of the 22 Mentors in the group of elite photographer to help him coach, guide and advise other photographers from around the world to improve their craft. I have had the pleasure to work personally with Richard and I am very proud of his achievements in becoming a world class headshot and portrait photographer. I can vouch that Richard is a world class headshot and portrait photographer at your door steps.\nBruno Kongawoin - Perth Western Australia",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Bruno Kongawoin"
+  },
+  {
+    name: "Marygrace Pue",
+    company: "",
+    review: "Richard was absolutely wonderful to work with! I am so thrilled with my headshot. What really impressed me about Richard were both his professional demeanor and his willingness to have fun. We had a blast at my shoot, which I never expected! But by far the best thing I can say about the way that Richard approaches his business is this: We had planned on a two-hour session, but since neither of us were pleased with the results we got during that time, he insisted on continuing the session until we got it right, and I was completely happy with my finished shots. He coached me and worked with me, both of us laughing all the while, and when we were finally done, I had to convince him to accept a higher fee than we had originally agreed upon. That is what impressed me the most about him, and that's what kind of guy he is. Go to him! You won't be sorry!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Marygrace Pue"
+  },
+  {
+    name: "Maurice Jager",
+    company: "",
+    review: "As fellow headshot photographer based out of Europe and the Chief Marketing Officer of the HeadshotCrew, where Richard helps as one of 23 Mentors to continuously train over 12,000 other headshot photographers around the world, I can say that if you book a session with Richard you'll be in good hands. I got to know Richard years ago and am honoured to have witnessed Richard become one of the best headshot photographers in the world. Richard knows like no other that it's important to specialize to deliver the best service and that's what he did. Richard specialized in headshots and he's really good at it. Since you're reading this review, you know you need a perfect headshot. So I suggest you stop waiting or looking around and go to the best in your area and give Richard a call to get your headshots updated.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Maurice Jager"
+  },
+  {
+    name: "Ben Floren",
+    company: "",
+    review: "Working with Rich was informative and entertaining while very professional. A great experience that is much more than the highest quality photo I have ever received .",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ben Floren"
+  },
+  {
+    name: "Katelyn Middleton",
+    company: "",
+    review: "Such a fun experience!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Katelyn Middleton"
+  },
+  {
+    name: "Allison Macchi",
+    company: "",
+    review: "I had an excellent experience with Richard. He is very professional and produced headshots that are likely some of the best pictures that exist of me. Highly recommend! Thanks Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Allison Macchi"
+  },
+  {
+    name: "Colin Baker",
+    company: "",
+    review: "Fun and professional! Getting my headshot taken with Richard was quite an experience and the results were amazing! Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Colin Baker"
+  },
+  {
+    name: "Cindy Hardy",
+    company: "",
+    review: "Fun time!  Richard very informative, patient and great sense of humor!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Cindy Hardy"
+  },
+  {
+    name: "Patrick Kubis",
+    company: "",
+    review: "Rich is great to work with and will get the best out of you!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Patrick Kubis"
+  },
+  {
+    name: "Justin Spannuth",
+    company: "",
+    review: "Richard Waine did a great job bringing out my best looks and took the time to be sure it was right. Richard is a perfectionist and once we were done he was able to show me all the flaws in my previous headshots that will not be in his. I can’t wait to get my final cleaned up images and put them to use.\nReally great job and highly recommend!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Justin Spannuth"
+  },
+  {
+    name: "Lauren Stadel",
+    company: "",
+    review: "Sending everyone I know here!  Fantastic experience, very professional but a whole lot of fun too. Thanks Rich!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lauren Stadel"
+  },
+  {
+    name: "Victor Cortes",
+    company: "",
+    review: "Richard i want to thank you for an amazing time during the photo shoot, awesome work i highly recommended to anyone look to get high quality work.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Victor Cortes"
+  },
+  {
+    name: "Justin Grenier",
+    company: "",
+    review: "Great session with Richard.  I’m a software nerd and he made me feel like a model.  It was legitimately fun!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Justin Grenier"
+  },
+  {
+    name: "Maddie Miller",
+    company: "",
+    review: "Awesome experience!  Nailed the shots!  Thanks Rich!!!  J",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Maddie Miller"
+  },
+  {
+    name: "Joey Garcia",
+    company: "",
+    review: "Awesome experience and great work with the shots. Great to deal with, highly recommended!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joey Garcia"
+  },
+  {
+    name: "Lauren Johnson",
+    company: "",
+    review: "Richard was absolutely great!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lauren Johnson"
+  },
+  {
+    name: "Anthony Mig",
+    company: "",
+    review: "Phenomenal photographer. Knows how to get the perfect shot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Anthony Mig"
+  },
+  {
+    name: "Robert Weiss",
+    company: "",
+    review: "Great experience. Well versed",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Robert Weiss"
+  },
+  {
+    name: "Jimmy Cahill",
+    company: "",
+    review: "Awesome service. Makes the whole process easy and natural",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jimmy Cahill"
+  },
+  {
+    name: "John A. DeMato",
+    company: "",
+    review: "Working with Rich is a real joy.  From the moment that I arrived at his studio, he really made me feel comfortable and confident.\n\nAside from the fact that he clearly understands the subtle nuances of how to capture authentic and compelling expressions, he also took the time to explain the process to me, step-by-step.  There is true value in working with Rich because you'll never approach taking a photograph in the same way again.  I've got some new selfie hacks because of him!\n\nThe headshot Rich captured is my calling card to the world, and he made sure that my final image was sending the right message.\n\nPurchasing a professional headshot is an investment of time and money - and because I worked with Richard Waine Photography, I know my time and money was certainly well-spent, :)",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by John A. DeMato"
+  },
+  {
+    name: "Eric Slodysko",
+    company: "",
+    review: "If you are in need of some serious quality, look no further. Richard Waine wears professionalism to the nines! You can never go wrong with this guy for your photography needs.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Eric Slodysko"
+  },
+  {
+    name: "David Shane McDermott",
+    company: "",
+    review: "From the minute you walk in the door you feel like a celebrity. Richard not only welcomes you and makes you feel at home, but he directs you to a perfect photo. I have never loved a photo of me until I had my first session with Richard. I couldn't choose which photo I liked the most. His direction is phenomenal and he is truly a pro and an artist. Can't wait till my next session. The man makes me look great. He's got a customer for life!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by David Shane McDermott"
+  },
+  {
+    name: "Star Bunner",
+    company: "",
+    review: "Richard is absolutely amazing to work with!  He manages to not only meet but exceed your expectations as soon as you meet him. Tremendously talented and just an all around nice guy!  If you need photos for whatever reason, you would be doing yourself a disservice if you don't get in touch with him . First timers don't be afraid either, he will be able to coach and direct you in a fun and professional way in order to get you that look you want!\nIf I could get headshots every week I would go to him time and time again!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Star Bunner"
+  },
+  {
+    name: "Marcia N",
+    company: "",
+    review: "I dislike getting my picture taken, but he made me feel really comfortable! Pictures were great and an overall fun experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Marcia N"
+  },
+  {
+    name: "Timothy Gageby",
+    company: "",
+    review: "I had a great time working with Rich. He offered great direction and made the experience fun!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Timothy Gageby"
+  },
+  {
+    name: "James Darby",
+    company: "",
+    review: "Richard was a pleasure to work with. Professional and knowledgeable of his craft. He was conscious of my time constraints and also conveyed simple tips/techniques to make the experience easy and comfortable. I highly recommend him without reservation.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by James Darby"
+  },
+  {
+    name: "Heather Mitchell",
+    company: "",
+    review: "Amazing photographer. So much fun to work with. Great insight and coaching. Highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Heather Mitchell"
+  },
+  {
+    name: "forrest borod",
+    company: "",
+    review: "Very professional, excellent guidance and a fantastic result.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by forrest borod"
+  },
+  {
+    name: "RJ Repass",
+    company: "",
+    review: "The headshot session was very enjoyable. Rich was incredible and it’s always a great time with him.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by RJ Repass"
+  },
+  {
+    name: "Debra Davis",
+    company: "",
+    review: "Richard Waine was phenomenal. He's very knowledgeable and just a pleasure to work with. His professionalism and expertise is top notch. I'm more than completely satisfied with the end results. Richard Waine is in a class all by himself and I highly recommend him to everyone.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Debra Davis"
+  },
+  {
+    name: "Craig Toron",
+    company: "",
+    review: "Working with Richard was fantastic. He's a true professional who made the experience extremely enjoyable! The finished result was excellent, and his service and attention to my wants and concerns were exceptional. I wholeheartedly endorse him. He is talented and a joy to work with!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Craig Toron"
+  },
+  {
+    name: "Greg Ricca",
+    company: "",
+    review: "I had a great experience with Richard.  He is very efficient and down to earth.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Greg Ricca"
+  },
+  {
+    name: "Maurice Reese",
+    company: "",
+    review: "Richard was great! I had a fun time having the headshot taken!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Maurice Reese"
+  },
+  {
+    name: "Demario Morgan",
+    company: "",
+    review: "Amazing service, best photographer I’ve had",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Demario Morgan"
+  },
+  {
+    name: "Charles Lemons",
+    company: "",
+    review: "Great guy and he made me look good",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Charles Lemons"
+  },
+  {
+    name: "arielle jenkins",
+    company: "",
+    review: "The best hands down ..very personable and positive",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by arielle jenkins"
+  },
+  {
+    name: "Toi Pollock",
+    company: "",
+    review: "So much guidance! Great headshot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Toi Pollock"
+  },
+  {
+    name: "mike stevens",
+    company: "",
+    review: "Great photography. Amazing",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by mike stevens"
+  },
+  {
+    name: "Abigail",
+    company: "",
+    review: "Rich was great, he was super friendly and made the whole process super comfortable and easy.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Abigail"
+  },
+  {
+    name: "NaysDay ____",
+    company: "",
+    review: "Best pictures I taken",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by NaysDay ____"
+  },
+  {
+    name: "Tracy Varnes",
+    company: "",
+    review: "Great experience and great results.   Highly recommend!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tracy Varnes"
+  },
+  {
+    name: "Rebecca WL",
+    company: "",
+    review: "Such a fun experience! First time getting headshots and they are AMAZING. Richard and his makeup artist Lionel made me feel so comfortable. I learned so much from these consummate professionals and ended up with fabulous photos, all while having a blast. Thank you guys for your attention to detail and for making it so fun - and easy!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rebecca WL"
+  },
+  {
+    name: "Susan Young Nicholas",
+    company: "",
+    review: "Richard executed a super fast group shot, for which we were all grateful.  He is friendly, professional, and makes a person look his/her best or, with his technical wizardry, even better. 😊",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Susan Young Nicholas"
+  },
+  {
+    name: "Paul Alan Lowrie",
+    company: "",
+    review: "My first time getting a headshot done and Rich made it super relaxed and easy. Would recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Paul Alan Lowrie"
+  },
+  {
+    name: "Cindy Nguyen",
+    company: "",
+    review: "Rich, was amazing. He prepped me and got me prepared for all the shots. He made me feel comfortable and beautiful.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Cindy Nguyen"
+  },
+  {
+    name: "mark kennedy",
+    company: "",
+    review: "Made the session extremely enjoyable",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by mark kennedy"
+  },
+  {
+    name: "Ron Wagner",
+    company: "",
+    review: "My last professional photos happened 3 years ago and it was time for a re-do. I found a tremendous photographer…Richard Waine; actually, he found me by sending me a LinkedIn Request. His portfolio is stellar, like nothing I’ve seen before…and his process and meticulous attention to detail sealed the deal.\n\nYesterday, I finished a 5 hour session with Richard. He nailed it, living up to his promise. No corners were cut, no detail missed, no settling for \"just good enough\".  Richard is a true pro, firm but fair in delivering a great experience and product for his customers.\n\nI've spent my entire career in brand marketing.  I know great products, great services, great brands when I see them.  Richard Waine Photography delivers great products, great services, great brand experiences.\n\nWell done, Richard.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ron Wagner"
+  },
+  {
+    name: "Deena Brant",
+    company: "",
+    review: "Great experience.  Excellent photo.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Deena Brant"
+  },
+  {
+    name: "Grace Carr- Harkins",
+    company: "",
+    review: "I had a great time during my session and felt very comfortable having my photo taken. Richard is very funny and comforting!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Grace Carr- Harkins"
+  },
+  {
+    name: "Joselyn Strohm",
+    company: "",
+    review: "Excellent experience! He made me feel comfortable and made the process so easy. I walked in anxious and walked out confident. Thank you!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joselyn Strohm"
+  },
+  {
+    name: "Brian Basile",
+    company: "",
+    review: "Such a great experience, Richard was fun, fast, and we had great conversations!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Brian Basile"
+  },
+  {
+    name: "Ashley Bowman",
+    company: "",
+    review: "Amazing time. Fun and amazing photos",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ashley Bowman"
+  },
+  {
+    name: "Brian Nguyen",
+    company: "",
+    review: "Richard is an absolute pleasure to work with - to be able to bring out your inner beauty is a skill and a talent that is much appreciated. Richard was able to see something in me that I never knew existed. He’s amazing to work with, makes you feel super comfortable and the session was absolutely transformational.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Brian Nguyen"
+  },
+  {
+    name: "E C",
+    company: "",
+    review: "Rich is the consummate professional. Knows his craft and how to bring out the best of his subjects. No matter how unpleasant he/she is.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by E C"
+  },
+  {
+    name: "tony avallone",
+    company: "",
+    review: "Very professional and made it an easy experience",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by tony avallone"
+  },
+  {
+    name: "George Pagano",
+    company: "",
+    review: "This was my first professional photo shoot experience. It far exceeded my expectations. I definitely recommend working with Richard if you have the opportunity! He took the time to coach and walk me through the process in a relaxed setting. Well done!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by George Pagano"
+  },
+  {
+    name: "Jeff Crossan",
+    company: "",
+    review: "I have never felt more confident in myself on and off the screen! It was so much fun! It was easy to be myself and have a great time doing it!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jeff Crossan"
+  },
+  {
+    name: "Ramiro Castillo",
+    company: "",
+    review: "Had a Blast working with Richard. He made me feel comfortable and good in front of the camera. If you are looking for a professional headshot RWP is definitely the place to go. Richard is a professional and he does an outstanding job. If I could give him a 10 star review I would.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ramiro Castillo"
+  },
+  {
+    name: "Nick Klein",
+    company: "",
+    review: "Thanks for the experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nick Klein"
+  },
+  {
+    name: "Jim McAndrew",
+    company: "",
+    review: "Thank you so much for allowing me to sing freely. I usually don’t like myself in most pictures taken by people I don’t know - but I like these a lot. It was so fun! — Jordan McAndrew\n\nWhen my daughter needed knew acting headshots, and since it's difficult for me to photograph my own daughter, I knew we had to go to Richard. He captured my daughter's true essence. We laughed, Jordan sang, (I cried), and the images are simply amazing. If you're in the Lancaster area, (and I'm completely booked, or I'm too far of a drive, etc. LOL) get your shots done by Richard. — Jim McAndrew",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jim McAndrew"
+  },
+  {
+    name: "Alma Bruffy",
+    company: "",
+    review: "Richard Waine is a master photographer. His work is amazing!! He is talented and skilled!!   I am a photographer myself that has reached out to him for his advice and mentorship.  He has helped me tremendously in achieving a higher level in both technical skill and in business.  Thank you so much Richard Waine!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Alma Bruffy"
+  },
+  {
+    name: "Scott Kantner",
+    company: "",
+    review: "Richard is the person you want to do your headshots. Stop searching, don't hesitate, just stop reading this and make the appointment. You will be more than pleased. Richard not only captures you at your best, he teaches you how to look your best whenever you find yourself in front of a camera. You will not find anyone better, nor a more enjoyable studio experience.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Scott Kantner"
+  },
+  {
+    name: "Jerry Camarillo Photography",
+    company: "",
+    review: "I can't say enough about Richard and what he does.  His professionalism and knowledge is incomparable.  He really knows his art and craft well.  in fact the best I have seen.  For those who do not like to have their photos taken, or who say they are not photogenic.  Richard takes all of that anxiety away.  That in of itself is invaluable and makes it worth every penny.  The quality and care with the final product is of the highest quality.  So glad to refer everyone to him.  Thank you very much Richard.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jerry Camarillo Photography"
+  },
+  {
+    name: "Erin Waters",
+    company: "",
+    review: "Superlative photographs and a fun experience in the studio! Thanks for the quick turn around!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Erin Waters"
+  },
+  {
+    name: "Paul Dabrowski",
+    company: "",
+    review: "My wife and I had an exceptional and professional experience. Don’t think twice when booking Richard to take your headshots...you will not be disappointed :)",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Paul Dabrowski"
+  },
+  {
+    name: "Brett Peters",
+    company: "",
+    review: "Literally one of the most professional experiences I've ever had!!! Rich is very passionate about what he does and takes great care in providing you with the best product possible.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Brett Peters"
+  },
+  {
+    name: "E-rich",
+    company: "",
+    review: "Richard Waine, showed me my true self. Being in-front of the camera is very scary and Richard Waine really made me feel relaxed and calm. With all of his hard work I was able to get two beautiful photos of myself.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by E-rich"
+  },
+  {
+    name: "Darnell Furer",
+    company: "",
+    review: "Richard is a true professional ! In addition to having incredible patience he is unbelievably competent .\nHe took his time  to assure the best possible outcome. I highly recommend Richard for your photography needs .",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Darnell Furer"
+  },
+  {
+    name: "Michael Schacht",
+    company: "",
+    review: "The best headshot photographer in Lancaster.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Michael Schacht"
+  },
+  {
+    name: "Greg Thomason",
+    company: "",
+    review: "We live in a visual world, and a headshot which represents the best you can be is essential. Richard's professionalism and knowledge will ensure your headshot reflects the trust and confidence you want to convey.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Greg Thomason"
+  },
+  {
+    name: "Robin Mitchell",
+    company: "",
+    review: "Richard was awesome! He made it fun for me, even though I am very uncomfortable in front of the camera. I would also book Lionel to do your make-up ladies, it feels like he is massaging your face with his make-up brushes. Richard has Lionel touch you up if needed during the shoot. I drove an hour to Richard's studio and it was well worth it! I felt beautiful!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Robin Mitchell"
+  },
+  {
+    name: "damain Cavalo",
+    company: "",
+    review: "First time in the photo world and I must say it is the best experience I have #Push Richard waine made dream come true",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by damain Cavalo"
+  },
+  {
+    name: "Karla Akemann",
+    company: "",
+    review: "Fabulous photos for a fabulous price. Very professional",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Karla Akemann"
+  },
+  {
+    name: "Karaminder",
+    company: "",
+    review: "Richard Waine is the bees knees of Lancaster Photographers! Learning more about the process of how he conducts his headshot sessions gave me supreme confidence that Richard was going to be able to give me what I was looking for:\n\nA headshot that kicks the other headshots to the curb! I wanted my headshot to be all powerful and when compared to my colleagues, to look like I'm the one with the most sh!t together. It's always a competition and any leg up I can get, I'm gonna get! After all, perception is reality.\n\nThank you Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Karaminder"
+  },
+  {
+    name: "Charlie Abrahams",
+    company: "",
+    review: "I've known Richard for a couple of years now as a professional headshot and portrait photographer.  He is one of the most professional and detail oriented headshot photographers I know.  If you are in the Lancaster, PA area and are in need of an updated, professional headshot or know of anyone else who is, run, don't walk to Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Charlie Abrahams"
+  },
+  {
+    name: "Daniel Sommer",
+    company: "",
+    review: "Richard is an all around legend. A great human being with a witty sense of humor and a passion to capture your authentic best look.\nHe strives for perfection. His ability to communicate and teach/coach his clients through his Headshot sessions is amazing. His work has a WOW-Factor to it, comparable with photos usually only seen on glossy magazine covers. If you’re serious about your personal branding, want to up your headshot game and happen to find yourself in Lancaster Pennsylvania, Richard Waine is the best there is.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Daniel Sommer"
+  },
+  {
+    name: "Claudia H",
+    company: "",
+    review: "Such great headshots and a wonderful experience, I recommend Richard's work to anyone who wants a professional, stellar headshot!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Claudia H"
+  },
+  {
+    name: "Matthew Hamilton",
+    company: "",
+    review: "Richard is THE Lancaster headshot photographer. Go to him. Now. You will not regret it. He works with his clients to make sure they have all of the marketing photos they need and that they accurately represent who they are. He is a top tier headshot photographer!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Matthew Hamilton"
+  },
+  {
+    name: "Jayme Chandler",
+    company: "",
+    review: "The photos are amazing.  I was taken back and cried.  Your talent is incomparable.  You captured a piece of me that I thought was long gone.  Here I was looking to up my game professionally, and this experience and photos helped me find the fire that has been laying dormant for quite some time.  Thank You Richard, every minute was SO worth the result.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jayme Chandler"
+  },
+  {
+    name: "Erin Moore",
+    company: "",
+    review: "Great person to work with very fun no pressure.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Erin Moore"
+  },
+  {
+    name: "Kishn Parbadia",
+    company: "",
+    review: "Great quality photo! Rich was great to work with.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kishn Parbadia"
+  },
+  {
+    name: "Kelly MacKinnon",
+    company: "",
+    review: "Definitely brought out the best side of me.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kelly MacKinnon"
+  },
+  {
+    name: "Julie Davis",
+    company: "",
+    review: "Rich was very fun to work with. I thought I would hate the picture but it turned out great. Thank You!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Julie Davis"
+  },
+  {
+    name: "Erik Wrigglesworth",
+    company: "",
+    review: "Very easy to work with!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Erik Wrigglesworth"
+  },
+  {
+    name: "David Eberhardt",
+    company: "",
+    review: "Such a wonderful experience. Made my confidence level go through the roof.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by David Eberhardt"
+  },
+  {
+    name: "Jodi OReilly",
+    company: "",
+    review: "Very informative about what to do and why to do.  Made the process smooth",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jodi OReilly"
+  },
+  {
+    name: "Megan Moore",
+    company: "",
+    review: "Thank you Richard for a great and informative photo shoot!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Megan Moore"
+  },
+  {
+    name: "Todd R. Weiss",
+    company: "",
+    review: "Honestly,  these were the best headshots that anyone has ever taken of me. And working with Rich is a riot. Rich, I think this is the beginning of a beautiful friendship.  :)",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Todd R. Weiss"
+  },
+  {
+    name: "Tara Drury",
+    company: "",
+    review: "Had a wonderful experience! Great interaction and had a fun time!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tara Drury"
+  },
+  {
+    name: "Shannon Cogdell",
+    company: "",
+    review: "Awesome - thank you very much!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Shannon Cogdell"
+  },
+  {
+    name: "Keith Woody",
+    company: "",
+    review: "I had no idea, how amazing this experience would turn out to be.  The quality of what is being provided and experienced way surpassed my expectations.  If you are serious about having head shot session, Richard is who and Richard Waine Photography is where you want to be.  As a Sourcing and Procurement executive of over 25 years, I highly recommend Richard for your corporate head shot needs.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Keith Woody"
+  },
+  {
+    name: "Jackie Mathiot",
+    company: "",
+    review: "Richard is fantastic to work with! It's definitely not the 'old school picture' type of experience! Highly recommend Richard for any photography needs 📸",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jackie Mathiot"
+  },
+  {
+    name: "Mike Hill",
+    company: "",
+    review: "A+++",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mike Hill"
+  },
+  {
+    name: "Faith Iseman",
+    company: "",
+    review: "Rich did a wonderful job! I highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Faith Iseman"
+  },
+  {
+    name: "David Cunningham",
+    company: "",
+    review: "Richard was great to work with and helped my coworkers and I have a great photo experience and most importantly, I'm very happy with my headshot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by David Cunningham"
+  },
+  {
+    name: "Kenny Williams",
+    company: "",
+    review: "This was a very easy process.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kenny Williams"
+  },
+  {
+    name: "Jeff Watkins",
+    company: "",
+    review: "Very personable and professional. Took great shots too!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jeff Watkins"
+  },
+  {
+    name: "Mike",
+    company: "",
+    review: "Great photo!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mike"
+  },
+  {
+    name: "Pat Jackson",
+    company: "",
+    review: "Richard did a great job.  He was very professional and made me look way better than normal.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Pat Jackson"
+  },
+  {
+    name: "Amy Hobby",
+    company: "",
+    review: "Such a great experience!  Rich gave the easiest, but most effective directions to get an amazing result. It was fun, quick, and I love my headshot!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Amy Hobby"
+  },
+  {
+    name: "Dianne Gadbois",
+    company: "",
+    review: "From the first contact to the finished product,  working with Rich was a great  experience! I had personal situations that had to be worked around and he made it easy and made me feel confident.   The photoshoot  was not just productive,  but lots of fun!!  And the final result was nothing short of amazing!  He is a true  professional, highly talented and  very personable.  I can't  recommend  him enough!  If you need truly professional work, you have come to the right place....look no further!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Dianne Gadbois"
+  },
+  {
+    name: "FBI Intel",
+    company: "",
+    review: "Excellent work and 109% professional. Enjoyed the shot and love the final product!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by FBI Intel"
+  },
+  {
+    name: "Justin Cracroft",
+    company: "",
+    review: "Wonderful experience! Rich is the consummate professional and made me feel at ease and confident!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Justin Cracroft"
+  },
+  {
+    name: "Danielle Beck",
+    company: "",
+    review: "Rich is wonderful to work with.  He knows how to get the best out of you for a beautiful picture.  I would highly recommend him.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Danielle Beck"
+  },
+  {
+    name: "SlimDog",
+    company: "",
+    review: "The shoot was amazing and Rich does a fantastic Job!! If you’re looking for quality headshots, this is the Place to go!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by SlimDog"
+  },
+  {
+    name: "Amy Bissonette",
+    company: "",
+    review: "Richard was fantastic to work with! He made the whole process easy and fun.  I highly recommend Richard for your headshot needs!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Amy Bissonette"
+  },
+  {
+    name: "Jilian White",
+    company: "",
+    review: "Richard was amazing. The makeup artist made me look absolutely gorgeous. I would highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jilian White"
+  },
+  {
+    name: "kim dalton",
+    company: "",
+    review: "Richard has been the best decision I've made so far this year in terms of hiring a photographer!  He listened to everything I had to say and what I was hoping to get out of the session.  If he didn't agree with me, he mapped out why he disagreed and how what he could do would be better for me in the long run.  I am over the moon with the end result!  Sure, I could have done this myself, but being a professional I knew what a difference hiring a professional who specializes in a task can do compared to someone who tinkers on the side.  You won't go wrong hiring Richard if you want to look polished and professional in the end!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by kim dalton"
+  },
+  {
+    name: "Shree Patel",
+    company: "",
+    review: "Richard's work speaks for itself. He simply takes the best headshots. The pictures he took of me were easily the best ever taken. He is extremely skilled at what he does and is clearly passionate about his work. He takes the time to get to know you, put you at ease and then smoothly take you through the process. I wouldn't hesitate Richard to anyone who is looking for a world-class headshot!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Shree Patel"
+  },
+  {
+    name: "Josh Outlar",
+    company: "",
+    review: "Be sure to check Richard out if you're in the market for professional headshots. He offers a friendly, customer-focused approach to getting the perfect image.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Josh Outlar"
+  },
+  {
+    name: "Duane Furlong",
+    company: "",
+    review: "Great photographer and really worked hard to provide a top notch headshot that I can use for my business. He makes you feel comfortable and you laugh which was the best part!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Duane Furlong"
+  },
+  {
+    name: "Lenny Le",
+    company: "",
+    review: "Mr. Waine is a great headshot photographer. I have had headshot photographers before, but Rich really knows the intricacies with what makes a good headshot. Even if you're new (or experienced), he knows how to help guide you toward getting the headshot you want.\n\nRich is also easy going and will help you feel at ease during the session with his jokes. Sessions aren't timed and he won't rush you. Also he's one of the few who seem to understand actor's headshots as oppose to the more corporate based ones.\n\nI highly recommend checking him out.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lenny Le"
+  },
+  {
+    name: "Joe Nicholas",
+    company: "",
+    review: "Richard Waine is an incredibly talented photographer.  I am beyond impressed by his process, the experience, and the final result.  If you are looking for headshots, Rich is your guy.  Don't bother looking elsewhere.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joe Nicholas"
+  },
+  {
+    name: "norman jaillet",
+    company: "",
+    review: "Wow, what a fantastic session with Richard Waine Photography. From the moment the team made contact, providing us with tips to the session itself, Richard was a true professional! Kept everyone laughing and engaged throughout the day. Everyone loved their headshots and now we have a consistent branding message to our clients! Highly recommended! Best in the Lancaster area!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by norman jaillet"
+  },
+  {
+    name: "Matthew Miller",
+    company: "",
+    review: "Rich is truly a professional, and was great to work with! I needed a headshot within a limited schedule, and Rich was whiling to work with me, and went out of his way to make it a great experience. I am very pleased with how seamless the entire process was, and how well my pictures turned out.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Matthew Miller"
+  },
+  {
+    name: "John J. Talaber",
+    company: "",
+    review: "Rich was great to work with and he is a true professional! He made me feel at ease and coached me through the session in a way that made me laugh.  I highly recommend him for anyone looking for a professional headshot.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by John J. Talaber"
+  },
+  {
+    name: "James Mikulski",
+    company: "",
+    review: "Richard is a true professional and awesome at what he does.  He takes the time to understand you and your work so the images he captures tell your story.  I highly recommend Richard Waine to anyone looking for a high quality headshot and photo shoot experience.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by James Mikulski"
+  },
+  {
+    name: "Jason Pennell",
+    company: "",
+    review: "Richard was great to work with and he puts a lot of care and attention to detail in his work.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jason Pennell"
+  },
+  {
+    name: "Carin Leisure",
+    company: "",
+    review: "Rich is amazing at his craft. He takes the time to get to know you and exactly what you are looking for in the headshot. His talent and expertise are second to none. The results are incredible. If you are in need of a headshot, he's your guy!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Carin Leisure"
+  },
+  {
+    name: "Mitch Erb",
+    company: "",
+    review: "The session with Richard was professional and fun.  He is detailed oriented and directed me for the best possible photo.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mitch Erb"
+  },
+  {
+    name: "Seshu Badrinath",
+    company: "",
+    review: "Richard and I are both headshot photographers and in Facebook forum we are both members, I raised a question about an issue I was having with my website and he stepped up and offered to help address and fix the problem. Of course, as soon as he saw my website, he suggested that I consider redesign it for better conversion. He sounded like he knew his way around the Squarespace platform and today he launched my newly redesigned website and I couldn't be happier. There were very few bumps along the way. Some of the delays were mine and mine alone, but Richard was incredibly patient but at the same time persistent on getting the project wrapped up. His knowledge of not just the platform but the back end of it to be able to configure SEO elements and factors really impressed me. If you are considering a new website, and Squarespace is the platform of your choice, I wouldn't hesitate asking Richard to work on it. He will take your ideas and implements them. Of course, I threw some crazy options at him and while he considered them, he also didn't hesitate to caution me on the pitfalls of doing things because they only look good. The goal of any website should be offering visitors just the right amount of information, in an elegant way, but with the ultimate goal of converting them into becoming paying clients. I am confident, thanks to Richard, I am well on my way to doing just that. Thank you, Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Seshu Badrinath"
+  },
+  {
+    name: "JY Hicks",
+    company: "",
+    review: "Richard is an excellent photographer who takes the time to explain methods and outcomes.  I could not be more pleased with his work.   I would highly recommend Richard to anyone looking for a professional photographer.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by JY Hicks"
+  },
+  {
+    name: "Heather Wright",
+    company: "",
+    review: "Working with Richard was so easy!  He made me feel very comfortable from the moment I walked in the door to his studio.  He is friendly, funny, and really does a fabulous job!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Heather Wright"
+  },
+  {
+    name: "Jennifer Sanchez",
+    company: "",
+    review: "He was patient, informative, and transparent. All of which were greatly appreciated. He cares about his craft and wants to give you a great experience. Thankful for his work!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jennifer Sanchez"
+  },
+  {
+    name: "Sophia Strawser",
+    company: "",
+    review: "Had an amazing experience with Rich! Within such a short amount of time not only was he able to make me feel comfortable but also get some amazing shots. One of the best photographers I’ve worked with! Thank you!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sophia Strawser"
+  },
+  {
+    name: "Collette Anderson",
+    company: "",
+    review: "Just had a new headshot done with Rich for the first time since finishing grad school & I am totally amazed & over the moon at how well it turned out! He put me at ease & gave very simple instructions & tweaks that definitely translate into the finished product!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Collette Anderson"
+  },
+  {
+    name: "Maritsa Cortes",
+    company: "",
+    review: "Rich is an awesome guy to work with! Made me feel comfortable by getting me to laugh. Highly recommended!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Maritsa Cortes"
+  },
+  {
+    name: "Carine Nyaka",
+    company: "",
+    review: "Richard was the best head shot photographer for my five years old son. He was patient and energetic with my son and understood that my son gets distracted a lot due to the fact that he is five. I would most definitely recommend my daughter, my family and other people to the sessions with Richard. Thanks Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Carine Nyaka"
+  },
+  {
+    name: "Mitch Nugent",
+    company: "",
+    review: "Richard knows how to lead talent to get images that represent them well. Kudos!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mitch Nugent"
+  },
+  {
+    name: "Michele Greatti",
+    company: "",
+    review: "I was delighted with my new photo, and the direction and encouragement the photographer gave me. I would go back to him any time. Cannot recommend enough!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Michele Greatti"
+  },
+  {
+    name: "Jackie Sprout",
+    company: "",
+    review: "Richard (batman) Wayne was quick and efficient. Very nice ro work with!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jackie Sprout"
+  },
+  {
+    name: "William Taylor Day",
+    company: "",
+    review: "Richard was great! Spend some time getting to know each other and creating a relaxed atmosphere. There may be a lot of folks out there that get there photo taken a lot, but i'm not one of them. Richard's coaching is spot on and easy to follow. He makes it super easy for you to walk away with amazing photos!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by William Taylor Day"
+  },
+  {
+    name: "WLC Urbex (WebmasterLC)",
+    company: "",
+    review: "Richard was very professional even know my daughter gave him a challenge, id recommend him to anyone.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by WLC Urbex (WebmasterLC)"
+  },
+  {
+    name: "Stephen Ekema-Agbaw",
+    company: "",
+    review: "Richard was awesome and easy to work with. He knows what he’s doing and he’s good at it. Very personable.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Stephen Ekema-Agbaw"
+  },
+  {
+    name: "Lexi Scott",
+    company: "",
+    review: "He was very patient with me and he helped me create and choose a great shot. Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lexi Scott"
+  },
+  {
+    name: "Kevin Thai",
+    company: "",
+    review: "Richard is a consummate professional. I appreciate his guidance throughout the whole process, listening to me and reassuring me that it's okay to bring up my any concerns I have. Though of course he was the expert, but the process felt more like a collaboration from beginning to end.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kevin Thai"
+  },
+  {
+    name: "Ross McIntire",
+    company: "",
+    review: "Richard is an immensely talented photographer. He is easy to work with and genuinely cares about doing an excellent job. I highly recommend him!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ross McIntire"
+  },
+  {
+    name: "Andrew B",
+    company: "",
+    review: "Rich is an artist.  He coaches you through the entire process resulting in some amazing headshots.  I never knew having your picture taken could be so much fun.  I highly recommend Rich and his services to anyone, especially those who had never had the experience of a professional headshot...it's well worth it.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Andrew B"
+  },
+  {
+    name: "Megan Poff",
+    company: "",
+    review: "Richard is a talented photographer who captures the best version of yourself in one headshot. He is super easy to work with and makes the session fun.\n\nI went back to Richard again, because once I achieved my ideal look, he captured the essence that is me!  I truly adore him. He's the best in the business.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Megan Poff"
+  },
+  {
+    name: "Dr. Samantha Wertheimer",
+    company: "",
+    review: "Working with Rich was a wonderful experience. I was feeling nervous and hesitant about having headshots taken, but Rich was absolutely fabulous to work with. He is kind, professional, enjoyable to be around, and most important, he is an unbelievably incredible photographer.\n\nPrior to your session, Rich will send you preparation guides to review in order to make the most of your session - I found these to be very helpful. Rich was willing to talk with me before my session and answered all of my questions. The day of the session, Rich was warm and welcoming. He explained the entire process as we went along, and he involved me in each step of decision making when choosing my final photos.\n\nI would recommend Rich to everyone. Don't waste your time going anywhere else. :)",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Dr. Samantha Wertheimer"
+  },
+  {
+    name: "Franca Little",
+    company: "",
+    review: "Best photographer I have ever had the pleasure of knowing.  Made me look natural and amazing.  A real keeper.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Franca Little"
+  },
+  {
+    name: "Fabio",
+    company: "",
+    review: "Excellent work!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Fabio"
+  },
+  {
+    name: "Dylan Deals",
+    company: "",
+    review: "Richard Knows how to truly capture the soul within!  His work is without question absolutely FLAWLESS$$$. Highly Recommend",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Dylan Deals"
+  },
+  {
+    name: "Joel Skundrich",
+    company: "",
+    review: "Rich is very professional, and personable while capturing a great headshot. Highly recommend this business to anyone looking to update their professional image",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joel Skundrich"
+  },
+  {
+    name: "LaRonn Zimmerman",
+    company: "",
+    review: "Richard is a Great guy, with a even better sense of humor! I recommend him for all of your photography desires!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by LaRonn Zimmerman"
+  },
+  {
+    name: "Glenn Derle",
+    company: "",
+    review: "Richard was very professional and easy to work with. Very impressed with his work!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Glenn Derle"
+  },
+  {
+    name: "Stephen Condon",
+    company: "",
+    review: "Great photographer!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Stephen Condon"
+  },
+  {
+    name: "Jake Basinger",
+    company: "",
+    review: "Rich was fantastic, great personality, amazing talent.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jake Basinger"
+  },
+  {
+    name: "Barry Braunstein",
+    company: "",
+    review: "Richard is extremely knowledgeable, talented, and great to work with. He strives for perfection, and delivers outstanding value to his clients. He takes the time to understand your needs, concerns, and explains the process along the way. He freely shares his knowledge and experience. Highly recommended!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Barry Braunstein"
+  },
+  {
+    name: "Autumn Sanger",
+    company: "",
+    review: "I had a great time shooting with Richard. He was very informative throughout our session and fun to work with. Not to mention how awesome my new headshots came out. I look forward to working with Rich in the future",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Autumn Sanger"
+  },
+  {
+    name: "Jo Borolla",
+    company: "",
+    review: "The photographer made me feel very comfortable in front of the camera. I do have some challenges with my appearance and he was able to work around them. Two thumbs up!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jo Borolla"
+  },
+  {
+    name: "Julie Dunst",
+    company: "",
+    review: "Today Richard was at Park City Mall giving away as part of the 10,000 headshot event happening across this country. He worked with me until he got it just right. Thanks for this amazing opportunity.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Julie Dunst"
+  },
+  {
+    name: "Hailey Taylor",
+    company: "",
+    review: "Very Performative Photographer , makes sure you are confident and secure in your photos!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Hailey Taylor"
+  },
+  {
+    name: "Sway M",
+    company: "",
+    review: "Awesome photographer.  Highly recommend his services!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sway M"
+  },
+  {
+    name: "Frannie Esparza",
+    company: "",
+    review: "Had an amazing experience!! So satisfied with the results. Not your typical photographer coaching, had fun and the results show it!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Frannie Esparza"
+  },
+  {
+    name: "Anabella Hampton",
+    company: "",
+    review: "Absolutely amazing... so patient with my teenager. Thank you for the amazing photos!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Anabella Hampton"
+  },
+  {
+    name: "Nicole Taylor",
+    company: "",
+    review: "I had the most wonderful experience with Richard. He made me comfortable and captured the most beautiful photo of me!! Highly recommend !!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nicole Taylor"
+  },
+  {
+    name: "Tracey Brand-Sanders",
+    company: "",
+    review: "I am very pleased with the outcome of my service experience.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tracey Brand-Sanders"
+  },
+  {
+    name: "Brigitte Wilson",
+    company: "",
+    review: "Just got the best h professional headshots of my life! Could not recommend this duo more.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Brigitte Wilson"
+  },
+  {
+    name: "Adam Cooperman",
+    company: "",
+    review: "Fantastic photos!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Adam Cooperman"
+  },
+  {
+    name: "Sachin Patel",
+    company: "",
+    review: "Most headshots are awkward & hardly turn out in the way we want … not Richard Waine. Headshot turned out incredible. 10/10 recommend",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sachin Patel"
+  },
+  {
+    name: "Loren Hudziak",
+    company: "",
+    review: "Great experience! Fun crew and quality photography!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Loren Hudziak"
+  },
+  {
+    name: "Tammy Klotz",
+    company: "",
+    review: "Best headshot ever!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Tammy Klotz"
+  },
+  {
+    name: "Greg Tannenbaum",
+    company: "",
+    review: "Great headshot! I would recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Greg Tannenbaum"
+  },
+  {
+    name: "James Creamer III",
+    company: "",
+    review: "Rich did an amazing job at the Evanta event. Quick, painless and great headshot! Thanks Rich!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by James Creamer III"
+  },
+  {
+    name: "Jamie Warren",
+    company: "",
+    review: "Wonderful job!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jamie Warren"
+  },
+  {
+    name: "Richard Foster",
+    company: "",
+    review: "Richard was amazing to work with. Got a great pic out of me. Thanks.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Richard Foster"
+  },
+  {
+    name: "judy mueller",
+    company: "",
+    review: "Working with Richard was a joy from start to finish.  You’re not just going in for headshots.  You are going in for Richard to capture your best self.  His analytical skills allow him to see your best self even before you do.\nHe really was amazing and fun!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by judy mueller"
+  },
+  {
+    name: "Nancy Craven",
+    company: "",
+    review: "Wonderful experience and great photos",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nancy Craven"
+  },
+  {
+    name: "Adam Eberly",
+    company: "",
+    review: "Richard was a pleasure to work with! A true master of his craft. I highly recommend.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Adam Eberly"
+  },
+  {
+    name: "Donald Thomas",
+    company: "",
+    review: "Fun time and happy with how pics came out. Very professional.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Donald Thomas"
+  },
+  {
+    name: "William Burgess",
+    company: "",
+    review: "A professional, operation from start to finish.  The results were flawless.  Thank you, Richard.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by William Burgess"
+  },
+  {
+    name: "Bryan Glatfelter",
+    company: "",
+    review: "Great time, made it a fun relaxing experience.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Bryan Glatfelter"
+  },
+  {
+    name: "Todd Murtoff",
+    company: "",
+    review: "This was an amazing experience! Very informative. Rich made me feel comfortable and coached me through the process. I highly recommend him!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Todd Murtoff"
+  },
+  {
+    name: "Amy Murray",
+    company: "",
+    review: "An amazing experience.  He really works to get great shots and never makes you feel bad.  Just an overall excellent experience",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Amy Murray"
+  },
+  {
+    name: "Rob and Julianne Poff",
+    company: "",
+    review: "Awesome experience. Exceeded my expectations!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rob and Julianne Poff"
+  },
+  {
+    name: "Gavin Gossage",
+    company: "",
+    review: "Richard was great. I found it easy to work with him, and I never get professional pictures taken. Great coach, would recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Gavin Gossage"
+  },
+  {
+    name: "Donata K.",
+    company: "",
+    review: "Richard is a top professional! His recommendations translated to a high quality product.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Donata K."
+  },
+  {
+    name: "Jason Cooley",
+    company: "",
+    review: "I had a session with Richard to get a head shot taken for work and he made the process very enjoyable.  He is easy to work with and gives very clear directions that result in an awesome end product.  Highly recommended!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jason Cooley"
+  },
+  {
+    name: "Jordan Mellinger",
+    company: "",
+    review: "Richard’s process, knowledge, and results are the best!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jordan Mellinger"
+  },
+  {
+    name: "Kevin Bradley",
+    company: "",
+    review: "Miracle worker!!  Thank you, Richard!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kevin Bradley"
+  },
+  {
+    name: "Marquel Forbes",
+    company: "",
+    review: "Richard is the best!  Patient, precise, funny, and he has amazing skills!  He helped me achieve a huge task for my business and it was not easy.  He coached me and helped me to think through how I wanted to present my business. I am so grateful, I highly recommend him!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Marquel Forbes"
+  },
+  {
+    name: "Alyssa Byers",
+    company: "",
+    review: "Rich made my headshots super easy and fun…thanks for the laughs!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Alyssa Byers"
+  },
+  {
+    name: "Colton Corey",
+    company: "",
+    review: "A+++ Super professional and an expert at his craft. I was very impressed with the final photos !",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Colton Corey"
+  },
+  {
+    name: "Joanna Eskin",
+    company: "",
+    review: "Had the best experience! Had SO much fun! Felt completely comfortable and pictures came out fantastic!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Joanna Eskin"
+  },
+  {
+    name: "Marcus De Vasto",
+    company: "",
+    review: "Honestly a wonderful experience, easy to work with and made me look good - which is no easy task. Recommend 100%",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Marcus De Vasto"
+  },
+  {
+    name: "Rachelle Mccollum",
+    company: "",
+    review: "I had a great experience working with Rich! He made me feel comfortable and confident. I would highly recommend him!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Rachelle Mccollum"
+  },
+  {
+    name: "Matt Roberts",
+    company: "",
+    review: "Richard is high-level, to the point and gets it done!  It was a pleasure working with him.  An amazing headshot photographer who runs a great business!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Matt Roberts"
+  },
+  {
+    name: "Matthew McKinney",
+    company: "",
+    review: "I had an incredible experience taking some professional photos with Rich! I would highly recommend him!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Matthew McKinney"
+  },
+  {
+    name: "Brooke Anderson",
+    company: "",
+    review: "Getting professional headshots was something I had wanted to do for a long time. I’m so glad I waited for Rich! Trust me, it is worth the wait. No, He is worth the wait. I can’t say enough wonderful things about the experience. You’ll have to visit his studio yourself.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Brooke Anderson"
+  },
+  {
+    name: "Angela Lopez",
+    company: "",
+    review: "Rich was pretty cool to work with.  I appreciate him and his patience with me.  He has a really open and free personality.  Thank you, Rich... you did an amazing job with this train wreck!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Angela Lopez"
+  },
+  {
+    name: "Jenni Kimpel",
+    company: "",
+    review: "He is great!  He took several images, made me work at it, and had a blast in the process.\n\nHighly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jenni Kimpel"
+  },
+  {
+    name: "Allen Crumley",
+    company: "",
+    review: "This was the best experience I have ever had. Great at pulling me into the photo. Thank you Richard.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Allen Crumley"
+  },
+  {
+    name: "Jose Manuel Rodriguez Martinez",
+    company: "",
+    review: "Great experience and professional. Great working with you Richard",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jose Manuel Rodriguez Martinez"
+  },
+  {
+    name: "Jacob Wasserman",
+    company: "",
+    review: "I’ve never had a professional shoot but Richard made me feel like a seasoned vet in front of the camera. Finding him at the Home Delivery World conference was the highlight of the event. I fully recommend him to anyone who needs a headshot :)",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jacob Wasserman"
+  },
+  {
+    name: "Connor Riley",
+    company: "",
+    review: "Worked hard to get the perfect photo",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Connor Riley"
+  },
+  {
+    name: "Chris Cutti",
+    company: "",
+    review: "Richard was amazing. He made the process of capturing a great headshot easy and fun. Would work with him again anytime.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Chris Cutti"
+  },
+  {
+    name: "Racine Droz",
+    company: "",
+    review: "He was awesome and hilarious",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Racine Droz"
+  },
+  {
+    name: "Jared A",
+    company: "",
+    review: "Richard is a consummate professional. He took the time and extra effort to capture the best head shots I’ve seen. Hands down would work with him again.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jared A"
+  },
+  {
+    name: "Andy Bodrog",
+    company: "",
+    review: "Best photo I ever got!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Andy Bodrog"
+  },
+  {
+    name: "tevin ankle",
+    company: "",
+    review: "Great headshot!! Would recommend",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by tevin ankle"
+  },
+  {
+    name: "Jeanne Rose",
+    company: "",
+    review: "Rich shared his time and energy to create a wonderful headshot session! Wish I had done this sooner.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jeanne Rose"
+  },
+  {
+    name: "Jim McGinley",
+    company: "",
+    review: "Easy to work with; fantastic pics; awesome overall experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jim McGinley"
+  },
+  {
+    name: "Dillon Bomba",
+    company: "",
+    review: "This was my first headshot experience, and Rich made the whole thing extremely fun with a relaxed atmosphere. It was like seeing an old friend you’d never met before. His direction is simple, effective, and he can pull the most expressive faces from you with just a few word. If you need any headshot work done, then look no further!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Dillon Bomba"
+  },
+  {
+    name: "Valerie Wagner",
+    company: "",
+    review: "Richard was absolutely fantastic! He is so good at connecting with people and making them feel relaxed and comfortable. I couldn't have asked for a better session. Thanks Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Valerie Wagner"
+  },
+  {
+    name: "Kelly Fromuth",
+    company: "",
+    review: "Thank you, Rich! So much fun - the best experience for headshots!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kelly Fromuth"
+  },
+  {
+    name: "Andrew Mueller",
+    company: "",
+    review: "Very funny and professional. Loved it.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Andrew Mueller"
+  },
+  {
+    name: "Matthew Klus",
+    company: "",
+    review: "Great work. Fantastic personality for a photographer. My professional headshot came out fantastic.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Matthew Klus"
+  },
+  {
+    name: "Sarah Coleman",
+    company: "",
+    review: "Fantastic time! And wonderful images! Thank you!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sarah Coleman"
+  },
+  {
+    name: "Matt Kohan",
+    company: "",
+    review: "Richard was absolutely great. Was super easy and the photos turned out fantastic. Highly recommend",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Matt Kohan"
+  },
+  {
+    name: "Gregg Hostetter",
+    company: "",
+    review: "Richard was a pleasure to work with and provided exceptional, professional service. Any photography needs I have going forward will be coordinated through him.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Gregg Hostetter"
+  },
+  {
+    name: "Nate Talbot",
+    company: "",
+    review: "Great photos!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nate Talbot"
+  },
+  {
+    name: "CJ Morrison",
+    company: "",
+    review: "Richard did our company’s headshots and did a fantastic job. He made the process fun and knows how to get the best results. Definitely recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by CJ Morrison"
+  },
+  {
+    name: "Mark Shell",
+    company: "",
+    review: "Awesome session very easy to work with and great quality",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mark Shell"
+  },
+  {
+    name: "Adrienne Freeland",
+    company: "",
+    review: "A very wonderful experience. I needed new headshots since mine were quite old. Captured professionalism and my personality perfectly. Thank you!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Adrienne Freeland"
+  },
+  {
+    name: "Sonja Clark",
+    company: "",
+    review: "Richard is an amazing photographer. He knows his craft inside and out and the results show. Highly recommend!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Sonja Clark"
+  },
+  {
+    name: "Jacqueline Johansen",
+    company: "",
+    review: "More than just a photographer, Richard is a quiet expert in human expression. He makes you feel at ease — then draws out the version of you that’s both authentic and compelling. The result is a headshot that works because it feels right. Effortless, but entirely intentional. I have never liked a picture of me so much.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jacqueline Johansen"
+  },
+  {
+    name: "Courtney",
+    company: "",
+    review: "Rich was so incredible to work with! He was fun and engaging and made me feel completely comfortable.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Courtney"
+  },
+  {
+    name: "Jason Tarewicz",
+    company: "",
+    review: "Very professional and knowledgeable experience.  You will be impressed on the finished product.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jason Tarewicz"
+  },
+  {
+    name: "Justin Weber",
+    company: "",
+    review: "Rich is great to work with!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Justin Weber"
+  },
+  {
+    name: "James Jones",
+    company: "",
+    review: "Had such a great time getting to know and work with Rich!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by James Jones"
+  },
+  {
+    name: "Nick Bostic",
+    company: "",
+    review: "Shooting with Richard was a 10/10 experience. I left very satisfied and with a better photo than I had expected. I highly recommend anyone looking for a headshot to go to Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nick Bostic"
+  },
+  {
+    name: "Hunter Stock",
+    company: "",
+    review: "Mr. Waine was accommodating and made me feel comfortable when even though this was my first time getting a headshot. He also showed me some of the editing process and how he perfects the photo.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Hunter Stock"
+  },
+  {
+    name: "Lori",
+    company: "",
+    review: "Best photographer I have ever worked with! Super talented. He makes it so easy! Thank you sir! I will be back.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lori"
+  },
+  {
+    name: "Linda McInnis",
+    company: "",
+    review: "I needed a headshot for a book manuscript submission. Richard was wonderful to work with. I quickly felt at ease, and I am not one to like having my picture taken! I am most happy with the results and highly recommend...",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Linda McInnis"
+  },
+  {
+    name: "Alyssa Miller",
+    company: "",
+    review: "Rich was so thorough and showed such a strong attention to detail. He was both professional and personable, which made for an all around wonderful experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Alyssa Miller"
+  },
+  {
+    name: "Becky Caplan",
+    company: "",
+    review: "Richard takes the art of headshots to the next level. He actively engages his clients in the process far beyond the smile — and creates a fun, unparalleled experience. The final shots are of exceptional quality.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Becky Caplan"
+  },
+  {
+    name: "Lorrie Hillard",
+    company: "",
+    review: "Great experience.  Highly recommend",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Lorrie Hillard"
+  },
+  {
+    name: "Bianca Rodriguez",
+    company: "",
+    review: "Excellent attention to detail. Prompt, honest and creative!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Bianca Rodriguez"
+  },
+  {
+    name: "Nicole O'Brien",
+    company: "",
+    review: "Richard was amazing to work with. He was kind, funny and totally made me feel comfortable. I would highly recommend working with Richard.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Nicole O'Brien"
+  },
+  {
+    name: "William Sanchez",
+    company: "",
+    review: "Rich is the best headshot photographer in Lancaster PA.  Had an amazing experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by William Sanchez"
+  },
+  {
+    name: "Kyle Sadorf",
+    company: "",
+    review: "Best photo I have had taken. Very friendly and overall just a great job. Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kyle Sadorf"
+  },
+  {
+    name: "Samuel Stewart",
+    company: "",
+    review: "Great at getting the best out of you",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Samuel Stewart"
+  },
+  {
+    name: "Derek Arnold",
+    company: "",
+    review: "The shoot was great.  Fun, loose, and the pics turned out awesome.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Derek Arnold"
+  },
+  {
+    name: "Andrew Petsu",
+    company: "",
+    review: "Great experience",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Andrew Petsu"
+  },
+  {
+    name: "Liza Minner",
+    company: "",
+    review: "I really enjoyed working with you. You made me feel so confident and comfortable. I had a blast!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Liza Minner"
+  },
+  {
+    name: "Kim Engle",
+    company: "",
+    review: "Amazing experience! Rich did a great job making me feel comfortable and relaxed. I would highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Kim Engle"
+  },
+  {
+    name: "Jason Seibert",
+    company: "",
+    review: "Very easy and he explains the process to know why he does what he does.",
+    rating: 4,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jason Seibert"
+  },
+  {
+    name: "Christopher Bradley",
+    company: "",
+    review: "Dynamite experience with Rich, and the photography was impeccable.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Christopher Bradley"
+  },
+  {
+    name: "Darryl Walker",
+    company: "",
+    review: "An Awesome Experience!!\n\nTrue Professional.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Darryl Walker"
+  },
+  {
+    name: "Doug Barton",
+    company: "",
+    review: "A very entertaining photo session.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Doug Barton"
+  },
+  {
+    name: "Mabry Fish",
+    company: "",
+    review: "Rich was a pleasure to work with. He made the process enjoyable and takes his craft seriously.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Mabry Fish"
+  },
+  {
+    name: "Aimee Narkiewicz",
+    company: "",
+    review: "Absolutely blown away by my headshots — hands down the best experience ever! The entire session was professional, comfortable, and actually fun. They knew exactly how to capture the most flattering angles, perfect lighting, and natural expressions that truly represent me and my brand.\n\nThe final images are stunning, polished, and elevated my professional presence instantly. If you want headshots that make you look confident, approachable, and like your absolute best self, this is the place to go. Highly recommend — 10/10 experience!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Aimee Narkiewicz"
+  },
+  {
+    name: "Louise Diem",
+    company: "",
+    review: "I never take pictures, hate it. I was dreading doing this today but Richard has turned me into a true fan! He was amazing, made the experience fun and interesting. Photos are the best I have ever seen myself in a picture. I highly recommend to anyone who dreads the camera. Thank you so much Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Louise Diem"
+  },
+  {
+    name: "Maria Elizabeth Del Rey",
+    company: "",
+    review: "Wonderful detailed work very happy with the work !",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Maria Elizabeth Del Rey"
+  },
+  {
+    name: "Ishmael Osborn",
+    company: "",
+    review: "Fantastic experience - Richard is an excellent coach and does a fantastic job, definitely would recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ishmael Osborn"
+  },
+  {
+    name: "B",
+    company: "",
+    review: "Excellent quality and fantastic to work with!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by B"
+  },
+  {
+    name: "Jon K",
+    company: "",
+    review: "Richard is perfect for someone who needs a little bit more than a guide. He is more a coach that will get the best shots out of you. A great experience that I would highly recommend to anyone.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Jon K"
+  },
+  {
+    name: "Ryan Evans",
+    company: "",
+    review: "Best photographer I've ever been to, very helpful in getting the correct pose and position for an excellent picture. The whole process was quick and painless, and the picture turned out great! Would definitely recommend to anyone looking for professional photos.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imageAlt: "Google Review by Ryan Evans"
+  }
 
   // Add more testimonials here as needed
 ];
