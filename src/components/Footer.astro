@@ -44,15 +44,19 @@ const {
     { name: 'Gift Cards', url:'/gift-certificates'},
   ],
 
+  company =[
+    { name: 'About', url: '/about-lancaster-headshot-photographer-richard-waine' },
+    { name: 'Team', url: '/my-team' },
+    { name: 'Studio', url: '/richard-waine-photography-studio' },
+    { name: 'Contact', url: '/contact-lancaster-headshot-photographer-richard-waine' },
+    
+  ],
 
   quickLinks = [
-    { name: 'About', url: '/about-lancaster-headshot-photographer-richard-waine' },
-    { name: 'Contact', url: '/contact-lancaster-headshot-photographer-richard-waine' },
-    { name: 'Studio', url: '/richard-waine-photography-studio' },
-    { name: 'Privacy Policy', url: '/terms-and-conditions' },
-    { name: 'Team', url: '/my-team' },
     { name: 'Blog', url: '/blog' },
-    { name: 'Resources', url: '/resources' }
+    { name: 'Resources', url: '/resources' },
+    { name: 'Reviews', url: '/reviews' },
+    { name: 'Privacy Policy', url: '/terms-and-conditions' },
   ],
   copyrightYear = new Date().getFullYear()
 } = Astro.props;
@@ -135,9 +139,19 @@ const organizationSchema = buildOrganizationSchema(
                 </ul>
             </div>
 
+
+            <div class="footer-section">
+                <div class="footer-section-title">COMPANY</div>
+                <ul class="footer-links">
+                    {company.map(link => (
+                        <li><a href={link.url}>{link.name}</a></li>
+                    ))}
+                </ul>
+            </div>
+
             
             <div class="footer-section">
-                <div class="footer-section-title">QUICK LINKS</div>
+                <div class="footer-section-title">RESOURCES</div>
                 <ul class="footer-links">
                     {quickLinks.map(link => (
                         <li><a href={link.url}>{link.name}</a></li>
@@ -284,6 +298,7 @@ const organizationSchema = buildOrganizationSchema(
         padding: var(--size-650);
         font-family: var(--ff-primary);
         color: var(--ltclr);
+        margin-bottom:2em;
     }
 
     .footer-main-row {
@@ -310,12 +325,14 @@ const organizationSchema = buildOrganizationSchema(
         align-items: center;
         justify-content: center;
         text-align: center;
+        display: none;
     }
 
     .logo {
         width: 150px;
         height: auto;
         color:#fff;
+        
     }
 
     .footer-section .footer-section-title {
@@ -527,7 +544,7 @@ const organizationSchema = buildOrganizationSchema(
         }
 
         .footer-main-row {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             gap: calc(var(--size-650) / 2);
             text-align: left;
             align-items: start;
@@ -553,6 +570,9 @@ const organizationSchema = buildOrganizationSchema(
             height: auto;
             min-height: 500px;
             overflow-y: visible;
+        }
+        .logo-container{
+            display:flex;
         }
     }
 </style>
