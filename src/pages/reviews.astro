@@ -3,20 +3,39 @@ import MainLayout from '../layouts/MainLayout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import { Image } from 'astro:assets';
 import { ALL_TESTIMONIALS } from '../data/testimonials';
-import { buildItemListSchema } from '../utils/schema';
 
+import { buildReviewSchema } from '../utils/schema';        
 
 // This grabs EVERY image in that folder in one go
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/testimonials/*.{jpeg,jpg,png,gif}');
 
 const title = 'Richard Waine Photography Reviews';
 const h1 = "Reviews"
+
+
+ // Generate Review schema for each testimonial                                         
+  const reviewSchemas = ALL_TESTIMONIALS.map(testimonial =>                              
+    buildReviewSchema(                                                                   
+      {                                                                                  
+        author: testimonial.name,                                                        
+        company: testimonial.company,                                                    
+        rating: testimonial.rating.toString(),                                           
+        reviewBody: testimonial.review,                                                  
+        datePublished: testimonial.datePublished                                         
+      },                                                                                 
+      "Richard Waine Photography",                                                       
+      "https://richardwainephotography.com"                                              
+    )                                                                                    
+  );
 ---
 
 <MainLayout title="Richard Waine Photography | Reviews" description="">
 
-<!-- ItemList Schema for Vendor Directory -->
-<!-- <script type="application/ld+json" set:html={JSON.stringify(vendorDirectorySchema)} /> -->
+  <!-- Individual Review Schemas for each testimonial -->                               
+                                                                                         
+    {reviewSchemas.map((schema) => (                                                     
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />            
+    ))}    
 
 <PageTitle title={h1} titleColor="var(--ltclr)" />
 

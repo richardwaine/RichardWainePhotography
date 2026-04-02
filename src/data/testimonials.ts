@@ -34,6 +34,7 @@ export interface Testimonial {
   image: any; // Add image object for Astro Image component
   imagePath?: string;
   imageAlt: string; // Add imageAlt for accessibility
+  datePublished?: string; // ISO 8601 date from Google review createTime     
 }
 
 export const ALL_TESTIMONIALS: Testimonial[] = [
@@ -46,7 +47,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: michaelKealeyImg.src,
     image: michaelKealeyImg,
     imagePath: "Michael Kealey - (200px) - Richard Waine - Lancaster - PA_0048.jpg",
-    imageAlt: "Business Headshot of Michael Kealey by Richard Waine Photography"
+    imageAlt: "Business Headshot of Michael Kealey by Richard Waine Photography",
+    datePublished: "2017-05-14T18:10:10.577Z"
   },
   {
     name: "Wendy Booker",
@@ -57,7 +59,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: wendyBookerImg.src,
     image: wendyBookerImg,
     imagePath: "Wendy Booker - (200px) - Richard Waine - Lancaster - PA_0104.jpg",
-    imageAlt: "Professional Headshot of Wendy Booker by Richard Waine Photography"
+    imageAlt: "Professional Headshot of Wendy Booker by Richard Waine Photography",
+    datePublished: "2018-01-12T16:15:03.930Z"
   },
   {
     name: "Scott Kantner", 
@@ -68,7 +71,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: scottKantnerImg.src,
     image: scottKantnerImg,
     imagePath: "Scott Kantner - (200px) - Richard Waine - Lancaster - PA_0205_1.jpg",
-    imageAlt: "Corporate Headshot of Scott Kantner by Richard Waine Photography"
+    imageAlt: "Corporate Headshot of Scott Kantner by Richard Waine Photography",
+    datePublished: "2019-09-03T11:44:31.884408Z"
   },
   {
     name: "Ellen Taylor",
@@ -79,7 +83,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: ellenTaylorImg.src,
     image: ellenTaylorImg,
     imagePath: "Ellen Taylor - (200px) - Richard Waine - Lancaster - PA_0093.jpg",
-    imageAlt: "Business Portrait of Ellen Taylor by Richard Waine Photography"
+    imageAlt: "Business Portrait of Ellen Taylor by Richard Waine Photography",
+    datePublished: "2017-07-17T12:20:41.800Z"
   },
   {
     name: "Jacqueline Johansen",
@@ -90,7 +95,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: JacquelineJohansen.src,
     image: JacquelineJohansen,
     imagePath: "Jacqueline Johansen - (200px).jpg",
-    imageAlt: "Business Headshot of Jacqueline Johansen by Richard Waine Photography"
+    imageAlt: "Business Headshot of Jacqueline Johansen by Richard Waine Photography",
+    datePublished: "2025-05-23T10:12:00.384505Z"
   },
    {
     name: "Julie Evans",
@@ -101,7 +107,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: JulieEvans.src,
     image: JulieEvans,
     imagePath: "Julie Evans - (200px).jpg",
-    imageAlt: "Corporate Headshot of Julie Evans by Richard Waine Photography"
+    imageAlt: "Corporate Headshot of Julie Evans by Richard Waine Photography",
+    datePublished: "2025-01-17T21:35:33.252977Z"
   },
   {
     name: "William Adote",
@@ -112,7 +119,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: WilliamAdote.src,
     image: WilliamAdote,
     imagePath: "William Adote - (200px).jpg",
-    imageAlt: "Corporate Headshot of William Adote by Richard Waine Photography"
+    imageAlt: "Corporate Headshot of William Adote by Richard Waine Photography",
+    datePublished: "2024-09-19T15:11:47.369917Z"
   },
   {
     name: "Brian Nguyen",
@@ -123,7 +131,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: BrianNguyen.src,
     image: BrianNguyen,
     imagePath: "Brian Nguyen - (200px).jpg",
-    imageAlt: "Business Headshot of Brian Nguyen by Richard Waine Photography"
+    imageAlt: "Business Headshot of Brian Nguyen by Richard Waine Photography",
+    datePublished: "2023-05-29T15:42:07.982663Z"
   },
   {
     name: "Dillon Bomba",
@@ -134,7 +143,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: DillonBomba.src,
     image: DillonBomba,
     imagePath: "Dillon Bomba - (200px).jpg",
-    imageAlt: "Acting Headshot of Dillon Bomba by Richard Waine Photography"
+    imageAlt: "Acting Headshot of Dillon Bomba by Richard Waine Photography",
+    datePublished: "2022-11-23T20:34:42.730659Z"
   },
   {
     name: "Keith Woody",
@@ -145,7 +155,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: KeithWoody.src,
     image: KeithWoody,
     imagePath: "Keith Woody - (200px).jpg",
-    imageAlt: "Corporate Headshot of Keith Woody by Richard Waine Photography"
+    imageAlt: "Corporate Headshot of Keith Woody by Richard Waine Photography",
+    datePublished: "2022-09-27T17:53:37.045970Z"
   },
   {
     name: "Andrew Jacobs",
@@ -156,7 +167,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AndrewJacobs.src,
     image: AndrewJacobs,
     imagePath: "Andrew Jacobs - (200px).jpg",
-    imageAlt: "LinkedIn Headshot of Andy Jacobs by Richard Waine Photography"
+    imageAlt: "LinkedIn Headshot of Andy Jacobs by Richard Waine Photography",
+    datePublished: "2021-06-27T23:01:01.535909Z"
   },
   {
     name: "Eric Cooley",
@@ -167,7 +179,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: EricCooley.src,
     image: EricCooley,
     imagePath: "Eric Cooley - (200px).jpg",
-    imageAlt: "Office Headshot of Eric Cooley by Richard Waine Photography"
+    imageAlt: "Office Headshot of Eric Cooley by Richard Waine Photography",
+    datePublished: "2021-06-09T18:14:56.115206Z"
   },
   {
     name: "Dan Shores",
@@ -178,7 +191,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: DanShores.src,
     image: DanShores,
     imagePath: "Dan Shores - (200px).jpg",
-    imageAlt: "Business Headshot of Dan Shores by Richard Waine Photography"
+    imageAlt: "Business Headshot of Dan Shores by Richard Waine Photography",
+    datePublished: "2021-01-29T16:12:57.099440Z"
   },
   {
     name: "Kelly Gooch",
@@ -189,7 +203,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: KellyGooch.src,
     image: KellyGooch,
     imagePath: "Kelly Gooch - (200px).jpg",
-    imageAlt: "Corporate Headshot of Kelly Gooch by Richard Waine Photography"
+    imageAlt: "Corporate Headshot of Kelly Gooch by Richard Waine Photography",
+    datePublished: "2020-10-30T20:31:17.112391Z"
   },
   {
     name: "Nolan Foster",
@@ -200,7 +215,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: NolanFoster.src,
     image: NolanFoster,
     imagePath: "Nolan Foster - (200px).jpg",
-    imageAlt: "Corporate Headshot of Nolan Foster by Richard Waine Photography"
+    imageAlt: "Corporate Headshot of Nolan Foster by Richard Waine Photography",
+    datePublished: "2019-10-03T15:34:57.963525Z"
   },
   {
     name: "Brandon Lesagonicz",
@@ -211,7 +227,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: BrandonLesagonicz.src,
     image: BrandonLesagonicz,
     imagePath: "Brandon Lesagonicz - (200px).jpg",
-    imageAlt: "Model Headshot of Brandon Lesagonicz by Richard Waine Photography"
+    imageAlt: "Model Headshot of Brandon Lesagonicz by Richard Waine Photography",
+    datePublished: "2018-03-06T16:42:47.660Z"
   },
   {
     name: "Cate Caplan",
@@ -222,7 +239,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: CateCaplan.src,
     image: CateCaplan,
     imagePath: "Cate Caplan - (200px).jpg",
-    imageAlt: "Acting Headshot of Cate Caplan by Richard Waine Photography"
+    imageAlt: "Acting Headshot of Cate Caplan by Richard Waine Photography",
+    datePublished: "2019-10-20T19:56:14.590023Z"
   },
   {
     name: "Mackenzie Lucas",
@@ -233,7 +251,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: MackenzieLucas.src,
     image: MackenzieLucas,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Office Headshot of Mackenzie Lucas by Richard Waine Photography"
+    imageAlt: "Office Headshot of Mackenzie Lucas by Richard Waine Photography",
+    datePublished: "2023-09-15T15:04:17.873722Z"
   },
 {
     name: "Daniel Hagelberg",
@@ -244,7 +263,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: DanielHagelberg.src,
     image: DanielHagelberg,
     imagePath: "Daniel Hagelberg - (200px).jpg",
-    imageAlt: "Office Headshot of Daniel Hagelberg by Richard Waine Photography"
+    imageAlt: "Office Headshot of Daniel Hagelberg by Richard Waine Photography",
+    datePublished: "2024-07-18T14:46:30.898740Z"
   },
   {
     name: "Jessica Goyco",
@@ -255,7 +275,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jessica Goyco"
+    imageAlt: "Google Review by Jessica Goyco",
+    datePublished: "2021-06-18T15:15:37.205809Z"
   },
   {
     name: "Steve Adolt",
@@ -266,7 +287,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Steve Adolt"
+    imageAlt: "Google Review by Steve Adolt",
+    datePublished: "2021-06-10T15:30:12.178676Z"
   },
   {
     name: "Tim M",
@@ -277,7 +299,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tim M"
+    imageAlt: "Google Review by Tim M",
+    datePublished: "2021-06-07T17:29:42.610156Z"
   },
   {
     name: "Chad Neiss",
@@ -288,7 +311,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chad Neiss"
+    imageAlt: "Google Review by Chad Neiss",
+    datePublished: "2021-06-02T14:24:56.274470Z"
   },
   {
     name: "Damain Cavalo",
@@ -299,7 +323,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Damain Cavalo"
+    imageAlt: "Google Review by Damain Cavalo",
+    datePublished: "2021-04-01T15:56:27.372736Z"
   },
   {
     name: "Tonya Snyder",
@@ -310,7 +335,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tonya Snyder"
+    imageAlt: "Google Review by Tonya Snyder",
+    datePublished: "2021-05-20T22:16:30.525396Z"
   },
   {
     name: "Heather Courtney",
@@ -321,7 +347,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Heather Courtney"
+    imageAlt: "Google Review by Heather Courtney",
+    datePublished: "2021-05-19T16:22:53.884128Z"
   },
   {
     name: "Bader Suleiman",
@@ -332,7 +359,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Bader Suleiman"
+    imageAlt: "Google Review by Bader Suleiman",
+    datePublished: "2021-05-19T15:33:04.942709Z"
   },
   {
     name: "Kevin Furbush",
@@ -343,7 +371,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kevin Furbush"
+    imageAlt: "Google Review by Kevin Furbush",
+    datePublished: "2021-05-19T14:28:16.967218Z"
   },
   {
     name: "Joe Cavallio",
@@ -354,7 +383,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joe Cavallio"
+    imageAlt: "Google Review by Joe Cavallio",
+    datePublished: "2021-05-19T14:01:47.896272Z"
   },
   {
     name: "Daniel May",
@@ -365,7 +395,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Daniel May"
+    imageAlt: "Google Review by Daniel May",
+    datePublished: "2021-05-19T00:08:52.626621Z"
   },
   {
     name: "Peter Breese",
@@ -376,7 +407,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Peter Breese"
+    imageAlt: "Google Review by Peter Breese",
+    datePublished: "2021-05-14T02:08:58.032682Z"
   },
   {
     name: "Mg W",
@@ -387,7 +419,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mg W"
+    imageAlt: "Google Review by Mg W",
+    datePublished: "2021-05-13T18:34:03.112852Z"
   },
   {
     name: "Rob Schwarz",
@@ -398,7 +431,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rob Schwarz"
+    imageAlt: "Google Review by Rob Schwarz",
+    datePublished: "2021-05-11T17:51:38.226722Z"
   },
   {
     name: "Ben Miller",
@@ -409,7 +443,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ben Miller"
+    imageAlt: "Google Review by Ben Miller",
+    datePublished: "2021-09-01T18:39:10.845906Z"
   },
   {
     name: "Tim Jones",
@@ -420,7 +455,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tim Jones"
+    imageAlt: "Google Review by Tim Jones",
+    datePublished: "2021-09-01T18:21:11.344358Z"
   },
   {
     name: "Matthew Metz",
@@ -431,7 +467,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matthew Metz"
+    imageAlt: "Google Review by Matthew Metz",
+    datePublished: "2021-09-01T15:57:55.385441Z"
   },
   {
     name: "Jake Hellenschmidt",
@@ -442,7 +479,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jake Hellenschmidt"
+    imageAlt: "Google Review by Jake Hellenschmidt",
+    datePublished: "2021-09-01T14:50:51.831666Z"
   },
   {
     name: "Raul Perero",
@@ -453,7 +491,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Raul Perero"
+    imageAlt: "Google Review by Raul Perero",
+    datePublished: "2021-09-01T14:26:20.502773Z"
   },
   {
     name: "Deb Hatfield",
@@ -464,7 +503,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Deb Hatfield"
+    imageAlt: "Google Review by Deb Hatfield",
+    datePublished: "2021-08-30T15:08:12.844629Z"
   },
   {
     name: "Ethan Haymovitz",
@@ -475,7 +515,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ethan Haymovitz"
+    imageAlt: "Google Review by Ethan Haymovitz",
+    datePublished: "2022-02-05T16:55:41.237383Z"
   },
   {
     name: "Chris Bomberger",
@@ -486,7 +527,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chris Bomberger"
+    imageAlt: "Google Review by Chris Bomberger",
+    datePublished: "2021-08-24T15:32:53.206328Z"
   },
   {
     name: "Bob Bonitz",
@@ -497,7 +539,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Bob Bonitz"
+    imageAlt: "Google Review by Bob Bonitz",
+    datePublished: "2021-08-24T15:17:58.731252Z"
   },
   {
     name: "Krista Olnick",
@@ -508,7 +551,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Krista Olnick"
+    imageAlt: "Google Review by Krista Olnick",
+    datePublished: "2021-08-24T14:19:49.999513Z"
   },
   {
     name: "Craig Nebel",
@@ -519,7 +563,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Craig Nebel"
+    imageAlt: "Google Review by Craig Nebel",
+    datePublished: "2021-08-24T14:03:54.268353Z"
   },
   {
     name: "David Brechbill",
@@ -530,7 +575,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by David Brechbill"
+    imageAlt: "Google Review by David Brechbill",
+    datePublished: "2021-08-24T12:35:03.276995Z"
   },
   {
     name: "willie maddox",
@@ -541,7 +587,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by willie maddox"
+    imageAlt: "Google Review by willie maddox",
+    datePublished: "2021-08-12T20:06:51.407205Z"
   },
   {
     name: "kris “No Thanks” F",
@@ -552,7 +599,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by kris “No Thanks” F"
+    imageAlt: "Google Review by kris “No Thanks” F",
+    datePublished: "2021-07-03T17:30:50.113021Z"
   },
   {
     name: "John Stauffer",
@@ -563,7 +611,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by John Stauffer"
+    imageAlt: "Google Review by John Stauffer",
+    datePublished: "2021-06-25T15:04:04.030578Z"
   },
   {
     name: "alexis mott",
@@ -574,7 +623,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by alexis mott"
+    imageAlt: "Google Review by alexis mott",
+    datePublished: "2024-03-30T18:37:02.654581Z"
   },
   {
     name: "Julia Cristino",
@@ -585,7 +635,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Julia Cristino"
+    imageAlt: "Google Review by Julia Cristino",
+    datePublished: "2024-03-26T17:19:38.465889Z"
   },
   {
     name: "Zach Love",
@@ -596,7 +647,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Zach Love"
+    imageAlt: "Google Review by Zach Love",
+    datePublished: "2024-03-26T14:19:11.591656Z"
   },
   {
     name: "Kris Fraser",
@@ -607,7 +659,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kris Fraser"
+    imageAlt: "Google Review by Kris Fraser",
+    datePublished: "2024-03-22T15:43:35.518436Z"
   },
   {
     name: "Dooze1",
@@ -618,7 +671,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dooze1"
+    imageAlt: "Google Review by Dooze1",
+    datePublished: "2024-03-21T17:05:02.592369Z"
   },
   {
     name: "Pamela Adam",
@@ -629,7 +683,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Pamela Adam"
+    imageAlt: "Google Review by Pamela Adam",
+    datePublished: "2024-03-15T14:36:45.172076Z"
   },
   {
     name: "Rossi Mena",
@@ -640,7 +695,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rossi Mena"
+    imageAlt: "Google Review by Rossi Mena",
+    datePublished: "2024-03-06T17:05:14.590502Z"
   },
   {
     name: "Kelley V",
@@ -651,7 +707,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kelley V"
+    imageAlt: "Google Review by Kelley V",
+    datePublished: "2024-02-26T15:40:24.716194Z"
   },
   {
     name: "Bud Megargee",
@@ -662,7 +719,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Bud Megargee"
+    imageAlt: "Google Review by Bud Megargee",
+    datePublished: "2024-02-05T18:58:12.050572Z"
   },
   {
     name: "LaTricia Morris",
@@ -673,7 +731,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by LaTricia Morris"
+    imageAlt: "Google Review by LaTricia Morris",
+    datePublished: "2024-02-06T15:10:15.152593Z"
   },
   {
     name: "Sommer VanBrunt",
@@ -684,7 +743,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sommer VanBrunt"
+    imageAlt: "Google Review by Sommer VanBrunt",
+    datePublished: "2024-01-28T20:00:12.526187Z"
   },
   {
     name: "Hope Wagner",
@@ -695,7 +755,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Hope Wagner"
+    imageAlt: "Google Review by Hope Wagner",
+    datePublished: "2024-01-28T17:52:02.581852Z"
   },
   {
     name: "Don Carrick",
@@ -706,7 +767,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Don Carrick"
+    imageAlt: "Google Review by Don Carrick",
+    datePublished: "2024-01-11T19:17:21.374346Z"
   },
   {
     name: "Lindsay Faccenda",
@@ -717,7 +779,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lindsay Faccenda"
+    imageAlt: "Google Review by Lindsay Faccenda",
+    datePublished: "2024-01-08T18:16:33.340467Z"
   },
   {
     name: "Missy Argall",
@@ -728,7 +791,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Missy Argall"
+    imageAlt: "Google Review by Missy Argall",
+    datePublished: "2024-01-06T15:20:11.924635Z"
   },
   {
     name: "Kimberly Weidman",
@@ -739,7 +803,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kimberly Weidman"
+    imageAlt: "Google Review by Kimberly Weidman",
+    datePublished: "2023-12-26T17:36:58.100148Z"
   },
   {
     name: "Lucia Saldana",
@@ -750,7 +815,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lucia Saldana"
+    imageAlt: "Google Review by Lucia Saldana",
+    datePublished: "2023-11-11T16:20:41.160500Z"
   },
   {
     name: "Sara Beth Kohut",
@@ -761,7 +827,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sara Beth Kohut"
+    imageAlt: "Google Review by Sara Beth Kohut",
+    datePublished: "2022-01-22T19:23:08.892053Z"
   },
   {
     name: "michaelf",
@@ -772,7 +839,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by michaelf"
+    imageAlt: "Google Review by michaelf",
+    datePublished: "2022-01-11T18:03:09.811109Z"
   },
   {
     name: "William Ojeda",
@@ -783,7 +851,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by William Ojeda"
+    imageAlt: "Google Review by William Ojeda",
+    datePublished: "2021-12-31T17:22:56.916644Z"
   },
   {
     name: "Omar Alvi",
@@ -794,7 +863,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Omar Alvi"
+    imageAlt: "Google Review by Omar Alvi",
+    datePublished: "2021-12-29T23:03:58.860685Z"
   },
   {
     name: "Jon Erlien",
@@ -805,7 +875,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jon Erlien"
+    imageAlt: "Google Review by Jon Erlien",
+    datePublished: "2021-12-29T17:53:18.927754Z"
   },
   {
     name: "Jessica Hollinger",
@@ -816,7 +887,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jessica Hollinger"
+    imageAlt: "Google Review by Jessica Hollinger",
+    datePublished: "2021-12-27T17:31:13.282854Z"
   },
   {
     name: "Jennifer Hollister",
@@ -827,7 +899,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jennifer Hollister"
+    imageAlt: "Google Review by Jennifer Hollister",
+    datePublished: "2021-12-07T16:38:09.078696Z"
   },
   {
     name: "Robert Hollister",
@@ -838,7 +911,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Robert Hollister"
+    imageAlt: "Google Review by Robert Hollister",
+    datePublished: "2021-12-05T19:47:31.500315Z"
   },
   {
     name: "A M",
@@ -849,7 +923,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by A M"
+    imageAlt: "Google Review by A M",
+    datePublished: "2021-11-28T23:05:04.614539Z"
   },
   {
     name: "Debbie Dupler",
@@ -860,7 +935,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Debbie Dupler"
+    imageAlt: "Google Review by Debbie Dupler",
+    datePublished: "2021-11-24T15:55:20.801464Z"
   },
   {
     name: "William Kitsch",
@@ -871,7 +947,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by William Kitsch"
+    imageAlt: "Google Review by William Kitsch",
+    datePublished: "2021-11-05T14:42:53.711290Z"
   },
   {
     name: "Christian Heckman",
@@ -882,7 +959,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Christian Heckman"
+    imageAlt: "Google Review by Christian Heckman",
+    datePublished: "2021-10-27T20:04:04.713300Z"
   },
   {
     name: "Jodi Yiengst",
@@ -893,7 +971,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jodi Yiengst"
+    imageAlt: "Google Review by Jodi Yiengst",
+    datePublished: "2021-09-22T21:40:21.071687Z"
   },
   {
     name: "Tracy Lisi",
@@ -904,7 +983,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tracy Lisi"
+    imageAlt: "Google Review by Tracy Lisi",
+    datePublished: "2020-08-04T01:12:41.154976Z"
   },
   {
     name: "Rich Aquino",
@@ -915,7 +995,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rich Aquino"
+    imageAlt: "Google Review by Rich Aquino",
+    datePublished: "2021-05-10T12:51:35.342Z"
   },
   {
     name: "mruby410",
@@ -926,7 +1007,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by mruby410"
+    imageAlt: "Google Review by mruby410",
+    datePublished: "2021-05-10T12:36:57.072411Z"
   },
   {
     name: "Mark Neely",
@@ -937,7 +1019,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mark Neely"
+    imageAlt: "Google Review by Mark Neely",
+    datePublished: "2021-05-10T12:10:11.992228Z"
   },
   {
     name: "Rob Wit",
@@ -948,7 +1031,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rob Wit"
+    imageAlt: "Google Review by Rob Wit",
+    datePublished: "2021-05-08T23:35:09.465928Z"
   },
   {
     name: "Chris Sciamanna",
@@ -959,7 +1043,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chris Sciamanna"
+    imageAlt: "Google Review by Chris Sciamanna",
+    datePublished: "2021-05-03T16:33:13.634425Z"
   },
   {
     name: "Grace Shoemaker",
@@ -970,7 +1055,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Grace Shoemaker"
+    imageAlt: "Google Review by Grace Shoemaker",
+    datePublished: "2021-04-29T13:47:31.561286Z"
   },
   {
     name: "carlos chavez",
@@ -981,7 +1067,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by carlos chavez"
+    imageAlt: "Google Review by carlos chavez",
+    datePublished: "2021-04-17T12:27:10.991572Z"
   },
   {
     name: "David January",
@@ -992,7 +1079,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by David January"
+    imageAlt: "Google Review by David January",
+    datePublished: "2021-04-13T19:34:15.014077Z"
   },
   {
     name: "Logan W",
@@ -1003,7 +1091,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Logan W"
+    imageAlt: "Google Review by Logan W",
+    datePublished: "2021-04-13T17:47:00.035530Z"
   },
   {
     name: "Alley Gordon",
@@ -1014,7 +1103,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Alley Gordon"
+    imageAlt: "Google Review by Alley Gordon",
+    datePublished: "2021-04-13T17:26:53.472517Z"
   },
   {
     name: "Patrick Lloyd",
@@ -1025,7 +1115,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Patrick Lloyd"
+    imageAlt: "Google Review by Patrick Lloyd",
+    datePublished: "2021-04-13T17:24:04.638950Z"
   },
   {
     name: "Richard White",
@@ -1036,7 +1127,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Richard White"
+    imageAlt: "Google Review by Richard White",
+    datePublished: "2021-04-13T16:23:00.419653Z"
   },
   {
     name: "Lauren Garner",
@@ -1047,7 +1139,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lauren Garner"
+    imageAlt: "Google Review by Lauren Garner",
+    datePublished: "2021-04-13T15:56:54.591930Z"
   },
   {
     name: "Rachel Bitner",
@@ -1058,7 +1151,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rachel Bitner"
+    imageAlt: "Google Review by Rachel Bitner",
+    datePublished: "2021-02-11T19:34:00.010712Z"
   },
   {
     name: "Jodi Stauffer",
@@ -1069,7 +1163,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jodi Stauffer"
+    imageAlt: "Google Review by Jodi Stauffer",
+    datePublished: "2021-02-08T23:05:54.089714Z"
   },
   {
     name: "Dylan Patrick",
@@ -1080,7 +1175,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dylan Patrick"
+    imageAlt: "Google Review by Dylan Patrick",
+    datePublished: "2021-02-07T21:32:13.236119Z"
   },
   {
     name: "Aaron Groff",
@@ -1091,7 +1187,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Aaron Groff"
+    imageAlt: "Google Review by Aaron Groff",
+    datePublished: "2021-02-06T15:03:07.073773Z"
   },
   {
     name: "Adrienne Miller",
@@ -1102,7 +1199,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Adrienne Miller"
+    imageAlt: "Google Review by Adrienne Miller",
+    datePublished: "2021-02-03T20:32:14.925662Z"
   },
   {
     name: "Agricultural Veterinary Associates",
@@ -1113,7 +1211,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Agricultural Veterinary Associates"
+    imageAlt: "Google Review by Agricultural Veterinary Associates",
+    datePublished: "2021-02-03T00:04:44.333424Z"
   },
   {
     name: "Justin Ide",
@@ -1124,7 +1223,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin Ide"
+    imageAlt: "Google Review by Justin Ide",
+    datePublished: "2021-01-26T18:01:42.366577Z"
   },
   {
     name: "Keith Wann",
@@ -1135,7 +1235,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Keith Wann"
+    imageAlt: "Google Review by Keith Wann",
+    datePublished: "2021-01-22T19:38:40.021894Z"
   },
   {
     name: "Joshua Landis",
@@ -1146,7 +1247,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joshua Landis"
+    imageAlt: "Google Review by Joshua Landis",
+    datePublished: "2021-01-15T02:01:03.453040Z"
   },
   {
     name: "Kevin Bledsoe",
@@ -1157,7 +1259,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kevin Bledsoe"
+    imageAlt: "Google Review by Kevin Bledsoe",
+    datePublished: "2020-12-17T20:40:44.732312Z"
   },
   {
     name: "Cody Bort",
@@ -1168,7 +1271,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Cody Bort"
+    imageAlt: "Google Review by Cody Bort",
+    datePublished: "2020-12-14T21:48:21.852517Z"
   },
   {
     name: "Robert Feiner",
@@ -1179,7 +1283,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Robert Feiner"
+    imageAlt: "Google Review by Robert Feiner",
+    datePublished: "2020-12-09T15:51:05.808645Z"
   },
   {
     name: "Chuck Sierk",
@@ -1190,7 +1295,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chuck Sierk"
+    imageAlt: "Google Review by Chuck Sierk",
+    datePublished: "2019-10-03T21:14:46.334216Z"
   },
   {
     name: "Joe Migliore",
@@ -1201,7 +1307,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joe Migliore"
+    imageAlt: "Google Review by Joe Migliore",
+    datePublished: "2020-12-01T21:58:15.390746Z"
   },
   {
     name: "Laura Jacobs",
@@ -1212,7 +1319,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Laura Jacobs"
+    imageAlt: "Google Review by Laura Jacobs",
+    datePublished: "2020-11-18T16:08:55.323132Z"
   },
   {
     name: "Pete Costanzo",
@@ -1223,7 +1331,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Pete Costanzo"
+    imageAlt: "Google Review by Pete Costanzo",
+    datePublished: "2020-11-10T12:09:52.511658Z"
   },
   {
     name: "Kelly Gooch",
@@ -1234,7 +1343,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kelly Gooch"
+    imageAlt: "Google Review by Kelly Gooch",
+    datePublished: "2020-10-30T20:31:17.112391Z"
   },
   {
     name: "James Zimmerman",
@@ -1245,7 +1355,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Zimmerman"
+    imageAlt: "Google Review by James Zimmerman",
+    datePublished: "2020-10-25T21:47:57.395571Z"
   },
   {
     name: "Eun Jun Choi",
@@ -1256,7 +1367,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Eun Jun Choi"
+    imageAlt: "Google Review by Eun Jun Choi",
+    datePublished: "2025-11-12T20:02:12.612753Z"
   },
   {
     name: "Kristin Marino",
@@ -1267,7 +1379,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kristin Marino"
+    imageAlt: "Google Review by Kristin Marino",
+    datePublished: "2025-11-12T17:37:51.105600Z"
   },
   {
     name: "Joseph Markle",
@@ -1278,7 +1391,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joseph Markle"
+    imageAlt: "Google Review by Joseph Markle",
+    datePublished: "2025-11-12T16:55:07.238624Z"
   },
   {
     name: "Jduhgee C",
@@ -1289,7 +1403,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jduhgee C"
+    imageAlt: "Google Review by Jduhgee C",
+    datePublished: "2025-11-12T16:37:35.406411Z"
   },
   {
     name: "William Nettles",
@@ -1300,7 +1415,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by William Nettles"
+    imageAlt: "Google Review by William Nettles",
+    datePublished: "2025-11-12T16:11:10.069803Z"
   },
   {
     name: "Jaden Levin",
@@ -1311,7 +1427,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jaden Levin"
+    imageAlt: "Google Review by Jaden Levin",
+    datePublished: "2025-11-12T15:58:46.552911Z"
   },
   {
     name: "Joshan Philip",
@@ -1322,7 +1439,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joshan Philip"
+    imageAlt: "Google Review by Joshan Philip",
+    datePublished: "2025-11-12T14:32:14.483748Z"
   },
   {
     name: "Angelica Lopez",
@@ -1333,7 +1451,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Angelica Lopez"
+    imageAlt: "Google Review by Angelica Lopez",
+    datePublished: "2025-11-12T14:22:23.472901Z"
   },
   {
     name: "Jennifer Fitzgerald",
@@ -1344,7 +1463,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jennifer Fitzgerald"
+    imageAlt: "Google Review by Jennifer Fitzgerald",
+    datePublished: "2025-11-12T13:49:04.252294Z"
   },
   {
     name: "Renee French",
@@ -1355,7 +1475,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Renee French"
+    imageAlt: "Google Review by Renee French",
+    datePublished: "2022-03-15T16:11:00.504920Z"
   },
   {
     name: "Thomas Polansky",
@@ -1366,7 +1487,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Thomas Polansky"
+    imageAlt: "Google Review by Thomas Polansky",
+    datePublished: "2022-03-15T14:54:04.329803Z"
   },
   {
     name: "Erik Smith",
@@ -1377,7 +1499,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Erik Smith"
+    imageAlt: "Google Review by Erik Smith",
+    datePublished: "2022-03-15T14:24:59.314563Z"
   },
   {
     name: "Chad Snyder",
@@ -1388,7 +1511,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chad Snyder"
+    imageAlt: "Google Review by Chad Snyder",
+    datePublished: "2022-03-15T13:20:35.461678Z"
   },
   {
     name: "Michelle Kerns",
@@ -1399,7 +1523,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Michelle Kerns"
+    imageAlt: "Google Review by Michelle Kerns",
+    datePublished: "2022-03-15T12:27:56.844400Z"
   },
   {
     name: "Kate",
@@ -1410,7 +1535,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kate"
+    imageAlt: "Google Review by Kate",
+    datePublished: "2022-03-13T17:45:04.796871Z"
   },
   {
     name: "Scott Kramer",
@@ -1421,7 +1547,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Scott Kramer"
+    imageAlt: "Google Review by Scott Kramer",
+    datePublished: "2022-03-11T14:48:32.958932Z"
   },
   {
     name: "Megan Pinker",
@@ -1432,7 +1559,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Megan Pinker"
+    imageAlt: "Google Review by Megan Pinker",
+    datePublished: "2022-03-09T16:52:27.674713Z"
   },
   {
     name: "James Gagliano",
@@ -1443,7 +1571,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Gagliano"
+    imageAlt: "Google Review by James Gagliano",
+    datePublished: "2022-03-08T20:35:03.261148Z"
   },
   {
     name: "Rhonda Lord",
@@ -1454,7 +1583,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rhonda Lord"
+    imageAlt: "Google Review by Rhonda Lord",
+    datePublished: "2022-03-07T17:38:50.743403Z"
   },
   {
     name: "Fran Cooper",
@@ -1465,7 +1595,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Fran Cooper"
+    imageAlt: "Google Review by Fran Cooper",
+    datePublished: "2022-02-17T20:36:46.518689Z"
   },
   {
     name: "Wendy Laubach",
@@ -1476,7 +1607,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Wendy Laubach"
+    imageAlt: "Google Review by Wendy Laubach",
+    datePublished: "2022-02-24T19:55:45.550307Z"
   },
   {
     name: "Todd Keagy",
@@ -1487,7 +1619,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Todd Keagy"
+    imageAlt: "Google Review by Todd Keagy",
+    datePublished: "2022-02-16T16:11:28.537989Z"
   },
   {
     name: "Kelsey Staab",
@@ -1498,7 +1631,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kelsey Staab"
+    imageAlt: "Google Review by Kelsey Staab",
+    datePublished: "2022-02-09T18:19:35.913579Z"
   },
   {
     name: "Ethan Haymovitz",
@@ -1509,7 +1643,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ethan Haymovitz"
+    imageAlt: "Google Review by Ethan Haymovitz",
+    datePublished: "2022-02-05T16:55:41.237383Z"
   },
   {
     name: "Samantha Murphy",
@@ -1520,7 +1655,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Samantha Murphy"
+    imageAlt: "Google Review by Samantha Murphy",
+    datePublished: "2022-01-25T23:11:06.736627Z"
   },
   {
     name: "Casey McKay",
@@ -1531,7 +1667,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Casey McKay"
+    imageAlt: "Google Review by Casey McKay",
+    datePublished: "2021-05-11T16:02:30.353096Z"
   },
   {
     name: "Stephen Clark",
@@ -1542,7 +1679,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Stephen Clark"
+    imageAlt: "Google Review by Stephen Clark",
+    datePublished: "2021-05-10T18:15:09.350359Z"
   },
   {
     name: "Sam Wilson",
@@ -1553,7 +1691,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sam Wilson"
+    imageAlt: "Google Review by Sam Wilson",
+    datePublished: "2021-05-10T16:50:46.601870Z"
   },
   {
     name: "Larry M",
@@ -1564,7 +1703,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Larry M"
+    imageAlt: "Google Review by Larry M",
+    datePublished: "2021-05-10T14:41:00.591298Z"
   },
   {
     name: "Erik Hess",
@@ -1575,7 +1715,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Erik Hess"
+    imageAlt: "Google Review by Erik Hess",
+    datePublished: "2021-05-10T14:34:25.311731Z"
   },
   {
     name: "Nora Castro",
@@ -1586,7 +1727,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nora Castro"
+    imageAlt: "Google Review by Nora Castro",
+    datePublished: "2018-04-19T11:05:57.344Z"
   },
   {
     name: "Jeff Brohawn",
@@ -1597,7 +1739,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jeff Brohawn"
+    imageAlt: "Google Review by Jeff Brohawn",
+    datePublished: "2018-03-23T01:58:34.159Z"
   },
   {
     name: "Ronit Henriquez",
@@ -1608,7 +1751,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ronit Henriquez"
+    imageAlt: "Google Review by Ronit Henriquez",
+    datePublished: "2018-01-31T14:55:09.174Z"
   },
   {
     name: "Sharon Moscarell",
@@ -1619,7 +1763,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sharon Moscarell"
+    imageAlt: "Google Review by Sharon Moscarell",
+    datePublished: "2018-01-23T03:01:17.394Z"
   },
   {
     name: "Lori Titus",
@@ -1630,7 +1775,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lori Titus"
+    imageAlt: "Google Review by Lori Titus",
+    datePublished: "2018-01-18T20:32:56.258Z"
   },
   {
     name: "Zane Browne",
@@ -1641,7 +1787,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Zane Browne"
+    imageAlt: "Google Review by Zane Browne",
+    datePublished: "2018-01-18T19:01:47.394Z"
   },
   {
     name: "carla saylor",
@@ -1652,7 +1799,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by carla saylor"
+    imageAlt: "Google Review by carla saylor",
+    datePublished: "2018-01-18T13:19:26.431Z"
   },
   {
     name: "Zachary Schober",
@@ -1663,7 +1811,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Zachary Schober"
+    imageAlt: "Google Review by Zachary Schober",
+    datePublished: "2018-01-16T19:38:58.150Z"
   },
   {
     name: "Naomi Beach",
@@ -1674,7 +1823,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Naomi Beach"
+    imageAlt: "Google Review by Naomi Beach",
+    datePublished: "2018-01-15T20:49:44.466Z"
   },
   {
     name: "Chad Hake",
@@ -1685,7 +1835,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chad Hake"
+    imageAlt: "Google Review by Chad Hake",
+    datePublished: "2018-01-15T20:47:21.329Z"
   },
   {
     name: "chris timmons",
@@ -1696,7 +1847,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by chris timmons"
+    imageAlt: "Google Review by chris timmons",
+    datePublished: "2018-01-15T16:05:13.704Z"
   },
   {
     name: "Erick Huertas",
@@ -1707,7 +1859,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Erick Huertas"
+    imageAlt: "Google Review by Erick Huertas",
+    datePublished: "2018-01-13T02:16:01.027Z"
   },
   {
     name: "Martin Valins",
@@ -1718,7 +1871,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Martin Valins"
+    imageAlt: "Google Review by Martin Valins",
+    datePublished: "2018-01-12T18:12:20.526Z"
   },
   {
     name: "B C",
@@ -1729,7 +1883,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by B C"
+    imageAlt: "Google Review by B C",
+    datePublished: "2018-01-09T22:47:23.564Z"
   },
   {
     name: "David Ziegler",
@@ -1740,7 +1895,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by David Ziegler"
+    imageAlt: "Google Review by David Ziegler",
+    datePublished: "2021-04-13T14:02:47.790873Z"
   },
   {
     name: "Jenny Labella",
@@ -1751,7 +1907,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jenny Labella"
+    imageAlt: "Google Review by Jenny Labella",
+    datePublished: "2021-04-09T15:08:03.153005Z"
   },
   {
     name: "Jordan Luntz",
@@ -1762,7 +1919,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jordan Luntz"
+    imageAlt: "Google Review by Jordan Luntz",
+    datePublished: "2021-04-09T14:22:37.858158Z"
   },
   {
     name: "Justin Uzarski",
@@ -1773,7 +1931,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin Uzarski"
+    imageAlt: "Google Review by Justin Uzarski",
+    datePublished: "2021-04-09T14:20:10.898797Z"
   },
   {
     name: "Kirk Rizzolla",
@@ -1784,7 +1943,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kirk Rizzolla"
+    imageAlt: "Google Review by Kirk Rizzolla",
+    datePublished: "2021-04-09T13:11:49.850491Z"
   },
   {
     name: "Kathryn Weill",
@@ -1795,7 +1955,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kathryn Weill"
+    imageAlt: "Google Review by Kathryn Weill",
+    datePublished: "2021-04-07T13:03:17.921192Z"
   },
   {
     name: "Krista Topper",
@@ -1806,7 +1967,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Krista Topper"
+    imageAlt: "Google Review by Krista Topper",
+    datePublished: "2021-04-05T14:53:03.742714Z"
   },
   {
     name: "Armando Rojas",
@@ -1817,7 +1979,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Armando Rojas"
+    imageAlt: "Google Review by Armando Rojas",
+    datePublished: "2021-03-26T22:19:32.448585Z"
   },
   {
     name: "Roger Zimmerman",
@@ -1828,7 +1991,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Roger Zimmerman"
+    imageAlt: "Google Review by Roger Zimmerman",
+    datePublished: "2021-03-20T14:28:37.432742Z"
   },
   {
     name: "Justin Apostolico",
@@ -1839,7 +2003,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin Apostolico"
+    imageAlt: "Google Review by Justin Apostolico",
+    datePublished: "2021-03-15T16:15:40.898651Z"
   },
   {
     name: "Soukie Tounkara",
@@ -1850,7 +2015,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Soukie Tounkara"
+    imageAlt: "Google Review by Soukie Tounkara",
+    datePublished: "2021-03-15T16:38:40.074805Z"
   },
   {
     name: "Rita",
@@ -1861,7 +2027,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rita"
+    imageAlt: "Google Review by Rita",
+    datePublished: "2021-03-15T15:59:03.013613Z"
   },
   {
     name: "Frank",
@@ -1872,7 +2039,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Frank"
+    imageAlt: "Google Review by Frank",
+    datePublished: "2021-03-15T15:12:22.733818Z"
   },
   {
     name: "Sabra Madsen",
@@ -1883,7 +2051,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sabra Madsen"
+    imageAlt: "Google Review by Sabra Madsen",
+    datePublished: "2020-07-06T23:54:50.530377Z"
   },
   {
     name: "Jay Martin",
@@ -1894,7 +2063,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jay Martin"
+    imageAlt: "Google Review by Jay Martin",
+    datePublished: "2021-02-22T12:43:01.401291Z"
   },
   {
     name: "Helene Williams",
@@ -1905,7 +2075,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Helene Williams"
+    imageAlt: "Google Review by Helene Williams",
+    datePublished: "2018-12-06T02:22:13.853331Z"
   },
   {
     name: "Emily Mainquist",
@@ -1916,7 +2087,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Emily Mainquist"
+    imageAlt: "Google Review by Emily Mainquist",
+    datePublished: "2018-10-22T16:44:03.119844Z"
   },
   {
     name: "Alisa McGowan",
@@ -1927,7 +2099,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Alisa McGowan"
+    imageAlt: "Google Review by Alisa McGowan",
+    datePublished: "2018-10-09T02:05:12.724980Z"
   },
   {
     name: "Cyndi Sensenig",
@@ -1938,7 +2111,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Cyndi Sensenig"
+    imageAlt: "Google Review by Cyndi Sensenig",
+    datePublished: "2018-10-08T14:34:18.680347Z"
   },
   {
     name: "Savannah Harper",
@@ -1949,7 +2123,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Savannah Harper"
+    imageAlt: "Google Review by Savannah Harper",
+    datePublished: "2018-10-04T19:26:15.867223Z"
   },
   {
     name: "Maggie",
@@ -1960,7 +2135,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Maggie"
+    imageAlt: "Google Review by Maggie",
+    datePublished: "2018-09-17T23:07:36.910139Z"
   },
   {
     name: "Dianne Summers",
@@ -1971,7 +2147,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dianne Summers"
+    imageAlt: "Google Review by Dianne Summers",
+    datePublished: "2018-08-20T14:25:45.608959Z"
   },
   {
     name: "Jim Deitch",
@@ -1982,7 +2159,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jim Deitch"
+    imageAlt: "Google Review by Jim Deitch",
+    datePublished: "2018-08-14T20:50:36.855Z"
   },
   {
     name: "Christine Bacher",
@@ -1993,7 +2171,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Christine Bacher"
+    imageAlt: "Google Review by Christine Bacher",
+    datePublished: "2018-08-01T16:47:35.608Z"
   },
   {
     name: "Janet Sierk (Your Lancaster Realtor)",
@@ -2004,7 +2183,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Janet Sierk (Your Lancaster Realtor)"
+    imageAlt: "Google Review by Janet Sierk (Your Lancaster Realtor)",
+    datePublished: "2018-07-27T21:11:22.931Z"
   },
   {
     name: "Laura Fowler",
@@ -2015,7 +2195,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Laura Fowler"
+    imageAlt: "Google Review by Laura Fowler",
+    datePublished: "2018-07-16T13:17:21.249Z"
   },
   {
     name: "Julie Martin",
@@ -2026,7 +2207,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Julie Martin"
+    imageAlt: "Google Review by Julie Martin",
+    datePublished: "2018-07-16T10:27:41.843Z"
   },
   {
     name: "Versatek Enterprises, LLC Lititz, PA",
@@ -2037,7 +2219,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Versatek Enterprises, LLC Lititz, PA"
+    imageAlt: "Google Review by Versatek Enterprises, LLC Lititz, PA",
+    datePublished: "2018-07-06T12:39:45.151Z"
   },
   {
     name: "Sarah D'Stair",
@@ -2048,7 +2231,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sarah D'Stair"
+    imageAlt: "Google Review by Sarah D'Stair",
+    datePublished: "2018-06-06T19:30:01.678Z"
   },
   {
     name: "Tim Hepler",
@@ -2059,7 +2243,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tim Hepler"
+    imageAlt: "Google Review by Tim Hepler",
+    datePublished: "2018-04-23T23:50:12.997Z"
   },
   {
     name: "Angel Rosario",
@@ -2070,7 +2255,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Angel Rosario"
+    imageAlt: "Google Review by Angel Rosario",
+    datePublished: "2018-05-29T20:32:43.695Z"
   },
   {
     name: "Shannon Young",
@@ -2081,7 +2267,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Shannon Young"
+    imageAlt: "Google Review by Shannon Young",
+    datePublished: "2018-04-30T16:36:05.487Z"
   },
   {
     name: "Tyler Trettin",
@@ -2092,7 +2279,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tyler Trettin"
+    imageAlt: "Google Review by Tyler Trettin",
+    datePublished: "2024-08-12T17:41:30.489751Z"
   },
   {
     name: "Peyton Taylor",
@@ -2103,7 +2291,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Peyton Taylor"
+    imageAlt: "Google Review by Peyton Taylor",
+    datePublished: "2024-08-02T16:50:23.373911Z"
   },
   {
     name: "Jordan Rizzo",
@@ -2114,7 +2303,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jordan Rizzo"
+    imageAlt: "Google Review by Jordan Rizzo",
+    datePublished: "2024-07-24T14:22:14.127824Z"
   },
   {
     name: "Susan",
@@ -2125,7 +2315,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Susan"
+    imageAlt: "Google Review by Susan",
+    datePublished: "2024-07-23T14:50:11.152919Z"
   },
   {
     name: "Melissa Kushner",
@@ -2136,7 +2327,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Melissa Kushner"
+    imageAlt: "Google Review by Melissa Kushner",
+    datePublished: "2024-07-22T14:36:37.230753Z"
   },
   {
     name: "Conor Adams",
@@ -2147,7 +2339,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Conor Adams"
+    imageAlt: "Google Review by Conor Adams",
+    datePublished: "2024-07-19T13:39:30.094947Z"
   },
   {
     name: "Rahwa Teklai",
@@ -2158,7 +2351,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rahwa Teklai"
+    imageAlt: "Google Review by Rahwa Teklai",
+    datePublished: "2024-07-16T20:53:18.062936Z"
   },
   {
     name: "Lisa Williams",
@@ -2169,7 +2363,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lisa Williams"
+    imageAlt: "Google Review by Lisa Williams",
+    datePublished: "2024-07-12T17:17:17.339241Z"
   },
   {
     name: "Nicole Brennan",
@@ -2180,7 +2375,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nicole Brennan"
+    imageAlt: "Google Review by Nicole Brennan",
+    datePublished: "2024-07-02T18:49:12.043860Z"
   },
   {
     name: "Derek Marion",
@@ -2191,7 +2387,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Derek Marion"
+    imageAlt: "Google Review by Derek Marion",
+    datePublished: "2024-07-02T15:20:20.438167Z"
   },
   {
     name: "Andy Carter",
@@ -2202,7 +2399,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Andy Carter"
+    imageAlt: "Google Review by Andy Carter",
+    datePublished: "2024-06-07T19:53:46.567811Z"
   },
   {
     name: "JASON GROFF",
@@ -2213,7 +2411,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by JASON GROFF"
+    imageAlt: "Google Review by JASON GROFF",
+    datePublished: "2024-06-03T14:44:13.671042Z"
   },
   {
     name: "Lisa G",
@@ -2224,7 +2423,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lisa G"
+    imageAlt: "Google Review by Lisa G",
+    datePublished: "2024-05-27T18:27:43.327181Z"
   },
   {
     name: "SC",
@@ -2235,7 +2435,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by SC"
+    imageAlt: "Google Review by SC",
+    datePublished: "2024-05-18T19:51:31.597117Z"
   },
   {
     name: "Taylor Darden",
@@ -2246,7 +2447,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Taylor Darden"
+    imageAlt: "Google Review by Taylor Darden",
+    datePublished: "2024-05-13T10:32:17.671673Z"
   },
   {
     name: "Melissa Sarnocinski",
@@ -2257,7 +2459,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Melissa Sarnocinski"
+    imageAlt: "Google Review by Melissa Sarnocinski",
+    datePublished: "2024-05-10T17:24:55.668423Z"
   },
   {
     name: "Jen Heimbach",
@@ -2268,7 +2471,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jen Heimbach"
+    imageAlt: "Google Review by Jen Heimbach",
+    datePublished: "2024-05-10T14:21:23.081780Z"
   },
   {
     name: "rossana Pecoraro",
@@ -2279,7 +2483,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by rossana Pecoraro"
+    imageAlt: "Google Review by rossana Pecoraro",
+    datePublished: "2024-05-09T17:52:48.751467Z"
   },
   {
     name: "PerfectFlyer",
@@ -2290,7 +2495,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by PerfectFlyer"
+    imageAlt: "Google Review by PerfectFlyer",
+    datePublished: "2024-04-09T13:43:31.601299Z"
   },
   {
     name: "Greg Verbosky",
@@ -2301,7 +2507,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Greg Verbosky"
+    imageAlt: "Google Review by Greg Verbosky",
+    datePublished: "2025-10-31T14:12:50.738656Z"
   },
   {
     name: "Abby Millager",
@@ -2312,7 +2519,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Abby Millager"
+    imageAlt: "Google Review by Abby Millager",
+    datePublished: "2025-10-21T00:23:09.866516Z"
   },
   {
     name: "Kelly Good",
@@ -2323,7 +2531,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kelly Good"
+    imageAlt: "Google Review by Kelly Good",
+    datePublished: "2025-10-08T15:01:44.965598Z"
   },
   {
     name: "Keni Galmai",
@@ -2334,7 +2543,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Keni Galmai"
+    imageAlt: "Google Review by Keni Galmai",
+    datePublished: "2025-10-03T18:28:46.373160Z"
   },
   {
     name: "Sonya L",
@@ -2345,7 +2555,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sonya L"
+    imageAlt: "Google Review by Sonya L",
+    datePublished: "2025-09-19T21:30:03.146590Z"
   },
   {
     name: "Heather Stoltzfus",
@@ -2356,7 +2567,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Heather Stoltzfus"
+    imageAlt: "Google Review by Heather Stoltzfus",
+    datePublished: "2025-09-17T18:03:05.004097Z"
   },
   {
     name: "Jeanette Lamson",
@@ -2367,7 +2579,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jeanette Lamson"
+    imageAlt: "Google Review by Jeanette Lamson",
+    datePublished: "2025-09-12T14:23:28.934693Z"
   },
   {
     name: "Taylor Dunn",
@@ -2378,7 +2591,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Taylor Dunn"
+    imageAlt: "Google Review by Taylor Dunn",
+    datePublished: "2025-08-27T18:00:10.887739Z"
   },
   {
     name: "Andrea C",
@@ -2389,7 +2603,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Andrea C"
+    imageAlt: "Google Review by Andrea C",
+    datePublished: "2025-08-25T17:46:15.827174Z"
   },
   {
     name: "Andrea Devine",
@@ -2400,7 +2615,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Andrea Devine"
+    imageAlt: "Google Review by Andrea Devine",
+    datePublished: "2025-08-16T18:11:24.904153Z"
   },
   {
     name: "Randy Covington",
@@ -2411,7 +2627,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Randy Covington"
+    imageAlt: "Google Review by Randy Covington",
+    datePublished: "2025-08-11T14:16:24.330297Z"
   },
   {
     name: "shannon ritter",
@@ -2422,7 +2639,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by shannon ritter"
+    imageAlt: "Google Review by shannon ritter",
+    datePublished: "2025-07-31T16:07:31.612883Z"
   },
   {
     name: "Tom K",
@@ -2433,7 +2651,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tom K"
+    imageAlt: "Google Review by Tom K",
+    datePublished: "2025-07-23T16:55:20.158471Z"
   },
   {
     name: "Danielle Diggs",
@@ -2444,7 +2663,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Danielle Diggs"
+    imageAlt: "Google Review by Danielle Diggs",
+    datePublished: "2025-07-23T16:28:23.568524Z"
   },
   {
     name: "Daryn Moore",
@@ -2455,7 +2675,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Daryn Moore"
+    imageAlt: "Google Review by Daryn Moore",
+    datePublished: "2025-07-23T16:09:39.771168Z"
   },
   {
     name: "Nicholas Uva",
@@ -2466,7 +2687,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nicholas Uva"
+    imageAlt: "Google Review by Nicholas Uva",
+    datePublished: "2025-07-23T14:06:47.235995Z"
   },
   {
     name: "Ryan Brockman",
@@ -2477,7 +2699,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ryan Brockman"
+    imageAlt: "Google Review by Ryan Brockman",
+    datePublished: "2022-07-07T13:41:56.652328Z"
   },
   {
     name: "Jesse Hereda",
@@ -2488,7 +2711,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jesse Hereda"
+    imageAlt: "Google Review by Jesse Hereda",
+    datePublished: "2022-06-16T22:25:26.371617Z"
   },
   {
     name: "James Good",
@@ -2499,7 +2723,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Good"
+    imageAlt: "Google Review by James Good",
+    datePublished: "2022-06-10T13:47:17.177618Z"
   },
   {
     name: "Michael",
@@ -2510,7 +2735,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Michael"
+    imageAlt: "Google Review by Michael",
+    datePublished: "2022-06-04T16:22:25.247330Z"
   },
   {
     name: "Edward Ballach",
@@ -2521,7 +2747,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Edward Ballach"
+    imageAlt: "Google Review by Edward Ballach",
+    datePublished: "2022-05-24T19:28:27.952327Z"
   },
   {
     name: "TLiyah Harris",
@@ -2532,7 +2759,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by TLiyah Harris"
+    imageAlt: "Google Review by TLiyah Harris",
+    datePublished: "2022-05-24T17:00:04.210892Z"
   },
   {
     name: "Kyle Bowen",
@@ -2543,7 +2771,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kyle Bowen"
+    imageAlt: "Google Review by Kyle Bowen",
+    datePublished: "2022-05-24T12:46:16.946034Z"
   },
   {
     name: "Amanda Mantegna",
@@ -2554,7 +2783,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Amanda Mantegna"
+    imageAlt: "Google Review by Amanda Mantegna",
+    datePublished: "2022-05-24T12:41:59.920473Z"
   },
   {
     name: "Ashley Nguyen",
@@ -2565,7 +2795,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ashley Nguyen"
+    imageAlt: "Google Review by Ashley Nguyen",
+    datePublished: "2022-05-21T15:26:38.579073Z"
   },
   {
     name: "Janell Moser",
@@ -2576,7 +2807,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Janell Moser"
+    imageAlt: "Google Review by Janell Moser",
+    datePublished: "2022-05-19T17:12:39.529975Z"
   },
   {
     name: "Michael Rice",
@@ -2587,7 +2819,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Michael Rice"
+    imageAlt: "Google Review by Michael Rice",
+    datePublished: "2022-05-17T19:26:19.070192Z"
   },
   {
     name: "Garth Brown",
@@ -2598,7 +2831,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Garth Brown"
+    imageAlt: "Google Review by Garth Brown",
+    datePublished: "2022-05-13T22:26:29.070916Z"
   },
   {
     name: "Tracy K",
@@ -2609,7 +2843,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tracy K"
+    imageAlt: "Google Review by Tracy K",
+    datePublished: "2022-05-10T16:07:10.210778Z"
   },
   {
     name: "Diana Dudley",
@@ -2620,7 +2855,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Diana Dudley"
+    imageAlt: "Google Review by Diana Dudley",
+    datePublished: "2024-12-10T13:55:35.705Z"
   },
   {
     name: "Hiren Patel",
@@ -2631,7 +2867,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Hiren Patel"
+    imageAlt: "Google Review by Hiren Patel",
+    datePublished: "2024-12-04T15:00:17.668622Z"
   },
   {
     name: "Spencer Baum",
@@ -2642,7 +2879,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Spencer Baum"
+    imageAlt: "Google Review by Spencer Baum",
+    datePublished: "2024-12-04T14:45:15.697236Z"
   },
   {
     name: "Ralph Murray",
@@ -2653,7 +2891,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ralph Murray"
+    imageAlt: "Google Review by Ralph Murray",
+    datePublished: "2024-12-04T14:16:25.642117Z"
   },
   {
     name: "Tricia DeCesare",
@@ -2664,7 +2903,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tricia DeCesare"
+    imageAlt: "Google Review by Tricia DeCesare",
+    datePublished: "2024-12-04T14:10:40.437732Z"
   },
   {
     name: "Nancy Dove",
@@ -2675,7 +2915,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nancy Dove"
+    imageAlt: "Google Review by Nancy Dove",
+    datePublished: "2024-10-29T18:54:07.114437Z"
   },
   {
     name: "Christina Edgerton",
@@ -2686,7 +2927,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Christina Edgerton"
+    imageAlt: "Google Review by Christina Edgerton",
+    datePublished: "2024-10-24T18:19:19.192181Z"
   },
   {
     name: "Jenna Hohlefelder",
@@ -2697,7 +2939,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jenna Hohlefelder"
+    imageAlt: "Google Review by Jenna Hohlefelder",
+    datePublished: "2024-10-24T14:51:57.167553Z"
   },
   {
     name: "Stacy Carcel",
@@ -2708,7 +2951,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Stacy Carcel"
+    imageAlt: "Google Review by Stacy Carcel",
+    datePublished: "2024-10-11T18:15:12.558816Z"
   },
   {
     name: "Emily Austin-Bruns",
@@ -2719,7 +2963,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Emily Austin-Bruns"
+    imageAlt: "Google Review by Emily Austin-Bruns",
+    datePublished: "2024-09-28T20:51:52.032167Z"
   },
   {
     name: "Lindsay Gerhard",
@@ -2730,7 +2975,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lindsay Gerhard"
+    imageAlt: "Google Review by Lindsay Gerhard",
+    datePublished: "2024-09-18T18:05:54.129153Z"
   },
   {
     name: "James Tagg",
@@ -2741,7 +2987,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Tagg"
+    imageAlt: "Google Review by James Tagg",
+    datePublished: "2024-09-07T20:19:31.805692Z"
   },
   {
     name: "Adelina White",
@@ -2752,7 +2999,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Adelina White"
+    imageAlt: "Google Review by Adelina White",
+    datePublished: "2024-09-05T15:03:38.279197Z"
   },
   {
     name: "Jamie",
@@ -2763,7 +3011,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jamie"
+    imageAlt: "Google Review by Jamie",
+    datePublished: "2024-08-16T15:22:46.879842Z"
   },
   {
     name: "Michelle Dahlkemper",
@@ -2774,7 +3023,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Michelle Dahlkemper"
+    imageAlt: "Google Review by Michelle Dahlkemper",
+    datePublished: "2021-04-29T20:32:40.237975Z"
   },
   {
     name: "Gilad Bar",
@@ -2785,7 +3035,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Gilad Bar"
+    imageAlt: "Google Review by Gilad Bar",
+    datePublished: "2023-11-07T15:26:35.801002Z"
   },
   {
     name: "Sean Williams",
@@ -2796,7 +3047,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sean Williams"
+    imageAlt: "Google Review by Sean Williams",
+    datePublished: "2023-11-07T14:54:10.417080Z"
   },
   {
     name: "Mathew Carter",
@@ -2807,7 +3059,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mathew Carter"
+    imageAlt: "Google Review by Mathew Carter",
+    datePublished: "2023-11-07T14:49:51.492450Z"
   },
   {
     name: "Samantha Besnoff",
@@ -2818,7 +3071,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Samantha Besnoff"
+    imageAlt: "Google Review by Samantha Besnoff",
+    datePublished: "2017-01-31T14:14:18.104Z"
   },
   {
     name: "Justin Uczynski",
@@ -2829,7 +3083,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin Uczynski"
+    imageAlt: "Google Review by Justin Uczynski",
+    datePublished: "2023-09-18T14:01:24.974019Z"
   },
   {
     name: "Mackenzie Lucas",
@@ -2840,7 +3095,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mackenzie Lucas"
+    imageAlt: "Google Review by Mackenzie Lucas",
+    datePublished: "2023-09-15T15:04:17.873722Z"
   },
   {
     name: "holly mcgloshen",
@@ -2851,7 +3107,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by holly mcgloshen"
+    imageAlt: "Google Review by holly mcgloshen",
+    datePublished: "2023-09-15T11:09:10.674736Z"
   },
   {
     name: "mason bram",
@@ -2862,7 +3119,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by mason bram"
+    imageAlt: "Google Review by mason bram",
+    datePublished: "2023-09-06T15:59:18.324984Z"
   },
   {
     name: "Jenna Swope",
@@ -2873,7 +3131,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jenna Swope"
+    imageAlt: "Google Review by Jenna Swope",
+    datePublished: "2023-09-01T17:09:50.064205Z"
   },
   {
     name: "Christian A. Drye",
@@ -2884,7 +3143,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Christian A. Drye"
+    imageAlt: "Google Review by Christian A. Drye",
+    datePublished: "2023-08-30T23:24:47.412668Z"
   },
   {
     name: "Pam Harris",
@@ -2895,7 +3155,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Pam Harris"
+    imageAlt: "Google Review by Pam Harris",
+    datePublished: "2023-08-30T21:52:25.072206Z"
   },
   {
     name: "Jo Ann Kimmick",
@@ -2906,7 +3167,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jo Ann Kimmick"
+    imageAlt: "Google Review by Jo Ann Kimmick",
+    datePublished: "2023-08-30T16:27:10.214155Z"
   },
   {
     name: "Tori G",
@@ -2917,7 +3179,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tori G"
+    imageAlt: "Google Review by Tori G",
+    datePublished: "2023-08-30T15:29:08.184474Z"
   },
   {
     name: "Victoria C",
@@ -2928,7 +3191,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Victoria C"
+    imageAlt: "Google Review by Victoria C",
+    datePublished: "2023-08-26T15:44:01.096806Z"
   },
   {
     name: "James Ballan",
@@ -2939,7 +3203,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Ballan"
+    imageAlt: "Google Review by James Ballan",
+    datePublished: "2023-07-27T16:02:00.610821Z"
   },
   {
     name: "Matt High",
@@ -2950,7 +3215,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matt High"
+    imageAlt: "Google Review by Matt High",
+    datePublished: "2023-07-21T16:31:43.534530Z"
   },
   {
     name: "Erin Kreisher",
@@ -2961,7 +3227,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Erin Kreisher"
+    imageAlt: "Google Review by Erin Kreisher",
+    datePublished: "2023-07-18T16:26:41.826864Z"
   },
   {
     name: "Guillermo Xabier Bustamante",
@@ -2972,7 +3239,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Guillermo Xabier Bustamante"
+    imageAlt: "Google Review by Guillermo Xabier Bustamante",
+    datePublished: "2023-07-17T16:56:55.287365Z"
   },
   {
     name: "Robin Gibson",
@@ -2983,7 +3251,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Robin Gibson"
+    imageAlt: "Google Review by Robin Gibson",
+    datePublished: "2023-07-13T16:31:57.796258Z"
   },
   {
     name: "Christopher Iacona",
@@ -2994,7 +3263,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Christopher Iacona"
+    imageAlt: "Google Review by Christopher Iacona",
+    datePublished: "2018-01-09T19:56:29.106Z"
   },
   {
     name: "Dan S",
@@ -3005,7 +3275,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dan S"
+    imageAlt: "Google Review by Dan S",
+    datePublished: "2018-01-08T17:22:23.063Z"
   },
   {
     name: "Adam Snyder",
@@ -3016,7 +3287,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Adam Snyder"
+    imageAlt: "Google Review by Adam Snyder",
+    datePublished: "2018-01-08T14:15:04.966Z"
   },
   {
     name: "Steven Lesher",
@@ -3027,7 +3299,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Steven Lesher"
+    imageAlt: "Google Review by Steven Lesher",
+    datePublished: "2018-01-07T11:44:06.197Z"
   },
   {
     name: "Lionel Adriano",
@@ -3038,7 +3311,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lionel Adriano"
+    imageAlt: "Google Review by Lionel Adriano",
+    datePublished: "2017-12-22T23:37:30.555Z"
   },
   {
     name: "Nathanael Tagg",
@@ -3049,7 +3323,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nathanael Tagg"
+    imageAlt: "Google Review by Nathanael Tagg",
+    datePublished: "2017-12-06T16:11:33.367Z"
   },
   {
     name: "Amy Khan",
@@ -3060,7 +3335,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Amy Khan"
+    imageAlt: "Google Review by Amy Khan",
+    datePublished: "2017-11-21T00:57:47.634Z"
   },
   {
     name: "Chris Patille",
@@ -3071,7 +3347,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chris Patille"
+    imageAlt: "Google Review by Chris Patille",
+    datePublished: "2017-10-21T13:37:14.638Z"
   },
   {
     name: "Penny J Hartwell",
@@ -3082,7 +3359,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Penny J Hartwell"
+    imageAlt: "Google Review by Penny J Hartwell",
+    datePublished: "2017-09-29T14:08:08.791Z"
   },
   {
     name: "Jedidiah Franklin",
@@ -3093,7 +3371,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jedidiah Franklin"
+    imageAlt: "Google Review by Jedidiah Franklin",
+    datePublished: "2017-06-28T17:24:02.315Z"
   },
   {
     name: "Karlo Gesner",
@@ -3104,7 +3383,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Karlo Gesner"
+    imageAlt: "Google Review by Karlo Gesner",
+    datePublished: "2017-05-30T12:13:03.122Z"
   },
   {
     name: "Jay Poff",
@@ -3115,7 +3395,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jay Poff"
+    imageAlt: "Google Review by Jay Poff",
+    datePublished: "2017-04-21T16:52:50.752Z"
   },
   {
     name: "Jason Ranalli",
@@ -3126,7 +3407,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jason Ranalli"
+    imageAlt: "Google Review by Jason Ranalli",
+    datePublished: "2017-03-17T15:13:57.844Z"
   },
   {
     name: "Bruno Kongawoin",
@@ -3137,7 +3419,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Bruno Kongawoin"
+    imageAlt: "Google Review by Bruno Kongawoin",
+    datePublished: "2017-01-30T16:53:39.642Z"
   },
   {
     name: "Marygrace Pue",
@@ -3148,7 +3431,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Marygrace Pue"
+    imageAlt: "Google Review by Marygrace Pue",
+    datePublished: "2017-01-28T19:17:23.340Z"
   },
   {
     name: "Maurice Jager",
@@ -3159,7 +3443,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Maurice Jager"
+    imageAlt: "Google Review by Maurice Jager",
+    datePublished: "2017-01-27T19:42:45.139Z"
   },
   {
     name: "Ben Floren",
@@ -3170,7 +3455,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ben Floren"
+    imageAlt: "Google Review by Ben Floren",
+    datePublished: "2022-05-09T14:56:31.855143Z"
   },
   {
     name: "Katelyn Middleton",
@@ -3181,7 +3467,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Katelyn Middleton"
+    imageAlt: "Google Review by Katelyn Middleton",
+    datePublished: "2022-05-05T17:03:27.123908Z"
   },
   {
     name: "Allison Macchi",
@@ -3192,7 +3479,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Allison Macchi"
+    imageAlt: "Google Review by Allison Macchi",
+    datePublished: "2022-04-28T17:14:41.464221Z"
   },
   {
     name: "Colin Baker",
@@ -3203,7 +3491,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Colin Baker"
+    imageAlt: "Google Review by Colin Baker",
+    datePublished: "2022-04-21T18:29:09.122380Z"
   },
   {
     name: "Cindy Hardy",
@@ -3214,7 +3503,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Cindy Hardy"
+    imageAlt: "Google Review by Cindy Hardy",
+    datePublished: "2022-04-19T17:09:29.578298Z"
   },
   {
     name: "Patrick Kubis",
@@ -3225,7 +3515,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Patrick Kubis"
+    imageAlt: "Google Review by Patrick Kubis",
+    datePublished: "2022-04-13T14:12:53.289625Z"
   },
   {
     name: "Justin Spannuth",
@@ -3236,7 +3527,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin Spannuth"
+    imageAlt: "Google Review by Justin Spannuth",
+    datePublished: "2019-03-22T13:59:48.779970Z"
   },
   {
     name: "Lauren Stadel",
@@ -3247,7 +3539,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lauren Stadel"
+    imageAlt: "Google Review by Lauren Stadel",
+    datePublished: "2022-04-05T22:11:14.651370Z"
   },
   {
     name: "Victor Cortes",
@@ -3258,7 +3551,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Victor Cortes"
+    imageAlt: "Google Review by Victor Cortes",
+    datePublished: "2022-03-24T14:33:06.880487Z"
   },
   {
     name: "Justin Grenier",
@@ -3269,7 +3563,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin Grenier"
+    imageAlt: "Google Review by Justin Grenier",
+    datePublished: "2022-03-20T20:39:56.312660Z"
   },
   {
     name: "Maddie Miller",
@@ -3280,7 +3575,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Maddie Miller"
+    imageAlt: "Google Review by Maddie Miller",
+    datePublished: "2022-03-19T16:28:44.386042Z"
   },
   {
     name: "Joey Garcia",
@@ -3291,7 +3587,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joey Garcia"
+    imageAlt: "Google Review by Joey Garcia",
+    datePublished: "2022-03-16T16:35:08.150691Z"
   },
   {
     name: "Lauren Johnson",
@@ -3302,7 +3599,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lauren Johnson"
+    imageAlt: "Google Review by Lauren Johnson",
+    datePublished: "2022-03-15T17:36:47.670081Z"
   },
   {
     name: "Anthony Mig",
@@ -3313,7 +3611,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Anthony Mig"
+    imageAlt: "Google Review by Anthony Mig",
+    datePublished: "2022-03-15T17:09:22.301560Z"
   },
   {
     name: "Robert Weiss",
@@ -3324,7 +3623,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Robert Weiss"
+    imageAlt: "Google Review by Robert Weiss",
+    datePublished: "2022-03-15T16:31:07.998821Z"
   },
   {
     name: "Jimmy Cahill",
@@ -3335,7 +3635,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jimmy Cahill"
+    imageAlt: "Google Review by Jimmy Cahill",
+    datePublished: "2022-03-15T16:13:30.374178Z"
   },
   {
     name: "John A. DeMato",
@@ -3346,7 +3647,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by John A. DeMato"
+    imageAlt: "Google Review by John A. DeMato",
+    datePublished: "2017-01-27T18:36:19.708Z"
   },
   {
     name: "Eric Slodysko",
@@ -3357,7 +3659,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Eric Slodysko"
+    imageAlt: "Google Review by Eric Slodysko",
+    datePublished: "2017-01-27T04:26:43.976Z"
   },
   {
     name: "David Shane McDermott",
@@ -3368,7 +3671,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by David Shane McDermott"
+    imageAlt: "Google Review by David Shane McDermott",
+    datePublished: "2017-01-27T02:19:36.648Z"
   },
   {
     name: "Star Bunner",
@@ -3379,7 +3683,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Star Bunner"
+    imageAlt: "Google Review by Star Bunner",
+    datePublished: "2017-01-26T20:11:02.554Z"
   },
   {
     name: "Marcia N",
@@ -3390,7 +3695,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Marcia N"
+    imageAlt: "Google Review by Marcia N",
+    datePublished: "2022-09-16T13:20:22.031725Z"
   },
   {
     name: "Timothy Gageby",
@@ -3401,7 +3707,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Timothy Gageby"
+    imageAlt: "Google Review by Timothy Gageby",
+    datePublished: "2022-09-14T20:00:48.892161Z"
   },
   {
     name: "James Darby",
@@ -3412,7 +3719,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Darby"
+    imageAlt: "Google Review by James Darby",
+    datePublished: "2022-09-11T15:24:40.483915Z"
   },
   {
     name: "Heather Mitchell",
@@ -3423,7 +3731,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Heather Mitchell"
+    imageAlt: "Google Review by Heather Mitchell",
+    datePublished: "2022-09-07T20:49:22.939534Z"
   },
   {
     name: "forrest borod",
@@ -3434,7 +3743,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by forrest borod"
+    imageAlt: "Google Review by forrest borod",
+    datePublished: "2022-08-31T20:00:11.569163Z"
   },
   {
     name: "RJ Repass",
@@ -3445,7 +3755,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by RJ Repass"
+    imageAlt: "Google Review by RJ Repass",
+    datePublished: "2022-08-22T18:49:52.274850Z"
   },
   {
     name: "Debra Davis",
@@ -3456,7 +3767,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Debra Davis"
+    imageAlt: "Google Review by Debra Davis",
+    datePublished: "2022-08-02T15:37:53.337616Z"
   },
   {
     name: "Craig Toron",
@@ -3467,7 +3779,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Craig Toron"
+    imageAlt: "Google Review by Craig Toron",
+    datePublished: "2022-07-28T16:59:54.836349Z"
   },
   {
     name: "Greg Ricca",
@@ -3478,7 +3791,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Greg Ricca"
+    imageAlt: "Google Review by Greg Ricca",
+    datePublished: "2022-07-21T16:55:34.760164Z"
   },
   {
     name: "Maurice Reese",
@@ -3489,7 +3803,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Maurice Reese"
+    imageAlt: "Google Review by Maurice Reese",
+    datePublished: "2022-07-20T15:27:05.232007Z"
   },
   {
     name: "Demario Morgan",
@@ -3500,7 +3815,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Demario Morgan"
+    imageAlt: "Google Review by Demario Morgan",
+    datePublished: "2022-07-20T15:07:32.865872Z"
   },
   {
     name: "Charles Lemons",
@@ -3511,7 +3827,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Charles Lemons"
+    imageAlt: "Google Review by Charles Lemons",
+    datePublished: "2022-07-20T15:00:50.620494Z"
   },
   {
     name: "arielle jenkins",
@@ -3522,7 +3839,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by arielle jenkins"
+    imageAlt: "Google Review by arielle jenkins",
+    datePublished: "2022-07-20T14:55:58.119562Z"
   },
   {
     name: "Toi Pollock",
@@ -3533,7 +3851,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Toi Pollock"
+    imageAlt: "Google Review by Toi Pollock",
+    datePublished: "2022-07-20T14:39:21.620898Z"
   },
   {
     name: "mike stevens",
@@ -3544,7 +3863,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by mike stevens"
+    imageAlt: "Google Review by mike stevens",
+    datePublished: "2022-07-20T14:18:53.944019Z"
   },
   {
     name: "Abigail",
@@ -3555,7 +3875,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Abigail"
+    imageAlt: "Google Review by Abigail",
+    datePublished: "2022-07-20T14:02:04.281708Z"
   },
   {
     name: "NaysDay ____",
@@ -3566,7 +3887,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by NaysDay ____"
+    imageAlt: "Google Review by NaysDay ____",
+    datePublished: "2022-07-20T13:46:30.124045Z"
   },
   {
     name: "Tracy Varnes",
@@ -3577,7 +3899,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tracy Varnes"
+    imageAlt: "Google Review by Tracy Varnes",
+    datePublished: "2022-07-20T13:38:36.614148Z"
   },
   {
     name: "Rebecca WL",
@@ -3588,7 +3911,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rebecca WL"
+    imageAlt: "Google Review by Rebecca WL",
+    datePublished: "2023-06-24T19:41:19.480785Z"
   },
   {
     name: "Susan Young Nicholas",
@@ -3599,7 +3923,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Susan Young Nicholas"
+    imageAlt: "Google Review by Susan Young Nicholas",
+    datePublished: "2023-06-24T18:08:25.729221Z"
   },
   {
     name: "Paul Alan Lowrie",
@@ -3610,7 +3935,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Paul Alan Lowrie"
+    imageAlt: "Google Review by Paul Alan Lowrie",
+    datePublished: "2023-06-24T15:35:58.783025Z"
   },
   {
     name: "Cindy Nguyen",
@@ -3621,7 +3947,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Cindy Nguyen"
+    imageAlt: "Google Review by Cindy Nguyen",
+    datePublished: "2023-06-23T18:44:00.675590Z"
   },
   {
     name: "mark kennedy",
@@ -3632,7 +3959,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by mark kennedy"
+    imageAlt: "Google Review by mark kennedy",
+    datePublished: "2023-06-22T14:48:49.515621Z"
   },
   {
     name: "Ron Wagner",
@@ -3643,7 +3971,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ron Wagner"
+    imageAlt: "Google Review by Ron Wagner",
+    datePublished: "2023-06-18T13:24:39.041038Z"
   },
   {
     name: "Deena Brant",
@@ -3654,7 +3983,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Deena Brant"
+    imageAlt: "Google Review by Deena Brant",
+    datePublished: "2023-06-10T13:56:23.919502Z"
   },
   {
     name: "Grace Carr- Harkins",
@@ -3665,7 +3995,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Grace Carr- Harkins"
+    imageAlt: "Google Review by Grace Carr- Harkins",
+    datePublished: "2023-06-09T15:01:25.366035Z"
   },
   {
     name: "Joselyn Strohm",
@@ -3676,7 +4007,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joselyn Strohm"
+    imageAlt: "Google Review by Joselyn Strohm",
+    datePublished: "2023-06-01T17:36:20.113443Z"
   },
   {
     name: "Brian Basile",
@@ -3687,7 +4019,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Brian Basile"
+    imageAlt: "Google Review by Brian Basile",
+    datePublished: "2023-05-30T16:29:23.699680Z"
   },
   {
     name: "Ashley Bowman",
@@ -3698,7 +4031,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ashley Bowman"
+    imageAlt: "Google Review by Ashley Bowman",
+    datePublished: "2023-05-30T14:14:19.209176Z"
   },
   {
     name: "E C",
@@ -3709,7 +4043,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by E C"
+    imageAlt: "Google Review by E C",
+    datePublished: "2023-05-09T14:42:09.602858Z"
   },
   {
     name: "tony avallone",
@@ -3720,7 +4055,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by tony avallone"
+    imageAlt: "Google Review by tony avallone",
+    datePublished: "2023-05-09T14:40:07.832401Z"
   },
   {
     name: "George Pagano",
@@ -3731,7 +4067,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by George Pagano"
+    imageAlt: "Google Review by George Pagano",
+    datePublished: "2023-05-08T18:25:00.568183Z"
   },
   {
     name: "Jeff Crossan",
@@ -3742,7 +4079,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jeff Crossan"
+    imageAlt: "Google Review by Jeff Crossan",
+    datePublished: "2023-05-04T14:39:28.539428Z"
   },
   {
     name: "Ramiro Castillo",
@@ -3753,7 +4091,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ramiro Castillo"
+    imageAlt: "Google Review by Ramiro Castillo",
+    datePublished: "2023-04-28T16:01:40.610385Z"
   },
   {
     name: "Nick Klein",
@@ -3764,7 +4103,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nick Klein"
+    imageAlt: "Google Review by Nick Klein",
+    datePublished: "2023-04-24T17:18:59.748816Z"
   },
   {
     name: "Jim McAndrew",
@@ -3775,7 +4115,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jim McAndrew"
+    imageAlt: "Google Review by Jim McAndrew",
+    datePublished: "2022-08-05T21:36:12.882919Z"
   },
   {
     name: "Alma Bruffy",
@@ -3786,7 +4127,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Alma Bruffy"
+    imageAlt: "Google Review by Alma Bruffy",
+    datePublished: "2019-09-12T18:10:09.615790Z"
   },
   {
     name: "Jerry Camarillo Photography",
@@ -3797,7 +4139,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jerry Camarillo Photography"
+    imageAlt: "Google Review by Jerry Camarillo Photography",
+    datePublished: "2019-08-22T19:02:28.997251Z"
   },
   {
     name: "Erin Waters",
@@ -3808,7 +4151,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Erin Waters"
+    imageAlt: "Google Review by Erin Waters",
+    datePublished: "2019-07-29T01:54:49.686060Z"
   },
   {
     name: "Paul Dabrowski",
@@ -3819,7 +4163,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Paul Dabrowski"
+    imageAlt: "Google Review by Paul Dabrowski",
+    datePublished: "2019-06-26T17:21:03.731992Z"
   },
   {
     name: "Brett Peters",
@@ -3830,7 +4175,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Brett Peters"
+    imageAlt: "Google Review by Brett Peters",
+    datePublished: "2019-06-12T19:25:49.585763Z"
   },
   {
     name: "E-rich",
@@ -3841,7 +4187,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by E-rich"
+    imageAlt: "Google Review by E-rich",
+    datePublished: "2019-06-04T18:48:48.923255Z"
   },
   {
     name: "Darnell Furer",
@@ -3852,7 +4199,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Darnell Furer"
+    imageAlt: "Google Review by Darnell Furer",
+    datePublished: "2019-05-11T17:23:24.661550Z"
   },
   {
     name: "Michael Schacht",
@@ -3863,7 +4211,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Michael Schacht"
+    imageAlt: "Google Review by Michael Schacht",
+    datePublished: "2019-01-03T19:57:21.945152Z"
   },
   {
     name: "Greg Thomason",
@@ -3874,7 +4223,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Greg Thomason"
+    imageAlt: "Google Review by Greg Thomason",
+    datePublished: "2019-01-03T20:02:06.359482Z"
   },
   {
     name: "Robin Mitchell",
@@ -3885,7 +4235,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Robin Mitchell"
+    imageAlt: "Google Review by Robin Mitchell",
+    datePublished: "2019-02-06T23:23:03.401623Z"
   },
   {
     name: "damain Cavalo",
@@ -3896,7 +4247,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by damain Cavalo"
+    imageAlt: "Google Review by damain Cavalo",
+    datePublished: "2019-01-31T00:38:13.781102Z"
   },
   {
     name: "Karla Akemann",
@@ -3907,7 +4259,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Karla Akemann"
+    imageAlt: "Google Review by Karla Akemann",
+    datePublished: "2019-01-30T13:52:02.896280Z"
   },
   {
     name: "Karaminder",
@@ -3918,7 +4271,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Karaminder"
+    imageAlt: "Google Review by Karaminder",
+    datePublished: "2019-01-03T20:03:43.559015Z"
   },
   {
     name: "Charlie Abrahams",
@@ -3929,7 +4283,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Charlie Abrahams"
+    imageAlt: "Google Review by Charlie Abrahams",
+    datePublished: "2019-01-03T19:56:43.504291Z"
   },
   {
     name: "Daniel Sommer",
@@ -3940,7 +4295,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Daniel Sommer"
+    imageAlt: "Google Review by Daniel Sommer",
+    datePublished: "2018-12-29T07:04:24.784369Z"
   },
   {
     name: "Claudia H",
@@ -3951,7 +4307,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Claudia H"
+    imageAlt: "Google Review by Claudia H",
+    datePublished: "2018-12-27T20:38:24.479310Z"
   },
   {
     name: "Matthew Hamilton",
@@ -3962,7 +4319,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matthew Hamilton"
+    imageAlt: "Google Review by Matthew Hamilton",
+    datePublished: "2018-12-27T20:34:37.335680Z"
   },
   {
     name: "Jayme Chandler",
@@ -3973,7 +4331,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jayme Chandler"
+    imageAlt: "Google Review by Jayme Chandler",
+    datePublished: "2018-12-11T17:57:34.085046Z"
   },
   {
     name: "Erin Moore",
@@ -3984,7 +4343,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Erin Moore"
+    imageAlt: "Google Review by Erin Moore",
+    datePublished: "2022-10-18T15:04:05.798013Z"
   },
   {
     name: "Kishn Parbadia",
@@ -3995,7 +4355,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kishn Parbadia"
+    imageAlt: "Google Review by Kishn Parbadia",
+    datePublished: "2022-10-18T15:00:35.761581Z"
   },
   {
     name: "Kelly MacKinnon",
@@ -4006,7 +4367,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kelly MacKinnon"
+    imageAlt: "Google Review by Kelly MacKinnon",
+    datePublished: "2022-10-18T13:55:24.909418Z"
   },
   {
     name: "Julie Davis",
@@ -4017,7 +4379,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Julie Davis"
+    imageAlt: "Google Review by Julie Davis",
+    datePublished: "2022-10-18T13:09:45.879608Z"
   },
   {
     name: "Erik Wrigglesworth",
@@ -4028,7 +4391,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Erik Wrigglesworth"
+    imageAlt: "Google Review by Erik Wrigglesworth",
+    datePublished: "2022-10-18T12:53:04.169143Z"
   },
   {
     name: "David Eberhardt",
@@ -4039,7 +4403,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by David Eberhardt"
+    imageAlt: "Google Review by David Eberhardt",
+    datePublished: "2022-10-18T12:48:38.789482Z"
   },
   {
     name: "Jodi OReilly",
@@ -4050,7 +4415,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jodi OReilly"
+    imageAlt: "Google Review by Jodi OReilly",
+    datePublished: "2022-10-13T17:33:25.590427Z"
   },
   {
     name: "Megan Moore",
@@ -4061,7 +4427,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Megan Moore"
+    imageAlt: "Google Review by Megan Moore",
+    datePublished: "2022-10-12T18:01:09.377358Z"
   },
   {
     name: "Todd R. Weiss",
@@ -4072,7 +4439,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Todd R. Weiss"
+    imageAlt: "Google Review by Todd R. Weiss",
+    datePublished: "2022-10-04T18:42:02.207486Z"
   },
   {
     name: "Tara Drury",
@@ -4083,7 +4451,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tara Drury"
+    imageAlt: "Google Review by Tara Drury",
+    datePublished: "2022-10-04T14:15:41.170647Z"
   },
   {
     name: "Shannon Cogdell",
@@ -4094,7 +4463,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Shannon Cogdell"
+    imageAlt: "Google Review by Shannon Cogdell",
+    datePublished: "2022-10-03T17:00:57.202801Z"
   },
   {
     name: "Jackie Mathiot",
@@ -4105,7 +4475,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jackie Mathiot"
+    imageAlt: "Google Review by Jackie Mathiot",
+    datePublished: "2022-09-16T13:41:09.173335Z"
   },
   {
     name: "Mike Hill",
@@ -4116,7 +4487,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mike Hill"
+    imageAlt: "Google Review by Mike Hill",
+    datePublished: "2022-09-16T13:52:29.711102Z"
   },
   {
     name: "Faith Iseman",
@@ -4127,7 +4499,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Faith Iseman"
+    imageAlt: "Google Review by Faith Iseman",
+    datePublished: "2022-09-16T13:42:58.490870Z"
   },
   {
     name: "David Cunningham",
@@ -4138,7 +4511,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by David Cunningham"
+    imageAlt: "Google Review by David Cunningham",
+    datePublished: "2021-10-14T19:28:10.699129Z"
   },
   {
     name: "Kenny Williams",
@@ -4149,7 +4523,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kenny Williams"
+    imageAlt: "Google Review by Kenny Williams",
+    datePublished: "2021-10-14T17:01:43.116379Z"
   },
   {
     name: "Jeff Watkins",
@@ -4160,7 +4535,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jeff Watkins"
+    imageAlt: "Google Review by Jeff Watkins",
+    datePublished: "2021-10-14T15:55:16.463696Z"
   },
   {
     name: "Mike",
@@ -4171,7 +4547,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mike"
+    imageAlt: "Google Review by Mike",
+    datePublished: "2021-10-14T14:54:04.542699Z"
   },
   {
     name: "Pat Jackson",
@@ -4182,7 +4559,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Pat Jackson"
+    imageAlt: "Google Review by Pat Jackson",
+    datePublished: "2021-10-14T13:52:07.001870Z"
   },
   {
     name: "Amy Hobby",
@@ -4193,7 +4571,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Amy Hobby"
+    imageAlt: "Google Review by Amy Hobby",
+    datePublished: "2021-10-14T13:04:57.541354Z"
   },
   {
     name: "Dianne Gadbois",
@@ -4204,7 +4583,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dianne Gadbois"
+    imageAlt: "Google Review by Dianne Gadbois",
+    datePublished: "2021-10-02T22:22:49.812994Z"
   },
   {
     name: "FBI Intel",
@@ -4215,7 +4595,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by FBI Intel"
+    imageAlt: "Google Review by FBI Intel",
+    datePublished: "2021-10-02T17:32:46.391363Z"
   },
   {
     name: "Justin Cracroft",
@@ -4226,7 +4607,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin Cracroft"
+    imageAlt: "Google Review by Justin Cracroft",
+    datePublished: "2021-09-30T21:27:14.710905Z"
   },
   {
     name: "Danielle Beck",
@@ -4237,7 +4619,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Danielle Beck"
+    imageAlt: "Google Review by Danielle Beck",
+    datePublished: "2021-09-29T14:17:48.215329Z"
   },
   {
     name: "SlimDog",
@@ -4248,7 +4631,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by SlimDog"
+    imageAlt: "Google Review by SlimDog",
+    datePublished: "2021-09-28T21:05:13.493456Z"
   },
   {
     name: "Amy Bissonette",
@@ -4259,7 +4643,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Amy Bissonette"
+    imageAlt: "Google Review by Amy Bissonette",
+    datePublished: "2020-03-02T18:20:11.127243Z"
   },
   {
     name: "Jilian White",
@@ -4270,7 +4655,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jilian White"
+    imageAlt: "Google Review by Jilian White",
+    datePublished: "2020-02-25T13:48:08.075939Z"
   },
   {
     name: "kim dalton",
@@ -4281,7 +4667,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by kim dalton"
+    imageAlt: "Google Review by kim dalton",
+    datePublished: "2020-02-18T13:00:04.786417Z"
   },
   {
     name: "Shree Patel",
@@ -4292,7 +4679,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Shree Patel"
+    imageAlt: "Google Review by Shree Patel",
+    datePublished: "2020-02-05T01:09:57.179403Z"
   },
   {
     name: "Josh Outlar",
@@ -4303,7 +4691,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Josh Outlar"
+    imageAlt: "Google Review by Josh Outlar",
+    datePublished: "2020-01-21T13:22:48.351198Z"
   },
   {
     name: "Duane Furlong",
@@ -4314,7 +4703,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Duane Furlong"
+    imageAlt: "Google Review by Duane Furlong",
+    datePublished: "2020-01-18T13:56:49.903797Z"
   },
   {
     name: "Lenny Le",
@@ -4325,7 +4715,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lenny Le"
+    imageAlt: "Google Review by Lenny Le",
+    datePublished: "2019-12-28T15:13:28.698812Z"
   },
   {
     name: "Joe Nicholas",
@@ -4336,7 +4727,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joe Nicholas"
+    imageAlt: "Google Review by Joe Nicholas",
+    datePublished: "2019-11-20T00:55:46.694039Z"
   },
   {
     name: "norman jaillet",
@@ -4347,7 +4739,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by norman jaillet"
+    imageAlt: "Google Review by norman jaillet",
+    datePublished: "2019-11-18T20:07:09.548781Z"
   },
   {
     name: "Matthew Miller",
@@ -4358,7 +4751,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matthew Miller"
+    imageAlt: "Google Review by Matthew Miller",
+    datePublished: "2019-11-17T19:13:51.227801Z"
   },
   {
     name: "John J. Talaber",
@@ -4369,7 +4763,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by John J. Talaber"
+    imageAlt: "Google Review by John J. Talaber",
+    datePublished: "2019-11-06T14:27:59.824871Z"
   },
   {
     name: "James Mikulski",
@@ -4380,7 +4775,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Mikulski"
+    imageAlt: "Google Review by James Mikulski",
+    datePublished: "2019-11-05T22:28:47.878237Z"
   },
   {
     name: "Jason Pennell",
@@ -4391,7 +4787,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jason Pennell"
+    imageAlt: "Google Review by Jason Pennell",
+    datePublished: "2019-11-04T19:59:34.370270Z"
   },
   {
     name: "Carin Leisure",
@@ -4402,7 +4799,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Carin Leisure"
+    imageAlt: "Google Review by Carin Leisure",
+    datePublished: "2019-10-17T21:09:42.937666Z"
   },
   {
     name: "Mitch Erb",
@@ -4413,7 +4811,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mitch Erb"
+    imageAlt: "Google Review by Mitch Erb",
+    datePublished: "2019-10-17T15:28:09.910155Z"
   },
   {
     name: "Seshu Badrinath",
@@ -4424,7 +4823,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Seshu Badrinath"
+    imageAlt: "Google Review by Seshu Badrinath",
+    datePublished: "2019-10-14T02:24:11.127885Z"
   },
   {
     name: "JY Hicks",
@@ -4435,7 +4835,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by JY Hicks"
+    imageAlt: "Google Review by JY Hicks",
+    datePublished: "2019-10-03T11:34:00.312832Z"
   },
   {
     name: "Heather Wright",
@@ -4446,7 +4847,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Heather Wright"
+    imageAlt: "Google Review by Heather Wright",
+    datePublished: "2019-09-24T10:54:46.096107Z"
   },
   {
     name: "Jennifer Sanchez",
@@ -4457,7 +4859,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jennifer Sanchez"
+    imageAlt: "Google Review by Jennifer Sanchez",
+    datePublished: "2020-07-22T22:52:20.970162Z"
   },
   {
     name: "Sophia Strawser",
@@ -4468,7 +4871,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sophia Strawser"
+    imageAlt: "Google Review by Sophia Strawser",
+    datePublished: "2020-07-22T21:43:05.119886Z"
   },
   {
     name: "Collette Anderson",
@@ -4479,7 +4883,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Collette Anderson"
+    imageAlt: "Google Review by Collette Anderson",
+    datePublished: "2020-07-22T20:15:14.468329Z"
   },
   {
     name: "Maritsa Cortes",
@@ -4490,7 +4895,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Maritsa Cortes"
+    imageAlt: "Google Review by Maritsa Cortes",
+    datePublished: "2020-07-22T19:12:08.713150Z"
   },
   {
     name: "Carine Nyaka",
@@ -4501,7 +4907,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Carine Nyaka"
+    imageAlt: "Google Review by Carine Nyaka",
+    datePublished: "2020-01-10T03:48:35.094558Z"
   },
   {
     name: "Mitch Nugent",
@@ -4512,7 +4919,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mitch Nugent"
+    imageAlt: "Google Review by Mitch Nugent",
+    datePublished: "2020-07-22T16:41:47.841398Z"
   },
   {
     name: "Michele Greatti",
@@ -4523,7 +4931,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Michele Greatti"
+    imageAlt: "Google Review by Michele Greatti",
+    datePublished: "2020-07-22T16:32:18.894410Z"
   },
   {
     name: "Jackie Sprout",
@@ -4534,7 +4943,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jackie Sprout"
+    imageAlt: "Google Review by Jackie Sprout",
+    datePublished: "2020-07-22T15:51:40.389779Z"
   },
   {
     name: "William Taylor Day",
@@ -4545,7 +4955,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by William Taylor Day"
+    imageAlt: "Google Review by William Taylor Day",
+    datePublished: "2020-07-07T02:03:05.758962Z"
   },
   {
     name: "WLC Urbex (WebmasterLC)",
@@ -4556,7 +4967,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by WLC Urbex (WebmasterLC)"
+    imageAlt: "Google Review by WLC Urbex (WebmasterLC)",
+    datePublished: "2020-06-26T14:58:35.716610Z"
   },
   {
     name: "Stephen Ekema-Agbaw",
@@ -4567,7 +4979,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Stephen Ekema-Agbaw"
+    imageAlt: "Google Review by Stephen Ekema-Agbaw",
+    datePublished: "2020-06-19T23:16:18.203617Z"
   },
   {
     name: "Lexi Scott",
@@ -4578,7 +4991,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lexi Scott"
+    imageAlt: "Google Review by Lexi Scott",
+    datePublished: "2020-06-06T19:33:49.457080Z"
   },
   {
     name: "Kevin Thai",
@@ -4589,7 +5003,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kevin Thai"
+    imageAlt: "Google Review by Kevin Thai",
+    datePublished: "2020-04-02T23:31:44.444243Z"
   },
   {
     name: "Ross McIntire",
@@ -4600,7 +5015,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ross McIntire"
+    imageAlt: "Google Review by Ross McIntire",
+    datePublished: "2020-04-01T23:55:36.509888Z"
   },
   {
     name: "Andrew B",
@@ -4611,7 +5027,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Andrew B"
+    imageAlt: "Google Review by Andrew B",
+    datePublished: "2020-10-17T13:29:45.008081Z"
   },
   {
     name: "Megan Poff",
@@ -4622,7 +5039,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Megan Poff"
+    imageAlt: "Google Review by Megan Poff",
+    datePublished: "2019-05-24T21:27:28.963356Z"
   },
   {
     name: "Dr. Samantha Wertheimer",
@@ -4633,7 +5051,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dr. Samantha Wertheimer"
+    imageAlt: "Google Review by Dr. Samantha Wertheimer",
+    datePublished: "2020-10-07T20:56:54.443322Z"
   },
   {
     name: "Franca Little",
@@ -4644,7 +5063,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Franca Little"
+    imageAlt: "Google Review by Franca Little",
+    datePublished: "2020-10-06T15:51:38.172521Z"
   },
   {
     name: "Fabio",
@@ -4655,7 +5075,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Fabio"
+    imageAlt: "Google Review by Fabio",
+    datePublished: "2020-10-06T15:14:21.800386Z"
   },
   {
     name: "Dylan Deals",
@@ -4666,7 +5087,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dylan Deals"
+    imageAlt: "Google Review by Dylan Deals",
+    datePublished: "2020-09-30T18:50:08.043383Z"
   },
   {
     name: "Joel Skundrich",
@@ -4677,7 +5099,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joel Skundrich"
+    imageAlt: "Google Review by Joel Skundrich",
+    datePublished: "2020-09-26T22:23:08.149964Z"
   },
   {
     name: "LaRonn Zimmerman",
@@ -4688,7 +5111,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by LaRonn Zimmerman"
+    imageAlt: "Google Review by LaRonn Zimmerman",
+    datePublished: "2020-08-27T22:42:34.097498Z"
   },
   {
     name: "Glenn Derle",
@@ -4699,7 +5123,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Glenn Derle"
+    imageAlt: "Google Review by Glenn Derle",
+    datePublished: "2020-08-26T17:52:36.110723Z"
   },
   {
     name: "Stephen Condon",
@@ -4710,7 +5135,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Stephen Condon"
+    imageAlt: "Google Review by Stephen Condon",
+    datePublished: "2020-08-26T17:33:39.356638Z"
   },
   {
     name: "Jake Basinger",
@@ -4721,7 +5147,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jake Basinger"
+    imageAlt: "Google Review by Jake Basinger",
+    datePublished: "2020-08-26T17:16:24.397195Z"
   },
   {
     name: "Barry Braunstein",
@@ -4732,7 +5159,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Barry Braunstein"
+    imageAlt: "Google Review by Barry Braunstein",
+    datePublished: "2020-08-20T15:45:19.399864Z"
   },
   {
     name: "Autumn Sanger",
@@ -4743,7 +5171,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Autumn Sanger"
+    imageAlt: "Google Review by Autumn Sanger",
+    datePublished: "2020-08-11T20:33:40.543313Z"
   },
   {
     name: "Jo Borolla",
@@ -4754,7 +5183,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jo Borolla"
+    imageAlt: "Google Review by Jo Borolla",
+    datePublished: "2020-07-23T14:36:08.017090Z"
   },
   {
     name: "Julie Dunst",
@@ -4765,7 +5195,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Julie Dunst"
+    imageAlt: "Google Review by Julie Dunst",
+    datePublished: "2020-07-22T23:48:28.696221Z"
   },
   {
     name: "Hailey Taylor",
@@ -4776,7 +5207,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Hailey Taylor"
+    imageAlt: "Google Review by Hailey Taylor",
+    datePublished: "2024-12-27T16:55:45.966675Z"
   },
   {
     name: "Sway M",
@@ -4787,7 +5219,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sway M"
+    imageAlt: "Google Review by Sway M",
+    datePublished: "2024-12-27T16:25:03.088065Z"
   },
   {
     name: "Frannie Esparza",
@@ -4798,7 +5231,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Frannie Esparza"
+    imageAlt: "Google Review by Frannie Esparza",
+    datePublished: "2024-12-27T16:05:27.015233Z"
   },
   {
     name: "Anabella Hampton",
@@ -4809,7 +5243,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Anabella Hampton"
+    imageAlt: "Google Review by Anabella Hampton",
+    datePublished: "2024-12-23T16:18:04.755224Z"
   },
   {
     name: "Nicole Taylor",
@@ -4820,7 +5255,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nicole Taylor"
+    imageAlt: "Google Review by Nicole Taylor",
+    datePublished: "2024-12-17T19:01:12.341184Z"
   },
   {
     name: "Tracey Brand-Sanders",
@@ -4831,7 +5267,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tracey Brand-Sanders"
+    imageAlt: "Google Review by Tracey Brand-Sanders",
+    datePublished: "2024-12-10T21:00:29.830353Z"
   },
   {
     name: "Brigitte Wilson",
@@ -4842,7 +5279,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Brigitte Wilson"
+    imageAlt: "Google Review by Brigitte Wilson",
+    datePublished: "2024-12-10T20:14:01.996429Z"
   },
   {
     name: "Adam Cooperman",
@@ -4853,7 +5291,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Adam Cooperman"
+    imageAlt: "Google Review by Adam Cooperman",
+    datePublished: "2024-12-10T19:47:48.056052Z"
   },
   {
     name: "Sachin Patel",
@@ -4864,7 +5303,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sachin Patel"
+    imageAlt: "Google Review by Sachin Patel",
+    datePublished: "2024-12-10T19:36:17.965799Z"
   },
   {
     name: "Loren Hudziak",
@@ -4875,7 +5315,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Loren Hudziak"
+    imageAlt: "Google Review by Loren Hudziak",
+    datePublished: "2024-12-10T16:12:46.484096Z"
   },
   {
     name: "Tammy Klotz",
@@ -4886,7 +5327,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tammy Klotz"
+    imageAlt: "Google Review by Tammy Klotz",
+    datePublished: "2024-12-10T15:59:42.201706Z"
   },
   {
     name: "Greg Tannenbaum",
@@ -4897,7 +5339,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Greg Tannenbaum"
+    imageAlt: "Google Review by Greg Tannenbaum",
+    datePublished: "2024-12-10T15:47:45.041457Z"
   },
   {
     name: "James Creamer III",
@@ -4908,7 +5351,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Creamer III"
+    imageAlt: "Google Review by James Creamer III",
+    datePublished: "2024-12-10T14:32:54.284357Z"
   },
   {
     name: "Jamie Warren",
@@ -4919,7 +5363,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jamie Warren"
+    imageAlt: "Google Review by Jamie Warren",
+    datePublished: "2024-12-10T14:14:43.555340Z"
   },
   {
     name: "Richard Foster",
@@ -4930,7 +5375,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Richard Foster"
+    imageAlt: "Google Review by Richard Foster",
+    datePublished: "2023-04-07T13:56:54.674900Z"
   },
   {
     name: "judy mueller",
@@ -4941,7 +5387,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by judy mueller"
+    imageAlt: "Google Review by judy mueller",
+    datePublished: "2023-03-30T15:31:21.711588Z"
   },
   {
     name: "Nancy Craven",
@@ -4952,7 +5399,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nancy Craven"
+    imageAlt: "Google Review by Nancy Craven",
+    datePublished: "2023-03-28T17:01:04.190594Z"
   },
   {
     name: "Adam Eberly",
@@ -4963,7 +5411,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Adam Eberly"
+    imageAlt: "Google Review by Adam Eberly",
+    datePublished: "2023-03-27T16:47:51.372541Z"
   },
   {
     name: "Donald Thomas",
@@ -4974,7 +5423,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Donald Thomas"
+    imageAlt: "Google Review by Donald Thomas",
+    datePublished: "2023-03-28T15:27:08.513546Z"
   },
   {
     name: "William Burgess",
@@ -4985,7 +5435,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by William Burgess"
+    imageAlt: "Google Review by William Burgess",
+    datePublished: "2023-03-17T19:27:25.090555Z"
   },
   {
     name: "Bryan Glatfelter",
@@ -4996,7 +5447,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Bryan Glatfelter"
+    imageAlt: "Google Review by Bryan Glatfelter",
+    datePublished: "2023-03-17T13:52:31.091892Z"
   },
   {
     name: "Todd Murtoff",
@@ -5007,7 +5459,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Todd Murtoff"
+    imageAlt: "Google Review by Todd Murtoff",
+    datePublished: "2023-03-03T15:44:38.853654Z"
   },
   {
     name: "Amy Murray",
@@ -5018,7 +5471,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Amy Murray"
+    imageAlt: "Google Review by Amy Murray",
+    datePublished: "2023-03-02T19:52:02.439733Z"
   },
   {
     name: "Rob and Julianne Poff",
@@ -5029,7 +5483,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rob and Julianne Poff"
+    imageAlt: "Google Review by Rob and Julianne Poff",
+    datePublished: "2023-02-22T19:24:22.097277Z"
   },
   {
     name: "Gavin Gossage",
@@ -5040,7 +5495,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Gavin Gossage"
+    imageAlt: "Google Review by Gavin Gossage",
+    datePublished: "2023-02-22T16:05:27.624850Z"
   },
   {
     name: "Donata K.",
@@ -5051,7 +5507,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Donata K."
+    imageAlt: "Google Review by Donata K.",
+    datePublished: "2023-02-20T13:16:06.786910Z"
   },
   {
     name: "Jason Cooley",
@@ -5062,7 +5519,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jason Cooley"
+    imageAlt: "Google Review by Jason Cooley",
+    datePublished: "2018-01-15T18:30:52.710Z"
   },
   {
     name: "Jordan Mellinger",
@@ -5073,7 +5531,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jordan Mellinger"
+    imageAlt: "Google Review by Jordan Mellinger",
+    datePublished: "2023-02-17T16:17:07.069358Z"
   },
   {
     name: "Kevin Bradley",
@@ -5084,7 +5543,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kevin Bradley"
+    imageAlt: "Google Review by Kevin Bradley",
+    datePublished: "2023-02-15T19:15:34.269573Z"
   },
   {
     name: "Marquel Forbes",
@@ -5095,7 +5555,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Marquel Forbes"
+    imageAlt: "Google Review by Marquel Forbes",
+    datePublished: "2023-02-14T19:05:36.513997Z"
   },
   {
     name: "Alyssa Byers",
@@ -5106,7 +5567,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Alyssa Byers"
+    imageAlt: "Google Review by Alyssa Byers",
+    datePublished: "2023-01-24T14:58:43.812093Z"
   },
   {
     name: "Colton Corey",
@@ -5117,7 +5579,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Colton Corey"
+    imageAlt: "Google Review by Colton Corey",
+    datePublished: "2023-01-18T01:07:13.488894Z"
   },
   {
     name: "Joanna Eskin",
@@ -5128,7 +5591,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joanna Eskin"
+    imageAlt: "Google Review by Joanna Eskin",
+    datePublished: "2023-01-10T15:19:22.311328Z"
   },
   {
     name: "Marcus De Vasto",
@@ -5139,7 +5603,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Marcus De Vasto"
+    imageAlt: "Google Review by Marcus De Vasto",
+    datePublished: "2023-01-07T14:47:34.672203Z"
   },
   {
     name: "Rachelle Mccollum",
@@ -5150,7 +5615,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rachelle Mccollum"
+    imageAlt: "Google Review by Rachelle Mccollum",
+    datePublished: "2021-09-27T15:10:06.261901Z"
   },
   {
     name: "Matt Roberts",
@@ -5161,7 +5627,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matt Roberts"
+    imageAlt: "Google Review by Matt Roberts",
+    datePublished: "2021-09-24T15:46:43.705574Z"
   },
   {
     name: "Matthew McKinney",
@@ -5172,7 +5639,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matthew McKinney"
+    imageAlt: "Google Review by Matthew McKinney",
+    datePublished: "2021-09-17T14:00:35.431532Z"
   },
   {
     name: "Brooke Anderson",
@@ -5183,7 +5651,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Brooke Anderson"
+    imageAlt: "Google Review by Brooke Anderson",
+    datePublished: "2021-09-06T19:05:49.784933Z"
   },
   {
     name: "Angela Lopez",
@@ -5194,7 +5663,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Angela Lopez"
+    imageAlt: "Google Review by Angela Lopez",
+    datePublished: "2021-09-04T19:02:21.865532Z"
   },
   {
     name: "Jenni Kimpel",
@@ -5205,7 +5675,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jenni Kimpel"
+    imageAlt: "Google Review by Jenni Kimpel",
+    datePublished: "2021-09-02T17:58:09.429868Z"
   },
   {
     name: "Allen Crumley",
@@ -5216,7 +5687,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Allen Crumley"
+    imageAlt: "Google Review by Allen Crumley",
+    datePublished: "2021-09-02T17:57:22.471703Z"
   },
   {
     name: "Jose Manuel Rodriguez Martinez",
@@ -5227,7 +5699,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jose Manuel Rodriguez Martinez"
+    imageAlt: "Google Review by Jose Manuel Rodriguez Martinez",
+    datePublished: "2021-09-02T15:41:33.797785Z"
   },
   {
     name: "Jacob Wasserman",
@@ -5238,7 +5711,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jacob Wasserman"
+    imageAlt: "Google Review by Jacob Wasserman",
+    datePublished: "2021-09-02T14:45:17.756199Z"
   },
   {
     name: "Connor Riley",
@@ -5249,7 +5723,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Connor Riley"
+    imageAlt: "Google Review by Connor Riley",
+    datePublished: "2021-09-02T14:09:49.831752Z"
   },
   {
     name: "Chris Cutti",
@@ -5260,7 +5735,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chris Cutti"
+    imageAlt: "Google Review by Chris Cutti",
+    datePublished: "2021-09-01T20:26:23.138661Z"
   },
   {
     name: "Racine Droz",
@@ -5271,7 +5747,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Racine Droz"
+    imageAlt: "Google Review by Racine Droz",
+    datePublished: "2021-09-01T20:25:39.451198Z"
   },
   {
     name: "Jared A",
@@ -5282,7 +5759,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jared A"
+    imageAlt: "Google Review by Jared A",
+    datePublished: "2021-09-01T19:47:09.565621Z"
   },
   {
     name: "Andy Bodrog",
@@ -5293,7 +5771,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Andy Bodrog"
+    imageAlt: "Google Review by Andy Bodrog",
+    datePublished: "2021-09-01T19:24:44.240492Z"
   },
   {
     name: "tevin ankle",
@@ -5304,7 +5783,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by tevin ankle"
+    imageAlt: "Google Review by tevin ankle",
+    datePublished: "2021-09-01T18:59:01.528248Z"
   },
   {
     name: "Jeanne Rose",
@@ -5315,7 +5795,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jeanne Rose"
+    imageAlt: "Google Review by Jeanne Rose",
+    datePublished: "2022-12-21T18:44:07.986171Z"
   },
   {
     name: "Jim McGinley",
@@ -5326,7 +5807,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jim McGinley"
+    imageAlt: "Google Review by Jim McGinley",
+    datePublished: "2022-12-01T14:18:04.493116Z"
   },
   {
     name: "Valerie Wagner",
@@ -5337,7 +5819,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Valerie Wagner"
+    imageAlt: "Google Review by Valerie Wagner",
+    datePublished: "2022-11-23T16:25:58.113303Z"
   },
   {
     name: "Kelly Fromuth",
@@ -5348,7 +5831,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kelly Fromuth"
+    imageAlt: "Google Review by Kelly Fromuth",
+    datePublished: "2022-11-08T23:07:53.121266Z"
   },
   {
     name: "Andrew Mueller",
@@ -5359,7 +5843,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Andrew Mueller"
+    imageAlt: "Google Review by Andrew Mueller",
+    datePublished: "2022-11-07T13:53:15.219675Z"
   },
   {
     name: "Matthew Klus",
@@ -5370,7 +5855,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matthew Klus"
+    imageAlt: "Google Review by Matthew Klus",
+    datePublished: "2022-11-07T13:36:25.057442Z"
   },
   {
     name: "Sarah Coleman",
@@ -5381,7 +5867,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sarah Coleman"
+    imageAlt: "Google Review by Sarah Coleman",
+    datePublished: "2022-11-03T17:14:58.868181Z"
   },
   {
     name: "Matt Kohan",
@@ -5392,7 +5879,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matt Kohan"
+    imageAlt: "Google Review by Matt Kohan",
+    datePublished: "2022-11-03T14:04:12.840648Z"
   },
   {
     name: "Gregg Hostetter",
@@ -5403,7 +5891,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Gregg Hostetter"
+    imageAlt: "Google Review by Gregg Hostetter",
+    datePublished: "2022-10-19T17:41:42.949307Z"
   },
   {
     name: "Nate Talbot",
@@ -5414,7 +5903,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nate Talbot"
+    imageAlt: "Google Review by Nate Talbot",
+    datePublished: "2022-10-18T15:25:09.421660Z"
   },
   {
     name: "CJ Morrison",
@@ -5425,7 +5915,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by CJ Morrison"
+    imageAlt: "Google Review by CJ Morrison",
+    datePublished: "2025-07-23T13:42:38.051387Z"
   },
   {
     name: "Mark Shell",
@@ -5436,7 +5927,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mark Shell"
+    imageAlt: "Google Review by Mark Shell",
+    datePublished: "2025-07-16T14:37:37.512759Z"
   },
   {
     name: "Adrienne Freeland",
@@ -5447,7 +5939,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Adrienne Freeland"
+    imageAlt: "Google Review by Adrienne Freeland",
+    datePublished: "2025-06-19T19:34:24.297955Z"
   },
   {
     name: "Sonja Clark",
@@ -5458,7 +5951,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sonja Clark"
+    imageAlt: "Google Review by Sonja Clark",
+    datePublished: "2025-06-11T19:12:38.213581Z"
   },
   {
     name: "Courtney",
@@ -5469,7 +5963,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Courtney"
+    imageAlt: "Google Review by Courtney",
+    datePublished: "2025-05-13T15:28:54.331612Z"
   },
   {
     name: "Jason Tarewicz",
@@ -5480,7 +5975,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jason Tarewicz"
+    imageAlt: "Google Review by Jason Tarewicz",
+    datePublished: "2025-05-12T17:26:51.612122Z"
   },
   {
     name: "Justin Weber",
@@ -5491,7 +5987,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin Weber"
+    imageAlt: "Google Review by Justin Weber",
+    datePublished: "2025-05-12T13:40:50.229097Z"
   },
   {
     name: "James Jones",
@@ -5502,7 +5999,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Jones"
+    imageAlt: "Google Review by James Jones",
+    datePublished: "2025-04-29T17:30:40.503803Z"
   },
   {
     name: "Nick Bostic",
@@ -5513,7 +6011,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nick Bostic"
+    imageAlt: "Google Review by Nick Bostic",
+    datePublished: "2025-04-05T17:57:38.634322Z"
   },
   {
     name: "Hunter Stock",
@@ -5524,7 +6023,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Hunter Stock"
+    imageAlt: "Google Review by Hunter Stock",
+    datePublished: "2025-03-10T18:01:01.061155Z"
   },
   {
     name: "Lori",
@@ -5535,7 +6035,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lori"
+    imageAlt: "Google Review by Lori",
+    datePublished: "2025-03-08T17:51:52.832462Z"
   },
   {
     name: "Linda McInnis",
@@ -5546,7 +6047,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Linda McInnis"
+    imageAlt: "Google Review by Linda McInnis",
+    datePublished: "2025-03-02T19:43:05.313909Z"
   },
   {
     name: "Alyssa Miller",
@@ -5557,7 +6059,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Alyssa Miller"
+    imageAlt: "Google Review by Alyssa Miller",
+    datePublished: "2025-02-23T23:50:06.499129Z"
   },
   {
     name: "Lorrie Hillard",
@@ -5568,7 +6071,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lorrie Hillard"
+    imageAlt: "Google Review by Lorrie Hillard",
+    datePublished: "2024-12-30T18:25:57.844078Z"
   },
   {
     name: "Bianca Rodriguez",
@@ -5579,7 +6083,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Bianca Rodriguez"
+    imageAlt: "Google Review by Bianca Rodriguez",
+    datePublished: "2024-12-27T17:37:00.101386Z"
   },
   {
     name: "Nicole O'Brien",
@@ -5590,7 +6095,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nicole O'Brien"
+    imageAlt: "Google Review by Nicole O'Brien",
+    datePublished: "2026-03-28T19:44:17.097522Z"
   },
   {
     name: "William Sanchez",
@@ -5601,7 +6107,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by William Sanchez"
+    imageAlt: "Google Review by William Sanchez",
+    datePublished: "2026-03-27T14:50:45.526209Z"
   },
   {
     name: "Kyle Sadorf",
@@ -5612,7 +6119,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kyle Sadorf"
+    imageAlt: "Google Review by Kyle Sadorf",
+    datePublished: "2026-03-24T16:33:56.569247Z"
   },
   {
     name: "Samuel Stewart",
@@ -5623,7 +6131,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Samuel Stewart"
+    imageAlt: "Google Review by Samuel Stewart",
+    datePublished: "2026-03-24T14:27:54.378695Z"
   },
   {
     name: "Derek Arnold",
@@ -5634,7 +6143,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Derek Arnold"
+    imageAlt: "Google Review by Derek Arnold",
+    datePublished: "2026-03-20T16:15:54.352041Z"
   },
   {
     name: "Andrew Petsu",
@@ -5645,7 +6155,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Andrew Petsu"
+    imageAlt: "Google Review by Andrew Petsu",
+    datePublished: "2026-03-20T14:43:09.612598Z"
   },
   {
     name: "Liza Minner",
@@ -5656,7 +6167,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Liza Minner"
+    imageAlt: "Google Review by Liza Minner",
+    datePublished: "2026-03-19T17:44:57.453661Z"
   },
   {
     name: "Kim Engle",
@@ -5667,7 +6179,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kim Engle"
+    imageAlt: "Google Review by Kim Engle",
+    datePublished: "2026-03-17T18:27:15.464168Z"
   },
   {
     name: "Jason Seibert",
@@ -5678,7 +6191,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jason Seibert"
+    imageAlt: "Google Review by Jason Seibert",
+    datePublished: "2026-03-12T14:20:21.333847Z"
   },
   {
     name: "Christopher Bradley",
@@ -5689,7 +6203,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Christopher Bradley"
+    imageAlt: "Google Review by Christopher Bradley",
+    datePublished: "2026-03-10T19:37:57.930179Z"
   },
   {
     name: "Darryl Walker",
@@ -5700,7 +6215,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Darryl Walker"
+    imageAlt: "Google Review by Darryl Walker",
+    datePublished: "2026-03-06T16:59:59.455417Z"
   },
   {
     name: "Doug Barton",
@@ -5711,7 +6227,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Doug Barton"
+    imageAlt: "Google Review by Doug Barton",
+    datePublished: "2026-02-27T15:41:39.301848Z"
   },
   {
     name: "Mabry Fish",
@@ -5722,7 +6239,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mabry Fish"
+    imageAlt: "Google Review by Mabry Fish",
+    datePublished: "2026-02-26T18:28:51.714690Z"
   },
   {
     name: "Aimee Narkiewicz",
@@ -5733,7 +6251,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Aimee Narkiewicz"
+    imageAlt: "Google Review by Aimee Narkiewicz",
+    datePublished: "2026-02-11T20:28:59.691155Z"
   },
   {
     name: "Louise Diem",
@@ -5744,7 +6263,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Louise Diem"
+    imageAlt: "Google Review by Louise Diem",
+    datePublished: "2026-01-21T16:16:44.780365Z"
   },
   {
     name: "Maria Elizabeth Del Rey",
@@ -5755,7 +6275,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Maria Elizabeth Del Rey"
+    imageAlt: "Google Review by Maria Elizabeth Del Rey",
+    datePublished: "2026-01-13T20:13:54.157366Z"
   },
   {
     name: "Ishmael Osborn",
@@ -5766,7 +6287,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ishmael Osborn"
+    imageAlt: "Google Review by Ishmael Osborn",
+    datePublished: "2026-01-10T18:55:03.475201Z"
   },
   {
     name: "B",
@@ -5777,7 +6299,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by B"
+    imageAlt: "Google Review by B",
+    datePublished: "2025-11-26T20:24:19.929005Z"
   },
   {
     name: "Jon K",
@@ -5788,7 +6311,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jon K"
+    imageAlt: "Google Review by Jon K",
+    datePublished: "2025-11-15T18:39:10.608784Z"
   },
   {
     name: "Ryan Evans",
@@ -5799,7 +6323,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ryan Evans"
+    imageAlt: "Google Review by Ryan Evans",
+    datePublished: "2025-11-12T20:12:40.751035Z"
   },
   {
     name: "Tara Brazzle",
@@ -5810,7 +6335,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tara Brazzle"
+    imageAlt: "Google Review by Tara Brazzle",
+    datePublished: "2021-05-19T15:41:18.952753Z"
   },
   {
     name: "Stacey Gregory",
@@ -5821,7 +6347,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Stacey Gregory"
+    imageAlt: "Google Review by Stacey Gregory",
+    datePublished: "2021-05-19T14:31:31.308501Z"
   },
   {
     name: "Chet Knaup",
@@ -5832,7 +6359,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chet Knaup"
+    imageAlt: "Google Review by Chet Knaup",
+    datePublished: "2021-05-11T18:51:16.971067Z"
   },
   {
     name: "Peter Ginzburg",
@@ -5843,7 +6371,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Peter Ginzburg"
+    imageAlt: "Google Review by Peter Ginzburg",
+    datePublished: "2021-05-11T17:15:34.074330Z"
   },
   {
     name: "Mickey Jarboe",
@@ -5854,7 +6383,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mickey Jarboe"
+    imageAlt: "Google Review by Mickey Jarboe",
+    datePublished: "2021-05-11T16:47:49.431090Z"
   },
   {
     name: "Traci Bowers",
@@ -5865,7 +6395,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Traci Bowers"
+    imageAlt: "Google Review by Traci Bowers",
+    datePublished: "2021-08-24T13:25:59.044169Z"
   },
   {
     name: "Kaye Peloquin",
@@ -5876,7 +6407,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kaye Peloquin"
+    imageAlt: "Google Review by Kaye Peloquin",
+    datePublished: "2021-07-22T21:49:03.688711Z"
   },
   {
     name: "thomas",
@@ -5887,7 +6419,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by thomas"
+    imageAlt: "Google Review by thomas",
+    datePublished: "2021-07-16T20:31:42.695987Z"
   },
   {
     name: "Sadie Owocki",
@@ -5898,7 +6431,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sadie Owocki"
+    imageAlt: "Google Review by Sadie Owocki",
+    datePublished: "2021-07-02T20:04:32.880643Z"
   },
   {
     name: "Ycheiri Jazmin",
@@ -5909,7 +6443,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ycheiri Jazmin"
+    imageAlt: "Google Review by Ycheiri Jazmin",
+    datePublished: "2024-01-09T18:09:36.518939Z"
   },
   {
     name: "Avi Parshionikar",
@@ -5920,7 +6455,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Avi Parshionikar"
+    imageAlt: "Google Review by Avi Parshionikar",
+    datePublished: "2023-11-07T16:39:45.340386Z"
   },
   {
     name: "Mitchel Zaarib",
@@ -5931,7 +6467,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mitchel Zaarib"
+    imageAlt: "Google Review by Mitchel Zaarib",
+    datePublished: "2023-11-07T16:14:17.870731Z"
   },
   {
     name: "Jade Biempica",
@@ -5942,7 +6479,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jade Biempica"
+    imageAlt: "Google Review by Jade Biempica",
+    datePublished: "2022-01-25T15:32:26.121844Z"
   },
   {
     name: "Y Tejada",
@@ -5953,7 +6491,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Y Tejada"
+    imageAlt: "Google Review by Y Tejada",
+    datePublished: "2021-12-17T16:36:33.051886Z"
   },
   {
     name: "Lauren S. Snook",
@@ -5964,7 +6503,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lauren S. Snook"
+    imageAlt: "Google Review by Lauren S. Snook",
+    datePublished: "2021-12-06T00:15:14.659829Z"
   },
   {
     name: "Jessica Kauffman",
@@ -5975,7 +6515,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jessica Kauffman"
+    imageAlt: "Google Review by Jessica Kauffman",
+    datePublished: "2021-11-28T16:50:12.549955Z"
   },
   {
     name: "Stephanie H",
@@ -5986,7 +6527,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Stephanie H"
+    imageAlt: "Google Review by Stephanie H",
+    datePublished: "2021-11-19T23:55:36.325300Z"
   },
   {
     name: "brian snitzer",
@@ -5997,7 +6539,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by brian snitzer"
+    imageAlt: "Google Review by brian snitzer",
+    datePublished: "2021-10-27T18:11:04.979557Z"
   },
   {
     name: "Andy Beal",
@@ -6008,7 +6551,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Andy Beal"
+    imageAlt: "Google Review by Andy Beal",
+    datePublished: "2021-05-10T12:17:25.651402Z"
   },
   {
     name: "Jeffrey Hogrefe",
@@ -6019,7 +6563,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jeffrey Hogrefe"
+    imageAlt: "Google Review by Jeffrey Hogrefe",
+    datePublished: "2021-04-18T16:37:22.811254Z"
   },
   {
     name: "Matthew Garter",
@@ -6030,7 +6575,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matthew Garter"
+    imageAlt: "Google Review by Matthew Garter",
+    datePublished: "2021-04-13T18:36:16.121546Z"
   },
   {
     name: "Wystan Crismond",
@@ -6041,7 +6587,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Wystan Crismond"
+    imageAlt: "Google Review by Wystan Crismond",
+    datePublished: "2021-04-13T16:32:01.884829Z"
   },
   {
     name: "Jeff Wolfe",
@@ -6052,7 +6599,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jeff Wolfe"
+    imageAlt: "Google Review by Jeff Wolfe",
+    datePublished: "2021-04-13T15:37:55.160334Z"
   },
   {
     name: "Justin Vass",
@@ -6063,7 +6611,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin Vass"
+    imageAlt: "Google Review by Justin Vass",
+    datePublished: "2021-04-13T15:06:11.058976Z"
   },
   {
     name: "Patrick Murdock",
@@ -6074,10 +6623,11 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Patrick Murdock"
+    imageAlt: "Google Review by Patrick Murdock",
+    datePublished: "2021-04-13T14:48:10.515582Z"
   },
   {
-    name: "Laura pint",
+    name: "Laura Pontz",
     company: "",
     category: "",
     review: "",
@@ -6085,7 +6635,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Laura Pontz"
+    imageAlt: "Google Review by Laura Pontz",
+    datePublished: "2020-11-19T17:16:47.085602Z"
   },
   {
     name: "Renee Miller",
@@ -6096,7 +6647,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Renee Miller"
+    imageAlt: "Google Review by Renee Miller",
+    datePublished: "2025-11-12T18:17:28.757357Z"
   },
   {
     name: "Paul Mcneish",
@@ -6107,7 +6659,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Paul Mcneish"
+    imageAlt: "Google Review by Paul Mcneish",
+    datePublished: "2025-11-12T19:30:11.543033Z"
   },
   {
     name: "Molly O'Brien",
@@ -6118,7 +6671,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Molly O'Brien"
+    imageAlt: "Google Review by Molly O'Brien",
+    datePublished: "2025-11-12T18:45:04.595177Z"
   },
   {
     name: "rogert kola",
@@ -6129,7 +6683,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by rogert kola"
+    imageAlt: "Google Review by rogert kola",
+    datePublished: "2025-11-12T18:04:57.534169Z"
   },
   {
     name: "Martin Römgens",
@@ -6140,7 +6695,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Martin Römgens"
+    imageAlt: "Google Review by Martin Römgens",
+    datePublished: "2025-11-12T17:42:23.605310Z"
   },
   {
     name: "Nolan Davis",
@@ -6151,7 +6707,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nolan Davis"
+    imageAlt: "Google Review by Nolan Davis",
+    datePublished: "2025-11-12T17:31:34.912118Z"
   },
   {
     name: "Kolja Klemkow",
@@ -6162,7 +6719,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kolja Klemkow"
+    imageAlt: "Google Review by Kolja Klemkow",
+    datePublished: "2025-11-12T17:23:35.935407Z"
   },
   {
     name: "Steven Sacco",
@@ -6173,7 +6731,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Steven Sacco"
+    imageAlt: "Google Review by Steven Sacco",
+    datePublished: "2025-11-12T17:18:35.720400Z"
   },
   {
     name: "Μαρίνος Μ.",
@@ -6184,7 +6743,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Μαρίνος Μ."
+    imageAlt: "Google Review by Μαρίνος Μ.",
+    datePublished: "2025-11-12T16:28:11.423341Z"
   },
   {
     name: "jerrell marcus",
@@ -6195,7 +6755,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by jerrell marcus"
+    imageAlt: "Google Review by jerrell marcus",
+    datePublished: "2025-11-12T15:00:45.944319Z"
   },
   {
     name: "Slesha Fadte",
@@ -6206,7 +6767,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Slesha Fadte"
+    imageAlt: "Google Review by Slesha Fadte",
+    datePublished: "2025-11-10T19:01:01.965357Z"
   },
   {
     name: "Leif Kennedy",
@@ -6217,7 +6779,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Leif Kennedy"
+    imageAlt: "Google Review by Leif Kennedy",
+    datePublished: "2022-03-15T15:19:57.717090Z"
   },
   {
     name: "Henry Adams",
@@ -6228,7 +6791,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Henry Adams"
+    imageAlt: "Google Review by Henry Adams",
+    datePublished: "2022-03-15T15:12:27.376618Z"
   },
   {
     name: "James Cote",
@@ -6239,7 +6803,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Cote"
+    imageAlt: "Google Review by James Cote",
+    datePublished: "2022-03-15T13:28:01.416308Z"
   },
   {
     name: "Elizabeth Soto",
@@ -6250,7 +6815,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Elizabeth Soto"
+    imageAlt: "Google Review by Elizabeth Soto",
+    datePublished: "2022-02-10T03:48:55.652528Z"
   },
   {
     name: "Mark Bailey",
@@ -6261,7 +6827,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mark Bailey"
+    imageAlt: "Google Review by Mark Bailey",
+    datePublished: "2021-05-11T16:21:15.155590Z"
   },
   {
     name: "Rod Hollenberger",
@@ -6272,7 +6839,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rod Hollenberger"
+    imageAlt: "Google Review by Rod Hollenberger",
+    datePublished: "2021-05-11T15:31:27.274658Z"
   },
   {
     name: "Nicholas DeLonga",
@@ -6283,7 +6851,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nicholas DeLonga"
+    imageAlt: "Google Review by Nicholas DeLonga",
+    datePublished: "2021-05-11T15:04:24.244645Z"
   },
   {
     name: "brett schuck",
@@ -6294,7 +6863,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by brett schuck"
+    imageAlt: "Google Review by brett schuck",
+    datePublished: "2021-05-11T14:25:13.796242Z"
   },
   {
     name: "Ken Golding",
@@ -6305,7 +6875,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ken Golding"
+    imageAlt: "Google Review by Ken Golding",
+    datePublished: "2021-05-11T14:15:18.202090Z"
   },
   {
     name: "Eric Simpson",
@@ -6316,7 +6887,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Eric Simpson"
+    imageAlt: "Google Review by Eric Simpson",
+    datePublished: "2021-05-11T13:02:00.534254Z"
   },
   {
     name: "donald watkins",
@@ -6327,7 +6899,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by donald watkins"
+    imageAlt: "Google Review by donald watkins",
+    datePublished: "2021-05-11T12:38:45.533974Z"
   },
   {
     name: "Sloan Colassard",
@@ -6338,7 +6911,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sloan Colassard"
+    imageAlt: "Google Review by Sloan Colassard",
+    datePublished: "2021-05-10T19:32:35.127264Z"
   },
   {
     name: "Robert Bonsby",
@@ -6349,7 +6923,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Robert Bonsby"
+    imageAlt: "Google Review by Robert Bonsby",
+    datePublished: "2021-05-10T18:48:56.643195Z"
   },
   {
     name: "Timothy Nies",
@@ -6360,7 +6935,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Timothy Nies"
+    imageAlt: "Google Review by Timothy Nies",
+    datePublished: "2021-05-10T17:56:24.470724Z"
   },
   {
     name: "Pete",
@@ -6371,7 +6947,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Pete"
+    imageAlt: "Google Review by Pete",
+    datePublished: "2021-05-10T17:46:47.282609Z"
   },
   {
     name: "Chris Ciampa",
@@ -6382,7 +6959,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chris Ciampa"
+    imageAlt: "Google Review by Chris Ciampa",
+    datePublished: "2021-05-10T16:57:13.147426Z"
   },
   {
     name: "Ted McCord",
@@ -6393,7 +6971,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ted McCord"
+    imageAlt: "Google Review by Ted McCord",
+    datePublished: "2021-05-10T16:31:43.346859Z"
   },
   {
     name: "kevin stroop",
@@ -6404,7 +6983,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by kevin stroop"
+    imageAlt: "Google Review by kevin stroop",
+    datePublished: "2021-05-10T14:57:08.218324Z"
   },
   {
     name: "Larry Manross",
@@ -6415,7 +6995,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Larry Manross"
+    imageAlt: "Google Review by Larry Manross",
+    datePublished: "2021-05-10T14:26:51.576619Z"
   },
   {
     name: "Daniel Horst",
@@ -6426,7 +7007,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Daniel Horst"
+    imageAlt: "Google Review by Daniel Horst",
+    datePublished: "2018-04-05T20:54:25.753Z"
   },
   {
     name: "Patrick Leaman",
@@ -6437,7 +7019,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Patrick Leaman"
+    imageAlt: "Google Review by Patrick Leaman",
+    datePublished: "2018-04-05T12:07:20.753Z"
   },
   {
     name: "Lisa Torba",
@@ -6448,7 +7031,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lisa Torba"
+    imageAlt: "Google Review by Lisa Torba",
+    datePublished: "2018-03-27T23:19:59.488Z"
   },
   {
     name: "Ben King",
@@ -6459,7 +7043,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ben King"
+    imageAlt: "Google Review by Ben King",
+    datePublished: "2018-01-15T16:34:28.008Z"
   },
   {
     name: "Wendy Sponaugle",
@@ -6470,7 +7055,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Wendy Sponaugle"
+    imageAlt: "Google Review by Wendy Sponaugle",
+    datePublished: "2018-01-12T16:15:03.930Z"
   },
   {
     name: "Ben Sablan",
@@ -6481,7 +7067,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ben Sablan"
+    imageAlt: "Google Review by Ben Sablan",
+    datePublished: "2021-04-13T14:24:26.441933Z"
   },
   {
     name: "Austen Krause",
@@ -6492,7 +7079,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Austen Krause"
+    imageAlt: "Google Review by Austen Krause",
+    datePublished: "2021-04-09T14:47:04.215520Z"
   },
   {
     name: "James Kusick",
@@ -6503,7 +7091,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James Kusick"
+    imageAlt: "Google Review by James Kusick",
+    datePublished: "2021-04-09T14:04:21.125623Z"
   },
   {
     name: "Jesse Pust",
@@ -6514,7 +7103,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jesse Pust"
+    imageAlt: "Google Review by Jesse Pust",
+    datePublished: "2021-04-09T13:17:26.246135Z"
   },
   {
     name: "Connor Blood",
@@ -6525,7 +7115,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Connor Blood"
+    imageAlt: "Google Review by Connor Blood",
+    datePublished: "2021-04-09T13:07:43.281417Z"
   },
   {
     name: "Stephanie Finamore",
@@ -6536,7 +7127,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Stephanie Finamore"
+    imageAlt: "Google Review by Stephanie Finamore",
+    datePublished: "2018-10-02T22:38:02.672983Z"
   },
   {
     name: "Ken Jester",
@@ -6547,7 +7139,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ken Jester"
+    imageAlt: "Google Review by Ken Jester",
+    datePublished: "2018-07-02T14:59:57.792Z"
   },
   {
     name: "Stacy Sines",
@@ -6558,7 +7151,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Stacy Sines"
+    imageAlt: "Google Review by Stacy Sines",
+    datePublished: "2018-04-23T13:58:43.544Z"
   },
   {
     name: "Matthew Woodruff",
@@ -6569,7 +7163,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matthew Woodruff"
+    imageAlt: "Google Review by Matthew Woodruff",
+    datePublished: "2025-11-07T22:29:57.272999Z"
   },
   {
     name: "Jocelyn Oakill",
@@ -6580,7 +7175,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jocelyn Oakill"
+    imageAlt: "Google Review by Jocelyn Oakill",
+    datePublished: "2025-09-21T13:59:04.799249Z"
   },
   {
     name: "Glenda Henderson",
@@ -6591,7 +7187,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Glenda Henderson"
+    imageAlt: "Google Review by Glenda Henderson",
+    datePublished: "2025-07-23T15:46:55.076303Z"
   },
   {
     name: "James C",
@@ -6602,7 +7199,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by James C"
+    imageAlt: "Google Review by James C",
+    datePublished: "2025-07-23T14:13:41.197533Z"
   },
   {
     name: "Kathy Jackson",
@@ -6613,7 +7211,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kathy Jackson"
+    imageAlt: "Google Review by Kathy Jackson",
+    datePublished: "2022-06-08T17:14:11.350338Z"
   },
   {
     name: "Paris Joy",
@@ -6624,7 +7223,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Paris Joy"
+    imageAlt: "Google Review by Paris Joy",
+    datePublished: "2022-05-24T16:48:24.877063Z"
   },
   {
     name: "Christine Hall",
@@ -6635,7 +7235,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Christine Hall"
+    imageAlt: "Google Review by Christine Hall",
+    datePublished: "2022-05-24T16:35:28.772534Z"
   },
   {
     name: "Krystle Cornish",
@@ -6646,7 +7247,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Krystle Cornish"
+    imageAlt: "Google Review by Krystle Cornish",
+    datePublished: "2022-05-24T15:15:46.493763Z"
   },
   {
     name: "Theren Lively",
@@ -6657,7 +7259,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Theren Lively"
+    imageAlt: "Google Review by Theren Lively",
+    datePublished: "2022-05-24T13:38:28.823756Z"
   },
   {
     name: "Alanna Reid",
@@ -6668,7 +7271,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Alanna Reid"
+    imageAlt: "Google Review by Alanna Reid",
+    datePublished: "2022-05-24T12:26:41.661851Z"
   },
   {
     name: "Bryce Katch",
@@ -6679,7 +7283,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Bryce Katch"
+    imageAlt: "Google Review by Bryce Katch",
+    datePublished: "2022-05-19T21:06:26.936114Z"
   },
   {
     name: "Chris Stallings",
@@ -6690,7 +7295,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Chris Stallings"
+    imageAlt: "Google Review by Chris Stallings",
+    datePublished: "2024-12-04T16:17:31.882504Z"
   },
   {
     name: "Mariana Mancera",
@@ -6701,7 +7307,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Mariana Mancera"
+    imageAlt: "Google Review by Mariana Mancera",
+    datePublished: "2024-12-04T15:45:59.292853Z"
   },
   {
     name: "Gabe2",
@@ -6712,7 +7319,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Gabe2"
+    imageAlt: "Google Review by Gabe2",
+    datePublished: "2024-12-04T15:10:46.264478Z"
   },
   {
     name: "Daniel Fetbroyt",
@@ -6723,7 +7331,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Daniel Fetbroyt"
+    imageAlt: "Google Review by Daniel Fetbroyt",
+    datePublished: "2024-12-04T13:36:25.218219Z"
   },
   {
     name: "Taylor Vernon",
@@ -6734,7 +7343,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Taylor Vernon"
+    imageAlt: "Google Review by Taylor Vernon",
+    datePublished: "2023-06-26T16:43:57.835252Z"
   },
   {
     name: "Julien Godbarge",
@@ -6745,7 +7355,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Julien Godbarge"
+    imageAlt: "Google Review by Julien Godbarge",
+    datePublished: "2017-12-22T20:12:08.328Z"
   },
   {
     name: "Stephany Baughman",
@@ -6756,7 +7367,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Stephany Baughman"
+    imageAlt: "Google Review by Stephany Baughman",
+    datePublished: "2017-11-28T20:06:36.280Z"
   },
   {
     name: "Jim Burnham",
@@ -6767,7 +7379,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jim Burnham"
+    imageAlt: "Google Review by Jim Burnham",
+    datePublished: "2022-05-10T13:56:09.382181Z"
   },
   {
     name: "Olivia Sweigart",
@@ -6778,7 +7391,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Olivia Sweigart"
+    imageAlt: "Google Review by Olivia Sweigart",
+    datePublished: "2022-04-16T16:12:42.590194Z"
   },
   {
     name: "Craig Rodenberger",
@@ -6789,7 +7403,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Craig Rodenberger"
+    imageAlt: "Google Review by Craig Rodenberger",
+    datePublished: "2022-03-30T14:22:11.104992Z"
   },
   {
     name: "Benjamin Yee",
@@ -6800,7 +7415,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Benjamin Yee"
+    imageAlt: "Google Review by Benjamin Yee",
+    datePublished: "2022-03-15T17:00:50.982907Z"
   },
   {
     name: "Francie Battaglia",
@@ -6811,7 +7427,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Francie Battaglia"
+    imageAlt: "Google Review by Francie Battaglia",
+    datePublished: "2022-07-20T18:48:45.640445Z"
   },
   {
     name: "Bobbi Munk",
@@ -6822,7 +7439,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Bobbi Munk"
+    imageAlt: "Google Review by Bobbi Munk",
+    datePublished: "2022-07-20T13:34:33.020183Z"
   },
   {
     name: "Randy Foehrkolb",
@@ -6833,7 +7451,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Randy Foehrkolb"
+    imageAlt: "Google Review by Randy Foehrkolb",
+    datePublished: "2023-05-09T14:41:38.413786Z"
   },
   {
     name: "Heather Sharpe",
@@ -6844,7 +7463,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Heather Sharpe"
+    imageAlt: "Google Review by Heather Sharpe",
+    datePublished: "2019-06-13T17:40:33.678737Z"
   },
   {
     name: "Bill Litz",
@@ -6855,7 +7475,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Bill Litz"
+    imageAlt: "Google Review by Bill Litz",
+    datePublished: "2022-10-18T14:06:59.347669Z"
   },
   {
     name: "Shailesh Negi",
@@ -6866,7 +7487,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Shailesh Negi"
+    imageAlt: "Google Review by Shailesh Negi",
+    datePublished: "2022-10-18T13:49:35.152970Z"
   },
   {
     name: "Vincent DiSalvo",
@@ -6877,7 +7499,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Vincent DiSalvo"
+    imageAlt: "Google Review by Vincent DiSalvo",
+    datePublished: "2022-10-18T13:44:34.157107Z"
   },
   {
     name: "Anthony Valentin",
@@ -6888,7 +7511,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Anthony Valentin"
+    imageAlt: "Google Review by Anthony Valentin",
+    datePublished: "2022-10-03T20:25:41.530097Z"
   },
   {
     name: "Matthew Murphy",
@@ -6899,7 +7523,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matthew Murphy"
+    imageAlt: "Google Review by Matthew Murphy",
+    datePublished: "2022-09-23T14:07:48.379529Z"
   },
   {
     name: "Weston Gearhart",
@@ -6910,7 +7535,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Weston Gearhart"
+    imageAlt: "Google Review by Weston Gearhart",
+    datePublished: "2021-10-14T18:16:30.293882Z"
   },
   {
     name: "Skerns11",
@@ -6921,7 +7547,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Skerns11"
+    imageAlt: "Google Review by Skerns11",
+    datePublished: "2021-10-14T17:48:26.700823Z"
   },
   {
     name: "Anthony Jones",
@@ -6932,7 +7559,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Anthony Jones"
+    imageAlt: "Google Review by Anthony Jones",
+    datePublished: "2021-10-14T17:33:00.312785Z"
   },
   {
     name: "Guy Bell",
@@ -6943,7 +7571,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Guy Bell"
+    imageAlt: "Google Review by Guy Bell",
+    datePublished: "2021-10-14T16:27:39.430857Z"
   },
   {
     name: "Brittany Seek",
@@ -6954,7 +7583,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Brittany Seek"
+    imageAlt: "Google Review by Brittany Seek",
+    datePublished: "2021-10-14T16:17:17.815288Z"
   },
   {
     name: "Ian Dominick",
@@ -6965,7 +7595,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ian Dominick"
+    imageAlt: "Google Review by Ian Dominick",
+    datePublished: "2021-10-14T14:30:50.480851Z"
   },
   {
     name: "Brandon Conheim",
@@ -6976,7 +7607,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Brandon Conheim"
+    imageAlt: "Google Review by Brandon Conheim",
+    datePublished: "2021-10-14T14:16:56.560593Z"
   },
   {
     name: "Dan Davis",
@@ -6987,7 +7619,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dan Davis"
+    imageAlt: "Google Review by Dan Davis",
+    datePublished: "2021-10-14T13:48:39.489988Z"
   },
   {
     name: "Lauren",
@@ -6998,7 +7631,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lauren"
+    imageAlt: "Google Review by Lauren",
+    datePublished: "2021-10-14T12:42:27.117125Z"
   },
   {
     name: "Jordan Mellinger",
@@ -7009,7 +7643,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jordan Mellinger"
+    imageAlt: "Google Review by Jordan Mellinger",
+    datePublished: "2023-02-17T16:17:07.069358Z"
   },
   {
     name: "Dayona Ellis",
@@ -7020,7 +7655,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dayona Ellis"
+    imageAlt: "Google Review by Dayona Ellis",
+    datePublished: "2020-07-22T22:18:30.441196Z"
   },
   {
     name: "Sormariel Rivera",
@@ -7031,7 +7667,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Sormariel Rivera"
+    imageAlt: "Google Review by Sormariel Rivera",
+    datePublished: "2020-07-22T21:59:47.348622Z"
   },
   {
     name: "Raessa",
@@ -7042,7 +7679,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Raessa"
+    imageAlt: "Google Review by Raessa",
+    datePublished: "2020-07-22T18:45:56.513690Z"
   },
   {
     name: "Beatrice Zorrilla",
@@ -7053,7 +7691,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Beatrice Zorrilla"
+    imageAlt: "Google Review by Beatrice Zorrilla",
+    datePublished: "2020-07-22T18:31:20.336659Z"
   },
   {
     name: "Shawn and Sara Gibson",
@@ -7064,7 +7703,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Shawn and Sara Gibson"
+    imageAlt: "Google Review by Shawn and Sara Gibson",
+    datePublished: "2020-07-22T18:18:44.088382Z"
   },
   {
     name: "Pedro Velasquez",
@@ -7075,7 +7715,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Pedro Velasquez"
+    imageAlt: "Google Review by Pedro Velasquez",
+    datePublished: "2020-07-19T16:49:35.498743Z"
   },
   {
     name: "Jackson Argoe",
@@ -7086,7 +7727,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jackson Argoe"
+    imageAlt: "Google Review by Jackson Argoe",
+    datePublished: "2020-10-06T15:01:57.214187Z"
   },
   {
     name: "Lucas Reynolds",
@@ -7097,7 +7739,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Lucas Reynolds"
+    imageAlt: "Google Review by Lucas Reynolds",
+    datePublished: "2020-10-06T14:53:15.744401Z"
   },
   {
     name: "Tylr Kreiser",
@@ -7108,7 +7751,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tylr Kreiser"
+    imageAlt: "Google Review by Tylr Kreiser",
+    datePublished: "2020-09-19T12:31:29.129457Z"
   },
   {
     name: "Joleen schuler",
@@ -7119,7 +7763,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Joleen schuler"
+    imageAlt: "Google Review by Joleen schuler",
+    datePublished: "2020-08-06T19:43:32.639993Z"
   },
   {
     name: "Tracy Lisi",
@@ -7130,7 +7775,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tracy Lisi"
+    imageAlt: "Google Review by Tracy Lisi",
+    datePublished: "2020-08-04T01:12:41.154976Z"
   },
   {
     name: "Nilsa Malabet",
@@ -7141,7 +7787,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nilsa Malabet"
+    imageAlt: "Google Review by Nilsa Malabet",
+    datePublished: "2024-12-27T17:28:36.983342Z"
   },
   {
     name: "Laurie",
@@ -7152,7 +7799,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Laurie"
+    imageAlt: "Google Review by Laurie",
+    datePublished: "2024-12-19T19:08:31.461154Z"
   },
   {
     name: "George Pelose",
@@ -7163,7 +7811,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by George Pelose"
+    imageAlt: "Google Review by George Pelose",
+    datePublished: "2024-12-10T19:27:26.953667Z"
   },
   {
     name: "Jim Menkevich",
@@ -7174,7 +7823,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jim Menkevich"
+    imageAlt: "Google Review by Jim Menkevich",
+    datePublished: "2024-12-10T15:22:48.004713Z"
   },
   {
     name: "Matt Nolan",
@@ -7185,7 +7835,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Matt Nolan"
+    imageAlt: "Google Review by Matt Nolan",
+    datePublished: "2024-12-10T14:48:31.159725Z"
   },
   {
     name: "Andy St. James",
@@ -7196,7 +7847,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Andy St. James"
+    imageAlt: "Google Review by Andy St. James",
+    datePublished: "2024-12-10T14:30:57.821088Z"
   },
   {
     name: "Tedd Kitzmiller",
@@ -7207,7 +7859,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tedd Kitzmiller"
+    imageAlt: "Google Review by Tedd Kitzmiller",
+    datePublished: "2021-09-21T15:54:37.602033Z"
   },
   {
     name: "Jennifer Halligan",
@@ -7218,7 +7871,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jennifer Halligan"
+    imageAlt: "Google Review by Jennifer Halligan",
+    datePublished: "2021-09-07T14:18:03.129107Z"
   },
   {
     name: "David Coyne",
@@ -7229,7 +7883,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by David Coyne"
+    imageAlt: "Google Review by David Coyne",
+    datePublished: "2021-09-03T13:38:33.578688Z"
   },
   {
     name: "J R Harrelson",
@@ -7240,7 +7895,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by J R Harrelson"
+    imageAlt: "Google Review by J R Harrelson",
+    datePublished: "2021-09-02T16:16:32.511297Z"
   },
   {
     name: "Keny Nunez",
@@ -7251,7 +7907,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Keny Nunez"
+    imageAlt: "Google Review by Keny Nunez",
+    datePublished: "2021-09-02T15:17:41.683912Z"
   },
   {
     name: "Francesco Conigliaro",
@@ -7262,7 +7919,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Francesco Conigliaro"
+    imageAlt: "Google Review by Francesco Conigliaro",
+    datePublished: "2023-01-02T16:44:58.014811Z"
   },
   {
     name: "Dylan O",
@@ -7273,7 +7931,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Dylan O"
+    imageAlt: "Google Review by Dylan O",
+    datePublished: "2022-12-06T22:06:57.842362Z"
   },
   {
     name: "Ken McDevitt",
@@ -7284,7 +7943,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Ken McDevitt"
+    imageAlt: "Google Review by Ken McDevitt",
+    datePublished: "2022-12-02T15:56:34.060768Z"
   },
   {
     name: "Kelly Qualls",
@@ -7295,7 +7955,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Kelly Qualls"
+    imageAlt: "Google Review by Kelly Qualls",
+    datePublished: "2022-12-01T14:33:39.031447Z"
   },
   {
     name: "Timm Schneider",
@@ -7306,7 +7967,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Timm Schneider"
+    imageAlt: "Google Review by Timm Schneider",
+    datePublished: "2022-11-17T16:14:21.057026Z"
   },
   {
     name: "Michał Niećko",
@@ -7317,7 +7979,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Michał Niećko"
+    imageAlt: "Google Review by Michał Niećko",
+    datePublished: "2022-11-16T16:18:41.324819Z"
   },
   {
     name: "Brian Coyle",
@@ -7328,7 +7991,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Brian Coyle"
+    imageAlt: "Google Review by Brian Coyle",
+    datePublished: "2022-11-09T14:28:43.199189Z"
   },
   {
     name: "Darren Conner",
@@ -7339,7 +8003,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Darren Conner"
+    imageAlt: "Google Review by Darren Conner",
+    datePublished: "2022-11-07T13:57:18.501996Z"
   },
   {
     name: "Zachary H. Yamin",
@@ -7350,7 +8015,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Zachary H. Yamin"
+    imageAlt: "Google Review by Zachary H. Yamin",
+    datePublished: "2022-10-18T17:21:31.607790Z"
   },
   {
     name: "Maddie Dobson",
@@ -7361,7 +8027,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Maddie Dobson"
+    imageAlt: "Google Review by Maddie Dobson",
+    datePublished: "2025-07-23T13:16:49.498625Z"
   },
   {
     name: "emily",
@@ -7372,7 +8039,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by emily"
+    imageAlt: "Google Review by emily",
+    datePublished: "2025-01-22T21:24:58.029896Z"
   }
 
   // Add more testimonials here as needed
