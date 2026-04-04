@@ -598,6 +598,10 @@ export function buildProductSchema(
     "name": name,
     "description": description,
     "image": imageUrl,
+    "brand": {
+      "@type": "Brand",
+      "name": businessName
+    },
     "offers": {
       "@type": "Offer",
       "price": price,
@@ -608,6 +612,25 @@ export function buildProductSchema(
         "@type": "Organization",
         "name": businessName,
         "url": businessUrl
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "USD"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "US"
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "US",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnUnlimitedWindow",
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
       }
     }
   };
