@@ -53,7 +53,8 @@
       "WebFetch(domain:docs.astro.build)",
       "Bash(curl:*)",
       "WebFetch(domain:developers.cloudflare.com)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }
