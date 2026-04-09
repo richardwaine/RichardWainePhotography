@@ -622,8 +622,15 @@ document.addEventListener('astro:page-load', () => {
         ml('account', '734406');
     }
 
-    const btnOpenNews = document.getElementById('btn-open-news');
-    if (btnOpenNews) {
-        btnOpenNews.addEventListener('click', loadMailerLite, { once: true });
-    }
+    // const btnOpenNews = document.getElementById('btn-open-news');
+    // if (btnOpenNews) {
+    //     btnOpenNews.addEventListener('click', loadMailerLite, { once: true });
+    // }
+
+
+    const footerTrigger = document.getElementById('footerTrigger');                        
+  if (footerTrigger) {                                                                   
+      footerTrigger.addEventListener('click', loadMailerLite, { once: true });           
+  }  
+
 </script>
