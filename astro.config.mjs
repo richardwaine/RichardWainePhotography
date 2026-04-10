@@ -63,7 +63,7 @@ enabled:false
     '/blog-content/2016/12/1/capture-one-pro-10-was-just-released': '/blog/',
     '/blog-content/how-a-simple-change-can-make-all-the-difference-in-front-of-the-camera': '/blog/',
     '/headshots-for-a-cure': '/',
-    '/blog-2/meet-ben-marcum': '/blog/meet-ben-marcum-human-side-of-photography/',
+    '/blog-2/meet-ben-marcum': '/blog/meet-ben-marcum-the-human-side-of-professional-photography/',
     '/blog-2/debunking-common-myths-about-professional-headshots': '/blog/common-myths-about-professional-headshots/',
     '/blog/blog-2/*': '/blog/:splat/',
     '/blog-content/*': '/blog/:splat/',
