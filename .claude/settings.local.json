@@ -57,7 +57,8 @@
       "Bash(grep:*)",
       "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
       "WebFetch(domain:www.searchenginejournal.com)",
-      "WebFetch(domain:developers.google.com)"
+      "WebFetch(domain:developers.google.com)",
+      "mcp__gsc__search_analytics"
     ],
     "deny": []
   }

@@ -68,7 +68,7 @@ const isInterview = post.data.type === 'interview';
 			...(post.data.interviewee && {
 				"interviewee": post.data.interviewee
 			}),
-			"image": post.data.headerImage?.src ? `https://www.richardwainephotography.com${post.data.headerImage.src}` : undefined
+			"image": post.data.headerImage?.src ? `https://www.richardwainephotography.com${post.data.headerImage.src.src}` : undefined
 		})} />
 	) : (
 		<script type="application/ld+json" set:html={JSON.stringify({
@@ -110,7 +110,7 @@ const isInterview = post.data.type === 'interview';
 			...(post.data.about && {
 				"about": post.data.about
 			}),
-			"image": post.data.headerImage?.src ? `https://www.richardwainephotography.com${post.data.headerImage.src}` : undefined
+			"image": post.data.headerImage?.src ? `https://www.richardwainephotography.com${post.data.headerImage.src.src}` : undefined
 		})} />
 	)}
 
