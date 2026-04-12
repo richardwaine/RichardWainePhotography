@@ -40,6 +40,42 @@ const faqSchema = faqs.length > 0 ? buildFAQSchema(faqs) : null;
 // Determine if this is an interview post
 const isInterview = post.data.type === 'interview';
 
+// Calculate word count from post body
+function countWords(content: string): number {
+  // Remove frontmatter if present
+  let text = content.replace(/^---[\s\S]*?---/, '');
+
+  // Remove code blocks
+  text = text.replace(/```[\s\S]*?```/g, '');
+  text = text.replace(/`[^`]*`/g, '');
+
+  // Remove HTML/JSX tags
+  text = text.replace(/<[^>]*>/g, '');
+
+  // Remove markdown images
+  text = text.replace(/!\[.*?\]\(.*?\)/g, '');
+
+  // Remove markdown links but keep link text
+  text = text.replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1');
+
+  // Remove markdown headers
+  text = text.replace(/^#+\s+/gm, '');
+
+  // Remove bold/italic markers
+  text = text.replace(/(\*\*|__)(.*?)\1/g, '$2');
+  text = text.replace(/(\*|_)(.*?)\1/g, '$2');
+
+  // Remove extra whitespace and normalize
+  text = text.replace(/\s+/g, ' ').trim();
+
+  // Split on whitespace and count non-empty words
+  const words = text.split(/\s+/).filter(word => word.length > 0);
+
+  return words.length;
+}
+
+const wordCount = countWords(post.body);
+
 ---
 
 <MainLayout title={title} description={post.data.blogExcerpt}>
@@ -107,6 +143,7 @@ const isInterview = post.data.type === 'interview';
 			"description": post.data.blogExcerpt,
 			"articleSection": post.data.articleSection,
 			"keywords": post.data.keywords,
+			"wordCount": wordCount,
 			...(post.data.about && {
 				"about": post.data.about
 			}),
