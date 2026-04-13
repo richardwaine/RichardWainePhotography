@@ -96,7 +96,7 @@ const {
   systemRow1Title = 'Why Your Office Headshots Matter',
   systemRow1Description = `Mismatched photos make your team look like a collection of freelancers instead of a unified organization. When every headshot has different lighting, backgrounds and quality, it signals inconsistency. Clients notice. They wonder if the company pays the same attention to their work as they do to their image.
 
-  Professional headshots that match in style and quality tell a different story. They show a team that operates under the same high standards and takes their work seriously. Clients trust organizations that look organized. They feel confident doing business with people who present themselves as capable professionals.
+  <a href="/blog/what-is-a-professional-headshot">Professional headshots</a> that match in style and quality tell a different story. They show a team that operates under the same high standards and takes their work seriously. Clients trust organizations that look organized. They feel confident doing business with people who present themselves as capable professionals.
 
   Your team benefits too. Employees who receive a headshot they actually like feel valued. They represent your company with more confidence on LinkedIn, in email signatures and in every client interaction. The investment in their image becomes an investment in how they see themselves as part of your organization.
   `,
@@ -302,7 +302,7 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
 <div class="system-row reverse">
     <div class="system-content">
       <h2>{systemRow1Title}</h2>
-      <p>{systemRow1Description}</p>
+      <p set:html={systemRow1Description}></p>
 
     <ul class="method-list">
         <li class="method-item"><span>◆</span> {methodItem1}</li>
@@ -767,6 +767,11 @@ h1 {
   color: var(--accent);
   font-weight: bold;
 }
+
+:global(body .system-content p a) {                                                    
+    color: var(--text);                                                                                                                              
+  }               
+
 
 .logistics-table {
   width:calc(100% - var(--size-7));
