@@ -1,7 +1,7 @@
 # Topical Authority Map - Professional Headshots
 
 **Created:** 2026-04-16
-**Sources:** blog-topics-queue.md, EXTERNAL-MENTIONS-STRATEGY-2026.md, PAA Scraper Output
+**Sources:** blog-topics-queue.md, EXTERNAL-MENTIONS-STRATEGY-2026.md, PAA Scraper Output, Makeup_for_Professional_Headshots_2026-04-17.csv
 **Purpose:** Unified content plan with redundancies removed
 
 ---
@@ -33,8 +33,8 @@ TRUNK: "The Complete Guide to Professional Headshots"
 | 1.2 | What to Wear for a Headshot | What to avoid wearing? What is best to wear? | EXISTS |
 | 1.3 | Can You Wear Patterns in a Headshot? | - | TO WRITE |
 | 1.4 | The Do's and Don'ts of Jewelry in Professional Headshots | - | TO WRITE |
-| 1.5 | Hair and Grooming for Headshots | What should I do with my hair? What is the 3 inch hair rule? | TO WRITE |
-| 1.6 | Matte or Glossy? Makeup Tips for Headshots | - | TO WRITE |
+| 1.5 | Hair and Grooming for Headshots | What should I do with my hair? What is the 3 inch hair rule? How to do hair for a headshot? What is the best hair style for professional headshots? | TO WRITE |
+| 1.6 | Matte or Glossy? Makeup Tips for Headshots | How should I do my makeup for a professional headshot? Should you wear makeup in your headshots? What is the 2 3 rule for makeup? What is the best lip color for headshots? Is eyeliner out of style in 2026? What color of eyeshadow should an older woman wear? | TO WRITE |
 | 1.7 | How to Avoid Shiny Skin in Headshots | - | TO WRITE |
 | 1.8 | Do Glasses Ruin Headshots? | - | TO WRITE |
 
@@ -49,10 +49,10 @@ TRUNK: "The Complete Guide to Professional Headshots"
 | 2.1 | The Power of Posture in Headshots | - | EXISTS |
 | 2.2 | How to Pose for Headshots Without Looking Stiff | - | TO WRITE |
 | 2.3 | How to Look Confident in Your Professional Headshot | How to stand out in a headshot? | TO WRITE |
-| 2.4 | Why Smiling in Your Headshot Isn't Always the Best Choice | - | TO WRITE |
+| 2.4 | Why Smiling in Your Headshot Isn't Always the Best Choice | How can I smile naturally in a headshot? | TO WRITE |
 | 2.5 | Can a Headshot Make You Look More Approachable? | - | TO WRITE |
-| 2.6 | How to Stop Overthinking Your Facial Expressions | - | TO WRITE |
-| 2.7 | How to Look Thinner in Headshots | How to look thinner? How to not look fat? How to slim tummy? | TO WRITE (FROM PAA) |
+| 2.6 | How to Stop Overthinking Your Facial Expressions | How to look natural in headshots? | TO WRITE |
+| 2.7 | How to Look Thinner in Headshots | How to look thinner? How to not look fat? How to slim tummy? How to slim your tummy in photos? Why do I look 20 lbs heavier in pictures? | TO WRITE (FROM PAA) |
 | 2.8 | Headshots for People Over 50 | How to look better over 50? Take 10 years off face? Look elegant as older woman? | TO WRITE (FROM PAA) |
 
 ---
@@ -187,6 +187,13 @@ The following PAA questions are already covered by existing content:
 | Can someone be beautiful but not photogenic? | Why You Hate Having Your Picture Taken |
 | What to avoid wearing for a headshot? | What to Wear for Headshots |
 | What is the best thing to wear? | What to Wear for Headshots |
+| What is the best color to wear for a professional headshot? | Best Colors for Professional Headshots |
+| What colors do not photograph well? | Best Colors for Professional Headshots |
+| What is the 3 color rule? | Best Colors for Professional Headshots |
+| What two colors should not be seen together? | Best Colors for Professional Headshots |
+| What color gets you hired the most? | Best Colors for Professional Headshots |
+| Can I be pretty but not photogenic? | Why You Hate Having Your Picture Taken |
+| What should a professional headshot look like? | What is a Professional Headshot |
 
 ---
 
@@ -213,4 +220,4 @@ From EXTERNAL-MENTIONS-STRATEGY-2026.md, these blog posts can be repurposed for:
 
 ---
 
-**Last Updated:** 2026-04-16
+**Last Updated:** 2026-04-17
