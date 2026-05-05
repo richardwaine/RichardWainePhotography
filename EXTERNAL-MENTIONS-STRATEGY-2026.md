@@ -915,6 +915,33 @@ What questions do you have about professional headshots? Happy to share insights
 - **Google Alerts**: https://google.com/alerts
 - **Reddit Comment Search**: https://redditsearch.io
 
+### **Research Prompts:**
+
+**Link Building Query Generator:**
+
+Use this prompt to find small to mid-size blogs, resource pages, guides, and content sites whose owners might be open to linking to your site:
+
+```
+You are an expert SEO strategist specializing in link building for niche websites. I am building a website in the following niche: [DESCRIBE YOUR NICHE HERE, e.g. "headshot photography", "professional headshots", "business portrait photography"]
+
+Generate a list of 25 Google search queries that would help me find small to mid-size blogs, resource pages, guides, and content sites in my niche or adjacent niches. These are the types of sites whose owners might be open to adding a link to my site if I reached out to them.
+
+Organize them into three groups:
+
+GROUP 1 (7 queries): The most directly relevant search terms for my niche. These should surface content that is specifically about what I do.
+
+GROUP 2 (10 queries): Adjacent and related topics. Think about overlapping audiences, related verticals, and broader categories that my target audience also cares about.
+
+GROUP 3 (8 queries): Creative and unexpected angles. Long tail searches, problem-solution content, lifestyle content, location-based variations, and roundup-style queries that most people in my niche wouldn't think to search.
+
+Rules:
+- Do NOT give me queries that would mostly surface Yelp, Reddit, Wikipedia, YouTube, Amazon, Facebook, Pinterest, TripAdvisor, or other major platforms
+- Do NOT give me product pages or shopping queries
+- FOCUS on queries that would surface blog posts, resource pages, guides, how-to articles, roundups, niche blogs, and small to mid-size informational sites
+- Each query should be 2 to 5 words, phrased the way someone would actually type it into Google
+- Every query should surface meaningfully different results from the others
+```
+
 ---
 
 **Document Created:** April 3, 2026
