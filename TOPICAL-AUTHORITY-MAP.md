@@ -33,7 +33,7 @@ TRUNK: "The Complete Guide to Professional Headshots"
 | 1.2 | What to Wear for a Headshot | What to avoid wearing? What is best to wear? | EXISTS |
 | 1.3 | Can You Wear Patterns in a Headshot? | - | TO WRITE |
 | 1.4 | The Do's and Don'ts of Jewelry in Professional Headshots | - | TO WRITE |
-| 1.5 | Hair and Grooming for Headshots | What should I do with my hair? What is the 3 inch hair rule? How to do hair for a headshot? What is the best hair style for professional headshots? | TO WRITE |
+| 1.5 | Hair and Grooming for Headshots | What should I do with my hair? What is the 2.25 inch hair rule? How to do hair for a headshot? What is the best hair style for professional headshots? | EXISTS |
 | 1.6 | Matte or Glossy? Makeup Tips for Headshots | How should I do my makeup for a professional headshot? Should you wear makeup in your headshots? What is the 2 3 rule for makeup? What is the best lip color for headshots? Is eyeliner out of style in 2026? What color of eyeshadow should an older woman wear? | TO WRITE |
 | 1.7 | How to Avoid Shiny Skin in Headshots | - | TO WRITE |
 | 1.8 | Do Glasses Ruin Headshots? | - | TO WRITE |
@@ -144,7 +144,7 @@ TRUNK: "The Complete Guide to Professional Headshots"
 
 | Cluster | Total Posts | Existing | To Write |
 |---------|-------------|----------|----------|
-| 1. Wardrobe & Appearance | 8 | 2 | 6 |
+| 1. Wardrobe & Appearance | 8 | 3 | 5 |
 | 2. Posing & Expression | 8 | 1 | 7 |
 | 3. Session Experience | 8 | 3 | 5 |
 | 4. Technical & Settings | 6 | 2 | 4 |
@@ -154,7 +154,7 @@ TRUNK: "The Complete Guide to Professional Headshots"
 | 8. Photographer Selection | 1 | 1 | 0 |
 | **Cornerstones** | 5 | 0 | 5 |
 | **Ultimate Trunk** | 1 | 0 | 1 |
-| **TOTAL** | 53 | 20 | 33 |
+| **TOTAL** | 53 | 21 | 32 |
 
 ---
 
@@ -220,4 +220,4 @@ From EXTERNAL-MENTIONS-STRATEGY-2026.md, these blog posts can be repurposed for:
 
 ---
 
-**Last Updated:** 2026-04-17
+**Last Updated:** 2026-05-05
