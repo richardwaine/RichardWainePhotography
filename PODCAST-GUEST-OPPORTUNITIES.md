@@ -2,28 +2,34 @@
 
 **Purpose:** Get backlinks through podcast appearances
 **Date:** 2026-05-05
+**Updated:** 2026-05-08
 
 ---
 
-## PODCAST MATCHING PLATFORMS
+## CONSTRAINTS
 
-These platforms connect guests with hosts actively looking for guests.
+- **Zero financial outlay.** No subscriptions, no trials, no credit card required.
+- **Claude does the writing.** All profiles, pitches, and applications are written by Claude. Richard copies/pastes and clicks submit.
 
-### PodMatch
-- Algorithmically matches you with hosts based on interests
-- Reportedly responsible for ~70% of bookings for active podcast guests
-- Hosts actively seeking guests on the platform
-- https://podmatch.com
+---
+
+## FREE PODCAST PLATFORMS
 
 ### MatchMaker.fm
-- Another popular matching platform
-- ~20% of podcast appearances for active guests
+- Free tier available (no credit card required)
+- Create a profile, get found by hosts, 10 messages included
+- Over 70,000 users on the platform
 - https://matchmaker.fm
 
 ### PodcastGuests.com
-- Sends 2 emails/week with 10 podcast opportunities
-- Simple application process
+- Free signup (no credit card required)
+- Twice-weekly newsletter with 20 podcasts seeking guests
+- Free to respond to opportunities in the newsletter
 - https://podcastguests.com
+
+### Removed: PodMatch
+- Requires $32/month minimum, no free tier
+- Not an option
 
 ---
 
@@ -57,7 +63,7 @@ These would link to you as a fellow photographer/expert.
 - **Topic:** Photography business strategies
 - **Website:** https://photobizx.com
 - **Focus:** Pricing, sales, marketing, branding
-- **Angle for you:** 17 years of headshot specialization, corporate client acquisition
+- **Note:** Richard has appeared on this podcast twice already
 
 ### Business of Photography Podcast (Sprout Studio)
 - **Topic:** Photography business success
@@ -111,12 +117,35 @@ Based on your expertise, here are angles that would interest podcast hosts:
 
 ---
 
-## NEXT STEPS
+## PAST APPEARANCES
 
-1. Create profiles on PodMatch and MatchMaker.fm
-2. Apply to Career Relaunch with a unique angle
-3. Pitch PhotoBizX and Brands That Book
-4. Prepare a one-sheet with bio, topics, and past appearances
+Richard has been a podcast guest before (credibility for future pitches):
+
+- PhotoBizX (2 appearances)
+- [Other appearances to be added when recalled]
+
+---
+
+## ACTION PLAN
+
+**Step 1: Platform Profiles**
+- [ ] Sign up for MatchMaker.fm (free)
+- [ ] Sign up for PodcastGuests.com (free)
+- Claude writes both profiles. Richard pastes and submits.
+
+**Step 2: One-Sheet**
+- [ ] Claude creates a one-sheet (bio, topics, past appearances)
+- Richard reviews and approves
+
+**Step 3: Respond to Opportunities**
+- When newsletters arrive with podcast opportunities, Richard forwards to Claude
+- Claude writes the pitch
+- Richard pastes and submits
+
+**Step 4: Direct Applications**
+- [ ] Apply to Career Relaunch
+- [ ] Apply to Brands That Book
+- Claude writes all applications. Richard pastes and submits.
 
 ---
 
