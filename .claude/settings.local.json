@@ -59,7 +59,8 @@
       "WebFetch(domain:www.searchenginejournal.com)",
       "WebFetch(domain:developers.google.com)",
       "mcp__gsc__search_analytics",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "mcp__gsc__enhanced_search_analytics"
     ],
     "deny": []
   }
