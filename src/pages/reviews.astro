@@ -87,7 +87,7 @@ const h1 = "Reviews"
                         <!-- Vendor Cards (your existing content) - UNCHANGED from original -->
                         
                         
-                           {ALL_TESTIMONIALS.map((testimonial) => {
+                           {[...ALL_TESTIMONIALS].sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0)).map((testimonial) => {
     const fullPath = `/src/assets/images/testimonials/${testimonial.imagePath}`;
 
     return (

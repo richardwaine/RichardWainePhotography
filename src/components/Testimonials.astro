@@ -22,9 +22,10 @@ const {
 
 // We will use ALL_TESTIMONIALS directly
 
+const sortedTestimonials = [...ALL_TESTIMONIALS].sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
 const testimonialsToDisplay = filterByNames
-  ? filterByNames.map(name => ALL_TESTIMONIALS.find(testimonial => testimonial.name === name)).filter((t): t is Testimonial => t !== undefined).slice(0, limit)
-  : ALL_TESTIMONIALS.slice(0, limit);
+  ? filterByNames.map(name => sortedTestimonials.find(testimonial => testimonial.name === name)).filter((t): t is Testimonial => t !== undefined).slice(0, limit)
+  : sortedTestimonials.slice(0, limit);
 ---
 
 <div class="wrapper testimonial-section-wrapper">
