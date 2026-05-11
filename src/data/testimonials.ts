@@ -8709,5 +8709,31 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Nicole O'Brien",
     datePublished: "2026-03-28T19:44:17.097522Z",
     displayOrder: 504
+  },
+  {
+    name: "Michael Vanasse",
+    company: "",
+    category:"",
+    review: "",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Michael Vanasse",
+    datePublished: "2026-04-06T12:00:00.000000Z",
+    displayOrder: 505
+  },
+  {
+    name: "Abel Rios IV",
+    company: "",
+    category:"",
+    review: "Amazing time, great photographer",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Abel Rios IV",
+    datePublished: "2026-05-08T12:00:00.000000Z",
+    displayOrder: 506
   }
 ];
