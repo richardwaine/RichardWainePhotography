@@ -4,6 +4,12 @@
 
 ---
 
+## NEXT CHECK: May 26, 2026
+
+Run `/seo meta-check` or ask Claude to pull GSC data and update this document.
+
+---
+
 ## Active Tests
 
 ### Test 1: what-is-a-professional-headshot
