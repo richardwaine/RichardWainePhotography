@@ -31,12 +31,12 @@ TRUNK: "The Complete Guide to Professional Headshots"
 |---|----------------|------------------------|--------|
 | 1.1 | Best Colors for Professional Headshots | - | EXISTS |
 | 1.2 | What to Wear for a Headshot | What to avoid wearing? What is best to wear? | EXISTS |
-| 1.3 | Can You Wear Patterns in a Headshot? | - | TO WRITE |
-| 1.4 | The Do's and Don'ts of Jewelry in Professional Headshots | - | TO WRITE |
+| 1.3 | ~~Can You Wear Patterns in a Headshot?~~ | - | COVERED in What to Wear + Colors posts |
+| 1.4 | ~~The Do's and Don'ts of Jewelry in Professional Headshots~~ | - | COVERED in What to Wear + Prep posts |
 | 1.5 | Hair and Grooming for Headshots | What should I do with my hair? What is the 2.25 inch hair rule? How to do hair for a headshot? What is the best hair style for professional headshots? | EXISTS |
-| 1.6 | Matte or Glossy? Makeup Tips for Headshots | How should I do my makeup for a professional headshot? Should you wear makeup in your headshots? What is the 2 3 rule for makeup? What is the best lip color for headshots? Is eyeliner out of style in 2026? What color of eyeshadow should an older woman wear? | TO WRITE |
-| 1.7 | How to Avoid Shiny Skin in Headshots | - | TO WRITE |
-| 1.8 | Do Glasses Ruin Headshots? | - | TO WRITE |
+| 1.6 | Matte or Glossy? Makeup Tips for Headshots | How should I do my makeup for a professional headshot? Should you wear makeup in your headshots? What is the 2 3 rule for makeup? What is the best lip color for headshots? Is eyeliner out of style in 2026? What color of eyeshadow should an older woman wear? | EXISTS (complete-guide-makeup-for-headshots) |
+| 1.7 | ~~How to Avoid Shiny Skin in Headshots~~ | - | COVERED in Makeup + Prep posts |
+| 1.8 | ~~Do Glasses Ruin Headshots?~~ | - | COVERED in What to Wear post |
 
 ---
 
