@@ -1,16 +1,10 @@
-# Meta Description A/B Tracking
+# Active Experiments
 
-**Purpose:** Track CTR improvements after meta description updates.
-
----
-
-## NEXT CHECK: May 26, 2026
-
-Run `/seo meta-check` or ask Claude to pull GSC data and update this document.
+Track changes that need follow-up monitoring. Check dates are measured from change date.
 
 ---
 
-## Active Tests
+## Meta Description Tests
 
 ### Test 1: what-is-a-professional-headshot
 
@@ -30,14 +24,16 @@ Run `/seo meta-check` or ask Claude to pull GSC data and update this document.
 | CTR | 0% |
 | Avg Position | ~7.8 |
 
-**Post-Change Metrics:**
+**Check Schedule:**
+| Check | Date | Status |
+|-------|------|--------|
+| Week 1 | 2026-05-19 | Pending |
+| Week 2 | 2026-05-26 | Pending |
+| Week 4 | 2026-06-09 | Pending |
+| Week 8 | 2026-07-07 | Pending |
 
-| Check Date | Period | Impressions | Clicks | CTR | Position | Notes |
-|------------|--------|-------------|--------|-----|----------|-------|
-| | Week 1 | | | | | |
-| | Week 2 | | | | | |
-| | Week 4 | | | | | |
-| | Week 8 | | | | | |
+**Results:**
+(To be filled in as checks are completed)
 
 ---
 
@@ -59,14 +55,16 @@ Run `/seo meta-check` or ask Claude to pull GSC data and update this document.
 | CTR | 0.14% |
 | Avg Position | 7.0 |
 
-**Post-Change Metrics:**
+**Check Schedule:**
+| Check | Date | Status |
+|-------|------|--------|
+| Week 1 | 2026-05-19 | Pending |
+| Week 2 | 2026-05-26 | Pending |
+| Week 4 | 2026-06-09 | Pending |
+| Week 8 | 2026-07-07 | Pending |
 
-| Check Date | Period | Impressions | Clicks | CTR | Position | Notes |
-|------------|--------|-------------|--------|-----|----------|-------|
-| | Week 1 | | | | | |
-| | Week 2 | | | | | |
-| | Week 4 | | | | | |
-| | Week 8 | | | | | |
+**Results:**
+(To be filled in as checks are completed)
 
 ---
 
@@ -77,26 +75,10 @@ A meta description change is considered successful if:
 - OR clicks increase while impressions remain stable
 - AND position does not decrease significantly
 
-## Check Schedule
-
-- **Week 1:** 2026-05-19 - Early signal check
-- **Week 2:** 2026-05-26 - Initial trend
-- **Week 4:** 2026-06-09 - Meaningful data
-- **Week 8:** 2026-07-07 - Conclusive results
+---
 
 ## Notes
 
 - Google can take 1-2 weeks to re-crawl and update cached meta descriptions
 - Position changes may affect CTR independently of meta changes
 - Seasonal traffic variations should be considered
-- Use GSC "compare" feature to compare periods
-
----
-
-## Completed Tests
-
-(Move tests here after 8-week evaluation)
-
----
-
-**Last Updated:** 2026-05-12
