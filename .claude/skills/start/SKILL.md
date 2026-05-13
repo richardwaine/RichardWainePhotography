@@ -34,11 +34,16 @@ If none are stale, do not mention it.
 
 ### Step 3: Check Blog Cadence
 
-Identify the most recently published blog post by `publishDate`. Calculate days since publication.
+Identify the most recently published blog post by `publishDate`. Calculate days since publication. Target cadence is every 2 weeks (14 days).
 
 Output:
 ```
-Last blog published: [title] ([X] days ago)
+Blog cadence (every 2 weeks): Last published [X] days ago — next due in [14-X] days
+```
+
+If overdue (more than 14 days since last post):
+```
+Blog cadence (every 2 weeks): OVERDUE — last published [X] days ago
 ```
 
 ### Step 4: Check Experiments
