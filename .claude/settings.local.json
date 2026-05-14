@@ -60,7 +60,8 @@
       "WebFetch(domain:developers.google.com)",
       "mcp__gsc__search_analytics",
       "Bash(find:*)",
-      "mcp__gsc__enhanced_search_analytics"
+      "mcp__gsc__enhanced_search_analytics",
+      "WebFetch(domain:dataforseo.com)"
     ],
     "deny": []
   }
