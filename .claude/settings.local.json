@@ -61,7 +61,8 @@
       "mcp__gsc__search_analytics",
       "Bash(find:*)",
       "mcp__gsc__enhanced_search_analytics",
-      "WebFetch(domain:dataforseo.com)"
+      "WebFetch(domain:dataforseo.com)",
+      "mcp__gsc__index_inspect"
     ],
     "deny": []
   }
