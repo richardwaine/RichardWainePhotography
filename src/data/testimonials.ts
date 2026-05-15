@@ -20,6 +20,16 @@ import BrandonLesagonicz from '../assets/images/testimonials/Brandon lesagonicz 
 import CateCaplan from '../assets/images/testimonials/Cate Caplan - (200px).jpg'
 import MackenzieLucas from '../assets/images/testimonials/ProAssurance - 0111 - (200px).jpg'
 import DanielHagelberg from '../assets/images/testimonials/Daniel Hagelberg - (200px).jpg'
+import AbelRios from '../assets/images/testimonials/Abel Rios - 0005 (200px).jpg'
+import AndrewPetsu from '../assets/images/testimonials/Andrew Petsu - 0012 (200px).jpg'
+import DerekArnold from '../assets/images/testimonials/Derek Arnold - 0009 (200px).jpg'
+import KimEngle from '../assets/images/testimonials/Kim Engle - 0113 (200px).jpg'
+import KyleSadorf from '../assets/images/testimonials/Kyle Sadorf - 0012 (200px).jpg'
+import LizaMinner from '../assets/images/testimonials/Liza Minner - 0012 (200px).jpg'
+import MichaelVanasse from '../assets/images/testimonials/Michael Vanasse - 0038 (200px).jpg'
+import NicoleOBrien from '../assets/images/testimonials/Nicole OBrien - 0140 (200px).jpg'
+import SamuelStewart from '../assets/images/testimonials/Samuel Stewart - 0023 (200px).jpg'
+import WilliamSanchez from '../assets/images/testimonials/William Sanchez - 0007 (200px).jpg'
 import AvatarPlaceholder from '../assets/images/testimonials/Avatar - (200px).jpg'
 
 
@@ -8612,9 +8622,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"financial-professionals",
     review: "Amazing experience! Rich did a great job making me feel comfortable and relaxed. I would highly recommend!",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: KimEngle.src,
+    image: KimEngle,
+    imagePath: "Kim Engle - 0113 (200px).jpg",
     imageAlt: "Google Review by Kim Engle",
     datePublished: "2026-03-17T18:27:15.464168Z",
     displayOrder: 511
@@ -8625,9 +8635,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"financial-professionals",
     review: "I really enjoyed working with you. You made me feel so confident and comfortable. I had a blast!",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: LizaMinner.src,
+    image: LizaMinner,
+    imagePath: "Liza Minner - 0012 (200px).jpg",
     imageAlt: "Google Review by Liza Minner",
     datePublished: "2026-03-19T17:44:57.453661Z",
     displayOrder: 510
@@ -8638,9 +8648,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"legal-professionals",
     review: "Great experience",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: AndrewPetsu.src,
+    image: AndrewPetsu,
+    imagePath: "Andrew Petsu - 0012 (200px).jpg",
     imageAlt: "Google Review by Andrew Petsu",
     datePublished: "2026-03-20T14:43:09.612598Z",
     displayOrder: 509
@@ -8651,9 +8661,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"financial-professionals",
     review: "The shoot was great.  Fun, loose, and the pics turned out awesome.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: DerekArnold.src,
+    image: DerekArnold,
+    imagePath: "Derek Arnold - 0009 (200px).jpg",
     imageAlt: "Google Review by Derek Arnold",
     datePublished: "2026-03-20T16:15:54.352041Z",
     displayOrder: 508
@@ -8664,9 +8674,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"financial-professionals",
     review: "Great at getting the best out of you",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: SamuelStewart.src,
+    image: SamuelStewart,
+    imagePath: "Samuel Stewart - 0023 (200px).jpg",
     imageAlt: "Google Review by Samuel Stewart",
     datePublished: "2026-03-24T14:27:54.378695Z",
     displayOrder: 507
@@ -8677,9 +8687,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"financial-professionals",
     review: "Best photo I have had taken. Very friendly and overall just a great job. Highly recommend!",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: KyleSadorf.src,
+    image: KyleSadorf,
+    imagePath: "Kyle Sadorf - 0012 (200px).jpg",
     imageAlt: "Google Review by Kyle Sadorf",
     datePublished: "2026-03-24T16:33:56.569247Z",
     displayOrder: 506
@@ -8690,9 +8700,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"financial-professionals",
     review: "Rich is the best headshot photographer in Lancaster PA.  Had an amazing experience!",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: WilliamSanchez.src,
+    image: WilliamSanchez,
+    imagePath: "William Sanchez - 0007 (200px).jpg",
     imageAlt: "Google Review by William Sanchez",
     datePublished: "2026-03-27T14:50:45.526209Z",
     displayOrder: 505
@@ -8703,9 +8713,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"",
     review: "Richard was amazing to work with. He was kind, funny and totally made me feel comfortable. I would highly recommend working with Richard.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: NicoleOBrien.src,
+    image: NicoleOBrien,
+    imagePath: "Nicole OBrien - 0140 (200px).jpg",
     imageAlt: "Google Review by Nicole O'Brien",
     datePublished: "2026-03-28T19:44:17.097522Z",
     displayOrder: 504
@@ -8716,9 +8726,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"",
     review: "",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: MichaelVanasse.src,
+    image: MichaelVanasse,
+    imagePath: "Michael Vanasse - 0038 (200px).jpg",
     imageAlt: "Google Review by Michael Vanasse",
     datePublished: "2026-04-06T12:00:00.000000Z",
     displayOrder: 505
@@ -8729,9 +8739,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"",
     review: "Amazing time, great photographer",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: AbelRios.src,
+    image: AbelRios,
+    imagePath: "Abel Rios - 0005 (200px).jpg",
     imageAlt: "Google Review by Abel Rios IV",
     datePublished: "2026-05-08T12:00:00.000000Z",
     displayOrder: 506
