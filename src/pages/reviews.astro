@@ -86,7 +86,7 @@ const h1 = "Reviews"
                         <!-- Vendor Cards (your existing content) - UNCHANGED from original -->
                         
                         
-                           {[...ALL_TESTIMONIALS].sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0)).map((testimonial) => {
+                           {[...ALL_TESTIMONIALS].filter((t) => t.review && t.review.trim() !== '').sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0)).map((testimonial) => {
     const fullPath = `/src/assets/images/testimonials/${testimonial.imagePath}`;
 
     return (
@@ -458,12 +458,36 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         .blog-card-excerpt {
             font-size: var(--fs-350);
             margin-top: var(--size-3);
-            padding: var(--size-1);
+            padding: var(--size-3);
             display: -webkit-box;
             -webkit-line-clamp: ; /* 8 or 9 */
             -webkit-box-orient: vertical;
-            overflow: hidden;
-            
+            overflow: visible;
+            position: relative;
+        }
+
+        .blog-card-excerpt p {
+            text-wrap: wrap;
+        }
+
+        .quote {
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--faded);
+            opacity: 0.3;
+            position: absolute;
+            line-height: 1;
+        }
+
+        .opening-quote {
+            top: -0.25em;
+            left: 0;
+        }
+
+        .closing-quote {
+            bottom: -0.25em;
+            right: 0;
         }
 
         .blog-card h3 {
@@ -527,7 +551,7 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
             --_shadow: 0 8px 24px var(--shadow-clr-subtle);
 
                 position: sticky;
-                top: 325px;
+                /* top: 0px; */
                 margin-top: var(--size-10);
                 padding: var(--size-7);
                 border: 1px solid #e5e5e5;
