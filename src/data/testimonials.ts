@@ -3303,7 +3303,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     name: "Jessica Goyco",
     company: "Rankin & Gregory",
     category:"legal-professionals", 
-    review: "I was a bit nervous but once you spend a minute with Rich he makes you feel great about yourself! You was awesome thank you! Jessy Goyco",
+    review: "I was a bit nervous but once you spend a minute with Rich he makes you feel great about yourself! You were awesome! thank you!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,

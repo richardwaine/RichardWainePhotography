@@ -81,7 +81,6 @@ const h1 = "Reviews"
                 <main class="blog-grid">
                     <div class="category-heading">
                         <h2 id="current-category">All Reviews</h2>
-                        <p id="post-count" class="post-count">Showing all Reviews</p>
                     </div>
                     <div class="blog-posts" id="blog-posts">
                         <!-- Vendor Cards (your existing content) - UNCHANGED from original -->
@@ -127,7 +126,7 @@ const h1 = "Reviews"
 
 
 <script is:inline>
-function initializeResourceFilters() {const b=document.querySelectorAll(".blog-card"),f=document.getElementById("category-filters"),d=document.getElementById("current-category"),c=document.getElementById("post-count"),s=document.getElementById("search-input");if(!f||!d||!c||!s)return;let a="all";const t={"all":"All Reviews","executives":"Corporate Executives","corporate-professionals":"Corporate Professionals","entrepreneurs":"Entrepreneurs","company-employees":"Company Employees","creatives":"Creative Professionals","small-business-owners":"Small Business Owners","legal-professionals":"Legal Professionals","financial-professionals":"Financial Professionals"};const filter=()=>{const term=s.value.toLowerCase();let v=0;b.forEach(card=>{const cats=card.dataset.category.toLowerCase().split(" "),matchCat=a==="all"||cats.includes(a),title=card.querySelector(".blog-card-title, .vendor-card-title")?.textContent.toLowerCase()||"",category=card.querySelector(".vendor-card-category")?.textContent.toLowerCase()||"",excerpt=card.querySelector(".blog-card-excerpt")?.textContent.toLowerCase()||"",matchSearch=!term||title.includes(term)||excerpt.includes(term)||category.includes(term);if(matchCat&&matchSearch){card.style.display="";v++}else{card.style.display="none"}});d.textContent=t[a]||`${a.replace(/-/g,' ')} Reviews`;c.textContent=`Showing ${v} Reviews`};f.onclick=e=>{if(e.target.classList.contains("filter-btn")){document.querySelectorAll(".filter-btn").forEach(btn=>btn.classList.remove("active"));e.target.classList.add("active");a=e.target.dataset.category;filter()}};s.oninput=filter;const toggle=document.getElementById("filter-toggle"),content=document.getElementById("filter-content");if(toggle&&content)toggle.onclick=()=>{content.classList.toggle("open");toggle.classList.toggle("active")};filter()}
+function initializeResourceFilters() {const b=document.querySelectorAll(".blog-card"),f=document.getElementById("category-filters"),d=document.getElementById("current-category"),s=document.getElementById("search-input");if(!f||!d||!s)return;let a="all";const t={"all":"All Reviews","executives":"Corporate Executives","corporate-professionals":"Corporate Professionals","entrepreneurs":"Entrepreneurs","company-employees":"Company Employees","creatives":"Creative Professionals","small-business-owners":"Small Business Owners","legal-professionals":"Legal Professionals","financial-professionals":"Financial Professionals"};const filter=()=>{const term=s.value.toLowerCase();let v=0;b.forEach(card=>{const cats=card.dataset.category.toLowerCase().split(" "),matchCat=a==="all"||cats.includes(a),title=card.querySelector(".blog-card-title, .vendor-card-title")?.textContent.toLowerCase()||"",category=card.querySelector(".vendor-card-category")?.textContent.toLowerCase()||"",excerpt=card.querySelector(".blog-card-excerpt")?.textContent.toLowerCase()||"",matchSearch=!term||title.includes(term)||excerpt.includes(term)||category.includes(term);if(matchCat&&matchSearch){card.style.display="";v++}else{card.style.display="none"}});d.textContent=t[a]||`${a.replace(/-/g,' ')} Reviews`};f.onclick=e=>{if(e.target.classList.contains("filter-btn")){document.querySelectorAll(".filter-btn").forEach(btn=>btn.classList.remove("active"));e.target.classList.add("active");a=e.target.dataset.category;filter()}};s.oninput=filter;const toggle=document.getElementById("filter-toggle"),content=document.getElementById("filter-content");if(toggle&&content)toggle.onclick=()=>{content.classList.toggle("open");toggle.classList.toggle("active")};filter()}
 
 // Initialize on page load and ViewTransitions
 document.addEventListener("DOMContentLoaded", initializeResourceFilters);
@@ -506,11 +505,14 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
         @media (min-width: 48em) {
             .blog-container {
             width:80%;
+                
             }
 
             /* Main content grid layout - UNCHANGED from original, allowing gap to inherit */
             .main-content {
                 grid-template-columns: 280px 1fr;
+            
+               
             }
             /* Blog card image height - UNCHANGED from original */
             .blog-card img {
@@ -526,10 +528,15 @@ document.addEventListener("astro:after-swap", initializeResourceFilters);
 
                 position: sticky;
                 top: 325px;
+                margin-top: var(--size-10);
                 padding: var(--size-7);
                 border: 1px solid #e5e5e5;
                 box-shadow: var(--_shadow);
+
+              
+
             }
+
             /* Hide toggle button on desktop */
             .filter-toggle-btn {
                 display: none;
