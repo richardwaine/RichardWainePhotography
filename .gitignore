@@ -29,6 +29,5 @@ src/assets/*.zip
 .playwright-mcp/
 src/assets/*.mp4
 
-# Session files (private)
-TODO.md
-SESSION-NOTES.md
+# Private files (notes, session files, internal docs)
+/private/
