@@ -63,7 +63,8 @@
       "mcp__gsc__enhanced_search_analytics",
       "WebFetch(domain:dataforseo.com)",
       "mcp__gsc__index_inspect",
-      "WebFetch(domain:css-tricks.com)"
+      "WebFetch(domain:css-tricks.com)",
+      "mcp__gsc__list_sites"
     ],
     "deny": []
   }
