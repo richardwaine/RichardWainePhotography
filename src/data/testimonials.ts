@@ -8745,5 +8745,18 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Abel Rios IV",
     datePublished: "2026-05-08T12:00:00.000000Z",
     displayOrder: 506
+  },
+  {
+    name: "Nicholas Elsayed",
+    company: "",
+    category: "",
+    review: "Richard was extremely kind and helpful when I reached out about a surprise proposal shoot for my future fiancée in Lancaster, PA. Even though he mainly specializes in headshots and doesn't do proposal photography himself, he still took the time to help point me in the right direction. He directed me to his website, which has a great list of professional photographers throughout Lancaster County, and it honestly made the search so much easier. You can tell he genuinely cares about helping people. Really appreciate the time and kindness — thank you, Richard!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Nicholas Elsayed",
+    datePublished: "2026-05-23T12:00:00.000000Z",
+    displayOrder: 507
   }
 ];

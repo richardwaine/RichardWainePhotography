@@ -53,7 +53,7 @@ const personSchema = buildPersonSchema(
 
     <div class="bio-container">
       {bioSections.map((section, index) => (
-        <div class={`clip clip${index + 1} lazy`} title={section.clipHeading} style={`background-image: url('${index === 0 ? RW1Image.src : index === 1 ? RW2Image.src : RWHeadshot.src}')`}>
+        <div class={`clip clip${index + 1} lazy`} style={`background-image: url('${index === 0 ? RW1Image.src : index === 1 ? RW2Image.src : RWHeadshot.src}')`}>
           <div class="bio-content">
             <h2 class="bio-content-h2">{section.clipHeading}</h2>
             {section.clipParagraphs.map((para) => (
