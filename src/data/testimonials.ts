@@ -8758,5 +8758,18 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Nicholas Elsayed",
     datePublished: "2026-05-23T12:00:00.000000Z",
     displayOrder: 507
+  },
+  {
+    name: "Amanda Kowalski",
+    company: "",
+    category: "",
+    review: "Wonderful experience, professional and fun. Very happy with the results!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Amanda Kowalski",
+    datePublished: "2026-05-27T12:00:00.000000Z",
+    displayOrder: 508
   }
 ];
