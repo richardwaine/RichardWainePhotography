@@ -1,5 +1,6 @@
 ---
 // Floating Statistics Component
+import { reviewCount } from '../data/testimonials';  
 ---
 
 <!-- 3D Floating Statistics -->
@@ -12,7 +13,7 @@
     </div>
     <div class="stat-card" data-delay="200">
         <div class="stat-3d-container">
-            <div class="stat-number" data-count="666">0</div>
+            <div class="stat-number" data-count={reviewCount}>0</div>
             <div class="stat-label">5-Star Google Reviews</div>
         </div>
     </div>

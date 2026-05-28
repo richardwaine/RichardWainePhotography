@@ -3,6 +3,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
+import { reviewCount } from '../data/testimonials';
 
 
 
@@ -21,6 +22,52 @@ export interface Props{
 	robots?:string;
 }
 const {title, description = "Professional headshot photographer. Corporate headshots, business headshots, executive portraits, LinkedIn profile photos, and acting headshots. Serving Pennsylvania, Maryland, and Delaware", robots} = Astro.props as Props;
+
+const siteSchema = {
+	"@context": "https://schema.org",
+	"@type": "ProfessionalService",
+	"name": "Richard Waine Photography",
+	"description": "Professional Headshot Photographer based in Lancaster, Pennsylvania, offering corporate headshots, acting headshots, conference headshots, and commercial photography",
+	"image": "https://www.richardwainephotography.com/Logo-RichardWainePhotography-black.png",
+	"@id": "https://www.richardwainephotography.com",
+	"url": "https://www.richardwainephotography.com",
+	"sameAs": [
+		"https://www.facebook.com/RichardWainePhotography",
+		"https://www.instagram.com/richardwaine",
+		"https://www.linkedin.com/in/richardwaine/",
+		"https://www.richardwaine.com"
+	],
+	"telephone": "(717) 925-0061",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "20 North Queen Street",
+		"addressLocality": "Lancaster",
+		"addressRegion": "PA",
+		"postalCode": "17603",
+		"addressCountry": "US"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": 40.038578,
+		"longitude": -76.306020
+	},
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "5",
+		"reviewCount": String(reviewCount),
+		"bestRating": "5",
+		"worstRating": "1"
+	},
+	"openingHoursSpecification": [
+		{ "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Monday", "opens": "00:00", "closes": "23:59" },
+		{ "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Tuesday", "opens": "00:00", "closes": "23:59" },
+		{ "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Wednesday", "opens": "00:00", "closes": "23:59" },
+		{ "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Thursday", "opens": "00:00", "closes": "23:59" },
+		{ "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Friday", "opens": "00:00", "closes": "23:59" },
+		{ "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Saturday", "opens": "00:00", "closes": "23:59" },
+		{ "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Sunday", "opens": "00:00", "closes": "23:59" }
+	]
+};
 
 ---
 
@@ -52,90 +99,7 @@ const {title, description = "Professional headshot photographer. Corporate heads
 		<ClientRouter />
 
 		<!-- Schema.org Structured Data -->
-		<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "ProfessionalService",
-			"name": "Richard Waine Photography",
-			"description": "Professional Headshot Photographer based in Lancaster, Pennsylvania, offering corporate headshots, acting headshots, conference headshots, and commercial photography",
-			"image": "https://www.richardwainephotography.com/Logo-RichardWainePhotography-black.png",
-			"@id": "https://www.richardwainephotography.com",
-			"url": "https://www.richardwainephotography.com",
-			"sameAs": [
-				"https://www.facebook.com/RichardWainePhotography",
-				"https://www.instagram.com/richardwaine",
-				"https://www.linkedin.com/in/richardwaine/",
-				"https://www.richardwaine.com"
-			],
-			"telephone": "(717) 925-0061",
-			"address": {
-				"@type": "PostalAddress",
-				"streetAddress": "20 North Queen Street",
-				"addressLocality": "Lancaster",
-				"addressRegion": "PA",
-				"postalCode": "17603",
-				"addressCountry": "US"
-			},
-			"geo": {
-				"@type": "GeoCoordinates",
-				"latitude": 40.038578,
-				"longitude": -76.306020
-			},
-
-			"aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5",
-                "reviewCount": "666",
-                "bestRating": "5",
-                "worstRating": "1"
-            },
-
-			"openingHoursSpecification": [
-				{
-					"@type": "OpeningHoursSpecification",
-					"dayOfWeek": "https://schema.org/Monday",
-					"opens": "00:00",
-					"closes": "23:59"
-				},
-				{
-					"@type": "OpeningHoursSpecification",
-					"dayOfWeek": "https://schema.org/Tuesday",
-					"opens": "00:00",
-					"closes": "23:59"
-				},
-				{
-					"@type": "OpeningHoursSpecification",
-					"dayOfWeek": "https://schema.org/Wednesday",
-					"opens": "00:00",
-					"closes": "23:59"
-				},
-				{
-					"@type": "OpeningHoursSpecification",
-					"dayOfWeek": "https://schema.org/Thursday",
-					"opens": "00:00",
-					"closes": "23:59"
-				},
-				{
-					"@type": "OpeningHoursSpecification",
-					"dayOfWeek": "https://schema.org/Friday",
-					"opens": "00:00",
-					"closes": "23:59"
-				},
-				{
-					"@type": "OpeningHoursSpecification",
-					"dayOfWeek": "https://schema.org/Saturday",
-					"opens": "00:00",
-					"closes": "23:59"
-				},
-				{
-					"@type": "OpeningHoursSpecification",
-					"dayOfWeek": "https://schema.org/Sunday",
-					"opens": "00:00",
-					"closes": "23:59"
-				}
-			]
-		}
-		</script>
+		<script type="application/ld+json" set:html={JSON.stringify(siteSchema)} />
 
 		<!-- Google Tag Manager -->
 		<script is:inline>

@@ -48,6 +48,8 @@ export interface Testimonial {
   displayOrder?: number; // Original display order for reviews page
 }
 
+export const reviewCount = 667;
+
 export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Star Bunner",
@@ -8771,5 +8773,18 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Amanda Kowalski",
     datePublished: "2026-05-27T12:00:00.000000Z",
     displayOrder: 508
+  },
+  {
+    name: "Jessica Mills",
+    company: "",
+    category: "",
+    review: "Richard is awesome to work with. The best headshot photographer in Pennsylvania!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Jessica Mills",
+    datePublished: "2026-05-28T12:00:00.000000Z",
+    displayOrder: 509
   }
 ];
