@@ -64,7 +64,10 @@
       "WebFetch(domain:dataforseo.com)",
       "mcp__gsc__index_inspect",
       "WebFetch(domain:css-tricks.com)",
-      "mcp__gsc__list_sites"
+      "mcp__gsc__list_sites",
+      "mcp__claude_ai_Google_Drive__search_files",
+      "mcp__claude_ai_Google_Drive__read_file_content",
+      "Read(//Users/richardwaine/.claude/**)"
     ],
     "deny": []
   }
