@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat \"/Users/richardwaine/CloudStation/Richard Waine Photography Website/private/core-rules.md\""
+          }
+        ]
+      }
+    ]
+  }
+}
