@@ -48,7 +48,7 @@ export interface Testimonial {
   displayOrder?: number; // Original display order for reviews page
 }
 
-export const reviewCount = 667;
+export const reviewCount = 668;
 
 export const ALL_TESTIMONIALS: Testimonial[] = [
   {
@@ -8786,5 +8786,18 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Jessica Mills",
     datePublished: "2026-05-28T12:00:00.000000Z",
     displayOrder: 509
+  },
+  {
+    name: "Rashyna Banzhof",
+    company: "",
+    category: "",
+    review: "Had a blast with Rich; no anxiety with this shoot!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Rashyna Banzhof",
+    datePublished: "2026-06-22T12:00:00.000000Z",
+    displayOrder: 510
   }
 ];

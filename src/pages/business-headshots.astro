@@ -7,6 +7,7 @@ import SecondaryButton from '../components/SecondaryButton.astro'
 import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
+import { reviewCount } from '../data/testimonials';
 
 import WilliamAdote from "../assets/images/features/Headshot_20240919_William Adote_Richard Waine_Lancaster_PA_0023 (horizontal) - compressed.jpg"
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
@@ -67,12 +68,12 @@ export interface Props {
 }
 
 const {
-  pageTitle = 'Business Headshots | Richard Waine Photography',
+  pageTitle = 'Business Headshots and Corporate Headshots | Richard Waine Photography',
   metaDescription = 'Business headshots for executives, entrepreneurs, and corporate professionals. Build trust and credibility with expert coaching, real-time review, and strategic image selection',
 
   heroTitle = 'Business',
   heroTitleAccent = 'Headshots',
-  heroDescription = 'A headshot is not just a picture. It is a data point in your client\'s decision-making process. I create headshot images that build trust and command attention.',
+  heroDescription = 'A corporate headshot is not just a picture. It is a data point in your client\'s decision-making process. I create headshot images that build trust and command attention.',
   heroButtonText = 'GET PRICING',
   SecondaryButtonText = 'SCHEDULE CONSULT',
 
@@ -89,29 +90,29 @@ const {
 
   pillar3Num = 'THE RESULT',
   pillar3Title = 'Strategic Selection',
-  pillar3Description = 'We review headshots through the lens of human perception, ensuring your final images project confidence and credibility. The results are strategic assets designed to align with your personal brand and industry trajectory.',
+  pillar3Description = 'We review headshots through the lens of human perception, ensuring your final images project confidence and credibility. Your selected images are retouched and then delivered to you digitally, ready to use on your website, your LinkedIn profile, and your professional bios.',
 
 
 
 
   systemRow1Title = 'Why Your Business Headshot Matters',
-  systemRow1Description = `A business headshot is a professional photograph of the head and shoulders, carefully executed to capture an image that reflects professionalism, personality, and authenticity, conveying who you are in a clear, confident, and approachable manner to establish instant credibility and shape your personal brand.
+  systemRow1Description = `A business headshot, also called a corporate headshot, is a professional photograph of the head and shoulders, carefully executed to capture an image that reflects professionalism, personality, and authenticity, conveying who you are in a clear, confident, and approachable manner to establish credibility and shape your personal brand.
   
-  Your business headshot shows up everywhere potential clients look for you. It appears on your website, email signature, industry directories, speaking bios, marketing materials, and proposals. That image is often the first thing someone sees before they ever talk to you, and it shapes their impression of whether you're credible and professional. Research from Princeton University shows people form judgments about trustworthiness and competence in just 100 milliseconds of seeing a face. A solid corporate headshot tells them you take your work seriously.
+  Your business headshot shows up everywhere potential clients look for you. It appears on your website, email signature, industry directories, speaking bios, marketing materials, and proposals. That image shapes whether people see you as credible and professional. <a href="https://www.psychologicalscience.org/observer/how-many-seconds-to-a-first-impression">Research from Princeton University</a> shows people form judgments about trustworthiness and competence in just 100 milliseconds of seeing a face. A solid corporate headshot tells them you take your work seriously.
   
   An amateur photo or outdated image undermines everything else you do well in your business. Your headshot should match the quality of work you deliver and the clients you serve. If you invest in your expertise, your systems, and your reputation, your corporate headshot deserves the same attention.
   `,
-  methodItem1 = 'Professional headshots increase how competent you appear by 76%',
-  methodItem2 = '88% of hiring managers say selfies are unprofessional',
+  methodItem1 = 'Your reputation deserves a headshot to match',
+  methodItem2 = 'People do business with those they know, like, and trust',
   methodItem3 = "A high-quality headshot signals leadership and intelligence",
-  methodItem4 = 'A strong headshot influences how people judge your entire professional presence',
+  methodItem4 = 'A strong headshot influences how you come across professionally',
 
 
   systemRow2Title = 'System of Direction',
-  systemRow2Description = "I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, actionable cues that result in a natural, powerful presence. My directions are designed to eliminate camera anxiety and move you into a state of natural confidence.  Posture and head position directly affects how authoritative you appear. Slight, nuanced adjustments make the difference between looking uncertain and looking like someone people want to do business with. I have refined this system of direction over 17 years working with executives, entrepreneurs, and corporate professionals who needed to project confidence and establish instant credibility.",
-  methodItem5 = 'Real-time image tethering for instant feedback',
-  methodItem6 = 'Advanced guidance, coaching and direction',
-  methodItem7 = "Systematic approach that's different from typical photographers",
+  systemRow2Description = `I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, actionable cues that result in a natural, powerful presence. My directions are designed to eliminate camera anxiety and move you into a state of natural confidence.  Posture and head position directly affect how authoritative you appear. Slight, nuanced adjustments make the difference between looking uncertain and looking like someone people want to do business with. I have refined this system of direction over 17 years working with executives, entrepreneurs, and corporate professionals who needed to project confidence and credibility. That work is reflected in more than ${reviewCount} five-star Google <a href="/reviews/">reviews</a>.`,
+  methodItem5 = 'Tethered capture for instant feedback',
+  methodItem6 = 'Expert coaching and direction',
+  methodItem7 = 'A systematic approach unlike typical photographers',
   methodItem8 = 'Instant review and choice of images',
   
 
@@ -322,7 +323,7 @@ const businessHeadshotsFAQSchema = buildFAQSchema(faqs);
 <div class="system-row reverse">
     <div class="system-content">
       <h2>{systemRow1Title}</h2>
-      <p>{systemRow1Description}</p>
+      <p set:html={systemRow1Description}></p>
 
     <ul class="method-list">
         <li class="method-item"><span>◆</span> {methodItem1}</li>
@@ -347,7 +348,7 @@ const businessHeadshotsFAQSchema = buildFAQSchema(faqs);
         
         <div class="system-content">
             <h2>{systemRow2Title}</h2>
-            <p>{systemRow2Description}</p>
+            <p set:html={systemRow2Description}></p>
             <ul class="method-list">
               <li class="method-item"><span>◆</span> {methodItem5}</li>
               <li class="method-item"><span>◆</span> {methodItem6}</li>
@@ -742,6 +743,7 @@ h1 {
   transform: translateY(50px);
 }
 
+
 .system-content h2 {
   font-size: var(--fs-600);
   margin-bottom: var(--size-4);
@@ -752,7 +754,11 @@ h1 {
 .system-content p{
   margin-bottom:var(--size-775);
    white-space: pre-line;
-  
+
+}
+
+.system-content p :global(a) {
+  color: var(--ltclr);
 }
 
 
@@ -769,6 +775,8 @@ h1 {
   display: flex;
   /* gap: var(--size-4); */
 }
+
+ 
 
 .method-item span:first-child {
   color: var(--accent);
