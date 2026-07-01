@@ -48,7 +48,7 @@ export interface Testimonial {
   displayOrder?: number; // Original display order for reviews page
 }
 
-export const reviewCount = 668;
+export const reviewCount = 669;
 
 export const ALL_TESTIMONIALS: Testimonial[] = [
   {
@@ -8799,5 +8799,18 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Rashyna Banzhof",
     datePublished: "2026-06-22T12:00:00.000000Z",
     displayOrder: 510
+  },
+  {
+    name: "Makenzie Scanlon",
+    company: "",
+    category: "",
+    review: "Loved my session! He made me look incredible and confident for my upcoming ERAS application. Highly recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Makenzie Scanlon",
+    datePublished: "2026-06-30T12:00:00.000000Z",
+    displayOrder: 511
   }
 ];
