@@ -80,7 +80,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Eric Slodysko",
     company: "",
-    category:"",
+    category:"creatives",
     review: "If you are in need of some serious quality, look no further. Richard Waine wears professionalism to the nines! You can never go wrong with this guy for your photography needs.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -106,7 +106,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Maurice Jager",
     company: "",
-    category:"",
+    category:"creatives",
     review: "As fellow headshot photographer based out of Europe and the Chief Marketing Officer of the HeadshotCrew, where Richard helps as one of 23 Mentors to continuously train over 12,000 other headshot photographers around the world, I can say that if you book a session with Richard you'll be in good hands. I got to know Richard years ago and am honoured to have witnessed Richard become one of the best headshot photographers in the world. Richard knows like no other that it's important to specialize to deliver the best service and that's what he did. Richard specialized in headshots and he's really good at it. Since you're reading this review, you know you need a perfect headshot. So I suggest you stop waiting or looking around and go to the best in your area and give Richard a call to get your headshots updated.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -119,7 +119,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Marygrace Pue",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard was absolutely wonderful to work with! I am so thrilled with my headshot. What really impressed me about Richard were both his professional demeanor and his willingness to have fun. We had a blast at my shoot, which I never expected! But by far the best thing I can say about the way that Richard approaches his business is this: We had planned on a two-hour session, but since neither of us were pleased with the results we got during that time, he insisted on continuing the session until we got it right, and I was completely happy with my finished shots. He coached me and worked with me, both of us laughing all the while, and when we were finally done, I had to convince him to accept a higher fee than we had originally agreed upon. That is what impressed me the most about him, and that's what kind of guy he is. Go to him! You won't be sorry!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -132,8 +132,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Bruno Kongawoin",
     company: "",
-    category:"",
-    review: "Richard is one of the hardest working and most resourceful person I have come across. His talent and ability as a photographer put him in the league of the best in the world. Peter Hurley the world renown headshot and portrait photographer in the world asked him to be become one of his handpicked Associate Photographer. This is the ultimate testament that the photographs he creates are amongst the best you can have. Being a member of the Headshot Crew which is largest team of headshot and portrait photographer in the world comprising of 12,000 members from 131 countries and growing, his talent had earned him the batch of Mentor. This elite team of associates from the headshot shot helps Peter in coaching those 12,000 members. To further underlining his ability and talent, Peter asked Richard to be one of the 22 Mentors in the group of elite photographer to help him coach, guide and advise other photographers from around the world to improve their craft. I have had the pleasure to work personally with Richard and I am very proud of his achievements in becoming a world class headshot and portrait photographer. I can vouch that Richard is a world class headshot and portrait photographer at your door steps.\nBruno Kongawoin - Perth Western Australia",
+    category:"creatives",
+    review: "Richard is one of the hardest working and most resourceful person I have come across. His talent and ability as a photographer put him in the league of the best in the world. Peter Hurley the world renown headshot and portrait photographer in the world asked him to be become one of his handpicked Associate Photographer. This is the ultimate testament that the photographs he creates are amongst the best you can have. Being a member of the Headshot Crew which is largest team of headshot and portrait photographer in the world comprising of 12,000 members from 131 countries and growing, his talent had earned him the batch of Mentor. This elite team of associates from the headshot shot helps Peter in coaching those 12,000 members. To further underlining his ability and talent, Peter asked Richard to be one of the 22 Mentors in the group of elite photographer to help him coach, guide and advise other photographers from around the world to improve their craft. I have had the pleasure to work personally with Richard and I am very proud of his achievements in becoming a world class headshot and portrait photographer. I can vouch that Richard is a world class headshot and portrait photographer at your door steps. Bruno Kongawoin - Perth Western Australia",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
@@ -158,8 +158,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jason Ranalli",
     company: "",
-    category:"",
-    review: "Let me preface this review by saying I myself don't like being in front of a camera nor do I feel I ever have any good pictures of myself let alone a quality headshot.\n\nRichard easily managed to fix all that with a bit of coaching.  Just by following his instructions and talking in a way that got my mind off the camera he nailed an amazing shot of me in a short amount of time.\n\nIf you want something that makes you look polished and professional you NEED to go to someone like Richard.  He sweats all the details for you so that your headshot doesn't come off looking like something out of a high-school yearbook.  His work is nothing like the 15-minute, take a few shots against a brick wall, blank-faced expression headshots like you normally see.  It's all about making you look confident, polished,and friendly.\n\nWhile I still don't like being in front of a camera so much I love my headshot and can't recommend this service enough.",
+    category:"creatives",
+    review: "Let me preface this review by saying I myself don't like being in front of a camera nor do I feel I ever have any good pictures of myself let alone a quality headshot. Richard easily managed to fix all that with a bit of coaching.  Just by following his instructions and talking in a way that got my mind off the camera he nailed an amazing shot of me in a short amount of time. If you want something that makes you look polished and professional you NEED to go to someone like Richard.  He sweats all the details for you so that your headshot doesn't come off looking like something out of a high-school yearbook.  His work is nothing like the 15-minute, take a few shots against a brick wall, blank-faced expression headshots like you normally see.  It's all about making you look confident, polished,and friendly. While I still don't like being in front of a camera so much I love my headshot and can't recommend this service enough.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
@@ -184,7 +184,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Michael Kealey",
     company: "Motor Scout Music",
-    category:"creatives",
+    category:"entrepreneurs",
     review: "Working with Richard was a pleasure. His direction and eye helped to get the best out of me and feel confident during my session. I highly recommend Richard for your headshot needs.",
     rating: 5,
     imageUrl: michaelKealeyImg.src,
@@ -210,7 +210,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jedidiah Franklin",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Recently had my head shots done by Richard who has a great eye for the details and has an easy process to put the personality into your look. 5/5 would go again",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -236,7 +236,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Penny J Hartwell",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Richard is by far the best in what he does.  I can't believe I found such a gem in my backyard. The techniques he uses to capture you as a confident, approachable professional are simply brilliant. While his work is hands down amazing, Richard ,the person, is as well.   His style and approach when working with you is unlike any other experience you have ever had before.  From start to finish, he is engaging and supportive.  It is hard work to get the results he gets,  but you will have fun doing so.  He creates a connection with you and the results are astounding.  I left having made a new friend and knowing I will be back again and again for any photo needs.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -249,7 +249,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chris Patille",
     company: "",
-    category:"",
+    category:"financial-professionals",
     review: "From the minute i met Richard Waine i knew their was something special about this guy. He found my need for a new headshot and produced incredible results. I have never felt more confident in myself and my brand until after posting the headshots he took of me. Thanks again Richard you were awesome to work with.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -262,7 +262,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Amy Khan",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Richard, and his makeup artist Lionel, were both AMAZING to work with! From the moment I arrived they made me feel comfortable and walked me through everything. Having never done a shoot before, I needed a bit of coaching, but Richard was patient in his persistence about getting just the right shot. :) I highly recommend working with Richard for your photography needs!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -275,7 +275,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Stephany Baughman",
     company: "",
-    category: "",
+    category: "entrepreneurs",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -288,7 +288,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Nathanael Tagg",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard Waine treats photography as an art and a science. The result? An ideal shot of you at your absolute best. In my case, it was the perfect headshot for my book’s back cover. Thanks, Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -301,7 +301,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Julien Godbarge",
     company: "",
-    category: "",
+    category: "executives",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -327,7 +327,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Steven Lesher",
     company: "",
-    category:"",
+    category:"executives",
     review: "Knows his business and how to do quality work.   Fun experience.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -340,7 +340,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Adam Snyder",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Amazing headshot. Great way to market yourself and boost confidence. Thanks Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -353,7 +353,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Dan S",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Rich is an expert at what he does.  If you are looking for an amazing head shot for a linked in profile, website,  or even something to hang over the mantle...Rich is the guy for you",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -366,7 +366,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Christopher Iacona",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Richard's professionalism and work is exceptional!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -379,7 +379,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "B C",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "Great to work with. Very Professional. Will definitely be back.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -403,22 +403,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     displayOrder: 1
   },
   {
-    name: "Wendy Sponaugle",
-    company: "",
-    category: "",
-    review: "",
-    rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Wendy Sponaugle",
-    datePublished: "2018-01-12T16:15:03.930Z",
-    displayOrder: 584
-  },
-  {
     name: "Martin Valins",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "As a musician I hired Richard for some publicity head shots. It was great  to work with him. He made the whole process fun and easy. I would without hesitation recommend this fine Photographer and all round good guy.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -431,7 +418,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Erick Huertas",
     company: "",
-    category:"", 
+    category:"entrepreneurs",
     review: "Professional and easy going. Walks you through every step in a calm, cool collect environment.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -444,7 +431,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "chris timmons",
     company: "",
-    category:"", 
+    category:"real-estate-agents",
     review: "Richard is great at catching the essence of who you are. There are 100's of people who do head shots, but there is only a handful that do them well. Richard does better than well he is in my opinion the best. I will only use Richard for my head shots.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -457,7 +444,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ben King",
     company: "",
-    category: "",
+    category: "executives",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -470,7 +457,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jason Cooley",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "I had a session with Richard to get a head shot taken for work and he made the process very enjoyable.  He is easy to work with and gives very clear directions that result in an awesome end product.  Highly recommended!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -483,7 +470,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chad Hake",
     company: "",
-    category:"", 
+    category:"entrepreneurs",
     review: "Professional and experienced. Great to work with and the  headshots I got for my website were amazing. I will do continue to use in the future and I recommend using Richard if you want some awesome photography!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -496,7 +483,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Naomi Beach",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "I can highly recommend Richard Waine for headshot photography. I don't always feel comfortable in front of a camera, but Richard's skill and personality made me feel relaxed. In just a short time, he was able to capture the perfect image.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -509,7 +496,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Zachary Schober",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "First class, would recommend to everyone in need of a quality headshot.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -522,7 +509,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "carla saylor",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "Richard strives to capture your authentic best look. His attention to detail and lighting combined with strong communication skills and advanced training will yield a headshot you'll love and use often until it's time for you to update your image with a return visit. I highly recommend Richard Waine Photography as your headshot specialist. Even if you're not used to being in front of the camera, Richard is adept at creating a relaxed and enjoyable experience with killer results.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -535,7 +522,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Zane Browne",
     company: "",
-    category:"", 
+    category:"real-estate-agents",
     review: "If there were 6 stars I would of chose that. Professional, upbeat, focused, and passionate with his work. In my photo shoot he was able to turn posing and smiling into just more than pictures, but a great experience all around.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -548,7 +535,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Lori Titus",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "There is a huge difference between an actor's headshot, a corporate headshot, and a pretty picture.  Plus, different looks and lighting techniques go in and out of fashion.  (Remember when black and white headshots were all the rage?  And when submissions were all done with 8x10's by mail?)\n\nRichard networks with CD's and other photographers to learn and understand what CD's look for in an actor's headshot.  What catches the eye, and why.  His technique provides that polished look that tells the CD \"I am a professional actor, this is what you get.\"\n\nMy entire family has returned to Richard multiple times as our looks have changed, and we are getting ready for our new round of headshots.  He always takes the amount of time necessary to get the shots we need, regardless of how long or short it takes.  No rushing, no hurries.\n\nOh, yeah, and don't tell him this, but he undercharges for his work.  You definitely get more than what you pay for, between time, knowledge, and finished product.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -561,7 +548,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Sharon Moscarell",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "I was recommended to Richard by a friend so I contacted him and he was very responsive and friendly from the beginning.  He took the time to explain the whole process with me.  My daughter is 9 years old and he has been taking her headshots of her for a couple of years now and they turned out so professional.  They were amazing.  My daughter, Bree really enjoys having Richard do her photo shoots and he makes her feel comfortable and just has fun with it and plays heavy metal music for her.  I would recommend Richard to anyone who wants professional shots taken.  You will not be disappointed.  Richard you are a great photographer with a great personality.  I cannot wait until Bree’s next photo shoot with you.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -574,7 +561,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ronit Henriquez",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard is good at what he does. He is very charismatic and made me feel at ease during the photo session. If you are looking for a professional head shot, I recommend giving Richard a shout.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -587,7 +574,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Brandon Lesagonicz",
     company: "",
-    category:"corporate-professionals",  
+    category:"real-estate-agents",
     review: "Rich is without a doubt one of the most knowledgeable photographers I have ever worked with. Rocking out and fun! Whether it’s a corporate occasion or just to update a model’s portfolio anyone should absolutely work with him!",
     rating: 5,
     imageUrl: BrandonLesagonicz.src,
@@ -600,7 +587,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jeff Brohawn",
     company: "",
-    category:"", 
+    category:"executives",
     review: "Top notch service and even more amazing photos for my entire team. I own a mortgage company with 5 locations across the US. Richard did the photos for everyone in my HQ and also helped facilitate the heads shots for everyone else in my other locations. All head shots have the same look, feel and quality. The work that Richard did for us has been an amazing complement to the employee directory on our website. Will use again and again!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -613,7 +600,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Lisa Torba",
     company: "",
-    category: "",
+    category: "entrepreneurs",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -626,7 +613,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Patrick Leaman",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -639,7 +626,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Daniel Horst",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -652,7 +639,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Nora Castro",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "I highly recommend Richard Waine Photography. Richard resolved to create for me an authentic image that reflected the brand I sought to promote. He did not conclude the session until that result was achieved. To do so, he employed the services of an award-winning makeup artist (who stayed for the duration of the session to apply touch-ups as needed), maximized lighting, and educated me on facial expression/alignment and body positioning techniques that enhance natural features. With his friendly, welcoming manner, he made the whole process fun.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -665,7 +652,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Stacy Sines",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -678,7 +665,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Tim Hepler",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "We booked this appointment very last minute and Richard was very accommodating!  We are very happy with the resulting photos.  The entire experience was very comfortable and enjoyable for our daughter.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -691,7 +678,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Shannon Young",
     company: "",
-    category:"", 
+    category:"legal-professionals",
     review: "Richard made the headshot experience fabulous.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -717,7 +704,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Sarah D'Stair",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "Terrific experience!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -730,7 +717,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ken Jester",
     company: "",
-    category: "",
+    category: "financial-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -743,7 +730,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Versatek Enterprises, LLC Lititz, PA",
     company: "",
-    category:"", 
+    category:"executives",
     review: "It was fantastic working with Richard.  In a fun, relaxed environment he captured my personality.  His attention to detail and instructions made the end result even better.   Highly recommend.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -756,7 +743,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Julie Martin",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "We contacted Richard Waine Photography on Friday and he was able to get my son in the next day for a photoshoot.  Richard went above and beyond to the get perfect shots. He was amazing to work with, he made it such a positive experience combining a relaxed atmosphere with superior direction. I received our proofs yesterday and I am beyond thrilled with all of them – now to pick which ones that will get submitted. I highly recommend him and when we need more pictures I know who to call. Thanks Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -769,7 +756,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Laura Fowler",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard was wonderful to work with! High energy, professional, and gave great guidance.  He knows exactly what he's looking for, for the perfect shot and doesn't settled for less than perfect.  Will recommend him to everyone!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -782,7 +769,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Janet Sierk (Your Lancaster Realtor)",
     company: "",
-    category:"", 
+    category:"real-estate-agents",
     review: "Very Professional and Passionate!  Richard makes sure your Brand comes across in a great unique way.  Highly recommend!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -795,7 +782,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Christine Bacher",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Who knew that having headshots taken could be so fun??!!  Honestly, I wasn't looking forward to my appointment AT ALL.  Having photos taken of myself pushes me way outside of my comfort zone.  Richard made the experience unintimidating and fun.  And as a result, the photos are fantastic!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -821,7 +808,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Dianne Summers",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "My session with Richard was awesome. He made it fun and knew just how to get the perfect look! I’ve gotten so many compliments on my headshot from actors and directors! Thanks, Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -834,7 +821,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Maggie",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Highly recommend him for all your head shots.  He is the best!!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -847,7 +834,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Stephanie Finamore",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -860,7 +847,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Savannah Harper",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "Great place for headshots! Richard took plenty of time with my son to be sure we got the best possible shot. I highly recommend him.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -873,7 +860,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Cyndi Sensenig",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "Had so much fun here, can't wait to see the finished product!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -886,7 +873,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Alisa McGowan",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "Simply put.....Richard is awesome! Very enjoyable to work with and knows how to guide you to get the perfect executive headshot. Highly recommended!!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -899,7 +886,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Emily Mainquist",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "Richard is a fantastic photographer! He is so helpful in making sure you get the perfect photo! He coaches and shows you the pictures as he is taking them so you can learn and adjust to get the shot. He is a perfectionist and it shows in his work. I definitely recommend Richard Waine Photography. He definitely has a customer for life in me and my family.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -912,7 +899,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Helene Williams",
     company: "",
-    category:"", 
+    category:"entrepreneurs",
     review: "Richard brings professionalism to a new level.  I was incredibly nervous, but he put me at ease immediately.  He is incredibly detail oriented and his coaching was so easy follow.  I highly recommend his services!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -925,7 +912,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jayme Chandler",
     company: "",
-    category:"",
+    category:"financial-professionals",
     review: "The photos are amazing.  I was taken back and cried.  Your talent is incomparable.  You captured a piece of me that I thought was long gone.  Here I was looking to up my game professionally, and this experience and photos helped me find the fire that has been laying dormant for quite some time.  Thank You Richard, every minute was SO worth the result.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -938,7 +925,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Matthew Hamilton",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard is THE Lancaster headshot photographer. Go to him. Now. You will not regret it. He works with his clients to make sure they have all of the marketing photos they need and that they accurately represent who they are. He is a top tier headshot photographer!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -951,7 +938,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Claudia H",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Such great headshots and a wonderful experience, I recommend Richard's work to anyone who wants a professional, stellar headshot!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -964,7 +951,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Daniel Sommer",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard is an all around legend. A great human being with a witty sense of humor and a passion to capture your authentic best look.\nHe strives for perfection. His ability to communicate and teach/coach his clients through his Headshot sessions is amazing. His work has a WOW-Factor to it, comparable with photos usually only seen on glossy magazine covers. If you’re serious about your personal branding, want to up your headshot game and happen to find yourself in Lancaster Pennsylvania, Richard Waine is the best there is.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -977,7 +964,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Charlie Abrahams",
     company: "",
-    category:"",
+    category:"creatives",
     review: "I've known Richard for a couple of years now as a professional headshot and portrait photographer.  He is one of the most professional and detail oriented headshot photographers I know.  If you are in the Lancaster, PA area and are in need of an updated, professional headshot or know of anyone else who is, run, don't walk to Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1002,8 +989,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   },
   {
     name: "Greg Thomason",
-    company: "creatives",
-    category:"",
+    company: "",
+    category:"creatives",
     review: "We live in a visual world, and a headshot which represents the best you can be is essential. Richard's professionalism and knowledge will ensure your headshot reflects the trust and confidence you want to convey.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1016,7 +1003,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Karaminder",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard Waine is the bees knees of Lancaster Photographers! Learning more about the process of how he conducts his headshot sessions gave me supreme confidence that Richard was going to be able to give me what I was looking for:\n\nA headshot that kicks the other headshots to the curb! I wanted my headshot to be all powerful and when compared to my colleagues, to look like I'm the one with the most sh!t together. It's always a competition and any leg up I can get, I'm gonna get! After all, perception is reality.\n\nThank you Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1029,7 +1016,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Karla Akemann",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Fabulous photos for a fabulous price. Very professional",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1042,7 +1029,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "damain Cavalo",
     company: "",
-    category:"",
+    category:"creatives",
     review: "First time in the photo world and I must say it is the best experience I have #Push Richard waine made dream come true",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1055,7 +1042,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Robin Mitchell",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Richard was awesome! He made it fun for me, even though I am very uncomfortable in front of the camera. I would also book Lionel to do your make-up ladies, it feels like he is massaging your face with his make-up brushes. Richard has Lionel touch you up if needed during the shoot. I drove an hour to Richard's studio and it was well worth it! I felt beautiful!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1081,7 +1068,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Darnell Furer",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Richard is a true professional ! In addition to having incredible patience he is unbelievably competent .\nHe took his time  to assure the best possible outcome. I highly recommend Richard for your photography needs .",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1094,7 +1081,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Megan Poff",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard is a talented photographer who captures the best version of yourself in one headshot. He is super easy to work with and makes the session fun.\n\nI went back to Richard again, because once I achieved my ideal look, he captured the essence that is me!  I truly adore him. He's the best in the business.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1120,7 +1107,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Brett Peters",
     company: "",
-    category:"",
+    category:"real-estate-agents",
     review: "Literally one of the most professional experiences I've ever had!!! Rich is very passionate about what he does and takes great care in providing you with the best product possible.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1133,7 +1120,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Heather Sharpe",
     company: "",
-    category: "",
+    category: "executives",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1146,7 +1133,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Paul Dabrowski",
     company: "",
-    category:"",
+    category:"executives",
     review: "My wife and I had an exceptional and professional experience. Don’t think twice when booking Richard to take your headshots...you will not be disappointed :)",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1159,7 +1146,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Erin Waters",
     company: "",
-    category:"",
+    category:"entrepreneurs",
     review: "Superlative photographs and a fun experience in the studio! Thanks for the quick turn around!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1211,7 +1198,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Heather Wright",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Working with Richard was so easy!  He made me feel very comfortable from the moment I walked in the door to his studio.  He is friendly, funny, and really does a fabulous job!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1250,7 +1237,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chuck Sierk",
     company: "",
-    category:"", 
+    category:"real-estate-agents",
     review: "What an awesome experience! Richard made me feel comfortable and had me laughing. Good times with an all around great guy! Never before would I have believed I'd enjoy a photo shoot... I'm a believer now, and you should too.\n\nUpdate: It was time for a branding update and I knew I needed the best headshot photographer in Lancaster PA for the job! Richard and I had a blast and I'm pumped to get the final product back. If you want to look your best, go to the best! Thank you Richard Waine!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1263,7 +1250,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Seshu Badrinath",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard and I are both headshot photographers and in Facebook forum we are both members, I raised a question about an issue I was having with my website and he stepped up and offered to help address and fix the problem. Of course, as soon as he saw my website, he suggested that I consider redesign it for better conversion. He sounded like he knew his way around the Squarespace platform and today he launched my newly redesigned website and I couldn't be happier. There were very few bumps along the way. Some of the delays were mine and mine alone, but Richard was incredibly patient but at the same time persistent on getting the project wrapped up. His knowledge of not just the platform but the back end of it to be able to configure SEO elements and factors really impressed me. If you are considering a new website, and Squarespace is the platform of your choice, I wouldn't hesitate asking Richard to work on it. He will take your ideas and implements them. Of course, I threw some crazy options at him and while he considered them, he also didn't hesitate to caution me on the pitfalls of doing things because they only look good. The goal of any website should be offering visitors just the right amount of information, in an elegant way, but with the ultimate goal of converting them into becoming paying clients. I am confident, thanks to Richard, I am well on my way to doing just that. Thank you, Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1276,7 +1263,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Mitch Erb",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "The session with Richard was professional and fun.  He is detailed oriented and directed me for the best possible photo.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1315,7 +1302,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jason Pennell",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Richard was great to work with and he puts a lot of care and attention to detail in his work.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1328,7 +1315,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "James Mikulski",
     company: "",
-    category:"",
+    category:"executives",
     review: "Richard is a true professional and awesome at what he does.  He takes the time to understand you and your work so the images he captures tell your story.  I highly recommend Richard Waine to anyone looking for a high quality headshot and photo shoot experience.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1354,7 +1341,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Matthew Miller",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Rich is truly a professional, and was great to work with! I needed a headshot within a limited schedule, and Rich was whiling to work with me, and went out of his way to make it a great experience. I am very pleased with how seamless the entire process was, and how well my pictures turned out.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1380,7 +1367,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Joe Nicholas",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Richard Waine is an incredibly talented photographer.  I am beyond impressed by his process, the experience, and the final result.  If you are looking for headshots, Rich is your guy.  Don't bother looking elsewhere.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1406,7 +1393,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Carine Nyaka",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard was the best head shot photographer for my five years old son. He was patient and energetic with my son and understood that my son gets distracted a lot due to the fact that he is five. I would most definitely recommend my daughter, my family and other people to the sessions with Richard. Thanks Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1432,7 +1419,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Josh Outlar",
     company: "",
-    category:"",
+    category:"real-estate-agents",
     review: "Be sure to check Richard out if you're in the market for professional headshots. He offers a friendly, customer-focused approach to getting the perfect image.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1458,7 +1445,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "kim dalton",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard has been the best decision I've made so far this year in terms of hiring a photographer!  He listened to everything I had to say and what I was hoping to get out of the session.  If he didn't agree with me, he mapped out why he disagreed and how what he could do would be better for me in the long run.  I am over the moon with the end result!  Sure, I could have done this myself, but being a professional I knew what a difference hiring a professional who specializes in a task can do compared to someone who tinkers on the side.  You won't go wrong hiring Richard if you want to look polished and professional in the end!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1471,7 +1458,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jilian White",
     company: "",
-    category:"",
+    category:"executives",
     review: "Richard was amazing. The makeup artist made me look absolutely gorgeous. I would highly recommend.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1484,7 +1471,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Amy Bissonette",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard was fantastic to work with! He made the whole process easy and fun.  I highly recommend Richard for your headshot needs!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1497,7 +1484,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ross McIntire",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard is an immensely talented photographer. He is easy to work with and genuinely cares about doing an excellent job. I highly recommend him!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1510,7 +1497,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kevin Thai",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard is a consummate professional. I appreciate his guidance throughout the whole process, listening to me and reassuring me that it's okay to bring up my any concerns I have. Though of course he was the expert, but the process felt more like a collaboration from beginning to end.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1523,7 +1510,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Lexi Scott",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "He was very patient with me and he helped me create and choose a great shot. Highly recommend!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1536,8 +1523,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Stephen Ekema-Agbaw",
     company: "",
-    category:"",
-    review: "Richard was awesome and easy to work with. He knows what he’s doing and he’s good at it. Very personable.",
+    category:"legal-professionals",
+    review: "Richard was awesome and easy to work with. He knows what he's doing and he's good at it. Very personable.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
@@ -1549,7 +1536,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "WLC Urbex (WebmasterLC)",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard was very professional even though my daughter gave him a challenge, id recommend him to anyone.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1562,7 +1549,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Sabra Madsen",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "This was our third session with Richard and we can't say enough about him.  Wonderful experience and really impressive photography that will help to jump-start new opportunities for our family.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1575,7 +1562,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "William Taylor Day",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Richard was great! Spend some time getting to know each other and creating a relaxed atmosphere. There may be a lot of folks out there that get there photo taken a lot, but i'm not one of them. Richard's coaching is spot on and easy to follow. He makes it super easy for you to walk away with amazing photos!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1588,7 +1575,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Pedro Velasquez",
     company: "",
-    category: "",
+    category: "real-estate-agents",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1614,7 +1601,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Michele Greatti",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "I was delighted with my new photo, and the direction and encouragement the photographer gave me. I would go back to him any time. Cannot recommend enough!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1627,7 +1614,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Mitch Nugent",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Richard knows how to lead talent to get images that represent them well. Kudos!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1640,7 +1627,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Shawn and Sara Gibson",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1653,7 +1640,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Beatrice Zorrilla",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1666,7 +1653,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Raessa",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1679,7 +1666,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Maritsa Cortes",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Rich is an awesome guy to work with! Made me feel comfortable by getting me to laugh. Highly recommended!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1692,7 +1679,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Collette Anderson",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Just had a new headshot done with Rich for the first time since finishing grad school & I am totally amazed & over the moon at how well it turned out! He put me at ease & gave very simple instructions & tweaks that definitely translate into the finished product!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1705,8 +1692,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Sophia Strawser",
     company: "",
-    category:"",
-    review: "Had an amazing experience with Rich! Within such a short amount of time not only was he able to make me feel comfortable but also get some amazing shots. One of the best photographers I’ve worked with! Thank you!!",
+    category:"corporate-professionals",
+    review: "Had an amazing experience with Rich! Within such a short amount of time not only was he able to make me feel comfortable but also get some amazing shots. One of the best photographers I've worked with! Thank you!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
@@ -1718,7 +1705,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Sormariel Rivera",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1731,7 +1718,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Dayona Ellis",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1744,7 +1731,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jennifer Sanchez",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "He was patient, informative, and transparent. All of which were greatly appreciated. He cares about his craft and wants to give you a great experience. Thankful for his work!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1757,7 +1744,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Julie Dunst",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Today Richard was at Park City Mall giving away as part of the 10,000 headshot event happening across this country. He worked with me until he got it just right. Thanks for this amazing opportunity.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1770,7 +1757,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jo Borolla",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "The photographer made me feel very comfortable in front of the camera. I do have some challenges with my appearance and he was able to work around them. Two thumbs up!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1794,22 +1781,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     displayOrder: 78
   },
   {
-    name: "Tracy Lisi",
-    company: "",
-    category: "",
-    review: "",
-    rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Tracy Lisi",
-    datePublished: "2020-08-04T01:12:41.154976Z",
-    displayOrder: 644
-  },
-  {
     name: "Joleen schuler",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1822,7 +1796,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Autumn Sanger",
     company: "",
-    category:"",
+    category:"real-estate-agents",
     review: "I had a great time shooting with Richard. He was very informative throughout our session and fun to work with. Not to mention how awesome my new headshots came out. I look forward to working with Rich in the future",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1848,7 +1822,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jake Basinger",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Rich was fantastic, great personality, amazing talent.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1861,7 +1835,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Stephen Condon",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Great photographer!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1874,7 +1848,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Glenn Derle",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Richard was very professional and easy to work with. Very impressed with his work!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1887,7 +1861,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "LaRonn Zimmerman",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Richard is a Great guy, with a even better sense of humor! I recommend him for all of your photography desires!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1900,7 +1874,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Tylr Kreiser",
     company: "",
-    category: "",
+    category: "creatives",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1913,7 +1887,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Joel Skundrich",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Rich is very professional, and personable while capturing a great headshot. Highly recommend this business to anyone looking to update their professional image",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1926,7 +1900,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Dylan Deals",
     company: "",
-    category:"",
+    category:"real-estate-agents",
     review: "Richard Knows how to truly capture the soul within!  His work is without question absolutely FLAWLESS$$$. Highly Recommend",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1939,7 +1913,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Lucas Reynolds",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1952,7 +1926,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jackson Argoe",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1965,7 +1939,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Fabio",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Excellent work!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1978,7 +1952,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Franca Little",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Best photographer I have ever had the pleasure of knowing.  Made me look natural and amazing.  A real keeper.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -1991,7 +1965,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Dr. Samantha Wertheimer",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Working with Rich was a wonderful experience. I was feeling nervous and hesitant about having headshots taken, but Rich was absolutely fabulous to work with. He is kind, professional, enjoyable to be around, and most important, he is an unbelievably incredible photographer.\n\nPrior to your session, Rich will send you preparation guides to review in order to make the most of your session - I found these to be very helpful. Rich was willing to talk with me before my session and answered all of my questions. The day of the session, Rich was warm and welcoming. He explained the entire process as we went along, and he involved me in each step of decision making when choosing my final photos.\n\nI would recommend Rich to everyone. Don't waste your time going anywhere else. :)",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2004,7 +1978,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Andrew B",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Rich is an artist.  He coaches you through the entire process resulting in some amazing headshots.  I never knew having your picture taken could be so much fun.  I highly recommend Rich and his services to anyone, especially those who had never had the experience of a professional headshot...it's well worth it.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2017,7 +1991,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "James Zimmerman",
     company: "",
-    category:"", 
+    category:"real-estate-agents",
     review: "Richard did an amazing job, I couldn’t ask for a better headshot.  I consider my standards very high in who I choose to recommend but I wouldn’t hesitate to recommend Richard to anyone.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2043,7 +2017,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kelly Gooch",
     company: "",
-    category:"", 
+    category:"financial-professionals",
     review: "Richard was very timely in responding to my original inquiry and providing helpful information to prepare. He was intentional in understanding my needs and asking questions to know best what type of look was needed. During the shoot he was organized,  helpful, and inquisitive,  making the experience enjoyable.  The end product was a direct result of his experience and coaching.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2069,7 +2043,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Laura Jacobs",
     company: "",
-    category:"", 
+    category:"financial-professionals",
     review: "Thank you for a great experience! I am very happy with the pictures and it was nice to take as many as needed!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2082,7 +2056,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Laura Pontz",
     company: "",
-    category: "",
+    category: "financial-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2095,8 +2069,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Joe Migliore",
     company: "",
-    category:"", 
-    review: "I struggle to “look natural” for photos but his coaching made all the difference.  Thanks!",
+    category:"corporate-professionals",
+    review: "I struggle to \”look natural\” for photos but his coaching made all the difference.  Thanks!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
@@ -2121,7 +2095,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Cody Bort",
     company: "",
-    category:"", 
+    category:"real-estate-agents",
     review: "Richard's ability to capture a great frame is evident from his portfolio. What I really liked about working with him was how he makes that happen. We spent a while chatting before we started. After learning about me and my reasons for booking a session, he was able to coach me towards getting even better results than I was expecting. He has an excellent process and I recommend him highly to anyone in the area looking for a headshot.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2134,7 +2108,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kevin Bledsoe",
     company: "",
-    category:"", 
+    category:"real-estate-agents",
     review: "Richard is a master of his craft and he really knows how to get the best images from his clients. It takes a very talented photographer to get the best out of their client during a shoot and to capture their best moments. Thank you for all of your hard work and I'm looking forward to working with you again in the near future.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2147,7 +2121,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Joshua Landis",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Don’t waste your time and money going anywhere else.  Richard took the time to explain the entire process and the why behind it.   His pursuit for perfection shows in his work.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2160,7 +2134,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Keith Wann",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "Both my kids, 10 and 12, needed professional acting headshots.  The results were a vast improvement on what we currently had.  Richard was an ultimate professional and guided the kids through what they needed to do.  Our agent was also impressed with the results and felt confident they could start submitting our kids for auditions right away.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2199,7 +2173,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Agricultural Veterinary Associates",
     company: "",
-    category:"", 
+    category:"executives",
     review: "Richard did a great job for me with a head shot. Very professional, high quality and at the same time helped to make the whole experience enjoyable. Highly recommend Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2251,7 +2225,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jodi Stauffer",
     company: "",
-    category:"", 
+    category:"executives",
     review: "What a great experience. Rich is a real professional, makes it fun, and delivers an experience like no other.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2277,7 +2251,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jay Martin",
     company: "",
-    category:"", 
+    category:"executives",
     review: "I had an enjoyable photo shoot.  Richard was engaging and took the time to explain what he was doing to get the best shot possible and explained each step of the way.  I was very pleased with the results.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2290,7 +2264,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Frank",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "(Translated by Google) Best photo op ever!\n\n(Original)\nBest photo opp ever!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2303,7 +2277,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Rita",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Puts you at ease and very patient, definitely knows his craft and what works best for each person. Highly recommend.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2316,7 +2290,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Justin Apostolico",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Great guy, even better photographer. Highly recommend!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2329,7 +2303,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Soukie Tounkara",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Best headshots ever! Seriously made me feel at home in front of the camera, highly recommend. 10/10",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2342,7 +2316,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Roger Zimmerman",
     company: "",
-    category:"", 
+    category:"financial-professionals",
     review: "Professional and expert service, I certainly recommend!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2381,7 +2355,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Krista Topper",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "So much fun! Amazing photos! Highly recommend!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2394,7 +2368,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kathryn Weill",
     company: "",
-    category:"", 
+    category:"entrepreneurs",
     review: "Richard is both professional and personable. Upon arriving, Richard made me feel welcomed and at ease which was incredibly comforting as I was a bit nervous. Richard gives clear and helpful advice during the whole photo shoot session. He quickly understand and achieved the look I wanted to achieve. He is also funny which helped me to relax and get a more authentic expression. All and all my time with Richard Waine Photography was a five-star experience.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2407,7 +2381,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Connor Blood",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2420,7 +2394,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kirk Rizzolla",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Very productive and kept me smiling!  Great results too!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2433,7 +2407,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jesse Pust",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2446,7 +2420,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "James Kusick",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2459,7 +2433,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Justin Uzarski",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Very professional and great technique to get the perfect picture.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2472,7 +2446,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jordan Luntz",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Great experience! He really works to make sure you feel & look like yourself in the photos.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2485,7 +2459,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Austen Krause",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2498,7 +2472,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jenny Labella",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Rich is a pleasure to work with.  Personable and professional and my pictures came out stunning!  Highly recommend.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2511,7 +2485,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "David Ziegler",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Rich was great to work with and really brings out your best.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2524,7 +2498,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ben Sablan",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2537,7 +2511,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Patrick Murdock",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2550,7 +2524,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Justin Vass",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2563,7 +2537,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jeff Wolfe",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2576,7 +2550,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Lauren Garner",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Fun time, great direction, and perfect posture explanation - led to the best picture I’ve ever had taken of me in my entire professional career! Thanks for everything!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2589,7 +2563,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Richard White",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Awesome personality and a great photographer!!!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2602,7 +2576,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Wystan Crismond",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2615,7 +2589,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Patrick Lloyd",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard made things incredibly easy!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2628,7 +2602,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Alley Gordon",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard was awesome to work with. Made me look very professional and I love my picture! Can’t wait to see the final result! I wouldn’t say I’m a great picture taker so I was pleasantly surprised.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2641,7 +2615,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Logan W",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard has great personality and technique. Made the process fun for me.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2654,7 +2628,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Matthew Garter",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2667,7 +2641,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "David January",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard has an amazing ability to capture the moment.  I was very pleased with his work!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2693,7 +2667,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jeffrey Hogrefe",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2706,7 +2680,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Grace Shoemaker",
     company: "",
-    category:"", 
+    category:"legal-professionals",
     review: "Enjoyed my photo session and took great pictures! Thank you!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2719,7 +2693,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Michelle Dahlkemper",
     company: "",
-    category:"",
+    category:"executives",
     review: "Exceeded all Expectations!  I thought I would be running in and getting a headshot.... lol\nPlan on a few hours. You will need to spend some time getting comfortable with having your picture taken (which I am not), changing clothes and backgrounds, and then reviewing your pictures. I was super pleased with the whole engagement and my final pics were perfect! Highly recommend!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2732,7 +2706,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chris Sciamanna",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "A true professional. He put me at ease can captured images of me like I'd never seen before. He knows exactly what he's doing, exactly what he's looking for an knows exactly when he sees it - even when it's only very slightly different than the last images. Brace yourself - it's not inexpensive - but well worth it. I would recommend him to others for sure.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2745,7 +2719,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Rob Wit",
     company: "",
-    category:"", 
+    category:"financial-professionals",
     review: "I met up with Richard today for an updated headshot and all I can say is the guy knows what he’s doing. He had a plan, knew exactly what to do and how to get It out of me. I recommend anyone looking for a headshot go see Richard. All he cares about is making sure you’re happy with the outcome and will take as many shots as It takes. Very happy with the results. Thanks again Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2758,7 +2732,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Mark Neely",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Awesome help getting the best look!\nThank you!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2771,7 +2745,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Andy Beal",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2784,7 +2758,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "mruby410",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Great team. Quick and effective. Direct enough to get you where you need to be. Highly recommend.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2797,7 +2771,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Rich Aquino",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Excellent experience!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2810,7 +2784,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Larry Manross",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2823,7 +2797,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Erik Hess",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Great guy to work with!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2836,7 +2810,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Larry M",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Great experience throughout!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2849,7 +2823,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "kevin stroop",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2862,7 +2836,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ted McCord",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2875,7 +2849,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Sam Wilson",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Amazing, 5-stars at a minimum!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2888,7 +2862,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chris Ciampa",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2901,7 +2875,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Pete",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2914,7 +2888,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Timothy Nies",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2927,7 +2901,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Stephen Clark",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Excellent and very professional!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2940,7 +2914,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Robert Bonsby",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2953,7 +2927,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Sloan Colassard",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2966,7 +2940,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "donald watkins",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2979,7 +2953,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Eric Simpson",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -2992,7 +2966,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ken Golding",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3005,7 +2979,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "brett schuck",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3018,7 +2992,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Nicholas DeLonga",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3031,7 +3005,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Rod Hollenberger",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3044,8 +3018,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Casey McKay",
     company: "",
-    category:"", 
-    review: "Richard Wayne Photography is remarkably easy to work with. I appreciate the process and having input.  End product is fantastic!",
+    category:"company-employees",
+    review: "Richard Waine Photography is remarkably easy to work with. I appreciate the process and having input.  End product is fantastic!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
@@ -3057,7 +3031,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Mark Bailey",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3070,7 +3044,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Mickey Jarboe",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3083,7 +3057,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Peter Ginzburg",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3096,7 +3070,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Rob Schwarz",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Very professional and personable.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3109,7 +3083,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chet Knaup",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3122,7 +3096,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Mg W",
     company: "",
-    category:"", 
+    category:"executives",
     review: "I needed high quality professional headshots, and Richard was awesome - the process, the coaching, the results.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3148,7 +3122,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Daniel May",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Very personable and professional.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3161,7 +3135,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Joe Cavallio",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Does great work, and really great personality.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3174,7 +3148,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kevin Furbush",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Knows how to get the best pictures",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3187,7 +3161,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Stacey Gregory",
     company: "",
-    category: "",
+    category: "legal-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3200,7 +3174,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Bader Suleiman",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Great personality very professional",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3213,7 +3187,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Tara Brazzle",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3226,7 +3200,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Heather Courtney",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Super awesome to work with! Loved my session!!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3343,7 +3317,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Sadie Owocki",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3356,7 +3330,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "kris “No Thanks” F",
     company: "",
-    category:"", 
+    category:"executives",
     review: "Richard is wonderful to make with and the results are amazing.  This is my second visit to him for headshots and I highly recommend.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3369,7 +3343,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "thomas",
     company: "",
-    category: "",
+    category: "financial-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3382,7 +3356,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kaye Peloquin",
     company: "",
-    category: "",
+    category: "executives",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3421,7 +3395,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Traci Bowers",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3434,7 +3408,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Craig Nebel",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Very easy to work with.  Headshots look great!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3447,7 +3421,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Krista Olnick",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Great experience. Made me feel very comfortable.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3460,7 +3434,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Bob Bonitz",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "He was awesome. Took his time and made me look great. Made me very comfortable during the process. Recommend him highly",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3473,7 +3447,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chris Bomberger",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Took these best photos I have ever had anyone take of me! Was extremely professional and brought out the best of my look! Would recommend to anyone looking for amazing headshots.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3499,7 +3473,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Raul Perero",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard was incredibly knowledge and super helpful. Great work, and best headshot ever in my life. I 10000% recommend for any occasion or in my case, for a professional corporate headshot. Thank you again Richard! 10 stars!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3512,7 +3486,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jake Hellenschmidt",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Phenomenal headshots and a delivers a great time. A true pro!!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3525,7 +3499,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Matthew Metz",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Fantastic experience, phenomenal photos!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3538,7 +3512,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Tim Jones",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Best photographer in the tri state area",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3551,7 +3525,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ben Miller",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard is an incredibly skilled photographer who gets the best out of his subjects natural features. Would recommend to anyone looking to get photos done.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3564,7 +3538,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "tevin ankle",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Great headshot!! Would recommend",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3577,7 +3551,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Andy Bodrog",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Best photo I ever got!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3590,7 +3564,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jared A",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Richard is a consummate professional. He took the time and extra effort to capture the best head shots I’ve seen. Hands down would work with him again.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3603,7 +3577,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Racine Droz",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "He was awesome and hilarious",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3616,7 +3590,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chris Cutti",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Richard was amazing. He made the process of capturing a great headshot easy and fun. Would work with him again anytime.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3629,7 +3603,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Connor Riley",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Worked hard to get the perfect photo",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3642,7 +3616,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jacob Wasserman",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "I’ve never had a professional shoot but Richard made me feel like a seasoned vet in front of the camera. Finding him at the Home Delivery World conference was the highlight of the event. I fully recommend him to anyone who needs a headshot :)",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3655,7 +3629,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Keny Nunez",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3668,7 +3642,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jose Manuel Rodriguez Martinez",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Great experience and professional. Great working with you Richard",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3681,7 +3655,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "J R Harrelson",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3694,7 +3668,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Allen Crumley",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "This was the best experience I have ever had. Great at pulling me into the photo. Thank you Richard.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3707,7 +3681,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jenni Kimpel",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "He is great!  He took several images, made me work at it, and had a blast in the process.\n\nHighly recommend!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3720,7 +3694,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "David Coyne",
     company: "",
-    category: "",
+    category: "financial-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3746,7 +3720,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Brooke Anderson",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Getting professional headshots was something I had wanted to do for a long time. I’m so glad I waited for Rich! Trust me, it is worth the wait. No, He is worth the wait. I can’t say enough wonderful things about the experience. You’ll have to visit his studio yourself.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3759,7 +3733,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jennifer Halligan",
     company: "",
-    category: "",
+    category: "financial-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3772,7 +3746,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Matthew McKinney",
     company: "",
-    category:"",
+    category:"financial-professionals",
     review: "I had an incredible experience taking some professional photos with Rich! I would highly recommend him!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3785,7 +3759,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Tedd Kitzmiller",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3811,7 +3785,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Matt Roberts",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Richard is high-level, to the point and gets it done!  It was a pleasure working with him.  An amazing headshot photographer who runs a great business!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3824,7 +3798,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Rachelle Mccollum",
     company: "",
-    category:"",
+    category:"real-estate-agents",
     review: "I had a great experience working with Rich! He made me feel comfortable and confident. I would highly recommend him!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3837,7 +3811,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "SlimDog",
     company: "",
-    category:"",
+    category:"financial-professionals",
     review: "The shoot was amazing and Rich does a fantastic Job!! If you’re looking for quality headshots, this is the Place to go!!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3850,7 +3824,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Danielle Beck",
     company: "",
-    category:"",
+    category:"financial-professionals",
     review: "Rich is wonderful to work with.  He knows how to get the best out of you for a beautiful picture.  I would highly recommend him.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3876,7 +3850,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "FBI Intel",
     company: "",
-    category:"",
+    category:"entrepreneurs",
     review: "Excellent work and 109% professional. Enjoyed the shot and love the final product!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3889,7 +3863,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Dianne Gadbois",
     company: "",
-    category:"",
+    category:"real-estate-agents",
     review: "From the first contact to the finished product,  working with Rich was a great  experience! I had personal situations that had to be worked around and he made it easy and made me feel confident.   The photoshoot  was not just productive,  but lots of fun!!  And the final result was nothing short of amazing!  He is a true  professional, highly talented and  very personable.  I can't  recommend  him enough!  If you need truly professional work, you have come to the right place....look no further!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3902,7 +3876,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Lauren",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3915,7 +3889,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Amy Hobby",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Such a great experience!  Rich gave the easiest, but most effective directions to get an amazing result. It was fun, quick, and I love my headshot!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3928,7 +3902,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Dan Davis",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3941,7 +3915,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Pat Jackson",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Richard did a great job.  He was very professional and made me look way better than normal.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3954,7 +3928,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Brandon Conheim",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3967,7 +3941,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ian Dominick",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3980,7 +3954,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Mike",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Great photo!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -3993,7 +3967,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jeff Watkins",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Very personable and professional. Took great shots too!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4006,7 +3980,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Brittany Seek",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4019,7 +3993,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Guy Bell",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4032,7 +4006,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kenny Williams",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "This was a very easy process.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4045,7 +4019,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Anthony Jones",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4058,7 +4032,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Skerns11",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4071,7 +4045,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Weston Gearhart",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4084,7 +4058,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "David Cunningham",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Richard was great to work with and helped my coworkers and I have a great photo experience and most importantly, I'm very happy with my headshot.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4097,7 +4071,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "brian snitzer",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4136,7 +4110,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Stephanie H",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4175,7 +4149,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "A M",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "Very professional, knowledgeable and patient process.  I highly recommend his services!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4188,7 +4162,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Robert Hollister",
     company: "",
-    category:"", 
+    category:"executives",
     review: "It was a great a experience.  Talented professional!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4201,7 +4175,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Lauren S. Snook",
     company: "",
-    category: "",
+    category: "financial-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4214,7 +4188,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jennifer Hollister",
     company: "",
-    category:"", 
+    category:"executives",
     review: "Richard Waine photographed my husband Bob who needed professional head shots for a website. A quick search of photographers in the Lancaster and Harrisburg areas led us to Richard’s website, and we found his work remarkable. The quality and style stood out from all other photographers. Despite our short deadline Richard cleared a day to focus on my husband. As the session began, we had a conversation where Richard was careful to understand who Bob is and what he wanted to convey in the photographs. The experience was intense at times, fun and fueled by positive energy - exactly what was needed to capture the perfect shots. Richard is personable and highly skilled, and focused on achieving excellence for his clients. We couldn’t recommend him more highly.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4227,7 +4201,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Y Tejada",
     company: "",
-    category: "",
+    category: "corporate-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4240,7 +4214,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jessica Hollinger",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "Working with Rich was a fantastic, top notch experience.  He was professional, friendly and created a relaxed environment.  His photography is out of this world and I couldn't be more pleased with the results.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4266,7 +4240,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Omar Alvi",
     company: "",
-    category:"", 
+    category:"creatives",
     review: "Had a blast! One of the funnest experiences i have had.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4279,7 +4253,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "William Ojeda",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "I had an amazing experience! This was my first professional photo shoot. It was such a great time and had a lot of fun!! I highly recommend!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4292,7 +4266,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "michaelf",
     company: "",
-    category:"", 
+    category:"financial-professionals",
     review: "Great experience!!  Made it easy and fun!  Head shot session in Lancaster!  Thank you!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4305,7 +4279,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Sara Beth Kohut",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "Had a great time working with Rich. He was very patient with my stray hairs and making sure I was satisfied with my photos.  I  got a great selection of photos!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4318,7 +4292,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jade Biempica",
     company: "",
-    category: "",
+    category: "financial-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4331,7 +4305,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Samantha Murphy",
     company: "",
-    category:"", 
+    category:"executives",
     review: "This was a fun, helpful and super productive experience! I was nervous cause taking pics of myself isn't my thing- but I actually enjoyed it and got pics I love!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4357,7 +4331,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Ethan Haymovitz",
     company: "",
-    category:"", 
+    category:"executives",
     review: "This dude rocks. He takes awesome photos. Fun to work with too.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4370,7 +4344,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kelsey Staab",
     company: "",
-    category:"", 
+    category:"financial-professionals",
     review: "Great time! Makes the process super easy!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4383,7 +4357,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Elizabeth Soto",
     company: "",
-    category: "",
+    category: "entrepreneurs",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4422,7 +4396,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Wendy Laubach",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "Richard made this process painless and me look better than I actually do!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4435,7 +4409,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Rhonda Lord",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Rich was so professional and never knew getting a picture could be so fun, and educational!!!  Thanks Rich!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4448,7 +4422,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "James Gagliano",
     company: "",
-    category:"", 
+    category:"corporate-professionals",
     review: "A Great experience with a top professional in his field. Highly recommended.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4461,7 +4435,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Megan Pinker",
     company: "",
-    category:"", 
+    category:"financial-professionals",
     review: "Richard was AWESOME! I am very camera shy & he made it very easy. Thank you so much!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4474,7 +4448,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Scott Kramer",
     company: "",
-    category:"", 
+    category:"financial-professionals",
     review: "Awesome experience!  Had no idea how cool taking a picture could be. Extremely professional from the start!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4487,7 +4461,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Kate",
     company: "",
-    category:"", 
+    category:"financial-professionals",
     review: "I was so nervous when I got to the studio, BUT Rich made me feel relaxed and happy.\nFirst time I’ve ever had a true photographer take my picture….. first time was the greatest time !!\nThank you Rich for making it fun !!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4500,7 +4474,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Michelle Kerns",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "My photo shoot was an amazing experience!  He made me feel so comfortable and confident.  Ladies, no need to worry about silly imperfections, follow his guidance-you won’t be disappointed!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4513,7 +4487,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chad Snyder",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Very professional and a very fun person to work with.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4526,7 +4500,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "James Cote",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4539,7 +4513,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Erik Smith",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Rich made the process of getting my headshot comfortable and fun. He is great to work with!\n\nThe quality of the shot was top notch as well!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4552,7 +4526,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Thomas Polansky",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard was great, knows what he is doing to get the best shot!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4565,7 +4539,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Henry Adams",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4578,7 +4552,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Leif Kennedy",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4591,7 +4565,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Renee French",
     company: "",
-    category:"", 
+    category:"company-employees",
     review: "Richard immediately builds trust and puts you at ease! He has the expertise and awesome relating skills to highlight your best you! Great experience working with him!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4604,7 +4578,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jimmy Cahill",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Awesome service. Makes the whole process easy and natural",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4617,7 +4591,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Robert Weiss",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Great experience. Well versed",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4630,7 +4604,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Benjamin Yee",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4643,7 +4617,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Anthony Mig",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Phenomenal photographer. Knows how to get the perfect shot.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4656,7 +4630,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Lauren Johnson",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Richard was absolutely great!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4669,7 +4643,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Joey Garcia",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Awesome experience and great work with the shots. Great to deal with, highly recommended!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4682,7 +4656,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Maddie Miller",
     company: "",
-    category:"",
+    category:"creatives",
     review: "Awesome experience!  Nailed the shots!  Thanks Rich!!!  J",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4695,7 +4669,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Justin Grenier",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Great session with Richard.  I’m a software nerd and he made me feel like a model.  It was legitimately fun!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4708,7 +4682,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Victor Cortes",
     company: "",
-    category:"",
+    category:"entrepreneurs",
     review: "Richard i want to thank you for an amazing time during the photo shoot, awesome work i highly recommended to anyone look to get high quality work.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4721,7 +4695,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Craig Rodenberger",
     company: "",
-    category: "",
+    category: "financial-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4747,7 +4721,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Patrick Kubis",
     company: "",
-    category:"",
+    category:"executives",
     review: "Rich is great to work with and will get the best out of you!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4760,7 +4734,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Olivia Sweigart",
     company: "",
-    category: "",
+    category: "financial-professionals",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4773,7 +4747,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Cindy Hardy",
     company: "",
-    category:"",
+    category:"financial-professionals",
     review: "Fun time!  Richard very informative, patient and great sense of humor!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4786,7 +4760,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Colin Baker",
     company: "",
-    category:"",
+    category:"financial-professionals",
     review: "Fun and professional! Getting my headshot taken with Richard was quite an experience and the results were amazing! Highly recommend!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4799,7 +4773,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Allison Macchi",
     company: "",
-    category:"",
+    category:"financial-professionals",
     review: "I had an excellent experience with Richard. He is very professional and produced headshots that are likely some of the best pictures that exist of me. Highly recommend! Thanks Richard!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4812,7 +4786,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Katelyn Middleton",
     company: "",
-    category:"",
+    category:"financial-professionals",
     review: "Such a fun experience!!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4838,7 +4812,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jim Burnham",
     company: "",
-    category: "",
+    category: "company-employees",
     review: "",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4851,7 +4825,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Tracy K",
     company: "",
-    category:"",
+    category:"company-employees",
     review: "Super personable and very talented.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -4877,7 +4851,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Michael Rice",
     company: "",
-    category:"",
+    category:"corporate-professionals",
     review: "Headshots for work ! Great and easy experience! Awesome place for photography",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
