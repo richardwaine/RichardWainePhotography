@@ -3336,7 +3336,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: “Google Review by kris \”No Thanks\” F”,
+    imageAlt: "Google Review by kris \”No Thanks\” F",
     datePublished: "2021-07-03T17:30:50.113021Z",
     displayOrder: 46
   },
