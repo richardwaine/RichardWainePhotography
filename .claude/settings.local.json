@@ -67,7 +67,13 @@
       "mcp__gsc__list_sites",
       "mcp__claude_ai_Google_Drive__search_files",
       "mcp__claude_ai_Google_Drive__read_file_content",
-      "Read(//Users/richardwaine/.claude/**)"
+      "Read(//Users/richardwaine/.claude/**)",
+      "WebFetch(domain:docs.dataforseo.com)",
+      "WebFetch(domain:docs.perplexity.ai)",
+      "WebFetch(domain:ai.google.dev)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:openai.com)",
+      "WebFetch(domain:claude.com)"
     ],
     "deny": []
   }
