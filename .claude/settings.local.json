@@ -73,7 +73,8 @@
       "WebFetch(domain:ai.google.dev)",
       "WebFetch(domain:www.anthropic.com)",
       "WebFetch(domain:openai.com)",
-      "WebFetch(domain:claude.com)"
+      "WebFetch(domain:claude.com)",
+      "mcp__claude_ai_MailerLite__batch_requests"
     ],
     "deny": []
   }
