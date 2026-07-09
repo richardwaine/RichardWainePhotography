@@ -6,6 +6,7 @@ import PrimaryButton from "../components/PrimaryButton.astro"
 import SecondaryButton from '../components/SecondaryButton.astro'
 import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
+import Gallery from '../components/Gallery.astro';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
 import { reviewCount } from '../data/testimonials';
 
@@ -73,7 +74,7 @@ const {
 
   heroTitle = 'Business',
   heroTitleAccent = 'Headshots',
-  heroDescription = 'A corporate headshot is not just a picture. It is a data point in your client\'s decision-making process. I create headshot images that build trust and command attention.',
+  heroDescription = 'A corporate headshot isn\'t just a picture. It is a data point in your client\'s decision-making process. I create headshot images that build trust and command attention.',
   heroButtonText = 'GET PRICING',
   SecondaryButtonText = 'SCHEDULE CONSULT',
 
@@ -139,7 +140,7 @@ const {
         question: "What should I do if I’m not photogenic and hate being on camera?",                                               
         answer: `Photogenic is a bullshit, made up word. It is a term people use when they have never seen a photo of themselves they actually like. It suggests the responsibility to look good is on you. It is not.
         
-        The truth is that the onus of a great headshot is squarely on the photographer. Most of us hate being on camera because we have a complicated relationship with our own faces. We see flaws in the mirror that no one else sees or cares about. If you have had bad experiences in the past, it is because the photographer failed to provide the coaching and direction needed to make you feel at ease.
+        The onus of a great headshot is squarely on the photographer. Most of us hate being on camera because we have a complicated relationship with our own faces. We see flaws in the mirror that no one else sees or cares about. If you have had bad experiences in the past, it is because the photographer failed to provide the coaching and direction needed to make you feel at ease.
         
         We are not just taking a picture. We are creating a <a href="/blog/what-is-a-professional-headshot/">professional headshot</a> that makes you look confident, competent, and trustworthy.`                                                   
       },                                                                      
@@ -299,6 +300,8 @@ const businessHeadshotsFAQSchema = buildFAQSchema(faqs);
         </div>
     </div>
 </section>
+
+<Gallery showButton={false}/>
 
 <section class="pillars">
   <div class="pillar-card">
@@ -974,7 +977,23 @@ h1 {
             width:50%;
           }
 
-        
+
   }
+
+  /*change padding and max width of gallery beneath header */
+:global(#gallery-section .gallery-container) {
+    padding-top: var(--size-825);
+    /* max-width:105rem; */
+    max-width:85%;
+    margin-inline:auto;
+  }
+  
+/* This page only: gallery squares two-across on phones so they sit smaller than the horizontal hero image */
+@media (max-width: 47.9375em) {
+  :global(#gallery-section .gallery) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--size-3);
+  }
+}
 
 </style>

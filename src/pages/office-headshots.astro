@@ -6,6 +6,7 @@ import PrimaryButton from "../components/PrimaryButton.astro"
 import SecondaryButton from '../components/SecondaryButton.astro'
 import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
+import Gallery from '../components/Gallery.astro';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
 
 
@@ -278,6 +279,8 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
         </div>
     </div>
 </section>
+
+<Gallery showButton={false}/>
 
 <section class="pillars">
   <div class="pillar-card">
@@ -977,5 +980,21 @@ h1 {
             width:50%;
           }
   }
+
+  /*change padding and max width of gallery beneath header */
+:global(#gallery-section .gallery-container) {
+    padding-top: var(--size-825);
+    /* max-width:105rem; */
+    max-width:85%;
+    margin-inline:auto;
+  }
+
+/* This page only: gallery squares two-across on phones so they sit smaller than the horizontal hero image */
+@media (max-width: 47.9375em) {
+  :global(#gallery-section .gallery) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--size-3);
+  }
+}
 
 </style>
