@@ -1,0 +1,161 @@
+---
+// @ts-nocheck
+
+export interface Props {
+  pillar1Num?: string;
+  pillar1Title?: string;
+  pillar1Description?: string;
+
+  pillar2Num?: string;
+  pillar2Title?: string;
+  pillar2Description?: string;
+
+  pillar3Num?: string;
+  pillar3Title?: string;
+  pillar3Description?: string;
+}
+
+const {
+  pillar1Num,
+  pillar1Title,
+  pillar1Description,
+  pillar2Num,
+  pillar2Title,
+  pillar2Description,
+  pillar3Num,
+  pillar3Title,
+  pillar3Description,
+} = Astro.props;
+---
+
+<section class="pillars">
+  <div class="pillar-card">
+    <span class="pillar-num">{pillar1Num}</span>
+    <div class="pillar-title">{pillar1Title}</div>
+    <p>{pillar1Description}</p>
+  </div>
+  <div class="pillar-card">
+    <span class="pillar-num">{pillar2Num}</span>
+    <div class="pillar-title">{pillar2Title}</div>
+    <p>{pillar2Description}</p>
+  </div>
+  <div class="pillar-card">
+    <span class="pillar-num">{pillar3Num}</span>
+    <div class="pillar-title">{pillar3Title}</div>
+    <p>{pillar3Description}</p>
+  </div>
+</section>
+
+<style>
+/* Educational Pillars Section */
+.pillars {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-4);
+  background: #080808;
+  perspective: 1000px;
+  width:calc(100% - var(--size-7));
+  margin-inline:auto;
+
+}
+
+.pillar-card {
+  --border:transparent;
+
+  padding: var(--size-775) var(--size-4);
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px var(--shadow-clr-soft);
+}
+
+
+.pillar-num {
+  color: var(--accent);
+  font-weight: var(--fw-x-bold);
+  font-size: var(--fs-350);
+  margin-bottom: var(--size-4);
+  display: block;
+  text-align:center;
+}
+
+.pillar-card .pillar-title {
+  margin: 0 0 var(--size-3);
+  font-size: var(--fs-500);
+  letter-spacing: 1px;
+  text-align:center;
+}
+.pillar-card p {
+  color: var(--text-dim);
+  font-size: var(--fs-400);
+  margin: 0;
+}
+
+/* ==========================================
+     TABLET - min-width: 48em (768px)
+     ========================================== */
+        @media (min-width: 48em) {
+
+          .pillars {
+
+          grid-template-columns: 1fr;
+          padding: 50px 0;
+          gap: var(--size-775);
+
+
+          }
+
+          .pillar-card{
+            padding: var(--size-775);
+          }
+
+          .pillar-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 60px var(--shadow-clr-medium), 0 0 40px rgba(3, 169, 244, 0.3);
+}
+
+          .pillar-num {
+            text-align:left;
+          }
+
+          .pillar-card .pillar-title{
+            text-align:left;
+          }
+
+  }
+  /* ==========================================
+     DESKTOP - min-width: 64em (1024px)
+     ========================================== */
+  @media (min-width: 64em) {
+
+         .pillars{
+          width:100%;
+          margin-inline:auto;
+
+           > *{
+            width:80%;
+            margin-inline:auto;
+           }
+         }
+
+  }
+ /* ==========================================
+     DESKTOP - min-width: 90em (1440px)
+     ========================================== */
+  @media (min-width: 90em) {
+
+          .pillars{
+
+            grid-template-columns: repeat(3, 1fr);
+
+            > *{
+                width:80%;
+
+            }
+          }
+
+  }
+</style>

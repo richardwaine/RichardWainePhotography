@@ -1,0 +1,189 @@
+---
+// @ts-nocheck
+import { Image } from 'astro:assets';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  methodItems?: string[];
+  image?: any;
+  imageAlt?: string;
+  reverse?: boolean;
+}
+
+const {
+  title,
+  description,
+  methodItems = [],
+  image,
+  imageAlt,
+  reverse = false,
+} = Astro.props;
+---
+
+{reverse ? (
+  <div class="system-row reverse">
+    <div class="system-content">
+      <h2>{title}</h2>
+      <p set:html={description}></p>
+
+    <ul class="method-list">
+        {methodItems.map((item) => (
+          <li class="method-item"><span>◆</span> {item}</li>
+        ))}
+      </ul>
+
+      <slot />
+
+    </div>
+    <div class="system-image">
+      <Image src={image} alt={imageAlt} width={600} height={480}/>
+    </div>
+  </div>
+) : (
+  <div class="system-row">
+        <div class="system-image">
+          <Image src={image} alt={imageAlt} width={600} height={480}/>
+        </div>
+
+        <div class="system-content">
+            <h2>{title}</h2>
+            <p set:html={description}></p>
+            <ul class="method-list">
+              {methodItems.map((item) => (
+                <li class="method-item"><span>◆</span> {item}</li>
+              ))}
+            </ul>
+
+            <slot />
+        </div>
+  </div>
+)}
+
+<style>
+.system-row {
+  width:100%;
+  margin-inline:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:var(--size-7);
+  align-items: center;
+  justify-items:center;
+  margin-bottom: var(--size-7);
+}
+
+.system-row:last-child {
+    margin-bottom: 0;
+  }
+
+.system-row.reverse {
+  grid-template-columns: 1fr;
+
+}
+
+.system-image {
+--_width:min(700px, 80%);
+
+  width:var(--_width);
+  height: auto;
+  background: var(--card);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px var(--shadow-clr-medium);
+  margin-inline:auto;
+
+    > * {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
+
+.system-content {
+  opacity: 1;
+  transform: translateY(50px);
+}
+
+
+.system-content h2 {
+  font-size: var(--fs-600);
+  margin-bottom: var(--size-4);
+  text-align:center;
+  color:var(--accent);
+}
+
+.system-content p{
+  margin-bottom:var(--size-775);
+   white-space: pre-line;
+
+}
+
+.system-content p :global(a) {
+  color: var(--ltclr);
+}
+
+
+/* Methodology List */
+.method-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom:var(--size-7);
+}
+
+.method-item {
+  padding: var(--size-4) 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  /* gap: var(--size-4); */
+}
+
+
+
+.method-item span:first-child {
+  color: var(--accent);
+  font-weight: bold;
+  margin-right: var(--size-4);
+}
+
+/* ==========================================
+     TABLET - min-width: 48em (768px)
+     ========================================== */
+        @media (min-width: 48em) {
+
+          .system-content {
+            opacity: 0;
+            transform: translateY(50px);
+            width:80%;
+            margin-inline:auto;
+          }
+
+          .system-content h2{
+            font-size: var(--fs-800);
+            text-align:left;
+          }
+
+          .system-row {
+            grid-template-columns: 1fr;
+            margin-bottom: var(--size-10);
+          }
+          .system-row.reverse {
+            grid-template-columns: 1fr;
+          }
+
+  }
+ /* ==========================================
+     DESKTOP - min-width: 90em (1440px)
+     ========================================== */
+  @media (min-width: 90em) {
+
+          .system-row{
+            width:100%;
+
+            grid-template-columns: 1fr 1fr;
+          }
+          .system-row.reverse{
+            grid-template-columns: 1fr 1fr;
+          }
+
+  }
+</style>

@@ -1,12 +1,12 @@
 ---
 // @ts-nocheck
-import { Image } from 'astro:assets';
 import MainLayout from "../layouts/MainLayout.astro"
-import PrimaryButton from "../components/PrimaryButton.astro"
-import SecondaryButton from '../components/SecondaryButton.astro'
 import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 import Gallery from '../components/Gallery.astro';
+import ServiceHero from '../components/service-pages/ServiceHero.astro';
+import PillarCards from '../components/service-pages/PillarCards.astro';
+import SystemRow from '../components/service-pages/SystemRow.astro';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
 
 
@@ -231,128 +231,67 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
 <script type="application/ld+json" set:html={JSON.stringify(officeHeadshotsFAQSchema)} />
 
 <body>
-<section class="hero">
-
-<Image
-    class="hero-bg"
-    src={RW2}
-    alt="Professional headshot photographer Richard Waine photographing a client in Lancaster PA studio with dual monitor setup displaying professional headshots"
-    loading="eager"
-    fetchpriority="high"
-    widths={[400, 600, 800, 1200, 1600]}
-    sizes="100vw"
+<ServiceHero
+    heroTitle={heroTitle}
+    heroTitleAccent={heroTitleAccent}
+    heroDescription={heroDescription}
+    heroButtonText={heroButtonText}
+    heroButtonUrl={heroButtonUrl}
+    secondaryButtonText={SecondaryButtonText}
+    secondaryButtonUrl={SecondaryButtonUrl}
+    heroBg={RW2}
+    heroBgAlt="Professional headshot photographer Richard Waine photographing a client in Lancaster PA studio with dual monitor setup displaying professional headshots"
+    portraitImage={Chubb}
+    portraitAlt="Professional corporate headshot contact sheet grid displaying 34 diverse Chubb insurance company employees in business professional and business casual attire with consistent gray studio background lighting by Richard Waine Photography"
+    portraitWidth={800}
+    portraitHeight={800}
+    callout1={callout1}
+    callout2={callout2}
+    callout1Corner="top-left"
+    callout2Corner="bottom-right"
 />
-
-
-    <div class="hero-text">
-        <h1>{heroTitle} <br><span class="cyan">{heroTitleAccent}</span></h1>
-        <p class="hero-p">{heroDescription}</p>
-        <p class="hero-p service-areas">Sessions available in
-            <a href="/">Lancaster PA</a>,
-            <a href="/philadelphia-headshots/">Philadelphia</a>,
-            <a href="/baltimore-headshots/">Baltimore</a>,
-            <a href="/harrisburg-headshots/">Harrisburg</a>,
-            <a href="/york-headshots/">York</a>, and
-            <a href="/delaware-headshots/">Delaware</a>.
-        </p> 
-
-        <div class="action-group">
-          <div class="button-wrapper">
-            <PrimaryButton text={heroButtonText} url={heroButtonUrl}/>
-        </div>
-        
-        <div class="button-wrapper">
-            <SecondaryButton text={SecondaryButtonText} url={SecondaryButtonUrl}/>
-        </div>
-    </div>
-
-    </div>
-  
-    <div class="hero-visual">
-        <div class="blueprint-box">
-            <div class="portrait-sim">
-              <Image src={Chubb}  alt="Professional corporate headshot contact sheet grid displaying 34 diverse Chubb insurance company employees in business professional and business casual attire with consistent gray studio background lighting by Richard Waine Photography" width={800} height={800} />
-            </div>
-
-            <div class="callout c-1">{callout1}</div>
-            <div class="callout c-2">{callout2}</div>
-        </div>
-    </div>
-</section>
 
 <Gallery showButton={false}/>
 
-<section class="pillars">
-  <div class="pillar-card">
-    <span class="pillar-num">{pillar1Num}</span>
-    <div class="pillar-title">{pillar1Title}</div>
-    <p>{pillar1Description}</p>
-  </div>
-  <div class="pillar-card">
-    <span class="pillar-num">{pillar2Num}</span>
-    <div class="pillar-title">{pillar2Title}</div>
-    <p>{pillar2Description}</p>
-  </div>
-  <div class="pillar-card">
-    <span class="pillar-num">{pillar3Num}</span>
-    <div class="pillar-title">{pillar3Title}</div>
-    <p>{pillar3Description}</p>
-  </div>
-</section>
+<PillarCards
+    pillar1Num={pillar1Num}
+    pillar1Title={pillar1Title}
+    pillar1Description={pillar1Description}
+    pillar2Num={pillar2Num}
+    pillar2Title={pillar2Title}
+    pillar2Description={pillar2Description}
+    pillar3Num={pillar3Num}
+    pillar3Title={pillar3Title}
+    pillar3Description={pillar3Description}
+/>
 
 <section class="system-section">
 
-<div class="system-row reverse">
-    <div class="system-content">
-      <h2>{systemRow1Title}</h2>
-      <p set:html={systemRow1Description}></p>
+<SystemRow
+    reverse={true}
+    title={systemRow1Title}
+    description={systemRow1Description}
+    methodItems={[methodItem1, methodItem2, methodItem3, methodItem4]}
+    image={TsedeyAragie}
+    imageAlt="Professional office headshot of an African-American woman in white shirt and blue blazer, smiling warmly against white studio background, headshot made by Richard Waine in Lancaster Pennsylvania"
+/>
 
-    <ul class="method-list">
-        <li class="method-item"><span>◆</span> {methodItem1}</li>
-        <li class="method-item"><span>◆</span> {methodItem2}</li>
-        <li class="method-item"><span>◆</span> {methodItem3}</li>
-        <li class="method-item"><span>◆</span> {methodItem4}</li>
-       
-      </ul>
+<SystemRow
+    title={systemRow2Title}
+    description={systemRow2Description}
+    methodItems={[methodItem5, methodItem6, methodItem7, methodItem8]}
+    image={RW1}
+    imageAlt="Office headshot photography session by Richard Waine showing blonde woman in tan plaid blazer surrounded by professional photo lighting equipment"
+/>
 
-
-    </div>
-    <div class="system-image">
-      <Image src={TsedeyAragie} alt="Professional office headshot of an African-American woman in white shirt and blue blazer, smiling warmly against white studio background, headshot made by Richard Waine in Lancaster Pennsylvania" width={600} height={480}/>
-    </div>
-  </div>
-
-  <div class="system-row">
-        <div class="system-image">
-          <Image src={RW1} alt="Office headshot photography session by Richard Waine showing blonde woman in tan plaid blazer surrounded by professional photo lighting equipment" width={600} height={480}/>
-        </div>
-        
-        <div class="system-content">
-            <h2>{systemRow2Title}</h2>
-            <p>{systemRow2Description}</p>
-            <ul class="method-list">
-              <li class="method-item"><span>◆</span> {methodItem5}</li>
-              <li class="method-item"><span>◆</span> {methodItem6}</li>
-              <li class="method-item"><span>◆</span> {methodItem7}</li>
-              <li class="method-item"><span>◆</span> {methodItem8}</li>  
-            </ul>
-        </div>
-  </div>
-
-  <div class="system-row reverse">
-    <div class="system-content">
-      <h2>{systemRow3Title}</h2>
-      <p>{systemRow3Description}</p>
-
-
-    <ul class="method-list">
-        <li class="method-item"><span>◆</span> {methodItem9}</li>
-        <li class="method-item"><span>◆</span> {methodItem10}</li>
-        <li class="method-item"><span>◆</span> {methodItem11}</li>
-        <li class="method-item"><span>◆</span> {methodItem12}</li>
-       
-      </ul>
-
+<SystemRow
+    reverse={true}
+    title={systemRow3Title}
+    description={systemRow3Description}
+    methodItems={[methodItem9, methodItem10, methodItem11, methodItem12]}
+    image={RW11}
+    imageAlt="Behind-the-scenes professional in office headshot photography session showing woman in black cardigan and pink lace top positioned between Westcott lighting panels and camera by Richard Waine Photography"
+>
       <table class="logistics-table">
         <tr>
           <td class="logistics-label">Time Per Person</td>
@@ -375,12 +314,7 @@ const officeHeadshotsFAQSchema = buildFAQSchema(faqs);
           <td class="logistics-value">PA, MD, DE, NY, NJ</td>
         </tr>
       </table>
-
-    </div>
-    <div class="system-image">
-      <Image src={RW11} alt="Behind-the-scenes professional in office headshot photography session showing woman in black cardigan and pink lace top positioned between Westcott lighting panels and camera by Richard Waine Photography" width={600} height={480}/>
-    </div>
-  </div>
+</SystemRow>
 </section>
 
 <section id="testimonials">
@@ -522,171 +456,6 @@ body {
 }
 
 
-.cyan {
-  color: var(--accent);
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  align-items: center;
-  padding-top:calc(var(--header-height) + var(--size-7));
-  padding-bottom:var(--size-825);
-  gap: var(--size-8);
-  border-bottom: 1px solid var(--border);
-  display:grid;
-  grid-template-columns: 1fr;
-  width:100%;
-  margin-inline:auto;
-  overflow:clip;
-}
-
-.hero-bg{
-  
-  position:absolute;
-  inset:0;
-  height:100%;
-  width:100%;
-  object-fit:cover;
-  object-position:center var(--header-height);
-  filter:grayscale(1);
-  opacity:.25;
-  z-index: -2;
-  overflow:hidden;
-
-}
-
-.hero-text{
-  margin-inline:auto;
-  width:min(700px, calc(100% - var(--size-7)));
-  text-align:center;
-}
-
-h1 {
-  font-size: clamp(40px, 5vw, 70px);
-  line-height: 1;
-  margin-bottom: var(--size-4);
-  font-weight: var(--fw-x-bold);
-  text-transform: uppercase;
-  
-}
-
-.hero-p {
-  font-size: var(--fs-500);
-  color: var(--text-dim);
-  text-align:center;
-  margin-bottom: var(--size-775);
-}
-
-.service-areas {
-  font-size:var(--fs-400);
-  color: var(--faded);
-  text-wrap:balance;
-}
-
-.hero-p a{
-  color:var(--faded);
-}
-
-
-.action-group{
-  display:flex;
-  flex-direction:column;
-  justify-self:center;
-  gap:var(--size-4);
- 
-}
-
-.hero-visual {
-  position: relative;
-  justify-self: center;
-  width:calc(100% - var(--size-7));
-  
-}
-
-/* Blueprint Visuals */
-.blueprint-box {
-  --_width:min(700px, 80%);
-
-  width:var(--_width);
-  margin-inline:auto;
-  height:auto;
-  background:transparent;
-  position: relative;
-  overflow: hidden;
-  perspective: 1200px;
-  box-shadow: 0 10px 50px var(--shadow-clr-medium);
-}
-
-.portrait-sim {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #222;
-  font-weight: var(--fw-x-bold);
-  transform-style: preserve-3d;
-  box-shadow: inset 0 0 60px rgba(3, 169, 244, 0.1);
-  overflow:clip;
-  
-    > * {
-
-    object-fit:cover;
-    width:100%;
-    height:100%;
-  }
-}
-
-.callout {
-  display:none;
-  
-}
-
-/* Educational Pillars Section */
-.pillars {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--size-4);
-  background: #080808;
-  perspective: 1000px;
-  width:calc(100% - var(--size-7));
-  margin-inline:auto;
-
-}
-
-.pillar-card {
-  --border:transparent;
-  
-  padding: var(--size-775) var(--size-4);
-  border: 1px solid var(--border);
-  background: var(--card);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  transform-style: preserve-3d;
-  box-shadow: 0 10px 30px var(--shadow-clr-soft);
-}
-
-.pillar-num {
-  color: var(--accent);
-  font-weight: var(--fw-x-bold);
-  font-size: var(--fs-350);
-  margin-bottom: var(--size-4);
-  display: block;
-  text-align:center;
-}
-
-.pillar-card .pillar-title {
-  margin: 0 0 var(--size-3);
-  font-size: var(--fs-500);
-  letter-spacing: 1px;
-  text-align:center;
-}
-
-.pillar-card p {
-  color: var(--text-dim);
-  font-size: var(--fs-400);
-  margin: 0;
-}
-
 /* The "System" Section - Staggered */
 .system-section {
   margin-block:var(--size-825);
@@ -696,85 +465,9 @@ h1 {
 }
 
 
-.system-row {
-  width:100%;
-  margin-inline:auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap:var(--size-7);
-  align-items: center;
-  justify-items:center;
-  margin-bottom: var(--size-7);
-}
-
-.system-row:last-child {                                                         
-    margin-bottom: 0;                                                              
-  }  
-
-.system-row.reverse {
-  grid-template-columns: 1fr;
-  
-}
-
-.system-image {
---_width:min(700px, 80%);
-
-  width:var(--_width);
-  height: auto;
-  background: var(--card);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 40px var(--shadow-clr-medium);
-  margin-inline:auto;
-
-    > * {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+:global(body .system-content p a) {
+    color: var(--text);
   }
-}
-
-.system-content {
-  opacity: 1;
-  transform: translateY(50px);
-}
-
-.system-content h2 {
-  font-size: var(--fs-600);
-  margin-bottom: var(--size-4);
-  text-align:center;
-  color:var(--accent);
-}
-
-.system-content p{
-  margin-bottom:var(--size-775);
-  white-space: pre-line;
-}
-
-
-/* Methodology List */
-.method-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom:var(--size-7);
-}
-
-.method-item {
-  padding: var(--size-4) 0;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  /* gap: var(--size-4); */
-}
-
-.method-item span:first-child {
-  color: var(--accent);
-  font-weight: bold;
-  margin-right: var(--size-4);
-}
-
-:global(body .system-content p a) {                                                    
-    color: var(--text);                                                                                                                              
-  }               
 
 
 .logistics-table {
@@ -830,151 +523,17 @@ h1 {
 /* ==========================================                                   
      TABLET - min-width: 48em (768px)                                             
      ========================================== */                                
-        @media (min-width: 48em) {                                                      
-           .hero {
-            min-height:100vh;
-            grid-template-columns: 1fr;
-            gap: var(--size-875);
-          }
-
-          .action-group{
-
-          display:flex;
-          flex-direction:row;
-          }
-
-          .callout{
-            display:block;
-            position: absolute;
-            color: var(--accent);
-            font-size: 12px;
-            letter-spacing: 2px;
-            font-weight: bold;
-            border-bottom: 1px solid var(--accent);
-            padding-bottom: var(--size-1);
-            z-index: 10;
-          }
-
-          .c-1 {
-            top: 25%;
-            left: 5%;
-          }
-
-          .c-2 {
-            bottom: 25%;
-            right: 5%;
-          } 
-          
-          .pillars {
-          grid-template-columns: 1fr;
-          padding: 50px 0;  
-          gap: var(--size-775);  
-                                                                              
-          }  
-
-          .pillar-card{
-            padding: var(--size-775);
-          }
-
-          .pillar-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-10px) rotateX(5deg);
-            box-shadow: 0 20px 60px var(--shadow-clr-medium), 0 0 40px rgba(3, 169, 244, 0.3);
-}
-
-          .pillar-num {
-            text-align:left;
-          }
-
-          .pillar-card .pillar-title{
-            text-align:left;
-          }
-
-          .system-content {
-            opacity: 0;
-            transform: translateY(50px);
-            width:80%;
-            margin-inline:auto;
-          }
-
-          .system-content h2{
-            font-size: var(--fs-800);
-            text-align:left;
-          }
-
-          .system-row {
-            grid-template-columns: 1fr;
-            margin-bottom: var(--size-10);
-          }
-          .system-row.reverse {
-            grid-template-columns: 1fr;
-          }
+        @media (min-width: 48em) {
 
           .FAQs{
             width:80%;
           }
   }
 
-  /* ==========================================                                   
-     DESKTOP - min-width: 64em (1024px)                                           
-     ========================================== */                                
-  @media (min-width: 64em) {                                                      
-         
-         .pillars{
-          width:100%;
-          margin-inline:auto; 
-          
-           > *{
-            width:80%;
-            margin-inline:auto;
-           }
-         }
-  }
-
- /* ==========================================                                   
-     DESKTOP - min-width: 90em (1440px)                                           
-     ========================================== */                                
-  @media (min-width: 90em) { 
-
-        .hero {
-            grid-template-columns: 1fr 1fr;
-          }  
-
-          h1 {
-
-            margin-inline:0;
-            text-align:left;
-            margin-bottom: var(--size-2);
-            width:calc(100% - var(--size-7));
-          }
-
-          .hero-p{
-            text-align:left;
-          }
-          
-
-        .action-group{
-            flex-direction:row;
-            justify-self: flex-start;
-          } 
-
-          .pillars{
-                       
-            grid-template-columns: repeat(3, 1fr);
-            
-            > *{
-                width:80%;
-                
-            }
-          }
-
-          .system-row{
-            width:100%;
-            grid-template-columns: 1fr 1fr;
-          }
-          .system-row.reverse{
-            grid-template-columns: 1fr 1fr;
-          }
+ /* ==========================================
+     DESKTOP - min-width: 90em (1440px)
+     ========================================== */
+  @media (min-width: 90em) {
 
         .FAQs{
             width:50%;

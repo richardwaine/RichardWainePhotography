@@ -1,0 +1,297 @@
+---
+// @ts-nocheck
+import { Image } from 'astro:assets';
+import PrimaryButton from "../PrimaryButton.astro"
+import SecondaryButton from '../SecondaryButton.astro'
+
+export interface Props {
+  heroTitle?: string;
+  heroTitleAccent?: string;
+  heroDescription?: string;
+  heroButtonText?: string;
+  heroButtonUrl?: string;
+  secondaryButtonText?: string;
+  secondaryButtonUrl?: string;
+  heroBg?: any;
+  heroBgAlt?: string;
+  portraitImage?: any;
+  portraitAlt?: string;
+  portraitWidth?: number;
+  portraitHeight?: number;
+  callout1?: string;
+  callout2?: string;
+  callout1Corner?: string; // 'top-right' (default) or 'top-left'
+  callout2Corner?: string; // 'bottom-left' (default) or 'bottom-right'
+}
+
+const {
+  heroTitle,
+  heroTitleAccent,
+  heroDescription,
+  heroButtonText,
+  heroButtonUrl,
+  secondaryButtonText,
+  secondaryButtonUrl,
+  heroBg,
+  heroBgAlt,
+  portraitImage,
+  portraitAlt,
+  portraitWidth = 600,
+  portraitHeight = 480,
+  callout1,
+  callout2,
+  callout1Corner = 'top-right',
+  callout2Corner = 'bottom-left',
+} = Astro.props;
+---
+
+<section class="hero">
+
+
+<Image
+    class="hero-bg"
+    src={heroBg}
+    alt={heroBgAlt}
+    loading="eager"
+    fetchpriority="high"
+    widths={[400, 600, 800, 1200, 1600]}
+    sizes="100vw"
+/>
+
+
+
+
+
+    <div class="hero-text">
+        <h1>{heroTitle} <br><span class="cyan">{heroTitleAccent}</span></h1>
+        <p class="hero-p">{heroDescription}</p>
+        <p class="hero-p service-areas">Sessions available in
+            <a href="/">Lancaster PA</a>,
+            <a href="/philadelphia-headshots/">Philadelphia</a>,
+            <a href="/baltimore-headshots/">Baltimore</a>,
+            <a href="/harrisburg-headshots/">Harrisburg</a>,
+            <a href="/york-headshots/">York</a>, and
+            <a href="/delaware-headshots/">Delaware</a>.
+        </p>
+
+        <div class="action-group">
+          <div class="button-wrapper">
+            <PrimaryButton text={heroButtonText} url={heroButtonUrl}/>
+        </div>
+
+        <div class="button-wrapper">
+            <SecondaryButton text={secondaryButtonText} url={secondaryButtonUrl}/>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="hero-visual">
+        <div class="blueprint-box">
+            <div class="portrait-sim">
+              <Image src={portraitImage} alt={portraitAlt} width={portraitWidth} height={portraitHeight}/>
+            </div>
+
+            <div class={`callout c-1 ${callout1Corner}`}>{callout1}</div>
+            <div class={`callout c-2 ${callout2Corner}`}>{callout2}</div>
+        </div>
+    </div>
+</section>
+
+<style>
+.cyan {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  align-items: center;
+  padding-top:calc(var(--header-height) + var(--size-7));
+  padding-bottom:var(--size-825);
+  gap: var(--size-8);
+  border-bottom: 1px solid var(--border);
+  display:grid;
+  grid-template-columns: 1fr;
+  width:100%;
+  margin-inline:auto;
+  overflow:clip;
+}
+
+.hero-bg{
+
+  position:absolute;
+  inset:0;
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  object-position:center var(--header-height);
+  filter:grayscale(1);
+  opacity:.25;
+  z-index: -2;
+  overflow:hidden;
+
+}
+
+.hero-text{
+  margin-inline:auto;
+  width:min(700px, calc(100% - var(--size-7)));
+  text-align:center;
+}
+
+h1 {
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 1;
+  margin-bottom: var(--size-4);
+  font-weight: var(--fw-x-bold);
+  text-transform: uppercase;
+
+}
+
+.hero-p {
+  font-size: var(--fs-500);
+  color: var(--text-dim);
+  text-align:center;
+  margin-bottom: var(--size-775);
+}
+
+.service-areas {
+  font-size:var(--fs-400);
+  color: var(--faded);
+  text-wrap:balance;
+}
+
+.hero-p a{
+  color:var(--faded);
+}
+
+.action-group{
+
+  display:flex;
+  flex-direction:column;
+  justify-self:center;
+  gap:var(--size-4);
+
+}
+
+.hero-visual {
+  position: relative;
+  justify-self: center;
+  width:calc(100% - var(--size-7));
+
+}
+
+/* Blueprint Visuals */
+.blueprint-box {
+  --_width:min(700px, 80%);
+
+  width:var(--_width);
+  margin-inline:auto;
+  height:auto;
+  background:transparent;
+  position: relative;
+  overflow: hidden;
+  perspective: 1200px;
+  box-shadow: 0 10px 50px var(--shadow-clr-medium);
+
+}
+
+.portrait-sim {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  font-weight: var(--fw-x-bold);
+  transform-style: preserve-3d;
+  box-shadow: inset 0 0 60px rgba(3, 169, 244, 0.1);
+  overflow:clip;
+
+  > * {
+
+  object-fit:cover;
+  width:100%;
+  height:100%;
+
+}
+}
+
+
+.callout {
+  display:none;
+
+}
+
+/* ==========================================
+     TABLET - min-width: 48em (768px)
+     ========================================== */
+        @media (min-width: 48em) {
+           .hero {
+            min-height:100vh;
+            grid-template-columns: 1fr;
+            gap: var(--size-875);
+
+          }
+
+
+          .action-group{
+
+          display:flex;
+          flex-direction:row;
+          }
+
+          .callout{
+            display:block;
+            position: absolute;
+            color: var(--accent);
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: var(--size-1);
+            z-index: 10;
+
+          }
+          .c-1 {
+            top: 25%;
+          }
+          .c-2 {
+            bottom: 25%;
+          }
+          .c-1.top-right { right: 5%; }
+          .c-1.top-left { left: 5%; }
+          .c-2.bottom-left { left: 5%; }
+          .c-2.bottom-right { right: 5%; }
+
+  }
+ /* ==========================================
+     DESKTOP - min-width: 90em (1440px)
+     ========================================== */
+  @media (min-width: 90em) {
+
+        .hero {
+            grid-template-columns: 1fr 1fr;
+
+          }
+
+          h1 {
+
+            margin-inline:0;
+            text-align:left;
+            margin-bottom: var(--size-2);
+            width:calc(100% - var(--size-7));
+
+          }
+
+          .hero-p{
+            text-align:left;
+          }
+
+
+        .action-group{
+            flex-direction:row;
+            justify-self: flex-start;
+          }
+
+  }
+</style>
