@@ -1,10 +1,66 @@
 ---
 import { Image } from 'astro:assets';
+import PrimaryButton from './PrimaryButton.astro';
 import AndyCarter from '../assets/images/professions/AndyCarter - 0096 (horizontal).jpg';
 import CateCaplan from '../assets/images/professions/CateCaplan - 0014 (horizontal).jpg';
 import JamesKennedy from '../assets/images/professions/JamesKennedy - 0006 (horizontal).jpg';
 import JillLazar from '../assets/images/professions/JillLazar - 0018 (horizontal).jpg';
 import { buildServiceAudienceSchema } from '../utils/schema';
+
+// The four professions: each entry drives one picture control and one content panel
+const professions = [
+  {
+    id: "performer-pick",
+    panelClass: "pro-panel-performer",
+    name: "Performer Headshots",
+    image: CateCaplan,
+    alt: "Professional performer headshot of young female singer and actor with long blonde highlighted hair styled with center part and warm natural smile wearing black v-neck top photographed against white studio background by Richard Waine Photography Lancaster Pennsylvania, acting headshots, professional acting headshots, actor headshots near me",
+    url: "/acting-headshots",
+    paragraphs: [
+      "In the dynamic world of performance, first impressions matter. A captivating headshot is your key to unlocking opportunities and making a lasting impact on casting directors, agents, and audience members alike. I specialize in crafting professional performer headshots that showcase your unique personality, talent, and star potential.",
+      "Whether you're an actor, dancer, singer, musician, or model, I'll tailor your headshot to suit your specific genre and career aspirations. My expertise extends to theatrical headshots, acting headshots, modeling headshots, writer headshots, and more."
+    ]
+  },
+  {
+    id: "business-pick",
+    panelClass: "pro-panel-business",
+    name: "Business Headshots",
+    image: JamesKennedy,
+    alt: "Professional business headshot of man with short silver-gray hair and trimmed gray stubble wearing dark gray rectangular frame eyeglasses tan linen blazer over navy blue open-collar dress shirt photographed against neutral gray studio background by Richard Waine Photography",
+    url: "/business-headshots",
+    paragraphs: [
+      "In today's competitive business landscape, a strong professional image is essential for success. A polished and captivating headshot serves as your visual introduction, conveying confidence, expertise, and approachability to potential clients, partners, and investors. I specialize in crafting business headshots that elevate your professional presence and make a lasting impression in Lancaster, Pennsylvania and beyond.",
+      "I have extensive experience in capturing business portraits that exude professionalism, trustworthiness, and leadership qualities. Allow me to guide you through the process, ensuring that your professional headshot reflects your authenticity.",
+      "Your business headshot is an investment in your professional brand. It's a visual representation of your expertise, values, and personality, and it plays a crucial role in shaping first impressions. I believe that professional headshots are an essential tool for social selling and business success."
+    ]
+  },
+  {
+    id: "company-pick",
+    panelClass: "pro-panel-company",
+    name: "Company Headshots",
+    image: JillLazar,
+    alt: "Professional business headshot of woman with long straight brown hair with blonde highlights and blue eyes with bright engaging smile wearing small gold hoop earrings and white collared button-down shirt photographed against white studio background by Richard Waine Photography Lancaster PA, linkedin profile headshots",
+    url: "/office-headshots",
+    paragraphs: [
+      "Your company headshots play a vital role in establishing a cohesive brand identity, fostering a sense of unity among employees, and conveying professionalism to clients and partners. Capture your team’s unique spirit and professionalism, and enhance your brand's reputation in Lancaster, Pennsylvania, and across the globe.",
+      "I work closely with you and your team to create headshots that align with your brand guidelines, messaging, and overall aesthetic. Whether you need individual headshots, group headshots, or environmental headshots that capture your team in action, I deliver high-quality digital images that seamlessly integrate with your company's website, social media profiles, and marketing materials, ensuring a consistent and polished brand image across all platforms.",
+      "Company headshots are a visual representation of your company's culture, values, and the collective spirit of your team. I believe in capturing the essence of your company through storytelling. My goal is to create headshots that reflect your company's unique identity and leave a lasting impression on those who encounter them."
+    ]
+  },
+  {
+    id: "executive-pick",
+    panelClass: "pro-panel-executive",
+    name: "Executive Headshots",
+    image: AndyCarter,
+    alt: "Professional business headshot of man with short silver-gray styled hair with side part and bright white smile wearing navy blue textured blazer over heather gray crew neck t-shirt photographed against seamless white studio background with directional key fill kick lighting technique by Richard Waine Lancaster Pennsylvania",
+    url: "/business-headshots",
+    paragraphs: [
+      "A captivating executive headshot is your key to unlocking opportunities and making a lasting impact on colleagues, clients, and industry peers. As a professional headshot photographer in Lancaster, Pennsylvania, I specialize in crafting executive headshots that embody leadership, expertise, and unwavering presence, perfectly capturing the essence of your executive persona.",
+      "With extensive experience in executive portraiture, I understand the nuances of crafting headshots that align with industry expectations and project the desired image for your role. I'll guide you through the headshot process, ensuring that your facial expression conveys your authority, experience, and strategic vision, whether you're a C-suite executive, CEO, CFO, or managing director.",
+      "Your executive headshot is a visual representation of your expertise, leadership style, and unwavering commitment to excellence. Let me create executive headshots that command confidence, project leadership, and elevate your professional brand."
+    ]
+  }
+];
 
 // Define target audiences for schema
 const audiences = [
@@ -68,238 +124,236 @@ const professionsSchema = buildServiceAudienceSchema(
 ---
 
 
-<div class="wrapper professions-section-wrapper">
-  <div class="professions-tabs">
-  <input type="radio" name="professions-tabs" id="performer-tab" checked="checked">
-  <label for="performer-tab">Performer Headshots</label>
-  <div class="professions-tab">
-    <h2 class="center white">Performer Headshots</h2>
-    <div class="tab-content content-one">
+<div class="wrapper professions-wrap">
+  <div class="professions">
 
-    <Image src={CateCaplan} alt="Professional performer headshot of young female singer and actor with long blonde highlighted hair styled with center part and warm natural smile wearing black v-neck top photographed against white studio background by Richard Waine Photography Lancaster Pennsylvania, acting headshots, professional acting headshots, actor headshots near me" loading="lazy" class="" />
-
-    
-    
-    <div class="">
-    <p>In the dynamic world of performance, first impressions matter. A captivating headshot is your key to unlocking opportunities and making a lasting impact on casting directors, agents, and audience members alike. I specialize in crafting professional performer headshots that showcase your unique personality, talent, and star potential.</p>
-<p>Whether you're an actor, dancer, singer, musician, or model, I'll tailor your headshot to suit your specific genre and career aspirations. My expertise extends to theatrical headshots, acting headshots, modeling headshots, writer headshots, and more.</p>
-
-    </div>
-   
-      
+    <!-- the picture grid: the four portraits are the controls -->
+    <div class="pro-picks">
+      {professions.map((pro, index) => (
+        <>
+          <input type="radio" name="professions-tabs" id={pro.id} checked={index === 0} tabindex="-1" />
+          <label for={pro.id} class="pro-pick" tabindex="0">
+            <Image src={pro.image} width={750} height={600} alt={pro.alt} loading="lazy" />
+            <span class="pro-name">{pro.name}</span>
+          </label>
+        </>
+      ))}
     </div>
 
-      
-  </div>
-  
-  <input type="radio" name="professions-tabs" id="business-tab">
-  <label for="business-tab">Business Headshots</label>
-  <div class="professions-tab">
-    <h2 class="center white">Business Headshots</h2>
-    <div class="tab-content content-two">
-
-
-      <Image src={JamesKennedy} alt="Professional business headshot of man with short silver-gray hair and trimmed gray stubble wearing dark gray rectangular frame eyeglasses tan linen blazer over navy blue open-collar dress shirt photographed against neutral gray studio background by Richard Waine Photography" loading="lazy" class="" />
-
-    
-
-      <div class="">
-      <p>In today's competitive business landscape, a strong professional image is essential for success. A polished and captivating headshot serves as your visual introduction, conveying confidence, expertise, and approachability to potential clients, partners, and investors. I specialize in crafting business headshots that elevate your professional presence and make a lasting impression in Lancaster, Pennsylvania and beyond.</p>
-<p>I have extensive experience in capturing business portraits that exude professionalism, trustworthiness, and leadership qualities. Allow me to guide you through the process, ensuring that your professional headshot reflects your authenticity.</p>
-<p>Your business headshot is an investment in your professional brand. It's a visual representation of your expertise, values, and personality, and it plays a crucial role in shaping first impressions. I believe that professional headshots are an essential tool for social selling and business success.</p>
-
-      </div>
+    <!-- the content panels: one visible at a time -->
+    <div class="pro-panels">
+      {professions.map((pro) => (
+        <div class={`pro-panel ${pro.panelClass}`}>
+          <div class="pro-panel-text">
+            <h2>{pro.name}</h2>
+            <div class="pro-copy">
+              {pro.paragraphs.map((text) => <p>{text}</p>)}
+            </div>
+            <div class="button-wrapper">
+              <PrimaryButton text="Learn More" url={pro.url} srText={`about ${pro.name}`} />
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
-
-   
-      
-  </div>
-  
-  <input type="radio" name="professions-tabs" id="company-tab">
-  <label for="company-tab">Company Headshots</label>
-  <div class="professions-tab">
-    <h2 class="center white">Company Headshots</h2>
-    <div class="tab-content content-three">
-
-      <Image src={JillLazar} alt="Professional business headshot of woman with long straight brown hair with blonde highlights and blue eyes with bright engaging smile wearing small gold hoop earrings and white collared button-down shirt photographed against white studio background by Richard Waine Photography Lancaster PA, linkedin profile headshots" loading="lazy" class="" />
-
-      
-    
-      <div class="">
-     <p>Your company headshots play a vital role in establishing a cohesive brand identity, fostering a sense of unity among employees, and conveying professionalism to clients and partners. Capture your team’s unique spirit and professionalism, and enhance your brand's reputation in Lancaster, Pennsylvania, and across the globe. </p>
-<p> I work closely with you and your team to create headshots that align with your brand guidelines, messaging, and overall aesthetic. Whether you need individual headshots, group headshots, or environmental headshots that capture your team in action, I deliver high-quality digital images that seamlessly integrate with your company's website, social media profiles, and marketing materials, ensuring a consistent and polished brand image across all platforms. </p>
-<p>Company headshots are a visual representation of your company's culture, values, and the collective spirit of your team. I believe in capturing the essence of your company through storytelling. My goal is to create headshots that reflect your company's unique identity and leave a lasting impression on those who encounter them.</p>
-
-
-
-
-        
-      </div>
-    </div>
-
 
   </div>
-	
-	<input type="radio" name="professions-tabs" id="executive-tab">
-  <label for="executive-tab">Executive Headshots</label>
-  <div class="professions-tab">
-    <h2 class="center white">Executive Headshots</h2>
-    <div class="tab-content content-four">
-
-       <Image src={AndyCarter} alt="Professional business headshot of man with short silver-gray styled hair with side part and bright white smile wearing navy blue textured blazer over heather gray crew neck t-shirt photographed against seamless white studio background with directional key fill kick lighting technique by Richard Waine Lancaster Pennsylvania" loading="lazy" class="" />
-
-      
-    <div class="">
-      <p>A captivating executive headshot is your key to unlocking opportunities and making a lasting impact on colleagues, clients, and industry peers. As a professional headshot photographer in Lancaster, Pennsylvania, I specialize in crafting executive headshots that embody leadership, expertise, and unwavering presence, perfectly capturing the essence of your executive persona. </p>
-<p>With extensive experience in executive portraiture, I understand the nuances of crafting headshots that align with industry expectations and project the desired image for your role. I'll guide you through the headshot process, ensuring that your facial expression conveys your authority, experience, and strategic vision, whether you're a C-suite executive, CEO, CFO, or managing director. </p>
-<p>Your executive headshot is a visual representation of your expertise, leadership style, and unwavering commitment to excellence. Let me create executive headshots that command confidence, project leadership, and elevate your professional brand.</p>
-
-      
-    </div>
-    </div>
-    
-  </div>
-	
-	
-	
-</div>
 </div>
 
 <script type="application/ld+json" set:html={JSON.stringify(professionsSchema)} />
 
-<style>
+<script>
+  // each portrait is its own Tab stop; Enter or Space selects it
+  function initProfessionPicks() {
+    document.querySelectorAll<HTMLLabelElement>('.pro-pick').forEach((label) => {
+      label.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          label.click();
+        }
+      });
+    });
+  }
 
-.professions-section-wrapper{
-  padding-block:var(--size-8);
+  document.addEventListener('astro:page-load', initProfessionPicks);
+</script>
+
+<style is:global>
+
+/* Professions v3: picture-grid selector with side panel.
+   All selectors contained under .professions-wrap / .professions.
+   Structure: .pro-picks (2x2 image grid) and .pro-panels (stacked content)
+   are independent containers; one grid gap on .professions controls the
+   distance between them. Panel visibility is driven by :has(). */
+
+.professions-wrap{
+  padding-block:var(--size-10);
 }
 
-/* --- BASE STYLES (LARGE SCREEN LOGIC) --- */
+/* --- MOBILE BASE STYLES --- */
 
-.tabs, .professions-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  
+.professions{
+  display:grid;
+  grid-template-columns:minmax(0, 1fr);
+  gap:var(--size-8);
+  color:var(--ltclr);
 }
 
-.professions-tabs {
-  justify-content: space-around;
-  position: relative;
+/* the picture grid */
+
+.pro-picks{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:var(--size-3);
 }
 
-.professions-tab {
-  margin-top: var(--size-3);
+/* invisible but keyboard-reachable, same pattern as the button component's sr-only */
+.pro-picks input[type="radio"]{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0, 0, 0, 0);
+  white-space:nowrap;
+  border-width:0;
 }
 
-.tabs label, .professions-tabs label {
-  padding: var(--size-3) var(--size-8);
-  cursor: pointer;
-  background: var(--drkbg);
-  color: var(--ltclr);
-  font-weight: var(--fw-bold);
-  transition: background ease .2s;
-  text-align: center;
-  position: relative;
+/* keyboard focus shows the site's standard orange ring on each portrait */
+.pro-pick:focus-visible{
+  outline:2px solid orange;
+  outline-offset:2px;
 }
 
-.professions-tabs label {
-  display: block;
-  padding: var(--size-3) var(--size-8);
-  margin: var(--size-3);
-  font-size: var(--fs-400);
-  background: transparent;
-  text-transform: uppercase;
+.pro-pick{
+  display:block;
+  cursor:pointer;
+  border:var(--border-thin) transparent;
+  opacity:.5;
+  filter:grayscale(1);
 }
 
-.tabs .tab, .professions-tabs .professions-tab {
-  width: 100%;
-  padding: var(--size-8) var(--size-3) var(--size-3);
+.pro-pick:hover{
+  opacity:.8;
 }
 
-.professions-tabs .professions-tab {
-  --_shadow: 2px 2px 10px var(--shadow-clr-medium);
-  flex-grow: 1;
-  display: none;
-  background: var(--drkbg);
-  box-shadow: var(--_shadow);
-  
+.pro-pick img{
+  display:block;
+  width:100%;
+  height:auto;
 }
 
-.tabs .tab, .tabs input[type=radio], .professions-tabs input[type="radio"] {
-  display: none
+.pro-name{
+  display:block;
+  text-align:center;
+  text-transform:uppercase;
+  font-weight:var(--fw-bold);
+  font-size:var(--fs-300);
+  letter-spacing:var(--ltr-space);
+  color:var(--ltclr);
+  padding-block:var(--size-2);
 }
 
-/* Tab Content Layout (Mobile default) */
-.tab-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  justify-items: center;
-  align-items: center;
-  gap: var(--size-9);
-  color: var(--ltclr);
-  line-height: var(--line-height-loose);
+.pro-picks input[type="radio"]:checked + .pro-pick{
+  opacity:1;
+  filter:none;
+  border-color:var(--accent);
 }
 
-.tab-content img {
-  width: 400px;
-  height: auto;
+.pro-picks input[type="radio"]:checked + .pro-pick .pro-name{
+  color:var(--accent);
 }
 
-.tab-content p {
-  margin-block: var(--size-3);
+/* the content panels: on phones the visible panel takes only its own
+   height; on wide screens (below) all four reserve the same space so
+   nothing shifts */
+
+.pro-panels{
+  display:grid;
 }
 
-.professions-tabs label, .professions-tabs h2 {
-  text-transform: uppercase;
-  margin-block: var(--size-3);
+.pro-panel{
+  display:none;
 }
 
-/* Checkbox/Radio Behavior */
-.professions-tabs input[type="radio"]:unchecked + label + .professions-tab {
-  display: block;
-  transform: translateX(-100%);
-  transition: transform 250ms ease-in
+.professions:has(#performer-pick:checked) .pro-panel-performer,
+.professions:has(#business-pick:checked) .pro-panel-business,
+.professions:has(#company-pick:checked) .pro-panel-company,
+.professions:has(#executive-pick:checked) .pro-panel-executive{
+  display:block;
+  visibility:visible;
 }
 
-.professions-tabs input[type="radio"]:checked + label + .professions-tab {
-  display: block;
-  transform: translateX(0)
+.pro-panel h2{
+  font-size:clamp(var(--fs-600), 1.25rem + 1.1vw, var(--fs-800));
+  letter-spacing:0.05em;
+  color:var(--accent);
+  font-weight:var(--fw-semi-bold);
+  text-align:center;
+  margin-bottom:var(--size-3);
 }
 
+.pro-panel p{
+  font-size:var(--fs-400);
+  margin-block:var(--size-3);
+  line-height:var(--line-height-loose);
+  color:var(--ltclr);
+}
 
-/* --- DESKTOP ENHANCEMENTS (MIN-WIDTH QUERIES) --- */
+.pro-panel .button-wrapper{
+  text-align:center;
+  margin-top:var(--size-8);
+}
+
+/* no motion anywhere until the design is final:
+   the global .btn carries transition:all and a pulse animation,
+   and that transition kept the old button on screen after a switch */
+.professions .btn{
+  transition:none;
+  animation:none;
+}
+
+/* match the Features section's button sizing exactly */
+.professions .primary-btn{
+  font-size:var(--fs-350);
+  padding:var(--size-3) var(--size-8);
+}
 
 /* ==========================================
-   LARGE DESKTOP - min-width: 48em (768px)
+   TABLET AND UP - min-width: 48em (768px)
    ========================================== */
 
-@media screen and (min-width: 48em) {
-  /* Desktop Multi-Column Layout */
-  .tabs label, .professions-tabs label {
-    order: 1;
+@media screen and (min-width: 48em){
+
+  /* picture grid left, content right; this gap is the one dial
+     for the distance between them */
+  .professions{
+    grid-template-columns:minmax(0, 2fr) minmax(0, 3fr);
+    gap:var(--size-10);
+    align-items:center;
   }
 
-  .tabs .tab, .professions-tabs .professions-tab {
-    order: 99;
+  .pro-name{
+    font-size:var(--fs-350);
   }
 
-  /* Desktop Grid Layout */
-  .tab-content {
-    grid-template-columns: 1fr 2fr;
+  /* reserve the tallest panel's height so nothing shifts on selection */
+  .pro-panel{
+    display:block;
+    grid-area:1 / 1;
+    visibility:hidden;
   }
 
-  /* Active Tab Indicator */
-  .professions-tabs input:checked + label::after {
-    content: '';
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    margin: auto auto;
-    background: var(--accent);
-    margin-inline: var(--size-750);
+  .pro-panel h2{
+    margin-bottom:var(--size-5);
+    text-align:start;
+    line-height:var(--line-height-tight);
   }
+
+  .pro-panel .button-wrapper{
+    text-align:start;
+  }
+
 }
 </style>
-
