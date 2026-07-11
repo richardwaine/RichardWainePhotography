@@ -216,7 +216,7 @@ strong{
 
 .wrapper{
   margin-inline:auto;
-  width: calc(100% - var(--size-7));
+  width: calc(100% - var(--size-8));
 
     @media (min-width: 64em) {
     width: 80%;
