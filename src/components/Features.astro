@@ -295,7 +295,7 @@ document.addEventListener("astro:page-load", () => {
   margin-inline: auto;
   place-items: center;
   width: 100%;
-  width: calc(100% - var(--size-7));
+  width: calc(100% - var(--size-8));
 }
 
 
@@ -323,7 +323,7 @@ p {
 
 .slide-content h2 {
   text-transform: uppercase;
-  font-size: var(--fs-800);
+  font-size: clamp(var(--fs-600), 1.25rem + 1.1vw, var(--fs-800));
   letter-spacing: 0.05em;
   color: var(--accent);
   font-weight: var(--fw-semi-bold);
