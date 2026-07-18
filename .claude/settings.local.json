@@ -75,8 +75,26 @@
       "WebFetch(domain:openai.com)",
       "WebFetch(domain:claude.com)",
       "mcp__claude_ai_MailerLite__batch_requests",
-      "WebFetch(domain:workspace.vsco.co)"
+      "WebFetch(domain:workspace.vsco.co)",
+      "Bash(file *transparent.png)",
+      "WebFetch(domain:docs.n8n.io)"
     ],
     "deny": []
-  }
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/richardwaine/.claude/skills/impeccable/scripts/hook.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Checking UI changes"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "Impeccable design detector: runs after Edit/Write/MultiEdit on UI files and surfaces findings as system reminders."
 }
