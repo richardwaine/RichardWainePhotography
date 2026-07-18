@@ -1,24 +1,91 @@
 ---
+// @ts-nocheck
 import MainLayout from '../layouts/MainLayout.astro';
-import PageTitle from '../components/PageTitle.astro';
-
 import { Image } from 'astro:assets';
-import richardHeadshot from '../assets/images/about/Richard Waine 20230315 (500px).jpg';
+import PrimaryButton from '../components/PrimaryButton.astro';
+import SecondaryButton from '../components/SecondaryButton.astro';
+
+import heroBg from '../assets/images/blog/RW7 - (16 x 9).jpg';
+import richardHeadshot from '../assets/images/about/Richard Waine 20230315 (horizontal).jpg';
 import bermudaCruisePhoto from '../assets/images/about/Richard and Ilyse - HeadshotCrewz - Bermuda.jpg';
-import lintRollerPhoto from '../assets/images/about/Richard Waine Using Lint Roller.jpg';
-import rwFinalV1Still from '../assets/images/about/RW_FINAL_V1_FOR REVIEW.00_00_48_06.Still004 (16 x 9) - compressed.jpg';
-import img1912 from '../assets/images/about/IMG_1912.jpeg';
-import harley1 from '../assets/images/about/Harley-1.jpeg';
 import rwInSession from '../assets/images/about/RW - in session.jpg';
-import HSCMentor from '../assets/images/logos/HSC - Mentor.jpg';
-import HSCLogo from '../assets/images/logos/HSC - White.jpg';
-import JPEGmini from '../assets/images/logos/JPEGmini.jpg';
-import SavageLogo from '../assets/images/logos/SavageLogo.jpg';
-import TetherTools from '../assets/images/logos/TetherTools.png';
-import ThinkTank from '../assets/images/logos/ThinkTank.jpg';
+import hscMentorBadge from '../assets/images/logos/HSC - Mentor.jpg';
+import harley1 from '../assets/images/about/Harley-1.jpeg';
 
+import award2019 from '../assets/images/lcm-awards/2019_LCMAmongBestOfLanc-transparent.png';
+import award2020 from '../assets/images/lcm-awards/2020_BestofLanc-transparent.png';
+import award2021 from '../assets/images/lcm-awards/2021_BestOfLanc-transparent.png';
+import award2022 from '../assets/images/lcm-awards/2022_BestOfLanc-transparent.png';
+import award2024 from '../assets/images/lcm-awards/2024_BestofLanc-transparent.png';
+import jpegminiLogo from '../assets/images/logos/JPEGmini-white.jpg';
+import savageLogo from '../assets/images/logos/SavageLogo-white.png';
+import tetherToolsLogo from '../assets/images/logos/TetherTools.png';
+import thinkTankLogo from '../assets/images/logos/ThinkTank.jpg';
+import hscWhiteLogo from '../assets/images/logos/HSC - White.jpg';
 
-const h1 ='About Richard Waine';
+const tabs = [
+	{
+		id: "story",
+		headline: "From Wall Street to the Studio",
+		pullQuote: "“One of the best photographers in the world.”",
+		pullAttrib: "— Peter Hurley",
+		blocks: [
+			"In 2006, I bought my first camera, and began taking pictures of anything and everything. I wasn't very good, and I had no idea why my pictures were as awful as they were, but I enjoyed every second of it.",
+			"I had hoped to capture images of my then-girlfriend's son on the wrestling mat. I saw other photographers with fancy cameras and equipment, so I followed suit. I accumulated a ton of gear, and didn't have the slightest understanding of how to take a good picture. I turned to YouTube for help.",
+			"I stumbled across a video where Peter Hurley, the foremost authority on headshots in the world, was speaking. He was a powder keg of energy, with a magnetic personality. On top of that, his images were beautiful! It was instant inspiration for me. I needed to find a way to learn more, and I needed to meet Peter.",
+			"I knew that if photography was like any other profession, there would be a conference at some point. That year, I attended my first photography conference in New York City. I attended Peter's talk, where he discussed his craft and did a live demonstration. He was hysterical and awe inspiring. The energy he put out was incredible. I didn't understand how he did it, but becoming a headshot photographer was my new goal.",
+			"I found my way to a party that Peter was co-hosting with the F-stoppers crew. I grabbed a drink and introduced myself. Peter was so personable, and enjoyable to talk to. We discussed his antics on stage, and had a few laughs at the ridiculousness.",
+			"Naturally, he asked to see my work. I showed him a few pictures on my mobile phone. With absolutely no hesitation, he informed me that I “fuckin' suck.” I thanked him, sarcastically, for the confidence booster. Instead of walking away, however, I hung out with him until he invited me to join his coaching platform, formerly known as Ph2Pro. Today this platform is known as The Headshot Crew.",
+			"I began the coaching process with Peter. He didn't sugar coat his critiques, but I did learn. He helped me establish the foundation of my new career, both from a technical and an artistic perspective. With time, I began to understand my previous errors, but most importantly, I was correcting them.",
+			"It was at this point that I made one of the dumbest, but most ambitious decisions of my life. I stepped away from my Wall Street career as a bond analyst, and embarked on a life as headshot photographer. When Peter found out, he thought I had lost my mind.",
+			"An important element of Peter's coaching system is to promote his students as they successfully assemble a portfolio of images, which meets his standards. Through his signature review process, he studies each image, provides feedback, and if 15 images are accepted, Peter bestows the designation of Associate Photographer.",
+			"The Headshot Crew had planned a cruise to Bermuda. We would do some learning and shooting on-board, and also make a nice vacation of the trip. As plain as day, there was my opportunity.",
+			"My review began. 20 images submitted, 15 needed to make Associate. He picked out a few things to talk about here and there. Then… SHA-BANG! … SHA-BANG! … SHA-BANG! … SHA-BANG! In total, 19 out of 20 images were accepted, and I received 4 SHA-BANGs. With that, Peter made me an Associate photographer. My dear friends, who I had known since the beginning of this journey, offered hugs and congratulations. My wife beamed with pride. This was not an easy accomplishment.",
+			"That evening, my wife and I were seated at a hibachi table at a Japanese restaurant on board the cruise ship. We were seated with folks we didn't know. Suddenly, Peter was behind us, with arms wrapped around both of us. He proudly announced to the table that they were sitting with “one of the best photographers in the world.” It was an amazing feeling, and that was one of the coolest memories I've ever had.",
+			"Today, I am a Mentor in the Headshot Crew, a global community of more than 14,000 headshot photographers. I have been shooting headshots exclusively for over 17 years, and am a brand ambassador for a handful of photography related companies. I respect my humble photography roots, and appreciate the success I have enjoyed. I look forward to assisting my clients on their journey for success, and that begins with helping them to embrace their physical appearance and elevate their personal brands."
+		]
+	},
+	{
+		id: "experience",
+		headline: "More Than a Photograph",
+		pullQuote: "“Authentically you.”",
+		pullAttrib: "",
+		blocks: [
+			"My goal is to provide you with high quality images that best represent you, your message, and your brand within the construct of a high-end, enjoyable, and dynamic experience.",
+			"An impression is made within the first few seconds of seeing someone. You don't have the luxury of wasting an opportunity to impress. A visual representation of your unique personality and message to your audience, your competence and your approachability is paramount.",
+			"Whether you are in need of an updated LinkedIn profile photo, taking control of your digital identity, or you're looking for an amazing photo for a dating profile, you've come to the right place!",
+			"It is cheaper, faster and more efficient to get things right the first time. I coach and direct you into positions and expressions that resonate with your target audience.",
+			"I want you to leave my studio having had an incredible experience, and with images that not only captivate your audience, but are authentically you."
+		]
+	},
+	{
+		id: "credentials",
+		headline: "17 Years. One Specialty.",
+		pullQuote: "“Best Photographer — 4× Winner”",
+		pullAttrib: "— Lancaster County Magazine",
+		blocks: [
+			"I have spent the majority of my photography career working in commercial headshots and portraiture.",
+			"I have been a headshot judge for the International Model and Talent Association, am a member of the Professional Photographers of America, Wedding & Portrait Photographers International, and National Association of Photoshop Professionals.",
+			"I was voted Best Photographer by Lancaster County Magazine readers in 2024, 2022, 2021, and 2020, and placed second in 2019.",
+			"I am an associate photographer and mentor in Peter Hurley's Headshot Crew, and am a brand ambassador for Phase One and Savage Universal, and an affiliate of major companies like JPEGmini and Think Tank Photo.",
+			"I have been published on many occasions, and continue to be a thought leader on the topics of personal branding and headshot photography.",
+			"All this really means is that I am a professional headshot specialist, and I am an expert in bringing out the very best in you, translating your message into a visual representation and providing an experience second to none!"
+		]
+	},
+	{
+		id: "personal",
+		headline: "Behind the Camera",
+		pullQuote: "“She has me wrapped around her paw... and she knows it!”",
+		pullAttrib: "— On Harley",
+		blocks: [
+			"I am an avid fan of music, with eclectic taste and a constant desire to play the air drums. I have been a guitarist, drummer and saxophonist since I was around 9 years old, and I still play music that was popular in the 1950's.",
+			"I enjoy a good beer, and simply can't function without my morning coffee. Having spent my prior life on Wall Street, I'm also a business and finance geek.",
+			"I live in Lancaster, Pennsylvania with my family and our amazing dog, Harley.",
+			"Harley is a Golden Doodle. Despite being a behavior school drop-out, she is exceptionally well mannered, well behaved and lives to give kisses. She loves people, long walks in the backyard, and enjoys a good beer from time to time. She's partial to lagers, and won't even try a glass of wine or champagne.",
+			"Besides being follically challenged (as much as I hate to admit it, I'm losing my hair), my infatuation with hats started when I was around 8 or 9 years old. I had broken my nose and the plastic surgeon who stitched me up wanted to ensure that any scarring was minimal. He insisted I wear a hat to keep the sun from my face. I never dropped the habit. Today, my collection of hats is insane, even though I'm usually seen in one or two particular black hats."
+		]
+	}
+];
 ---
 
 <MainLayout title= "About Headshot Photographer Richard Waine" description="About Richard Waine, professional headshot photographer in Lancaster PA. Specializing in corporate headshots, business portraits, executive photography, and LinkedIn profile photos">
@@ -50,283 +117,650 @@ const h1 ='About Richard Waine';
 	}
 	</script>
 
-<main>
-        <PageTitle title={h1} />
-
-        <div class="wrapper">
-            <div>
-                <h2>THE STORY</h2>
-
-                <p>In 2006,  I bought my first camera, and began taking pictures of anything and everything. I wasn’t very good, and I had no idea why my pictures were as awful as they were, but I enjoyed every second of it.</p>
-
-                <p>I had hoped to capture images of my then-girlfriend's son on the wrestling mat. I saw other photographers with fancy cameras and equipment, so I followed suit.</p>
-
-                <p>I accumulated a ton of gear, and didn’t have the slightest understanding of how to take a good picture.  I turned to YouTube for help.</p>
-
-            </div>
-
-            <div class="two-cols call-out">
-                <Image class="rw-headshot" src={richardHeadshot} alt="Professional headshot of Richard Waine Lancaster Pennsylvania headshot photographer with short brown hair receding hairline and trimmed brown and gray beard wearing tortoise-shell frame eyeglasses and dark gray quarter-zip fleece pullover photographed against black studio background with dramatic studio lighting by colleague photographer Sanjeev Singhal" width={400} height={400} loading="lazy" />
-
-                <div>
-                    <p>I stumbled across a video where Peter Hurley, the foremost authority on headshots in the world, was speaking. He was a powder keg of energy, with a magnetic personality. On top of that, his images were beautiful! It was instant inspiration for me. I needed to find a way to learn more, and I needed to meet Peter.</p>
-
-                    <p>I knew that if photography was like any other profession, there would be a conference at some point. That year, I attended my first photography conference in New York City. I attended Peter’s talk, where he discussed his craft and did a live demonstration. He was hysterical and awe inspiring. The energy he put out was incredible. I didn’t understand how he did it, but becoming a headshot photographer was my new goal.</p>
-                </div>
-            </div>
-
-
-
-            <div>
-                <p>I found my way to a party that Peter was co-hosting with the F-stoppers crew.  I grabbed a drink and introduced myself. Peter was so personable, and enjoyable to talk to. We discussed his antics on stage, and had a few laughs at the ridiculousness.</p>
-
-                <p>Naturally, he asked to see my work. I showed him a few pictures on my mobile phone.  With absolutely no hesitation, he informed me that I “fuckin’ suck.” I thanked him, sarcastically, for the confidence booster.  Instead of walking away, however, I hung out with him until he invited me to join his coaching platform, formerly known as Ph2Pro. Today this platform is known as The Headshot Crew.</p>
-
-                <p>I began the coaching process with Peter.  He didn’t sugar coat his critiques, but I did learn.  He helped me establish the foundation of my new career, both from a technical and an artistic perspective. With time, I began to understand my previous errors, but most importantly, I was correcting them.</p>
-
-                <p>It was at this point that I made one of the dumbest, but most ambitious decisions of my life.  I stepped away from my Wall Street career as a bond analyst, and embarked on a life as headshot photographer.  When Peter found out, he thought I had lost my mind.</p>
-
-            </div>
-
-
-            <div class="two-cols-reverse call-out">
-
-                <p>An important element of Peter’s coaching system is to promote his students as they successfully assemble a portfolio of images, which meets his standards. Through his signature review process, he studies each image, provides feedback, and if 15 images are accepted, Peter bestows the designation of Associate Photographer. This means that Peter believes the work is of the highest quality and consistency, and that he can confidently refer work to that photographer.</p>
-
-                <Image src={lintRollerPhoto} alt="Behind-the-scenes photograph of headshot photographer Richard Waine wearing black baseball cap using lint roller to prepare male client's clothing during professional headshot session with photography equipment visible in background at Lancaster Pennsylvania studio" width={400} height={300} loading="lazy" />
-            </div>
-
-            <div class="two-cols">
-                <Image src={bermudaCruisePhoto} alt="Photo of Richard Waine Lancaster Pennsylvania headshot photographer wearing black baseball cap with yellow M logo and black polo shirt with wife aboard Norwegian Breakaway cruise ship during Headshot Crewz professional photography conference trip to Bermuda 2016" width={400} height={300} loading="lazy" />
-
-                <div>
-                    <p>The Headshot Crew had planned a cruise to Bermuda.  We would do some learning and shooting on- board, and also make a nice vacation of the trip. As plain as day, there was my opportunity.</p>
-
-                    <p>For those who are unfamiliar with Peter, he uses the word SHA-BANG! as an enthusiastic response to... well, just about anything.</p>
-
-                    <p>My review began. 20 images submitted, 15 needed to make Associate. He picked out a few things to talk about here and there.  Then… SHA-BANG! … SHA-BANG! … SHA-BANG! … SHA-BANG!</p>
-
-                    <p>In total, 19 out of 20 images were accepted, and I received 4 SHA-BANGs.  With that, Peter made me an Associate photographer. My dear friends, who I had known since the beginning of this journey, offered hugs and congratulations. My wife beamed with pride.  This was not an easy accomplishment.</p>
-
-                    <p>That evening, my wife and I were seated at a hibachi table at a Japanese restaurant on board the cruise ship.  We were seated with folks we didn’t know. Suddenly, Peter was behind us, with arms wrapped around both of us.  He proudly announced to the table that they were sitting with "one of the best photographers in the world." It was an amazing feeling, and that was one of the coolest memories I’ve ever had.</p>
-
-                </div>
-
-            </div>
-
-            <div class="call-out">
-                <p>Today, I am a Mentor in the Headshot Crew, a global community of more than 14,000 headshot photographers. I have been shooting headshots exclusively for over 17 years, and am a brand ambassador for a handful of photography related companies. I respect my humble photography roots, and appreciate the success I have enjoyed. I look forward to assisting my clients on their journey for success, and that begins with helping them to embrace their physical appearance and elevate their personal brands.
-
-                </p>
-            </div>
-
-            <div class="two-cols-reverse">
-                <div>  
-                    <h2>THE EXPERIENCE</h2>
-                    
-                        <p>My goal is to provide you with high quality images that best represent you, your message, and your brand within the construct of a high-end, enjoyable, and dynamic experience.</p>
-
-                        <p>An impression is made within the first few seconds of seeing someone.  You don't have the luxury of wasting an opportunity to impress.  A visual representation of your unique personality and message to your audience, your competence and your approachability is paramount.</p>
-
-                        <p>Whether you are in need of an updated LinkedIn profile photo, taking control of your digital identity, or you're looking for an amazing photo for a dating profile, you've come to the right place!</p>
-
-                        <p>It is cheaper, faster and more efficient to get things right the first time.  I coach and direct you into positions and expressions that resonate with your target audience.</p>
-
-                        <p>I want you to leave my studio having had an incredible experience, and with images that not only captivate your audience,  but are authentically you.</p>
-                </div>
-                
-                <Image src={rwFinalV1Still} alt="Professional headshot photographer Richard Waine photographing a business professional in Lancaster PA studio with dual monitor setup displaying corporate headshots" width={400} height={225} loading="lazy" />
-            
-            </div>
-
-
-            <div class="call-out">
-                <h2>MY BIO</h2>
-
-                <p>I have spent the majority of my photography career working in commercial headshots and portraiture. I have been a headshot judge for the International Model and Talent Association, am a member of the Professional Photographers of America, Wedding & Portrait Photographers International, and National Association of Photoshop Professionals. I was voted Best Photographer by Lancaster County Magazine readers in 2024, 2022, 2021, and 2020, and placed second in 2019. I am an associate photographer and mentor in Peter's Hurley's Headshot Crew, and am a brand ambassador for Phase One and Savage Universal, and an affiliate of major companies like JPEGmini and Think Tank Photo. I have been published on many occasions, and continue to be a thought leader on the topics of personal branding and <a href="/">headshot photography</a>.</p>
-
-                <p>All this really means is that I am a professional headshot specialist, and I am an expert in bringing out the very best in you, translating your message into a visual representation and providing an experience second to none!</p> 
-
-            </div>
-
-            <div class="two-cols">
-                <Image src={img1912} alt="Behind-the-scenes photograph of headshot photographer Richard Waine wearing black baseball cap photographing male client in blue shirt with tethered camera setup connected to laptop against exposed brick wall at Lancaster Pennsylvania studio" width={400} height={600} loading="lazy" />
-                
-                <div>
-                    <p>I am an avid fan of music, with eclectic taste and a constant desire to play the air drums.  I have been a guitarist, drummer and saxophonist since I was around 9 years old, and I still play music that was popular in the 1950's.</p>
-
-                    <p>I enjoy a good beer, and simply can't function without my morning coffee. Having spent my prior life on Wall Street, I’m also a business and finance geek.</p>
-
-                    <p>I live in Lancaster, Pennsylvania with my family and our amazing dog, Harley. </p>
-
-                </div>
-            </div>
-
-
-            <div class="two-cols-reverse">
-                <div>
-                    <p>Harley knows her best side.  See, she's showing it off!</p>
-
-                    <p>Don't get thrown off by the fact that she is adorable.  She also has a thing for strolling through fresh mulch.</p>
-
-                    <p>Hars, as we affectionately call her, is a Golden Doodle.  Despite being a behavior school drop-out, she is exceptionally well mannered, well behaved and lives to give kisses.</p>
-
-                    <p>She loves people, long walks in the backyard, and enjoys a good beer from time to time.  She's partial to lagers, and won't even try a glass of wine or champagne.  She prefers watching Football and sharing a few pretzels with friends and family.</p>
-
-                    <p>Yes, she has me wrapped around her paw...and she knows it!</p>
-                </div>
-
-                <Image src={harley1} alt="Portrait photograph of golden doodle dog named Harley with white and cream-colored wavy fur covered in mulch and dark expressive eyes looking at camera after playing outdoors standing on beige tile floor" width={400} height={400} loading="lazy" />
-            </div>
-
-
-            <div class="two-cols call-out">
-                <Image src={rwInSession} alt="Behind-the-scenes photograph of headshot photographer Richard Waine wearing black baseball cap and black shirt with lavalier microphone attached to collar smiling during headshot session with camera and white studio lighting visible in foreground at Lancaster Pennsylvania studio in 2017" width={400} height={300} loading="lazy" />
-                
-                <div>
-                    <h2>
-                    WHY DO YOU ALWAYS WEAR A HAT?
-                    </h2>
-
-                    <p>Besides being follically challenged (as much as I hate to admit it, I'm losing my hair), my infatuation with hats started when I was around 8 or 9 years old.  I had broken my nose and the plastic surgeon who stitched me up wanted to ensure that any scarring was minimal. He insisted I wear a hat to keep the sun from my face.  I never dropped the habit. Today, my collection of hats is insane, even though I'm usually seen in one or two particular black hats.</p>
-                </div>
-            </div>
-
-
-            <iframe class="promo-video"  src="https://www.youtube.com/embed/Ys6NQmi9tqg?rel=0" 
-            title="How to Elevate your brand with headshot photography" 
-            frameborder="0" allow="accelerometer; autoplay; 
-            clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-            web-share" allowfullscreen></iframe>
-
-
-
-        
-            <div class="companies">
-                <Image class="" src={TetherTools} alt="Tether Tools logo" loading="lazy" />
-
-                <Image class="" src={HSCMentor} alt="Headshot Crew Mentor logo" loading="lazy" />
-
-                <Image class="" src={HSCLogo} alt="Headshot Crew logo" loading="lazy" />
-
-                <Image class="" src={SavageLogo} alt="Savage Universal logo" loading="lazy" />
-
-                <Image class="" src={JPEGmini} alt="JPEGmini logo" loading="lazy" />
-
-                <Image class="" src={ThinkTank} alt="ThinkTank logo" loading="lazy" />
-            </div>
-
-        </div>
-
-
+<main class="about-page">
+
+	<!-- HERO (ServiceHero pattern: text left, blueprint-box portrait right at desktop) -->
+	<section class="hero">
+		<Image
+			class="hero-bg"
+			src={heroBg}
+			alt="Richard Waine photographing in studio"
+			loading="eager"
+			fetchpriority="high"
+			widths={[400, 600, 800, 1200, 1600]}
+			sizes="100vw"
+		/>
+
+		<div class="hero-text">
+			<h1>About <br><span class="cyan">Richard</span></h1>
+			<p class="hero-p">Professional headshot photographer, facial expression coach, and trusted advisor. Helping individuals and businesses look their best since 2008.</p>
+			<div class="action-group">
+				<div class="button-wrapper">
+					<PrimaryButton text="GET PRICING" url="/rates" />
+				</div>
+				<div class="button-wrapper">
+					<SecondaryButton text="SCHEDULE CONSULT" url="https://app.acuityscheduling.com/schedule/f0843291/appointment/11959793/calendar/1133425?appointmentTypeIds[]=11959793" />
+				</div>
+			</div>
+		</div>
+
+		<div class="hero-visual">
+			<div class="blueprint-box">
+				<div class="portrait-sim">
+					<Image quality="max" src={richardHeadshot} alt="Richard Waine, professional headshot photographer in Lancaster PA" width={3000} height={2400} />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TABS + CONTENT -->
+	<div class="tab-layout">
+		<div class="tab-col">
+			<button class="tab-btn active" data-tab="story">The Story</button>
+			<button class="tab-btn" data-tab="experience">The Experience</button>
+			<button class="tab-btn" data-tab="credentials">Credentials</button>
+			<button class="tab-btn" data-tab="personal">The Person</button>
+		</div>
+
+		<div class="tab-main" id="tabMain">
+			{tabs.map((tab) => (
+				<div class={`tab-content${tab.id === "story" ? " active" : ""}`} data-for={tab.id}>
+					<h2>{tab.headline}</h2>
+					<div class="pull-quote">
+						<div class="q">{tab.pullQuote}</div>
+						{tab.pullAttrib && <div class="attrib">{tab.pullAttrib}</div>}
+					</div>
+					{tab.blocks.map((block) => <p>{block}</p>)}
+				</div>
+			))}
+
+			<figure class="tab-photo active" data-for="story">
+				<Image src={bermudaCruisePhoto} alt="Richard Waine and his wife Ilyse aboard the Headshot Crew cruise to Bermuda" width={700} />
+			</figure>
+			<figure class="tab-photo" data-for="experience">
+				<Image src={rwInSession} alt="Richard Waine directing a headshot session in his Lancaster PA studio" width={700} />
+			</figure>
+			<figure class="tab-photo tab-photo-awards" data-for="credentials">
+				<div class="award-grid">
+					<Image src={award2024} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2024" width={190} />
+					<Image src={award2022} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2022" width={190} />
+					<Image src={award2021} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2021" width={190} />
+					<Image src={award2020} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2020" width={190} />
+					<Image src={award2019} alt="Among the Best of Lancaster, Lancaster County Magazine 2019" width={190} />
+				</div>
+			</figure>
+
+			<figure class="tab-photo" data-for="personal">
+				<Image src={harley1} alt="Harley, Richard Waine's Golden Doodle" width={700} />
+			</figure>
+		</div>
+
+		<!-- direct child of the section grid: spans rail + content, centered by construction -->
+		<figure class="tab-photo logo-band" data-for="credentials">
+			<div class="band-kicker">Brand Partner &amp; Ambassador</div>
+			<div class="band-logos">
+				<Image class="logo-invert" src={tetherToolsLogo} alt="Tether Tools logo" width={200} />
+				<Image class="logo-invert logo-compact" src={hscMentorBadge} alt="Headshot Crew Mentor logo" width={200} />
+				<Image class="logo-invert" src={hscWhiteLogo} alt="Headshot Crew logo" width={200} />
+				<Image class="logo-compact" src={savageLogo} alt="Savage Universal logo" width={200} />
+				<Image class="logo-on-dark" src={jpegminiLogo} alt="JPEGmini logo" width={200} />
+				<Image class="logo-on-dark" src={thinkTankLogo} alt="ThinkTank logo" width={200} />
+			</div>
+		</figure>
+	</div>
 
 </main>
 
+<script is:inline>
+(function () {
+	function initAboutTabs() {
+		const mainEl = document.getElementById('tabMain');
+		if (!mainEl) return;
+		const buttons = document.querySelectorAll('.tab-btn');
+
+		function showPhoto(id) {
+			document.querySelectorAll('.tab-photo').forEach(function (f) {
+				f.classList.toggle('active', f.dataset.for === id);
+			});
+		}
+
+		/* all four tabs are server-rendered; switching a tab only toggles which one displays */
+		function render(id) {
+			document.querySelectorAll('.tab-content').forEach(function (el) {
+				el.classList.toggle('active', el.dataset.for === id);
+			});
+		}
+
+		/* The height change on swap makes the browser and Lenis adjust scroll on their own,
+		   which is the visible jump. Pin the scroll position through the swap instead:
+		   stay exactly where we are, unless that would leave the content top above the
+		   viewport — then sit at the content top. Applied instantly, no motion. */
+		function pinScrollThroughSwap(savedY) {
+			const layout = document.querySelector('.tab-layout');
+			const headerH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
+			const contentTop = layout.getBoundingClientRect().top + window.scrollY - headerH;
+			const target = Math.min(savedY, contentTop);
+			if (window.lenis) {
+				window.lenis.resize();
+				window.lenis.scrollTo(target, { immediate: true, force: true });
+			} else {
+				window.scrollTo(0, target);
+			}
+		}
+
+		buttons.forEach(function (btn) {
+			btn.addEventListener('click', function () {
+				if (btn.classList.contains('active')) return;
+				buttons.forEach(function (b) { b.classList.remove('active'); });
+				btn.classList.add('active');
+				mainEl.classList.add('fading');
+				setTimeout(function () {
+					const savedY = window.lenis ? window.lenis.scroll : window.scrollY;
+					render(btn.dataset.tab);
+					showPhoto(btn.dataset.tab);
+					mainEl.classList.remove('fading');
+					/* pin one frame later, after the browser and Lenis have reacted to the height change */
+					requestAnimationFrame(function () {
+						requestAnimationFrame(function () {
+							pinScrollThroughSwap(savedY);
+						});
+					});
+				}, 300);
+			});
+		});
+
+		render('story');
+	}
+
+	document.addEventListener('astro:page-load', initAboutTabs);
+	document.addEventListener('DOMContentLoaded', initAboutTabs);
+})();
+</script>
 
 </MainLayout>
 
 <style>
-
-
-    h2{
-        font-weight:var(--fw-bold);
-    }
-
-    p{
-    margin-bottom:var(--size-3);
-    
-        }
-
-
-
-.wrapper > div{
-    margin-block:var(--size-9);
+:root {
+	--bg: #050505;
 }
 
-.two-cols, .two-cols-reverse{
-    
-    display:grid;
-    grid-template-columns: 2fr;
-    align-items:center;
-    justify-content:center;
-    justify-items:center;
-    gap:var(--size-7);
-      
+.about-page {
+	background: var(--bg);
+	color: var(--ltclr);
+	/* stop the browser's scroll anchoring from shifting the page when tab content swaps */
+	overflow-anchor: none;
 }
 
-.two-cols-reverse{
-        grid-template-columns: 1fr;
-  
-    }
-
-img{
-    width:min(400px, 100%);
-    height:auto;
-   
-   }
-
-
-
-.call-out{
---ltbg:#eee;
-
-    background:var(--ltbg);
-    padding:var(--size-8);
-    border-radius:var(--size-2);
+/* ===== HERO (ServiceHero pattern) ===== */
+.cyan {
+	color: var(--accent);
 }
 
-:is(.featured video, .promo-video){
-  --video-width:768px;
-  --video-height:432px;
-
-  width:min(var(--video-width), 100%);
-  aspect-ratio: 16 /9;
-  display:grid;
-  grid-template-columns: 1fr;
-  margin:var(--size-8) auto;
-  
-}
-  
-.companies{
-    margin-block:var(--size-10);
-    display:grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    align-items:center;
-    gap:var(--size-7);
-
-    img{
-        width:min(150px, 100%);
-        height:auto;
-        margin-inline:auto;
-    }
+.hero {
+	position: relative;
+	isolation: isolate; /* keeps the negative-layer bg photo above the .about-page background */
+	align-items: center;
+	padding-top: calc(var(--header-height) + var(--size-7));
+	padding-bottom: var(--size-825);
+	gap: var(--size-8);
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+	margin-inline: auto;
+	overflow: clip;
 }
 
+.hero-bg {
+	position: absolute;
+	inset: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center var(--header-height);
+	filter: grayscale(1);
+	opacity: .25;
+	z-index: -2;
+	overflow: hidden;
+}
+
+.hero-text {
+	margin-inline: auto;
+	width: min(700px, calc(100% - var(--size-7)));
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: clamp(40px, 5vw, 70px);
+	line-height: 1;
+	margin-bottom: var(--size-4);
+	font-weight: var(--fw-x-bold);
+	text-transform: uppercase;
+}
+
+.hero-p {
+	font-size: var(--fs-500);
+	text-align: center;
+	margin-bottom: var(--size-775);
+}
+
+.action-group {
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	align-items: center;
+	gap: var(--size-4);
+}
+
+.hero-visual {
+	position: relative;
+	justify-self: center;
+	width: calc(100% - var(--size-7));
+}
+
+.blueprint-box {
+	--_width: min(700px, 80%);
+	width: var(--_width);
+	margin-inline: auto;
+	height: auto;
+	background: transparent;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 10px 50px var(--shadow-clr-medium);
+}
+
+.portrait-sim {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: inset 0 0 60px rgba(3, 169, 244, 0.1);
+	overflow: clip;
+}
+
+.portrait-sim > :global(img) {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	
+}
+
+/* ===== TABS + CONTENT ===== */
+.tab-layout {
+	--_rail: clamp(120px, 22vw, 220px);
+	--_content-offset-top: clamp(var(--size-6), 5vw, var(--size-9));
+
+	/* Mobile base: single-column grid — tabs bar row, content row */
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+	border-top: 1px solid rgba(3, 169, 244, 0.08);
+	width: calc(100% - var(--size-8));
+	margin-inline: auto;
+	/* every tab fills at least one screen so a short tab can never force the page to slide down */
+	min-height: calc(100vh - var(--header-height));
+}
+
+/* Mobile base: 2x2 tab grid, no scrolling */
+.tab-col {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	border-bottom: 1px solid rgba(3, 169, 244, 0.08);
+}
+
+.tab-btn {
+	background: transparent;
+	border: none;
+	border-bottom: 3px solid transparent;
+	color: var(--faded);
+	padding: clamp(var(--size-3), 3.5vw, var(--size-5)) clamp(var(--size-250), 2.5vw, var(--size-4));
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: clamp(11px, 2.5vw, var(--fs-350));
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	white-space: nowrap;
+	text-align: center;
+	font-family: var(--ff-primary);
+	font-weight: var(--fw-normal);
+}
+
+.tab-btn.active {
+	background: rgba(3, 169, 244, 0.06);
+	border-bottom-color: var(--accent);
+	color: var(--ltclr);
+	font-weight: var(--fw-semi-bold);
+}
+
+/* no focus ring on mouse click; keyboard navigation keeps the site's orange indicator */
+.tab-btn:focus {
+	outline: none;
+}
+
+.tab-btn:focus-visible {
+	outline: 2px solid orange;
+	outline-offset: 2px;
+}
+
+@media (min-width: 64em) {
+	.tab-layout {
+		/* two explicit tracks: rail | content */
+		grid-template-columns: var(--_rail) 1fr;
+		grid-template-rows: none;
+		width: 80%;
+	}
+
+	/* the press band is a direct child of the section grid: it spans rail + content,
+	   so it is centered on the section with no offset math. Three classes so the
+	   90em .tab-photo.active photo-column rule can never claim it. */
+	.tab-photo.logo-band.active {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		margin-top: var(--size-8);
+	}
+
+	/* Side rail from tablet-landscape up */
+	.tab-col {
+		display: block;
+		width: 100%;
+		border-bottom: none;
+		border-right: 1px solid rgba(3, 169, 244, 0.08);
+		position: sticky;
+		top: var(--header-height);
+		align-self: flex-start;
+		/* start the tabs level with the section title, not the hero's edge */
+		margin-top: var(--_content-offset-top);
+	}
+
+	.tab-btn {
+		display: block;
+		width: 100%;
+		text-align: left;
+		white-space: normal;
+		border-bottom: 1px solid rgba(3, 169, 244, 0.04);
+		border-left: 3px solid transparent;
+	}
+
+	.tab-btn.active {
+		border-bottom-color: rgba(3, 169, 244, 0.04);
+		border-left-color: var(--accent);
+	}
+}
+
+.tab-main {
+	/* single-column grid on small screens; the 90em rule adds the photo column track.
+	   These base rules must sit ABOVE the 90em block so the wide-screen template wins the cascade. */
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: var(--_content-offset-top) clamp(var(--size-3), 4vw, 56px);
+	min-width: 0;
+	transition: opacity var(--transition-slow) ease, transform var(--transition-slow) ease;
+
+}
+
+.tab-main.fading {
+	opacity: 0;
+	transform: translateY(8px);
+}
+
+.tab-photo {
+	display: none;
+	margin: var(--size-7) 0 0 0;
+}
+
+.tab-photo.active {
+	display: block;
+}
+
+.tab-photo :global(img) {
+	width: min(400px, 100%);
+	height: auto;
+	box-shadow: 0 10px 40px var(--shadow-clr-medium);
+}
+
+/* all four tabs exist in the HTML; only the active one displays */
+.tab-content {
+	display: none;
+}
+
+.tab-content.active {
+	display: block;
+}
+
+/* Wide screens: two-column grid — title and quote span both columns,
+   paragraphs fill the left, photo sits right, starting on the first paragraph's row */
+@media (min-width: 90em) {
+	.tab-main {
+		/* one knob controls the photo/awards column width — everything in it scales */
+		--_photo-col: 530px;
+
+		display: grid;
+		grid-template-columns: 1fr var(--_photo-col);
+		column-gap: clamp(var(--size-5), 3vw, var(--size-8));
+		align-items: start;
+	}
+
+	.tab-content.active {
+		display: contents;
+	}
+
+	.tab-content :global(h2),
+	.tab-content :global(.pull-quote) {
+		grid-column: 1 / -1;
+	}
+
+	.tab-content :global(p) {
+		grid-column: 1;
+	}
+
+	.tab-photo.active {
+		grid-column: 2;
+		grid-row: 3 / span 30;
+		width: 100%;
+		margin: 0;
+	}
+
+	/* photos and badges fill whatever the column is set to */
+	.tab-photo :global(img) {
+		width: 100%;
+	}
+
+	/* Harley is a portrait orientation photo; scale her down inside the same column */
+	.tab-photo[data-for="personal"] :global(img) {
+		width: auto;
+		max-height: 520px;
+		display: block;
+		margin-inline: auto;
+	}
+
+}
+
+/* Credentials — awards: featured 2024 badge with the earlier years in a 2x2 grid,
+   badge-scale sizing, centered in the column */
+.tab-photo-awards {
+	text-align: center;
+}
+
+.tab-photo-awards :global(img) {
+	box-shadow: none;
+}
+
+.award-grid {
+	/* badge size in pixels — the only number to touch.
+	   The 3-over-2 configuration is fixed at any size. */
+	--_award-size: 150px;
+
+	display: grid;
+	grid-template-columns: repeat(6, calc(var(--_award-size) / 2));
+	gap: var(--size-4);
+	width: fit-content;
+	margin-inline: auto;
+}
+
+.award-grid :global(img) {
+	grid-column: span 2;
+	width: var(--_award-size);
+	height: var(--_award-size);
+	object-fit: contain;
+}
+
+/* last row of two, centered under the row of three */
+.award-grid :global(img:nth-child(4)) {
+	grid-column: 2 / span 2;
+}
+
+.award-grid :global(img:nth-child(5)) {
+	grid-column: 4 / span 2;
+}
+
+/* Credentials — press band: hairline rules, cyan kicker, centered line of white marks */
+.logo-band {
+	border-top: 1px solid rgba(3, 169, 244, 0.08);
+	border-bottom: 1px solid rgba(3, 169, 244, 0.08);
+	padding-block: var(--size-7);
+	
+}
+
+.band-kicker {
+	font-size: 12px;
+	letter-spacing: 2px;
+	font-weight: var(--fw-bold);
+	text-transform: uppercase;
+	color: var(--accent);
+	text-align: center;
+	margin-bottom: var(--size-7);
+}
+
+.band-logos {
+	/* explicit grid: 2 columns on phones, 3 on tablets, 6 across on desktop */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+	align-items: center;
+	gap: var(--size-10);
+}
+
+@media (min-width: 48em) {
+	.band-logos {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 64em) {
+	.band-logos {
+		/* auto tracks hug each logo; the gap is now the only thing that
+		   controls the space between them */
+		grid-template-columns: repeat(6, auto);
+		justify-content: center;
+	}
+}
+
+.band-logos :global(img) {
+	width: auto;
+	height: auto;
+	max-height: clamp(28px, 3vw, 44px);
+	max-width: clamp(110px, 11vw, 160px);
+	box-shadow: none;
+	opacity: 0.75;
+	transition: opacity 0.3s ease;
+}
+
+/* compact marks (Mentor badge, Savage oval) get extra height so they read
+   the same optical size as the wide wordmarks */
+.band-logos :global(img.logo-compact) {
+	max-height: clamp(40px, 4.2vw, 62px);
+}
+
+.band-logos :global(img.logo-invert) {
+	filter: grayscale(1) invert(1) brightness(1.2);
+	mix-blend-mode: screen;
+}
+
+.band-logos :global(img.logo-on-dark) {
+	filter: grayscale(1) brightness(1.2);
+	mix-blend-mode: screen;
+}
+
+.band-logos :global(img:hover) {
+	opacity: 1;
+}
+
+.tab-content :global(h2) {
+	font-family: var(--ff-primary);
+	text-transform: uppercase;
+	font-size: clamp(var(--fs-600), 4vw, var(--fs-800));
+	font-weight: var(--fw-bold);
+	line-height: var(--line-height-tight);
+	margin-bottom: clamp(var(--size-4), 3.5vw, var(--size-7));
+	color: var(--accent);
+}
+
+.tab-content :global(.pull-quote) {
+	border-left: 2px solid var(--accent);
+	padding-left: clamp(var(--size-250), 3vw, var(--size-5));
+	margin-bottom: clamp(var(--size-5), 4vw, var(--size-775));
+}
+
+.tab-content :global(.pull-quote .q) {
+	font-size: clamp(15px, 3.5vw, var(--fs-550));
+	font-style: italic;
+	color: var(--accent);
+	line-height: 1.4;
+	font-weight: var(--fw-normal);
+}
+
+.tab-content :global(.pull-quote .attrib) {
+	font-size: 11px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: var(--faded);
+	margin-top: var(--size-2);
+}
+
+.tab-content :global(p) {
+	font-size: var(--fs-400);
+	line-height: 1.85;
+	color: #cfd2d6;
+	margin-bottom: clamp(14px, 2.5vw, 22px);
+	font-family: var(--ff-secondary);
+}
 
 /* ==========================================
-   TABLET - min-width: 64em (1024px)
+   TABLET - min-width: 48em (768px)
    ========================================== */
-@media (min-width: 64em) {
-.companies{
-        grid-template-columns: repeat(6, 1fr);
+@media (min-width: 48em) {
+	.hero {
+		min-height: 100vh;
+		gap: var(--size-875);
+	}
 
-        img{
-            width:min(175px, 100%);
-            }
-        }
-
-.two-cols, .two-cols-reverse{
-    
-    display:grid;
-    grid-template-columns: 1fr 2fr;
-       
+	.action-group {
+		flex-direction: row;
+	}
 }
 
-.two-cols-reverse{
-        grid-template-columns: 2fr 1fr;
-  
-    }
+/* ==========================================
+   DESKTOP - min-width: 90em (1440px)
+   ========================================== */
+@media (min-width: 90em) {
+	.hero {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.hero h1 {
+		margin-inline: 0;
+		text-align: left;
+		margin-bottom: var(--size-2);
+		width: calc(100% - var(--size-7));
+	}
+
+	.hero-p {
+		text-align: left;
+	}
+
+	.action-group {
+		flex-direction: row;
+		justify-self: flex-start;
+	}
 }
-
-
 </style>
