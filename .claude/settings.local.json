@@ -77,7 +77,8 @@
       "mcp__claude_ai_MailerLite__batch_requests",
       "WebFetch(domain:workspace.vsco.co)",
       "Bash(file *transparent.png)",
-      "WebFetch(domain:docs.n8n.io)"
+      "WebFetch(domain:docs.n8n.io)",
+      "mcp__clarity__query-analytics-dashboard"
     ],
     "deny": []
   },
