@@ -229,6 +229,9 @@ const kellyGoochReview = buildReviewSchema(
 // FAQ schema
 const businessHeadshotsFAQSchema = buildFAQSchema(faqs);
 
+// This page's own address, filled in by Astro. The animation script reads it.
+const pagePath = Astro.url.pathname.replace(/\/$/, '');
+
 ---
 
 
@@ -277,7 +280,7 @@ const businessHeadshotsFAQSchema = buildFAQSchema(faqs);
     pillar3Description={pillar3Description}
 />
 
-<section class="system-section">
+<section class="system-section" data-page-path={pagePath}>
 
 <SystemRow
     reverse={true}
@@ -324,7 +327,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('astro:page-load', () => {
-if (window.location.pathname.replace(/\/$/, '') !== '/business-headshots') return;
+const pagePath = document.querySelector<HTMLElement>('[data-page-path]')?.dataset.pagePath;
+if (window.location.pathname.replace(/\/$/, '') !== pagePath) return;
 let mm = gsap.matchMedia();
 
   mm.add("(min-width: 48em)", () => {
