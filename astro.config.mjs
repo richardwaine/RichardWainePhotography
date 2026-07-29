@@ -24,6 +24,7 @@ enabled:false
       }
     }),
   ],
+  compressHTML: true,
   build: {
     inlineStylesheets: 'always'
   }
