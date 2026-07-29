@@ -17,7 +17,7 @@ const { title, post, prevPost, nextPost } = Astro.props;
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", url: Astro.site.href },
   { name: "Blog", url: new URL('/blog/', Astro.site).href },
-  { name: post.data.blogTitle, url: new URL(`/blog/${post.slug}/`, Astro.site).href }
+  { name: post.data.blogTitle, url: new URL(`/blog/${post.id}/`, Astro.site).href }
 ]);
 
 // Format the last updated date
@@ -197,12 +197,12 @@ const wordCount = countWords(post.body);
       <nav class="post-navigation">
         <div class={`nav-container ${!prevPost && nextPost ? 'next-only' : ''} ${prevPost && !nextPost ? 'prev-only' : ''}`}>
           {prevPost && (
-            <a href={`/blog/${prevPost.slug}`} class="nav-link prev-link">
+            <a href={`/blog/${prevPost.id}/`} class="nav-link prev-link">
               <span class="nav-arrow">←</span> {prevPost.data.blogTitle}
             </a>
           )}
           {nextPost && (
-            <a href={`/blog/${nextPost.slug}`} class="nav-link next-link">
+            <a href={`/blog/${nextPost.id}/`} class="nav-link next-link">
               {nextPost.data.blogTitle} <span class="nav-arrow">→</span>
             </a>
           )}

@@ -1,6 +1,6 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 // OLD CODE - COMMENTED OUT FOR BACKUP
 // export async function getStaticPaths() {
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
   });
 
   return allPosts.map((post, index) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: {
       post,
       prevPost: index > 0 ? allPosts[index - 1] : null,
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
 }
 
 const { post, prevPost, nextPost } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <BlogLayout
