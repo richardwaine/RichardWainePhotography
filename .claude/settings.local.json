@@ -78,7 +78,10 @@
       "WebFetch(domain:workspace.vsco.co)",
       "Bash(file *transparent.png)",
       "WebFetch(domain:docs.n8n.io)",
-      "mcp__clarity__query-analytics-dashboard"
+      "mcp__clarity__query-analytics-dashboard",
+      "Bash(cp src/pages/lawyer-headshots-draft.astro /tmp/lhd2.bak)",
+      "Bash(python3 -)",
+      "Bash(node --input-type=module -e ' *)"
     ],
     "deny": []
   },
