@@ -81,9 +81,24 @@
       "mcp__clarity__query-analytics-dashboard",
       "Bash(cp src/pages/lawyer-headshots-draft.astro /tmp/lhd2.bak)",
       "Bash(python3 -)",
-      "Bash(node --input-type=module -e ' *)"
+      "Bash(node --input-type=module -e ' *)",
+      "WebFetch(domain:chatra.com)"
     ],
-    "deny": []
+    "deny": [
+      "Edit(private/core-rules.md)",
+      "Write(private/core-rules.md)",
+      "Edit(private/BANNED-TERMS.md)",
+      "Write(private/BANNED-TERMS.md)",
+      "Edit(private/Page Content System/**)",
+      "Write(private/Page Content System/**)",
+      "Edit(private/TODO.md)",
+      "Write(private/TODO.md)",
+      "Edit(//Users/richardwaine/.claude/agents/**)",
+      "Write(//Users/richardwaine/.claude/agents/**)",
+      "Edit(//Users/richardwaine/.claude/skills/**)",
+      "Write(//Users/richardwaine/.claude/skills/**)",
+      "Bash(python3 -B -c:*)"
+    ]
   },
   "hooks": {
     "PostToolUse": [
