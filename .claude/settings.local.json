@@ -97,6 +97,10 @@
       "Write(//Users/richardwaine/.claude/agents/**)",
       "Edit(//Users/richardwaine/.claude/skills/**)",
       "Write(//Users/richardwaine/.claude/skills/**)",
+      "Edit(.claude/agents/**)",
+      "Write(.claude/agents/**)",
+      "Edit(.claude/skills/**)",
+      "Write(.claude/skills/**)",
       "Bash(python3 -B -c:*)"
     ]
   },
