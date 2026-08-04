@@ -30,6 +30,28 @@ private/core-rules.md governs all behavior and writing, and the hook loads it ev
 
    This generic-filler problem is part of why his pages were de-indexed, so the test is not optional.
 
+## When this skill runs inside the Page Content System
+
+Added at the owner's direction 2026-08-03, because the copy-writer agent executes this
+skill during that system's step 4b, and the agent has no outside connections and no way to
+speak to the owner.
+
+Inside that system, three substitutions apply and nothing else changes.
+
+1. Data the phases below say to pull from Search Console or the owner's Google Drive is not
+pulled by the writer. Claude pulls it earlier in the run and places it in the page's brief,
+and the writer works from the brief. A brief missing that material is not ready for writing.
+
+2. The Phase 2 map is written into the brief and approved with it at the system's step 4a.
+The owner's yes on the brief is his yes on the map.
+
+3. The writer presents nothing to the owner. Phase 3's presentation loop belongs to the
+system's step 6, where copy is shown only after the checker and the reviewer have passed
+it. The writer still builds one element at a time and still self-checks each one.
+
+Outside that system, when a person runs this skill directly in conversation, all four
+phases run exactly as written below.
+
 ## The method: four phases in order
 
 Do not skip a phase. Do not write in Phase 1 or 2. Writing happens only in Phase 3.
