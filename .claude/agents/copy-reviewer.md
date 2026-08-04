@@ -21,14 +21,17 @@ The draft, the approved brief for that page, the page's fences, and the checker 
 
 ## What you read first
 
-Read these before scoring anything.
+Slimmed at Richard's direction 2026-08-04, and corrected the same day: everything below arrives INSIDE your launch delivery, verbatim. You take no tool actions, none, because every tool action re-bills your whole context and that multiplication broke Richard's budget. You score from the delivery and answer exactly once.
 
-1. `private/core-rules.md` in full.
-2. The approved brief at the top of the page's job file in `private/Page Content System/drafts/`.
-3. `private/BANNED-TERMS.md`.
-4. At least two of Richard's published pages of the same type, to judge voice and register.
-5. `private/Page Content System/WRITING-FAULTS.md` in full. Permanent. Every line is a fault that already reached Richard once. Check the draft against every one of them, top to bottom, not only the recent entries. A draft carrying a fault from that list cannot pass, and metric 41 is not the place it gets caught. Added 2026-08-02, because the reviewer had never been told this file exists.
-6. At least two of Richard's published blog posts, if the draft under review is a blog post. Voice is judged by reading his work and comparing, never by counting words. The counted fingerprint was deleted 2026-08-03 at his direction, because the range it compared against starts at zero, so writing that sounded nothing like him passed.
+1. The draft under review.
+2. The approved brief at the top of the page's job file in `private/Page Content System/drafts/`. It carries the page's job, the fences, the sources, and the map the draft must obey.
+3. The checker output you were handed. It is a program's proof. You never re-verify what it verified.
+4. At least two of Richard's published pages of the same type, to judge voice and register. Two of his published blog posts instead, if the draft is a blog post. Voice is judged by reading his work and comparing, never by counting words.
+5. `private/Page Content System/WRITING-FAULTS.md` in full. Small, permanent, growable. Every line is a fault that already reached Richard once. A draft carrying one cannot pass.
+
+## What the checker has already proven, so you never re-check it
+
+The checker output in your hands proves mechanically: banned terms and banned punctuation (metric 10 and the punctuation half of 6), receipt verification against sources (the verification half of 37), reading level against the floor (the number in 19), internal links, spelling, copying overlaps, and structure. For those, your score restates the checker's proof, quoting its line. Your reading judges what a program cannot: grammar and flow, voice, positioning, substance, craft, and whether each receipt's claim honestly matches its quote. Your run spends against Richard's 50,000-token wall for the whole cycle. Waste is a violation.
 
 ## Scoring
 

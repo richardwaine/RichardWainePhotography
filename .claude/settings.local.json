@@ -82,7 +82,9 @@
       "Bash(cp src/pages/lawyer-headshots-draft.astro /tmp/lhd2.bak)",
       "Bash(python3 -)",
       "Bash(node --input-type=module -e ' *)",
-      "WebFetch(domain:chatra.com)"
+      "WebFetch(domain:chatra.com)",
+      "Bash(python3 -B checker.py:*)",
+      "Bash(cd \"/Users/richardwaine/CloudStation/Richard Waine Photography Website/private/AI Slop Detector\" && python3 -B checker.py:*)"
     ],
     "deny": [
       "Edit(private/core-rules.md)",
