@@ -84,28 +84,14 @@
       "Bash(node --input-type=module -e ' *)",
       "WebFetch(domain:chatra.com)",
       "Bash(python3 -B checker.py:*)",
-      "Bash(cd \"/Users/richardwaine/CloudStation/Richard Waine Photography Website/private/AI Slop Detector\" && python3 -B checker.py:*)"
+      "Bash(cd \"/Users/richardwaine/CloudStation/Richard Waine Photography Website/private/AI Slop Detector\" && python3 -B checker.py:*)",
+      "mcp__gbp-posting__gbp_list_locations"
     ],
-    "deny": [
-      "Edit(private/core-rules.md)",
-      "Write(private/core-rules.md)",
-      "Edit(private/BANNED-TERMS.md)",
-      "Write(private/BANNED-TERMS.md)",
-      "Edit(private/Page Content System/**)",
-      "Write(private/Page Content System/**)",
-      "Edit(private/TODO.md)",
-      "Write(private/TODO.md)",
-      "Edit(//Users/richardwaine/.claude/agents/**)",
-      "Write(//Users/richardwaine/.claude/agents/**)",
-      "Edit(//Users/richardwaine/.claude/skills/**)",
-      "Write(//Users/richardwaine/.claude/skills/**)",
-      "Edit(.claude/agents/**)",
-      "Write(.claude/agents/**)",
-      "Edit(.claude/skills/**)",
-      "Write(.claude/skills/**)",
-      "Bash(python3 -B -c:*)"
-    ]
+    "deny": []
   },
+  "enabledMcpjsonServers": [
+    "gbp-posting"
+  ],
   "hooks": {
     "PostToolUse": [
       {
