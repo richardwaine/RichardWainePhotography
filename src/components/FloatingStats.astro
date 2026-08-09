@@ -7,19 +7,19 @@ import { reviewCount } from '../data/testimonials';
 <div class="floating-stats" id="floatingStats">
     <div class="stat-card" data-delay="0">
         <div class="stat-3d-container">
-            <div class="stat-number" data-count="17">0</div>
+            <div class="stat-number" data-count="17">17</div>
             <div class="stat-label">Years Experience</div>
         </div>
     </div>
     <div class="stat-card" data-delay="200">
         <div class="stat-3d-container">
-            <div class="stat-number" data-count={reviewCount}>0</div>
+            <div class="stat-number" data-count={reviewCount}>{reviewCount}</div>
             <div class="stat-label">5-Star Google Reviews</div>
         </div>
     </div>
     <div class="stat-card" data-delay="400">
         <div class="stat-3d-container">
-            <div class="stat-number" data-count="100" data-suffix="%">0</div>
+            <div class="stat-number" data-count="100" data-suffix="%">100%</div>
             <div class="stat-label">Client Satisfaction</div>
         </div>
     </div>
@@ -76,6 +76,10 @@ import { reviewCount } from '../data/testimonials';
         color: var(--accent);
         text-align: center;
         text-shadow: 0 10px 30px var(--glow-clr-medium);
+        /* Every digit the same width, and enough room reserved for the
+           longest value, so the card never resizes while counting. */
+        font-variant-numeric: tabular-nums;
+        min-width: 4ch;
     }
 
     .stat-label {
@@ -105,6 +109,13 @@ import { reviewCount } from '../data/testimonials';
 <script>
 function initFloatingStats() {
     const statCards = document.querySelectorAll('.stat-card');
+
+    // The real numbers are in the HTML so that anything not running
+    // JavaScript reads them. Reset to zero here, at page load, while the
+    // stats are still below the fold and nobody can see the change.
+    document.querySelectorAll<HTMLElement>('.stat-number').forEach((el) => {
+        el.textContent = '0' + (el.dataset.suffix || '');
+    });
 
     function animateCounter(element: HTMLElement, target: number, duration = 2000) {
         const start = 0;
