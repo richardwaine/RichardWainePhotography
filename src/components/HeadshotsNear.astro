@@ -54,7 +54,7 @@ const localBusinessSchema = buildLocalBusinessSchema(
     {locationColumns.map((column) => (
       <div class="">
         {column.map((location) => (
-          <h2 class="hs-near-locations">{location}</h2>
+          <p class="hs-near-locations">{location}</p>
         ))}
       </div>
     ))}
@@ -124,7 +124,10 @@ h2, :global(.hs-near-inline-h2){
 
 .hs-near-locations{
     line-height:2.25;
-    font-size:var(--fs-400)
+    font-size:var(--fs-400);
+    text-transform:uppercase;
+    text-wrap:balance;
+    margin-bottom:0;
 }
 
 
