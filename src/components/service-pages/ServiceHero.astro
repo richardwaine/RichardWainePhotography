@@ -22,6 +22,7 @@ export interface Props {
   callout2?: string;
   callout1Corner?: string; // 'top-right' (default) or 'top-left'
   callout2Corner?: string; // 'bottom-left' (default) or 'bottom-right'
+  stats?: { v: string; l: string }[]; // optional spec line at the foot of the hero
 }
 
 const {
@@ -42,6 +43,7 @@ const {
   callout2,
   callout1Corner = 'top-right',
   callout2Corner = 'bottom-left',
+  stats = [],
 } = Astro.props;
 ---
 
@@ -96,7 +98,72 @@ const {
             <div class={`callout c-2 ${callout2Corner}`}>{callout2}</div>
         </div>
     </div>
+
+    {stats.length > 0 && (
+      <dl class="hero-spec">
+        {stats.map((s) => (
+          <div class="hero-spec-i">
+            {/* The value is written once, by the page that passes it in.
+                The count-up target is read back off that same value at build
+                time, so there is no second copy of the number anywhere. */}
+            <dt
+              data-count={String(s.v).replace(/[^0-9]/g, '')}
+              data-suffix={String(s.v).replace(/^[\d,]+/, '')}
+            >{s.v}</dt>
+            <dd>{s.l}</dd>
+          </div>
+        ))}
+      </dl>
+    )}
+
+    {stats.length > 0 && (
+      <script is:inline>
+        /* Hero is above the fold, so zero them before the first paint —
+           no flash of the final number, no layout shift. */
+        document.querySelectorAll('.hero-spec dt').forEach(function (el) {
+          el.style.minWidth = el.offsetWidth + 'px';
+          el.textContent = '0' + (el.dataset.suffix || '');
+        });
+      </script>
+    )}
+
 </section>
+
+<script>
+function initHeroSpec() {
+  const cells = document.querySelectorAll<HTMLElement>('.hero-spec dt');
+  if (!cells.length) return;
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  cells.forEach((el, i) => {
+    const target = Number(el.dataset.count || 0);
+    const suffix = el.dataset.suffix || '';
+
+    if (reduce || !target) {
+      el.textContent = target.toLocaleString() + suffix;
+      return;
+    }
+
+    const duration = 1400;
+    const delay = i * 120;
+    const start = performance.now() + delay;
+
+    function step(now: number) {
+      if (now < start) { requestAnimationFrame(step); return; }
+      const p = Math.min((now - start) / duration, 1);
+      /* ease out — fast at first, settles onto the number */
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased).toLocaleString() + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initHeroSpec);
+document.addEventListener('astro:page-load', initHeroSpec);
+</script>
 
 <style>
 .cyan {
@@ -222,6 +289,42 @@ h1 {
 
 }
 
+/* Spec block: the open ground at the lower left of the hero.
+   One group, 2x2, on the text column's left edge. Only renders when
+   stats are passed, and never affects the placement of anything else. */
+.hero-spec {
+  width: min(700px, calc(100% - var(--size-7)));
+  margin: var(--size-9) auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--size-6) var(--size-5);
+}
+
+.hero-spec-i {
+  display: grid;
+  gap: var(--size-250);
+  align-content: start;
+}
+
+.hero-spec dt {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  color: var(--ltclr);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.hero-spec dd {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
 /* ==========================================
      TABLET - min-width: 48em (768px)
      ========================================== */
@@ -241,7 +344,8 @@ h1 {
           }
 
           .callout{
-            display:block;
+            /* display:block; */
+            display:none;
             position: absolute;
             color: var(--accent);
             font-size: 12px;
@@ -263,6 +367,35 @@ h1 {
           .c-2.bottom-left { left: 5%; }
           .c-2.bottom-right { right: 5%; }
 
+  }
+ /* ==========================================
+     DESKTOP - min-width: 90em (1440px)
+     ========================================== */
+  @media (min-width: 90em) {
+        /* one row across the full width, directly beneath both columns.
+           out of flow, so nothing else moves. */
+        .hero-spec {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 58%;
+          bottom: 0;
+          width: auto;
+          margin: 0;
+          padding: 0 10% var(--size-11);
+          grid-template-columns: repeat(4, auto);
+          grid-auto-rows: max-content;
+          align-content: end;
+          justify-content: center;
+          gap: var(--size-11);
+          background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(0,0,0,0.30) 45%,
+            rgba(0,0,0,0.70) 78%,
+            rgba(0,0,0,0.86) 100%
+          );
+        }
   }
  /* ==========================================
      DESKTOP - min-width: 90em (1440px)
