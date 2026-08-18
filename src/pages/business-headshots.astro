@@ -232,6 +232,14 @@ const businessHeadshotsFAQSchema = buildFAQSchema(faqs);
 // This page's own address, filled in by Astro. The animation script reads it.
 const pagePath = Astro.url.pathname.replace(/\/$/, '');
 
+/* The figures at the foot of the hero. They describe the business, so they
+   are the same on every service page. */
+const spec = [
+  { v: "17", l: "YEARS EXPERIENCE" },
+  { v: String(reviewCount), l: "5-STAR GOOGLE REVIEWS" },
+  { v: "10,000+", l: "HEADSHOTS DELIVERED" },
+  { v: "100%", l: "CLIENT SATISFACTION" }
+];
 ---
 
 
@@ -264,6 +272,7 @@ const pagePath = Astro.url.pathname.replace(/\/$/, '');
     portraitAlt="Professional business headshot of African-American man with short hair and goatee wearing navy blue suit with light blue patterned tie on white studio background by Richard Waine Photography"
     callout1={callout1}
     callout2={callout2}
+    stats={spec}
 />
 
 <Gallery showButton={false}/>

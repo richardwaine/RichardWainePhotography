@@ -8,6 +8,7 @@ import ServiceHero from '../components/service-pages/ServiceHero.astro';
 import PillarCards from '../components/service-pages/PillarCards.astro';
 import SystemRow from '../components/service-pages/SystemRow.astro';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
+import { reviewCount } from '../data/testimonials';
 
 import JackCottrell from "../assets/images/features/Headshot_20220829_Jack Cottrell_Richard_Waine_Lancaster_PA_0318 (horizontal) - compressed.jpg"
 import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
@@ -218,6 +219,14 @@ const actingHeadshotsFAQSchema = buildFAQSchema(faqs);
 // This page's own address, filled in by Astro. The animation script reads it.
 const pagePath = Astro.url.pathname.replace(/\/$/, '');
 
+/* The figures at the foot of the hero. They describe the business, so they
+   are the same on every service page. */
+const spec = [
+  { v: "17", l: "YEARS EXPERIENCE" },
+  { v: String(reviewCount), l: "5-STAR GOOGLE REVIEWS" },
+  { v: "10,000+", l: "HEADSHOTS DELIVERED" },
+  { v: "100%", l: "CLIENT SATISFACTION" }
+];
 ---
 
 
@@ -252,6 +261,7 @@ const pagePath = Astro.url.pathname.replace(/\/$/, '');
     callout2={callout2}
     callout1Corner="top-left"
     callout2Corner="bottom-right"
+    stats={spec}
 />
 
 <Gallery showButton={false}/>
