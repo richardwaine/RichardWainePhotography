@@ -23,6 +23,8 @@ export interface Props {
   callout1Corner?: string; // 'top-right' (default) or 'top-left'
   callout2Corner?: string; // 'bottom-left' (default) or 'bottom-right'
   stats?: { v: string; l: string }[]; // optional spec line at the foot of the hero
+  serviceAreaIntro?: string;
+  serviceAreas?: { label: string; url: string }[];
 }
 
 const {
@@ -44,6 +46,16 @@ const {
   callout1Corner = 'top-right',
   callout2Corner = 'bottom-left',
   stats = [],
+  serviceAreaIntro = 'Sessions available in',
+  serviceAreas = [
+      { label: 'Lancaster PA', url: '/' },
+      { label: 'Philadelphia', url: '/philadelphia-headshots/' },
+      { label: 'Baltimore', url: '/baltimore-headshots/' },
+      { label: 'Harrisburg', url: '/harrisburg-headshots/' },
+      { label: 'York', url: '/york-headshots/' },
+      { label: 'Delaware', url: '/delaware-headshots/' },
+    ],
+
 } = Astro.props;
 ---
 
@@ -67,13 +79,13 @@ const {
     <div class="hero-text">
         <h1>{heroTitle} <br><span class="cyan">{heroTitleAccent}</span></h1>
         <p class="hero-p">{heroDescription}</p>
-        <p class="hero-p service-areas">Sessions available in
-            <a href="/">Lancaster PA</a>,
-            <a href="/philadelphia-headshots/">Philadelphia</a>,
-            <a href="/baltimore-headshots/">Baltimore</a>,
-            <a href="/harrisburg-headshots/">Harrisburg</a>,
-            <a href="/york-headshots/">York</a>, and
-            <a href="/delaware-headshots/">Delaware</a>.
+        <p class="hero-p service-areas">
+          {serviceAreaIntro}{' '}
+          {serviceAreas.map((area, i) => (
+            <>
+              <a href={area.url}>{area.label}</a>{i < serviceAreas.length - 2 ? ', ' : i === serviceAreas.length - 2 ? ', and ' : '.'}
+            </>
+          ))}
         </p>
 
         <div class="action-group">
@@ -374,20 +386,15 @@ h1 {
   @media (min-width: 90em) {
         /* one row across the full width, directly beneath both columns.
            out of flow, so nothing else moves. */
-        .hero-spec {
+        /* the gradient is its own layer so it cannot catch clicks */
+        .hero::before {
+          content: "";
           position: absolute;
           left: 0;
           right: 0;
           top: 58%;
           bottom: 0;
-          width: auto;
-          margin: 0;
-          padding: 0 10% var(--size-11);
-          grid-template-columns: repeat(4, auto);
-          grid-auto-rows: max-content;
-          align-content: end;
-          justify-content: center;
-          gap: var(--size-11);
+          pointer-events: none;
           background: linear-gradient(
             to bottom,
             transparent 0%,
@@ -395,6 +402,21 @@ h1 {
             rgba(0,0,0,0.70) 78%,
             rgba(0,0,0,0.86) 100%
           );
+        }
+
+        /* pinned to the bottom of the hero, only as tall as the numbers */
+        .hero-spec {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: auto;
+          margin: 0;
+          padding: 0 10% var(--size-11);
+          grid-template-columns: repeat(4, auto);
+          grid-auto-rows: max-content;
+          justify-content: center;
+          gap: var(--size-11);
         }
   }
  /* ==========================================
