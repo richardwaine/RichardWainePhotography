@@ -1,0 +1,56 @@
+---
+import type { TestimonialData } from '../types/components';
+import { ALL_TESTIMONIALS } from '../data/testimonials';
+import type { Testimonial } from '../data/testimonials';
+import TestimonialCard2 from './TestimonialCard2.astro';
+
+export interface Props {
+  title?: string;
+  limit?: number;
+  filterByNames?: string[];
+  testimonials?: TestimonialData[];
+}
+
+const { title, limit = Infinity, filterByNames } = Astro.props;
+
+const sortedTestimonials = [...ALL_TESTIMONIALS].sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
+const testimonialsToDisplay = filterByNames
+  ? filterByNames.map(name => sortedTestimonials.find(t => t.name === name)).filter((t): t is Testimonial => t !== undefined).slice(0, limit)
+  : sortedTestimonials.slice(0, limit);
+---
+
+<section class="testimonials-section-2 wrapper">
+  {title && <h2 class="section-title">{title}</h2>}
+
+  <div class="testimonial-list-2">
+    {testimonialsToDisplay.map((t) => (
+      <TestimonialCard2
+        testimonialText={t.review.split('\n')[0]}
+        author={t.name}
+        company={t.company}
+        imageSrc={t.imageUrl}
+        image={t.image}
+        imageAlt={t.imageAlt}
+      />
+    ))}
+  </div>
+</section>
+
+<style>
+  .testimonials-section-2 {
+    padding-block: 0;
+  }
+
+  .testimonial-list-2 {
+    display: grid;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  /* ---------- wide ---------- */
+  @media (min-width: 64em) {
+    .testimonial-list-2 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1.5rem, 2.5vw, 2.5rem);
+    }
+  }
+</style>
