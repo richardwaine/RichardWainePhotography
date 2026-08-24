@@ -51,7 +51,7 @@ const {
     { name: 'Team', url: '/my-team' },
     { name: 'Studio', url: '/richard-waine-photography-studio' },
     { name: 'Contact', url: '/contact-lancaster-headshot-photographer-richard-waine' },
-    
+    { name: 'Add as Preferred Source', url: 'https://www.google.com/preferences/source?q=richardwainephotography.com', external: true },
   ],
 
   quickLinks = [
@@ -131,7 +131,7 @@ const organizationSchema = buildOrganizationSchema(
                 <div class="footer-section-title">COMPANY</div>
                 <ul class="footer-links">
                     {company.map(link => (
-                        <li><a href={link.url}>{link.name}</a></li>
+                        <li><a href={link.url} target={link.external ? '_blank' : undefined} rel={link.external ? 'noopener' : undefined}>{link.name}</a></li>
                     ))}
                 </ul>
             </div>
