@@ -1,0 +1,246 @@
+---
+/* THE SESSION — the visitor says which situation is theirs and the
+   section answers with that session. DUMMY COPY. */
+---
+
+<section class="session-section wrapper">
+  <header class="session-header" data-session-header>
+    <h2>The Session</h2>
+  </header>
+
+  <div class="session-layout">
+
+    <div class="session-tablist" role="tablist">
+      <button class="btn session-tab is-active" type="button" data-session-tab="0" role="tab" aria-selected="true">
+        DUMMY LABEL ONE
+      </button>
+      <button class="btn session-tab" type="button" data-session-tab="1" role="tab" aria-selected="false">
+        DUMMY LABEL TWO
+      </button>
+      <button class="btn session-tab" type="button" data-session-tab="2" role="tab" aria-selected="false">
+        DUMMY LABEL THREE
+      </button>
+      <button class="btn session-tab" type="button" data-session-tab="3" role="tab" aria-selected="false">
+        DUMMY LABEL FOUR
+      </button>
+    </div>
+
+    <div class="session-panel">
+      <span class="session-active-marker" data-session-marker aria-hidden="true"></span>
+      <div class="session-panel-body is-active" data-session-panel="0">
+        <p>DUMMY TEXT — the container fills with the information for the tab
+        you are on. It holds a hundred words comfortably, which is enough to
+        say what happens rather than label it, and it is the same size no
+        matter which tab is open so nothing jumps as you move between them.
+        There is no photograph here — the page already carries sixteen of
+        them directly above this, and another one would say nothing new.</p>
+      </div>
+      <div class="session-panel-body" data-session-panel="1">
+        <p>DUMMY TEXT — second tab. Same container, same size, different
+        account. A hundred words is roughly six lines at this width, which is
+        a paragraph a busy person will actually read rather than skim past on
+        their way to the price.</p>
+      </div>
+      <div class="session-panel-body" data-session-panel="2">
+        <p>DUMMY TEXT — third tab. Same container, same size, different
+        account. A hundred words is roughly six lines at this width, which is
+        a paragraph a busy person will actually read rather than skim past on
+        their way to the price.</p>
+      </div>
+      <div class="session-panel-body" data-session-panel="3">
+        <p>DUMMY TEXT — fourth tab. Same container, same size, different
+        account. A hundred words is roughly six lines at this width, which is
+        a paragraph a busy person will actually read rather than skim past on
+        their way to the price.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ---------- the session: you say which one is yours ---------- */
+  .session-section {
+    padding-block: var(--section-space);
+  }
+
+  .session-header {
+    margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  }
+  /* your section heading convention */
+  .session-header h2 {
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--ltr-space);
+    color: var(--accent);
+  }
+  @media (min-width: 48em) {
+    .session-header h2 {
+      font-size: var(--fs-800);
+    }
+  }
+
+  .session-layout {
+    display: grid;
+    gap: var(--size-7);
+  }
+
+  .session-tablist {
+    display: grid;
+    gap: var(--size-6);
+    justify-items: start;
+  }
+
+  /* Your button, at your size. The accent appears once — on the tab you
+     are on. The rest are neutral, so four of them never shout at you. */
+  .session-tab {
+    justify-self: start;
+    background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.04) 100%);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255,255,255,0.22);
+    color: rgba(255,255,255,0.72);
+    box-shadow: none;
+    opacity: 1;
+    animation: none;
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .session-tab:hover,
+  .session-tab:focus-visible {
+    outline: none;
+    border-color: rgba(255,255,255,0.55);
+    color: var(--ltclr);
+  }
+  .session-tab.is-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--ltclr);
+    box-shadow:
+      0 15px 30px rgba(0,0,0,0.6),
+      0 15px 35px var(--glow-clr-medium),
+      inset 0 1px 2px var(--highlight-clr-soft);
+  }
+
+  /* one container. no background — it is the open page, with a single
+     accent edge tying it to the tab you are on. */
+  .session-panel {
+    position: relative;
+    display: grid;
+    align-content: center;
+    padding-inline-start: var(--size-6);
+    border-left: 1px solid rgba(255,255,255,0.14);
+  }
+
+  /* the accent sits on the divider, level with the tab you are on, and
+     slides to meet the next one */
+  .session-active-marker {
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background: var(--accent);
+    box-shadow: 0 0 24px var(--glow-clr-medium);
+    transition:
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      height 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* one gesture: the outgoing line leaves upward, the incoming one arrives
+     from below just after the accent has moved */
+  .session-panel-body {
+    grid-area: 1 / 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s cubic-bezier(0.4, 0, 1, 1),
+      visibility 0s linear 0.35s;
+  }
+  .session-panel-body.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition:
+      opacity 0.6s ease 0.28s,
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.28s,
+      visibility 0s linear 0s;
+  }
+  .session-panel-body:not(.is-active) {
+    transform: translateY(10px);
+  }
+
+  .session-panel-body p {
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-clamp-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--ltclr);
+  }
+
+  @media (min-width: 64em) {
+    /* the container is exactly as tall as the tabs beside it */
+    .session-layout {
+      grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+      width: 80%;
+      margin-inline: auto;
+      column-gap: clamp(2rem, 4vw, 3.5rem);
+      align-items: stretch;
+    }
+    /* the heading sits on the same edge as the tabs below it */
+    .session-header {
+      width: 80%;
+      margin-inline: auto;
+    }
+    .session-tablist {
+      align-content: start;
+    }
+    .session-panel {
+      padding-inline-start: clamp(2rem, 4vw, 3.5rem);
+    }
+  }
+</style>
+
+<script>
+  /* the visitor picks their situation; the section answers with it */
+  const setup = () => {
+    const opts = Array.from(document.querySelectorAll<HTMLElement>('[data-session-tab]'));
+    const optSays = Array.from(document.querySelectorAll<HTMLElement>('[data-session-panel]'));
+    if (!opts.length || optSays.length !== opts.length) return;
+
+    const pick = (i: number) => {
+      opts.forEach((o, n) => {
+        o.classList.toggle('is-active', n === i);
+        o.setAttribute('aria-selected', String(n === i));
+      });
+      optSays.forEach((o, n) => o.classList.toggle('is-active', n === i));
+    };
+
+    const edge = document.querySelector<HTMLElement>('[data-session-marker]');
+    const view = document.querySelector<HTMLElement>('.session-panel');
+    const alignEdge = (i: number) => {
+      if (!edge || !view) return;
+      const b = opts[i].getBoundingClientRect();
+      const v = view.getBoundingClientRect();
+      edge.style.height = b.height + 'px';
+      edge.style.transform = 'translateY(' + (b.top - v.top) + 'px)';
+    };
+
+    opts.forEach((o, i) => {
+      o.addEventListener('click', () => { pick(i); alignEdge(i); });
+      o.addEventListener('focus', () => { pick(i); alignEdge(i); });
+    });
+
+    alignEdge(0);
+    window.addEventListener('resize', () => {
+      const active = opts.findIndex((o) => o.classList.contains('is-active'));
+      alignEdge(active < 0 ? 0 : active);
+    });
+  };
+
+  setup();
+  document.addEventListener('astro:page-load', setup);
+</script>
