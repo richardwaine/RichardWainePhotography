@@ -87,3 +87,11 @@
 # Blog wildcard redirects - MUST come LAST
 /blog-content/* /blog/:splat/ 301
 /blog-2/* /blog/:splat/ 301
+
+# Cloudflare Redirect Rules rewrite every /blog-2/ address before this file is
+# read, so the four /blog-2/ rules above never run. These four catch the
+# rewritten address and finish the job.
+/blog/meet-ben-marcum/ /blog/meet-ben-marcum-the-human-side-of-professional-photography/ 301
+/blog/debunking-common-myths-about-professional-headshots/ /blog/common-myths-about-professional-headshots/ 301
+/blog/tkeowv0pj4eiucblmdznyhax0dhz6l/ /blog/how-to-prepare-for-your-professional-headshot-session/ 301
+/blog/why-headshots-are-so-expensive/ / 301
