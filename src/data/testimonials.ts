@@ -48,7 +48,7 @@ export interface Testimonial {
   displayOrder?: number; // Original display order for reviews page
 }
 
-export const reviewCount = 669;
+export const reviewCount = 670;
 
 export const ALL_TESTIMONIALS: Testimonial[] = [
   {
@@ -8760,5 +8760,35 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Makenzie Scanlon",
     datePublished: "2026-06-30T12:00:00.000000Z",
     displayOrder: 511
+  },
+  {
+    name: "Nate Rush",
+    company: "",
+    category: "legal-professionals",
+    review: "Had such a memorable time at my shoot with Richard. He's a very professional, friendly, and energetic photographer, and I definitely recommend!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Nate Rush",
+    datePublished: "2026-08-12T12:00:00.000000Z",
+    displayOrder: 512
+  },
+  {
+    name: "Jennifer Tregear",
+    company: "",
+    category: "financial-professionals",
+    review: "Very professional and fun! Gave great direction, made me feel comfortable, and does amazing work. Highly recommend!!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Jennifer Tregear",
+    datePublished: "2026-08-21T12:00:00.000000Z",
+    displayOrder: 513
   }
+
+
+
+
 ];
