@@ -48,7 +48,7 @@ export interface Testimonial {
   displayOrder?: number; // Original display order for reviews page
 }
 
-export const reviewCount = 670;
+export const reviewCount = 671;
 
 export const ALL_TESTIMONIALS: Testimonial[] = [
   {
@@ -8786,6 +8786,19 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Jennifer Tregear",
     datePublished: "2026-08-21T12:00:00.000000Z",
     displayOrder: 513
+  },
+  {
+    name: "Thomas Wilde",
+    company: "",
+    category: "financial-professionals",
+    review: "Had an amazing coaching session with Richard. His coaching was excellent and he made sure to get the perfect shot for me.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Thomas Wilde",
+    datePublished: "2026-08-26T12:00:00.000000Z",
+    displayOrder: 514
   }
 
 
