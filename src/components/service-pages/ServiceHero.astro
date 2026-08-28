@@ -131,9 +131,8 @@ const {
     {stats.length > 0 && (
       <script is:inline>
         /* Hero is above the fold, so zero them before the first paint —
-           no flash of the final number, no layout shift. */
+           no flash of the final number. Width is the stylesheet's job. */
         document.querySelectorAll('.hero-spec dt').forEach(function (el) {
-          el.style.minWidth = el.offsetWidth + 'px';
           el.textContent = '0' + (el.dataset.suffix || '');
         });
       </script>
@@ -228,7 +227,7 @@ h1 {
 }
 
 .hero-p {
-  font-size: var(--fs-500);
+  font-size: var(--fs-clamp-base);
   color: var(--text-dim);
   text-align:center;
   margin-bottom: var(--size-775);
@@ -309,7 +308,12 @@ h1 {
   margin: var(--size-9) auto 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--size-6) var(--size-5);
+  /* the wide column gap keeps each column narrower than the shortest
+     label, so all four labels wrap to two lines alike */
+  gap: var(--size-6) var(--size-10);
+  text-align: center;
+
+  
 }
 
 .hero-spec-i {
@@ -334,13 +338,24 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   color: var(--accent);
-  white-space: nowrap;
+  max-width:11.5em;
+  margin-inline:auto;
 }
 
 /* ==========================================
      TABLET - min-width: 48em (768px)
      ========================================== */
         @media (min-width: 48em) {
+           .hero-spec {
+            column-gap: var(--size-5);
+           }
+           
+          .hero-spec dd {
+            white-space: nowrap;
+            max-width:none;
+          }
+
+
            .hero {
             min-height:100vh;
             grid-template-columns: 1fr;
@@ -348,6 +363,7 @@ h1 {
 
           }
 
+        
 
           .action-group{
 
@@ -380,6 +396,16 @@ h1 {
           .c-2.bottom-right { right: 5%; }
 
   }
+
+
+ /* ==========================================
+     DESKTOP - min-width: 64em (1024px)
+     ========================================== */
+  @media (min-width: 64em) {
+    
+
+  }
+
  /* ==========================================
      DESKTOP - min-width: 90em (1440px)
      ========================================== */
@@ -417,6 +443,7 @@ h1 {
           grid-auto-rows: max-content;
           justify-content: center;
           gap: var(--size-11);
+          text-align: left;
         }
   }
  /* ==========================================
@@ -426,7 +453,14 @@ h1 {
 
         .hero {
             grid-template-columns: 1fr 1fr;
+            /* the two columns sit inside the same 10% inset the stat row uses */
+            padding-inline: 10%;
+          }
 
+    
+
+          .blueprint-box {
+            --_width: min(700px, 100%);
           }
 
           h1 {
@@ -440,6 +474,10 @@ h1 {
 
           .hero-p{
             text-align:left;
+          }
+
+          .hero-p:not(.service-areas){
+            font-size: var(--fs-500);
           }
 
 
