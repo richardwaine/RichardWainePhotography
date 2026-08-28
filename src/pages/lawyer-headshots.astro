@@ -1,0 +1,951 @@
+---
+// @ts-nocheck
+import MainLayout from "../layouts/MainLayout.astro"
+import ServiceHero from '../components/service-pages/ServiceHero.astro';
+import Gallery from '../components/Gallery.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import { Image } from 'astro:assets';
+import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
+import { reviewCount, ALL_TESTIMONIALS } from '../data/testimonials';
+
+import HeroImage from "../assets/images/professions/JamesKennedy - 0006 (horizontal).jpg"
+import HeroBg from "../assets/images/blog/RW7 - (16 x 9).jpg"
+import StudioBTS from "../assets/images/blog/RW14 - (16 x 9).jpg"
+import StudioBTSTwo from "../assets/images/blog/RW8 - (16 x 9).jpg"
+
+const pageTitle = "Professional Headshots for Lawyers | Richard Waine Photography"
+const metaDescription = "Headshots for attorneys that make you easy to trust and hard to dismiss. Schedule your headshot session, made for lawyers."
+
+const faqs = [
+  { question: "Why do lawyers need professional headshots?",
+    answer: `Lawyers need a professional headshot because a client choosing an attorney is comparing those with credentials that all look identical. Putting a face to your name gives them something the credentials cannot, which is a sense of their personality, character, and whether they can talk to you about something difficult. A picture that shows how you actually come across is what makes you memorable.` },
+
+  { question: "What should I wear for an attorney headshot?",
+    answer: `I recommend bringing a variety of tops rather than a single outfit. Suits and blazers photograph well, and I lean toward recommending solid colors. However, you should bring colors that you prefer and items that love and feel good in. My clients shoot with greater success in clothes they love, and do not be afraid to mix cuts, colors, layers, and textures. More detail is in my guide <a href="/blog/what-to-wear-for-headshots/">what to wear for headshots</a>.` },
+
+  { question: "When should I update my headshot?",
+    answer: `I recommend that everyone, attorneys included, update their headshot every one to two years, or sooner when your style, hair, or appearance changes. Making partner, moving to another firm, a merger, or a business development event each put your photograph in front of people who have never seen you, so treat those as triggers of their own. When the picture and the person no longer match, your client's expectation and the reality are out of alignment. I have written about this in <a href="/blog/consistency-in-your-headshot/">consistency in your headshot</a>.` },
+
+  { question: "Where should attorneys be using their headshot?",
+    answer: `Use your headshot anywhere a potential client encounters you before you meet in person. Beyond your law firm bio and your own profiles, that means the legal directories clients actually search, including Martindale-Hubbell, Avvo, Super Lawyers, Justia, and your state bar listing. I have written more about <a href="/blog/why-lawyers-need-professional-headshots-enhancing-your-legal-brand/">why lawyers need professional headshots</a>.` },
+
+  { question: "What background is best for attorney headshots?",
+    answer: `Solid grey, white, and black all work, and so do hand-painted canvas and textured backgrounds. Legal books as a background confirm you are an attorney, which the reader knew before they clicked on your profile. A plain background is the more contemporary choice, and it puts your expression in front of them without competition or distraction. Every option is covered in <a href="/blog/best-backgrounds-for-professional-headshots/">my guide to headshot backgrounds</a>.` }
+
+]
+
+const lawyerHeadshotsSchema = buildServiceSchema(
+  "Lawyer Headshots", "Professional Headshots for Attorneys",
+  "Professional headshots for lawyers, attorneys, and law firms. Project authority, competence, and trustworthiness with expert direction and real-time review.",
+  "Richard Waine Photography", "Lancaster", "PA", "+1-717-925-0061",
+  ["Pennsylvania", "New York", "New Jersey", "Delaware", "Maryland", "Virginia"]);
+const lawyerFAQSchema = buildFAQSchema(faqs);
+
+const quoteNames = ["Jacqueline Johansen", "Keith Woody", "Kelly Gooch"];
+const quotes = quoteNames
+  .map((n) => ALL_TESTIMONIALS.find((t) => t.name === n))
+  .filter(Boolean);
+const quoteSchemas = quotes.map((q) => buildReviewSchema(
+  { author: q.name, company: q.company, rating: String(q.rating), reviewBody: q.review },
+  "Richard Waine Photography", "https://richardwainephotography.com"));
+
+const pagePath = Astro.url.pathname.replace(/\/$/, '');
+const acuityUrl = "https://app.acuityscheduling.com/schedule/f0843291/appointment/11959793/calendar/1133425?appointmentTypeIds[]=11959793";
+
+/* Your figures, from FloatingStats, plus delivered images. */
+const spec = [
+  { v: "17", l: "YEARS EXPERIENCE" },
+  { v: String(reviewCount), l: "5-STAR GOOGLE REVIEWS" },
+  { v: "10,000+", l: "HEADSHOTS DELIVERED" },
+  { v: "100%", l: "CLIENT SATISFACTION" }
+];
+---
+
+<MainLayout title={pageTitle} description={metaDescription}>
+
+<script type="application/ld+json" set:html={JSON.stringify(lawyerHeadshotsSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(lawyerFAQSchema)} />
+{quoteSchemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+
+<div class="page" data-page-path={pagePath}>
+
+  <ServiceHero
+      heroTitle="Lawyer"
+      heroTitleAccent="Headshots"
+      heroDescription="Your headshot appears on firm websites and legal directories. Clients need to trust you and feel comfortable talking to you. I create attorney headshots that project authority and competence."
+      heroButtonText="GET PRICING"
+      heroButtonUrl="/rates"
+      secondaryButtonText="SCHEDULE CONSULT"
+      secondaryButtonUrl={acuityUrl}
+      heroBg={HeroBg}
+      heroBgAlt="Professional headshot photographer Richard Waine photographing a business professional in Lancaster PA studio"
+      portraitImage={HeroImage}
+      portraitAlt="Professional headshot of attorney in tan blazer over navy dress shirt projecting authority and competence against neutral gray studio background by Richard Waine Photography"
+      callout1="AUTHORITY"
+      callout2="COMPETENCE"
+      stats={spec}
+      serviceAreaIntro="Serving attorneys in"
+      serviceAreas={[
+        { label: 'Lancaster', url: '/' },
+        { label: 'Philadelphia', url: '/philadelphia-headshots/' },
+        { label: 'Baltimore', url: '/baltimore-headshots/' },
+        { label: 'Harrisburg', url: '/harrisburg-headshots/' },
+        { label: 'York', url: '/york-headshots/' },
+        { label: 'Delaware', url: '/delaware-headshots/' },
+      ]}
+  />
+
+  <Gallery showButton={false} />
+
+  <section class="persuasion" data-persuasion>
+    <div class="slides-viewport">
+      <div class="slides-track" data-slides-track>
+
+        <div class="backdrop-photo" data-backdrop>
+          <Image src={StudioBTS}
+            alt="Richard Waine setting a light modifier during a headshot session in his Lancaster PA studio"
+            widths={[1200, 1800, 2400]} sizes="160vw" loading="lazy" />
+          <Image src={StudioBTSTwo}
+            alt="Headshot session underway in the Lancaster PA studio of Richard Waine Photography"
+            widths={[1200, 1800, 2400]} sizes="160vw" loading="lazy" />
+        </div>
+
+        <section class="slide">
+          <div class="slide-content">
+            <div class="slide-headline">
+              <h2>THE ATTORNEY <br>HEADSHOT <br><span class="headline-accent">EXPERIENCE</span></h2>
+            </div>
+            <div class="glass-box">
+              <h3>WHY LAWYERS NEED PROFESSIONAL HEADSHOTS</h3>
+              <p>A prospective client sits at a desk late at night, searching for legal counsel during one of the most stressful moments of their life. They open ten browser tabs, only to find identical law degrees, identical bar admissions, and identical lists of practice areas.</p>
+              <p>In that moment of uncertainty, credentials alone cannot guide their choice. The client is looking for a human connection, searching for an advocate who will be both empathetic enough to hear their story and formidable enough to protect their interests.</p>
+              <p>Your headshot is the exact moment that story begins. It transforms a flat list of qualifications into a real, trusted person, positioning you as the authority they need to call.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content">
+            <div class="glass-box">
+              <h3>THE EXPERIENCE</h3>
+              <p>You may not know what to expect from a professional headshot session, and you may not be someone who enjoys having your photo taken.</p>
+              <p>Your session is a dedicated, one-on-one experience where every detail is considered and nothing is finished until you are confident in the result. You and every aspect of your session receive the same level of care and attention that thousands of professionals across six states have entrusted with their most important professional asset. They walked in uncertain and walked out transformed, not just by the images, but by how the experience made them feel about themselves.</p>
+              <p>The attorneys who have been through this session do not leave wondering whether they made the right choice. They leave knowing they did.</p>
+            </div>
+            <div class="glass-box is-wide">
+              <h3>THE PROCESS</h3>
+              <div class="process-steps">
+                <div>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="6" width="30" height="28" rx="2" stroke="#03a9f4" stroke-width="1.2"/>
+                    <line x1="4" y1="14" x2="34" y2="14" stroke="#03a9f4" stroke-width="1.2"/>
+                    <line x1="13" y1="6" x2="13" y2="14" stroke="#03a9f4" stroke-width="1.2"/>
+                    <line x1="25" y1="6" x2="25" y2="14" stroke="#03a9f4" stroke-width="1.2"/>
+                    <circle cx="19" cy="24" r="1.5" fill="#03a9f4"/>
+                  </svg>
+                  <div class="step-body">
+                    <h4>Schedule</h4>
+                    <p>Your preparation guide arrives with confirmation</p>
+                  </div>
+                </div>
+                <div>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="6" width="22" height="28" rx="2" stroke="#03a9f4" stroke-width="1.2"/>
+                    <circle cx="26" cy="20" r="1.5" fill="#03a9f4"/>
+                    <path d="M8 6 L8 34" stroke="#03a9f4" stroke-width="1.2"/>
+                    <path d="M4 10 L4 30" stroke="#03a9f4" stroke-width="1.2" stroke-linecap="round"/>
+                  </svg>
+                  <div class="step-body">
+                    <h4>Arrive</h4>
+                    <p>We talk together before anything begins</p>
+                  </div>
+                </div>
+                <div>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="9" width="30" height="22" rx="3" stroke="#03a9f4" stroke-width="1.2"/>
+                    <circle cx="19" cy="20" r="7" stroke="#03a9f4" stroke-width="1.2"/>
+                    <circle cx="19" cy="20" r="3" stroke="#03a9f4" stroke-width="1.2"/>
+                    <circle cx="29" cy="13.5" r="1.5" fill="#03a9f4"/>
+                  </svg>
+                  <div class="step-body">
+                    <h4>Photograph</h4>
+                    <p>I coach and direct every expression</p>
+                  </div>
+                </div>
+                <div>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="6" width="12" height="12" stroke="#03a9f4" stroke-width="1.2"/>
+                    <rect x="20" y="6" width="12" height="12" stroke="#03a9f4" stroke-width="1.2"/>
+                    <rect x="4" y="22" width="12" height="12" stroke="#03a9f4" stroke-width="1.2"/>
+                    <rect x="20" y="22" width="12" height="12" stroke="#03a9f4" stroke-width="1.2"/>
+                    <polyline points="23 28 26 31 30 25" stroke="#03a9f4" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <div class="step-body">
+                    <h4>Select</h4>
+                    <p>We select your favorite images together</p>
+                  </div>
+                </div>
+                <div>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4" y1="8" x2="34" y2="8" stroke="#03a9f4" stroke-width="1.2" stroke-linecap="round"/>
+                    <circle cx="24" cy="8" r="2.5" stroke="#03a9f4" stroke-width="1.2" fill="#121212"/>
+                    <line x1="4" y1="20" x2="34" y2="20" stroke="#03a9f4" stroke-width="1.2" stroke-linecap="round"/>
+                    <circle cx="15" cy="20" r="2.5" stroke="#03a9f4" stroke-width="1.2" fill="#121212"/>
+                    <line x1="4" y1="32" x2="34" y2="32" stroke="#03a9f4" stroke-width="1.2" stroke-linecap="round"/>
+                    <circle cx="27" cy="32" r="2.5" stroke="#03a9f4" stroke-width="1.2" fill="#121212"/>
+                  </svg>
+                  <div class="step-body">
+                    <h4>Retouch</h4>
+                    <p>My retoucher finishes every chosen image</p>
+                  </div>
+                </div>
+                <div>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 8 L19 20 L34 8" stroke="#03a9f4" stroke-width="1.2" stroke-linejoin="round"/>
+                    <rect x="4" y="8" width="30" height="24" rx="2" stroke="#03a9f4" stroke-width="1.2"/>
+                  </svg>
+                  <div class="step-body">
+                    <h4>Deliver</h4>
+                    <p>Your images arrive in multiple crops</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide">
+          <div class="slide-content">
+            <div class="glass-box is-full-width">
+              <h3>EXPECTATIONS</h3>
+              <p>Your headshot session is a focused, collaborative experience where you are coached and directed to look and feel your absolute best. Every moment is intentional, and every image is made with precision and care.</p>
+              <div class="fact-grid">
+                <div class="fact"><b>Expert Direction</b><span>Precise and personal</span></div>
+                <div class="fact"><b>Expression Coaching</b><span>Authentic and natural</span></div>
+                <div class="fact"><b>Fully at Ease</b><span>Quickly and genuinely</span></div>
+                <div class="fact"><b>Fun and Engaging</b><span>The entire session</span></div>
+                <div class="fact"><b>New Confidence</b><span>In yourself and images</span></div>
+                <div class="fact"><b>Magazine Quality</b><span>From every session</span></div>
+                <div class="fact"><b>Collaborative</b><span>From start to finish</span></div>
+                <div class="fact"><b>Dedicated Excellence</b><span>Every single time</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+  
+   <div class="closing-sections">
+
+  <section class="testimonials-section wrapper">
+    <div class="testimonial-list">
+      {quotes.map((q) => (
+        <blockquote class="testimonial-card glass-box" data-reveal>
+          <p>{q.review.split('\n')[0]}</p>
+          <footer class="testimonial-author">
+            <Image src={q.image} alt={q.imageAlt} widths={[96, 144]} sizes="64px" />
+            <span><b>{q.name}</b>{q.company}</span>
+          </footer>
+        </blockquote>
+      ))}
+    </div>
+  </section>
+
+
+    <section class="faq-section" data-reveal>
+      <FAQAccordion faqs={faqs}/>
+    </section>
+
+  </div>
+
+</div>
+
+<script>
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('astro:page-load', () => {
+  const page = document.querySelector<HTMLElement>('.page');
+  if (!page) return;
+  if (window.location.pathname.replace(/\/$/, '') !== page.dataset.pagePath) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const ctx = gsap.context(() => {
+
+    gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
+      gsap.from(el, {
+        opacity: 0, y: 16, duration: 1.4, ease: 'expo.out',
+        /* the inline styles come off when the reveal ends, so the
+           stylesheet's own transform on the card applies at every width,
+           including after a resize */
+        clearProps: 'opacity,transform',
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true }
+      });
+    });
+
+    /* The gallery assembles: every frame arrives in a random order rather
+       than sweeping left to right, then the wall sits still. Nothing here
+       touches Gallery.astro — it targets the markup from this page only. */
+    const cells = gsap.utils.toArray<HTMLElement>('#gallery-section .gallery > div');
+    if (cells.length) {
+      gsap.from(cells, {
+        opacity: 0,
+        duration: 1.1,
+        ease: 'expo.out',
+        stagger: { each: 0.03, from: 'random' },
+        scrollTrigger: { trigger: '#gallery-section', start: 'top 80%', once: true }
+      });
+    }
+
+    /* The sideways sliding exists at desktop only. Below 90em the panels
+       are stacked and scroll normally, so neither tween is created. */
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 90em)", () => {
+      const persuasionSection = document.querySelector<HTMLElement>('[data-persuasion]');
+      const scene = document.querySelector<HTMLElement>('[data-slides-track]');
+      if (persuasionSection && scene) {
+        gsap.to(scene, {
+          x: () => -(scene.scrollWidth - window.innerWidth),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: persuasionSection,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 1,
+            invalidateOnRefresh: true
+          }
+        });
+
+        gsap.to('[data-backdrop]', {
+          x: '20%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: persuasionSection,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 1
+          }
+        });
+      }
+    });
+
+  }, page);
+
+  window.addEventListener('load', () => ScrollTrigger.refresh());
+  document.addEventListener('astro:before-swap', () => ctx.revert(), { once: true });
+});
+</script>
+
+</MainLayout>
+
+<style>
+  body {
+    background: #08080a;
+    color: var(--ltclr);
+  }
+
+  /* One vertical rhythm for every section on the page. */
+  .page {
+    --section-space: clamp(4rem, 9vw, 8rem);
+  }
+
+  /* ==========================================
+     BASE = PHONE
+     Everything outside a media query is the phone layout. Tablet adds
+     on at 48em (768px). Desktop adds on at 90em (1440px), the same
+     width where ServiceHero switches to its two-column layout.
+     ========================================== */
+
+  /* The gallery sits on the page's one content edge, same as .wrapper.
+     The shared component adds its own side padding and an inner width
+     cap, which stacked three insets on a phone. Both are removed here
+     and put back at desktop. */
+  :global(div.page #gallery-section) {
+    padding-inline: 0;
+  }
+  :global(#gallery-section .gallery-container) {
+    padding-block: var(--section-space);
+    width: 100%;
+    max-width: none;
+    margin-inline: auto;
+  }
+
+  /* The shared gallery picks its columns from its container width, which
+     was built for the desktop wrapper. This page sets the columns and
+     which frames show at every breakpoint instead. Two-across on phones,
+     as on the other service pages. */
+  :global(#gallery-section .gallery) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--size-3);
+  }
+
+  .closing-sections {
+    display: grid;
+    align-content: center;
+    min-height: 100vh;
+    gap: var(--section-space);
+    padding-block: var(--section-space);
+    /* the fixed MENU bar and the chat bubble sit on the bottom of the
+       screen, so the page ends with room for them under the last row */
+    padding-block-end: calc(var(--section-space) + var(--size-5));
+  }
+
+  /* ---------- the three panels ----------
+     On phones and tablets they stack top to bottom and scroll normally.
+     The sideways sliding and the pinned viewport are switched on at
+     desktop. */
+  .persuasion {
+    position: relative;
+    background: var(--drkbg);
+    color: var(--ltclr);
+    font-family: var(--ff-primary);
+    text-align: left;
+    padding-block: var(--section-space);
+    overflow: clip;
+  }
+
+  .persuasion .slides-viewport {
+    position: relative;
+    width: 100%;
+  }
+
+  .persuasion .slides-track {
+    position: relative;
+    display: grid;
+    gap: var(--section-space);
+  }
+
+  .persuasion .slide {
+    position: relative;
+    width: 100%;
+  }
+
+  /* BACKGROUND PHOTOGRAPHS (STAY BEHIND)
+     Stacked one above the other behind the panels, exactly the width of
+     the screen and held still below desktop. */
+  .persuasion .backdrop-photo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.4;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .persuasion .backdrop-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: 50% 30%;
+    filter: grayscale(1);
+  }
+  /* Richard stands 40% in from the left of the first photograph, so the
+     narrow phone crop is centred on him rather than on the middle of the
+     frame */
+  .persuasion .backdrop-photo img:first-child {
+    object-position: 40% 30%;
+  }
+
+  /* EDUCATION MODULES: one column on the page's content edge */
+  .persuasion .slide-content {
+    position: relative;
+    z-index: 10;
+    width: min(calc(100% - var(--size-8)), 80%);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--size-7);
+  }
+
+ 
+
+  /* the hero's treatment: white, with the closing word in the accent */
+  .persuasion .slide-headline h2 {
+    color: var(--ltclr);
+    font-size: var(--fs-clamp-xxl);
+    line-height: var(--line-height-dramatic);
+    margin: 0;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: var(--fw-x-bold);
+  }
+
+   .persuasion .slide-content h2{
+      text-align: center;
+      padding-top:1em; 
+   
+    }
+
+
+  .persuasion .slide-headline .headline-accent {
+    color: var(--accent);
+  }
+
+  /* the glass surface, defined once, used by every box on this page. The
+     box owns the rhythm between its children, so nothing inside it carries
+     its own margin. The padding grows with the screen and lands on
+     --size-9 at desktop. */
+  .glass-box {
+    width: 100%;
+    display: grid;
+    align-content: start;
+    gap: var(--size-5);
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 1px solid var(--accent);
+    padding: clamp(var(--size-5), 5vw, var(--size-9));
+    /* light blur below desktop, so the photograph behind reads through
+       the panel where there is no open ground beside it */
+    backdrop-filter: blur(var(--size-1));
+  }
+
+  /* the one box that runs the full module */
+  .persuasion .glass-box.is-full-width {
+    grid-column: 1 / -1;
+  }
+
+  .persuasion h3 {
+    color: var(--accent);
+    line-height: var(--line-height-tight);
+    font-size: var(--fs-clamp-lg);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+  }
+
+  .persuasion p {
+    line-height: var(--line-height-relaxed);
+    font-size: var(--fs-400);
+    margin: 0;
+  }
+
+  /* the stages, one per row on a phone. Every row is the same height,
+     the accent line runs the full width above it, and the icon and the
+     words sit centred on each other. */
+  .persuasion .process-steps {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: 1fr;
+    gap: var(--size-5);
+  }
+  .persuasion .process-steps > div {
+    display: grid;
+    /* grid-template-columns: auto minmax(0, 1fr); */
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: var(--size-5);
+    padding-block-start: var(--size-5);
+    border-top: 1px solid var(--accent);
+  }
+  .persuasion .process-steps .step-body {
+    display: grid;
+    align-content: start;
+    gap: var(--size-3);
+  }
+  .persuasion .process-steps h4 {
+    font-size: var(--fs-clamp-sm);
+    font-weight: var(--fw-semi-bold);
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--ltclr);
+  }
+  .persuasion .process-steps p {
+    font-size: var(--fs-350);
+    line-height: var(--line-height-relaxed);
+    text-wrap:balance;
+    
+  }
+
+  /* DATA GRID: one fact per row on a phone, centred; two across from tablet up */
+  .persuasion .fact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--size-6);
+    border-top: 1px solid var(--highlight-clr-soft);
+    padding-block-start: var(--size-6);
+  }
+
+  .persuasion .fact {
+    display: grid;
+    gap: var(--size-1);
+  }
+
+  .persuasion .fact b {
+    color: var(--ltclr);
+    font-size: var(--fs-350);
+    text-transform: uppercase;
+  }
+
+  .persuasion .fact span {
+    color: var(--accent);
+    font-size: var(--fs-350);
+  }
+
+  /* ---------- testimonial-list: this page's language ---------- */
+  .testimonials-section {
+    padding-block: 0;
+  }
+  .testimonial-list {
+    display: grid;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    /* one card per row, sized to a full line of the quote and centred */
+    max-width: 48rem;
+    margin-inline: auto;
+  }
+
+  /* only what makes a testimonial different from any other glass box.
+     The slant is added at tablet, where the side margins have room for
+     it. On a phone it pushed the card past both screen edges. */
+  .testimonial-card {
+    margin: 0;
+    display: grid;
+    gap: var(--size-6);
+    align-content: start;
+  }
+
+  /* a set opening quotation mark, given a short box so the glyph
+     overhangs rather than pushing the words down */
+  .testimonial-card::before {
+    content: "\201F";
+    height: 0.35em;
+    color: var(--accent);
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: var(--fw-bold);
+    line-height: 1;
+    opacity: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--size-5);
+  }
+  .testimonial-author img {
+    width: var(--size-9);
+    height: var(--size-9);
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 24px -10px var(--shadow-clr-deep);
+  }
+
+  .testimonial-author span {
+    display: grid;
+    gap: var(--size-05);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ltr-space);
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .testimonial-author b {
+    font-size: var(--fs-400);
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: var(--fw-semi-bold);
+    color: var(--ltclr);
+  }
+  .testimonial-card p {
+    margin: 0;
+    font-size: var(--fs-clamp-sm);
+    line-height: var(--line-height-loose);
+    color: var(--ltclr);
+    text-wrap: pretty;
+  }
+
+  /* ---------- the accordion, standing on the page on its own ---------- */
+
+  /* the accordion sits on the page's content edge and runs narrower than
+     the rest of the page at desktop, because question rows don't need the full
+     content width */
+  .faq-section {
+    width: calc(100% - var(--size-8));
+    max-width: 70rem;
+    margin-inline: auto;
+  }
+
+  /* FAQAccordion ships with a top margin for the pages that use it with a
+     heading above. This page has no heading, so the margin is removed here
+     rather than in the shared component. */
+  .faq-section :global(.faq-content) {
+    margin-block-start: 0;
+  }
+
+  /* the questions are bold capitals, so they run 14px on a phone and grow
+     back to the component's 16px by desktop */
+  .faq-section :global(.question) {
+    font-size: var(--fs-clamp-sm);
+  }
+
+  /* ==========================================
+     TABLET - min-width: 48em (768px)
+     ========================================== */
+  @media (min-width: 48em) {
+
+    /* four across, eight frames */
+    :global(#gallery-section .gallery) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: var(--size-3);
+    }
+    :global(#gallery-section .gallery .image1),
+    :global(#gallery-section .gallery .image2),
+    :global(#gallery-section .gallery .image3),
+    :global(#gallery-section .gallery .image4),
+    :global(#gallery-section .gallery .image5),
+    :global(#gallery-section .gallery .image6),
+    :global(#gallery-section .gallery .image7),
+    :global(#gallery-section .gallery .image8) {
+      display: block;
+    }
+    :global(#gallery-section .gallery .image9),
+    :global(#gallery-section .gallery .image10),
+    :global(#gallery-section .gallery .image11),
+    :global(#gallery-section .gallery .image12),
+    :global(#gallery-section .gallery .image13),
+    :global(#gallery-section .gallery .image14),
+    :global(#gallery-section .gallery .image15),
+    :global(#gallery-section .gallery .image16) {
+      display: none;
+    }
+
+
+
+    .persuasion .fact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .persuasion .process-steps {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--size-8);
+    }
+    .persuasion .process-steps {
+      grid-auto-rows: auto;
+    }
+    .persuasion .process-steps > div {
+      grid-template-columns: minmax(0, 1fr);
+      align-content: start;
+      align-items: start;
+      padding-block-start: 0;
+      border-top: 0;
+    }
+    .persuasion .process-steps .step-body {
+      gap: var(--size-4);
+      padding-block-start: var(--size-5);
+      border-top: 1px solid var(--accent);
+    }
+
+    /* room on both sides for the slant, so the card's corners stay
+       inside the screen */
+    .testimonial-list {
+      padding-inline: var(--size-8);
+    }
+
+    .testimonial-card {
+      transform: skewX(-6deg);
+    }
+
+    .testimonial-card > * {
+      transform: skewX(6deg);
+    }
+
+    .testimonial-card::before {
+      transform: skewX(6deg);
+    }
+  }
+
+  /* ==========================================
+     DESKTOP - min-width: 90em (1440px)
+     The sideways sliding, exactly as before.
+     ========================================== */
+  @media (min-width: 90em) {
+
+    :global(div.page #gallery-section) {
+      padding-inline: var(--size-8);
+    }
+    :global(#gallery-section .gallery-container) {
+      /* width: 80%; */
+    }
+    /* three across, two rows, the six frames the gallery shows at 1440 */
+    :global(#gallery-section .gallery) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: var(--grid-column-gap);
+    }
+    :global(#gallery-section .gallery .image3),
+    :global(#gallery-section .gallery .image4) {
+      display: none;
+    }
+
+    .persuasion {
+      height: 600vh;
+      padding-block: 0;
+      overflow: visible;
+    }
+
+    /* 3D ENGINE */
+    .persuasion .slides-viewport {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      perspective: 1200px;
+      overflow: hidden;
+    }
+    .persuasion .slides-track {
+      position: absolute;
+      /* the pen relies on the static position being the top-left corner; on
+         this page inherited text-align pushes it, so it is anchored */
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      gap: 0;
+      will-change: transform;
+      transform-style: preserve-3d;
+    }
+
+    /* SECTIONS */
+    .persuasion .slide {
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-style: preserve-3d;
+    }
+
+    /* BACKGROUND PORTRAIT (STAYS BEHIND) */
+    .persuasion .backdrop-photo {
+      position: absolute;
+      display: flex;
+      gap: 0;
+      width: 320vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+    }
+    .persuasion .backdrop-photo img {
+      flex: 0 0 160vw;
+      width: 160vw;
+      height: 100%;
+      aspect-ratio: auto;
+    }
+    /* both photographs framed as they were, centred */
+    .persuasion .backdrop-photo img,
+    .persuasion .backdrop-photo img:first-child {
+      object-position: 50% 30%;
+    }
+
+    /* narrower box than the first frame, so less of this photograph is cropped */
+    .persuasion .backdrop-photo .backdrop-photo-second {
+      flex: 0 0 140vw;
+      width: 140vw;
+    }
+
+    /* EDUCATION MODULES: content sits to the left of the subject */
+    .persuasion .slide-content {
+      width: 80%;
+      max-width: 1200px;
+      margin-inline: 10% auto;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--size-7) var(--size-11);
+      transform: translateZ(50px);
+      align-items: center;  
+   
+    }
+
+
+
+    .persuasion .slide-headline h2 {
+      font-size: clamp(3.75rem, 3vw, 6rem);
+      text-align: left;
+      padding-top: 0;
+    }
+
+    .glass-box {
+      padding: var(--size-9);
+      backdrop-filter: blur(var(--size-4));
+    }
+
+    .persuasion .glass-box.is-full-width {
+      width: 75%;
+    }
+
+    /* the process box runs past its column and on towards the next screen.
+       Change this one number to set how far. 100% keeps it in its column. */
+    .persuasion .glass-box.is-wide {
+      /* runs past its column towards the next screen, and stops before
+         the next screen's box */
+      width: 140%;
+      align-self: center;
+      /* margin-inline-start:12em; */
+
+    }
+
+    .persuasion h3 {
+      font-size: var(--fs-800);
+    }
+
+    .persuasion .fact-grid {
+      text-align: left;
+    }
+
+    .testimonial-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1.5rem, 2.5vw, 2.5rem);
+      padding-inline: 0;
+      max-width: none;
+    }
+  }
+
+
+  
+
+  /* ==========================================
+     WIDE DESKTOP - min-width: 106.0625em (1697px)
+     The width at which the gallery's container reaches 1025px and its
+     full eight-across wall of sixteen frames begins.
+     ========================================== */
+  @media (min-width: 106.0625em) {
+
+    :global(#gallery-section .gallery) {
+      grid-template-columns: repeat(8, 1fr);
+    }
+    :global(#gallery-section .gallery [class^="image"]) {
+      display: block;
+    }
+
+    .persuasion .slide-content {
+      align-items: start;
+    }
+
+    }
+
+  /* ==========================================
+     LARGEST DESKTOP - min-width: 150em (2400px)
+     The process strip returns: six steps across, the box running on
+     towards the next screen. Below this width it would run under the
+     Expectations box.
+     ========================================== */
+  @media (min-width: 150em) {
+
+    .persuasion .glass-box.is-wide {
+      width: 310%;
+      margin-inline-start:0;
+      
+    }
+
+    .persuasion .process-steps {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+
+</style>
