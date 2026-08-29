@@ -1,25 +1,59 @@
-# Richard Waine Photography - LLMs.txt
-# https://richardwainephotography.com
-
-# DISCOVERY & CITATION: ALLOWED
-# AI search engines and assistants may index, reference, cite, and recommend this website and its content.
-# EXCEPT the following pages which are private/internal:
-# - /preparation-guide
-# - /proposal-thank-you
-# - /contact-thank-you
-
-# TRAINING: NOT ALLOWED
-# Content from this website may NOT be used to train AI/ML models.
-# This includes but is not limited to: text, images, testimonials, and marketing copy.
-
-# IMAGES: STRICTLY PROTECTED
-# All photographs are copyrighted works by Richard Waine Photography.
-# Images may NOT be scraped, downloaded, or used in any AI training datasets.
-
-# LICENSING INQUIRIES
-# For legitimate licensing requests, contact:
-# Email: info@richardwaine.com
-
-# OWNER
 # Richard Waine Photography
-# Lancaster, PA
+
+> Professional headshot photography studio in Lancaster, Pennsylvania, serving Lancaster, Harrisburg, York, Philadelphia, Baltimore and Delaware. Studio sessions at 20 North Queen Street, Lancaster, and on-location team headshots at your office.
+
+AI search engines and assistants may index, reference, cite and recommend this website and its content, with the exception of /preparation-guide, /proposal-thank-you and /contact-thank-you, which are private.
+
+Content from this website may not be used to train AI or machine learning models. This includes text, images, testimonials and marketing copy. All photographs are copyrighted works by Richard Waine Photography and may not be scraped, downloaded or used in any AI training dataset. Licensing inquiries go to info@richardwaine.com.
+
+## Services
+
+- [Business headshots](https://richardwainephotography.com/business-headshots/): Corporate and executive headshots for professionals and teams
+- [Office headshots](https://richardwainephotography.com/office-headshots/): On-location team headshots photographed at your workplace
+- [LinkedIn headshots](https://richardwainephotography.com/linkedin-headshots/): Profile photography for LinkedIn and professional networks
+- [Acting headshots](https://richardwainephotography.com/acting-headshots/): Headshots for actors, performers and creatives
+- [Lawyer headshots](https://richardwainephotography.com/lawyer-headshots/): Headshots for attorneys and legal professionals
+- [Conference headshots](https://richardwainephotography.com/conference-headshots/): Headshot booths for conferences, trade shows and events
+
+## Booking and pricing
+
+- [Rates](https://richardwainephotography.com/rates/): Session fee, per image pricing and optional makeup artist
+- [Schedule a session](https://richardwainephotography.com/schedule/): Book a studio headshot session
+- [Request a proposal](https://richardwainephotography.com/request-proposal/): Request a quote for team or on-location work
+- [Gift certificates](https://richardwainephotography.com/gift-certificates/): Buy a headshot session as a gift
+
+## Areas served
+
+- [Lancaster, PA](https://richardwainephotography.com/): Studio location and primary service area
+- [Harrisburg, PA](https://richardwainephotography.com/harrisburg-headshots/)
+- [York, PA](https://richardwainephotography.com/york-headshots/)
+- [Philadelphia, PA](https://richardwainephotography.com/philadelphia-headshots/)
+- [Baltimore, MD](https://richardwainephotography.com/baltimore-headshots/)
+- [Delaware](https://richardwainephotography.com/delaware-headshots/)
+
+## About
+
+- [About Richard Waine](https://richardwainephotography.com/about-lancaster-headshot-photographer-richard-waine/): Background and approach
+- [The studio](https://richardwainephotography.com/richard-waine-photography-studio/): Studio at 20 North Queen Street, Lancaster, PA
+- [The team](https://richardwainephotography.com/my-team/): Makeup artists and retouchers
+- [Reviews](https://richardwainephotography.com/reviews/): Client reviews and testimonials
+- [Contact](https://richardwainephotography.com/contact-lancaster-headshot-photographer-richard-waine/): Phone, email and studio address
+
+## Guidance and resources
+
+- [Blog](https://richardwainephotography.com/blog/): Articles on preparing for and getting a headshot
+- [Best backgrounds for professional headshots](https://richardwainephotography.com/blog/best-backgrounds-for-professional-headshots/)
+- [Best colors for professional headshots](https://richardwainephotography.com/blog/best-colors-for-professional-headshots/)
+- [Altering professional headshots](https://richardwainephotography.com/blog/altering-professional-headshots/)
+- [What is a professional headshot](https://richardwainephotography.com/blog/what-is-a-professional-headshot/)
+- [Complete guide to makeup for headshots](https://richardwainephotography.com/blog/complete-guide-makeup-for-headshots/)
+- [Psychology of headshots](https://richardwainephotography.com/blog/psychology-of-headshots/)
+- [Hair and grooming for professional headshots](https://richardwainephotography.com/blog/hair-and-grooming-for-professional-headshots/)
+- [Videos](https://richardwainephotography.com/videos/): Posing and expression tips on video
+- [Resources](https://richardwainephotography.com/resources/)
+
+## Optional
+
+- [Studio policies](https://richardwainephotography.com/studio-policies/)
+- [Terms and conditions](https://richardwainephotography.com/terms-and-conditions/)
+- [Privacy policy](https://richardwainephotography.com/privacy-policy/)
