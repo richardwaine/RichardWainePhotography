@@ -6,7 +6,7 @@ import Gallery from '../components/Gallery.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 import { Image } from 'astro:assets';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
-import { reviewCount, ALL_TESTIMONIALS } from '../data/testimonials';
+import { reviewCount, yearsExperience, ALL_TESTIMONIALS } from '../data/testimonials';
 
 import HeroImage from "../assets/images/professions/JamesKennedy - 0006 (horizontal).jpg"
 import HeroBg from "../assets/images/blog/RW7 - (16 x 9).jpg"
@@ -54,7 +54,7 @@ const acuityUrl = "https://app.acuityscheduling.com/schedule/f0843291/appointmen
 
 /* Your figures, from FloatingStats, plus delivered images. */
 const spec = [
-  { v: "17", l: "YEARS EXPERIENCE" },
+  { v: String(yearsExperience), l: "YEARS EXPERIENCE" },
   { v: String(reviewCount), l: "5-STAR GOOGLE REVIEWS" },
   { v: "10,000+", l: "HEADSHOTS DELIVERED" },
   { v: "100%", l: "CLIENT SATISFACTION" }

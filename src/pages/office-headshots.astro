@@ -8,7 +8,7 @@ import ServiceHero from '../components/service-pages/ServiceHero.astro';
 import PillarCards from '../components/service-pages/PillarCards.astro';
 import SystemRow from '../components/service-pages/SystemRow.astro';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
-import { reviewCount } from '../data/testimonials';
+import { reviewCount, yearsExperience } from '../data/testimonials';
 
 
 import Chubb from "../assets/images/features/Chubb - ContactSheet (square).jpg"
@@ -111,7 +111,7 @@ const {
   systemRow2Title = 'System of Direction',
   systemRow2Description = `Your team members are not professional models. They don't know what to do with their hands, their posture, or their facial expressions. That is my job. I provide clear and specific coaching that eliminates awkwardness and draws out authenticity. Small adjustments to posture, head angle, and expression make the difference between a stiff corporate photo and a high-quality headshot that projects confidence, competence, approachability, and trustworthiness. The goal is for every team member to see themselves at their best and leave with a skip in their step.
 
-  Over 17 years photographing corporate teams, I have refined this coaching approach to help professionals who never thought they could look good in photos walk away surprised by how much they enjoyed the process.
+  Over ${yearsExperience} years photographing corporate teams, I have refined this coaching approach to help professionals who never thought they could look good in photos walk away surprised by how much they enjoyed the process.
   `,
   methodItem5 = 'Real-time image tethering for instant feedback',
   methodItem6 = 'Advanced guidance, coaching and direction',
@@ -222,7 +222,7 @@ const pagePath = Astro.url.pathname.replace(/\/$/, '');
 /* The figures at the foot of the hero. They describe the business, so they
    are the same on every service page. */
 const spec = [
-  { v: "17", l: "YEARS EXPERIENCE" },
+  { v: String(yearsExperience), l: "YEARS EXPERIENCE" },
   { v: String(reviewCount), l: "5-STAR GOOGLE REVIEWS" },
   { v: "10,000+", l: "HEADSHOTS DELIVERED" },
   { v: "100%", l: "CLIENT SATISFACTION" }

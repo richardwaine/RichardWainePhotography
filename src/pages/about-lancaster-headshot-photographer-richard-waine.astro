@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { Image } from 'astro:assets';
 import PrimaryButton from '../components/PrimaryButton.astro';
 import SecondaryButton from '../components/SecondaryButton.astro';
-import { reviewCount } from '../data/testimonials';
+import { reviewCount, yearsExperience } from '../data/testimonials';
 
 import heroBg from '../assets/images/blog/RW7 - (16 x 9).jpg';
 import richardHeadshot from '../assets/images/about/Richard Waine 20230315 (horizontal).jpg';
@@ -43,7 +43,7 @@ const tabs = [
 			"The Headshot Crew had planned a cruise to Bermuda. We would do some learning and shooting on-board, and also make a nice vacation of the trip. As plain as day, there was my opportunity.",
 			"My review began. 20 images submitted, 15 needed to make Associate. He picked out a few things to talk about here and there. Then… SHA-BANG! … SHA-BANG! … SHA-BANG! … SHA-BANG! In total, 19 out of 20 images were accepted, and I received 4 SHA-BANGs. With that, Peter made me an Associate photographer. My dear friends, who I had known since the beginning of this journey, offered hugs and congratulations. My wife beamed with pride. This was not an easy accomplishment.",
 			"That evening, my wife and I were seated at a hibachi table at a Japanese restaurant on board the cruise ship. We were seated with folks we didn't know. Suddenly, Peter was behind us, with arms wrapped around both of us. He proudly announced to the table that they were sitting with “one of the best photographers in the world.” It was an amazing feeling, and that was one of the coolest memories I've ever had.",
-			"Today, I am a Mentor in the Headshot Crew, a global community of more than 14,000 headshot photographers. I have been shooting headshots exclusively for over 17 years, and am a brand ambassador for a handful of photography related companies. I respect my humble photography roots, and appreciate the success I have enjoyed. I look forward to assisting my clients on their journey for success, and that begins with helping them to embrace their physical appearance and elevate their personal brands."
+			`Today, I am a Mentor in the Headshot Crew, a global community of more than 14,000 headshot photographers. I have been shooting headshots exclusively for over ${yearsExperience} years, and am a brand ambassador for a handful of photography related companies. I respect my humble photography roots, and appreciate the success I have enjoyed. I look forward to assisting my clients on their journey for success, and that begins with helping them to embrace their physical appearance and elevate their personal brands.`
 		]
 	},
 	{
@@ -61,14 +61,14 @@ const tabs = [
 	},
 	{
 		id: "credentials",
-		headline: "17 Years. One Specialty.",
+		headline: `${yearsExperience} Years. One Specialty.`,
 		pullQuote: "“Best Photographer — 4× Winner”",
 		pullAttrib: "— Lancaster County Magazine",
 		blocks: [
 			"I have spent the majority of my photography career working in commercial headshots and portraiture.",
 			"I have been a headshot judge for the International Model and Talent Association, am a member of the Professional Photographers of America, Wedding & Portrait Photographers International, and National Association of Photoshop Professionals.",
 			"I was voted Best Photographer by Lancaster County Magazine readers in 2024, 2022, 2021, and 2020, and placed second in 2019.",
-			"I am an associate photographer and mentor in Peter Hurley's Headshot Crew, and am a brand ambassador for Phase One and Savage Universal, and an affiliate of major companies like JPEGmini and Think Tank Photo.",
+			"I am an associate photographer and mentor in Peter Hurley's Headshot Crew, and have been a brand ambassador for Tether Tools, Phase One and Savage Universal, and an affiliate of major companies like JPEGmini and Think Tank Photo.",
 			"I have been published on many occasions, and continue to be a thought leader on the topics of personal branding and headshot photography.",
 			"All this really means is that I am a professional headshot specialist, and I am an expert in bringing out the very best in you, translating your message into a visual representation and providing an experience second to none!"
 		]
@@ -89,7 +89,7 @@ const tabs = [
 ];
 
 const spec = [
-	{ v: "17", l: "YEARS EXPERIENCE" },
+	{ v: String(yearsExperience), l: "YEARS EXPERIENCE" },
 	{ v: String(reviewCount), l: "5-STAR GOOGLE REVIEWS" },
 	{ v: "10,000+", l: "HEADSHOTS DELIVERED" },
 	{ v: "100%", l: "CLIENT SATISFACTION" }

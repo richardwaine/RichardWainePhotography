@@ -50,6 +50,8 @@ export interface Testimonial {
 
 export const reviewCount = 671;
 
+export const yearsExperience = new Date().getFullYear() - 2008;
+
 export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Star Bunner",

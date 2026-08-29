@@ -1,13 +1,13 @@
 ---
 // Floating Statistics Component
-import { reviewCount } from '../data/testimonials';  
+import { reviewCount, yearsExperience } from '../data/testimonials';  
 ---
 
 <!-- 3D Floating Statistics -->
 <div class="floating-stats" id="floatingStats">
     <div class="stat-card" data-delay="0">
         <div class="stat-3d-container">
-            <div class="stat-number" data-count="17">17</div>
+            <div class="stat-number" data-count={yearsExperience}>{yearsExperience}</div>
             <div class="stat-label">Years Experience</div>
         </div>
     </div>

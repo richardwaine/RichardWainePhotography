@@ -4,6 +4,7 @@ import RWHeadshot from '../assets/images/blog/RichardWaine - (16 x 9).jpg';
 import RW1Image from '../assets/images/blog/RW1 - (16 x 9).jpg';
 import RW2Image from '../assets/images/blog/RW2 - (16 x 9).jpg';
 import { buildPersonSchema } from '../utils/schema';
+import { yearsExperience } from '../data/testimonials';
 
 
 interface BioParagraph {
@@ -28,7 +29,7 @@ const { bioSectionHeading, bioSections } = Astro.props;
 const personSchema = buildPersonSchema(
   "Richard Waine",
   "Professional Headshot Photographer",
-  "Professional headshot photographer with 17 years of experience specializing in business headshots, acting headshots, LinkedIn profiles, and corporate photography in Lancaster, PA",
+  `Professional headshot photographer with ${yearsExperience} years of experience specializing in business headshots, acting headshots, LinkedIn profiles, and corporate photography in Lancaster, PA`,
   "https://richardwainephotography.com",
   `https://richardwainephotography.com${RWHeadshot.src}`,
   "Richard Waine Photography",

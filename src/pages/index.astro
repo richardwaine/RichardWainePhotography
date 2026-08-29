@@ -26,6 +26,7 @@ const captions = 'https://media.richardwainephotography.com/captions.vtt';
 
 import WorldMap from '../components/WorldMap.astro';
 import { buildVideoObjectSchema, buildReviewSchema, buildServiceSchema } from '../utils/schema';
+import { yearsExperience } from '../data/testimonials';
 
 const title = 'Richard Waine Photography';
 const h1 = 'Professional Headshots Lancaster';
@@ -245,7 +246,7 @@ const lancasterHeadshotsServiceSchema = buildServiceSchema(
       showHeadingOnMobile: false,
       clipParagraphs: [
         { text: "By now you probably realize that professional headshot photography is about more than just nice pictures, and I am much more than a portrait photographer.", showOnMobile: true },
-        { text: "Over 17 years, I have specialized exclusively in headshot photography in Lititz, Manheim, Ephrata, Elizabethtown, Mount Joy, and throughout Lancaster PA, photographing <a href='/business-headshots/'>business professionals</a>, actors, executives, and providing corporate headshots for companies and teams.", showOnMobile: true },
+        { text: `Over ${yearsExperience} years, I have specialized exclusively in headshot photography in Lititz, Manheim, Ephrata, Elizabethtown, Mount Joy, and throughout Lancaster PA, photographing <a href='/business-headshots/'>business professionals</a>, actors, executives, and providing corporate headshots for companies and teams.`, showOnMobile: true },
         { text: "I am the best headshot photographer in Lancaster PA and Central Pennsylvania, specializing in corporate headshots, executive portraits, acting headshots, and professional photography in Lancaster City, Lititz, Ephrata, E-town, and Mount Joy.", showOnMobile: true }
       ]
     },
