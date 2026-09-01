@@ -12,6 +12,7 @@ import bermudaCruisePhoto from '../assets/images/about/Richard and Ilyse - Heads
 import rwInSession from '../assets/images/about/RW - in session.jpg';
 import hscMentorBadge from '../assets/images/logos/HSC - Mentor.jpg';
 import harley1 from '../assets/images/about/Harley-1.jpeg';
+import signatureWhite from '../assets/images/signature/Signature (white).png';
 
 import award2019 from '../assets/images/lcm-awards/2019_LCMAmongBestOfLanc-transparent.png';
 import award2020 from '../assets/images/lcm-awards/2020_BestofLanc-transparent.png';
@@ -25,6 +26,17 @@ import thinkTankLogo from '../assets/images/logos/ThinkTank.jpg';
 import hscWhiteLogo from '../assets/images/logos/HSC - White.jpg';
 
 const tabs = [
+	{
+		id: "welcome",
+		headline: "Welcome",
+		pullQuote: "",
+		pullAttrib: "",
+		blocks: [
+			`My name is Richard Waine, and for ${yearsExperience} years I have photographed headshots from my studio in downtown Lancaster.`,
+			"Welcome, and thanks for stopping in. Poke around the other tabs and you'll find how I got into this, the credentials behind it, what a session with me is actually like, and a bit of who I am outside the studio.",
+			"I look forward to meeting you."
+		]
+	},
 	{
 		id: "story",
 		headline: "From Wall Street to the Studio",
@@ -184,7 +196,8 @@ const spec = [
 	<!-- TABS + CONTENT -->
 	<div class="tab-layout">
 		<div class="tab-col">
-			<button class="tab-btn active" data-tab="story">The Story</button>
+			<button class="tab-btn active" data-tab="welcome">Welcome</button>
+			<button class="tab-btn" data-tab="story">The Story</button>
 			<button class="tab-btn" data-tab="experience">The Experience</button>
 			<button class="tab-btn" data-tab="credentials">Credentials</button>
 			<button class="tab-btn" data-tab="personal">The Person</button>
@@ -192,17 +205,22 @@ const spec = [
 
 		<div class="tab-main" id="tabMain">
 			{tabs.map((tab) => (
-				<div class={`tab-content${tab.id === "story" ? " active" : ""}`} data-for={tab.id}>
+				<div class={`tab-content${tab.id === "welcome" ? " active" : ""}`} data-for={tab.id}>
 					<h2>{tab.headline}</h2>
-					<div class="pull-quote">
-						<div class="q">{tab.pullQuote}</div>
-						{tab.pullAttrib && <div class="attrib">{tab.pullAttrib}</div>}
-					</div>
+					{tab.pullQuote && (
+						<div class="pull-quote">
+							<div class="q">{tab.pullQuote}</div>
+							{tab.pullAttrib && <div class="attrib">{tab.pullAttrib}</div>}
+						</div>
+					)}
 					{tab.blocks.map((block) => <p>{block}</p>)}
+					{tab.id === "welcome" && (
+						<Image class="signature" src={signatureWhite} alt="Richard Waine signature" width={260} loading="lazy" />
+					)}
 				</div>
 			))}
 
-			<figure class="tab-photo active" data-for="story">
+			<figure class="tab-photo" data-for="story">
 				<Image src={bermudaCruisePhoto} alt="Richard Waine and his wife Ilyse aboard the Headshot Crew cruise to Bermuda" width={700} />
 			</figure>
 			<figure class="tab-photo" data-for="experience">
@@ -297,7 +315,7 @@ const spec = [
 			});
 		});
 
-		render('story');
+		render('welcome');
 	}
 
 	document.addEventListener('astro:page-load', initAboutTabs);
@@ -641,6 +659,9 @@ document.addEventListener('astro:page-load', initHeroSpec);
 		grid-template-columns: 1fr var(--_photo-col);
 		column-gap: clamp(var(--size-5), 3vw, var(--size-8));
 		align-items: start;
+		/* pack rows to the top; a short tab must not have its paragraphs
+		   spread down the min-height of .tab-layout */
+		align-content: start;
 	}
 
 	.tab-content.active {
@@ -653,6 +674,11 @@ document.addEventListener('astro:page-load', initHeroSpec);
 	}
 
 	.tab-content :global(p) {
+		grid-column: 1;
+	}
+
+	/* the signature belongs under the note, not in the photo column */
+	.tab-content :global(.signature) {
 		grid-column: 1;
 	}
 
