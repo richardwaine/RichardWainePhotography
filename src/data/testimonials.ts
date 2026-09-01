@@ -48,7 +48,7 @@ export interface Testimonial {
   displayOrder?: number; // Original display order for reviews page
 }
 
-export const reviewCount = 671;
+export const reviewCount = 672;
 
 export const yearsExperience = new Date().getFullYear() - 2008;
 
@@ -1460,7 +1460,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Jilian White",
     company: "",
-    category:"executives",
+    category:"medical-professionals",
     review: "Richard was amazing. The makeup artist made me look absolutely gorgeous. I would highly recommend.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -8753,7 +8753,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: "Makenzie Scanlon",
     company: "",
-    category: "corporate-professionals",
+    category: "medical-professionals",
     review: "Loved my session! He made me look incredible and confident for my upcoming ERAS application. Highly recommend!",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
@@ -8801,6 +8801,19 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Thomas Wilde",
     datePublished: "2026-08-26T12:00:00.000000Z",
     displayOrder: 514
+  },
+  {
+    name: "Justin James",
+    company: "",
+    category: "medical-professionals",
+    review: "I recently had my first professional headshot session with Richard Waine, and the experience exceeded every expectation. As a medical student now applying for residency, I wanted a headshot that conveyed professionalism while still reflecting my personality and character. Richard understood that balance immediately and thoughtfully guided me through the entire process.\n\nHe made me feel comfortable, welcomed my input, offered helpful suggestions, and showed me the results as we made adjustments. The session felt truly collaborative, and I was actively involved in creating a final product that feels authentic to who I am and where I am headed professionally.\n\nI highly recommend Richard and look forward to returning to him as my career continues to grow.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Justin James",
+    datePublished: "2026-09-01T12:00:00.000000Z",
+    displayOrder: 515
   }
 
 
