@@ -22,6 +22,7 @@ export interface Props {
   tagline?: string;
   taglineSubtext?: string;
   mainHeading?: string;
+  backgroundAlt?: string;
 }
 
 const {
@@ -38,7 +39,8 @@ const {
   ],
   tagline = "",
   taglineSubtext = "",
-  mainHeading = ""
+  mainHeading = "",
+  backgroundAlt = "Behind the scenes at Richard Waine Photography Studio"
 } = Astro.props;
 
 
@@ -78,7 +80,7 @@ const heroGallerySchema = buildImageGallerySchema(
 <div class="hero-background-picture">
     <Picture
         src={heroBackground}
-        alt="Behind the scenes at Richard Waine Photography Studio"
+        alt={backgroundAlt}
         class="hero-background-image"
         widths={[400, 800, 1200, 1600]}
         sizes="100vw"
