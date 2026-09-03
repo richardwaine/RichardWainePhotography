@@ -164,6 +164,7 @@ const heroGallerySchema = buildImageGallerySchema(
                                        sizes="(max-width: 767px) 45vw, (max-width: 1023px) 30vw, 120px"
                                         width={300}
                                         height={300}
+                                        loading="eager"
                                         fetchpriority="high"
                                         decoding="async"
                                     />
@@ -496,9 +497,12 @@ object-fit: cover;
     transform-style: preserve-3d;
 }
 
+:global(.js) .word {
+    transform: translateY(100%) rotateX(-90deg);
+}
+
 .word {
     display: inline-block;
-    transform: translateY(100%) rotateX(-90deg);
     transform-origin: bottom;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
     text-shadow: 0 0 10px rgba(0, 0, 0, .5);
@@ -524,9 +528,12 @@ object-fit: cover;
     color: var(--faded);
     line-height: var(--line-height-relaxed);
     max-inline-size: 31.5rem;
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+:global(.js) .experience-h1 {
     transform: translateY(var(--size-6));
     opacity: 0;
-    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .experience-h1.revealed {
@@ -627,9 +634,12 @@ object-fit: cover;
 /* 3D Action Buttons - MOBILE BASE */
 .action-area {
     margin-top:var(--size-8);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+:global(.js) .action-area {
     opacity: 0;
     transform: translateY(var(--size-825));
-    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .action-area.revealed {
