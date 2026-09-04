@@ -3,6 +3,7 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import ServiceHero from '../components/service-pages/ServiceHero.astro';
 import Gallery from '../components/Gallery.astro';
+import Testimonials2 from '../components/Testimonials2.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 import { Image } from 'astro:assets';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
@@ -239,18 +240,10 @@ const spec = [
   
    <div class="closing-sections">
 
-  <section class="testimonials-section wrapper">
-    <div class="testimonial-list">
-      {quotes.map((q) => (
-        <blockquote class="testimonial-card glass-box" data-reveal>
-          <p>{q.review.split('\n')[0]}</p>
-          <footer class="testimonial-author">
-            <Image src={q.image} alt={q.imageAlt} widths={[96, 144]} sizes="64px" />
-            <span><b>{q.name}</b>{q.company}</span>
-          </footer>
-        </blockquote>
-      ))}
-    </div>
+  <section class="testimonials-section">
+
+    <Testimonials2 title="Lawyer Headshot Reviews" limit={3} filterByNames={["Jacqueline Johansen", "Keith Woody", "Kelly Gooch"]}/>
+    
   </section>
 
 
@@ -589,76 +582,10 @@ document.addEventListener('astro:page-load', () => {
     font-size: var(--fs-350);
   }
 
-  /* ---------- testimonial-list: this page's language ---------- */
   .testimonials-section {
     padding-block: 0;
   }
-  .testimonial-list {
-    display: grid;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-    /* one card per row, sized to a full line of the quote and centred */
-    max-width: 48rem;
-    margin-inline: auto;
-  }
-
-  /* only what makes a testimonial different from any other glass box.
-     The slant is added at tablet, where the side margins have room for
-     it. On a phone it pushed the card past both screen edges. */
-  .testimonial-card {
-    margin: 0;
-    display: grid;
-    gap: var(--size-6);
-    align-content: start;
-  }
-
-  /* a set opening quotation mark, given a short box so the glyph
-     overhangs rather than pushing the words down */
-  .testimonial-card::before {
-    content: "\201F";
-    height: 0.35em;
-    color: var(--accent);
-    font-size: clamp(3rem, 5vw, 4.5rem);
-    font-weight: var(--fw-bold);
-    line-height: 1;
-    opacity: 1;
-  }
-
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: var(--size-5);
-  }
-  .testimonial-author img {
-    width: var(--size-9);
-    height: var(--size-9);
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 10px 24px -10px var(--shadow-clr-deep);
-  }
-
-  .testimonial-author span {
-    display: grid;
-    gap: var(--size-05);
-    font-size: var(--fs-300);
-    font-weight: var(--fw-bold);
-    letter-spacing: var(--ltr-space);
-    text-transform: uppercase;
-    color: var(--accent);
-  }
-  .testimonial-author b {
-    font-size: var(--fs-400);
-    letter-spacing: 0;
-    text-transform: none;
-    font-weight: var(--fw-semi-bold);
-    color: var(--ltclr);
-  }
-  .testimonial-card p {
-    margin: 0;
-    font-size: var(--fs-clamp-sm);
-    line-height: var(--line-height-loose);
-    color: var(--ltclr);
-    text-wrap: pretty;
-  }
+ 
 
   /* ---------- the accordion, standing on the page on its own ---------- */
 
@@ -715,8 +642,6 @@ document.addEventListener('astro:page-load', () => {
       display: none;
     }
 
-
-
     .persuasion .fact-grid {
       grid-template-columns: 1fr 1fr;
     }
@@ -739,24 +664,6 @@ document.addEventListener('astro:page-load', () => {
       gap: var(--size-4);
       padding-block-start: var(--size-5);
       border-top: 1px solid var(--accent);
-    }
-
-    /* room on both sides for the slant, so the card's corners stay
-       inside the screen */
-    .testimonial-list {
-      padding-inline: var(--size-8);
-    }
-
-    .testimonial-card {
-      transform: skewX(-6deg);
-    }
-
-    .testimonial-card > * {
-      transform: skewX(6deg);
-    }
-
-    .testimonial-card::before {
-      transform: skewX(6deg);
     }
   }
 
@@ -862,8 +769,6 @@ document.addEventListener('astro:page-load', () => {
    
     }
 
-
-
     .persuasion .slide-headline h2 {
       font-size: clamp(3.75rem, 3vw, 6rem);
       text-align: left;
@@ -898,12 +803,6 @@ document.addEventListener('astro:page-load', () => {
       text-align: left;
     }
 
-    .testimonial-list {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: clamp(1.5rem, 2.5vw, 2.5rem);
-      padding-inline: 0;
-      max-width: none;
-    }
   }
 
 

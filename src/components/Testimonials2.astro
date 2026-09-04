@@ -20,7 +20,7 @@ const testimonialsToDisplay = filterByNames
 ---
 
 <section class="testimonials-section-2 wrapper">
-  {title && <h2 class="section-title">{title}</h2>}
+  {title && <h2 class="section-title center">{title}</h2>}
 
   <div class="testimonial-list-2">
     {testimonialsToDisplay.map((t) => (
@@ -39,18 +39,35 @@ const testimonialsToDisplay = filterByNames
 <style>
   .testimonials-section-2 {
     padding-block: 0;
+   
   }
 
   .testimonial-list-2 {
     display: grid;
     gap: clamp(1.5rem, 3vw, 2.5rem);
+    /* one card per row, sized to a full line of the quote and centred */
+    max-width: 48rem;
+    margin-inline: auto;
+  }
+
+  /* room on both sides for the slant, so the card's corners stay
+     inside the screen */
+  @media (min-width: 48em) {
+    .testimonial-list-2 {
+      padding-inline: var(--size-8);
+    }
   }
 
   /* ---------- wide ---------- */
-  @media (min-width: 64em) {
+  @media (min-width: 90em) {
     .testimonial-list-2 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: clamp(1.5rem, 2.5vw, 2.5rem);
+      padding-inline: 0;
+      max-width: none;
+    }
+    .testimonials-section-2 .section-title {
+      margin-bottom: var(--size-8);
     }
   }
 </style>
