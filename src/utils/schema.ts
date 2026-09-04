@@ -85,7 +85,7 @@ export function buildAggregateRatingSchema(
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": businessName,
-    "image": `${businessUrl}/images/logo.png`,
+    "image": `${businessUrl}/Logo-RichardWainePhotography-black.png`,
     "@id": businessUrl,
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -196,7 +196,7 @@ export function buildServiceCatalogSchema(
         "addressCountry": "US"
       },
       "telephone": "+1-717-925-0061",
-      "image": "https://richardwainephotography.com/images/logo.png"
+      "image": "https://richardwainephotography.com/Logo-RichardWainePhotography-black.png"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -238,7 +238,7 @@ export function buildServiceAudienceSchema(
         "addressCountry": "US"
       },
       "telephone": "+1-717-925-0061",
-      "image": "https://richardwainephotography.com/images/logo.png"
+      "image": "https://richardwainephotography.com/Logo-RichardWainePhotography-black.png"
     },
     "audience": audiences.map(audience => ({
       "@type": audience.name.includes("Companies") || audience.name.includes("Corporate") ? "BusinessAudience" : "PeopleAudience",
@@ -267,7 +267,7 @@ export function buildLocalBusinessSchema(
     "@type": "LocalBusiness",
     "name": businessName,
     "description": description,
-    "image": `${websiteUrl}/images/logo.png`,
+    "image": `${websiteUrl}/Logo-RichardWainePhotography-black.png`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "20 North Queen Street",
@@ -339,7 +339,7 @@ export function buildOfferSchema(
         "addressCountry": "US"
       },
       "telephone": "+1-717-925-0061",
-      "image": "https://richardwainephotography.com/images/logo.png"
+      "image": "https://richardwainephotography.com/Logo-RichardWainePhotography-black.png"
     },
     "itemOffered": {
       "@type": "Service",
@@ -391,7 +391,7 @@ export function buildServiceSchema(
         "addressCountry": "US"
       },
       "telephone": phone,
-      "image": "https://richardwainephotography.com/images/logo.png"
+      "image": "https://richardwainephotography.com/Logo-RichardWainePhotography-black.png"
     },
     "areaServed": serviceAreas.map(area => ({
       "@type": "State",
@@ -428,7 +428,7 @@ export function buildOrganizationSchema(
     "@type": "Organization",
     "name": businessName,
     "url": websiteUrl,
-    "logo": `${websiteUrl}/images/logo.png`,
+    "logo": `${websiteUrl}/Logo-RichardWainePhotography-black.png`,
     "description": description,
     "address": {
       "@type": "PostalAddress",
@@ -478,7 +478,7 @@ export function buildReviewSchema(
         "addressCountry": "US"
       },
       "telephone": "+1-717-925-0061",
-      "image": "https://richardwainephotography.com/images/logo.png"
+      "image": "https://richardwainephotography.com/Logo-RichardWainePhotography-black.png"
     },
     "author": {
       "@type": "Person",
