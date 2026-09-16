@@ -48,7 +48,7 @@ export interface Testimonial {
   displayOrder?: number; // Original display order for reviews page
 }
 
-export const reviewCount = 672;
+export const reviewCount = 673;
 
 export const yearsExperience = new Date().getFullYear() - 2008;
 
@@ -8814,6 +8814,19 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Justin James",
     datePublished: "2026-09-01T12:00:00.000000Z",
     displayOrder: 515
+  },
+  {
+    name: "David Sperling",
+    company: "",
+    category: "medical-professionals",
+    review: "It was a pleasure working with Richard. He is professional, diligent and friendly the minute you walk in until you leave. He made the process easy, fun and enjoyable. He is conscientious and takes your thoughts and concerns into consideration. If I ever need professional photos again, I will definitely be reaching out again. Thank you Richard.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by David Sperling",
+    datePublished: "2026-09-09T12:00:00.000000Z",
+    displayOrder: 516
   }
 
 
