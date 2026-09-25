@@ -1,20 +1,16 @@
 ---
 // @ts-nocheck
 import MainLayout from "../layouts/MainLayout.astro"
-import Testimonials from '../components/Testimonials.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
+import Testimonials2 from '../components/Testimonials2.astro';
 import Gallery from '../components/Gallery.astro';
 import ServiceHero from '../components/service-pages/ServiceHero.astro';
-import PillarCards from '../components/service-pages/PillarCards.astro';
-import SystemRow from '../components/service-pages/SystemRow.astro';
+import ServicePanels from '../components/service-pages/ServicePanels.astro';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
 import { reviewCount, yearsExperience } from '../data/testimonials';
 
 import WilliamAdote from "../assets/images/features/Headshot_20240919_William Adote_Richard Waine_Lancaster_PA_0023 (horizontal) - compressed.jpg"
-import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
 import RW2 from "../assets/images/blog/RW7 - (16 x 9).jpg"
-import RW11 from "../assets/images/blog/RW11 - (horizontal).jpg"
-import EthanHaymovitz from "../assets/images/business-headshots/Ethan Haymovitz - 0135 (horizontal).jpg"
 
 
 export interface Props {
@@ -32,40 +28,17 @@ export interface Props {
   callout1?: string;
   callout2?: string;
 
-  // Pillar Cards
-  pillar1Num?: string;
-  pillar1Title?: string;
-  pillar1Description?: string;
-
-  pillar2Num?: string;
-  pillar2Title?: string;
-  pillar2Description?: string;
-
-  pillar3Num?: string;
-  pillar3Title?: string;
-  pillar3Description?: string;
-
-  // System Section Row 1
-  systemRow1Title?: string;
-  systemRow1Description?: string;
-  methodItem1?: string;
-  methodItem2?: string;
-  methodItem3?: string;
-
-  // System Section Row 2
-  systemRow2Title?: string;
-  systemRow2Description?: string;
-
-  // Footer
-  footerTitle?: string;
-  footerDescription?: string;
-  footerButtonText?: string;
-
   // Button URLs
   heroButtonUrl?: string;
-  systemRow2ButtonText?: string;
-  systemRow2ButtonUrl?: string;
-  footerButtonUrl?: string;
+
+  // Service Panels
+  panelHeadlineLines?: string[];
+  panelHeadlineAccent?: string;
+  whyTitle?: string;
+  whyParagraphs?: string[];
+  experienceParagraphs?: string[];
+  expectationsParagraph?: string;
+  facts?: { title: string; detail: string }[];
 }
 
 const {
@@ -81,62 +54,37 @@ const {
   callout1 = 'CONFIDENCE',
   callout2 = 'APPROACHABILITY',
 
-  pillar1Num = 'THE SCIENCE',
-  pillar1Title = 'Expression Direction',
-  pillar1Description = "I don't leave your expression to chance. Using a specific coaching sequence, I direct your facial muscles to create genuine expressions that make viewers trust you instantly.",
-
-  pillar2Num = 'THE PROCESS',
-  pillar2Title = 'Real-Time Review',
-  pillar2Description = "You’ll never wonder how you’re doing. I work tethered to computer systems for instant feedback, allowing us to adjust lighting and posture in the moment until the image is perfect.",
-
-  pillar3Num = 'THE RESULT',
-  pillar3Title = 'Strategic Selection',
-  pillar3Description = 'We review headshots through the lens of human perception, ensuring your final images project confidence and credibility. Your selected images are retouched and then delivered to you digitally, ready to use on your website, your LinkedIn profile, and your professional bios.',
-
-
-
-
-  systemRow1Title = 'Why Your Business Headshot Matters',
-  systemRow1Description = `A business headshot, also called a corporate headshot, is a professional photograph of the head and shoulders, carefully executed to capture an image that reflects professionalism, personality, and authenticity, conveying who you are in a clear, confident, and approachable manner to establish credibility and shape your personal brand.
-  
-  Your business headshot shows up everywhere potential clients look for you. It appears on your website, email signature, industry directories, speaking bios, marketing materials, and proposals. That image shapes whether people see you as credible and professional. <a href="https://www.psychologicalscience.org/observer/how-many-seconds-to-a-first-impression">Research from Princeton University</a> shows people form judgments about trustworthiness and competence in just 100 milliseconds of seeing a face. A solid corporate headshot tells them you take your work seriously.
-  
-  An amateur photo or outdated image undermines everything else you do well in your business. Your headshot should match the quality of work you deliver and the clients you serve. If you invest in your expertise, your systems, and your reputation, your corporate headshot deserves the same attention.
-  `,
-  methodItem1 = 'Your reputation deserves a headshot to match',
-  methodItem2 = 'People do business with those they know, like, and trust',
-  methodItem3 = "A high-quality corporate headshot signals leadership and intelligence",
-  methodItem4 = 'A strong headshot influences how you come across professionally',
-
-
-  systemRow2Title = 'System of Direction',
-  systemRow2Description = `I don't expect you to know what to do with your hands, your chin, or your eyes. My job is to give you clear, actionable cues that result in a natural, powerful presence. My directions are designed to eliminate camera anxiety and move you into a state of natural confidence.  Posture and head position directly affect how authoritative you appear. Slight, nuanced adjustments make the difference between looking uncertain and looking like someone people want to do business with. I have refined this system of direction over ${yearsExperience} years working with executives, entrepreneurs, and corporate professionals who needed to project confidence and credibility. That work is reflected in more than ${reviewCount} five-star Google <a href="/reviews/">reviews</a>.`,
-  methodItem5 = 'Tethered capture for instant feedback',
-  methodItem6 = 'Expert coaching and direction',
-  methodItem7 = 'A systematic approach unlike typical photographers',
-  methodItem8 = 'Instant review and choice of images',
-  
-
-  systemRow3Title = 'The Experience',
-  systemRow3Description = "Professional headshot sessions have a reputation for being stiff and awkward. That's not what happens here. My sessions are conversational and dynamic. The best moments and often the best expressions happen when you're genuinely enjoying yourself. Clients regularly comment on how much more fun the experience was than they expected.",
-  methodItem9 = 'Session preparation guide provided at time of scheduling',
-  methodItem10 = 'Wardrobe consultation based on purpose and color psychology',
-  methodItem11 = 'Professional lighting that defines your best features',
-  methodItem12 = "The dismantling of the 'I am not photogenic' narrative ",
-
-
-  footerTitle = 'Ready to elevate your brand?',
-  footerDescription = 'Stop settling for "good enough" headshots. Invest in your digital handshake.',
-  footerButtonText = 'GET PRICING',
-
   heroButtonUrl = '/rates',
   SecondaryButtonUrl = "https://app.acuityscheduling.com/schedule/f0843291/appointment/11959793/calendar/1133425?appointmentTypeIds[]=11959793",
-  systemRow2ButtonText = 'GET PRICING',
-  systemRow2ButtonUrl = '/rates',
-  footerButtonUrl = '/rates',
 
-  faqs = [                                                                  
-      {                                                                       
+  // Service Panels (the three sliding panels)
+  panelHeadlineLines = ["THE BUSINESS", "HEADSHOT"],
+  panelHeadlineAccent = "EXPERIENCE",
+  whyTitle = "WHY PROFESSIONALS NEED CORPORATE HEADSHOTS",
+  whyParagraphs = [
+    `A business headshot, also called a corporate headshot, is a professional photograph of the head and shoulders that reflects professionalism, personality, and authenticity.`,
+    `Your business headshot appears on your website, email signature, industry directories, speaking bios, marketing materials, and proposals. That image shapes whether people see you as credible and professional. <a href="https://www.psychologicalscience.org/observer/how-many-seconds-to-a-first-impression">Research from Princeton University</a> shows people form judgments about trustworthiness and competence in just 100 milliseconds of seeing a face. A solid corporate headshot tells them you take your work seriously.`,
+    `An amateur photo or outdated image undermines everything else you do well in your business. Your headshot should match the quality of work you deliver and the clients you serve. If you invest in your expertise, your systems, and your reputation, your corporate headshot deserves the same attention.`
+  ],
+  experienceParagraphs = [
+    `Professional headshot sessions have a reputation for being stiff and awkward. That's not what happens here.`,
+    `Your session has no time limit, so nothing is rushed and you never have to perform on cue. My sessions are conversational and dynamic. The best moments and often the best expressions happen when you're genuinely enjoying yourself. I don't leave your expression to chance. Using a specific coaching sequence, I direct your facial muscles to create genuine expressions that make viewers trust you instantly.`,
+    `You’ll never wonder how you’re doing. I work tethered to computer systems for instant feedback. Clients regularly comment on how much more fun the experience was than they expected.`
+  ],
+  expectationsParagraph = `Most headshots fail because the person in front of the camera is left to guess. You will never guess here. The System of Direction is a method refined over ${yearsExperience} years specializing in making headshots for executives, entrepreneurs, and corporate professionals. Every angle and every expression gets deliberate direction, you see each image the moment it is made, and nothing is finished until it earns your yes. That work is reflected in more than ${reviewCount} five-star Google <a href="/reviews/">reviews</a>.`,
+  facts = [
+    { title: "Expert Direction", detail: "Precise and personal" },
+    { title: "Expression Coaching", detail: "Authentic and natural" },
+    { title: "Fully at Ease", detail: "Quickly and genuinely" },
+    { title: "Professional Retouching", detail: "Included on every image" },
+    { title: "New Confidence", detail: "In yourself and images" },
+    { title: "Magazine Quality", detail: "From every session" },
+    { title: "Collaborative", detail: "From start to finish" },
+    { title: "Dedicated Excellence", detail: "Every single time" }
+  ],
+
+  faqs = [
+      {
         question: "What should I do if I’m not photogenic and hate being on camera?",                                               
         answer: `Photogenic is a bullshit, made up word. It is a term people use when they have never seen a photo of themselves they actually like. It suggests the responsibility to look good is on you. It is not.
         
@@ -146,7 +94,7 @@ const {
       },                                                                      
       {                                                                       
         question: "What is the best color to wear for a business headshot session?",                                               
-        answer: `The best colors for a headshot session depend on the person, the purpose, and the application. I usually default to standard choices like white, grey, black, and navy, but I also recommend bringing a color palette you love.
+        answer: `The <a href="/blog/best-colors-for-professional-headshots/">best colors for a headshot session</a> depend on the person, the purpose, and the application. I usually default to standard choices like white, grey, black, and navy, but I also recommend bringing a color palette you love.
 
         The most important thing is to avoid busy patterns and attention grabbing clothing. These elements compete with what matters most, which is your facial expression and the message you are communicating. Simplicity is always best.
 
@@ -168,15 +116,10 @@ const {
         question: "How much time will my session take?",
         answer: `Your headshot session will take as much time as necessary. I don't set arbitrary time limits on my sessions because we work until we have the images you need. I block off three hours for every session to ensure we have a sufficient window, whether we use all of it or not. I recommend allowing at least two hours in your own schedule. While I can accommodate a shorter timeframe, having that buffer ensures we never feel rushed.
 
-        Some clients are in and out in minutes; others take longer to find their stride. In my experience, very few people ever exceed that three-hour mark. While it may sound like a significant block of time, the process is engaging, enjoyable, and the time tends to fly by.
+        Some clients find their stride quickly, and others take longer. If you have a hard stop, please tell me and I'll work around your schedule. In my experience, very few people ever exceed that three-hour mark. While it may sound like a significant block of time, the process is engaging, enjoyable, and the time tends to fly by.
         `
       }                                                                       
     ]                    
-
-
-
-
-
 
 } = Astro.props;
 
@@ -193,34 +136,34 @@ const businessHeadshotsServiceSchema = buildServiceSchema(
 );
 
 // Review schemas - 3 testimonials
-const jacquelineJohansenReview = buildReviewSchema(
+const chrisPatilleReview = buildReviewSchema(
   {
-    author: "Jacqueline Johansen",
-    company: "DeepJudge",
+    author: "Chris Patille",
+    company: "",
     rating: "5",
-    reviewBody: "Richard is an expert in human expression. He makes you feel at ease, then draws out the version of you that's authentic and compelling. The resulting headshots work because they feel right. Effortless, but entirely intentional. I have never liked a picture of me so much!"
+    reviewBody: "From the minute i met Richard Waine i knew their was something special about this guy. He found my need for a new headshot and produced incredible results. I have never felt more confident in myself and my brand until after posting the headshots he took of me. Thanks again Richard you were awesome to work with."
   },
   "Richard Waine Photography",
   "https://richardwainephotography.com"
 );
 
-const keithWoodyReview = buildReviewSchema(
+const emilyMainquistReview = buildReviewSchema(
   {
-    author: "Keith Woody",
-    company: "Fulton Bank",
+    author: "Emily Mainquist",
+    company: "",
     rating: "5",
-    reviewBody: "I had no idea, how amazing this experience would turn out to be. The quality of what is being provided and experienced way surpassed my expectations. As a Sourcing and Procurement executive of over 25 years, I highly recommend Richard for your corporate head shot needs."
+    reviewBody: "Richard is a fantastic photographer! He is so helpful in making sure you get the perfect photo! He coaches and shows you the pictures as he is taking them so you can learn and adjust to get the shot. He is a perfectionist and it shows in his work. I definitely recommend Richard Waine Photography. He definitely has a customer for life in me and my family."
   },
   "Richard Waine Photography",
   "https://richardwainephotography.com"
 );
 
-const kellyGoochReview = buildReviewSchema(
+const ramiroCastilloReview = buildReviewSchema(
   {
-    author: "Kelly Gooch",
-    company: "Ultimus Fund Solutions",
+    author: "Ramiro Castillo",
+    company: "",
     rating: "5",
-    reviewBody: "Richard was intentional in understanding my needs and asking questions to understand what type of look was needed. He was organized, helpful, and inquisitive, making the experience enjoyable. The end product was a direct result of his experience and coaching."
+    reviewBody: "Had a Blast working with Richard. He made me feel comfortable and good in front of the camera. If you are looking for a professional headshot RWP is definitely the place to go. Richard is a professional and he does an outstanding job. If I could give him a 10 star review I would."
   },
   "Richard Waine Photography",
   "https://richardwainephotography.com"
@@ -240,10 +183,8 @@ const spec = [
   { v: "10,000+", l: "HEADSHOTS DELIVERED" },
   { v: "100%", l: "CLIENT SATISFACTION" }
 ];
+
 ---
-
-
-
 
 <MainLayout title={pageTitle} description={metaDescription}>
 
@@ -251,12 +192,14 @@ const spec = [
 <script type="application/ld+json" set:html={JSON.stringify(businessHeadshotsServiceSchema)} />
 
 <!-- Review Schemas -->
-<script type="application/ld+json" set:html={JSON.stringify(jacquelineJohansenReview)} />
-<script type="application/ld+json" set:html={JSON.stringify(keithWoodyReview)} />
-<script type="application/ld+json" set:html={JSON.stringify(kellyGoochReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(chrisPatilleReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(emilyMainquistReview)} />
+<script type="application/ld+json" set:html={JSON.stringify(ramiroCastilloReview)} />
 
 <!-- FAQ Schema -->
 <script type="application/ld+json" set:html={JSON.stringify(businessHeadshotsFAQSchema)} />
+
+<div class="page" data-page-path={pagePath}>
 
 <ServiceHero
     heroTitle={heroTitle}
@@ -286,167 +229,243 @@ const spec = [
 
 <Gallery showButton={false}/>
 
-<PillarCards
-    pillar1Num={pillar1Num}
-    pillar1Title={pillar1Title}
-    pillar1Description={pillar1Description}
-    pillar2Num={pillar2Num}
-    pillar2Title={pillar2Title}
-    pillar2Description={pillar2Description}
-    pillar3Num={pillar3Num}
-    pillar3Title={pillar3Title}
-    pillar3Description={pillar3Description}
-/>
+  <ServicePanels
+    headlineLines={panelHeadlineLines}
+    headlineAccent={panelHeadlineAccent}
+    whyTitle={whyTitle}
+    whyParagraphs={whyParagraphs}
+    experienceParagraphs={experienceParagraphs}
+    expectationsParagraph={expectationsParagraph}
+    facts={facts}
+  />
+  
+   <div class="closing-sections">
 
-<section class="system-section" data-page-path={pagePath}>
+  <section class="testimonials-section">
 
-<SystemRow
-    reverse={true}
-    title={systemRow1Title}
-    description={systemRow1Description}
-    methodItems={[methodItem1, methodItem2, methodItem3, methodItem4]}
-    image={EthanHaymovitz}
-    imageAlt="Professional business headshot of psychotherapist with beard and glasses in blue blazer over white shirt, friendly smile and confident facial expression against black studio background, headshot made by Richard Waine in Lancaster Pennsylvania"
-/>
+    <Testimonials2 title="Business Headshot Reviews" limit={3} filterByNames={["Chris Patille", "Emily Mainquist", "Ramiro Castillo"]}/>
+    
+  </section>
 
-<SystemRow
-    title={systemRow2Title}
-    description={systemRow2Description}
-    methodItems={[methodItem5, methodItem6, methodItem7, methodItem8]}
-    image={RW1}
-    imageAlt="Business headshot photography session showing blonde woman in tan plaid blazer surrounded by professional photo studio lighting equipment in Lancaster PA studio by Richard Waine Photography"
-/>
 
-<SystemRow
-    reverse={true}
-    title={systemRow3Title}
-    description={systemRow3Description}
-    methodItems={[methodItem9, methodItem10, methodItem11, methodItem12]}
-    image={RW11}
-    imageAlt="Behind-the-scenes professional business headshot photography session showing woman in black cardigan and pink lace top positioned between Westcott lighting panels and camera by Richard Waine Photography"
-/>
-</section>
+    <section class="faq-section" data-reveal>
+      <FAQAccordion faqs={faqs}/>
+    </section>
 
-<section id="testimonials">
-  <Testimonials title="Business Headshot Reviews" limit={3} filterByNames={["Jacqueline Johansen", "Keith Woody", "Kelly Gooch"]}/>
-</section>
+  </div>
 
-<section class="FAQs">
+</div>
 
-  <FAQAccordion faqs={faqs}/>
+<script>
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
-</section>
+document.addEventListener('astro:page-load', () => {
+  const page = document.querySelector<HTMLElement>('.page');
+  if (!page) return;
+  if (window.location.pathname.replace(/\/$/, '') !== page.dataset.pagePath) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+  const ctx = gsap.context(() => {
+
+    gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
+      gsap.from(el, {
+        opacity: 0, y: 16, duration: 1.4, ease: 'expo.out',
+        /* the inline styles come off when the reveal ends, so the
+           stylesheet's own transform on the card applies at every width,
+           including after a resize */
+        clearProps: 'opacity,transform',
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true }
+      });
+    });
+
+    /* The gallery assembles: every frame arrives in a random order rather
+       than sweeping left to right, then the wall sits still. Nothing here
+       touches Gallery.astro — it targets the markup from this page only. */
+    const cells = gsap.utils.toArray<HTMLElement>('#gallery-section .gallery > div');
+    if (cells.length) {
+      gsap.from(cells, {
+        opacity: 0,
+        duration: 1.1,
+        ease: 'expo.out',
+        stagger: { each: 0.03, from: 'random' },
+        scrollTrigger: { trigger: '#gallery-section', start: 'top 80%', once: true }
+      });
+    }
+
+
+  }, page);
+
+  window.addEventListener('load', () => ScrollTrigger.refresh());
+  document.addEventListener('astro:before-swap', () => ctx.revert(), { once: true });
+});
+</script>
 
 <script>
 import '../scripts/service-page-animations';
 </script>
 
-
 </MainLayout>
 
-
 <style>
-  :root {
-  --bg: #050505;
-  --card: #111111;
-  --text:var(--ltclr);
-  --text-dim:var(--ltclr);
- 
-}
-
-
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  line-height:var(--line-height-relaxed);
-  width:100%;
-  margin-inline:auto;
-  padding:0;
-  min-height:calc(100vh + var(--header-height));
-
-a{
-    color:blue;
-}
-
-}
-
-
-/* The "System" Section - Staggered */
-.system-section {
-  margin-block:var(--size-825);
-  position: relative;
-  width:calc(100% - var(--size-7));
-  margin-inline:auto;
-}
-
-
-#testimonials{
-
-    height: auto;                                                                
-    display: grid;                                                               
-    place-items: center;                                                         
-    background: #080808; 
-
-      > * > * > * .card-testimonial{
-    margin-inline:0;
-      }
-
-      > * > * > * > * .testimonial-content{
-        padding-inline:0;
-        margin-inline:0;
-      }
-
-}
-
-.FAQs {
-  
-  width:calc(100% - var(--size-4));
-  margin-inline:auto;
-  margin-bottom:var(--size-10);
- 
-}
-
-
-/* ==========================================                                   
-     TABLET - min-width: 48em (768px)                                             
-     ========================================== */                                
-        @media (min-width: 48em) {
-
-          .FAQs{
-            width:80%;
-          }
-
-
-
+  body {
+    background: #08080a;
+    color: var(--ltclr);
   }
- /* ==========================================
-     DESKTOP - min-width: 90em (1440px)
+
+  /* One vertical rhythm for every section on the page. */
+  .page {
+    --section-space: clamp(4rem, 9vw, 8rem);
+  }
+
+  /* ==========================================
+     BASE = PHONE
+     Everything outside a media query is the phone layout. Tablet adds
+     on at 48em (768px). Desktop adds on at 90em (1440px), the same
+     width where ServiceHero switches to its two-column layout.
      ========================================== */
-  @media (min-width: 90em) {
 
-        .FAQs{
-            width:50%;
-          }
-
-
+  /* The gallery sits on the page's one content edge, same as .wrapper.
+     The shared component adds its own side padding and an inner width
+     cap, which stacked three insets on a phone. Both are removed here
+     and put back at desktop. */
+  :global(div.page #gallery-section) {
+    padding-inline: 0;
+  }
+  :global(#gallery-section .gallery-container) {
+    padding-block: var(--section-space);
+    width: 100%;
+    max-width: none;
+    margin-inline: auto;
   }
 
-  /*change padding and max width of gallery beneath header */
-:global(#gallery-section .gallery-container) {
-    padding-top: var(--size-825);
-    /* max-width:105rem; */
-    max-width:85%;
-    margin-inline:auto;
-  }
-  
-/* This page only: gallery squares two-across on phones so they sit smaller than the horizontal hero image */
-@media (max-width: 47.9375em) {
+  /* The shared gallery picks its columns from its container width, which
+     was built for the desktop wrapper. This page sets the columns and
+     which frames show at every breakpoint instead. Two-across on phones,
+     as on the other service pages. */
   :global(#gallery-section .gallery) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: var(--size-3);
   }
-}
+
+  .closing-sections {
+    display: grid;
+    align-content: center;
+    min-height: 100vh;
+    gap: var(--section-space);
+    padding-block: var(--section-space);
+    /* the fixed MENU bar and the chat bubble sit on the bottom of the
+       screen, so the page ends with room for them under the last row */
+    padding-block-end: calc(var(--section-space) + var(--size-5));
+  }
+
+
+  .testimonials-section {
+    padding-block: 0;
+  }
+ 
+
+  /* ---------- the accordion, standing on the page on its own ---------- */
+
+  /* the accordion sits on the page's content edge and runs narrower than
+     the rest of the page at desktop, because question rows don't need the full
+     content width */
+  .faq-section {
+    width: calc(100% - var(--size-8));
+    max-width: 70rem;
+    margin-inline: auto;
+  }
+
+  /* FAQAccordion ships with a top margin for the pages that use it with a
+     heading above. This page has no heading, so the margin is removed here
+     rather than in the shared component. */
+  .faq-section :global(.faq-content) {
+    margin-block-start: 0;
+  }
+
+  /* the questions are bold capitals, so they run 14px on a phone and grow
+     back to the component's 16px by desktop */
+  .faq-section :global(.question) {
+    font-size: var(--fs-clamp-sm);
+  }
+
+  /* ==========================================
+     TABLET - min-width: 48em (768px)
+     ========================================== */
+  @media (min-width: 48em) {
+
+    /* four across, eight frames */
+    :global(#gallery-section .gallery) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: var(--size-3);
+    }
+    :global(#gallery-section .gallery .image1),
+    :global(#gallery-section .gallery .image2),
+    :global(#gallery-section .gallery .image3),
+    :global(#gallery-section .gallery .image4),
+    :global(#gallery-section .gallery .image5),
+    :global(#gallery-section .gallery .image6),
+    :global(#gallery-section .gallery .image7),
+    :global(#gallery-section .gallery .image8) {
+      display: block;
+    }
+    :global(#gallery-section .gallery .image9),
+    :global(#gallery-section .gallery .image10),
+    :global(#gallery-section .gallery .image11),
+    :global(#gallery-section .gallery .image12),
+    :global(#gallery-section .gallery .image13),
+    :global(#gallery-section .gallery .image14),
+    :global(#gallery-section .gallery .image15),
+    :global(#gallery-section .gallery .image16) {
+      display: none;
+    }
+
+  }
+
+  /* ==========================================
+     DESKTOP - min-width: 90em (1440px)
+     The sideways sliding, exactly as before.
+     ========================================== */
+  @media (min-width: 90em) {
+
+    :global(div.page #gallery-section) {
+      padding-inline: var(--size-8);
+    }
+    :global(#gallery-section .gallery-container) {
+      /* width: 80%; */
+    }
+    /* three across, two rows, the six frames the gallery shows at 1440 */
+    :global(#gallery-section .gallery) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: var(--grid-column-gap);
+    }
+    :global(#gallery-section .gallery .image3),
+    :global(#gallery-section .gallery .image4) {
+      display: none;
+    }
+
+  }
+
+
+  
+
+  /* ==========================================
+     WIDE DESKTOP - min-width: 106.0625em (1697px)
+     The width at which the gallery's container reaches 1025px and its
+     full eight-across wall of sixteen frames begins.
+     ========================================== */
+  @media (min-width: 106.0625em) {
+
+    :global(#gallery-section .gallery) {
+      grid-template-columns: repeat(8, 1fr);
+    }
+    :global(#gallery-section .gallery [class^="image"]) {
+      display: block;
+    }
+
+
+    }
+
 
 </style>
