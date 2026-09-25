@@ -28,7 +28,10 @@ const { testimonialText, author, company, imageSrc, image, imageAlt } = Astro.pr
     width: 100%;
     margin: 0;
     display: grid;
-    align-content: start;
+    /* quote mark, review text, then the photo and name. The text row takes
+       the spare height, so the photo and name sit on the bottom row and
+       line up across cards whatever the length of the review */
+    grid-template-rows: auto 1fr auto;
     gap: var(--size-6);
     background: rgba(255, 255, 255, 0.02);
     border-left: 1px solid var(--accent);
