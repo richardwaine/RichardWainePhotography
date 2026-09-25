@@ -30,6 +30,9 @@ import MichaelVanasse from '../assets/images/testimonials/Michael Vanasse - 0038
 import NicoleOBrien from '../assets/images/testimonials/Nicole OBrien - 0140 (200px).jpg'
 import SamuelStewart from '../assets/images/testimonials/Samuel Stewart - 0023 (200px).jpg'
 import WilliamSanchez from '../assets/images/testimonials/William Sanchez - 0007 (200px).jpg'
+import ChrisPatille from '../assets/images/testimonials/Christopher Patille - (200px).jpg'
+import EmilyMainquist from '../assets/images/testimonials/Emily Mainquist - (200px).jpg'
+import RamiCastillo from '../assets/images/testimonials/Rami Castillo - (200px).jpg'
 import AvatarPlaceholder from '../assets/images/testimonials/Avatar - (200px).jpg'
 
 
@@ -254,9 +257,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"financial-professionals",
     review: "From the minute i met Richard Waine i knew their was something special about this guy. He found my need for a new headshot and produced incredible results. I have never felt more confident in myself and my brand until after posting the headshots he took of me. Thanks again Richard you were awesome to work with.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: ChrisPatille.src,
+    image: ChrisPatille,
+    imagePath: "Christopher Patille - (200px).jpg",
     imageAlt: "Google Review by Chris Patille",
     datePublished: "2017-10-21T13:37:14.638Z",
     displayOrder: 275
@@ -891,9 +894,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"corporate-professionals",
     review: "Richard is a fantastic photographer! He is so helpful in making sure you get the perfect photo! He coaches and shows you the pictures as he is taking them so you can learn and adjust to get the shot. He is a perfectionist and it shows in his work. I definitely recommend Richard Waine Photography. He definitely has a customer for life in me and my family.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: EmilyMainquist.src,
+    image: EmilyMainquist,
+    imagePath: "Emily Mainquist - (200px).jpg",
     imageAlt: "Google Review by Emily Mainquist",
     datePublished: "2018-10-22T16:44:03.119844Z",
     displayOrder: 170
@@ -6143,9 +6146,9 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"corporate-professionals",
     review: "Had a Blast working with Richard. He made me feel comfortable and good in front of the camera. If you are looking for a professional headshot RWP is definitely the place to go. Richard is a professional and he does an outstanding job. If I could give him a 10 star review I would.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
+    imageUrl: RamiCastillo.src,
+    image: RamiCastillo,
+    imagePath: "Rami Castillo - (200px).jpg",
     imageAlt: "Google Review by Ramiro Castillo",
     datePublished: "2023-04-28T16:01:40.610385Z",
     displayOrder: 337
