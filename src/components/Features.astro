@@ -9,6 +9,10 @@ import adoteImg from '../assets/images/features/Headshot_20240919_William Adote_
 import cottrellImg from '../assets/images/features/Headshot_20220829_Jack Cottrell_Richard_Waine_Lancaster_PA_0318 (horizontal) - compressed.jpg';
 import giglioImg from '../assets/images/features/Headshot_20180414_Ken Giglio_Richard_Waine_Lancaster_PA_0060-2 - compressed.jpg';
 import chubbImg from '../assets/images/office-headshots/Chubb - ContactSheet (square).jpg';
+import studioBg from '../assets/images/blog/RW10 - (16 x 9).jpg';
+import actingBg from '../assets/images/blog/RW14 - (16 x 9).jpg';
+import linkedinBg from '../assets/images/blog/RW6 - (16 x 9).jpg';
+import officeBg from '../assets/images/blog/RW13 - (16 x 9).jpg';
 
 
 const {
@@ -23,10 +27,19 @@ const {
   linkedinHeadshotsUrl = "/linkedin-headshots", // LinkedIn Headshots
   officeHeadshotsUrl = "/office-headshots", // Office Headshots
   secondaryButtonUrl = "https://app.acuityscheduling.com/schedule/f0843291/appointment/11959793/calendar/1133425?appointmentTypeIds[]=11959793",
-  businessSlideText = [],
-  actingSlideText = [],
-  linkedinSlideText = [],
-  officeSlideText = []
+  // Slide text, the same on every page that shows this section
+  businessSlideText = [
+    "Chances are your last business headshot \nfelt like school picture day, and it turned out fine.\nYour next one doesn't have to be.\nLet's find out what beyond fine looks like on you!"
+  ],
+  actingSlideText = [
+    "Do you submit the same acting headshot for every role?\nCasting directors are looking for someone specific.\nImagine an image made for each role you're chasing.\nYou've got range. Your headshots should too!"
+  ],
+  linkedinSlideText = [
+    "Your LinkedIn profile tells people what you've accomplished.\nYour headshot tells them whether to believe it.\nThe right one brings views, messages and connections.\nYou did the work. Now look like it!"
+  ],
+  officeSlideText = [
+    "Your team is the most visible part of your brand.\nMismatched headshots look like a room full of freelancers.\nClients trust a team that looks like one.\nThe studio comes to you!"
+  ]
 } = Astro.props;
 
 // Define services for schema
@@ -64,15 +77,17 @@ const servicesSchema = buildServiceCatalogSchema(
   <div class="features-container">
     <div class="features-scroller">
 
-      <div class="feature-slide">
+      <div class="feature-slide v-bg">
+        <Image class="v-bg-img" src={studioBg} alt="" width={1600} height={900} loading="lazy" />
         <div class="slide-content-wrapper">
-          <Image class="slide-image" src={adoteImg} alt="Professional business headshot of man with short dark hair and goatee wearing navy blue suit jacket with light blue patterned tie and white dress shirt photographed against white studio background with clean professional lighting by Richard Waine Photography headshot photographer" width={700} height={560} loading="lazy" />
+         <a class="v-photo-link" href={businessHeadshotsUrl} aria-label="Business headshots">
+           <Image class="slide-image" src={adoteImg} alt="Professional business headshot of man with short dark hair and goatee wearing navy blue suit jacket with light blue patterned tie and white dress shirt photographed against white studio background with clean professional lighting by Richard Waine Photography headshot photographer serving Lancaster, Harrisburg, Philadelphia Pennsylvania, Baltimore Maryland, business headshots, commercial headshots, marketing headshots" width={700} height={560} loading="lazy" />
+         </a>
           <div class="slide-content slide-content1">
-            <h2 class="heading">Business Headshots</h2>
+            <h2 class="heading v-hero-heading">Business <br><span class="v-cyan">Headshots</span></h2>
             <div class="slide-text">
               {businessSlideText.map((text: string) => <p>{text}</p>)}
             </div>
-
             <div class="button-wrapper">
               <PrimaryButton text={primaryButtonText} url={businessHeadshotsUrl} srText={srText1} />
             </div>
@@ -81,11 +96,14 @@ const servicesSchema = buildServiceCatalogSchema(
         </div>
       </div>
 
-      <div class="feature-slide">
+      <div class="feature-slide v-bg">
+        <Image class="v-bg-img bg-anchor-left" src={actingBg} alt="" width={1600} height={900} loading="lazy" />
         <div class="slide-content-wrapper">
-         <Image class="slide-image" src={cottrellImg} alt="Professional actor headshot of young man with tousled medium-length brown wavy hair and blue eyes with natural light smile wearing tan suede bomber jacket with snap collar over black v-neck shirt photographed against dark charcoal gray studio backdrop with dramatic professional lighting by Richard Waine Photography actor headshot photographer" width={600} height={480} loading="lazy" />
+         <a class="v-photo-link" href={actingHeadshotsUrl} aria-label="Acting headshots">
+           <Image class="slide-image" src={cottrellImg} alt="Professional actor headshot of young man with tousled medium-length brown wavy hair and blue eyes with natural light smile wearing tan suede bomber jacket with snap collar over black v-neck shirt photographed against dark charcoal gray studio backdrop with dramatic professional lighting by Richard Waine Photography actor headshot photographer Lancaster Philadelphia Pennsylvania Newark Wilmington Delaware, acting headshots lancaster, headshots for actors, Lancaster studio headshots" width={600} height={480} loading="lazy" />
+         </a>
           <div class="slide-content slide-content2">
-            <h2 class="heading">Acting Headshots</h2>
+            <h2 class="heading v-hero-heading">Acting <br><span class="v-cyan">Headshots</span></h2>
             <div class="slide-text">
               {actingSlideText.map((text: string) => <p>{text}</p>)}
             </div>
@@ -97,11 +115,14 @@ const servicesSchema = buildServiceCatalogSchema(
         </div>
       </div>
 
-      <div class="feature-slide">
+      <div class="feature-slide v-bg">
+        <Image class="v-bg-img bg-anchor-left" src={linkedinBg} alt="" width={1600} height={900} loading="lazy" />
         <div class="slide-content-wrapper">
-          <Image class="slide-image" src={giglioImg} alt="Professional LinkedIn headshot of man with clean-shaven head and trimmed gray goatee and mustache wearing navy blue suit jacket with white open-collar dress shirt photographed against seamless white studio backdrop with soft directional lighting by Richard Waine Photography LinkedIn headshot photographer serving Lancaster York Harrisburg Pennsylvania Baltimore Maryland" width={600} height={480} loading="lazy" />
+         <a class="v-photo-link" href={linkedinHeadshotsUrl} aria-label="LinkedIn headshots">
+           <Image class="slide-image" src={giglioImg} alt="Professional LinkedIn headshot of man with clean-shaven head and trimmed gray goatee and mustache wearing navy blue suit jacket with white open-collar dress shirt photographed against seamless white studio backdrop with soft directional lighting by Richard Waine Photography LinkedIn headshot photographer serving Lancaster York Harrisburg Pennsylvania Baltimore Maryland" width={600} height={480} loading="lazy" />
+         </a>
           <div class="slide-content slide-content3">
-            <h2 class="heading">LinkedIn Headshots</h2>
+            <h2 class="heading v-hero-heading">LinkedIn <br><span class="v-cyan">Headshots</span></h2>
             <div class="slide-text">
               {linkedinSlideText.map((text: string) => <p>{text}</p>)}
             </div>
@@ -113,11 +134,14 @@ const servicesSchema = buildServiceCatalogSchema(
         </div>
       </div>
 
-      <div class="feature-slide">
+      <div class="feature-slide v-bg">
+        <Image class="v-bg-img bg-anchor-bottom" src={officeBg} alt="" width={1600} height={900} loading="lazy" />
         <div class="slide-content-wrapper">
-          <Image class="slide-image" src={chubbImg} alt="Corporate team headshot contact sheet grid displaying 34 diverse Chubb insurance company employees in business professional and business casual attire photographed with consistent gray studio background by Richard Waine Photography office headshot photographer" loading="lazy" width={1080} height={1080} />
+         <a class="v-photo-link" href={officeHeadshotsUrl} aria-label="Office headshots">
+           <Image class="slide-image" src={chubbImg} alt="Corporate team headshot contact sheet grid displaying 34 diverse Chubb insurance company employees in business professional and business casual attire photographed with consistent gray studio background by Richard Waine Photography on-location corporate headshot photographer, Office Headshots, Professional Headshots on Location, Team Headshots" loading="lazy" width={1080} height={1080} />
+         </a>
           <div class="slide-content slide-content4">
-            <h2 class="heading">Office Headshots</h2>
+            <h2 class="heading v-hero-heading">Office <br><span class="v-cyan">Headshots</span></h2>
             <div class="slide-text">
               {officeSlideText.map((text: string) => <p>{text}</p>)}
             </div>
@@ -186,6 +210,30 @@ document.addEventListener("astro:page-load", () => {
                 invalidateOnRefresh: true,
             }
         });
+
+        // Scroll-linked background parallax + crossfade on every bg-image slide:
+        // the image drifts slightly slower than the slide, and its opacity eases
+        // out at the edges so backgrounds dissolve through dark instead of
+        // colliding edge-to-edge. Uniform opacity change only - no gradients.
+        if (!window.matchMedia(REDUCED_MOTION_QUERY).matches) {
+            slides.forEach((slide: any) => {
+                const bgImg = slide.querySelector('.v-bg-img');
+                if (!bgImg) return;
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: slide,
+                        containerAnimation: horizontalScroll,
+                        start: "left right",
+                        end: "right left",
+                        scrub: true,
+                    }
+                });
+                tl.fromTo(bgImg, { xPercent: -4 }, { xPercent: 4, ease: "none", duration: 1 }, 0);
+                tl.fromTo(bgImg, { opacity: 0 }, { opacity: 0.25, ease: "none", duration: 0.35 }, 0)
+                  .to(bgImg, { opacity: 0.25, duration: 0.3 }, 0.35)
+                  .to(bgImg, { opacity: 0, ease: "none", duration: 0.35 }, 0.65);
+            });
+        }
 
         // Animate content within each slide (skip decorative animations if reduced motion preferred)
         slides.forEach((slide: any) => {
@@ -256,6 +304,7 @@ document.addEventListener("astro:page-load", () => {
 .features-container {
   position: relative;
   width: 100%;
+  background: var(--drkbg);
 }
 
 .features-scroller {
@@ -308,6 +357,95 @@ p {
   margin-block: var(--size-3);
 }
 
+.slide-content1 .slide-text p,
+.slide-content2 .slide-text p,
+.slide-content3 .slide-text p,
+.slide-content4 .slide-text p {
+  font-size: var(--fs-clamp-md);
+  line-height: var(--line-height-normal);
+  line-height:var(--line-height-relaxed);
+  white-space: pre-line;
+}
+
+/* Draft-only variant comparison styles */
+.feature-slide {
+  position: relative;
+}
+
+.v-label {
+  position: absolute;
+  top: var(--size-4);
+  left: var(--size-4);
+  z-index: 1;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-300);
+  letter-spacing: var(--ltr-space);
+  color: var(--faded);
+}
+
+.v-bg {
+  overflow: clip;
+}
+
+.v-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.v-bg-img.bg-anchor-bottom {
+  object-position: 50% 100%;
+}
+
+.v-bg .slide-content-wrapper,
+.v-ghost .slide-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.v-photo-link {
+  display: block;
+}
+
+.v-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(0,0,0,0.15);
+}
+
+.ghost-word {
+  display: none;
+}
+
+.v-center .slide-content,
+.v-center .slide-content h2 {
+  text-align: center;
+}
+
+/* Hero-style text treatment for variant A (mirrors ServiceHero) */
+.v-cyan {
+  color: var(--accent);
+}
+
+.v-bg .v-hero-heading {
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 1;
+  font-weight: var(--fw-x-bold);
+  letter-spacing: normal;
+  color: var(--ltclr);
+  margin-bottom: var(--size-2);
+}
+
+.v-bg .slide-text p {
+  margin-block-start: 0;
+}
 .slide-image {
   display: block;
   margin: auto;
@@ -366,7 +504,7 @@ padding-inline:0;
   .slide-content-wrapper{
     padding-inline:var(--size-7);
      grid-template-columns: 1fr 1.25fr;
-    
+
   }
 
   .slide-content h2 {
@@ -387,6 +525,79 @@ padding-inline:0;
 
  .button-wrapper{
     justify-self: left;
+  }
+
+  .v-photo-lg {
+    width: min(750px, 100%);
+  }
+
+  .v-bg .slide-content-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size-8);
+  }
+
+  .v-bg .v-photo-link {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    width: min(700px, 80%);
+  }
+
+  .v-bg .v-photo-link .slide-image {
+    width: 100%;
+    box-shadow: 0 10px 50px var(--shadow-clr-medium);
+  }
+
+  .v-bg .slide-content {
+    grid-column: 1;
+    grid-row: 1;
+    width: min(700px, calc(100% - var(--size-7)));
+    max-inline-size: none;
+  }
+
+  .ghost-word {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    z-index: 0;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-x-bold);
+    font-size: clamp(8rem, 13vw, 15rem);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--ltclr);
+    opacity: 0.05;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .v-center .slide-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .v-center .slide-image {
+    width: min(560px, 100%);
+  }
+
+  .v-center .slide-content {
+    max-inline-size: 34rem;
+    margin-top: var(--size-5);
+  }
+
+  .v-center .button-wrapper {
+    justify-self: center;
+  }
+
+  .v-bg-img {
+    inset: 0 auto 0 -6%;
+    width: 112%;
+    max-width: none;
+  }
+
+  .v-bg-img.bg-anchor-left {
+    inset: 0 auto 0 0;
   }
 
 }
