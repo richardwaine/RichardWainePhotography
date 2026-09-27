@@ -479,6 +479,16 @@ document.addEventListener('astro:page-load', () => {
       transform-style: preserve-3d;
     }
 
+    /* the first panel starts a fixed distance from the top, so the
+       length of the box beside the headline never moves the headline */
+    .persuasion .slide:first-of-type {
+      align-items: flex-start;
+      padding-block-start: calc(var(--header-height) + var(--size-12));
+    }
+    .persuasion .slide:first-of-type .slide-content {
+      align-items: start;
+    }
+
     /* BACKGROUND PORTRAIT (STAYS BEHIND) */
     .persuasion .backdrop-photo {
       position: absolute;
