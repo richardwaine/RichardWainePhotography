@@ -51,6 +51,19 @@ export interface VendorItem {
 }
 
 // ============================================
+// AWARDS
+// One list, used by the business description in MainLayout.astro.
+// Add a new award as one more line here.
+// ============================================
+
+export const awards = [
+  "Best Photographer, Best of Lancaster 2020, Lancaster County Magazine",
+  "Best Photographer, Best of Lancaster 2021, Lancaster County Magazine",
+  "Best Photographer, Best of Lancaster 2022, Lancaster County Magazine",
+  "Best Photographer, Best of Lancaster 2024, Lancaster County Magazine"
+];
+
+// ============================================
 // SCHEMA BUILDER FUNCTIONS
 // ============================================
 

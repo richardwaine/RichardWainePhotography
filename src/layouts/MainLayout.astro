@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
 import { reviewCount } from '../data/testimonials';
+import { awards } from '../utils/schema';
 
 
 
@@ -58,6 +59,7 @@ const siteSchema = {
 		"bestRating": "5",
 		"worstRating": "1"
 	},
+	"award": awards,
 	"openingHoursSpecification": [
 		{ "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Monday", "opens": "00:00", "closes": "23:59" },
 		{ "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Tuesday", "opens": "00:00", "closes": "23:59" },
