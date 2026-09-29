@@ -1,21 +1,17 @@
 ---
 // @ts-nocheck
 import MainLayout from "../layouts/MainLayout.astro"
-import Testimonials from '../components/Testimonials.astro';
+import Testimonials2 from '../components/Testimonials2.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 import Gallery from '../components/Gallery.astro';
 import ServiceHero from '../components/service-pages/ServiceHero.astro';
-import PillarCards from '../components/service-pages/PillarCards.astro';
-import SystemRow from '../components/service-pages/SystemRow.astro';
+import ServicePanels from '../components/service-pages/ServicePanels.astro';
 import { buildServiceSchema, buildReviewSchema, buildFAQSchema } from '../utils/schema';
 import { reviewCount, yearsExperience } from '../data/testimonials';
 
 
 import Chubb from "../assets/images/features/Chubb - ContactSheet (square).jpg"
-import RW1 from "../assets/images/blog/RW_FINAL_V1_Still005.jpg"
 import RW2 from "../assets/images/blog/RW7 - (16 x 9).jpg"
-import RW11 from "../assets/images/blog/RW11 - (horizontal).jpg"
-import TsedeyAragie from "../assets/images/office-headshots/TsedeyAragie - 0018 (horizontal).jpg"
 
 
 
@@ -34,40 +30,19 @@ export interface Props {
   callout1?: string;
   callout2?: string;
 
-  // Pillar Cards
-  pillar1Num?: string;
-  pillar1Title?: string;
-  pillar1Description?: string;
-
-  pillar2Num?: string;
-  pillar2Title?: string;
-  pillar2Description?: string;
-
-  pillar3Num?: string;
-  pillar3Title?: string;
-  pillar3Description?: string;
-
-  // System Section Row 1
-  systemRow1Title?: string;
-  systemRow1Description?: string;
-  methodItem1?: string;
-  methodItem2?: string;
-  methodItem3?: string;
-
-  // System Section Row 2
-  systemRow2Title?: string;
-  systemRow2Description?: string;
-
-  // Footer
-  footerTitle?: string;
-  footerDescription?: string;
-  footerButtonText?: string;
-
   // Button URLs
   heroButtonUrl?: string;
-  systemRow2ButtonText?: string;
-  systemRow2ButtonUrl?: string;
-  footerButtonUrl?: string;
+
+  // Service Panels
+  panelHeadlineLines?: string[];
+  panelHeadlineAccent?: string;
+  whyTitle?: string;
+  whyParagraphs?: string[];
+  experienceParagraphs?: string[];
+  steps?: { title: string; line: string; icon?: string }[];
+  expectationsParagraph?: string;
+  facts?: { title: string; detail: string }[];
+  logistics?: { label: string; value: string }[];
 }
 
 const {
@@ -76,66 +51,66 @@ const {
 
   heroTitle = 'Office',
   heroTitleAccent = 'Headshots',
-  heroDescription = 'Your people are the most visible extension of the brand and values you have worked hard to build. The high-quality headshots that represent your team should reflect the same level of professionalism that your clients have come to expect from your business. When your team looks unified, polished, and consistent, your brand carries greater respect and authority.',
+  heroDescription = 'Your people are the most visible extension of the brand and values you have worked hard to build. I bring a full studio to your office and create team headshots that are unified, polished, and consistent, giving your brand greater respect and authority.',
   heroButtonText = 'REQUEST PROPOSAL',
   SecondaryButtonText = 'SCHEDULE CONSULT',
 
-  callout1 = '',
-  callout2 = '',
-
-  pillar1Num = 'THE SCIENCE',
-  pillar1Title = 'Expression Direction',
-  pillar1Description = "Standing in front of a camera can feel unnatural. I guide every team member through a tailored process that elicits genuine, confident facial expressions which build trust and credibility. That kind of authenticity does not happen by accident. This is a skilled and deliberate process where your people are guided to look their best and not left to figure it out themselves.",
-
-  pillar2Num = 'THE PROCESS',
-  pillar2Title = 'Real-Time Review',
-  pillar2Description = "Every image appears on my computer the moment it is captured. Team members see themselves in real time and we make adjustments together. Lighting, posture and facial expression are refined on the spot. Every team member works collaboratively with me to select their headshot before stepping away.",
-
-  pillar3Num = 'THE RESULT',
-  pillar3Title = 'Strategic Selection',
-  pillar3Description = 'Each team member reviews their headshot images with me as they are captured. I guide the selection process to ensure consistency across your organization while honoring what makes each team member unique. The final collection presents a unified and professional image of your company.',
-
-  systemRow1Title = 'Why Your Office Headshots Matter',
-  systemRow1Description = `Mismatched photos make your team look like a collection of freelancers instead of a unified organization. When every headshot has different lighting, backgrounds and quality, it signals inconsistency. Clients notice. They wonder if the company pays the same attention to their work as they do to their image.
-
-  <a href="/blog/what-is-a-professional-headshot/">Professional headshots</a> that match in style and quality tell a different story. They show a team that operates under the same high standards and takes their work seriously. Clients trust organizations that look organized. They feel confident doing business with people who present themselves as capable professionals.
-
-  Your team benefits too. Employees who receive a headshot they actually like feel valued. They represent your company with more confidence on LinkedIn, in email signatures and in every client interaction. The investment in their image becomes an investment in how they see themselves as part of your organization.
-  `,
-  methodItem1 = 'Consistent team headshots increase revenue by up to 33%',
-  methodItem2 = "95% increase in contact form conversions with professional team photos",
-  methodItem3 = 'Professional headshots increase perceived company trustworthiness by 29%',
-  methodItem4 = '35% more leads generated with professional employee photos over stock imagery',
-
-
-  systemRow2Title = 'System of Direction',
-  systemRow2Description = `Your team members are not professional models. They don't know what to do with their hands, their posture, or their facial expressions. That is my job. I provide clear and specific coaching that eliminates awkwardness and draws out authenticity. Small adjustments to posture, head angle, and expression make the difference between a stiff corporate photo and a high-quality headshot that projects confidence, competence, approachability, and trustworthiness. The goal is for every team member to see themselves at their best and leave with a skip in their step.
-
-  Over ${yearsExperience} years photographing corporate teams, I have refined this coaching approach to help professionals who never thought they could look good in photos walk away surprised by how much they enjoyed the process.
-  `,
-  methodItem5 = 'Real-time image tethering for instant feedback',
-  methodItem6 = 'Advanced guidance, coaching and direction',
-  methodItem7 = "Systematic approach that's different from typical photographers",
-  methodItem8 = 'Instant review and choice of images',
-  
-
-  systemRow3Title = 'The Experience',
-  systemRow3Description = "Most people dread having their photo taken. Their last experience was probably a high school yearbook session where they were rushed through with no direction, no coaching, awkward silence, forced smiles, and results that matched. That is not how I work. My sessions are conversational and collaborative. I keep people talking, laughing, and engaged so they forget they are in front of a camera. When your team is comfortable, it shows in the final images. Most people tell me afterward they actually enjoyed the experience.",
-  methodItem9 = 'Professional studio lighting brought directly to your corporate location',
-  methodItem10 = 'Active coaching and conversational direction for every team member',
-  methodItem11 = 'Studio quality results delivered without requiring staff to leave the office',
-  methodItem12 = "Expertly guided sessions that dismantle the not photogenic narrative",
-
-
-  footerTitle = 'Ready to elevate your brand?',
-  footerDescription = 'Stop settling for "good enough" headshots. Invest in your digital handshake.',
-  footerButtonText = 'GET PRICING',
+  callout1 = 'UNIFIED',
+  callout2 = 'CONSISTENT',
 
   heroButtonUrl = '/request-proposal',
   SecondaryButtonUrl = "https://app.acuityscheduling.com/schedule/f0843291/appointment/11959793/calendar/1133425?appointmentTypeIds[]=11959793",
-  systemRow2ButtonText = 'GET PRICING',
-  systemRow2ButtonUrl = '/rates',
-  footerButtonUrl = '/rates',
+
+  // Service Panels (the three sliding panels)
+  panelHeadlineLines = ["THE", "OFFICE", "HEADSHOT"],
+  panelHeadlineAccent = "EXPERIENCE",
+  whyTitle = "WHY YOUR TEAM NEEDS PROFESSIONAL OFFICE HEADSHOTS",
+  whyParagraphs = [
+
+    `Mismatched photos make your team look like a collection of freelancers instead of a unified organization. When every headshot has different lighting, backgrounds and quality, it signals inconsistency. Clients notice. They wonder if the company pays the same attention to their work as they do to their image.`,
+
+    `<a href="/blog/what-is-a-professional-headshot/">Professional headshots</a> that match in style and quality show a team that operates under the same high standards and takes their work seriously. Clients trust organizations that look organized. They feel confident doing business with people who present themselves as capable professionals.`,
+
+    `Your team benefits too. They represent your company with more confidence on LinkedIn, in email signatures and in every client interaction. The investment in their image becomes an investment in how they see themselves as part of your organization.`
+  ],
+
+  experienceParagraphs = [
+
+    `Most people dread having their photo taken. Their last experience was probably a high school yearbook session where they were rushed through with no direction, awkward silence, forced smiles, and results that matched. My sessions are conversational and collaborative. I keep people talking, laughing, and engaged so they forget the camera exists. When your team is comfortable, it shows in the final images. Most people tell me afterward they actually enjoyed the experience.`,
+
+    `Standing in front of a camera can feel unnatural. I guide every team member through a tailored process that elicits genuine, confident facial expressions which build trust and credibility. This is a skilled and deliberate process where your people are guided to look their best and not left to figure it out themselves.`,
+
+    `Every image appears on my computer the moment it is captured. Team members see themselves in real time. Lighting, posture and facial expression are refined on the spot. I guide the selection process to ensure consistency across your organization while honoring what makes each team member unique.`,
+  
+  ],
+
+  steps = [
+    { title: "Request", icon: "request", line: "A proposal built around your team" },
+    { title: "Schedule", icon: "schedule", line: "Your date is set and details arranged" },
+    { title: "Photograph", icon: "photograph", line: "I set up on site and coach every person" },
+    { title: "Select", icon: "select", line: "Each person chooses their image before leaving" },
+    { title: "Retouch", icon: "retouch", line: "My retoucher finishes every final image" },
+    { title: "Deliver", icon: "deliver", line: "You approve the gallery, then download" }
+  ],
+  expectationsParagraph = `Your team members are not professional models. They don't know what to do with their hands, posture, or facial expressions. My job is to provide clear and specific coaching that eliminates awkwardness and draws out authenticity. The goal is for every team member to see themselves at their best and leave with a skip in their step. I have refined this coaching approach over ${yearsExperience} years photographing corporate teams to help professionals look awesome in photos and walk away having enjoyed the process.`,
+
+  facts = [
+    { title: "Tethered Capture", detail: "Instant on-screen feedback" },
+    { title: "Advanced Coaching", detail: "Guidance and direction" },
+    { title: "Systematic Approach", detail: "Refined for teams" },
+    { title: "Instant Review", detail: "Your choice of images" },
+    { title: "Consistent Headshots", detail: "Across your whole team" },
+    { title: "Studio Lighting", detail: "Brought to your office" },
+    { title: "Unhurried Sessions", detail: "Nothing is rushed" },
+    { title: "Professional Retouching", detail: "Available on every image" }
+  ],
+  logistics = [
+    { label: "Time Per Person", value: "Approx. 5 - 15 minutes" },
+    { label: "Space Required", value: "15 x 15 feet minimum" },
+    { label: "Equipment Provided", value: "Full studio setup included" },
+    { label: "Selection Process", value: "Real-time review with guidance" },
+    { label: "Service Area", value: "PA, MD, DE, NY, NJ" }
+  ],
 
   faqs = [                                                                  
       {                                                                       
@@ -242,6 +217,8 @@ const spec = [
 <!-- FAQ Schema -->
 <script type="application/ld+json" set:html={JSON.stringify(officeHeadshotsFAQSchema)} />
 
+<div class="page" data-page-path={pagePath}>
+
 <ServiceHero
     heroTitle={heroTitle}
     heroTitleAccent={heroTitleAccent}
@@ -258,8 +235,6 @@ const spec = [
     portraitHeight={800}
     callout1={callout1}
     callout2={callout2}
-    callout1Corner="top-left"
-    callout2Corner="bottom-right"
     stats={spec}
     serviceAreaIntro="On-site office headshots across"
     serviceAreas={[
@@ -274,210 +249,245 @@ const spec = [
 
 <Gallery showButton={false}/>
 
-<PillarCards
-    pillar1Num={pillar1Num}
-    pillar1Title={pillar1Title}
-    pillar1Description={pillar1Description}
-    pillar2Num={pillar2Num}
-    pillar2Title={pillar2Title}
-    pillar2Description={pillar2Description}
-    pillar3Num={pillar3Num}
-    pillar3Title={pillar3Title}
-    pillar3Description={pillar3Description}
-/>
+  <ServicePanels
+    headlineLines={panelHeadlineLines}
+    headlineAccent={panelHeadlineAccent}
+    whyTitle={whyTitle}
+    whyParagraphs={whyParagraphs}
+    experienceParagraphs={experienceParagraphs}
+    steps={steps}
+    expectationsParagraph={expectationsParagraph}
+    facts={facts}
+    logistics={logistics}
+  />
+  
+   <div class="closing-sections">
 
-<section class="system-section" data-page-path={pagePath}>
+  <section class="testimonials-section">
 
-<SystemRow
-    reverse={true}
-    title={systemRow1Title}
-    description={systemRow1Description}
-    methodItems={[methodItem1, methodItem2, methodItem3, methodItem4]}
-    image={TsedeyAragie}
-    imageAlt="Professional office headshot of an African-American woman in white shirt and blue blazer, smiling warmly against white studio background, headshot made by Richard Waine in Lancaster Pennsylvania"
-/>
+    <Testimonials2 title="Office Headshot Reviews" limit={3} filterByNames={["Eric Cooley", "Mackenzie Lucas", "Daniel Hagelberg"]}/>
+    
+  </section>
 
-<SystemRow
-    title={systemRow2Title}
-    description={systemRow2Description}
-    methodItems={[methodItem5, methodItem6, methodItem7, methodItem8]}
-    image={RW1}
-    imageAlt="Office headshot photography session by Richard Waine showing blonde woman in tan plaid blazer surrounded by professional photo lighting equipment"
-/>
 
-<SystemRow
-    reverse={true}
-    title={systemRow3Title}
-    description={systemRow3Description}
-    methodItems={[methodItem9, methodItem10, methodItem11, methodItem12]}
-    image={RW11}
-    imageAlt="Behind-the-scenes professional in office headshot photography session showing woman in black cardigan and pink lace top positioned between Westcott lighting panels and camera by Richard Waine Photography"
->
-      <table class="logistics-table">
-        <tr>
-          <td class="logistics-label">Time Per Person</td>
-          <td class="logistics-value">Approx. 5 - 15 minutes</td>
-        </tr>
-        <tr>
-          <td class="logistics-label">Space Required</td>
-          <td class="logistics-value">15 x 15 feet minimum</td>
-        </tr>
-        <tr>
-          <td class="logistics-label">Equipment Provided</td>
-          <td class="logistics-value">Full studio setup included</td>
-        </tr>
-        <tr>
-          <td class="logistics-label">Selection Process</td>
-          <td class="logistics-value">Real-time review with guidance</td>
-        </tr>
-        <tr>
-          <td class="logistics-label">Service Area</td>
-          <td class="logistics-value">PA, MD, DE, NY, NJ</td>
-        </tr>
-      </table>
-</SystemRow>
-</section>
+    <section class="faq-section" data-reveal>
+      <FAQAccordion faqs={faqs}/>
+    </section>
 
-<section id="testimonials">
-  <Testimonials title="Office Headshot Reviews" limit={3} filterByNames={["Eric Cooley", "Mackenzie Lucas", "Daniel Hagelberg"]}/>
-</section>
+  </div>
 
-<section class="FAQs">
+</div>
 
-  <FAQAccordion faqs={faqs}/>
+<script>
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
-</section>
+document.addEventListener('astro:page-load', () => {
+  const page = document.querySelector<HTMLElement>('.page');
+  if (!page) return;
+  if (window.location.pathname.replace(/\/$/, '') !== page.dataset.pagePath) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+  const ctx = gsap.context(() => {
+
+    gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
+      gsap.from(el, {
+        opacity: 0, y: 16, duration: 1.4, ease: 'expo.out',
+        /* the inline styles come off when the reveal ends, so the
+           stylesheet's own transform on the card applies at every width,
+           including after a resize */
+        clearProps: 'opacity,transform',
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true }
+      });
+    });
+
+    /* The gallery assembles: every frame arrives in a random order rather
+       than sweeping left to right, then the wall sits still. Nothing here
+       touches Gallery.astro — it targets the markup from this page only. */
+    const cells = gsap.utils.toArray<HTMLElement>('#gallery-section .gallery > div');
+    if (cells.length) {
+      gsap.from(cells, {
+        opacity: 0,
+        duration: 1.1,
+        ease: 'expo.out',
+        stagger: { each: 0.03, from: 'random' },
+        scrollTrigger: { trigger: '#gallery-section', start: 'top 80%', once: true }
+      });
+    }
+
+
+  }, page);
+
+  window.addEventListener('load', () => ScrollTrigger.refresh());
+  document.addEventListener('astro:before-swap', () => ctx.revert(), { once: true });
+});
+</script>
 
 <script>
 import '../scripts/service-page-animations';
 </script>
 
-
 </MainLayout>
 
-
 <style>
-  :root {
-  --bg: #050505;
-  --card: #111111;
-  --text:var(--ltclr);
-  --text-dim:var(--ltclr);
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  line-height:var(--line-height-relaxed);
-  width:100%;
-  margin-inline:auto;
-  padding:0;
-  min-height:calc(100vh + var(--header-height));
-
-      a{
-          color:blue;
-      }
-}
-
-
-/* The "System" Section - Staggered */
-.system-section {
-  margin-block:var(--size-825);
-  position: relative;
-  width:calc(100% - var(--size-7));
-  margin-inline:auto;
-}
-
-
-:global(body .system-content p a) {
-    color: var(--text);
+  body {
+    background: #08080a;
+    color: var(--ltclr);
   }
 
-
-.logistics-table {
-  width:calc(100% - var(--size-7));
-  margin-inline:auto;
-  margin-left:0;
-  margin-bottom: var(--size-7);
-  border-collapse: collapse;
-}
-
-.logistics-table tr {
-  border-bottom: 1px solid var(--accent);
-}
-
-.logistics-table td {
-  padding-block: var(--size-4);
-}
-
-.logistics-label {
-  font-weight: var(--fw-bold);
-  width: 60%;
-}
-
-.logistics-value {
-  color: var(--text-dim);
-}
-
-
-#testimonials{
-    height: auto;                                                                
-    display: grid;                                                               
-    place-items: center;                                                         
-    background: #080808; 
-
-      > * > * > * .card-testimonial{
-        margin-inline:0;
-      }
-
-      > * > * > * > * .testimonial-content{
-        padding-inline:0;
-        margin-inline:0;
-      }
-
-}
-
-.FAQs {
-  
-  width:calc(100% - var(--size-4));
-  margin-inline:auto;
-  margin-bottom:var(--size-10);
-}
-
-/* ==========================================                                   
-     TABLET - min-width: 48em (768px)                                             
-     ========================================== */                                
-        @media (min-width: 48em) {
-
-          .FAQs{
-            width:80%;
-          }
+  /* One vertical rhythm for every section on the page. */
+  .page {
+    --section-space: clamp(4rem, 9vw, 8rem);
   }
 
- /* ==========================================
-     DESKTOP - min-width: 90em (1440px)
+  /* ==========================================
+     BASE = PHONE
+     Everything outside a media query is the phone layout. Tablet adds
+     on at 48em (768px). Desktop adds on at 90em (1440px), the same
+     width where ServiceHero switches to its two-column layout.
      ========================================== */
-  @media (min-width: 90em) {
 
-        .FAQs{
-            width:50%;
-          }
+  /* The gallery sits on the page's one content edge, same as .wrapper.
+     The shared component adds its own side padding and an inner width
+     cap, which stacked three insets on a phone. Both are removed here
+     and put back at desktop. */
+  :global(div.page #gallery-section) {
+    padding-inline: 0;
+  }
+  :global(#gallery-section .gallery-container) {
+    padding-block: var(--section-space);
+    width: 100%;
+    max-width: none;
+    margin-inline: auto;
   }
 
-  /*change padding and max width of gallery beneath header */
-:global(#gallery-section .gallery-container) {
-    padding-top: var(--size-825);
-    /* max-width:105rem; */
-    max-width:85%;
-    margin-inline:auto;
-  }
-
-/* This page only: gallery squares two-across on phones so they sit smaller than the horizontal hero image */
-@media (max-width: 47.9375em) {
+  /* The shared gallery picks its columns from its container width, which
+     was built for the desktop wrapper. This page sets the columns and
+     which frames show at every breakpoint instead. Two-across on phones,
+     as on the other service pages. */
   :global(#gallery-section .gallery) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: var(--size-3);
   }
-}
+
+  .closing-sections {
+    display: grid;
+    align-content: center;
+    min-height: 100vh;
+    gap: var(--section-space);
+    padding-block: var(--section-space);
+    /* the fixed MENU bar and the chat bubble sit on the bottom of the
+       screen, so the page ends with room for them under the last row */
+    padding-block-end: calc(var(--section-space) + var(--size-5));
+  }
+
+
+  .testimonials-section {
+    padding-block: 0;
+  }
+ 
+
+  /* ---------- the accordion, standing on the page on its own ---------- */
+
+  /* the accordion sits on the page's content edge and runs narrower than
+     the rest of the page at desktop, because question rows don't need the full
+     content width */
+  .faq-section {
+    width: calc(100% - var(--size-8));
+    max-width: 70rem;
+    margin-inline: auto;
+  }
+
+  /* FAQAccordion ships with a top margin for the pages that use it with a
+     heading above. This page has no heading, so the margin is removed here
+     rather than in the shared component. */
+  .faq-section :global(.faq-content) {
+    margin-block-start: 0;
+  }
+
+  /* the questions are bold capitals, so they run 14px on a phone and grow
+     back to the component's 16px by desktop */
+  .faq-section :global(.question) {
+    font-size: var(--fs-clamp-sm);
+  }
+
+  /* ==========================================
+     TABLET - min-width: 48em (768px)
+     ========================================== */
+  @media (min-width: 48em) {
+
+    /* four across, eight frames */
+    :global(#gallery-section .gallery) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: var(--size-3);
+    }
+    :global(#gallery-section .gallery .image1),
+    :global(#gallery-section .gallery .image2),
+    :global(#gallery-section .gallery .image3),
+    :global(#gallery-section .gallery .image4),
+    :global(#gallery-section .gallery .image5),
+    :global(#gallery-section .gallery .image6),
+    :global(#gallery-section .gallery .image7),
+    :global(#gallery-section .gallery .image8) {
+      display: block;
+    }
+    :global(#gallery-section .gallery .image9),
+    :global(#gallery-section .gallery .image10),
+    :global(#gallery-section .gallery .image11),
+    :global(#gallery-section .gallery .image12),
+    :global(#gallery-section .gallery .image13),
+    :global(#gallery-section .gallery .image14),
+    :global(#gallery-section .gallery .image15),
+    :global(#gallery-section .gallery .image16) {
+      display: none;
+    }
+
+  }
+
+  /* ==========================================
+     DESKTOP - min-width: 90em (1440px)
+     The sideways sliding, exactly as before.
+     ========================================== */
+  @media (min-width: 90em) {
+
+    :global(div.page #gallery-section) {
+      padding-inline: var(--size-8);
+    }
+    :global(#gallery-section .gallery-container) {
+      /* width: 80%; */
+    }
+    /* three across, two rows, the six frames the gallery shows at 1440 */
+    :global(#gallery-section .gallery) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: var(--grid-column-gap);
+    }
+    :global(#gallery-section .gallery .image3),
+    :global(#gallery-section .gallery .image4) {
+      display: none;
+    }
+
+  }
+
+
+  
+
+  /* ==========================================
+     WIDE DESKTOP - min-width: 106.0625em (1697px)
+     The width at which the gallery's container reaches 1025px and its
+     full eight-across wall of sixteen frames begins.
+     ========================================== */
+  @media (min-width: 106.0625em) {
+
+    :global(#gallery-section .gallery) {
+      grid-template-columns: repeat(8, 1fr);
+    }
+    :global(#gallery-section .gallery [class^="image"]) {
+      display: block;
+    }
+
+
+    }
+
 
 </style>
