@@ -6,8 +6,9 @@ import { Image } from 'astro:assets';
 import StudioBTS from "../../assets/images/blog/RW14 - (16 x 9).jpg"
 import StudioBTSTwo from "../../assets/images/blog/RW8 - (16 x 9).jpg"
 
-interface Step { title: string; line: string }
+interface Step { title: string; line: string; icon?: string }
 interface Fact { title: string; detail: string }
+interface LogisticsRow { label: string; value: string }
 
 export interface Props {
   headlineLines: string[];
@@ -21,6 +22,9 @@ export interface Props {
   expectationsTitle?: string;
   expectationsParagraph: string;
   facts: Fact[];
+  // optional planning table under the process box; only pages that pass
+  // it show it, and every other page stays exactly as it is
+  logistics?: LogisticsRow[];
 }
 
 const {
@@ -41,7 +45,8 @@ const {
   ],
   expectationsTitle = "EXPECTATIONS",
   expectationsParagraph,
-  facts
+  facts,
+  logistics = []
 } = Astro.props;
 
 /* one icon per process step, in step order */
@@ -85,6 +90,26 @@ const icons = [
                     <rect x="4" y="8" width="30" height="24" rx="2" stroke="#03a9f4" stroke-width="1.2"/>
                   </svg>`
 ];
+
+/* A page that writes its own steps can name the icon each one uses. Steps
+   without a name keep the icon in their position above, so every page that
+   uses the built-in steps is unchanged. */
+const namedIcons: Record<string, string> = {
+  request: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 4 H24 L31 11 V36 H9 Z" stroke="#03a9f4" stroke-width="1.2" stroke-linejoin="round"/>
+                    <path d="M24 4 V11 H31" stroke="#03a9f4" stroke-width="1.2" stroke-linejoin="round"/>
+                    <line x1="14" y1="18" x2="26" y2="18" stroke="#03a9f4" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="14" y1="23" x2="26" y2="23" stroke="#03a9f4" stroke-width="1.2" stroke-linecap="round"/>
+                    <line x1="14" y1="28" x2="21" y2="28" stroke="#03a9f4" stroke-width="1.2" stroke-linecap="round"/>
+                    <circle cx="25" cy="30" r="1.5" fill="#03a9f4"/>
+                  </svg>`,
+  schedule: icons[0],
+  arrive: icons[1],
+  photograph: icons[2],
+  select: icons[3],
+  retouch: icons[4],
+  deliver: icons[5]
+};
 ---
 
 <section class="persuasion" data-persuasion data-service-panels>
@@ -113,7 +138,7 @@ const icons = [
       </section>
 
       <section class="slide">
-        <div class="slide-content">
+        <div class={logistics.length ? "slide-content has-logistics" : "slide-content"}>
           <div class="glass-box">
             <h3>{experienceTitle}</h3>
             {experienceParagraphs.map((text) => <p set:html={text} />)}
@@ -123,7 +148,7 @@ const icons = [
             <div class="process-steps">
               {steps.map((step, i) => (
                 <div>
-                  <Fragment set:html={icons[i]} />
+                  <Fragment set:html={step.icon ? namedIcons[step.icon] : icons[i]} />
                   <div class="step-body">
                     <h4>{step.title}</h4>
                     <p>{step.line}</p>
@@ -132,6 +157,18 @@ const icons = [
               ))}
             </div>
           </div>
+          {logistics.length > 0 && (
+            <div class="glass-box is-logistics">
+              <table class="logistics-table">
+                {logistics.map((row) => (
+                  <tr>
+                    <td class="logistics-label">{row.label}</td>
+                    <td class="logistics-value">{row.value}</td>
+                  </tr>
+                ))}
+              </table>
+            </div>
+          )}
         </div>
       </section>
 
@@ -405,6 +442,25 @@ document.addEventListener('astro:page-load', () => {
     font-size: var(--fs-350);
   }
 
+  /* PLANNING TABLE: label and value on one row, a rule under each */
+  .persuasion .logistics-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .persuasion .logistics-table tr {
+    border-bottom: 1px solid var(--accent);
+  }
+  .persuasion .logistics-table td {
+    padding-block: var(--size-4);
+  }
+  .persuasion .logistics-label {
+    font-weight: var(--fw-bold);
+    width: 50%;
+  }
+  .persuasion .logistics-value {
+    color: var(--ltclr);
+  }
+
   /* ==========================================
      TABLET - min-width: 48em (768px)
      ========================================== */
@@ -559,6 +615,26 @@ document.addEventListener('astro:page-load', () => {
       font-size: var(--fs-800);
     }
 
+    /* Only when a page passes the planning table: the process box moves to
+       the top of its column and the table sits under it, the same width.
+       The Experience box spans both rows beside them. */
+    .persuasion .slide-content.has-logistics > .glass-box:first-child {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      align-self: center;
+    }
+    .persuasion .slide-content.has-logistics > .glass-box.is-wide {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: end;
+    }
+    .persuasion .slide-content.has-logistics > .glass-box.is-logistics {
+      grid-column: 2;
+      grid-row: 2;
+      align-self: start;
+      width: 140%;
+    }
+
     .persuasion .fact-grid {
       text-align: left;
     }
@@ -586,6 +662,12 @@ document.addEventListener('astro:page-load', () => {
 
     .persuasion .process-steps {
       grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    /* the process box runs to 310% here, so the table (140% wide) starts
+       170% in and its right edge meets the process box's right edge */
+    .persuasion .slide-content.has-logistics > .glass-box.is-logistics {
+      margin-inline-start: 170%;
     }
   }
 </style>
