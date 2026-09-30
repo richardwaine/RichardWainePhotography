@@ -33,6 +33,18 @@ import WilliamSanchez from '../assets/images/testimonials/William Sanchez - 0007
 import ChrisPatille from '../assets/images/testimonials/Christopher Patille - (200px).jpg'
 import EmilyMainquist from '../assets/images/testimonials/Emily Mainquist - (200px).jpg'
 import RamiCastillo from '../assets/images/testimonials/Rami Castillo - (200px).jpg'
+import DavidSperling from '../assets/images/testimonials/David Sperling - (200px).jpg'
+import JustinJames from '../assets/images/testimonials/Justin James - (200px).jpg'
+import ThomasWilde from '../assets/images/testimonials/Thomas Wilde - (200px).jpg'
+import JenniferBenware from '../assets/images/testimonials/Jennifer Benware - (200px).jpg'
+import NathanRush from '../assets/images/testimonials/Nathan Rush - (200px).jpg'
+import MakenzieScanlon from '../assets/images/testimonials/Makenzie Scanlon - (200px).jpg'
+import RashynaBanzhof from '../assets/images/testimonials/Rashyna Banzhof - (200px).jpg'
+import AmandaKowalski from '../assets/images/testimonials/Amanda Kowalski - (200px).jpg'
+import JasonSeibert from '../assets/images/testimonials/Jason Seibert - (200px).jpg'
+import ChristopherBradley from '../assets/images/testimonials/Christopher Bradley - (200px).jpg'
+import DarrylWalker from '../assets/images/testimonials/Darryl Walker - (200px).jpg'
+import DouglasBarton from '../assets/images/testimonials/Douglas Barton - (200px).jpg'
 import AvatarPlaceholder from '../assets/images/testimonials/Avatar - (200px).jpg'
 
 
@@ -8525,10 +8537,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"financial-professionals",
     review: "A very entertaining photo session.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Doug Barton",
+    imageUrl: DouglasBarton.src,
+    image: DouglasBarton,
+    imagePath: "Douglas Barton - (200px).jpg",
+    imageAlt: "Professional Headshot of Doug Barton by Richard Waine Photography",
     datePublished: "2026-02-27T15:41:39.301848Z",
     displayOrder: 515
   },
@@ -8538,10 +8550,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"entrepreneurs",
     review: "An Awesome Experience!!\n\nTrue Professional.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Darryl Walker",
+    imageUrl: DarrylWalker.src,
+    image: DarrylWalker,
+    imagePath: "Darryl Walker - (200px).jpg",
+    imageAlt: "Professional Headshot of Darryl Walker by Richard Waine Photography",
     datePublished: "2026-03-06T16:59:59.455417Z",
     displayOrder: 514
   },
@@ -8551,10 +8563,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"executives",
     review: "Dynamite experience with Rich, and the photography was impeccable.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Christopher Bradley",
+    imageUrl: ChristopherBradley.src,
+    image: ChristopherBradley,
+    imagePath: "Christopher Bradley - (200px).jpg",
+    imageAlt: "Professional Headshot of Christopher Bradley by Richard Waine Photography",
     datePublished: "2026-03-10T19:37:57.930179Z",
     displayOrder: 513
   },
@@ -8564,10 +8576,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category:"financial-professionals",
     review: "Very easy and he explains the process to know why he does what he does.",
     rating: 4,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jason Seibert",
+    imageUrl: JasonSeibert.src,
+    image: JasonSeibert,
+    imagePath: "Jason Seibert - (200px).jpg",
+    imageAlt: "Professional Headshot of Jason Seibert by Richard Waine Photography",
     datePublished: "2026-03-12T14:20:21.333847Z",
     displayOrder: 512
   },
@@ -8720,10 +8732,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category: "legal-professionals",
     review: "Wonderful experience, professional and fun. Very happy with the results!",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Amanda Kowalski",
+    imageUrl: AmandaKowalski.src,
+    image: AmandaKowalski,
+    imagePath: "Amanda Kowalski - (200px).jpg",
+    imageAlt: "Professional Headshot of Amanda Kowalski by Richard Waine Photography",
     datePublished: "2026-05-27T12:00:00.000000Z",
     displayOrder: 508
   },
@@ -8746,10 +8758,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category: "legal-professionals",
     review: "Had a blast with Rich; no anxiety with this shoot!",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Rashyna Banzhof",
+    imageUrl: RashynaBanzhof.src,
+    image: RashynaBanzhof,
+    imagePath: "Rashyna Banzhof - (200px).jpg",
+    imageAlt: "Professional Headshot of Rashyna Banzhof by Richard Waine Photography",
     datePublished: "2026-06-22T12:00:00.000000Z",
     displayOrder: 510
   },
@@ -8759,10 +8771,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category: "medical-professionals",
     review: "Loved my session! He made me look incredible and confident for my upcoming ERAS application. Highly recommend!",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Makenzie Scanlon",
+    imageUrl: MakenzieScanlon.src,
+    image: MakenzieScanlon,
+    imagePath: "Makenzie Scanlon - (200px).jpg",
+    imageAlt: "Professional Headshot of Makenzie Scanlon by Richard Waine Photography",
     datePublished: "2026-06-30T12:00:00.000000Z",
     displayOrder: 511
   },
@@ -8772,10 +8784,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category: "legal-professionals",
     review: "Had such a memorable time at my shoot with Richard. He's a very professional, friendly, and energetic photographer, and I definitely recommend!",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Nate Rush",
+    imageUrl: NathanRush.src,
+    image: NathanRush,
+    imagePath: "Nathan Rush - (200px).jpg",
+    imageAlt: "Professional Headshot of Nate Rush by Richard Waine Photography",
     datePublished: "2026-08-12T12:00:00.000000Z",
     displayOrder: 512
   },
@@ -8785,10 +8797,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category: "financial-professionals",
     review: "Very professional and fun! Gave great direction, made me feel comfortable, and does amazing work. Highly recommend!!!",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Jennifer Tregear",
+    imageUrl: JenniferBenware.src,
+    image: JenniferBenware,
+    imagePath: "Jennifer Benware - (200px).jpg",
+    imageAlt: "Professional Headshot of Jennifer Tregear by Richard Waine Photography",
     datePublished: "2026-08-21T12:00:00.000000Z",
     displayOrder: 513
   },
@@ -8798,10 +8810,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category: "financial-professionals",
     review: "Had an amazing coaching session with Richard. His coaching was excellent and he made sure to get the perfect shot for me.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Thomas Wilde",
+    imageUrl: ThomasWilde.src,
+    image: ThomasWilde,
+    imagePath: "Thomas Wilde - (200px).jpg",
+    imageAlt: "Professional Headshot of Thomas Wilde by Richard Waine Photography",
     datePublished: "2026-08-26T12:00:00.000000Z",
     displayOrder: 514
   },
@@ -8811,10 +8823,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category: "medical-professionals",
     review: "I recently had my first professional headshot session with Richard Waine, and the experience exceeded every expectation. As a medical student now applying for residency, I wanted a headshot that conveyed professionalism while still reflecting my personality and character. Richard understood that balance immediately and thoughtfully guided me through the entire process.\n\nHe made me feel comfortable, welcomed my input, offered helpful suggestions, and showed me the results as we made adjustments. The session felt truly collaborative, and I was actively involved in creating a final product that feels authentic to who I am and where I am headed professionally.\n\nI highly recommend Richard and look forward to returning to him as my career continues to grow.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Justin James",
+    imageUrl: JustinJames.src,
+    image: JustinJames,
+    imagePath: "Justin James - (200px).jpg",
+    imageAlt: "Professional Headshot of Justin James by Richard Waine Photography",
     datePublished: "2026-09-01T12:00:00.000000Z",
     displayOrder: 515
   },
@@ -8824,10 +8836,10 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     category: "medical-professionals",
     review: "It was a pleasure working with Richard. He is professional, diligent and friendly the minute you walk in until you leave. He made the process easy, fun and enjoyable. He is conscientious and takes your thoughts and concerns into consideration. If I ever need professional photos again, I will definitely be reaching out again. Thank you Richard.",
     rating: 5,
-    imageUrl: AvatarPlaceholder.src,
-    image: AvatarPlaceholder,
-    imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by David Sperling",
+    imageUrl: DavidSperling.src,
+    image: DavidSperling,
+    imagePath: "David Sperling - (200px).jpg",
+    imageAlt: "Professional Headshot of David Sperling by Richard Waine Photography",
     datePublished: "2026-09-09T12:00:00.000000Z",
     displayOrder: 516
   }
