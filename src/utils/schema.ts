@@ -527,7 +527,8 @@ export function buildVideoObjectSchema(
     ...(video.duration && { "duration": video.duration }),
     "author": {
       "@type": "Organization",
-      "name": businessName
+      "name": businessName,
+      "url": "https://richardwainephotography.com"
     }
   };
 }
