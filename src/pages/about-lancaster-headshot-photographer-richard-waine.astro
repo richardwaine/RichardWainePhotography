@@ -98,6 +98,20 @@ const tabs = [
 			"Harley is a Golden Doodle. Despite being a behavior school drop-out, she is exceptionally well mannered, well behaved and lives to give kisses. She loves people, long walks in the backyard, and enjoys a good beer from time to time. She's partial to lagers, and won't even try a glass of wine or champagne.",
 			"Besides being follically challenged (as much as I hate to admit it, I'm losing my hair), my infatuation with hats started when I was around 8 or 9 years old. I had broken my nose and the plastic surgeon who stitched me up wanted to ensure that any scarring was minimal. He insisted I wear a hat to keep the sun from my face. I never dropped the habit. Today, my collection of hats is insane, even though I'm usually seen in one or two particular black hats."
 		]
+	},
+	{
+		id: "values",
+		headline: "What I Believe",
+		pullQuote: "“You can tell he genuinely cares about helping people.”",
+		pullAttrib: "— Nicholas Elsayed",
+		blocks: [],
+		list: [
+			"Every human being has a right to dignity, respect, and kindness.",
+			"If you are in my studio, you get my absolute best.",
+			"Your wishes matter.",
+			"I have a vested interest in your success.",
+			"I believe in transparency, honesty, and ethical business practices."
+		]
 	}
 ];
 
@@ -202,6 +216,7 @@ const spec = [
 			<button class="tab-btn" data-tab="experience">The Experience</button>
 			<button class="tab-btn" data-tab="credentials">Credentials</button>
 			<button class="tab-btn" data-tab="personal">The Person</button>
+			<button class="tab-btn" data-tab="values">Values</button>
 		</div>
 
 		<div class="tab-main" id="tabMain">
@@ -215,6 +230,11 @@ const spec = [
 						</div>
 					)}
 					{tab.blocks.map((block) => <p>{block}</p>)}
+					{tab.list && (
+						<ul class="values-list">
+							{tab.list.map((item) => <li>{item}</li>)}
+						</ul>
+					)}
 					{tab.id === "welcome" && (
 						<Image class="signature" src={signatureWhite} alt="Richard Waine signature" width={260} loading="lazy" />
 					)}
@@ -538,6 +558,7 @@ import '../scripts/hero-spec-counter';
 		grid-template-columns: var(--_rail) 1fr;
 		grid-template-rows: none;
 		width: 80%;
+	
 	}
 
 	/* the press band is a direct child of the section grid: it spans rail + content,
@@ -623,9 +644,10 @@ import '../scripts/hero-spec-counter';
 	.tab-main {
 		/* one knob controls the photo/awards column width — everything in it scales */
 		--_photo-col: 530px;
+		
 
 		display: grid;
-		grid-template-columns: 1fr var(--_photo-col);
+		grid-template-columns: 3fr 2fr;
 		column-gap: clamp(var(--size-5), 3vw, var(--size-8));
 		align-items: start;
 		/* pack rows to the top; a short tab must not have its paragraphs
@@ -644,6 +666,16 @@ import '../scripts/hero-spec-counter';
 
 	.tab-content :global(p) {
 		grid-column: 1;
+	}
+
+	/* the values list sits in the text column like the paragraphs */
+	.tab-content :global(.values-list) {
+		grid-column: 1;
+	}
+
+	/* when the active tab has no photo, the list takes both columns instead of wrapping in the left one */
+	.tab-main:not(:has(.tab-photo.active)) .tab-content :global(.values-list) {
+		grid-column: 1 / -1;
 	}
 
 	/* the signature belongs under the note, not in the photo column */
@@ -685,30 +717,25 @@ import '../scripts/hero-spec-counter';
 
 .award-grid {
 	/* badge size in pixels — the only number to touch.
-	   The 3-over-2 configuration is fixed at any size. */
+	   Badges wrap to fit the column, three per row at most, and a short last row
+	   is centered, for any number of badges. */
 	--_award-size: 150px;
 
-	display: grid;
-	grid-template-columns: repeat(6, calc(var(--_award-size) / 2));
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: var(--size-4);
-	width: fit-content;
+	max-width: calc(3 * var(--_award-size) + 2 * var(--size-4));
 	margin-inline: auto;
+
+
 }
 
 .award-grid :global(img) {
-	grid-column: span 2;
+	flex: none;
 	width: var(--_award-size);
 	height: var(--_award-size);
 	object-fit: contain;
-}
-
-/* last row of two, centered under the row of three */
-.award-grid :global(img:nth-child(4)) {
-	grid-column: 2 / span 2;
-}
-
-.award-grid :global(img:nth-child(5)) {
-	grid-column: 4 / span 2;
 }
 
 /* Credentials — press band: hairline rules, cyan kicker, centered line of white marks */
@@ -813,6 +840,23 @@ import '../scripts/hero-spec-counter';
 	text-transform: uppercase;
 	color: var(--faded);
 	margin-top: var(--size-2);
+}
+
+/* the Values tab list carries no bullets; each value reads like a paragraph line */
+.tab-content :global(.values-list) {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* values read as statements: heading font, between body and quote size, white, upright */
+.tab-content :global(.values-list li) {
+	font-family: var(--ff-primary);
+	font-size: var(--fs-450);
+	font-weight: var(--fw-normal);
+	line-height: var(--line-height-normal);
+	color: var(--ltclr);
+	margin-bottom: clamp(14px, 2.5vw, 22px);
 }
 
 .tab-content :global(p) {
