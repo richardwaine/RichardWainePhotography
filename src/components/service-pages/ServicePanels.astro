@@ -499,6 +499,10 @@ document.addEventListener('astro:page-load', () => {
       height: 600vh;
       padding-block: 0;
       overflow: visible;
+      /* window height above 900px, up to 400px more: spacing grows from its
+         short-window minimum to its full size across that range */
+      --_s: clamp(0px, calc(100vh - var(--header-height) - 780px), 400px);
+      --_cg: calc(var(--size-7) + var(--_s) * .22);
     }
 
     /* 3D ENGINE */
@@ -533,14 +537,17 @@ document.addEventListener('astro:page-load', () => {
       align-items: center;
       justify-content: center;
       transform-style: preserve-3d;
+      /* on short windows each panel centres in the space below the header */
+      padding-block: calc(var(--header-height) + var(--size-5) - var(--_s) * .36) calc(var(--size-3) - var(--_s) * .04);
     }
 
     /* the first panel starts a fixed distance from the top, so the
        length of the box beside the headline never moves the headline */
     .persuasion .slide:first-of-type {
       align-items: flex-start;
-      padding-block-start: calc(var(--header-height) + var(--size-12));
+      padding-block-start: calc(var(--header-height) + var(--size-7) + var(--_s) * .32);
     }
+
     .persuasion .slide:first-of-type .slide-content {
       align-items: start;
     }
@@ -579,20 +586,21 @@ document.addEventListener('astro:page-load', () => {
       max-width: 1200px;
       margin-inline: 10% auto;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: var(--size-7) var(--size-11);
+      gap: calc(var(--size-3) + var(--_s) * .04) var(--_cg);
       transform: translateZ(50px);
       align-items: center;  
    
     }
 
     .persuasion .slide-headline h2 {
-      font-size: clamp(3.75rem, 3vw, 6rem);
+      font-size: clamp(3rem, min(max(3.75rem, 3vw), calc(3rem + var(--_s) * .12)), 6rem);
       text-align: left;
       padding-top: 0;
     }
 
     .glass-box {
-      padding: var(--size-9);
+      padding: calc(var(--size-3) + var(--_s) * .12);
+      gap: calc(var(--size-3) + var(--_s) * .02);
       backdrop-filter: blur(var(--size-4));
     }
 
@@ -612,31 +620,69 @@ document.addEventListener('astro:page-load', () => {
     }
 
     .persuasion h3 {
-      font-size: var(--fs-800);
+      font-size: calc(var(--fs-600) + var(--_s) * .02);
     }
 
-    /* Only when a page passes the planning table: the process box moves to
-       the top of its column and the table sits under it, the same width.
-       The Experience box spans both rows beside them. */
-    .persuasion .slide-content.has-logistics > .glass-box:first-child {
-      grid-column: 1;
-      grid-row: 1 / span 2;
+    .persuasion .process-steps {
+      gap: calc(var(--size-4) + var(--_s) * .07);
+    }
+    .persuasion .process-steps .step-body {
+      gap: calc(var(--size-2) + var(--_s) * .03);
+      padding-block-start: calc(var(--size-2) + var(--_s) * .04);
+    }
+    .persuasion .logistics-table td {
+      padding-block: calc(var(--size-2) + var(--_s) * .03);
+    }
+
+    /* The second panel is laid out the same on every page: the text box, then
+       the process box, with the planning table after it on pages that have one.
+       The panel widens past the screen when it needs to, and the slider
+       carries the visitor across it. On short windows the text box widens so
+       its paragraphs fit. */
+    .persuasion .slide:nth-of-type(2) {
+      width: auto;
+      min-width: 100vw;
+      padding-inline-end: 10vw;
+      justify-content: flex-start;
+    }
+    .persuasion .slide:nth-of-type(2) .slide-content {
+      --_c0: calc((min(80vw, 1200px) - var(--size-11)) / 2);
+      width: auto;
+      max-width: none;
+      margin-inline: 10vw 0;
+      grid-template-columns: max(var(--_c0), calc(680px - var(--_s) * 2)) calc(var(--_c0) * 1.4);
+      column-gap: var(--size-11);
+    }
+    .persuasion .slide:nth-of-type(2) .slide-content.has-logistics {
+      grid-template-columns: max(var(--_c0), calc(680px - var(--_s) * 2)) calc(var(--_c0) * 1.4) calc(var(--_c0) * 1.4);
+    }
+    .persuasion .slide:nth-of-type(2) .slide-content > .glass-box {
+      grid-row: 1;
       align-self: center;
     }
-    .persuasion .slide-content.has-logistics > .glass-box.is-wide {
+    .persuasion .slide:nth-of-type(2) .slide-content > .glass-box.is-wide {
       grid-column: 2;
-      grid-row: 1;
-      align-self: end;
+      width: 100%;
     }
-    .persuasion .slide-content.has-logistics > .glass-box.is-logistics {
-      grid-column: 2;
-      grid-row: 2;
-      align-self: start;
-      width: 140%;
+    .persuasion .slide:nth-of-type(2) .slide-content > .glass-box.is-logistics {
+      grid-column: 3;
+      width: 100%;
+    }
+    /* the backdrop runs the full width of the panel row */
+    .persuasion .backdrop-photo {
+      min-width: 100%;
+    }
+    .persuasion .backdrop-photo img:last-child {
+      flex-grow: 1;
+    }
+    .persuasion .logistics-table td {
+      white-space: nowrap;
     }
 
     .persuasion .fact-grid {
       text-align: left;
+      gap: calc(var(--size-3) + var(--_s) * .03);
+      padding-block-start: calc(var(--size-3) + var(--_s) * .03);
     }
   }
 
@@ -649,25 +695,32 @@ document.addEventListener('astro:page-load', () => {
     }
   }
 
+
   /* ==========================================
      LARGEST DESKTOP - min-width: 150em (2400px)
-     The process strip returns: six steps across.
+     The process strip returns: six steps across. On the office page the
+     planning table sits under the strip, its right edge on the strip's.
      ========================================== */
   @media (min-width: 150em) {
-    .persuasion .glass-box.is-wide {
-      width: 310%;
-      margin-inline-start:0;
-      
-    }
-
     .persuasion .process-steps {
       grid-template-columns: repeat(6, minmax(0, 1fr));
     }
-
-    /* the process box runs to 310% here, so the table (140% wide) starts
-       170% in and its right edge meets the process box's right edge */
-    .persuasion .slide-content.has-logistics > .glass-box.is-logistics {
-      margin-inline-start: 170%;
+    .persuasion .slide:nth-of-type(2) .slide-content,
+    .persuasion .slide:nth-of-type(2) .slide-content.has-logistics {
+      grid-template-columns: max(var(--_c0), calc(680px - var(--_s) * 2)) calc(var(--_c0) * 3.1);
+    }
+    .persuasion .slide:nth-of-type(2) .slide-content.has-logistics > .glass-box:first-child {
+      grid-row: 1 / span 2;
+    }
+    .persuasion .slide:nth-of-type(2) .slide-content.has-logistics > .glass-box.is-wide {
+      align-self: end;
+    }
+    .persuasion .slide:nth-of-type(2) .slide-content > .glass-box.is-logistics {
+      grid-column: 2;
+      grid-row: 2;
+      width: calc(var(--_c0) * 1.4);
+      justify-self: end;
+      align-self: start;
     }
   }
 </style>
