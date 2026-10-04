@@ -375,9 +375,9 @@ h1 {
   }
 
  /* ==========================================
-     DESKTOP - min-width: 90em (1440px)
+     DESKTOP - min-width: 80em (1280px)
      ========================================== */
-  @media (min-width: 90em) {
+  @media (min-width: 80em) {
         /* the gradient is its own layer so it cannot catch clicks */
         .hero::before {
           content: "";
@@ -403,33 +403,38 @@ h1 {
           align-self: end;
           width: auto;
           margin: 0;
-          padding-bottom: var(--size-875);
+          padding-block: clamp(var(--size-5), calc(var(--_h) * .069), var(--size-875));
           grid-template-columns: repeat(4, auto);
           grid-auto-rows: max-content;
           justify-content: center;
-          gap: var(--size-11);
+          gap: min(var(--size-11), 9%);
           text-align: left;
         }
   }
  /* ==========================================
-     DESKTOP - min-width: 90em (1440px)
+     DESKTOP - min-width: 80em (1280px)
      ========================================== */
-  @media (min-width: 90em) {
+  @media (min-width: 80em) {
 
         .hero {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr auto;
+            row-gap: 0;
             padding-inline: 10%;
+            --_h: calc(100vh - var(--header-height) - 5.125rem);
           }
 
-    
+          .hero-text {
+            container-type: inline-size;
+            width: 100%;
+          }
 
           .blueprint-box {
-            --_width: min(700px, 100%);
+            --_width: min(700px, 100%, calc(var(--_h) * .7));
           }
 
           h1 {
-
+            font-size: clamp(40px, min(calc(var(--_h) * .08), 13.5cqi), 70px);
             margin-inline:0;
             text-align:left;
             margin-bottom: var(--size-2);
@@ -439,10 +444,15 @@ h1 {
 
           .hero-p{
             text-align:left;
+            margin-bottom: clamp(var(--size-3), calc(var(--_h) * .046), var(--size-775));
           }
 
           .hero-p:not(.service-areas){
-            font-size: var(--fs-500);
+            font-size: clamp(var(--fs-400), calc(var(--_h) * .023), var(--fs-500));
+          }
+
+          .service-areas{
+            font-size: clamp(var(--fs-350), calc(var(--_h) * .018), var(--fs-400));
           }
 
 
@@ -451,63 +461,9 @@ h1 {
             justify-self: flex-start;
           }
 
-  }
-
- /* ==========================================
-     SHORT DESKTOP - max-height: 68.75em (1100px)
-     ========================================== */
-  @media (min-width: 90em) and (max-height: 68.75em) {
-          .hero {
-            gap: var(--size-8);
+        .action-group :global(.btn){
+            white-space: nowrap;
           }
 
-          h1 {
-            font-size: 3.5rem;
-          }
-
-          .hero-p {
-            margin-bottom: var(--size-7);
-          }
-
-          .hero-p:not(.service-areas) {
-            font-size: var(--fs-450);
-          }
-
-          .blueprint-box {
-            --_width: min(500px, 100%);
-          }
-
-          .hero-spec {
-            padding-bottom: var(--size-775);
-          }
-  }
-
- /* ==========================================
-     SHORTER DESKTOP - max-height: 53.125em (850px)
-     ========================================== */
-  @media (min-width: 90em) and (max-height: 53.125em) {
-          .hero {
-            gap: var(--size-775);
-          }
-
-          h1 {
-            font-size: 3rem;
-          }
-
-          .hero-p {
-            margin-bottom: var(--size-5);
-          }
-
-          .hero-p:not(.service-areas) {
-            font-size: var(--fs-400);
-          }
-
-          .blueprint-box {
-            --_width: min(460px, 100%);
-          }
-
-          .hero-spec {
-            padding-bottom: var(--size-7);
-          }
   }
 </style>
