@@ -3,6 +3,8 @@ import FAQAccordion from "../components/FAQAccordion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import ShareButtons from "../components/ShareButtons.astro";
 import { buildBreadcrumbSchema, buildFAQSchema } from "../utils/schema";
+import { Image } from 'astro:assets';
+import preferredSourceBadge from '../assets/images/blog/google_preferred_source_badge_dark_en@2x.png';
 
 export interface Props {
   title: string;
@@ -164,6 +166,9 @@ const wordCount = countWords(post.body);
 
       <h1 class="article-title">{title}</h1>
       <p class="article-meta">Last Updated: {lastUpdated}</p>
+      <a class="preferred-source center" href="https://www.google.com/preferences/source?q=richardwainephotography.com" target="_blank" rel="noopener">
+        <Image src={preferredSourceBadge} alt="Add as a preferred source on Google" width={200} height={63} />
+      </a>
 
         <div class="article-content">
            
@@ -248,6 +253,13 @@ const wordCount = countWords(post.body);
   color: var(--faded);
   margin-top: var(--size-2);
   margin-bottom: var(--size-6);
+}
+
+.preferred-source{
+  display:block;
+  width:fit-content;
+  margin-inline:auto;
+  margin-bottom:var(--size-6);
 }
 
 .article-content{
