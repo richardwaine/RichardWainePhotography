@@ -63,7 +63,7 @@ export interface Testimonial {
   displayOrder?: number; // Original display order for reviews page
 }
 
-export const reviewCount = 673;
+export const reviewCount = 675;
 
 export const yearsExperience = new Date().getFullYear() - 2008;
 
@@ -8842,6 +8842,32 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Professional Headshot of David Sperling by Richard Waine Photography",
     datePublished: "2026-09-09T12:00:00.000000Z",
     displayOrder: 516
+  },
+  {
+    name: "Justice Gibbs-Odoms",
+    company: "",
+    category: "creatives",
+    review: "Rich you’re the greatest, seriously!! I had a blast from start to finish. If you’re looking for a talented and professional photographer for headshots, I highly recommend Richard Waine. The quality of his work and the experience he provides are both exceptional!! He made the entire session feel comfortable and natural, which made such a difference in getting authentic, confident photos.\nThe final headshots turned out amazing! All the shots are polished, professional, and exactly what I was hoping for. Rich you really do have a great eye for lighting, angles, and capturing the best version of myself without making the photos feel overly posed. I couldn’t be happier with my photos! Oh and your direction is also great!\n\nDon’t you dare ever retire!!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Justice Gibbs-Odoms",
+    datePublished: "2026-10-03T12:00:00.000000Z",
+    displayOrder: 517
+  },
+  {
+    name: "Jennifer Reeder",
+    company: "",
+    category: "financial-professionals",
+    review: "Richard was very professional but made it an enjoyable experience. My headshot looks amazing.",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Jennifer Reeder",
+    datePublished: "2026-10-12T12:00:00.000000Z",
+    displayOrder: 518
   }
 
 
