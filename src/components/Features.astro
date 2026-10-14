@@ -240,6 +240,7 @@ document.addEventListener("astro:page-load", () => {
             const heading = slide.querySelector(".heading");
             const text = slide.querySelector(".slide-text");
             const image = slide.querySelector(".slide-image");
+            const button = slide.querySelector(".button-wrapper");
 
             // Skip decorative animations for reduced motion users, but keep scroll functional
             if (prefersReducedMotion) return;
@@ -259,13 +260,14 @@ document.addEventListener("astro:page-load", () => {
            if (heading) tl.from(heading, { opacity: 0, ease: "power1.inOut" }, 0);
            if (text) tl.from(text, { opacity: 0, ease: "power2.out" }, 0.2);
            if (image) tl.from(image, { opacity: 0, scale: 0.8, ease: "slow" }, 0);
+           if (button) tl.from(button, { opacity: 0, ease: "power2.out" }, 0.2);
 
         });
 
 
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-            gsap.set('.features-section, .features-scroller, .feature-slide, .heading, .slide-text, .slide-image', { clearProps: 'all' });
+            gsap.set('.features-section, .features-scroller, .feature-slide, .heading, .slide-text, .slide-image, .button-wrapper', { clearProps: 'all' });
         };
     });
 
