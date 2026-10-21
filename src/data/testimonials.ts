@@ -63,7 +63,7 @@ export interface Testimonial {
   displayOrder?: number; // Original display order for reviews page
 }
 
-export const reviewCount = 675;
+export const reviewCount = 677;
 
 export const yearsExperience = new Date().getFullYear() - 2008;
 
@@ -8868,6 +8868,32 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     imageAlt: "Google Review by Jennifer Reeder",
     datePublished: "2026-10-12T12:00:00.000000Z",
     displayOrder: 518
+  },
+  {
+    name: "Philip Mann",
+    company: "",
+    category: "entrepreneurs",
+    review: "Excellent headshot session! Well worth the investment and time. Will definitely use Rich again. 👍",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Philip Mann",
+    datePublished: "2026-10-16T12:00:00.000000Z",
+    displayOrder: 519
+  },
+  {
+    name: "Christopher Gazzio",
+    company: "",
+    category: "legal-professionals",
+    review: "Thanks, Rich!",
+    rating: 5,
+    imageUrl: AvatarPlaceholder.src,
+    image: AvatarPlaceholder,
+    imagePath: "Avatar - (200px).jpg",
+    imageAlt: "Google Review by Christopher Gazzio",
+    datePublished: "2026-10-19T12:00:00.000000Z",
+    displayOrder: 520
   }
 
 
