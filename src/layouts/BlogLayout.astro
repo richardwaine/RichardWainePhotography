@@ -6,6 +6,14 @@ import { buildBreadcrumbSchema, buildFAQSchema } from "../utils/schema";
 import { Image } from 'astro:assets';
 import preferredSourceBadge from '../assets/images/blog/google_preferred_source_badge_dark_en@2x.png';
 import richardHeadshot from '../assets/images/about/Richard Waine 20230315 (500px).jpg';
+import ShareIcon from '../components/icons/ShareIcon.astro';
+import FacebookIcon from '../components/icons/FacebookIcon.astro';
+import XTwitterIcon from '../components/icons/XTwitterIcon.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
+import RedditIcon from '../components/icons/RedditIcon.astro';
+import PinterestIcon from '../components/icons/PinterestIcon.astro';
+import BlueskyIcon from '../components/icons/BlueskyIcon.astro';
+import EnvelopeIcon from '../components/icons/EnvelopeIcon.astro';
 
 export interface Props {
   title: string;
@@ -87,6 +95,10 @@ function countWords(content: string): number {
 }
 
 const wordCount = countWords(post.body);
+
+// Share menu addresses, the same ones the share icons at the bottom use
+const encodedUrl = encodeURIComponent(post.data.permalink);
+const encodedTitle = encodeURIComponent(post.data.blogTitle);
 
 ---
 
@@ -175,11 +187,25 @@ const wordCount = countWords(post.body);
     <div class="wrapper">
 
       <h1 class="article-title">{title}</h1>
+      <div class="article-meta-row">
+      <div class="article-byline-stack">
       <p class="article-byline">{isRichard && <Image class="article-byline-photo" src={richardHeadshot} alt="Richard Waine" width={112} />}By {bylineUrl ? <a href={bylineUrl}>{post.data.author}</a> : post.data.author}</p>
       <p class="article-meta">Last Updated: {lastUpdated}</p>
+      </div>
       <a class="preferred-source center" href="https://www.google.com/preferences/source?q=richardwainephotography.com" target="_blank" rel="noopener">
-        <Image src={preferredSourceBadge} alt="Add as a preferred source on Google" width={200} height={63} />
+        <Image src={preferredSourceBadge} alt="Add as a preferred source on Google" width={160} height={50} densities={[1, 2]} />
       </a>
+      <button type="button" class="share-toggle" aria-label="Share this post" popovertarget="share-menu"><ShareIcon /></button>
+      <div id="share-menu" class="share-menu" popover>
+        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer"><FacebookIcon /> Facebook</a>
+        <a href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`} target="_blank" rel="noopener noreferrer"><XTwitterIcon /> X</a>
+        <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`} target="_blank" rel="noopener noreferrer"><LinkedInIcon /> LinkedIn</a>
+        <a href={`https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`} target="_blank" rel="noopener noreferrer"><RedditIcon /> Reddit</a>
+        <a href={`https://www.pinterest.com/pin/create/link/?url=${encodedUrl}&description=${encodedTitle}`} target="_blank" rel="noopener noreferrer"><PinterestIcon /> Pinterest</a>
+        <a href={`https://bsky.app/intent/compose?text=${encodedTitle}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer"><BlueskyIcon /> Bluesky</a>
+        <a href={`mailto:?subject=${encodedTitle}&body=${encodedUrl}`}><EnvelopeIcon /> Email</a>
+      </div>
+      </div>
 
         <div class="article-content">
            
@@ -259,11 +285,11 @@ const wordCount = countWords(post.body);
 }
 
 .article-byline {
-  text-align: center;
+  text-align: left;
   font-size: var(--fs-400);
   margin-top: var(--size-3);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: var(--size-2);
 }
@@ -285,11 +311,84 @@ const wordCount = countWords(post.body);
 }
 
 .article-meta {
-  text-align: center;
+  text-align: left;
   font-size: var(--fs-350);
   color: var(--faded);
   margin-top: var(--size-2);
   margin-bottom: var(--size-6);
+}
+
+/* the share button shows only the icon, without the browser's button look */
+.share-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--blkclr);
+  anchor-name: --share-toggle;
+}
+
+/* the share menu opens just under the share button, lined up with its right edge */
+.share-menu {
+  position-anchor: --share-toggle;
+  position-area: bottom span-left;
+  /* opens above the share button when there is no room below it */
+  position-try-fallbacks: flip-block;
+  inset: auto;
+  margin-top: var(--size-3);
+  background: var(--ltclr);
+  border: none;
+  box-shadow: 0 10px 20px var(--shadow-clr-subtle);
+  padding: var(--size-3) var(--size-5);
+ 
+ 
+}
+
+/* the open menu is a grid, icons in one column and names in the other */
+.share-menu:popover-open {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+/* each share link is one row of that grid, icon beside its name */
+.share-menu a {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  align-items: center;
+  gap: var(--size-9);
+  padding-block: var(--size-2);
+  color: var(--blkclr);
+  font-weight: var(--fw-normal);
+  /* the row reaches the menu's edges so the hover band runs edge to edge */
+  margin-inline: calc(var(--size-5) * -1);
+  padding-inline: var(--size-5);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* the row under the mouse gets a light gray band and turns blue */
+.share-menu a:hover {
+  background-color: var(--drkbg);
+  color: var(--accent);
+}
+
+/* the hovered row's icon takes the accent color */
+.share-menu a:hover svg {
+  color: var(--accent);
+}
+
+.share-menu svg {
+  --_icon-size:20px;
+
+  width: var(--_icon-size);
+  height: var(--_icon-size);
+}
+
+.share-toggle svg {
+  --_icon-size:28px;
+
+  width: var(--_icon-size);
+  height: var(--_icon-size);
 }
 
 .preferred-source{
@@ -297,6 +396,49 @@ const wordCount = countWords(post.body);
   width:fit-content;
   margin-inline:auto;
   margin-bottom:var(--size-6);
+}
+
+/* date at the left, Preferred Source badge and share button together at the right */
+.article-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--size-3);
+  margin-top: var(--size-10);
+  margin-bottom: var(--size-6);
+  justify-content: center;
+
+  /* pulled in from both sides by a share of the page width, so it scales with the screen */
+    @media (min-width: 48em) {
+      padding-inline: 8%;
+    }
+}
+
+/* byline with the date right under it */
+.article-byline-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+
+  /* phones: byline and date centered on their own line, badge and share centered under them */
+  flex-basis: 100%;
+  align-items: center;
+
+    @media (min-width: 48em) {
+      flex-basis: auto;
+      align-items: flex-start;
+    }
+}
+
+.article-byline-stack > p,
+.article-meta-row > .preferred-source {
+  margin: 0;
+}
+
+.article-meta-row > .preferred-source {
+    @media (min-width: 48em) {
+      margin-left: auto;
+    }
 }
 
 .article-content{
