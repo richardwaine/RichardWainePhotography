@@ -126,10 +126,10 @@ const wordCount = countWords(post.body);
 				"@type": "Person",
 				"name": post.data.author,
 				"url": authorSchemaUrl,
-				"sameAs": [
+				...(isRichard && { "sameAs": [
 					"https://www.linkedin.com/in/richardwaine/",
 					"https://www.instagram.com/richardwaine"
-				]
+				] })
 			},
 			"datePublished": post.data.publishDate,
 			"dateModified": post.data.modifiedDate,
