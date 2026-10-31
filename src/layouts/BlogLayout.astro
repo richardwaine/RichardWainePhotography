@@ -165,6 +165,7 @@ const wordCount = countWords(post.body);
     <div class="wrapper">
 
       <h1 class="article-title">{title}</h1>
+      <p class="article-byline">By <a href="/about-lancaster-headshot-photographer-richard-waine/">{post.data.author}</a></p>
       <p class="article-meta">Last Updated: {lastUpdated}</p>
       <a class="preferred-source center" href="https://www.google.com/preferences/source?q=richardwainephotography.com" target="_blank" rel="noopener">
         <Image src={preferredSourceBadge} alt="Add as a preferred source on Google" width={200} height={63} />
@@ -245,6 +246,12 @@ const wordCount = countWords(post.body);
   color: var(--blkclr);
 
 
+}
+
+.article-byline {
+  text-align: center;
+  font-size: var(--fs-400);
+  margin-top: var(--size-3);
 }
 
 .article-meta {
