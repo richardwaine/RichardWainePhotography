@@ -27,6 +27,10 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 const isRichard = post.data.author === 'Richard Waine';
 const bylineUrl = isRichard ? '/about-lancaster-headshot-photographer-richard-waine/' : post.data.authorUrl;
 
+// The author link Google reads points to the same page as the visible byline,
+// written out as a full address
+const authorSchemaUrl = isRichard ? 'https://www.richardwainephotography.com/about-lancaster-headshot-photographer-richard-waine/' : post.data.authorUrl;
+
 // Format the last updated date
 const lastUpdated = new Date(post.data.modifiedDate).toLocaleDateString('en-US', {
   year: 'numeric',
@@ -121,7 +125,7 @@ const wordCount = countWords(post.body);
 			"author": {
 				"@type": "Person",
 				"name": post.data.author,
-				"url": post.data.authorUrl,
+				"url": authorSchemaUrl,
 				"sameAs": [
 					"https://www.linkedin.com/in/richardwaine/",
 					"https://www.instagram.com/richardwaine"
