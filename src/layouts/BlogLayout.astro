@@ -22,6 +22,11 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: post.data.blogTitle, url: new URL(`/blog/${post.id}/`, Astro.site).href }
 ]);
 
+// Byline link: Richard's posts point to his About page; a guest post points to
+// the address in its own authorUrl field, or shows the name unlinked if there is none
+const isRichard = post.data.author === 'Richard Waine';
+const bylineUrl = isRichard ? '/about-lancaster-headshot-photographer-richard-waine/' : post.data.authorUrl;
+
 // Format the last updated date
 const lastUpdated = new Date(post.data.modifiedDate).toLocaleDateString('en-US', {
   year: 'numeric',
@@ -165,7 +170,7 @@ const wordCount = countWords(post.body);
     <div class="wrapper">
 
       <h1 class="article-title">{title}</h1>
-      <p class="article-byline">By <a href="/about-lancaster-headshot-photographer-richard-waine/">{post.data.author}</a></p>
+      <p class="article-byline">By {bylineUrl ? <a href={bylineUrl}>{post.data.author}</a> : post.data.author}</p>
       <p class="article-meta">Last Updated: {lastUpdated}</p>
       <a class="preferred-source center" href="https://www.google.com/preferences/source?q=richardwainephotography.com" target="_blank" rel="noopener">
         <Image src={preferredSourceBadge} alt="Add as a preferred source on Google" width={200} height={63} />
