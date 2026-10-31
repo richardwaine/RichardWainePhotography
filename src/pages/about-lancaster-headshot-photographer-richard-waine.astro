@@ -722,37 +722,42 @@ import '../scripts/hero-spec-counter';
 }
 
 .award-fan {
-	/* card size as a share of the column, and the slight tilt between neighbouring cards —
+	/* card size as a share of the column, and the angle between neighbouring cards —
 	   the only two numbers to touch */
-	--_card: clamp(150px, 40cqi, 260px);
-	--_tilt: 1.5deg;
+	--_card: min(40cqi, 260px);
+	--_step: 6deg;
 
 	position: relative;
 	width: 100%;
-	height: calc(var(--_card) * 1.08);
+	height: calc(var(--_card) * 1.05);
+	/* the outer cards' lower corners dip slightly below the fan */
+	margin-bottom: calc(var(--_card) * 0.2);
 	/* cards are layered by depth, so a hovered card can come forward */
 	transform-style: preserve-3d;
 }
 
-/* the cards spread evenly from the left edge to the right edge of the column;
-   later cards paint over earlier ones, so the newest stays fully in view */
+/* every card turns around one shared point far below the fan, at evenly spaced angles,
+   so the tops form one smooth arc; later cards paint over earlier ones, so 2026 stays fully in view */
 .award-slot {
+	--_angle: calc((var(--i) - 2.5) * var(--_step));
+
 	position: absolute;
+	left: 50%;
 	bottom: 0;
-	left: calc(var(--i) * (100% - var(--_card)) / 5);
 	width: var(--_card);
 	aspect-ratio: 1;
-	transform: rotate(calc((var(--i) - 2.5) * var(--_tilt)));
+	transform-origin: 50% 300%;
+	transform: translateX(-50%) rotate(var(--_angle));
 	transform-style: preserve-3d;
 	/* every time the Credentials tab opens, the cards start stacked under 2026
-	   and deal out to the left, oldest first */
+	   and sweep out to the left around the shared point, oldest first */
 	animation: award-deal 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
 	animation-delay: calc(var(--i) * 0.12s);
 }
 
 @keyframes award-deal {
 	from {
-		transform: translateX(calc((5 - var(--i)) * (100cqi - var(--_card)) / 5)) rotate(0deg);
+		transform: translateX(-50%) rotate(calc(2.5 * var(--_step)));
 	}
 }
 
@@ -775,7 +780,7 @@ import '../scripts/hero-spec-counter';
 /* only the hovered card moves: it comes forward over its neighbours, straightens,
    lifts a little, and grows so the print can be read. Its slot stays behind to hold the hover. */
 .award-slot:hover :global(.award-card) {
-	transform: translateZ(60px) translateY(-12%) rotate(calc((var(--i) - 2.5) * -1 * var(--_tilt))) scale(1.35);
+	transform: translateZ(60px) translateY(-12%) rotate(calc(-1 * var(--_angle))) scale(1.35);
 }
 
 /* side by side with the text: the stack sits at the middle of the paragraphs */
