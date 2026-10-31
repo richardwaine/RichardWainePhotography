@@ -60,7 +60,8 @@ export const awards = [
   "Best Photographer, Best of Lancaster 2020, Lancaster County Magazine",
   "Best Photographer, Best of Lancaster 2021, Lancaster County Magazine",
   "Best Photographer, Best of Lancaster 2022, Lancaster County Magazine",
-  "Best Photographer, Best of Lancaster 2024, Lancaster County Magazine"
+  "Best Photographer, Best of Lancaster 2024, Lancaster County Magazine",
+  "Best Photographer, Best of Lancaster 2026, Lancaster County Magazine"
 ];
 
 // ============================================
