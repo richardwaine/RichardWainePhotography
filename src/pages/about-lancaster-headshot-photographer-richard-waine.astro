@@ -14,12 +14,12 @@ import hscMentorBadge from '../assets/images/logos/HSC - Mentor.jpg';
 import harley1 from '../assets/images/about/Harley-1.jpeg';
 import signatureWhite from '../assets/images/signature/Signature (white).png';
 
-import award2019 from '../assets/images/lcm-awards/2019_LCMAmongBestOfLanc-transparent.png';
-import award2020 from '../assets/images/lcm-awards/2020_BestofLanc-transparent.png';
-import award2021 from '../assets/images/lcm-awards/2021_BestOfLanc-transparent.png';
-import award2022 from '../assets/images/lcm-awards/2022_BestOfLanc-transparent.png';
-import award2024 from '../assets/images/lcm-awards/2024_BestofLanc-transparent.png';
-import award2026 from '../assets/images/lcm-awards/2026_BestofLanc-transparent.png';
+import award2019 from '../assets/images/lcm-awards/2019_LCMAmongBestOfLanc.jpg';
+import award2020 from '../assets/images/lcm-awards/2020_BestofLanc.jpg';
+import award2021 from '../assets/images/lcm-awards/2021_BestOfLanc.jpg';
+import award2022 from '../assets/images/lcm-awards/2022_BestOfLanc.jpg';
+import award2024 from '../assets/images/lcm-awards/2024_BestofLanc.jpg';
+import award2026 from '../assets/images/lcm-awards/2026_BestofLanc.jpg';
 import jpegminiLogo from '../assets/images/logos/JPEGmini-white.jpg';
 import savageLogo from '../assets/images/logos/SavageLogo-white.png';
 import tetherToolsLogo from '../assets/images/logos/TetherTools.png';
@@ -249,13 +249,15 @@ const spec = [
 				<Image src={rwInSession} alt="Richard Waine directing a headshot session in his Lancaster PA studio" width={700} />
 			</figure>
 			<figure class="tab-photo tab-photo-awards" data-for="credentials">
-				<div class="award-grid">
-					<Image src={award2026} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2026" width={190} />
-					<Image src={award2024} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2024" width={190} />
-					<Image src={award2022} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2022" width={190} />
-					<Image src={award2021} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2021" width={190} />
-					<Image src={award2020} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2020" width={190} />
-					<Image src={award2019} alt="Among the Best of Lancaster, Lancaster County Magazine 2019" width={190} />
+				<!-- an overlapping row of cards: oldest on the left, newest on top at the right.
+				     Each slot stays put and catches the hover; only its card moves. -->
+				<div class="award-fan">
+					<div class="award-slot" style="--i: 0"><Image class="award-card" src={award2019} alt="Among the Best of Lancaster, Lancaster County Magazine 2019" width={400} /></div>
+					<div class="award-slot" style="--i: 1"><Image class="award-card" src={award2020} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2020" width={400} /></div>
+					<div class="award-slot" style="--i: 2"><Image class="award-card" src={award2021} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2021" width={400} /></div>
+					<div class="award-slot" style="--i: 3"><Image class="award-card" src={award2022} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2022" width={400} /></div>
+					<div class="award-slot" style="--i: 4"><Image class="award-card" src={award2024} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2024" width={400} /></div>
+					<div class="award-slot" style="--i: 5"><Image class="award-card" src={award2026} alt="Voted Best Photographer, Lancaster County Magazine Best of Lancaster 2026" width={400} /></div>
 				</div>
 			</figure>
 
@@ -711,33 +713,60 @@ import '../scripts/hero-spec-counter';
    badge-scale sizing, centered in the column */
 .tab-photo-awards {
 	text-align: center;
+	/* the fan sizes its cards from this column's width */
+	container-type: inline-size;
 }
 
 .tab-photo-awards :global(img) {
 	box-shadow: none;
 }
 
-.award-grid {
-	/* badge size in pixels — the only number to touch.
-	   Badges wrap to fit the column, three per row at most, and a short last row
-	   is centered, for any number of badges. */
-	--_award-size: 150px;
+.award-fan {
+	/* card size as a share of the column, and the slight tilt between neighbouring cards —
+	   the only two numbers to touch */
+	--_card: clamp(150px, 40cqi, 260px);
+	--_tilt: 1.5deg;
 
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: var(--size-4);
-	max-width: calc(3 * var(--_award-size) + 2 * var(--size-4));
-	margin-inline: auto;
-
-
+	position: relative;
+	width: 100%;
+	height: calc(var(--_card) * 1.08);
+	/* cards are layered by depth, so a hovered card can come forward */
+	transform-style: preserve-3d;
 }
 
-.award-grid :global(img) {
-	flex: none;
-	width: var(--_award-size);
-	height: var(--_award-size);
-	object-fit: contain;
+/* the cards spread evenly from the left edge to the right edge of the column;
+   later cards paint over earlier ones, so the newest stays fully in view */
+.award-slot {
+	position: absolute;
+	bottom: 0;
+	left: calc(var(--i) * (100% - var(--_card)) / 5);
+	width: var(--_card);
+	aspect-ratio: 1;
+	transform: rotate(calc((var(--i) - 2.5) * var(--_tilt)));
+	transform-style: preserve-3d;
+}
+
+.award-slot :global(.award-card) {
+	display: block;
+	width: 100%;
+	height: 100%;
+	box-shadow: var(--shadow);
+	/* the end cards grow inward so they never leave the column */
+	transform-origin: calc(var(--i) * 20%) 50%;
+	transition: transform var(--transition-slow) ease;
+}
+
+/* only the hovered card moves: it comes forward over its neighbours, straightens,
+   lifts a little, and grows so the print can be read. Its slot stays behind to hold the hover. */
+.award-slot:hover :global(.award-card) {
+	transform: translateZ(60px) translateY(-12%) rotate(calc((var(--i) - 2.5) * -1 * var(--_tilt))) scale(1.35);
+}
+
+/* side by side with the text: the stack sits at the middle of the paragraphs */
+@media (min-width: 90em) {
+	.tab-photo.tab-photo-awards.active {
+		align-self: center;
+	}
 }
 
 /* Credentials — press band: hairline rules, cyan kicker, centered line of white marks */
