@@ -259,6 +259,11 @@ const wordCount = countWords(post.body);
   margin-top: var(--size-3);
 }
 
+/* the author's name keeps the normal text color instead of link blue */
+.article-byline a {
+  color: inherit;
+}
+
 .article-meta {
   text-align: center;
   font-size: var(--fs-350);
