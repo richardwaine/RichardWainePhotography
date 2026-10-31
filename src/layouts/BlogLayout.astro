@@ -5,6 +5,7 @@ import ShareButtons from "../components/ShareButtons.astro";
 import { buildBreadcrumbSchema, buildFAQSchema } from "../utils/schema";
 import { Image } from 'astro:assets';
 import preferredSourceBadge from '../assets/images/blog/google_preferred_source_badge_dark_en@2x.png';
+import richardHeadshot from '../assets/images/about/Richard Waine 20230315 (500px).jpg';
 
 export interface Props {
   title: string;
@@ -174,7 +175,7 @@ const wordCount = countWords(post.body);
     <div class="wrapper">
 
       <h1 class="article-title">{title}</h1>
-      <p class="article-byline">By {bylineUrl ? <a href={bylineUrl}>{post.data.author}</a> : post.data.author}</p>
+      <p class="article-byline">{isRichard && <Image class="article-byline-photo" src={richardHeadshot} alt="Richard Waine" width={112} />}By {bylineUrl ? <a href={bylineUrl}>{post.data.author}</a> : post.data.author}</p>
       <p class="article-meta">Last Updated: {lastUpdated}</p>
       <a class="preferred-source center" href="https://www.google.com/preferences/source?q=richardwainephotography.com" target="_blank" rel="noopener">
         <Image src={preferredSourceBadge} alt="Add as a preferred source on Google" width={200} height={63} />
@@ -261,6 +262,20 @@ const wordCount = countWords(post.body);
   text-align: center;
   font-size: var(--fs-400);
   margin-top: var(--size-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-2);
+}
+
+/* the author's photo as a small circle in front of the name */
+.article-byline-photo {
+--_size:3.25em;
+
+  width: var(--_size);
+  height: var(--_size);
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* the author's name keeps the normal text color instead of link blue */
