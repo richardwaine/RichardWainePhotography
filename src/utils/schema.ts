@@ -622,6 +622,7 @@ export function buildProductSchema(
       "price": price,
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
+      "validFrom": "2026-03-14",
       "priceValidUntil": "2099-12-31",
       "seller": {
         "@type": "Organization",
