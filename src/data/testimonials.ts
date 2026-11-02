@@ -8873,13 +8873,13 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     name: "Philip Mann",
     company: "",
     category: "entrepreneurs",
-    review: "Excellent headshot session! Well worth the investment and time. Will definitely use Rich again. 👍",
+    review: "I was looking to update my headshots. My previous set was a few years old, taken by a professional in Oklahoma City whom I also found on Yelp. Good headshot photographers are hard to find around here, so I started with a Google search and came across Rich's website. When I saw it, I realized we had met in person at a marketing event within the last few years. I reached out, and I'm glad I did.\n\nThe experience was great from start to finish. Rich is high-touch, easy to work with, and easy to schedule, and he was clear and upfront about cost. He takes his time, walks you through everything, and explains each step. He even recognized that my previous photographer had been trained in the same methods, possibly by Rich himself, which I thought was awesome. The whole session matched what I know good headshot work requires.\n\nOne thing I appreciated, and something I've found to be a challenge in this area, is that he doesn't play games with licensing. I need professional headshots for book covers, websites, and similar uses, and it makes no sense to pay additional licensing fees every time I use them. After all, they're my headshots. Rich's standard release lets him use the photos in his own advertising, which is normal from what I understand, and I have no problem with that.\n\nThe icing on the cake came later. I had occasion to see a set of finished, fully processed headshots that a different local photographer took for someone else. Even the raw photos from my session with Rich, before any retouching or processing, were far better than that photographer's finished work. I've crossed paths with a number of photographers in the area at events and elsewhere, and while I haven't worked with many of them, I've seen enough of their work to know the quality varies a lot. Rich's work stands out.\n\nIf you need professional headshots or portraits, Rich is the person I recommend in this area. You'll get a good experience and what you need, with no complications later when you want to put a photo on the back of a book and have to figure out how to license it back. I don't give five stars lightly. This one is earned by the experience, the fair licensing terms, and the quality of the work.",
     rating: 5,
     imageUrl: AvatarPlaceholder.src,
     image: AvatarPlaceholder,
     imagePath: "Avatar - (200px).jpg",
-    imageAlt: "Google Review by Philip Mann",
-    datePublished: "2026-10-16T12:00:00.000000Z",
+    imageAlt: "Yelp Review by Philip Mann",
+    datePublished: "2026-11-02T12:00:00.000000Z",
     displayOrder: 519
   },
   {
